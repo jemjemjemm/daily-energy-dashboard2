@@ -65,8 +65,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/schedules/
-          git add data/reports/
+          git add data/schedules/ || true
+          git add data/reports/ || true
 
-          git diff --cached --quiet || git commit -m "Add SafeTimes schedule and report draft $TARGET_DATE"
-          git push
+          if git diff --cached --quiet; then
+            echo "변경된 파일이 없습니다. 커밋하지 않습니다."
+          else
+            git commit -m "Add SafeTimes schedule and report draft $TARGET_DATE"
+            git pull --rebase origin main
+            git push
+          fi
