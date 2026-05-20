@@ -4,6 +4,7 @@ on:
   schedule:
     # 매일 한국시간 08:05 실행 = UTC 23:05
     - cron: "5 23 * * *"
+
   workflow_dispatch:
     inputs:
       target_date:
@@ -15,7 +16,7 @@ permissions:
   contents: write
 
 jobs:
-  fetch-safetimes:
+  fetch-and-build-draft:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Seoul
@@ -34,18 +35,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Fetch SafeTimes schedule
+      - name: Decide target date
+        id: date
         run: |
           if [ -n "${{ github.event.inputs.target_date }}" ]; then
-            python scripts/fetch_safetimes_schedule.py --date "${{ github.event.inputs.target_date }}" --out-dir data/schedules --max-retries 3 --retry-delay 300
+            echo "TARGET_DATE=${{ github.event.inputs.target_date }}" >> $GITHUB_ENV
           else
-            python scripts/fetch_safetimes_schedule.py --out-dir data/schedules --max-retries 3 --retry-delay 300
+            echo "TARGET_DATE=$(TZ=Asia/Seoul date +%Y-%m-%d)" >> $GITHUB_ENV
           fi
 
-      - name: Commit collected data
+      - name: Fetch SafeTimes schedule
+        run: |
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/schedules \
+            --max-retries 3 \
+            --retry-delay 300
+
+      - name: Build report draft JSON
+        run: |
+          python scripts/build_report_draft_from_schedule.py \
+            --date "$TARGET_DATE" \
+            --schedule-dir data/schedules \
+            --base-report report_sample.json \
+            --out-dir data/reports
+
+      - name: Commit collected data and report draft
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add data/schedules/
-          git diff --cached --quiet || git commit -m "Add SafeTimes schedule data $(TZ=Asia/Seoul date +%Y-%m-%d)"
+          git add data/reports/
+
+          git diff --cached --quiet || git commit -m "Add SafeTimes schedule and report draft $TARGET_DATE"
           git push
