@@ -1,9 +1,10 @@
-name: Daily Energy Dashboard - SafeTimes Schedule
+name: Daily Energy Dashboard - Daily Data Pipeline
 
 on:
   schedule:
-    # 매일 한국시간 08:05 실행 = UTC 23:05
-    - cron: "5 23 * * *"
+    # 매일 한국시간 08:10 실행 = UTC 23:10
+    - cron: "10 23 * * *"
+
   workflow_dispatch:
     inputs:
       target_date:
@@ -15,14 +16,16 @@ permissions:
   contents: write
 
 jobs:
-  fetch-safetimes:
+  daily-data-pipeline:
     runs-on: ubuntu-latest
+
     env:
       TZ: Asia/Seoul
+      OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -34,18 +37,71 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Fetch SafeTimes schedule
+      - name: Check required files
+        run: |
+          echo "현재 저장소 파일 목록:"
+          ls -la
+
+          echo "scripts 폴더:"
+          ls -la scripts || true
+
+          test -f scripts/fetch_safetimes_schedule.py || (echo "ERROR: scripts/fetch_safetimes_schedule.py 파일이 없습니다." && exit 1)
+          test -f scripts/build_report_draft_from_schedule.py || (echo "ERROR: scripts/build_report_draft_from_schedule.py 파일이 없습니다." && exit 1)
+          test -f scripts/fetch_opinet_international_prices.py || (echo "ERROR: scripts/fetch_opinet_international_prices.py 파일이 없습니다." && exit 1)
+          test -f report_sample.json || (echo "ERROR: report_sample.json 파일이 저장소 첫 화면에 없습니다." && exit 1)
+
+      - name: Decide target date
         run: |
           if [ -n "${{ github.event.inputs.target_date }}" ]; then
-            python scripts/fetch_safetimes_schedule.py --date "${{ github.event.inputs.target_date }}" --out-dir data/schedules --max-retries 3 --retry-delay 300
+            echo "TARGET_DATE=${{ github.event.inputs.target_date }}" >> $GITHUB_ENV
           else
-            python scripts/fetch_safetimes_schedule.py --out-dir data/schedules --max-retries 3 --retry-delay 300
+            echo "TARGET_DATE=$(TZ=Asia/Seoul date +%Y-%m-%d)" >> $GITHUB_ENV
           fi
+
+      - name: Show target date
+        run: |
+          echo "TARGET_DATE=$TARGET_DATE"
+
+      - name: Fetch SafeTimes schedule
+        run: |
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/schedules \
+            --max-retries 1 \
+            --retry-delay 10
+
+      - name: Build report draft JSON from SafeTimes
+        run: |
+          python scripts/build_report_draft_from_schedule.py \
+            --date "$TARGET_DATE" \
+            --schedule-dir data/schedules \
+            --base-report report_sample.json \
+            --out-dir data/reports
+
+      - name: Fetch Opinet international prices
+        run: |
+          python scripts/fetch_opinet_international_prices.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/prices
+
+      - name: Show generated files
+        run: |
+          echo "생성된 data 폴더 파일:"
+          find data -maxdepth 3 -type f || true
 
       - name: Commit collected data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/schedules/
-          git diff --cached --quiet || git commit -m "Add SafeTimes schedule data $(TZ=Asia/Seoul date +%Y-%m-%d)"
-          git push
+
+          git add data/schedules/ || true
+          git add data/reports/ || true
+          git add data/prices/ || true
+
+          if git diff --cached --quiet; then
+            echo "변경된 파일이 없습니다. 커밋하지 않습니다."
+          else
+            git commit -m "Add daily schedule, report draft and prices $TARGET_DATE"
+            git pull --rebase origin main
+            git push
+          fi
