@@ -2,326 +2,176 @@
 # -*- coding: utf-8 -*-
 
 """
-fetch_safetimes_schedule.py v2.0
+generate_reports_range.py v4
 
-세이프타임즈 '오늘의 주요일정' 기사를 날짜별로 수집합니다.
+기간 내 주말 제외 평일 리포트를 일괄 생성합니다.
+각 날짜별로 세이프타임즈 일정 수집을 먼저 시도하고,
+성공하면 일정 기반 리포트를 만들고,
+실패하면 빈 리포트/fallback 리포트를 보강한 뒤 가격 중심 리포트를 생성합니다.
 
-개선점
-- 검색 결과 첫 페이지만 보지 않고 여러 페이지를 탐색합니다.
-- 제목의 '·N일'만으로 판단하지 않고 기사 승인일(YYYY.MM.DD)을 함께 확인합니다.
-- 과거 날짜도 수집 가능하도록 설계했습니다.
-- 예: 2026-05-18 -> [오늘의 주요일정·18일] 기사 수집
+이 스크립트는 반드시 --start, --end를 받습니다.
+--date를 받는 파일이 아닙니다.
 """
 
 from __future__ import annotations
 
 import argparse
-import json
-import re
-import tempfile
-import time
-from datetime import datetime
+import subprocess
+import sys
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any, Dict, List, Optional
-from urllib.parse import urljoin
-
-import requests
-from bs4 import BeautifulSoup
 
 
-BASE_URL = "https://www.safetimes.co.kr"
-SEARCH_URL = "https://www.safetimes.co.kr/news/articleList.html"
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
-)
-
-
-class SafeTimesError(RuntimeError):
-    pass
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="세이프타임즈 오늘의 주요일정 수집")
-    parser.add_argument("--date", required=True, help="수집 기준일 YYYY-MM-DD")
-    parser.add_argument("--out-dir", default="data/schedules", help="저장 폴더")
-    parser.add_argument("--max-retries", type=int, default=1)
-    parser.add_argument("--retry-delay", type=int, default=10)
-    parser.add_argument("--force-refresh", action="store_true", help="기존 JSON이 있어도 재수집")
-    parser.add_argument("--max-pages", type=int, default=80, help="세이프타임즈 검색 페이지 탐색 수")
+def parse_args():
+    parser = argparse.ArgumentParser(description="기간별 평일 리포트 일괄 생성")
+    parser.add_argument("--start", required=True, help="시작일 YYYY-MM-DD")
+    parser.add_argument("--end", required=True, help="종료일 YYYY-MM-DD")
+    parser.add_argument("--skip-weekends", action="store_true", default=True, help="토/일 제외")
+    parser.add_argument("--report-dir", default="data/reports")
+    parser.add_argument("--schedule-dir", default="data/schedules")
+    parser.add_argument("--price-dir", default="data/prices")
+    parser.add_argument("--history", default="data/prices/history.json")
+    parser.add_argument("--html-dir", default="docs/reports")
+    parser.add_argument("--index-out", default="docs/report-index.json")
+    parser.add_argument("--base-report", default="report_sample.json")
+    parser.add_argument("--chart-months", default="2")
+    parser.add_argument("--max-pages", default="12")
     return parser.parse_args()
 
 
-def target_datetime(date_text: str) -> datetime:
-    try:
-        return datetime.strptime(date_text, "%Y-%m-%d")
-    except ValueError as exc:
-        raise SafeTimesError("--date는 YYYY-MM-DD 형식이어야 합니다.") from exc
+def date_range(start: str, end: str):
+    s = datetime.strptime(start, "%Y-%m-%d").date()
+    e = datetime.strptime(end, "%Y-%m-%d").date()
+    if s > e:
+        raise ValueError("--start가 --end보다 늦습니다.")
+    cur = s
+    while cur <= e:
+        yield cur
+        cur += timedelta(days=1)
 
 
-def atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(payload, ensure_ascii=False, indent=2)
-    with tempfile.NamedTemporaryFile(
-        "w", encoding="utf-8", dir=str(path.parent), delete=False,
-        prefix=f".{path.name}.", suffix=".tmp"
-    ) as tmp:
-        tmp.write(text)
-        tmp_path = Path(tmp.name)
-    tmp_path.replace(path)
+def run(cmd, allow_fail: bool = False) -> bool:
+    print("[RUN]", " ".join(cmd))
+    completed = subprocess.run(cmd, text=True)
+    if completed.returncode != 0:
+        if allow_fail:
+            print(f"[WARN] 명령 실패를 허용하고 다음 단계로 진행합니다: {' '.join(cmd)}")
+            return False
+        raise RuntimeError(f"명령 실패: {' '.join(cmd)}")
+    return True
 
 
-def read_existing_valid(path: Path) -> Optional[Dict[str, Any]]:
-    if not path.exists():
-        return None
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return None
-    if data.get("success") is False:
-        return None
-    if data.get("article_url") and (data.get("items") or data.get("raw_text")):
-        return data
-    return None
-
-
-def fetch(url: str, params: Optional[Dict[str, Any]] = None) -> str:
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Referer": BASE_URL,
-    }
-    resp = requests.get(url, params=params, headers=headers, timeout=30)
-    resp.raise_for_status()
-    if resp.apparent_encoding:
-        resp.encoding = resp.apparent_encoding
-    return resp.text
-
-
-def normalize_text(value: str) -> str:
-    return re.sub(r"\s+", " ", value or "").strip()
-
-
-def day_patterns(target: datetime) -> List[str]:
-    day = target.day
-    return [
-        f"·{day}일",
-        f"ㆍ{day}일",
-        f"{day}일]",
-        f"{target.month}월 {day}일",
-    ]
-
-
-def parse_approved_date_from_text(text: str) -> str:
-    # 기사 본문 내 "승인 2026.05.18 07:03" 형식
-    m = re.search(r"승인\s*(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})", text)
-    if m:
-        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-
-    # meta 등 느슨한 fallback
-    m = re.search(r"(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})\s+\d{1,2}:\d{2}", text)
-    if m:
-        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-
-    return ""
-
-
-def collect_search_candidates(max_pages: int) -> List[Dict[str, str]]:
-    candidates: List[Dict[str, str]] = []
-    seen = set()
-
-    for page in range(1, max_pages + 1):
-        html = fetch(SEARCH_URL, params={"page": page, "sc_word": "오늘의 주요일정"})
-        soup = BeautifulSoup(html, "html.parser")
-        page_added = 0
-
-        for a in soup.find_all("a", href=True):
-            title = normalize_text(a.get_text(" ", strip=True))
-            href = a.get("href", "")
-
-            if "오늘의 주요일정" not in title:
-                continue
-            if "articleView" not in href:
-                continue
-
-            url = urljoin(BASE_URL, href)
-            key = (title, url)
-            if key in seen:
-                continue
-            seen.add(key)
-
-            candidates.append({"title": title, "url": url})
-            page_added += 1
-
-        # 너무 뒤 페이지까지 갈 필요가 없도록,
-        # 일정 후보가 전혀 안 나오는 페이지가 연속되면 중단
-        if page > 5 and page_added == 0:
-            break
-
-        time.sleep(0.15)
-
-    return candidates
-
-
-def parse_article_candidate(article: Dict[str, str]) -> Dict[str, Any]:
-    html = fetch(article["url"])
-    soup = BeautifulSoup(html, "html.parser")
-    text_all = soup.get_text("\n", strip=True)
-
-    h1 = soup.find("h1")
-    title = normalize_text(h1.get_text(" ", strip=True)) if h1 else article["title"]
-
-    body_node = (
-        soup.select_one("#article-view-content-div")
-        or soup.select_one(".article-view-content")
-        or soup.select_one("article")
-        or soup.select_one(".user-content")
-    )
-
-    if body_node:
-        raw_text = body_node.get_text("\n", strip=True)
-    else:
-        # 세이프타임즈는 본문이 명확한 div로 안 잡히는 경우가 있어 전체 텍스트에서 본문영역을 사용
-        raw_text = text_all
-
-    raw_text = re.sub(r"\n{3,}", "\n\n", raw_text).strip()
-    approved_date = parse_approved_date_from_text(text_all)
-
-    return {
-        "title": title,
-        "article_title": article["title"],
-        "article_url": article["url"],
-        "approved_date": approved_date,
-        "raw_text": raw_text,
-        "full_text": text_all,
-    }
-
-
-def select_article_for_date(candidates: List[Dict[str, str]], target_date: str) -> Dict[str, Any]:
-    target = target_datetime(target_date)
-    patterns = day_patterns(target)
-
-    day_matched = [
-        cand for cand in candidates
-        if any(pattern in cand["title"] for pattern in patterns)
-    ]
-
-    parsed: List[Dict[str, Any]] = []
-    for cand in day_matched:
-        try:
-            article = parse_article_candidate(cand)
-            parsed.append(article)
-            if article.get("approved_date") == target_date:
-                return article
-        except Exception:
-            continue
-
-    # 승인일 파싱이 실패하는 경우: 제목 day가 맞고 full_text에 target_date 점표기가 있으면 선택
-    dot_date = target.strftime("%Y.%m.%d")
-    for article in parsed:
-        if dot_date in article.get("full_text", ""):
-            return article
-
-    sample = [cand["title"] for cand in candidates[:8]]
-    matched_sample = [
-        {"title": item.get("title", ""), "approved_date": item.get("approved_date", ""), "url": item.get("article_url", "")}
-        for item in parsed[:8]
-    ]
-    raise SafeTimesError(
-        f"오늘의 주요일정 대상 기사를 찾지 못했습니다. "
-        f"target={target_date}, sample_candidates={sample}, day_matched={matched_sample}"
-    )
-
-
-def extract_items(raw_text: str) -> List[Dict[str, str]]:
-    items: List[Dict[str, str]] = []
-    seen = set()
-
-    for line in raw_text.splitlines():
-        clean = normalize_text(line)
-        if not clean:
-            continue
-        if clean in seen:
-            continue
-
-        # 기사 UI/메뉴성 문구 제외
-        if any(skip in clean for skip in ["댓글", "SNS 기사", "본문 글씨", "저작권", "회원로그인", "바로가기"]):
-            continue
-
-        if re.search(r"(\d{1,2}:\d{2}|오전|오후|국회|정부|장관|위원회|브리핑|회의|산업부|기후|에너지|공정위|금융위)", clean):
-            seen.add(clean)
-            items.append({"text": clean})
-
-    return items
-
-
-def collect(target_date: str, max_pages: int) -> Dict[str, Any]:
-    candidates = collect_search_candidates(max_pages=max_pages)
-    if not candidates:
-        raise SafeTimesError("세이프타임즈 오늘의 주요일정 후보 기사를 찾지 못했습니다.")
-
-    article = select_article_for_date(candidates, target_date)
-    items = extract_items(article["raw_text"])
-
-    return {
-        "schema_version": "2.0",
-        "source": "세이프타임즈",
-        "category": "오늘의 주요일정",
-        "date": target_date,
-        "title": article["title"],
-        "article_title": article["article_title"],
-        "article_url": article["article_url"],
-        "approved_date": article.get("approved_date", ""),
-        "collected_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S KST"),
-        "items": items,
-        "raw_text": article["raw_text"],
-        "success": True,
-        "quality": {
-            "needs_review": True,
-            "warnings": [
-                "세이프타임즈 기사 본문을 자동 파싱한 초안입니다.",
-                "기사 원문 기준 일정은 사실 데이터이며, 정유/석화/LNG 영향도는 후속 변환 단계의 해석입니다.",
-            ],
-        },
-    }
+def file_exists(path: str) -> bool:
+    return Path(path).exists()
 
 
 def main() -> int:
     args = parse_args()
-    output_path = Path(args.out_dir) / f"{args.date}.json"
 
-    existing = read_existing_valid(output_path)
-    if existing and not args.force_refresh:
-        print(f"[OK] 기존 세이프타임즈 일정 JSON 재사용: {output_path}")
-        return 0
+    required_files = [
+        "scripts/fetch_safetimes_schedule.py",
+        "scripts/build_report_draft_from_schedule.py",
+        "scripts/ensure_report_draft.py",
+        "scripts/merge_prices_into_report.py",
+        "scripts/generate_html_report.py",
+        "scripts/generate_report_index.py",
+        args.history,
+        args.base_report,
+    ]
 
-    last_error: Optional[Exception] = None
-    for attempt in range(1, max(1, args.max_retries) + 1):
-        try:
-            print(f"[INFO] 세이프타임즈 수집 시도 {attempt}/{args.max_retries}: {args.date}")
-            payload = collect(args.date, max_pages=args.max_pages)
-            atomic_write_json(output_path, payload)
-            print(f"[OK] 세이프타임즈 일정 저장 완료: {output_path}")
-            print(f"[OK] 기사: {payload.get('article_title')} / {payload.get('article_url')}")
-            return 0
-        except Exception as exc:
-            last_error = exc
-            print(f"[WARN] 수집 실패 {attempt}/{args.max_retries}: {exc}")
-            if attempt < args.max_retries:
-                time.sleep(max(0, args.retry_delay))
+    for file_name in required_files:
+        if not Path(file_name).exists():
+            print(f"[ERROR] 필수 파일이 없습니다: {file_name}")
+            return 1
 
-    error_path = Path(args.out_dir) / f"{args.date}.error.json"
-    atomic_write_json(error_path, {
-        "schema_version": "2.0",
-        "source": "세이프타임즈",
-        "category": "오늘의 주요일정",
-        "date": args.date,
-        "collected_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S KST"),
-        "success": False,
-        "error": str(last_error) if last_error else "unknown error",
-    })
-    print(f"[ERROR] 실패 정보 저장: {error_path}")
-    return 1
+    generated_dates = []
+
+    for d in date_range(args.start, args.end):
+        if args.skip_weekends and d.weekday() >= 5:
+            print(f"[SKIP] 주말 제외: {d.isoformat()}")
+            continue
+
+        date_text = d.isoformat()
+        generated_dates.append(date_text)
+
+        print(f"\n=== {date_text} 리포트 생성 ===")
+
+        schedule_path = f"{args.schedule_dir}/{date_text}.json"
+        report_path = f"{args.report_dir}/{date_text}.report.json"
+
+        # 1. 세이프타임즈 일정 수집. 실패해도 전체 백필은 멈추지 않음.
+        if file_exists(schedule_path):
+            print(f"[OK] 기존 세이프타임즈 일정 JSON 사용: {schedule_path}")
+        else:
+            run([
+                sys.executable,
+                "scripts/fetch_safetimes_schedule.py",
+                "--date", date_text,
+                "--out-dir", args.schedule_dir,
+                "--max-retries", "1",
+                "--retry-delay", "5",
+                "--max-pages", str(args.max_pages),
+            ], allow_fail=True)
+
+        # 2. 일정 JSON이 있으면 일정 기반 리포트 재생성.
+        # 기존 fallback/빈 리포트를 실제 일정 기반 리포트로 교체하기 위해 report_path를 삭제 후 생성.
+        if file_exists(schedule_path):
+            if file_exists(report_path):
+                Path(report_path).unlink()
+                print(f"[INFO] 기존 리포트 JSON 삭제 후 일정 기반으로 재생성: {report_path}")
+
+            run([
+                sys.executable,
+                "scripts/build_report_draft_from_schedule.py",
+                "--date", date_text,
+                "--schedule-dir", args.schedule_dir,
+                "--base-report", args.base_report,
+                "--out-dir", args.report_dir,
+            ])
+        else:
+            print(f"[WARN] 일정 JSON이 없어 가격 중심 기본 리포트로 보강합니다: {date_text}")
+
+        # 3. 리포트가 없거나 빈/fallback이면 보강.
+        run([
+            sys.executable,
+            "scripts/ensure_report_draft.py",
+            "--date", date_text,
+            "--out-dir", args.report_dir,
+            "--base-report", args.base_report,
+            "--refresh-fallback",
+        ])
+
+        # 4. 가격 병합. 과거 날짜는 history.json 기준.
+        run([
+            sys.executable,
+            "scripts/merge_prices_into_report.py",
+            "--date", date_text,
+            "--report-dir", args.report_dir,
+            "--price-dir", args.price_dir,
+            "--history", args.history,
+            "--chart-months", str(args.chart_months),
+        ])
+
+        # 5. HTML 리포트 생성.
+        run([
+            sys.executable,
+            "scripts/generate_html_report.py",
+            "--date", date_text,
+            "--report-dir", args.report_dir,
+            "--out-dir", args.html_dir,
+        ])
+
+    # 6. 캘린더용 index 갱신.
+    run([
+        sys.executable,
+        "scripts/generate_report_index.py",
+        "--reports-dir", args.html_dir,
+        "--out", args.index_out,
+    ])
+
+    print("\n[OK] 기간 리포트 생성 완료")
+    print("[OK] 생성 대상 날짜:", ", ".join(generated_dates))
+    return 0
 
 
 if __name__ == "__main__":
