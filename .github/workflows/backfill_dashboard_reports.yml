@@ -11,6 +11,14 @@ on:
         description: "생성 종료일(YYYY-MM-DD). 예: 2026-05-21"
         required: true
         default: "2026-05-21"
+      scan_start:
+        description: "세이프타임즈 기사번호 스캔 시작값"
+        required: false
+        default: "239500"
+      scan_end:
+        description: "세이프타임즈 기사번호 스캔 종료값"
+        required: false
+        default: "243200"
 
 permissions:
   contents: write
@@ -47,7 +55,6 @@ jobs:
       - name: Validate required files
         run: |
           set -e
-          test -f scripts/fetch_safetimes_schedule.py || (echo "ERROR: scripts/fetch_safetimes_schedule.py 없음" && exit 1)
           test -f scripts/build_report_draft_from_schedule.py || (echo "ERROR: scripts/build_report_draft_from_schedule.py 없음" && exit 1)
           test -f scripts/ensure_report_draft.py || (echo "ERROR: scripts/ensure_report_draft.py 없음" && exit 1)
           test -f scripts/merge_prices_into_report.py || (echo "ERROR: scripts/merge_prices_into_report.py 없음" && exit 1)
@@ -57,13 +64,12 @@ jobs:
           test -f report_sample.json || (echo "ERROR: report_sample.json 없음" && exit 1)
           test -f data/prices/history.json || (echo "ERROR: data/prices/history.json 없음" && exit 1)
 
-          grep -q "max-pages" scripts/fetch_safetimes_schedule.py || (echo "ERROR: fetch_safetimes_schedule.py가 다중 페이지 검색 최신본이 아닙니다." && exit 1)
-          grep -q "fetch_safetimes_schedule.py" scripts/generate_reports_range.py || (echo "ERROR: generate_reports_range.py가 세이프타임즈 수집을 호출하지 않습니다." && exit 1)
-          grep -q -- "--refresh-fallback" scripts/ensure_report_draft.py || (echo "ERROR: ensure_report_draft.py가 최신본이 아닙니다." && exit 1)
-          grep -q "history.json" scripts/merge_prices_into_report.py || (echo "ERROR: merge_prices_into_report.py가 history 기반 생성을 지원하지 않습니다." && exit 1)
+          grep -q -- "--start" scripts/generate_reports_range.py || (echo "ERROR: generate_reports_range.py가 기간 생성 파일이 아닙니다." && exit 1)
+          grep -q "scan_safetimes_articles" scripts/generate_reports_range.py || (echo "ERROR: generate_reports_range.py가 세이프타임즈 기사번호 스캔 버전이 아닙니다." && exit 1)
+          grep -q "is_fallback_or_empty_report" scripts/ensure_report_draft.py || (echo "ERROR: ensure_report_draft.py가 최신본이 아닙니다." && exit 1)
           grep -q "주요 출처" scripts/generate_html_report.py || (echo "ERROR: generate_html_report.py가 최신 화면 형식이 아닙니다." && exit 1)
 
-      - name: Backfill weekday reports with SafeTimes schedules
+      - name: Backfill weekday reports with safetimes schedules
         run: |
           python scripts/generate_reports_range.py \
             --start "${{ github.event.inputs.date_from }}" \
@@ -77,7 +83,10 @@ jobs:
             --index-out docs/report-index.json \
             --base-report report_sample.json \
             --chart-months 2 \
-            --max-pages 80
+            --scan-start "${{ github.event.inputs.scan_start }}" \
+            --scan-end "${{ github.event.inputs.scan_end }}" \
+            --scan-workers 24 \
+            --force-schedule-refresh
 
       - name: Verify generated outputs
         run: |
@@ -90,6 +99,7 @@ jobs:
 
           idx = json.loads(Path("docs/report-index.json").read_text(encoding="utf-8"))
           dates = set(idx.get("availableDates", []))
+
           required = {"2026-05-08", "2026-05-18", "2026-05-19", "2026-05-21"}
           missing = sorted(required - dates)
           if missing:
@@ -97,17 +107,21 @@ jobs:
 
           for d in ["2026-05-08", "2026-05-18"]:
               html_path = Path(f"docs/reports/{d}.html")
+              schedule_path = Path(f"data/schedules/{d}.json")
               if not html_path.exists():
                   raise SystemExit(f"ERROR: HTML 누락: {html_path}")
+              if not schedule_path.exists():
+                  raise SystemExit(f"ERROR: 세이프타임즈 일정 JSON 누락: {schedule_path}")
+
               html = html_path.read_text(encoding="utf-8", errors="ignore")
               if "<circle" in html:
                   raise SystemExit(f"ERROR: {d} 그래프에 circle 요소가 남아 있습니다.")
               if "상태:" in html or "버전:" in html:
                   raise SystemExit(f"ERROR: {d} 헤더에 상태/버전 문구가 남아 있습니다.")
-              # 5/18은 세이프타임즈 일정이 있어야 하므로 fallback 안내만 있으면 실패
-              if d == "2026-05-18" and "전일 주요 이슈 원문 데이터 없음" in html:
-                  raise SystemExit("ERROR: 2026-05-18이 아직 fallback 리포트입니다. 세이프타임즈 일정 수집 실패.")
-          print("[OK] report-index와 HTML 검증 완료")
+              if "원문 데이터 없음" in html:
+                  raise SystemExit(f"ERROR: {d}이 아직 fallback 리포트입니다. 세이프타임즈 일정 수집 실패.")
+
+          print("[OK] report-index, schedule JSON, HTML 검증 완료")
           PY
 
       - name: Commit backfilled reports
@@ -125,7 +139,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Backfill dashboard reports with SafeTimes schedules ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
+          git commit -m "Backfill dashboard reports ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
 
           if git push; then
             echo "정상적으로 push 완료"
@@ -145,5 +159,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Backfill dashboard reports with SafeTimes schedules ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
+          git commit -m "Backfill dashboard reports ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
           git push
