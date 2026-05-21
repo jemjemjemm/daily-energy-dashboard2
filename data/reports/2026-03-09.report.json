@@ -5,7 +5,7 @@
     "display_date": "3/9(월)",
     "previous_day_label": "3/8(일)",
     "today_label": "3/9(월)",
-    "generated_at": "2026-05-21 15:17:28 KST",
+    "generated_at": "2026-05-21 15:21:57 KST",
     "review_status": "가격 중심 자동생성 초안",
     "report_version": "fallback-price-report-v1.3",
     "header_title": "Daily Issue Report",
@@ -1412,7 +1412,7 @@
   },
   "automation": {
     "fallback_report": {
-      "created_at": "2026-05-21 15:17:28 KST",
+      "created_at": "2026-05-21 15:21:57 KST",
       "reason": "missing or empty schedule/news source data",
       "script": "ensure_report_draft.py v1.3",
       "scope": "price-centered report without fabricated issue/news content"
@@ -1432,7 +1432,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-21 15:17:28 KST",
+      "merged_at": "2026-05-21 15:21:57 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
