@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-21 15:22:05 KST",
+  "generatedAt": "2026-05-21 15:57:39 KST",
   "count": 59,
   "latestDate": "2026-05-21",
   "availableDates": [
@@ -95,8 +95,8 @@
     },
     {
       "date": "2026-05-18",
-      "displayDate": "5/18(월)",
-      "title": "Daily Issue Report",
+      "displayDate": "2026년 5월 18일 (월)",
+      "title": "Daily 유가 동향 — 2026.05.18",
       "url": "reports/2026-05-18.html",
       "status": "초안",
       "fileName": "2026-05-18.html",
@@ -149,8 +149,8 @@
     },
     {
       "date": "2026-05-08",
-      "displayDate": "5/8(금)",
-      "title": "Daily Issue Report",
+      "displayDate": "2026년 5월 8일 (금)",
+      "title": "Daily 유가 동향 — 2026.05.08",
       "url": "reports/2026-05-08.html",
       "status": "초안",
       "fileName": "2026-05-08.html",
@@ -392,8 +392,8 @@
     },
     {
       "date": "2026-04-01",
-      "displayDate": "4/1(수)",
-      "title": "Daily Issue Report",
+      "displayDate": "2026년 4월 1일 (수)",
+      "title": "Daily 유가 동향 — 2026.04.01",
       "url": "reports/2026-04-01.html",
       "status": "초안",
       "fileName": "2026-04-01.html",
@@ -410,8 +410,8 @@
     },
     {
       "date": "2026-03-30",
-      "displayDate": "3/30(월)",
-      "title": "Daily Issue Report",
+      "displayDate": "2026년 3월 30일 (월)",
+      "title": "Daily 유가 동향 — 2026.03.30",
       "url": "reports/2026-03-30.html",
       "status": "초안",
       "fileName": "2026-03-30.html",
@@ -581,8 +581,8 @@
     },
     {
       "date": "2026-03-03",
-      "displayDate": "3/3(화)",
-      "title": "Daily Issue Report",
+      "displayDate": "2026년 3월 3일 (화)",
+      "title": "Daily 유가 동향 — 2026.03.03",
       "url": "reports/2026-03-03.html",
       "status": "초안",
       "fileName": "2026-03-03.html",
