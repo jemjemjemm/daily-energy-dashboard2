@@ -1549,6 +1549,11 @@
         "url": ""
       },
       {
+        "name": "장기 가격 이력 history.json",
+        "type": "price-history",
+        "url": ""
+      },
+      {
         "name": "오피넷 국제유가 > 원유",
         "type": "price",
         "url": "https://www.opinet.co.kr/gloptotSelect.do"
@@ -1620,7 +1625,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-21 14:47:01 KST",
+      "merged_at": "2026-05-21 15:01:56 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

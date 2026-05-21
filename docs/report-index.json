@@ -1,9 +1,31 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-21 14:47:02 KST",
-  "count": 37,
+  "generatedAt": "2026-05-21 15:01:56 KST",
+  "count": 59,
   "latestDate": "2026-05-21",
   "availableDates": [
+    "2026-03-02",
+    "2026-03-03",
+    "2026-03-04",
+    "2026-03-05",
+    "2026-03-06",
+    "2026-03-09",
+    "2026-03-10",
+    "2026-03-11",
+    "2026-03-12",
+    "2026-03-13",
+    "2026-03-16",
+    "2026-03-17",
+    "2026-03-18",
+    "2026-03-19",
+    "2026-03-20",
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-25",
+    "2026-03-26",
+    "2026-03-27",
+    "2026-03-30",
+    "2026-03-31",
     "2026-04-01",
     "2026-04-02",
     "2026-04-03",
@@ -375,6 +397,204 @@
       "url": "reports/2026-04-01.html",
       "status": "초안",
       "fileName": "2026-04-01.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-31",
+      "displayDate": "3/31(화)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-31.html",
+      "status": "초안",
+      "fileName": "2026-03-31.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-30",
+      "displayDate": "3/30(월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-30.html",
+      "status": "초안",
+      "fileName": "2026-03-30.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-27",
+      "displayDate": "3/27(금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-27.html",
+      "status": "초안",
+      "fileName": "2026-03-27.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-26",
+      "displayDate": "3/26(목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-26.html",
+      "status": "초안",
+      "fileName": "2026-03-26.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-25",
+      "displayDate": "3/25(수)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-25.html",
+      "status": "초안",
+      "fileName": "2026-03-25.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-24",
+      "displayDate": "3/24(화)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-24.html",
+      "status": "초안",
+      "fileName": "2026-03-24.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-23",
+      "displayDate": "3/23(월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-23.html",
+      "status": "초안",
+      "fileName": "2026-03-23.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-20",
+      "displayDate": "3/20(금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-20.html",
+      "status": "초안",
+      "fileName": "2026-03-20.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-19",
+      "displayDate": "3/19(목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-19.html",
+      "status": "초안",
+      "fileName": "2026-03-19.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-18",
+      "displayDate": "3/18(수)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-18.html",
+      "status": "초안",
+      "fileName": "2026-03-18.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-17",
+      "displayDate": "3/17(화)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-17.html",
+      "status": "초안",
+      "fileName": "2026-03-17.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-16",
+      "displayDate": "3/16(월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-16.html",
+      "status": "초안",
+      "fileName": "2026-03-16.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-13",
+      "displayDate": "3/13(금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-13.html",
+      "status": "초안",
+      "fileName": "2026-03-13.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-12",
+      "displayDate": "3/12(목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-12.html",
+      "status": "초안",
+      "fileName": "2026-03-12.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-11",
+      "displayDate": "3/11(수)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-11.html",
+      "status": "초안",
+      "fileName": "2026-03-11.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-10",
+      "displayDate": "3/10(화)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-10.html",
+      "status": "초안",
+      "fileName": "2026-03-10.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-09",
+      "displayDate": "3/9(월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-09.html",
+      "status": "초안",
+      "fileName": "2026-03-09.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-06",
+      "displayDate": "3/6(금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-06.html",
+      "status": "초안",
+      "fileName": "2026-03-06.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-05",
+      "displayDate": "3/5(목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-05.html",
+      "status": "초안",
+      "fileName": "2026-03-05.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-04",
+      "displayDate": "3/4(수)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-04.html",
+      "status": "초안",
+      "fileName": "2026-03-04.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-03",
+      "displayDate": "3/3(화)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-03.html",
+      "status": "초안",
+      "fileName": "2026-03-03.html",
+      "exists": true
+    },
+    {
+      "date": "2026-03-02",
+      "displayDate": "3/2(월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-03-02.html",
+      "status": "초안",
+      "fileName": "2026-03-02.html",
       "exists": true
     }
   ]
