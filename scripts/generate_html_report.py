@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+generate_html_report.py v1.1
+- 리포트 JSON을 HTML로 변환
+- SVG 그래프 포인트에 마우스 hover용 title tooltip 추가
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -88,8 +94,7 @@ def render_schedules(items: Sequence[Mapping[str, Any]]) -> str:
             '<div class="schedule-main">'
             '<div>' + esc(i.get("title", "")) + '</div>'
             '<div class="schedule-rel">' + esc(i.get("relevance", "")) + '</div>'
-            '</div>'
-            '</div>'
+            '</div></div>'
         )
     return "\n".join(rows)
 
@@ -175,6 +180,7 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
     vals = get_values(series)
     if not dates or not vals:
         return '<div class="empty">표시 가능한 그래프 데이터가 없습니다.</div>'
+
     lo, hi = min(vals), max(vals)
     if lo == hi:
         lo -= 1
@@ -182,6 +188,7 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
     pad = (hi - lo) * 0.12
     lo = max(0, lo - pad)
     hi = hi + pad
+
     W, H, L, R, T, B = 440, 220, 40, 430, 14, 188
     date_idx = {d: idx for idx, d in enumerate(dates)}
 
@@ -194,6 +201,7 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
         return B - ((value - lo) / (hi - lo)) * (B - T)
 
     parts = ['<svg class="chart-svg" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">']
+
     for i in range(5):
         yy = B - (B - T) * i / 4
         label = lo + (hi - lo) * i / 4
@@ -201,9 +209,10 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
         parts.append(f'<text x="{L-6}" y="{yy+3:.1f}" text-anchor="end" font-size="9" fill="#888">{label:.1f}</text>')
 
     for i, d in enumerate(dates):
-        if len(dates) <= 7 or i in {0, len(dates) - 1}:
+        if len(dates) <= 9 or i in {0, len(dates) - 1} or i % max(1, len(dates)//6) == 0:
             parts.append(f'<text x="{x(i):.1f}" y="210" text-anchor="middle" font-size="9" fill="#888">{int(d[5:7])}/{int(d[8:10])}</text>')
 
+    # Lines
     for name, pts in series.items():
         poly = []
         for p in pts:
@@ -218,6 +227,24 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
         if poly:
             color = colors.get(name, "#1A6FD4")
             parts.append('<polyline fill="none" stroke="' + color + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="' + " ".join(poly) + '" />')
+
+    # Hover points: visible small point + wider transparent hit area with native SVG title tooltip.
+    for name, pts in series.items():
+        color = colors.get(name, "#1A6FD4")
+        for p in pts:
+            d = str(p.get("date"))
+            if d not in date_idx:
+                continue
+            try:
+                v = float(p.get("value"))
+            except Exception:
+                continue
+            cx = x(date_idx[d])
+            cy = y(v)
+            tooltip = esc(f"{name} {d}: {v:.2f} $/Bbl")
+            parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="2.4" fill="{color}" opacity="0.9"><title>{tooltip}</title></circle>')
+            parts.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="7" fill="transparent" class="hover-hit"><title>{tooltip}</title></circle>')
+
     parts.append("</svg>")
     return "\n".join(parts)
 
@@ -262,6 +289,7 @@ def css() -> str:
   .legend-item { display:inline-flex; align-items:center; gap:5px; }
   .legend-dot { width:12px; height:3px; border-radius:2px; display:inline-block; }
   .chart-svg { width:100%; height:auto; display:block; }
+  .hover-hit { cursor:crosshair; pointer-events:all; }
   .issue-card { background:#F8F9FA; border-left:3px solid var(--blue); border-radius:10px; padding:12px 14px; margin-bottom:8px; }
   .issue-tag { display:inline-block; font-size:10px; font-weight:800; color:#185FA5; background:#E6F1FB; border-radius:3px; padding:2px 6px; margin-bottom:6px; }
   .issue-title { font-size:13px; font-weight:800; margin-bottom:4px; }
@@ -288,6 +316,10 @@ def css() -> str:
   .footer { text-align:center; color:#aaa; font-size:11px; padding:14px; }
   @media(max-width:430px) { body { padding:10px; } .header-title { font-size:19px; } .price-grid { gap:6px; padding-left:12px; padding-right:12px; } .price-value { font-size:17px; } .meta { grid-template-columns:1fr; } }
 """
+
+
+def section(num: str, title: str, body: str) -> str:
+    return '<section class="section"><div class="section-head"><span class="num">' + num + '</span><span class="section-title">' + title + '</span></div><div class="body">' + body + '</div></section>'
 
 
 def build_html(report: Mapping[str, Any]) -> str:
@@ -331,16 +363,11 @@ def build_html(report: Mapping[str, Any]) -> str:
     return "\n".join(parts)
 
 
-def section(num: str, title: str, body: str) -> str:
-    return '<section class="section"><div class="section-head"><span class="num">' + num + '</span><span class="section-title">' + title + '</span></div><div class="body">' + body + '</div></section>'
-
-
 def parse_args():
-    import argparse
     parser = argparse.ArgumentParser(description="리포트 JSON을 HTML로 변환")
     parser.add_argument("--date", required=True)
     parser.add_argument("--report-dir", default="data/reports")
-    parser.add_argument("--out-dir", default="public/reports")
+    parser.add_argument("--out-dir", default="docs/reports")
     return parser.parse_args()
 
 
