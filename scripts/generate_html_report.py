@@ -176,10 +176,7 @@ def render_news(report: Mapping[str, Any]) -> str:
 
 def render_quality(report: Mapping[str, Any]) -> str:
     q = report.get("quality_control", {}) or {}
-    notes = q.get("quality_notes", []) or []
     sources = q.get("sources", []) or []
-
-    note_rows = "".join("<li>" + esc(n) + "</li>" for n in notes) or "<li>검수 메모가 없습니다.</li>"
 
     source_rows = []
     for s in sources:
@@ -199,10 +196,8 @@ def render_quality(report: Mapping[str, Any]) -> str:
             source_rows.append('<li>' + name + ' <span>(' + typ + ')</span></li>')
 
     return (
-        '<div class="small-title">검수 메모</div><ul class="quality-list">'
-        + note_rows
-        + '</ul><div class="section-divider"></div><div class="small-title">주요 출처</div><ul class="quality-list">'
-        + ("".join(source_rows) or "<li>출처 데이터가 없습니다.</li>")
+        '<ul class="quality-list">'
+        + ("".join(source_rows) or "<li>주요 출처 데이터가 없습니다.</li>")
         + '</ul>'
     )
 
@@ -545,7 +540,7 @@ def build_html(report: Mapping[str, Any]) -> str:
         + render_schedules(report.get("schedules", []))
         + '</div><div class="note">※ 관련성·영향도는 일정 원문에 기재된 사실이 아니라, 정유/석화/LNG 관점의 작성자 해석입니다.</div></section>',
         section("7", "조간 신문 트렌드", render_news(report)),
-        section("8", "검수·출처 메모", render_quality(report)),
+        section("8", "주요 출처", render_quality(report)),
         '<footer class="footer">자동 생성 리포트 · 사실/해석 구분 및 기사 원문 확인 필요</footer>',
         '<div id="chart-tooltip" class="chart-tooltip hidden"></div>',
         '<script>' + tooltip_js() + '</script>',
