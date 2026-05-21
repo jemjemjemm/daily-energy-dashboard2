@@ -1,0 +1,140 @@
+name: Backfill Dashboard Reports
+
+on:
+  workflow_dispatch:
+    inputs:
+      date_from:
+        description: "생성 시작일(YYYY-MM-DD). 예: 2026-03-01"
+        required: true
+        default: "2026-03-01"
+      date_to:
+        description: "생성 종료일(YYYY-MM-DD). 예: 2026-05-21"
+        required: true
+        default: "2026-05-21"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backfill-dashboard-reports-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  backfill-dashboard-reports:
+    runs-on: ubuntu-latest
+
+    env:
+      TZ: Asia/Seoul
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Sync latest main
+        run: |
+          git pull --ff-only origin main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate required files
+        run: |
+          set -e
+
+          test -f scripts/ensure_report_draft.py || (echo "ERROR: scripts/ensure_report_draft.py 없음" && exit 1)
+          test -f scripts/merge_prices_into_report.py || (echo "ERROR: scripts/merge_prices_into_report.py 없음" && exit 1)
+          test -f scripts/generate_html_report.py || (echo "ERROR: scripts/generate_html_report.py 없음" && exit 1)
+          test -f scripts/generate_reports_range.py || (echo "ERROR: scripts/generate_reports_range.py 없음" && exit 1)
+          test -f scripts/generate_report_index.py || (echo "ERROR: scripts/generate_report_index.py 없음" && exit 1)
+          test -f report_sample.json || (echo "ERROR: report_sample.json 없음" && exit 1)
+          test -f data/prices/history.json || (echo "ERROR: data/prices/history.json 없음. 과거 리포트 생성 불가" && exit 1)
+
+          grep -q -- "--refresh-fallback" scripts/ensure_report_draft.py || (echo "ERROR: ensure_report_draft.py가 최신본이 아닙니다. --refresh-fallback 없음" && exit 1)
+          grep -q "is_fallback_or_empty_report" scripts/ensure_report_draft.py || (echo "ERROR: ensure_report_draft.py가 빈 리포트 갱신을 지원하지 않습니다." && exit 1)
+          grep -q -- "--refresh-fallback" scripts/generate_reports_range.py || (echo "ERROR: generate_reports_range.py가 최신본이 아닙니다." && exit 1)
+          grep -q "history.json" scripts/merge_prices_into_report.py || (echo "ERROR: merge_prices_into_report.py가 history 기반 생성을 지원하지 않습니다." && exit 1)
+          grep -q "주요 출처" scripts/generate_html_report.py || (echo "ERROR: generate_html_report.py가 최신 화면 형식이 아닙니다." && exit 1)
+
+      - name: Backfill weekday reports
+        run: |
+          python scripts/generate_reports_range.py \
+            --start "${{ github.event.inputs.date_from }}" \
+            --end "${{ github.event.inputs.date_to }}" \
+            --skip-weekends \
+            --report-dir data/reports \
+            --price-dir data/prices \
+            --history data/prices/history.json \
+            --html-dir docs/reports \
+            --index-out docs/report-index.json \
+            --base-report report_sample.json \
+            --chart-months 2
+
+      - name: Verify generated outputs
+        run: |
+          set -e
+
+          echo "생성된 docs/reports 파일:"
+          find docs/reports -maxdepth 1 -type f -name "*.html" | sort
+
+          test -f docs/report-index.json || (echo "ERROR: docs/report-index.json 생성 실패" && exit 1)
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          idx = json.loads(Path("docs/report-index.json").read_text(encoding="utf-8"))
+          dates = set(idx.get("availableDates", []))
+          required = {"2026-05-08", "2026-05-18", "2026-05-19", "2026-05-21"}
+          missing = sorted(required - dates)
+          if missing:
+              raise SystemExit(f"ERROR: report-index.json에 필수 날짜 누락: {missing}")
+          for d in ["2026-05-08", "2026-05-18"]:
+              html_path = Path(f"docs/reports/{d}.html")
+              if not html_path.exists():
+                  raise SystemExit(f"ERROR: HTML 누락: {html_path}")
+              html = html_path.read_text(encoding="utf-8", errors="ignore")
+              if "원문 데이터 없음" not in html and d < "2026-05-19":
+                  raise SystemExit(f"ERROR: {d} fallback 안내 문구가 HTML에 없습니다.")
+              if "<circle" in html:
+                  raise SystemExit(f"ERROR: {d} 그래프에 circle 요소가 남아 있습니다.")
+              if "상태:" in html or "버전:" in html:
+                  raise SystemExit(f"ERROR: {d} 헤더에 상태/버전 문구가 남아 있습니다.")
+          print("[OK] report-index와 HTML 검증 완료")
+          PY
+
+      - name: Commit backfilled reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/reports/ || true
+          git add docs/reports/ || true
+          git add docs/report-index.json || true
+
+          if git diff --cached --quiet; then
+            echo "변경된 파일이 없습니다."
+            exit 0
+          fi
+
+          git commit -m "Backfill dashboard reports ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
+
+          if git push; then
+            echo "정상적으로 push 완료"
+            exit 0
+          fi
+
+          git fetch origin main
+          git reset --soft origin/main
+
+          git add data/reports/ || true
+          git add docs/reports/ || true
+          git add docs/report-index.json || true
+
+          if git diff --cached --quiet; then
+            echo "최신 원격 기준으로 추가 변경이 없습니다."
+            exit 0
+          fi
+
+          git commit -m "Backfill dashboard reports ${{ github.event.inputs.date_from }} to ${{ github.event.inputs.date_to }}"
+          git push
