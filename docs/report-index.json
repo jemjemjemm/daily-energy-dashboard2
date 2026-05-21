@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-05-21 11:04:09 KST",
+  "count": 1,
+  "latestDate": "2026-05-21",
+  "availableDates": [
+    "2026-05-21"
+  ],
+  "warnings": [],
+  "reports": [
+    {
+      "date": "2026-05-21",
+      "displayDate": "2026년 5월 21일 (목)",
+      "title": "Daily 유가 동향 — 2026.05.21",
+      "url": "reports/2026-05-21.html",
+      "status": "초안",
+      "fileName": "2026-05-21.html",
+      "exists": true
+    }
+  ]
+}
