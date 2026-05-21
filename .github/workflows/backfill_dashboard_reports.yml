@@ -94,9 +94,12 @@ jobs:
           KNOWN_IDX_BY_DATE = {
               "2026-03-03": 240078,
               "2026-04-01": 241384,
+              "2026-05-04": 242478,
               "2026-05-06": 242506,
               "2026-05-08": 242586,
+              "2026-05-12": 242687,
               "2026-05-18": 242809,
+              "2026-05-19": 242840,
           }
 
           ENERGY_KEYWORDS = [
@@ -540,12 +543,12 @@ jobs:
           idx = json.loads(Path("docs/report-index.json").read_text(encoding="utf-8"))
           dates = set(idx.get("availableDates", []))
 
-          required = {"2026-05-06", "2026-05-08", "2026-05-18", "2026-05-19", "2026-05-21"}
+          required = {"2026-05-04", "2026-05-06", "2026-05-08", "2026-05-12", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21"}
           missing = sorted(required - dates)
           if missing:
               raise SystemExit(f"ERROR: report-index.json에 필수 날짜 누락: {missing}")
 
-          for d in ["2026-05-06", "2026-05-08", "2026-05-18"]:
+          for d in ["2026-05-04", "2026-05-06", "2026-05-08", "2026-05-12", "2026-05-18", "2026-05-19"]:
               html_path = Path(f"docs/reports/{d}.html")
               if not html_path.exists():
                   raise SystemExit(f"ERROR: HTML 누락: {html_path}")
