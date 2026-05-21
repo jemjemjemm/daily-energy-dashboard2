@@ -7,7 +7,7 @@
     "display_date": "5/18(월)",
     "previous_day_label": "5/17(일)",
     "today_label": "5/18(월)",
-    "generated_at": "2026-05-21 16:15:50 KST",
+    "generated_at": "2026-05-21 17:35:16 KST",
     "report_version": "safetimes-direct-v1.0",
     "review_status": "자동생성 초안"
   },
@@ -233,7 +233,7 @@
   },
   "automation": {
     "safetimes_direct": {
-      "created_at": "2026-05-21 16:15:50 KST",
+      "created_at": "2026-05-21 17:35:16 KST",
       "article_idxno": 242809,
       "script": "backfill_reports.py direct builder"
     },
@@ -252,7 +252,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-21 16:15:50 KST",
+      "merged_at": "2026-05-21 17:35:16 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
