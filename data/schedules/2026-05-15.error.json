@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.2",
+  "source": "세이프타임즈",
+  "category": "오늘의 주요일정",
+  "date": "2026-05-15",
+  "collected_at": "2026-05-21 14:38:30 KST",
+  "success": false,
+  "error": "오늘의 주요일정 대상 기사를 찾지 못했습니다. target=2026-05-15, sample_candidates=['[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견']",
+  "quality": {
+    "needs_review": true,
+    "warnings": [
+      "세이프타임즈 오늘의 주요일정 수집 실패",
+      "과거 날짜 재생성 시 data/schedules/YYYY-MM-DD.json이 있으면 재사용되도록 설계되어 있습니다."
+    ]
+  }
+}

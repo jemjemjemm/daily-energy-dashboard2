@@ -1,9 +1,10 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-21 14:31:31 KST",
-  "count": 2,
+  "generatedAt": "2026-05-21 14:38:30 KST",
+  "count": 3,
   "latestDate": "2026-05-21",
   "availableDates": [
+    "2026-05-15",
     "2026-05-20",
     "2026-05-21"
   ],
@@ -25,6 +26,15 @@
       "url": "reports/2026-05-20.html",
       "status": "초안",
       "fileName": "2026-05-20.html",
+      "exists": true
+    },
+    {
+      "date": "2026-05-15",
+      "displayDate": "5/15(금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-15.html",
+      "status": "초안",
+      "fileName": "2026-05-15.html",
       "exists": true
     }
   ]
