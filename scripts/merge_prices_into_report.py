@@ -349,13 +349,9 @@ def update_price_section(report: Dict[str, Any], price_data: Optional[Mapping[st
 
 
 def update_summary(report: Dict[str, Any], start_date: str, end_date: str) -> None:
-    summary = report.setdefault("summary", [])
-    while len(summary) < 3:
-        summary.append({"type": "auto", "text": ""})
-    sentence = f"가격 그래프는 기준일 전일 기준 과거 2개월({short_date(start_date)}~{short_date(end_date)})만 표시하며, 값이 0인 가격은 제외."
-    existing = summary[0].get("text", "")
-    if "가격 그래프는 기준일 전일 기준 과거 2개월" not in existing:
-        summary[0]["text"] = (existing.rstrip() + " " + sentence).strip()
+    # 가격 그래프 설명은 prices.price_data_note에만 둔다.
+    # Summary에는 정책·일정·조간 보도만 남겨 보고서 문맥이 흐려지지 않도록 한다.
+    return None
 
 
 def update_sources_and_quality(report: Dict[str, Any], price_data: Optional[Mapping[str, Any]], history: Optional[Mapping[str, Any]], start_date: str, end_date: str) -> None:
