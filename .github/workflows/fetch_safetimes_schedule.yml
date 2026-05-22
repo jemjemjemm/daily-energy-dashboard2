@@ -2,7 +2,7 @@ name: Daily Energy Dashboard - Daily Data Pipeline
 
 on:
   schedule:
-    - cron: "10 23 * * *"
+    - cron: "20 0 * * *"
 
   workflow_dispatch:
     inputs:
@@ -106,30 +106,26 @@ jobs:
         if: env.RUN_MODE == 'single'
         continue-on-error: true
         run: |
-          if [ -f "data/schedules/$TARGET_DATE.json" ]; then
-            echo "[OK] 기존 세이프타임즈 일정 JSON 사용: data/schedules/$TARGET_DATE.json"
-          else
-            python scripts/fetch_safetimes_schedule.py \
-              --date "$TARGET_DATE" \
-              --out-dir data/schedules \
-              --max-retries 1 \
-              --retry-delay 10
-          fi
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/schedules \
+            --max-retries 1 \
+            --retry-delay 10 \
+            --force-refresh
 
       - name: Try Build report draft from SafeTimes
         if: env.RUN_MODE == 'single'
         continue-on-error: true
         run: |
-          if [ -f "data/reports/$TARGET_DATE.report.json" ]; then
-            echo "[OK] 기존 리포트 JSON 사용: data/reports/$TARGET_DATE.report.json"
-          elif [ -f "data/schedules/$TARGET_DATE.json" ]; then
+          rm -f "data/reports/$TARGET_DATE.report.json"
+          if [ -f "data/schedules/$TARGET_DATE.json" ]; then
             python scripts/build_report_draft_from_schedule.py \
               --date "$TARGET_DATE" \
               --schedule-dir data/schedules \
               --base-report report_sample.json \
               --out-dir data/reports
           else
-            echo "[WARN] 일정 JSON이 없어 세이프타임즈 기반 초안 생성을 건너뜁니다."
+            echo "[WARN] 일정 JSON이 없어 일정 기반 초안 생성을 건너뜁니다."
           fi
 
       - name: Ensure report draft exists
