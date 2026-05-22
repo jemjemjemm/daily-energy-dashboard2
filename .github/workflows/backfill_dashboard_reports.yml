@@ -53,6 +53,7 @@ jobs:
             --skip-korean-holidays \
             --report-dir data/reports \
             --schedule-dir data/schedules \
+            --news-dir data/news \
             --price-dir data/prices \
             --history data/prices/history.json \
             --html-dir docs/reports \
@@ -66,7 +67,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/schedules/ data/reports/ data/prices/ docs/reports/ docs/report-index.json || true
+          git add data/schedules/ data/news/ data/reports/ data/prices/ docs/reports/ docs/report-index.json || true
 
           if git diff --cached --quiet; then
             echo "변경된 파일이 없습니다."
