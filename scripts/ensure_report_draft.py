@@ -71,6 +71,26 @@ def read_json_optional(path: Path) -> Dict[str, Any]:
         return {}
 
 
+BAD_FALLBACK_PHRASES = [
+    "원문 자동 매칭 실패",
+    "가격 데이터 중심",
+    "가격 중심 자동생성",
+    "원문 데이터 없음",
+    "데이터 없음",
+    "일정 관련성 평가는",
+    "후속 보완이 필요",
+    "fallback",
+]
+
+
+def contains_bad_fallback_phrase(report: Dict[str, Any]) -> bool:
+    try:
+        text = json.dumps(report, ensure_ascii=False)
+    except Exception:
+        text = str(report)
+    return any(phrase in text for phrase in BAD_FALLBACK_PHRASES)
+
+
 def meaningful_text(value: Any) -> bool:
     if value is None:
         return False
@@ -126,6 +146,9 @@ def has_meaningful_news(report: Dict[str, Any]) -> bool:
 
 def is_fallback_or_empty_report(report: Dict[str, Any]) -> bool:
     if not report:
+        return True
+
+    if contains_bad_fallback_phrase(report):
         return True
 
     automation = report.get("automation", {}) if isinstance(report.get("automation"), dict) else {}
