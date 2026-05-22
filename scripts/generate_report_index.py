@@ -33,6 +33,28 @@ TITLE_RE = re.compile(r"<title>\s*(.*?)\s*</title>", re.I | re.S)
 HEADER_DATE_RE = re.compile(r'<div class="header-date">\s*(.*?)\s*</div>', re.I | re.S)
 
 
+BAD_HTML_PHRASES = [
+    "자동 추출된 일정 항목이 없습니다",
+    "본문 구조 확인 및 수동 검수가 필요합니다",
+    "세이프타임즈 '' 원문",
+    "원문 자동 매칭 실패",
+    "주요일정 원문 데이터 미확보",
+    "원문 데이터 없음",
+    "가격 데이터 중심 리포트",
+    "Data 없음",
+    "No data",
+]
+
+
+def is_valid_report_html(text: str) -> bool:
+    if not text:
+        return False
+    if any(phrase in text for phrase in BAD_HTML_PHRASES):
+        return False
+    required = ["Daily Issue Report", "Summary", "유가 동향"]
+    return all(token in text for token in required)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="캘린더 대시보드용 report-index.json 생성")
     parser.add_argument(
@@ -83,6 +105,8 @@ def read_report_meta(html_path: Path) -> Dict[str, Any] | None:
 
     date = date_match.group(1)
     text = html_path.read_text(encoding="utf-8", errors="ignore")
+    if not is_valid_report_html(text):
+        return None
 
     title_match = TITLE_RE.search(text)
     header_date_match = HEADER_DATE_RE.search(text)
