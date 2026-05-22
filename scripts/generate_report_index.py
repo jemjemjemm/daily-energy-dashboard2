@@ -51,8 +51,9 @@ def is_valid_report_html(text: str) -> bool:
         return False
     if any(phrase in text for phrase in BAD_HTML_PHRASES):
         return False
-    required = ["Daily Issue Report", "Summary", "유가 동향"]
-    return all(token in text for token in required)
+    has_report_title = ("Daily Issue Report" in text) or ("Daily 유가 동향" in text)
+    required = ["Summary", "유가 동향"]
+    return has_report_title and all(token in text for token in required)
 
 
 def parse_args() -> argparse.Namespace:
@@ -111,7 +112,7 @@ def read_report_meta(html_path: Path) -> Dict[str, Any] | None:
     title_match = TITLE_RE.search(text)
     header_date_match = HEADER_DATE_RE.search(text)
 
-    title = strip_tags(title_match.group(1)) if title_match else f"Daily 유가 동향 — {date}"
+    title = "Daily Issue Report"
     display_date = strip_tags(header_date_match.group(1)) if header_date_match else date
 
     return {
