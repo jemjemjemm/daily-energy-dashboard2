@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-22 11:10:33 KST",
-  "count": 12,
+  "generatedAt": "2026-05-22 13:38:12 KST",
+  "count": 17,
   "latestDate": "2026-05-22",
   "availableDates": [
     "2026-03-03",
@@ -9,8 +9,13 @@
     "2026-04-28",
     "2026-05-04",
     "2026-05-06",
+    "2026-05-07",
     "2026-05-08",
+    "2026-05-11",
     "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15",
     "2026-05-18",
     "2026-05-19",
     "2026-05-20",
@@ -30,7 +35,7 @@
     },
     {
       "date": "2026-05-21",
-      "displayDate": "5/21(목)",
+      "displayDate": "2026년 5월 21일 (목)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-21.html",
       "status": "초안",
@@ -39,7 +44,7 @@
     },
     {
       "date": "2026-05-20",
-      "displayDate": "5/20(수)",
+      "displayDate": "2026년 5월 20일 (수)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-20.html",
       "status": "초안",
@@ -48,7 +53,7 @@
     },
     {
       "date": "2026-05-19",
-      "displayDate": "5/19(화)",
+      "displayDate": "2026년 5월 19일 (화)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-19.html",
       "status": "초안",
@@ -57,7 +62,7 @@
     },
     {
       "date": "2026-05-18",
-      "displayDate": "5/18(월)",
+      "displayDate": "2026년 5월 18일 (월)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-18.html",
       "status": "초안",
@@ -65,8 +70,35 @@
       "exists": true
     },
     {
+      "date": "2026-05-15",
+      "displayDate": "2026년 5월 15일 (금)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-15.html",
+      "status": "초안",
+      "fileName": "2026-05-15.html",
+      "exists": true
+    },
+    {
+      "date": "2026-05-14",
+      "displayDate": "2026년 5월 14일 (목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-14.html",
+      "status": "초안",
+      "fileName": "2026-05-14.html",
+      "exists": true
+    },
+    {
+      "date": "2026-05-13",
+      "displayDate": "2026년 5월 13일 (수)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-13.html",
+      "status": "초안",
+      "fileName": "2026-05-13.html",
+      "exists": true
+    },
+    {
       "date": "2026-05-12",
-      "displayDate": "5/12(화)",
+      "displayDate": "2026년 5월 12일 (화)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-12.html",
       "status": "초안",
@@ -74,8 +106,17 @@
       "exists": true
     },
     {
+      "date": "2026-05-11",
+      "displayDate": "2026년 5월 11일 (월)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-11.html",
+      "status": "초안",
+      "fileName": "2026-05-11.html",
+      "exists": true
+    },
+    {
       "date": "2026-05-08",
-      "displayDate": "5/8(금)",
+      "displayDate": "2026년 5월 8일 (금)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-08.html",
       "status": "초안",
@@ -83,8 +124,17 @@
       "exists": true
     },
     {
+      "date": "2026-05-07",
+      "displayDate": "2026년 5월 7일 (목)",
+      "title": "Daily Issue Report",
+      "url": "reports/2026-05-07.html",
+      "status": "초안",
+      "fileName": "2026-05-07.html",
+      "exists": true
+    },
+    {
       "date": "2026-05-06",
-      "displayDate": "5/6(수)",
+      "displayDate": "2026년 5월 6일 (수)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-06.html",
       "status": "초안",
@@ -93,7 +143,7 @@
     },
     {
       "date": "2026-05-04",
-      "displayDate": "5/4(월)",
+      "displayDate": "2026년 5월 4일 (월)",
       "title": "Daily Issue Report",
       "url": "reports/2026-05-04.html",
       "status": "초안",

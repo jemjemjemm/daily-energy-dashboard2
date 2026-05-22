@@ -1,262 +1,32 @@
 {
+  "template_version": "2.0",
   "report": {
-    "report_title": "Daily Issue Report",
-    "header_title": "Daily Issue Report",
-    "report_badge": "정유 · 석유화학 · LNG",
     "report_date": "2026-05-21",
-    "display_date": "5/21(목)",
-    "previous_day_label": "5/20(수)",
-    "today_label": "5/21(목)",
-    "generated_at": "2026-05-21 17:35:16 KST",
-    "report_version": "safetimes-direct-v1.0",
-    "review_status": "자동생성 초안"
+    "display_date": "2026년 5월 21일 (목)",
+    "previous_day_label": "5/20",
+    "today_label": "5/21",
+    "generated_at": "2026-05-22 13:38 KST",
+    "review_status": "초안",
+    "report_version": "draft-from-safetimes-v2.0",
+    "header_title": "Daily Issue Report",
+    "report_title": "Daily Issue Report",
+    "report_badge": "정유 · 석유화학 · LNG",
+    "meta_description": "정유·석유화학·LNG 관련 일일 유가 동향 및 주요 이슈 리포트"
   },
   "summary": [
     {
-      "type": "schedule",
-      "text": "세이프타임즈 '[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견' 원문을 기준으로 정유·석화·LNG 관련성이 있는 정책·경제·산업 일정을 선별함. 가격 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 값이 0인 가격은 제외."
+      "type": "stakeholder",
+      "text": "주요 이해관계자 동향: 물가안정TF 회의(08:00 정부서울청사), 재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사), 구리 석유비축기지 방문(09:30 한국석유공사 구리지사), 남동일 공정위 부위원장, 업무점검회의(15:00 대회의실). 가격 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 값이 0인 가격은 제외."
     },
     {
-      "type": "price",
-      "text": "가격 카드와 그래프는 history.json 및 오피넷 가격 데이터를 기준으로 병합합니다."
+      "type": "today",
+      "text": "금일 주요 일정: 물가안정TF 회의(08:00 정부서울청사), 재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사), 구리 석유비축기지 방문(09:30 한국석유공사 구리지사), 남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)."
     },
     {
-      "type": "review",
-      "text": "일정 관련성 평가는 키워드 기반 자동 분류이므로 최종 보고 전 확인이 필요합니다."
+      "type": "news_trend",
+      "text": "조간 보도: 자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요."
     }
   ],
-  "issues": [
-    {
-      "category": "주요일정",
-      "title": "우원식 국회의장",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "정청래 총괄상임선대위원장, 류삼영 동작구청장 후보 지원유세 및 출근길 시민인사(07:00 장승배기역 1번 출구 인근)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "정청래 총괄상임선대위원장, 류삼영 동작구청장 후보 지원유세(07:20 KB국민은행 상도동종합금융센터)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "정청래 총괄상임선대위원장, 추미애 경기도지사 후보 지원유세(10:30 서현역 5번 출구 앞)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "정청래 총괄상임선대위원장, 박수현 충남도지사 후보 지원유세(12:40 충남 공주 산성시장)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    }
-  ],
-  "schedules": [
-    {
-      "time": "-",
-      "org": "정치",
-      "title": "우원식 국회의장",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "09:30",
-      "org": "정치",
-      "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "07:00",
-      "org": "정치",
-      "title": "정청래 총괄상임선대위원장, 류삼영 동작구청장 후보 지원유세 및 출근길 시민인사(07:00 장승배기역 1번 출구 인근)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "07:20",
-      "org": "정치",
-      "title": "정청래 총괄상임선대위원장, 류삼영 동작구청장 후보 지원유세(07:20 KB국민은행 상도동종합금융센터)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "10:30",
-      "org": "정치",
-      "title": "정청래 총괄상임선대위원장, 추미애 경기도지사 후보 지원유세(10:30 서현역 5번 출구 앞)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "12:40",
-      "org": "정치",
-      "title": "정청래 총괄상임선대위원장, 박수현 충남도지사 후보 지원유세(12:40 충남 공주 산성시장)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "13:00",
-      "org": "정치",
-      "title": "박수현 충남도지사 후보, 김영빈 국회의원 후보 지원유세(13:00 충남 공주 산성시장 일)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "15:00",
-      "org": "정치",
-      "title": "박수현 충남도지사 후보, 허태정 대전시장 후보 지원유세(15:00 중구 으능정이 문화의거리)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "18:30",
-      "org": "정치",
-      "title": "박수현 충남도지사 후보, 장기수 천안시장 후보 지원유세 (18:30 천안시청 사거리)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "11:00",
-      "org": "정치",
-      "title": "장동혁 대표, 중앙시장 상가 인사(11:00 독일약국 출발(대전 동구 대전로 787)) 장동혁 대표, 충남 공주 산성시장 지원유세 및 순방유세(13:30 한독프라자 앞(충남 공주시 용당길 17))",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "17:00",
-      "org": "정치",
-      "title": "장동혁 대표, 충남 아산 탕정한들물빛공원 지원유세(17:00 파리바케뜨 아산탕정점 앞)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "17:00",
-      "org": "정치",
-      "title": "송언석 원내대표, 박민식 부산 북구갑 후보 필승결의 지원유세(17:00 구포시장 쌈지공원)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "08:00",
-      "org": "경제",
-      "title": "재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "09:00",
-      "org": "경제",
-      "title": "재정경제부, 대외경제장관회의(09:00 정부서울청사)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "15:00",
-      "org": "경제",
-      "title": "재정경제부, 글로벌 AI 허브 비전선포식(15:00 서울용산구)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "09:00",
-      "org": "경제",
-      "title": "재정경제부, 외환건전성협의회(09:00)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "11:00",
-      "org": "경제",
-      "title": "재정경제부, GGGI-GCF 공동 컨퍼런스(11:00)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "09:00",
-      "org": "기획처",
-      "title": "대외경제관계장관회의(09:00 정부서울청사)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "08:00",
-      "org": "공정위",
-      "title": "물가안정TF 회의(08:00 정부서울청사)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "15:00",
-      "org": "경제",
-      "title": "남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    }
-  ],
-  "news_trend": {
-    "summary": "대표 출처는 세이프타임즈 오늘의 주요일정입니다. 기사 제목: [오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견",
-    "articles": [
-      {
-        "title": "[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견",
-        "press": "세이프타임즈",
-        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918"
-      }
-    ]
-  },
-  "quality_control": {
-    "quality_notes": [
-      "세이프타임즈 주요일정 원문 기반 자동 생성",
-      "정유·석화·LNG 관련성은 키워드 기반 자동 분류",
-      "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
-      "값이 0인 가격은 그래프 이력에서 제외했습니다.",
-      "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
-    ],
-    "sources": [
-      {
-        "name": "세이프타임즈 오늘의 주요일정",
-        "type": "schedule",
-        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918"
-      },
-      {
-        "name": "장기 가격 이력 history.json",
-        "type": "price-history",
-        "url": ""
-      },
-      {
-        "name": "오피넷 국제유가 > 원유",
-        "type": "price",
-        "url": "https://www.opinet.co.kr/gloptotSelect.do"
-      },
-      {
-        "name": "오피넷 국제유가 > 석유제품",
-        "type": "price",
-        "url": "https://www.opinet.co.kr/glopopdSelect.do"
-      },
-      {
-        "name": "장기 가격 이력 history.json",
-        "type": "price-history",
-        "url": ""
-      }
-    ]
-  },
-  "automation": {
-    "safetimes_direct": {
-      "created_at": "2026-05-21 17:35:16 KST",
-      "article_idxno": 242918,
-      "script": "backfill_reports.py direct builder"
-    },
-    "opinet_prices": {
-      "price_json_used": true,
-      "source_date": "2026-05-21",
-      "history_schema_version": "1.3",
-      "history_period": {
-        "start": "2026-01-01",
-        "end": "2026-05-20"
-      },
-      "chart_window": {
-        "start": "2026-03-20",
-        "end": "2026-05-20",
-        "rule": "report_date - 1 day, then minus 2 calendar months"
-      },
-      "crude_chart_source": "history.json window",
-      "products_chart_source": "history.json window",
-      "merged_at": "2026-05-21 17:35:16 KST",
-      "merge_script": "merge_prices_into_report.py v1.4",
-      "needs_review": true
-    }
-  },
   "prices": {
     "unit": "$/Bbl",
     "price_data_note": "※ 가격 데이터는 오피넷 및 장기 이력(history.json) 기준입니다. 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 값이 0인 가격은 제외했습니다.",
@@ -1609,6 +1379,179 @@
           }
         ]
       }
+    }
+  },
+  "issues": [
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "물가안정TF 회의(08:00 정부서울청사)",
+      "description": "08:00 공정위 일정으로 확인된 '물가안정TF 회의(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사)",
+      "description": "08:00 경제 일정으로 확인된 '재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    },
+    {
+      "category": "정유",
+      "category_class": "",
+      "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
+      "description": "09:30 정치 일정으로 확인된 '구리 석유비축기지 방문(09:30 한국석유공사 구리지사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "A 직접",
+      "grade_class": "grade-a"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)",
+      "description": "15:00 경제 일정으로 확인된 '남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    }
+  ],
+  "schedules": [
+    {
+      "time": "08:00",
+      "org": "공정위",
+      "title": "물가안정TF 회의(08:00 정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "경제",
+      "title": "재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "09:30",
+      "org": "정치",
+      "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
+      "relevance": ""
+    },
+    {
+      "time": "15:00",
+      "org": "경제",
+      "title": "남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)",
+      "relevance": ""
+    }
+  ],
+  "news_trend": {
+    "summary": "자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요.",
+    "articles": []
+  },
+  "quality_control": {
+    "quality_notes": [
+      "기사 제목·URL·발행일 확인 후 대표 기사로 사용합니다.",
+      "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
+      "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
+      "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
+      "값이 0인 가격은 그래프 이력에서 제외했습니다.",
+      "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
+    ],
+    "sources": [
+      {
+        "name": "오늘의 주요일정",
+        "type": "schedule",
+        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918"
+      },
+      {
+        "name": "국제 원유가격 원천 데이터",
+        "type": "price_file",
+        "url": ""
+      },
+      {
+        "name": "국제 석유제품가격 원천 데이터",
+        "type": "price_file",
+        "url": ""
+      },
+      {
+        "name": "대표 기사 원문",
+        "type": "news",
+        "url": ""
+      },
+      {
+        "name": "오피넷 국제유가 > 원유",
+        "type": "price",
+        "url": "https://www.opinet.co.kr/gloptotSelect.do"
+      },
+      {
+        "name": "오피넷 국제유가 > 석유제품",
+        "type": "price",
+        "url": "https://www.opinet.co.kr/glopopdSelect.do"
+      },
+      {
+        "name": "장기 가격 이력 history.json",
+        "type": "price-history",
+        "url": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "SK Innovation Communication Division · 2026.05.20<br>Source: 사용자 제공 기본 데이터, 세이프타임즈 일정, 가격 원천자료, 대표 기사 원문"
+  },
+  "generator_rules": {
+    "html_escape_required_fields": [
+      "summary.text",
+      "issues.description",
+      "schedules.relevance",
+      "news_trend.articles.title",
+      "news_trend.articles.press"
+    ],
+    "html_allowed_fields": [
+      "news_trend.summary_html",
+      "footer.text"
+    ],
+    "exclude_price_value_if_zero": true,
+    "news_article_count_target": 3,
+    "summary_item_count_target": 3,
+    "issue_count_range": [
+      3,
+      5
+    ],
+    "schedule_sort": "time_ascending",
+    "chart_required_svg_elements": [
+      "svg.price-chart-svg",
+      "line.hover-line",
+      "g.hover-dots",
+      "rect.chart-hitbox"
+    ]
+  },
+  "automation": {
+    "safetimes": {
+      "source_file_date": "2026-05-21",
+      "source_title": "[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견",
+      "source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918",
+      "source_published_at": "2026-05-21",
+      "parsed_schedule_count": 4,
+      "parser_version": "build_report_draft_from_schedule.py v1.0",
+      "needs_review": true
+    },
+    "opinet_prices": {
+      "price_json_used": true,
+      "source_date": "2026-05-21",
+      "history_schema_version": "1.3",
+      "history_period": {
+        "start": "2026-01-01",
+        "end": "2026-05-20"
+      },
+      "chart_window": {
+        "start": "2026-03-20",
+        "end": "2026-05-20",
+        "rule": "report_date - 1 day, then minus 2 calendar months"
+      },
+      "crude_chart_source": "history.json window",
+      "products_chart_source": "history.json window",
+      "merged_at": "2026-05-22 13:38:12 KST",
+      "merge_script": "merge_prices_into_report.py v1.4",
+      "needs_review": true
     }
   }
 }

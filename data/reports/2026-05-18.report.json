@@ -1,262 +1,32 @@
 {
+  "template_version": "2.0",
   "report": {
-    "report_title": "Daily Issue Report",
-    "header_title": "Daily Issue Report",
-    "report_badge": "정유 · 석유화학 · LNG",
     "report_date": "2026-05-18",
-    "display_date": "5/18(월)",
-    "previous_day_label": "5/17(일)",
-    "today_label": "5/18(월)",
-    "generated_at": "2026-05-21 17:35:16 KST",
-    "report_version": "safetimes-direct-v1.0",
-    "review_status": "자동생성 초안"
+    "display_date": "2026년 5월 18일 (월)",
+    "previous_day_label": "5/17",
+    "today_label": "5/18",
+    "generated_at": "2026-05-22 13:38 KST",
+    "review_status": "초안",
+    "report_version": "draft-from-safetimes-v2.0",
+    "header_title": "Daily Issue Report",
+    "report_title": "Daily Issue Report",
+    "report_badge": "정유 · 석유화학 · LNG",
+    "meta_description": "정유·석유화학·LNG 관련 일일 유가 동향 및 주요 이슈 리포트"
   },
   "summary": [
     {
-      "type": "schedule",
-      "text": "세이프타임즈 '[오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식' 원문을 기준으로 정유·석화·LNG 관련성이 있는 정책·경제·산업 일정을 선별함. 가격 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 값이 0인 가격은 제외."
+      "type": "stakeholder",
+      "text": "주요 이해관계자 동향: 주한 아세안 대사 간담회(10:00 대한상의), 5·18 민주화운동 기념식(11:00 광주), 광주사무소 오찬 간담회(12:00 광주), 산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩). 가격 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 값이 0인 가격은 제외."
     },
     {
-      "type": "price",
-      "text": "가격 카드와 그래프는 history.json 및 오피넷 가격 데이터를 기준으로 병합합니다."
+      "type": "today",
+      "text": "금일 주요 일정: 주한 아세안 대사 간담회(10:00 대한상의), 5·18 민주화운동 기념식(11:00 광주), 광주사무소 오찬 간담회(12:00 광주), 산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)."
     },
     {
-      "type": "review",
-      "text": "일정 관련성 평가는 키워드 기반 자동 분류이므로 최종 보고 전 확인이 필요합니다."
+      "type": "news_trend",
+      "text": "조간 보도: 자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요."
     }
   ],
-  "issues": [
-    {
-      "category": "주요일정",
-      "title": "우원식 국회의장",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "송언석 공동선대위원장, 6.3 지방선거 현안 관련 기자간담회(08:30 국회 본관 원내대표실)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "이준석 대표, 문인수 개혁신당 경기 안산시갑 국회의원 후보 선거사무소 개소식(17:00 경기도 안산시 상록구 본오로65, 서원빌딩 2층)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "한국경제 설명회 및 G7 재무장관회의",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    },
-    {
-      "category": "주요일정",
-      "title": "기획예산처, 5.18 민주화운동 기념식(11:00)",
-      "description": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-      "grade": "B 주시"
-    }
-  ],
-  "schedules": [
-    {
-      "time": "-",
-      "org": "정치",
-      "title": "우원식 국회의장",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "-",
-      "org": "국회",
-      "title": "",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "08:30",
-      "org": "정치",
-      "title": "송언석 공동선대위원장, 6.3 지방선거 현안 관련 기자간담회(08:30 국회 본관 원내대표실)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "17:00",
-      "org": "정치",
-      "title": "이준석 대표, 문인수 개혁신당 경기 안산시갑 국회의원 후보 선거사무소 개소식(17:00 경기도 안산시 상록구 본오로65, 서원빌딩 2층)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "-",
-      "org": "재경부",
-      "title": "한국경제 설명회 및 G7 재무장관회의",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "11:00",
-      "org": "경제",
-      "title": "기획예산처, 5.18 민주화운동 기념식(11:00)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "14:00",
-      "org": "경제",
-      "title": "기획예산처, 국립아시아문화전당 지역예술인 간담회(14:00 광주 광산동)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "16:30",
-      "org": "경제",
-      "title": "기획예산처, 5.18 보훈단체 간담회(16:30 광주 쌍촌동)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "16:00",
-      "org": "경제",
-      "title": "기획예산처, 재정성과위원회(16:00)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "11:00",
-      "org": "공정위",
-      "title": "5·18 민주화운동 기념식(11:00 광주)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "12:00",
-      "org": "공정위",
-      "title": "광주사무소 오찬 간담회(12:00 광주)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "14:00",
-      "org": "금융위",
-      "title": "국민성장펀드 성과 점검 세미나(14:00 산업은행)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "-",
-      "org": "경제",
-      "title": "신현송 총재, G7 재무장관·중앙은행 총재 회의(프랑스 파리. 18∼20일)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "14:00",
-      "org": "산업부",
-      "title": "산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "10:00",
-      "org": "산업부",
-      "title": "주한 아세안 대사 간담회(10:00 대한상의)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "14:00",
-      "org": "산업부",
-      "title": "통상추진위원회(14:00 대한상의)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "15:00",
-      "org": "중기부",
-      "title": "공주 전통시장 및 골목상권 방문(15:00 공주 산성시장, 제민천상권)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "15:40",
-      "org": "중기부",
-      "title": "동네책방 간담회(15:40 공주 오래된 질문)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "12:10",
-      "org": "중기부",
-      "title": "KAIST 창업인 동반성장 페어(12:10 카이스트)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    },
-    {
-      "time": "17:15",
-      "org": "중기부",
-      "title": "관, 핀란드 경제부장관 면담(17:15 서울)",
-      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-    }
-  ],
-  "news_trend": {
-    "summary": "대표 출처는 세이프타임즈 오늘의 주요일정입니다. 기사 제목: [오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식",
-    "articles": [
-      {
-        "title": "[오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식",
-        "press": "세이프타임즈",
-        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809"
-      }
-    ]
-  },
-  "quality_control": {
-    "quality_notes": [
-      "세이프타임즈 주요일정 원문 기반 자동 생성",
-      "정유·석화·LNG 관련성은 키워드 기반 자동 분류",
-      "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
-      "값이 0인 가격은 그래프 이력에서 제외했습니다.",
-      "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
-    ],
-    "sources": [
-      {
-        "name": "세이프타임즈 오늘의 주요일정",
-        "type": "schedule",
-        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809"
-      },
-      {
-        "name": "장기 가격 이력 history.json",
-        "type": "price-history",
-        "url": ""
-      },
-      {
-        "name": "오피넷 국제유가 > 원유",
-        "type": "price",
-        "url": ""
-      },
-      {
-        "name": "오피넷 국제유가 > 석유제품",
-        "type": "price",
-        "url": ""
-      },
-      {
-        "name": "장기 가격 이력 history.json",
-        "type": "price-history",
-        "url": ""
-      }
-    ]
-  },
-  "automation": {
-    "safetimes_direct": {
-      "created_at": "2026-05-21 17:35:16 KST",
-      "article_idxno": 242809,
-      "script": "backfill_reports.py direct builder"
-    },
-    "opinet_prices": {
-      "price_json_used": false,
-      "source_date": "",
-      "history_schema_version": "1.3",
-      "history_period": {
-        "start": "2026-01-01",
-        "end": "2026-05-20"
-      },
-      "chart_window": {
-        "start": "2026-03-17",
-        "end": "2026-05-17",
-        "rule": "report_date - 1 day, then minus 2 calendar months"
-      },
-      "crude_chart_source": "history.json window",
-      "products_chart_source": "history.json window",
-      "merged_at": "2026-05-21 17:35:16 KST",
-      "merge_script": "merge_prices_into_report.py v1.4",
-      "needs_review": true
-    }
-  },
   "prices": {
     "unit": "$/Bbl",
     "price_data_note": "※ 가격 데이터는 오피넷 및 장기 이력(history.json) 기준입니다. 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 값이 0인 가격은 제외했습니다.",
@@ -1609,6 +1379,207 @@
           }
         ]
       }
+    }
+  },
+  "issues": [
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "주한 아세안 대사 간담회(10:00 대한상의)",
+      "description": "10:00 산업부 일정으로 확인된 '주한 아세안 대사 간담회(10:00 대한상의)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "C 참고",
+      "grade_class": "grade-c"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "5·18 민주화운동 기념식(11:00 광주)",
+      "description": "11:00 공정위 일정으로 확인된 '5·18 민주화운동 기념식(11:00 광주)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "광주사무소 오찬 간담회(12:00 광주)",
+      "description": "12:00 공정위 일정으로 확인된 '광주사무소 오찬 간담회(12:00 광주)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)",
+      "description": "14:00 산업부 일정으로 확인된 '산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "C 참고",
+      "grade_class": "grade-c"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "통상추진위원회(14:00 대한상의)",
+      "description": "14:00 산업부 일정으로 확인된 '통상추진위원회(14:00 대한상의)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "C 참고",
+      "grade_class": "grade-c"
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "한국경제 설명회 및 G7 재무장관회의",
+      "description": "- 재경부 일정으로 확인된 '한국경제 설명회 및 G7 재무장관회의' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
+      "grade": "B 간접",
+      "grade_class": "grade-b"
+    }
+  ],
+  "schedules": [
+    {
+      "time": "10:00",
+      "org": "산업부",
+      "title": "주한 아세안 대사 간담회(10:00 대한상의)",
+      "relevance": ""
+    },
+    {
+      "time": "11:00",
+      "org": "공정위",
+      "title": "5·18 민주화운동 기념식(11:00 광주)",
+      "relevance": ""
+    },
+    {
+      "time": "12:00",
+      "org": "공정위",
+      "title": "광주사무소 오찬 간담회(12:00 광주)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "산업부",
+      "title": "산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "산업부",
+      "title": "통상추진위원회(14:00 대한상의)",
+      "relevance": ""
+    },
+    {
+      "time": "-",
+      "org": "재경부",
+      "title": "한국경제 설명회 및 G7 재무장관회의",
+      "relevance": ""
+    }
+  ],
+  "news_trend": {
+    "summary": "자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요.",
+    "articles": []
+  },
+  "quality_control": {
+    "quality_notes": [
+      "기사 제목·URL·발행일 확인 후 대표 기사로 사용합니다.",
+      "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
+      "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
+      "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
+      "값이 0인 가격은 그래프 이력에서 제외했습니다.",
+      "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
+    ],
+    "sources": [
+      {
+        "name": "오늘의 주요일정",
+        "type": "schedule",
+        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809"
+      },
+      {
+        "name": "국제 원유가격 원천 데이터",
+        "type": "price_file",
+        "url": ""
+      },
+      {
+        "name": "국제 석유제품가격 원천 데이터",
+        "type": "price_file",
+        "url": ""
+      },
+      {
+        "name": "대표 기사 원문",
+        "type": "news",
+        "url": ""
+      },
+      {
+        "name": "오피넷 국제유가 > 원유",
+        "type": "price",
+        "url": ""
+      },
+      {
+        "name": "오피넷 국제유가 > 석유제품",
+        "type": "price",
+        "url": ""
+      },
+      {
+        "name": "장기 가격 이력 history.json",
+        "type": "price-history",
+        "url": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "SK Innovation Communication Division · 2026.05.20<br>Source: 사용자 제공 기본 데이터, 세이프타임즈 일정, 가격 원천자료, 대표 기사 원문"
+  },
+  "generator_rules": {
+    "html_escape_required_fields": [
+      "summary.text",
+      "issues.description",
+      "schedules.relevance",
+      "news_trend.articles.title",
+      "news_trend.articles.press"
+    ],
+    "html_allowed_fields": [
+      "news_trend.summary_html",
+      "footer.text"
+    ],
+    "exclude_price_value_if_zero": true,
+    "news_article_count_target": 3,
+    "summary_item_count_target": 3,
+    "issue_count_range": [
+      3,
+      5
+    ],
+    "schedule_sort": "time_ascending",
+    "chart_required_svg_elements": [
+      "svg.price-chart-svg",
+      "line.hover-line",
+      "g.hover-dots",
+      "rect.chart-hitbox"
+    ]
+  },
+  "automation": {
+    "safetimes": {
+      "source_file_date": "2026-05-18",
+      "source_title": "[오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식",
+      "source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809",
+      "source_published_at": "2026-05-18",
+      "parsed_schedule_count": 6,
+      "parser_version": "build_report_draft_from_schedule.py v1.0",
+      "needs_review": true
+    },
+    "opinet_prices": {
+      "price_json_used": false,
+      "source_date": "",
+      "history_schema_version": "1.3",
+      "history_period": {
+        "start": "2026-01-01",
+        "end": "2026-05-20"
+      },
+      "chart_window": {
+        "start": "2026-03-17",
+        "end": "2026-05-17",
+        "rule": "report_date - 1 day, then minus 2 calendar months"
+      },
+      "crude_chart_source": "history.json window",
+      "products_chart_source": "history.json window",
+      "merged_at": "2026-05-22 13:38:11 KST",
+      "merge_script": "merge_prices_into_report.py v1.4",
+      "needs_review": true
     }
   }
 }
