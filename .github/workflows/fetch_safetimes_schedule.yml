@@ -62,8 +62,7 @@ jobs:
           test -f scripts/generate_report_index.py || (echo "ERROR: scripts/generate_report_index.py 파일이 없습니다." && exit 1)
           test -f scripts/ensure_report_draft.py || (echo "ERROR: scripts/ensure_report_draft.py 파일이 없습니다." && exit 1)
           test -f scripts/generate_reports_range.py || (echo "ERROR: scripts/generate_reports_range.py 파일이 없습니다." && exit 1)
-          test -f scripts/fetch_news_candidates.py || (echo "ERROR: scripts/fetch_news_candidates.py 파일이 없습니다." && exit 1)
-          test -f scripts/apply_news_to_report.py || (echo "ERROR: scripts/apply_news_to_report.py 파일이 없습니다." && exit 1)
+          test -f scripts/validate_report_sources.py || (echo "ERROR: scripts/validate_report_sources.py 파일이 없습니다." && exit 1)
           test -f report_sample.json || (echo "ERROR: report_sample.json 파일이 없습니다." && exit 1)
           test -f data/prices/history.json || (echo "ERROR: data/prices/history.json 파일이 없습니다." && exit 1)
 
@@ -88,6 +87,27 @@ jobs:
           echo "TARGET_DATE=${TARGET_DATE:-}"
           echo "DATE_FROM=${DATE_FROM:-}"
           echo "DATE_TO=${DATE_TO:-}"
+
+      - name: Decide previous report date
+        if: env.RUN_MODE == 'single'
+        run: |
+          python - <<'PY' >> "$GITHUB_ENV"
+          import datetime as dt
+          target = dt.date.fromisoformat("${{ env.TARGET_DATE }}")
+          holidays = {
+              "2026-01-01", "2026-02-16", "2026-02-17", "2026-02-18",
+              "2026-03-02", "2026-05-01", "2026-05-05", "2026-05-25",
+              "2026-06-03", "2026-08-17", "2026-09-24", "2026-09-25", "2026-09-28",
+              "2026-10-05", "2026-10-09", "2026-12-25",
+          }
+          cur = target - dt.timedelta(days=1)
+          for _ in range(14):
+              if cur.weekday() < 5 and cur.isoformat() not in holidays:
+                  break
+              cur -= dt.timedelta(days=1)
+          print(f"PREVIOUS_DATE={cur.isoformat()}")
+          PY
+          echo "PREVIOUS_DATE=$PREVIOUS_DATE"
 
       - name: Generate weekday reports for range
         if: env.RUN_MODE == 'range'
@@ -115,6 +135,16 @@ jobs:
             --retry-delay 10 \
             --force-refresh
 
+      - name: Try Fetch previous SafeTimes schedule
+        if: env.RUN_MODE == 'single'
+        continue-on-error: true
+        run: |
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$PREVIOUS_DATE" \
+            --out-dir data/schedules \
+            --max-retries 1 \
+            --retry-delay 10
+
       - name: Try Build report draft from SafeTimes
         if: env.RUN_MODE == 'single'
         continue-on-error: true
@@ -124,6 +154,8 @@ jobs:
             python scripts/build_report_draft_from_schedule.py \
               --date "$TARGET_DATE" \
               --schedule-dir data/schedules \
+              --previous-date "$PREVIOUS_DATE" \
+              --previous-schedule-dir data/schedules \
               --base-report report_sample.json \
               --out-dir data/reports
           else
@@ -138,25 +170,16 @@ jobs:
             --out-dir data/reports \
             --base-report report_sample.json
 
-      - name: Fetch morning news candidates
+      - name: Try fetch and apply news candidates
         if: env.RUN_MODE == 'single'
         continue-on-error: true
         run: |
-          python scripts/fetch_news_candidates.py \
-            --date "$TARGET_DATE" \
-            --out-dir data/news \
-            --max-items 12 \
-            --force-refresh
-
-      - name: Apply morning news to report
-        if: env.RUN_MODE == 'single'
-        continue-on-error: true
-        run: |
-          python scripts/apply_news_to_report.py \
-            --date "$TARGET_DATE" \
-            --report-dir data/reports \
-            --news-dir data/news \
-            --max-articles 3
+          if [ -f scripts/fetch_news_candidates.py ] && [ -f scripts/apply_news_to_report.py ]; then
+            python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news || true
+            python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports || true
+          else
+            echo "[INFO] 뉴스 후보 수집 스크립트가 없어 조간 뉴스 자동 반영을 건너뜁니다."
+          fi
 
       - name: Fetch Opinet international prices for today only
         if: env.RUN_MODE == 'single'
@@ -181,6 +204,11 @@ jobs:
             --price-dir data/prices \
             --history data/prices/history.json \
             --chart-months 2
+
+      - name: Validate report source separation
+        if: env.RUN_MODE == 'single'
+        run: |
+          python scripts/validate_report_sources.py --date "$TARGET_DATE" --report-dir data/reports
 
       - name: Generate HTML report
         if: env.RUN_MODE == 'single'
@@ -210,8 +238,8 @@ jobs:
 
           git add data/schedules/ || true
           git add data/reports/ || true
-          git add data/news/ || true
           git add data/prices/ || true
+          git add data/news/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
           git add docs/report-index.json || true
@@ -233,8 +261,8 @@ jobs:
 
           git add data/schedules/ || true
           git add data/reports/ || true
-          git add data/news/ || true
           git add data/prices/ || true
+          git add data/news/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
           git add docs/report-index.json || true
