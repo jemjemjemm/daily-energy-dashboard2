@@ -31,6 +31,19 @@ from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.safetimes.co.kr"
 SEARCH_URL = "https://www.safetimes.co.kr/news/articleList.html"
+ARTICLE_URL = "https://www.safetimes.co.kr/news/articleView.html?idxno={idxno}"
+
+KNOWN_IDX_BY_DATE = {
+    "2026-05-04": 242478,
+    "2026-05-06": 242506,
+    "2026-05-08": 242586,
+    "2026-05-12": 242687,
+    "2026-05-18": 242809,
+    "2026-05-19": 242840,
+    "2026-05-20": 242880,
+    "2026-05-21": 242918,
+    "2026-05-22": 242949,
+}
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
@@ -256,11 +269,29 @@ def extract_items(raw_text: str) -> List[Dict[str, str]]:
 
 
 def collect(target_date: str, max_pages: int) -> Dict[str, Any]:
-    candidates = collect_search_candidates(max_pages=max_pages)
-    if not candidates:
-        raise SafeTimesError("세이프타임즈 오늘의 주요일정 후보 기사를 찾지 못했습니다.")
+    article: Dict[str, Any] | None = None
 
-    article = select_article_for_date(candidates, target_date)
+    # 1) 이미 확인된 기사번호가 있으면 검색보다 직접 URL을 우선 사용합니다.
+    #    검색 결과 누락/지연 때문에 같은 오류가 반복되는 것을 막는 1차 안전장치입니다.
+    known_idx = KNOWN_IDX_BY_DATE.get(target_date)
+    if known_idx:
+        try:
+            article = parse_article_candidate({
+                "title": f"오늘의 주요일정 {target_date}",
+                "url": ARTICLE_URL.format(idxno=known_idx),
+            })
+            if article.get("approved_date") != target_date:
+                article = None
+        except Exception:
+            article = None
+
+    # 2) known idx가 없거나 검증에 실패하면 검색 결과 기반으로 찾습니다.
+    if article is None:
+        candidates = collect_search_candidates(max_pages=max_pages)
+        if not candidates:
+            raise SafeTimesError("오늘의 주요일정 후보 기사를 찾지 못했습니다.")
+        article = select_article_for_date(candidates, target_date)
+
     items = extract_items(article["raw_text"])
 
     return {
@@ -271,10 +302,12 @@ def collect(target_date: str, max_pages: int) -> Dict[str, Any]:
         "title": article["title"],
         "article_title": article["article_title"],
         "article_url": article["article_url"],
+        "url": article["article_url"],
         "approved_date": article.get("approved_date", ""),
         "collected_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S KST"),
         "items": items,
         "raw_text": article["raw_text"],
+        "body": article["raw_text"],
         "success": True,
         "quality": {
             "needs_review": True,
