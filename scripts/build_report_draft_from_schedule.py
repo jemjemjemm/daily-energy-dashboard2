@@ -62,6 +62,21 @@ ORG_KEYWORDS = [
 
 DEFAULT_RELEVANCE = ""
 
+# 리포트에 올릴 일정은 정유·석유화학·LNG 및 정책/물가/공급망 인접 이슈만 남긴다.
+# 선거 유세, 문화·스포츠, 일반 지자체 행사는 제외한다.
+RELEVANT_KEYWORDS = [
+    "석유", "정유", "유가", "주유소", "유류세", "최고가격", "휘발유", "경유", "나프타",
+    "LNG", "가스", "에너지", "전력", "원전", "수소", "ESS", "기후", "탄소", "배출권",
+    "산업부", "산업통상", "기후에너지", "기후부", "공정위", "재경부", "기재부",
+    "물가", "공급망", "비상경제", "중동", "호르무즈", "수급", "통상", "관세",
+    "산중위", "산업통상자원", "정무위", "에너지위원회", "통상추진",
+]
+
+EXCLUDE_KEYWORDS = [
+    "지원유세", "후보", "선거", "시장 방문", "체육", "야구", "농구", "테니스", "골프",
+    "문화", "축제", "공연", "전시", "스승의날", "어린이", "도박문제", "한센인의 날",
+]
+
 
 BAD_INTERNAL_PHRASES = [
     "자동 추출된 일정 항목이 없습니다",
@@ -108,6 +123,46 @@ def normalize_schedule_item(item: Dict[str, Any]) -> Optional[Dict[str, str]]:
     }
 
 
+def is_relevant_schedule_item(item: Dict[str, str]) -> bool:
+    combined = f"{item.get('org','')} {item.get('title','')} {item.get('relevance','')}"
+    if any(word in combined for word in EXCLUDE_KEYWORDS) and not any(word in combined for word in RELEVANT_KEYWORDS):
+        return False
+    return any(word in combined for word in RELEVANT_KEYWORDS)
+
+
+def filter_relevant_items(items: List[Dict[str, str]], max_items: int) -> List[Dict[str, str]]:
+    filtered = [item for item in items if is_relevant_schedule_item(item)]
+    return sort_schedule_items(filtered[:max_items])
+
+
+def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    cards = []
+    for item in items[:6]:
+        org = item.get('org', '')
+        title = item.get('title', '')
+        time = item.get('time', '')
+        combined = f"{org} {title}"
+        if any(k in combined for k in ["석유", "정유", "주유소", "유가", "유류세"]):
+            category, grade, cls = "정유", "A 직접", "grade-a"
+        elif any(k in combined for k in ["LNG", "가스", "에너지", "전력", "원전", "ESS", "기후"]):
+            category, grade, cls = "에너지", "B 간접", "grade-b"
+        elif any(k in combined for k in ["물가", "공급망", "비상경제", "재경부", "기재부", "공정위"]):
+            category, grade, cls = "정책", "B 간접", "grade-b"
+        else:
+            category, grade, cls = "정책", "C 참고", "grade-c"
+        time_text = f"{time} " if time and time != "시간미정" else ""
+        desc = f"{time_text}{org} 일정으로 확인된 '{title}' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다."
+        cards.append({
+            "category": category,
+            "category_class": "",
+            "title": title,
+            "description": desc,
+            "grade": grade,
+            "grade_class": cls,
+        })
+    return cards
+
+
 def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: int) -> List[Dict[str, str]]:
     structured = []
     for raw_item in schedule_data.get("items") or []:
@@ -117,9 +172,10 @@ def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: i
                 structured.append(normalized)
 
     if structured:
-        return sort_schedule_items(structured[:max_items])
+        return filter_relevant_items(structured, max_items=max_items)
 
-    return parse_schedule_items(source_body(schedule_data), max_items=max_items)
+    parsed = parse_schedule_items(source_body(schedule_data), max_items=max_items * 3)
+    return filter_relevant_items(parsed, max_items=max_items)
 
 
 def parse_args() -> argparse.Namespace:
@@ -353,19 +409,26 @@ def update_summary(base_report: Dict[str, Any], schedule_data: Dict[str, Any], i
 
     if items:
         key_titles = ", ".join(item["title"] for item in items[:4])
-        summary_text = f"금일({today_label}) 주요 일정은 {key_titles} 등으로 정리."
+        stakeholder_text = f"주요 이해관계자 동향: {key_titles}."
+        today_text = f"금일 주요 일정: {key_titles}."
     else:
-        summary_text = "금일 주요 일정: 관련 자료 찾지 못함"
+        stakeholder_text = "주요 이해관계자 동향: 관련 자료 찾지 못함."
+        today_text = "금일 주요 일정: 관련 자료 찾지 못함."
 
-    summary = base_report.setdefault("summary", [])
-    while len(summary) < 3:
-        summary.append({"type": "auto", "text": ""})
+    news = base_report.get("news_trend", {}) if isinstance(base_report.get("news_trend"), dict) else {}
+    articles = news.get("articles", []) if isinstance(news.get("articles"), list) else []
+    valid_articles = [a for a in articles if isinstance(a, dict) and a.get("title") and a.get("url")]
+    if valid_articles:
+        news_titles = ", ".join(a.get("title", "") for a in valid_articles[:3])
+        news_text = f"조간 보도: {news_titles}."
+    else:
+        news_text = "조간 보도: 자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요."
 
-    # 기존 convention: 0 전일, 1 금일, 2 조간
-    summary[1] = {
-        "type": "today",
-        "text": summary_text,
-    }
+    base_report["summary"] = [
+        {"type": "stakeholder", "text": stakeholder_text},
+        {"type": "today", "text": today_text},
+        {"type": "news_trend", "text": news_text},
+    ]
 
 
 def update_report_meta(base_report: Dict[str, Any], target_dt: datetime) -> None:
@@ -378,7 +441,7 @@ def update_report_meta(base_report: Dict[str, Any], target_dt: datetime) -> None
     report["today_label"] = short_date_label(target_dt)
     report["generated_at"] = datetime.now().strftime("%Y-%m-%d %H:%M KST")
     report["review_status"] = "초안"
-    report["report_version"] = "draft-from-safetimes-v1.0"
+    report["report_version"] = "draft-from-safetimes-v2.0"
     report["report_title"] = "Daily Issue Report"
     report["header_title"] = "Daily Issue Report"
     report["report_badge"] = report.get("report_badge") or "정유 · 석유화학 · LNG"
@@ -411,13 +474,21 @@ def update_sources(base_report: Dict[str, Any], schedule_data: Dict[str, Any]) -
 
 def build_report_draft(schedule_data: Dict[str, Any], base_report: Dict[str, Any], target_dt: datetime, max_items: int) -> Dict[str, Any]:
     report = copy.deepcopy(base_report)
+
+    # report_sample.json은 특정 일자의 예시 콘텐츠를 담고 있을 수 있으므로
+    # 날짜별 자동 생성 시에는 이전 날짜 Summary/이슈/기사 내용을 반드시 제거한다.
+    report["summary"] = []
+    report["issues"] = []
+    report["schedules"] = []
+    report["news_trend"] = {"summary": "자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요.", "articles": []}
+
     items = schedule_items_from_json_or_body(schedule_data, max_items=max_items)
 
     update_report_meta(report, target_dt)
+    report["schedules"] = items
+    report["issues"] = build_issue_cards_from_schedules(items)
     update_summary(report, schedule_data, items, target_dt)
     update_sources(report, schedule_data)
-
-    report["schedules"] = items
 
     # 자동화 이력 저장
     report.setdefault("automation", {})
