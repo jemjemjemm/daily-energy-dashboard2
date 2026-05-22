@@ -234,10 +234,14 @@ def render_news(report: Mapping[str, Any]) -> str:
         else:
             link = title
 
+        summary_text = esc(a.get("summary", ""))
+        published = esc(a.get("published_at_kst", ""))
+        meta = press + ((" · " + published) if published else "")
         rows.append(
             '<div class="news-item"><div class="news-num">' + str(idx) + '</div><div>'
             '<div class="news-title">' + link + '</div>'
-            '<div class="news-press">' + press + '</div>'
+            '<div class="news-press">' + meta + '</div>'
+            + ('<div class="news-desc">' + summary_text + '</div>' if summary_text else '') +
             '</div></div>'
         )
 
