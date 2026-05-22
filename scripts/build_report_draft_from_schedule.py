@@ -93,10 +93,20 @@ def has_bad_phrase(value: str) -> bool:
 
 def clean_title(value: str) -> str:
     value = normalize_line(value)
-    value = re.sub(r"^[▲△▶▷■□●○]+\s*", "", value)
     value = value.replace("세이프타임즈", "").strip()
-    value = re.sub(r"의\(정부", "(정부", value)
+    value = re.sub(r"^[▲△▶▷□■◇◆○●\s]+", "", value).strip()
     return value
+
+
+def is_section_header_only(value: str) -> bool:
+    value = clean_title(value)
+    if not value:
+        return True
+    if re.fullmatch(r"\[?[가-힣A-Za-z·ㆍ/ ]{2,20}\]?", value):
+        # [기후에너지환경부], 국회, 외교부 같은 섹션 헤더는 일정이 아니다.
+        if not any(word in value for word in ["회의", "간담회", "브리핑", "토론회", "방문", "발표", "점검", "법안", "위원회"]):
+            return True
+    return False
 
 
 def source_url(schedule_data: Dict[str, Any]) -> str:
@@ -112,30 +122,30 @@ def normalize_schedule_item(item: Dict[str, Any]) -> Optional[Dict[str, str]]:
     if has_bad_phrase(text_blob):
         return None
 
-    raw_title = clean_title(str(item.get("title") or item.get("text") or "").strip())
-    if not raw_title:
+    raw_title = str(item.get("title") or item.get("text") or "").strip()
+    title = clean_title(raw_title)
+    if not title or is_section_header_only(title):
         return None
 
-    # fetch_safetimes_schedule.py의 items는 {text: 전체 줄} 형태인 경우가 많다.
-    # 이때 시간·기관을 다시 분리해야 Summary와 금일 일정이 자연스럽게 나온다.
-    parsed_time, without_time = extract_time(raw_title)
+    time_text = str(item.get("time") or "").strip()
+    org = str(item.get("org") or "").strip()
 
-    # "기획처, 고유가 피해지원금..."처럼 쉼표 앞이 기관인 경우를 먼저 처리한다.
-    # 뒤쪽 장소명인 "정부서울청사" 때문에 기관이 "정부"로 오인되는 것을 막기 위함이다.
-    comma_match = re.match(r"^([가-힣A-Za-z·ㆍ]{2,15}),\s*(.+)$", without_time)
-    if comma_match:
-        parsed_org = comma_match.group(1)
-        parsed_title = comma_match.group(2)
-    else:
-        parsed_org, parsed_title = extract_org(without_time)
+    # schema_version 2.0처럼 text만 있는 과거 JSON은 여기서 시간/기관을 다시 분리한다.
+    # 단, 화면에 보이는 일정명은 원문 문구를 최대한 보존한다.
+    if not time_text or time_text == "-" or not org:
+        parsed_time, without_time = extract_time(title)
+        parsed_org, _parsed_title = extract_org(without_time)
+        if (not time_text or time_text == "-") and parsed_time:
+            time_text = parsed_time
+        if not org or org in {"확인", "정치", "경제"}:
+            org = parsed_org
 
-    title = clean_title(parsed_title)
-    if not title:
+    if not title or is_section_header_only(title):
         return None
 
     return {
-        "time": str(item.get("time") or parsed_time or "").strip() or "시간미정",
-        "org": str(item.get("org") or parsed_org or "").strip() or "확인",
+        "time": time_text or "시간미정",
+        "org": org or "확인",
         "title": title,
         "relevance": "",  # 금일 주요 일정에는 영향도/관련성 설명을 노출하지 않음
     }
@@ -148,28 +158,9 @@ def is_relevant_schedule_item(item: Dict[str, str]) -> bool:
     return any(word in combined for word in RELEVANT_KEYWORDS)
 
 
-def normalize_dedupe_key(item: Dict[str, str]) -> str:
-    title = item.get("title", "")
-    title = re.sub(r"\([^)]*\)", "", title)
-    title = re.sub(r"\s+", "", title)
-    title = re.sub(r"[·ㆍ,./\-]", "", title)
-    return title[:50]
-
-
 def filter_relevant_items(items: List[Dict[str, str]], max_items: int) -> List[Dict[str, str]]:
     filtered = [item for item in items if is_relevant_schedule_item(item)]
-    filtered = sort_schedule_items(filtered)
-    deduped: List[Dict[str, str]] = []
-    seen = set()
-    for item in filtered:
-        key = normalize_dedupe_key(item)
-        if key in seen:
-            continue
-        seen.add(key)
-        deduped.append(item)
-        if len(deduped) >= max_items:
-            break
-    return deduped
+    return sort_schedule_items(filtered[:max_items])
 
 
 def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
@@ -224,6 +215,16 @@ def parse_args() -> argparse.Namespace:
         help="세이프타임즈 수집 JSON 폴더. 기본값 data/schedules",
     )
     parser.add_argument(
+        "--previous-date",
+        default="",
+        help="전일/직전 영업일 일정 기준 날짜 YYYY-MM-DD. 비우면 기준일 전일을 사용",
+    )
+    parser.add_argument(
+        "--previous-schedule-dir",
+        default="",
+        help="전일/직전 영업일 일정 JSON 폴더. 비우면 --schedule-dir 사용",
+    )
+    parser.add_argument(
         "--base-report",
         default="report_sample.json",
         help="기준 리포트 JSON. 기본값 report_sample.json",
@@ -249,6 +250,15 @@ def read_json(path: Path) -> Dict[str, Any]:
         return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         raise DraftBuildError(f"JSON 파일을 읽을 수 없습니다: {path} / {exc}") from exc
+
+
+def read_json_optional(path: Path) -> Dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
 
 
 def write_json(path: Path, payload: Dict[str, Any]) -> None:
@@ -441,15 +451,25 @@ def sort_schedule_items(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
     return sorted(items, key=sort_key)
 
 
-def update_summary(base_report: Dict[str, Any], schedule_data: Dict[str, Any], items: List[Dict[str, str]], target_dt: datetime) -> None:
-    today_label = short_date_label(target_dt)
-
-    if items:
-        key_titles = ", ".join(item["title"] for item in items[:4])
-        stakeholder_text = f"주요 이해관계자 동향: {key_titles}."
-        today_text = f"금일 주요 일정: {key_titles}."
+def update_summary(
+    base_report: Dict[str, Any],
+    previous_items: List[Dict[str, str]],
+    today_items: List[Dict[str, str]],
+    target_dt: datetime,
+    previous_label: str,
+) -> None:
+    # 중요: 주요 이해관계자 동향/이슈는 기준일 전일(또는 직전 영업일) 일정에서,
+    # 금일 주요 일정은 기준일 일정에서 각각 만든다. 같은 데이터를 양쪽에 복사하지 않는다.
+    if previous_items:
+        previous_titles = ", ".join(item["title"] for item in previous_items[:4])
+        stakeholder_text = f"주요 이해관계자 동향: {previous_label} 기준 {previous_titles}."
     else:
-        stakeholder_text = "주요 이해관계자 동향: 관련 자료 찾지 못함."
+        stakeholder_text = f"주요 이해관계자 동향: {previous_label} 기준 관련 자료 찾지 못함."
+
+    if today_items:
+        today_titles = ", ".join(item["title"] for item in today_items[:4])
+        today_text = f"금일 주요 일정: {today_titles}."
+    else:
         today_text = "금일 주요 일정: 관련 자료 찾지 못함."
 
     news = base_report.get("news_trend", {}) if isinstance(base_report.get("news_trend"), dict) else {}
@@ -509,7 +529,14 @@ def update_sources(base_report: Dict[str, Any], schedule_data: Dict[str, Any]) -
     notes.append("일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.")
 
 
-def build_report_draft(schedule_data: Dict[str, Any], base_report: Dict[str, Any], target_dt: datetime, max_items: int) -> Dict[str, Any]:
+def build_report_draft(
+    schedule_data: Dict[str, Any],
+    base_report: Dict[str, Any],
+    target_dt: datetime,
+    max_items: int,
+    previous_schedule_data: Dict[str, Any] | None = None,
+    previous_dt: datetime | None = None,
+) -> Dict[str, Any]:
     report = copy.deepcopy(base_report)
 
     # report_sample.json은 특정 일자의 예시 콘텐츠를 담고 있을 수 있으므로
@@ -519,29 +546,47 @@ def build_report_draft(schedule_data: Dict[str, Any], base_report: Dict[str, Any
     report["schedules"] = []
     report["news_trend"] = {"summary": "자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요.", "articles": []}
 
-    items = schedule_items_from_json_or_body(schedule_data, max_items=max_items)
+    today_items = schedule_items_from_json_or_body(schedule_data, max_items=max_items)
+    previous_items: List[Dict[str, str]] = []
+    if previous_schedule_data and previous_schedule_data.get("success", True):
+        previous_items = schedule_items_from_json_or_body(previous_schedule_data, max_items=max_items)
+
+    previous_label = short_date_label(previous_dt) if previous_dt else "전일"
 
     update_report_meta(report, target_dt)
-    report["schedules"] = items
-    report["issues"] = build_issue_cards_from_schedules(items)
-    update_summary(report, schedule_data, items, target_dt)
+    report.setdefault("report", {})["previous_day_label"] = previous_label
+    report.setdefault("report", {})["previous_source_date"] = previous_dt.strftime("%Y-%m-%d") if previous_dt else ""
+
+    # 금일 주요 일정은 기준일 일정만 사용한다.
+    report["schedules"] = today_items
+
+    # 주요 이해관계자 동향/이슈는 기준일 전일 또는 직전 영업일 일정만 사용한다.
+    # 이 구분이 없으면 5/12처럼 기준일/전일 일정이 동일하게 노출된다.
+    report["issues"] = build_issue_cards_from_schedules(previous_items)
+
+    update_summary(report, previous_items, today_items, target_dt, previous_label)
     update_sources(report, schedule_data)
 
     # 자동화 이력 저장
     report.setdefault("automation", {})
     report["automation"]["safetimes"] = {
-        "source_file_date": target_dt.strftime("%Y-%m-%d"),
-        "source_title": schedule_data.get("title", ""),
-        "source_url": source_url(schedule_data),
-        "source_published_at": schedule_data.get("approved_date", "") or schedule_data.get("published_at", ""),
-        "parsed_schedule_count": len(items),
-        "parser_version": "build_report_draft_from_schedule.py v1.0",
+        "today_source_file_date": target_dt.strftime("%Y-%m-%d"),
+        "today_source_title": schedule_data.get("title", ""),
+        "today_source_url": source_url(schedule_data),
+        "today_source_published_at": schedule_data.get("approved_date", "") or schedule_data.get("published_at", ""),
+        "today_parsed_schedule_count": len(today_items),
+        "previous_source_file_date": previous_dt.strftime("%Y-%m-%d") if previous_dt else "",
+        "previous_source_title": previous_schedule_data.get("title", "") if previous_schedule_data else "",
+        "previous_source_url": source_url(previous_schedule_data) if previous_schedule_data else "",
+        "previous_parsed_schedule_count": len(previous_items),
+        "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
         "needs_review": True,
     }
 
-    # 일정 추출 실패 문구는 사용자용 HTML에 노출하지 않는다.
-    if not items:
-        report.setdefault("automation", {}).setdefault("validation", {})["schedule_parse_failed"] = True
+    if not today_items:
+        report.setdefault("automation", {}).setdefault("validation", {})["today_schedule_parse_failed"] = True
+    if previous_schedule_data is None or not previous_items:
+        report.setdefault("automation", {}).setdefault("validation", {})["previous_schedule_parse_failed"] = True
 
     return report
 
@@ -554,16 +599,27 @@ def main() -> int:
     base_report_path = Path(args.base_report)
     out_path = Path(args.out_dir) / f"{args.date}.report.json"
 
+    previous_date_text = args.previous_date or (target_dt - timedelta(days=1)).strftime("%Y-%m-%d")
+    previous_dt = parse_date(previous_date_text)
+    previous_schedule_dir = Path(args.previous_schedule_dir or args.schedule_dir)
+    previous_schedule_path = previous_schedule_dir / f"{previous_date_text}.json"
+
     schedule_data = read_json(schedule_path)
+    previous_schedule_data = read_json_optional(previous_schedule_path)
     base_report = read_json(base_report_path)
 
     if not schedule_data.get("success", True):
         raise DraftBuildError(f"세이프타임즈 수집 실패 JSON입니다: {schedule_path}")
 
+    if previous_schedule_data is None:
+        print(f"[WARN] 전일/직전 영업일 일정 JSON이 없습니다. 이슈 섹션은 비워 둡니다: {previous_schedule_path}")
+
     draft = build_report_draft(
         schedule_data=schedule_data,
+        previous_schedule_data=previous_schedule_data,
         base_report=base_report,
         target_dt=target_dt,
+        previous_dt=previous_dt,
         max_items=args.max_items,
     )
 
@@ -571,8 +627,10 @@ def main() -> int:
 
     schedule_count = len(draft.get("schedules", []))
     print(f"[OK] 리포트 초안 생성 완료: {out_path}")
-    print(f"[OK] 반영된 일정 수: {schedule_count}")
-    print(f"[OK] 원문 제목: {schedule_data.get('title', '')}")
+    issue_count = len(draft.get("issues", []))
+    print(f"[OK] 금일 일정 반영 수: {schedule_count}")
+    print(f"[OK] 전일/직전 영업일 이슈 반영 수: {issue_count}")
+    print(f"[OK] 금일 원문 제목: {schedule_data.get('title', '')}")
     return 0
 
 
