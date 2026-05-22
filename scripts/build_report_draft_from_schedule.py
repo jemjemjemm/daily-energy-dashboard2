@@ -2,654 +2,470 @@
 # -*- coding: utf-8 -*-
 
 """
-generate_html_report.py v1.2
+build_report_draft_from_schedule.py
 
-리포트 JSON을 HTML로 변환합니다.
+세이프타임즈 수집 JSON을 리포트용 JSON 초안에 반영하는 변환 스크립트 v1.0
 
-수정 사항
-- 그래프 디자인: 기존처럼 선만 표시. 점(circle)은 전혀 생성하지 않음.
-- tooltip: 날짜별 투명 세로 hover 영역(rect)을 사용.
-- 마우스를 그래프 위 특정 날짜 영역에 올리면 해당일의 가격을 커스텀 tooltip으로 표시.
-- iPhone/모바일에서는 터치 시 tooltip이 잠시 표시됨.
+역할
+- data/schedules/YYYY-MM-DD.json 파일을 읽는다.
+- report_sample.json 또는 지정한 base report JSON을 복사해 리포트 초안으로 사용한다.
+- 세이프타임즈 본문에서 시간/기관/일정명을 최대한 추출해 schedules 영역에 넣는다.
+- Summary 2번 항목을 '금일 주요 일정 요약'으로 갱신한다.
+- quality_control.sources에 세이프타임즈 원문 링크를 추가한다.
+- data/reports/YYYY-MM-DD.report.json 파일로 저장한다.
+
+기본 사용법
+    python scripts/build_report_draft_from_schedule.py --date 2026-05-20
+
+입력
+    data/schedules/2026-05-20.json
+    report_sample.json
+
+출력
+    data/reports/2026-05-20.report.json
+
+주의
+- 이 스크립트는 '초안' 생성용입니다.
+- 세이프타임즈 원문은 기사 본문 형식이 매일 조금씩 다를 수 있으므로, 추출 결과는 사람이 한 번 확인하는 것이 좋습니다.
+- 일정 관련성 문구는 보수적으로 '확인 필요' 또는 '작성자 해석' 형태로 생성합니다.
 """
 
 from __future__ import annotations
 
 import argparse
-import html
+import copy
 import json
-import math
-import tempfile
+import re
+from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any, Dict, Mapping, Sequence
+from typing import Any, Dict, List, Optional, Tuple
 
 
-CRUDE_COLORS = {"Brent": "#1A6FD4", "WTI": "#E24B4A", "Dubai": "#1D9E75"}
-PRODUCT_COLORS = {"Gasoline": "#1A6FD4", "Diesel": "#E24B4A", "Naphtha": "#1D9E75"}
+class DraftBuildError(RuntimeError):
+    """리포트 초안 생성 중단이 필요한 오류."""
 
 
-def esc(value: Any) -> str:
-    return html.escape("" if value is None else str(value), quote=True)
+TIME_PATTERNS = [
+    # 10:00, 10：00
+    re.compile(r"(?P<time>\b\d{1,2}[:：]\d{2}\b)"),
+    # 오전 10시 30분 / 오후 2시
+    re.compile(r"(?P<ampm>오전|오후)\s*(?P<hour>\d{1,2})시(?:\s*(?P<minute>\d{1,2})분)?"),
+    # 10시 30분 / 14시
+    re.compile(r"(?P<hour>\d{1,2})시(?:\s*(?P<minute>\d{1,2})분)?"),
+]
+
+ORG_KEYWORDS = [
+    "대통령", "국무총리", "총리", "재경부", "기재부", "산업부", "기후부", "환경부", "국토부",
+    "외교부", "해수부", "공정위", "금융위", "금감원", "국회", "산중위", "기재위", "정무위",
+    "대한상의", "무역협회", "한은", "한국은행", "정부", "여당", "야당", "국제", "미국", "중국", "일본"
+]
+
+DEFAULT_RELEVANCE = ""
 
 
-def fmt(value: Any) -> str:
-    try:
-        n = float(value)
-    except Exception:
-        return "-"
-    if not math.isfinite(n):
-        return "-"
-    return f"{n:.2f}"
+BAD_INTERNAL_PHRASES = [
+    "자동 추출된 일정 항목이 없습니다",
+    "본문 구조 확인 및 수동 검수가 필요합니다",
+    "원문 자동 매칭 실패",
+    "원문 데이터 없음",
+    "가격 데이터 중심",
+]
+
+
+def has_bad_phrase(value: str) -> bool:
+    return any(phrase in (value or "") for phrase in BAD_INTERNAL_PHRASES)
+
+
+def clean_title(value: str) -> str:
+    value = normalize_line(value)
+    value = value.replace("세이프타임즈", "").strip()
+    return value
+
+
+def source_url(schedule_data: Dict[str, Any]) -> str:
+    return schedule_data.get("article_url") or schedule_data.get("url") or ""
+
+
+def source_body(schedule_data: Dict[str, Any]) -> str:
+    return schedule_data.get("raw_text") or schedule_data.get("body") or ""
+
+
+def normalize_schedule_item(item: Dict[str, Any]) -> Optional[Dict[str, str]]:
+    text_blob = " ".join(str(item.get(k, "")) for k in ("time", "org", "title", "text", "relevance"))
+    if has_bad_phrase(text_blob):
+        return None
+
+    title = str(item.get("title") or item.get("text") or "").strip()
+    title = clean_title(title)
+    if not title:
+        return None
+
+    return {
+        "time": str(item.get("time") or "").strip() or "시간미정",
+        "org": str(item.get("org") or "").strip() or "확인",
+        "title": title,
+        "relevance": "",  # 금일 주요 일정에는 영향도/관련성 설명을 노출하지 않음
+    }
+
+
+def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: int) -> List[Dict[str, str]]:
+    structured = []
+    for raw_item in schedule_data.get("items") or []:
+        if isinstance(raw_item, dict):
+            normalized = normalize_schedule_item(raw_item)
+            if normalized:
+                structured.append(normalized)
+
+    if structured:
+        return sort_schedule_items(structured[:max_items])
+
+    return parse_schedule_items(source_body(schedule_data), max_items=max_items)
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="세이프타임즈 일정 JSON을 리포트용 JSON 초안에 반영")
+    parser.add_argument("--date", required=True, help="기준일 YYYY-MM-DD")
+    parser.add_argument(
+        "--schedule-dir",
+        default="data/schedules",
+        help="세이프타임즈 수집 JSON 폴더. 기본값 data/schedules",
+    )
+    parser.add_argument(
+        "--base-report",
+        default="report_sample.json",
+        help="기준 리포트 JSON. 기본값 report_sample.json",
+    )
+    parser.add_argument(
+        "--out-dir",
+        default="data/reports",
+        help="리포트 초안 저장 폴더. 기본값 data/reports",
+    )
+    parser.add_argument(
+        "--max-items",
+        type=int,
+        default=12,
+        help="리포트에 반영할 최대 일정 수. 기본값 12",
+    )
+    return parser.parse_args()
 
 
 def read_json(path: Path) -> Dict[str, Any]:
     if not path.exists():
-        raise FileNotFoundError(f"파일을 찾을 수 없습니다: {path}")
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-BAD_REPORT_PHRASES = [
-    "자동 추출된 일정 항목이 없습니다",
-    "본문 구조 확인 및 수동 검수가 필요합니다",
-    "세이프타임즈 '' 원문",
-    "원문 자동 매칭 실패",
-    "주요일정 원문 데이터 미확보",
-    "원문 데이터 없음",
-    "가격 데이터 중심 리포트",
-    "Data 없음",
-    "No data",
-]
-
-
-def has_bad_phrase(value: Any) -> bool:
-    text = "" if value is None else str(value)
-    return any(phrase in text for phrase in BAD_REPORT_PHRASES)
-
-
-def clean_text(value: Any) -> str:
-    text = "" if value is None else str(value)
-    text = text.replace("세이프타임즈", "").strip()
-    return text
-
-
-def clean_items(items: Sequence[Mapping[str, Any]], title_keys=("title", "text")) -> list[dict[str, Any]]:
-    cleaned: list[dict[str, Any]] = []
-    for item in items or []:
-        if not isinstance(item, Mapping):
-            continue
-        blob = " ".join(str(item.get(k, "")) for k in item.keys())
-        if has_bad_phrase(blob):
-            continue
-        copied = dict(item)
-        for key in ["title", "text", "description", "summary", "relevance", "press"]:
-            if key in copied:
-                copied[key] = clean_text(copied[key])
-        if any(str(copied.get(k, "")).strip() for k in title_keys):
-            cleaned.append(copied)
-    return cleaned
-
-
-def has_valid_report_content(report: Mapping[str, Any]) -> bool:
-    issues = clean_items(report.get("issues", []) or [], title_keys=("title",))
-    schedules = clean_items(report.get("schedules", []) or [], title_keys=("title",))
-    news = report.get("news_trend", {}) or {}
-    articles = clean_items(news.get("articles", []) or [], title_keys=("title",))
-    valid_articles = [
-        a for a in articles
-        if a.get("title") and a.get("url") and not has_bad_phrase(a.get("title", ""))
-    ]
-
-    # 가격 카드/그래프만 있는 날짜는 보고서로 만들지 않는다.
-    return bool(issues or schedules or valid_articles)
-
-
-def sanitize_report(report: Dict[str, Any]) -> Dict[str, Any]:
-    report = dict(report)
-    report["summary"] = clean_items(report.get("summary", []) or [], title_keys=("text",))
-    report["issues"] = clean_items(report.get("issues", []) or [], title_keys=("title",))
-    report["schedules"] = clean_items(report.get("schedules", []) or [], title_keys=("title",))
-
-    news = dict(report.get("news_trend", {}) or {})
-    if has_bad_phrase(news.get("summary", "")):
-        news["summary"] = ""
-    else:
-        news["summary"] = clean_text(news.get("summary", ""))
-    news["articles"] = [
-        a for a in clean_items(news.get("articles", []) or [], title_keys=("title",))
-        if a.get("title") and a.get("url") and "오늘의 주요일정" not in str(a.get("title", ""))
-    ][:3]
-    report["news_trend"] = news
-
-    # 사용자 프롬프트 기준: 일정 출처명과 내부 품질 메모는 본문에 노출하지 않는다.
-    report["quality_control"] = {"sources": []}
-    return report
-
-
-def atomic_write(path: Path, text: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(
-        "w",
-        encoding="utf-8",
-        dir=str(path.parent),
-        delete=False,
-        prefix=f".{path.name}.",
-        suffix=".tmp",
-    ) as tmp:
-        tmp.write(text)
-        tmp_path = Path(tmp.name)
-    tmp_path.replace(path)
-
-
-def render_summary(items: Sequence[Mapping[str, Any]]) -> str:
-    if not items:
-        return '<div class="empty">Summary 데이터가 없습니다.</div>'
-
-    rows = []
-    for item in items[:5]:
-        rows.append(
-            '<div class="summary-item"><span class="dot"></span><div>'
-            + esc(item.get("text", ""))
-            + '</div></div>'
-        )
-    return "\n".join(rows)
-
-
-def render_cards(cards: Sequence[Mapping[str, Any]]) -> str:
-    if not cards:
-        return '<div class="empty">가격 데이터가 없습니다.</div>'
-
-    rows = []
-    for c in cards:
-        direction = str(c.get("direction", "flat"))
-        symbol = {"up": "▲", "down": "▼", "flat": "－"}.get(direction, "－")
-
-        try:
-            change = abs(float(c.get("change", 0)))
-        except Exception:
-            change = 0
-
-        rows.append(
-            '<div class="price-card">'
-            '<div class="price-label">' + esc(c.get("label", "")) + '</div>'
-            '<div class="price-value">' + fmt(c.get("value")) + '</div>'
-            '<div class="price-unit">' + esc(c.get("unit", "$/Bbl")) + '</div>'
-            '<div class="price-change ' + esc(direction) + '">' + symbol + ' ' + fmt(change) + '</div>'
-            '</div>'
-        )
-    return "\n".join(rows)
-
-
-def render_schedules(items: Sequence[Mapping[str, Any]]) -> str:
-    if not items:
-        return '<div class="empty">금일 주요 일정 데이터가 없습니다.</div>'
-
-    rows = []
-    for i in items:
-        rows.append(
-            '<div class="schedule-row">'
-            '<div class="schedule-time">' + esc(i.get("time", "")) + '</div>'
-            '<div class="schedule-org">' + esc(i.get("org", "")) + '</div>'
-            '<div class="schedule-main">'
-            '<div>' + esc(i.get("title", "")) + '</div>'
-            '</div></div>'
-        )
-    return "\n".join(rows)
-
-
-def render_issues(items: Sequence[Mapping[str, Any]]) -> str:
-    if not items:
-        return '<div class="empty">전일 주요 이슈 데이터가 없습니다.</div>'
-
-    rows = []
-    for i in items:
-        grade = str(i.get("grade", "C 참고"))
-        gcls = "grade-a" if grade.startswith("A") else "grade-b" if grade.startswith("B") else "grade-c"
-
-        rows.append(
-            '<div class="issue-card">'
-            '<span class="issue-tag">' + esc(i.get("category", "")) + '</span>'
-            '<div class="issue-title">' + esc(i.get("title", "")) + '</div>'
-            '<div class="issue-desc">' + esc(i.get("description", "")) + '</div>'
-            '<div class="issue-footer"><span class="issue-grade ' + gcls + '">' + esc(grade) + '</span></div>'
-            '</div>'
-        )
-    return "\n".join(rows)
-
-
-def render_news(report: Mapping[str, Any]) -> str:
-    news = report.get("news_trend", {}) or {}
-    summary = news.get("summary_html") or esc(clean_text(news.get("summary", ""))) or "관련 자료 찾지 못함"
-    articles = news.get("articles", []) or []
-
-    rows = []
-    for idx, a in enumerate(articles[:3], 1):
-        url = str(a.get("url", "") or "")
-        title = esc(a.get("title", ""))
-        press = esc(a.get("press", ""))
-
-        if url:
-            link = '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
-        else:
-            link = title
-
-        rows.append(
-            '<div class="news-item"><div class="news-num">' + str(idx) + '</div><div>'
-            '<div class="news-title">' + link + '</div>'
-            '<div class="news-press">' + press + '</div>'
-            '</div></div>'
-        )
-
-    if not rows:
-        rows.append('<div class="empty">대표 기사 데이터가 아직 없습니다.</div>')
-
-    return (
-        '<div class="news-summary">' + summary + '</div>'
-        '<div class="section-divider"></div>'
-        '<div class="small-title">대표 기사</div>'
-        + "".join(rows)
-    )
-
-
-def render_quality(report: Mapping[str, Any]) -> str:
-    q = report.get("quality_control", {}) or {}
-    sources = q.get("sources", []) or []
-
-    source_rows = []
-    for s in sources:
-        name = esc(s.get("name", ""))
-        typ = esc(s.get("type", ""))
-        url = str(s.get("url", "") or "")
-
-        if url:
-            source_rows.append(
-                '<li><a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">'
-                + name
-                + '</a> <span>('
-                + typ
-                + ')</span></li>'
-            )
-        else:
-            source_rows.append('<li>' + name + ' <span>(' + typ + ')</span></li>')
-
-    return (
-        '<ul class="quality-list">'
-        + ("".join(source_rows) or "<li>주요 출처 데이터가 없습니다.</li>")
-        + '</ul>'
-    )
-
-
-def get_dates(series: Mapping[str, Sequence[Mapping[str, Any]]]):
-    return sorted({str(p.get("date")) for pts in series.values() for p in pts if p.get("date")})
-
-
-def get_values(series):
-    vals = []
-    for pts in series.values():
-        for p in pts:
-            try:
-                v = float(p.get("value"))
-                if math.isfinite(v) and v != 0:
-                    vals.append(v)
-            except Exception:
-                pass
-    return vals
-
-
-def date_label(date_text: str) -> str:
+        raise DraftBuildError(f"파일을 찾을 수 없습니다: {path}")
     try:
-        return f"{int(date_text[5:7])}/{int(date_text[8:10])}"
-    except Exception:
-        return date_text
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise DraftBuildError(f"JSON 파일을 읽을 수 없습니다: {path} / {exc}") from exc
 
 
-def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapping[str, str]) -> str:
-    dates = get_dates(series)
-    vals = get_values(series)
+def write_json(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
 
-    if not dates or not vals:
-        return '<div class="empty">표시 가능한 그래프 데이터가 없습니다.</div>'
 
-    lo, hi = min(vals), max(vals)
-    if lo == hi:
-        lo -= 1
-        hi += 1
+def parse_date(date_text: str) -> datetime:
+    try:
+        return datetime.strptime(date_text, "%Y-%m-%d")
+    except ValueError as exc:
+        raise DraftBuildError("--date는 YYYY-MM-DD 형식이어야 합니다.") from exc
 
-    pad = (hi - lo) * 0.12
-    lo = max(0, lo - pad)
-    hi = hi + pad
 
-    W, H, L, R, T, B = 440, 220, 40, 430, 14, 188
-    date_idx = {d: idx for idx, d in enumerate(dates)}
+def weekday_ko(dt: datetime) -> str:
+    return "월화수목금토일"[dt.weekday()]
 
-    def x(idx):
-        if len(dates) <= 1:
-            return (L + R) / 2
-        return L + (R - L) * idx / (len(dates) - 1)
 
-    def y(value):
-        return B - ((value - lo) / (hi - lo)) * (B - T)
+def short_date_label(dt: datetime) -> str:
+    return f"{dt.month}/{dt.day}"
 
-    # date -> list of value strings for tooltip
-    tooltip_by_date = {d: [] for d in dates}
-    for name, pts in series.items():
-        for p in pts:
-            d = str(p.get("date"))
-            if d not in tooltip_by_date:
-                continue
-            try:
-                v = float(p.get("value"))
-            except Exception:
-                continue
-            tooltip_by_date[d].append(f"{name}: {v:.2f} $/Bbl")
 
-    parts = [
-        '<svg class="chart-svg" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">'
-    ]
+def display_date(dt: datetime) -> str:
+    return f"{dt.year}년 {dt.month}월 {dt.day}일 ({weekday_ko(dt)})"
 
-    for i in range(5):
-        yy = B - (B - T) * i / 4
-        label = lo + (hi - lo) * i / 4
-        parts.append(f'<line x1="{L}" y1="{yy:.1f}" x2="{R}" y2="{yy:.1f}" stroke="rgba(0,0,0,.09)" />')
-        parts.append(f'<text x="{L-6}" y="{yy+3:.1f}" text-anchor="end" font-size="9" fill="#888">{label:.1f}</text>')
 
-    for i, d in enumerate(dates):
-        if len(dates) <= 9 or i in {0, len(dates) - 1} or i % max(1, len(dates) // 6) == 0:
-            parts.append(
-                f'<text x="{x(i):.1f}" y="210" text-anchor="middle" font-size="9" fill="#888">'
-                + esc(date_label(d))
-                + '</text>'
-            )
+def normalize_line(line: str) -> str:
+    line = re.sub(r"\s+", " ", line or "").strip()
+    line = re.sub(r"^[·ㆍ•\-\*\s]+", "", line)
+    return line.strip()
 
-    # 1) visible line only. No visible points/circles.
-    for name, pts in series.items():
-        poly = []
-        for p in pts:
-            d = str(p.get("date"))
-            if d not in date_idx:
-                continue
 
-            try:
-                v = float(p.get("value"))
-            except Exception:
-                continue
+def split_body_lines(body: str) -> List[str]:
+    raw_lines = []
+    for line in (body or "").replace("\r\n", "\n").replace("\r", "\n").split("\n"):
+        line = normalize_line(line)
+        if not line:
+            continue
 
-            poly.append(f'{x(date_idx[d]):.1f},{y(v):.1f}')
+        # 기사 제목/기자명/저작권성 문구 제거
+        drop_patterns = [
+            "오늘의 주요일정",
+            "세이프타임즈",
+            "저작권자",
+            "무단전재",
+            "SNS 기사보내기",
+            "댓글",
+        ]
+        if any(pattern in line for pattern in drop_patterns):
+            continue
 
-        if poly:
-            color = colors.get(name, "#1A6FD4")
-            parts.append(
-                '<polyline fill="none" stroke="'
-                + color
-                + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="'
-                + " ".join(poly)
-                + '" />'
-            )
+        raw_lines.append(line)
 
-    # 2) invisible vertical hover bands.
-    # This avoids visible dots while making tooltip easy to trigger.
-    if len(dates) == 1:
-        band_width = R - L
+    # 너무 짧은 단독 라인은 일정 제목이 아닐 가능성이 높아 제거
+    return [line for line in raw_lines if len(line) >= 4]
+
+
+def normalize_time_from_match(match: re.Match) -> str:
+    if "time" in match.groupdict() and match.group("time"):
+        return match.group("time").replace("：", ":")
+
+    groupdict = match.groupdict()
+    hour = int(groupdict.get("hour") or 0)
+    minute = int(groupdict.get("minute") or 0)
+    ampm = groupdict.get("ampm")
+
+    if ampm == "오후" and hour < 12:
+        hour += 12
+    if ampm == "오전" and hour == 12:
+        hour = 0
+
+    return f"{hour:02d}:{minute:02d}"
+
+
+def extract_time(line: str) -> Tuple[str, str]:
+    """
+    반환: (time, line_without_time)
+    """
+    for pattern in TIME_PATTERNS:
+        match = pattern.search(line)
+        if match:
+            time_text = normalize_time_from_match(match)
+            cleaned = (line[:match.start()] + " " + line[match.end():]).strip()
+            cleaned = normalize_line(cleaned)
+            return time_text, cleaned
+
+    # '현지시간', '현지'가 있으면 시간 대신 현지로 표시
+    if "현지" in line:
+        return "현지", normalize_line(line.replace("현지시간", "").replace("현지", ""))
+
+    return "", line
+
+
+def extract_org(line: str) -> Tuple[str, str]:
+    for keyword in ORG_KEYWORDS:
+        if keyword in line:
+            # 기관명이 괄호나 앞부분에 있는 경우를 우선 처리
+            cleaned = line.replace(keyword, "", 1)
+            cleaned = normalize_line(cleaned)
+            return keyword, cleaned or line
+
+    # 괄호 안 기관명 예: (국회) 전체회의
+    match = re.match(r"^\(?([가-힣A-Za-z0-9·ㆍ]{2,12})\)?\s+(.+)$", line)
+    if match:
+        possible_org = match.group(1)
+        title = normalize_line(match.group(2))
+        if len(possible_org) <= 8 and title:
+            return possible_org, title
+
+    return "확인", line
+
+
+def guess_relevance(org: str, title: str) -> str:
+    combined = f"{org} {title}"
+
+    if any(word in combined for word in ["유가", "석유", "주유소", "정유", "기름", "유류세"]):
+        return "석유제품 가격·정유업계 현안과 직접 연결될 수 있는 일정입니다. 실제 발언·자료 확인 후 정책 리스크를 점검할 필요가 있습니다."
+
+    if any(word in combined for word in ["산업", "에너지", "전력", "LNG", "가스", "수소", "ESS", "기후"]):
+        return "에너지·산업 정책 관련 일정입니다. 정유·석화·LNG 업계 영향은 구체 발언 및 후속 자료 확인이 필요합니다."
+
+    if any(word in combined for word in ["국회", "위원회", "소위", "전체회의", "법안"]):
+        return "국회 일정입니다. 에너지 비용, 산업 지원, 석유제품 가격 관련 질의가 나올 경우 업계 모니터링이 필요합니다."
+
+    if any(word in combined for word in ["금리", "환율", "공급망", "재정", "경제", "비상경제"]):
+        return "거시경제·공급망 관련 일정입니다. 원유 도입비용, 환율, 물가 대응과의 간접 관련성을 확인할 필요가 있습니다."
+
+    return DEFAULT_RELEVANCE
+
+
+def parse_schedule_items(body: str, max_items: int) -> List[Dict[str, str]]:
+    lines = split_body_lines(body)
+    items: List[Dict[str, str]] = []
+
+    for line in lines:
+        # 일정 기사에는 날짜/분류 제목 줄이 섞일 수 있으므로 시간 또는 주요 기관 키워드가 있는 줄 중심으로 추출
+        has_time = any(pattern.search(line) for pattern in TIME_PATTERNS)
+        has_org = any(keyword in line for keyword in ORG_KEYWORDS)
+        has_schedule_word = any(word in line for word in ["회의", "간담회", "브리핑", "토론회", "방문", "행사", "면담", "발표", "공개"])
+
+        if not (has_time or has_org or has_schedule_word):
+            continue
+
+        time_text, without_time = extract_time(line)
+        org, title = extract_org(without_time)
+
+        title = normalize_line(title)
+        if not title:
+            continue
+
+        # 너무 긴 본문 문장 전체가 title로 들어가지 않게 제한
+        if len(title) > 120:
+            title = title[:117] + "..."
+
+        items.append({
+            "time": time_text or "시간미정",
+            "org": org,
+            "title": title,
+            "relevance": guess_relevance(org, title),
+        })
+
+        if len(items) >= max_items:
+            break
+
+    # 중복 제거
+    seen = set()
+    deduped = []
+    for item in items:
+        key = (item["time"], item["org"], item["title"])
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+
+    return sort_schedule_items(deduped)
+
+
+def sort_schedule_items(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    def sort_key(item: Dict[str, str]) -> Tuple[int, str]:
+        time_text = item.get("time", "")
+        match = re.match(r"^(\d{2}):(\d{2})$", time_text)
+        if match:
+            return (int(match.group(1)) * 60 + int(match.group(2)), item.get("title", ""))
+        if time_text == "현지":
+            return (24 * 60 + 1, item.get("title", ""))
+        return (24 * 60 + 2, item.get("title", ""))
+
+    return sorted(items, key=sort_key)
+
+
+def update_summary(base_report: Dict[str, Any], schedule_data: Dict[str, Any], items: List[Dict[str, str]], target_dt: datetime) -> None:
+    today_label = short_date_label(target_dt)
+
+    if items:
+        key_titles = ", ".join(item["title"] for item in items[:4])
+        summary_text = f"금일({today_label}) 주요 일정은 {key_titles} 등으로 정리."
     else:
-        band_width = max(6, (R - L) / (len(dates) - 1))
+        summary_text = "금일 주요 일정: 관련 자료 찾지 못함"
 
-    for i, d in enumerate(dates):
-        tooltip_lines = [d] + tooltip_by_date.get(d, [])
-        tooltip = esc(" | ".join(tooltip_lines))
-        cx = x(i)
-        rect_x = max(L, cx - band_width / 2)
-        rect_w = min(band_width, R - rect_x)
-        parts.append(
-            f'<rect x="{rect_x:.1f}" y="{T}" width="{rect_w:.1f}" height="{B-T}" '
-            f'fill="transparent" class="hover-band" data-tooltip="{tooltip}" />'
-        )
+    summary = base_report.setdefault("summary", [])
+    while len(summary) < 3:
+        summary.append({"type": "auto", "text": ""})
 
-    parts.append("</svg>")
-    return "\n".join(parts)
-
-
-def render_legend(names, colors):
-    return "".join(
-        '<span class="legend-item"><span class="legend-dot" style="background:'
-        + colors.get(n, "#1A6FD4")
-        + '"></span>'
-        + esc(n)
-        + '</span>'
-        for n in names
-    )
-
-
-def css() -> str:
-    return """
-  :root { --bg:#F4F5F7; --card:#fff; --ink:#1A1A1A; --muted:#666; --line:#E5E7EB; --navy:#0A2444; --blue:#1A6FD4; --red:#C0392B; --green:#0A7B4E; }
-  * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
-  body { margin:0; padding:14px; padding-left:max(14px, env(safe-area-inset-left)); padding-right:max(14px, env(safe-area-inset-right)); background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif; font-size:14px; line-height:1.62; word-break:keep-all; overflow-wrap:anywhere; }
-  a { color:inherit; }
-  .container { max-width:480px; margin:0 auto; }
-  .header { background:var(--navy); color:#fff; border-radius:14px; padding:18px 16px; }
-  .header-top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
-  .header-title { font-size:20px; font-weight:800; letter-spacing:-.3px; }
-  .header-date { font-size:12px; color:rgba(255,255,255,.7); margin-top:2px; }
-  .badge { flex-shrink:0; border-radius:999px; background:rgba(255,255,255,.12); padding:4px 10px; font-size:11px; }
-  .meta { margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; color:rgba(255,255,255,.78); font-size:11px; }
-  .notice { background:#FFF7E6; border:1px solid #F5D08A; color:#5F4300; border-radius:12px; padding:11px 13px; margin:10px 0; font-size:12px; }
-  .section { background:#fff; border:1px solid var(--line); border-radius:14px; margin:10px 0; overflow:hidden; }
-  .section-head { display:flex; align-items:center; gap:8px; padding:11px 16px; background:#F8F9FA; border-bottom:1px solid var(--line); }
-  .num { background:var(--navy); color:#fff; border-radius:4px; font-size:11px; font-weight:800; min-width:24px; text-align:center; padding:2px 7px; }
-  .section-title { font-size:14px; font-weight:800; }
-  .body { padding:14px 16px; }
-  .summary-item { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid #F0F0F0; font-size:13px; }
-  .summary-item:last-child { border-bottom:0; }
-  .dot { flex-shrink:0; width:6px; height:6px; border-radius:50%; background:var(--blue); margin-top:8px; }
-  .price-label-title { padding:12px 16px 6px; font-size:12px; color:var(--muted); }
-  .price-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; padding:0 16px 14px; }
-  .price-card { background:#F8F9FA; border-radius:10px; text-align:center; padding:10px 6px; }
-  .price-label { font-size:11px; color:#666; }
-  .price-value { font-size:18px; font-weight:800; line-height:1.1; margin-top:2px; }
-  .price-unit { font-size:10px; color:#999; }
-  .price-change { font-size:11px; margin-top:2px; }
-  .up { color:var(--red); } .down { color:var(--green); } .flat { color:#888; }
-  .note { padding:0 16px 12px; font-size:11px; color:#999; }
-  .chart-wrap { padding:12px 10px 14px; }
-  .legend { display:flex; flex-wrap:wrap; gap:10px; padding:0 6px 8px; font-size:12px; color:#666; }
-  .legend-item { display:inline-flex; align-items:center; gap:5px; }
-  .legend-dot { width:12px; height:3px; border-radius:2px; display:inline-block; }
-  .chart-svg { width:100%; height:auto; display:block; }
-  .hover-band { cursor:crosshair; pointer-events:all; }
-  .chart-tooltip { position:fixed; z-index:9999; pointer-events:none; background:rgba(10,36,68,.94); color:#fff; border-radius:8px; padding:7px 9px; font-size:11px; line-height:1.45; box-shadow:0 6px 18px rgba(0,0,0,.18); transform:translate(10px, -30px); white-space:nowrap; max-width:260px; }
-  .chart-tooltip.hidden { display:none; }
-  .issue-card { background:#F8F9FA; border-left:3px solid var(--blue); border-radius:10px; padding:12px 14px; margin-bottom:8px; }
-  .issue-tag { display:inline-block; font-size:10px; font-weight:800; color:#185FA5; background:#E6F1FB; border-radius:3px; padding:2px 6px; margin-bottom:6px; }
-  .issue-title { font-size:13px; font-weight:800; margin-bottom:4px; }
-  .issue-desc { font-size:12px; color:#444; }
-  .issue-footer { margin-top:7px; }
-  .issue-grade { font-size:11px; font-weight:800; border-radius:3px; padding:2px 7px; }
-  .grade-a { background:#FEECEC; color:#A32D2D; } .grade-b { background:#FFF3E0; color:#854F0B; } .grade-c { background:#F1F1F1; color:#555; }
-  .schedule-row { display:flex; gap:8px; padding:9px 0; border-bottom:1px solid #F0F0F0; }
-  .schedule-row:last-child { border-bottom:0; }
-  .schedule-time { min-width:40px; color:#185FA5; font-size:11px; font-weight:800; }
-  .schedule-org { min-width:44px; height:max-content; background:#F0F1F3; border:1px solid #E0E0E0; border-radius:4px; padding:1px 6px; font-size:10px; text-align:center; color:#555; }
-  .schedule-main { flex:1; min-width:0; font-size:12px; }
-  .schedule-rel { color:#777; font-size:11px; margin-top:2px; }
-  .news-summary { font-size:13px; }
-  .section-divider { height:1px; background:#F0F0F0; margin:12px 0; }
-  .small-title { color:#999; font-size:11px; font-weight:800; margin-bottom:8px; }
-  .news-item { display:flex; gap:8px; padding:8px 0; border-bottom:1px solid #F0F0F0; }
-  .news-num { color:var(--blue); font-weight:800; font-size:11px; min-width:14px; }
-  .news-title { font-size:13px; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
-  .news-press { color:#888; font-size:11px; }
-  .quality-list { margin:0; padding-left:18px; font-size:12px; color:#555; }
-  .quality-list li { margin:5px 0; }
-  .empty { background:#F8F9FA; border-radius:10px; padding:12px; color:#777; font-size:12px; }
-  .footer { text-align:center; color:#aaa; font-size:11px; padding:14px; }
-  @media(max-width:430px) { body { padding:10px; } .header-title { font-size:19px; } .price-grid { gap:6px; padding-left:12px; padding-right:12px; } .price-value { font-size:17px; } .meta { grid-template-columns:1fr; } }
-"""
-
-
-def tooltip_js() -> str:
-    return """
-(function () {
-  var tooltip = document.getElementById('chart-tooltip');
-  if (!tooltip) return;
-
-  function formatText(text) {
-    return String(text || '').split(' | ').join('\\n');
-  }
-
-  function show(evt) {
-    var target = evt.target;
-    var text = target.getAttribute('data-tooltip');
-    if (!text) return;
-    tooltip.textContent = formatText(text);
-    tooltip.style.whiteSpace = 'pre-line';
-    tooltip.classList.remove('hidden');
-    move(evt);
-  }
-
-  function move(evt) {
-    if (tooltip.classList.contains('hidden')) return;
-    var clientX = evt.clientX;
-    var clientY = evt.clientY;
-    if (evt.touches && evt.touches.length) {
-      clientX = evt.touches[0].clientX;
-      clientY = evt.touches[0].clientY;
+    # 기존 convention: 0 전일, 1 금일, 2 조간
+    summary[1] = {
+        "type": "today",
+        "text": summary_text,
     }
-    var x = clientX + 12;
-    var y = clientY - 34;
-    var maxX = window.innerWidth - tooltip.offsetWidth - 8;
-    var maxY = window.innerHeight - tooltip.offsetHeight - 8;
-    if (x > maxX) x = Math.max(8, clientX - tooltip.offsetWidth - 12);
-    if (y < 8) y = clientY + 18;
-    if (y > maxY) y = maxY;
-    tooltip.style.left = x + 'px';
-    tooltip.style.top = y + 'px';
-  }
-
-  function hide() {
-    tooltip.classList.add('hidden');
-  }
-
-  document.addEventListener('mouseover', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) show(evt);
-  });
-
-  document.addEventListener('mousemove', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) move(evt);
-  });
-
-  document.addEventListener('mouseout', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) hide();
-  });
-
-  document.addEventListener('touchstart', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) {
-      show(evt);
-      window.setTimeout(hide, 1800);
-    }
-  }, { passive: true });
-})();
-"""
 
 
-def section(num: str, title: str, body: str) -> str:
-    return (
-        '<section class="section"><div class="section-head"><span class="num">'
-        + num
-        + '</span><span class="section-title">'
-        + title
-        + '</span></div><div class="body">'
-        + body
-        + '</div></section>'
-    )
+def update_report_meta(base_report: Dict[str, Any], target_dt: datetime) -> None:
+    report = base_report.setdefault("report", {})
+    date_text = target_dt.strftime("%Y-%m-%d")
+
+    report["report_date"] = date_text
+    report["display_date"] = display_date(target_dt)
+    report["previous_day_label"] = short_date_label(target_dt - timedelta(days=1))
+    report["today_label"] = short_date_label(target_dt)
+    report["generated_at"] = datetime.now().strftime("%Y-%m-%d %H:%M KST")
+    report["review_status"] = "초안"
+    report["report_version"] = "draft-from-safetimes-v1.0"
+    report["report_title"] = "Daily Issue Report"
+    report["header_title"] = "Daily Issue Report"
+    report["report_badge"] = report.get("report_badge") or "정유 · 석유화학 · LNG"
 
 
-def build_html(report: Mapping[str, Any]) -> str:
-    meta = report.get("report", {}) or {}
-    prices = report.get("prices", {}) or {}
-    crude = prices.get("crude", {}) or {}
-    products = prices.get("products", {}) or {}
-    crude_series = crude.get("chart_series", {}) or {}
-    product_series = products.get("chart_series", {}) or {}
+def update_sources(base_report: Dict[str, Any], schedule_data: Dict[str, Any]) -> None:
+    quality = base_report.setdefault("quality_control", {})
+    sources = quality.setdefault("sources", [])
 
-    parts = [
-        '<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">',
-        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
-        '<meta name="format-detection" content="telephone=no">',
-        '<title>Daily Issue Report</title>',
-        '<style>' + css() + '</style></head><body><div class="container">',
-        '<header class="header"><div class="header-top"><div>',
-        '<div class="header-title">Daily Issue Report</div>',
-        '<div class="header-date">' + esc(meta.get("display_date") or meta.get("report_date") or "") + '</div>',
-        '</div><div class="badge">' + esc(meta.get("report_badge") or "정유 · 석유화학 · LNG") + '</div></div>',
-        '</header>',
-        '<div class="notice">본 보고서는 AI가 자동 생성한 초안입니다. 내용의 정확성을 반드시 확인 후 활용하시기 바랍니다. 확인된 사실만 기재했으며, 확인 불가 항목은 “확인 필요”로 표시했습니다.</div>',
-        section("1", "Summary", render_summary(report.get("summary", []))),
-        '<section class="section"><div class="section-head"><span class="num">2</span><span class="section-title">유가 동향</span></div>',
-        '<div class="price-label-title">최신 유가 정보 ($/Bbl) — ' + esc(crude.get("base_label", "")) + ' 기준</div>',
-        '<div class="price-grid">' + render_cards(crude.get("cards", [])) + '</div>',
-        '<div class="price-label-title">최신 석유제품 가격 정보 ($/Bbl) — ' + esc(products.get("base_label", "")) + ' 기준</div>',
-        '<div class="price-grid">' + render_cards(products.get("cards", [])) + '</div>',
-        '<div class="note">' + esc(prices.get("price_data_note", "")) + '</div></section>',
-        section(
-            "3",
-            "원유 가격 추이 그래프 (" + esc(crude.get("chart_period_label", "")) + ")",
-            '<div class="chart-wrap"><div class="legend">'
-            + render_legend(["Brent", "WTI", "Dubai"], CRUDE_COLORS)
-            + '</div>'
-            + render_chart(crude_series, CRUDE_COLORS)
-            + '</div>',
-        ),
-        section(
-            "4",
-            "석유제품 가격 추이 그래프 (" + esc(products.get("chart_period_label", "")) + ")",
-            '<div class="chart-wrap"><div class="legend">'
-            + render_legend(["Gasoline", "Diesel", "Naphtha"], PRODUCT_COLORS)
-            + '</div>'
-            + render_chart(product_series, PRODUCT_COLORS)
-            + '</div>',
-        ),
-        section("5", "주요 이해관계자 동향", render_issues(report.get("issues", []))),
-        '<section class="section"><div class="section-head"><span class="num">6</span><span class="section-title">금일 주요 일정 ('
-        + esc(meta.get("today_label", ""))
-        + ')</span></div><div class="body">'
-        + render_schedules(report.get("schedules", []))
-        + '</div></section>',
-        section("7", "조간 신문 트렌드", render_news(report)),
-        '<footer class="footer">내용 확인 후 활용</footer>',
-        '<div id="chart-tooltip" class="chart-tooltip hidden"></div>',
-        '<script>' + tooltip_js() + '</script>',
-        '</div></body></html>',
+    schedule_url = source_url(schedule_data)
+    schedule_title = schedule_data.get("title", "오늘의 주요일정")
+
+    # 기존 세이프타임즈 출처 제거 후 최신으로 추가
+    sources = [
+        source for source in sources
+        if not (source.get("type") == "schedule")
     ]
-    return "\n".join(parts)
+
+    sources.insert(0, {
+        "name": "오늘의 주요일정",
+        "type": "schedule",
+        "url": schedule_url,
+    })
+
+    quality["sources"] = sources
+
+    notes = quality.setdefault("quality_notes", [])
+    notes.append("일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.")
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="리포트 JSON을 HTML로 변환")
-    parser.add_argument("--date", required=True)
-    parser.add_argument("--report-dir", default="data/reports")
-    parser.add_argument("--out-dir", default="docs/reports")
-    return parser.parse_args()
+def build_report_draft(schedule_data: Dict[str, Any], base_report: Dict[str, Any], target_dt: datetime, max_items: int) -> Dict[str, Any]:
+    report = copy.deepcopy(base_report)
+    items = schedule_items_from_json_or_body(schedule_data, max_items=max_items)
+
+    update_report_meta(report, target_dt)
+    update_summary(report, schedule_data, items, target_dt)
+    update_sources(report, schedule_data)
+
+    report["schedules"] = items
+
+    # 자동화 이력 저장
+    report.setdefault("automation", {})
+    report["automation"]["safetimes"] = {
+        "source_file_date": target_dt.strftime("%Y-%m-%d"),
+        "source_title": schedule_data.get("title", ""),
+        "source_url": source_url(schedule_data),
+        "source_published_at": schedule_data.get("approved_date", "") or schedule_data.get("published_at", ""),
+        "parsed_schedule_count": len(items),
+        "parser_version": "build_report_draft_from_schedule.py v1.0",
+        "needs_review": True,
+    }
+
+    # 일정 추출 실패 문구는 사용자용 HTML에 노출하지 않는다.
+    if not items:
+        report.setdefault("automation", {}).setdefault("validation", {})["schedule_parse_failed"] = True
+
+    return report
 
 
 def main() -> int:
     args = parse_args()
-    try:
-        report = read_json(Path(args.report_dir) / f"{args.date}.report.json")
-        out_path = Path(args.out_dir) / f"{args.date}.html"
-        report = sanitize_report(report)
-        if not has_valid_report_content(report):
-            if out_path.exists():
-                out_path.unlink()
-                print(f"[SKIP] 가격 외 유효 콘텐츠 없음. 기존 HTML 삭제: {out_path}")
-            else:
-                print(f"[SKIP] 가격 외 유효 콘텐츠 없음. HTML 생성 제외: {args.date}")
-            return 0
-        atomic_write(out_path, build_html(report))
-        print(f"[OK] HTML 리포트 생성 완료: {out_path}")
-        return 0
-    except Exception as exc:
-        print(f"[ERROR] HTML 리포트 생성 실패: {exc}")
-        return 1
+    target_dt = parse_date(args.date)
+
+    schedule_path = Path(args.schedule_dir) / f"{args.date}.json"
+    base_report_path = Path(args.base_report)
+    out_path = Path(args.out_dir) / f"{args.date}.report.json"
+
+    schedule_data = read_json(schedule_path)
+    base_report = read_json(base_report_path)
+
+    if not schedule_data.get("success", True):
+        raise DraftBuildError(f"세이프타임즈 수집 실패 JSON입니다: {schedule_path}")
+
+    draft = build_report_draft(
+        schedule_data=schedule_data,
+        base_report=base_report,
+        target_dt=target_dt,
+        max_items=args.max_items,
+    )
+
+    write_json(out_path, draft)
+
+    schedule_count = len(draft.get("schedules", []))
+    print(f"[OK] 리포트 초안 생성 완료: {out_path}")
+    print(f"[OK] 반영된 일정 수: {schedule_count}")
+    print(f"[OK] 원문 제목: {schedule_data.get('title', '')}")
+    return 0
 
 
 if __name__ == "__main__":
