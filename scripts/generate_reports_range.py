@@ -44,7 +44,6 @@ def parse_args():
     parser.add_argument("--skip-korean-holidays", action="store_true", default=True, help="한국 공휴일/휴무일 제외")
     parser.add_argument("--report-dir", default="data/reports")
     parser.add_argument("--schedule-dir", default="data/schedules")
-    parser.add_argument("--news-dir", default="data/news")
     parser.add_argument("--price-dir", default="data/prices")
     parser.add_argument("--history", default="data/prices/history.json")
     parser.add_argument("--html-dir", default="docs/reports")
@@ -64,6 +63,24 @@ def date_range(start: str, end: str):
     while cur <= e:
         yield cur
         cur += timedelta(days=1)
+
+
+def is_report_workday(d, skip_weekends: bool, skip_holidays: bool) -> bool:
+    if skip_weekends and d.weekday() >= 5:
+        return False
+    if skip_holidays and d.isoformat() in KOREAN_HOLIDAYS_2026:
+        return False
+    return True
+
+
+def previous_report_workday(d, skip_weekends: bool, skip_holidays: bool):
+    cur = d - timedelta(days=1)
+    # 월요일 또는 연휴 다음 영업일에는 직전 리포트 영업일을 기준일 전일 이슈로 사용한다.
+    for _ in range(14):
+        if is_report_workday(cur, skip_weekends=skip_weekends, skip_holidays=skip_holidays):
+            return cur
+        cur -= timedelta(days=1)
+    return d - timedelta(days=1)
 
 
 def run(cmd, allow_fail: bool = False) -> bool:
@@ -91,8 +108,6 @@ def main() -> int:
         "scripts/merge_prices_into_report.py",
         "scripts/generate_html_report.py",
         "scripts/generate_report_index.py",
-        "scripts/fetch_news_candidates.py",
-        "scripts/apply_news_to_report.py",
         args.history,
         args.base_report,
     ]
@@ -116,10 +131,14 @@ def main() -> int:
             continue
 
         generated_dates.append(date_text)
+        previous_d = previous_report_workday(d, skip_weekends=args.skip_weekends, skip_holidays=args.skip_korean_holidays)
+        previous_date_text = previous_d.isoformat()
 
         print(f"\n=== {date_text} 리포트 생성 ===")
+        print(f"[INFO] 기준일 일정={date_text}, 전일/직전 영업일 이슈 기준={previous_date_text}")
 
         schedule_path = f"{args.schedule_dir}/{date_text}.json"
+        previous_schedule_path = f"{args.schedule_dir}/{previous_date_text}.json"
         report_path = f"{args.report_dir}/{date_text}.report.json"
 
         # 1. 세이프타임즈 일정 수집. 실패해도 전체 백필은 멈추지 않음.
@@ -130,6 +149,21 @@ def main() -> int:
                 sys.executable,
                 "scripts/fetch_safetimes_schedule.py",
                 "--date", date_text,
+                "--out-dir", args.schedule_dir,
+                "--max-retries", "1",
+                "--retry-delay", "5",
+                "--max-pages", str(args.max_pages),
+            ], allow_fail=True)
+
+        # 1-1. 기준일 전일/직전 영업일 일정도 별도로 수집한다.
+        # 주요 이해관계자 동향/이슈는 이 파일을 기준으로 만들며, 금일 일정과 절대 같은 데이터를 복사하지 않는다.
+        if file_exists(previous_schedule_path):
+            print(f"[OK] 기존 전일/직전 영업일 일정 JSON 사용: {previous_schedule_path}")
+        else:
+            run([
+                sys.executable,
+                "scripts/fetch_safetimes_schedule.py",
+                "--date", previous_date_text,
                 "--out-dir", args.schedule_dir,
                 "--max-retries", "1",
                 "--retry-delay", "5",
@@ -148,6 +182,8 @@ def main() -> int:
                 "scripts/build_report_draft_from_schedule.py",
                 "--date", date_text,
                 "--schedule-dir", args.schedule_dir,
+                "--previous-date", previous_date_text,
+                "--previous-schedule-dir", args.schedule_dir,
                 "--base-report", args.base_report,
                 "--out-dir", args.report_dir,
             ])
@@ -164,26 +200,24 @@ def main() -> int:
             "--refresh-fallback",
         ])
 
-        # 4. 조간 기사 후보 수집 및 반영.
-        run([
-            sys.executable,
-            "scripts/fetch_news_candidates.py",
-            "--date", date_text,
-            "--out-dir", args.news_dir,
-            "--max-items", "12",
-            "--force-refresh",
-        ], allow_fail=True)
+        # 3-1. 뉴스 후보 수집 로직이 저장소에 있으면 조간신문 트렌드도 반영한다.
+        # 해당 스크립트가 없는 기존 저장소에서는 이 단계를 자동으로 건너뛴다.
+        if Path("scripts/fetch_news_candidates.py").exists() and Path("scripts/apply_news_to_report.py").exists():
+            run([
+                sys.executable,
+                "scripts/fetch_news_candidates.py",
+                "--date", date_text,
+                "--out-dir", "data/news",
+            ], allow_fail=True)
+            run([
+                sys.executable,
+                "scripts/apply_news_to_report.py",
+                "--date", date_text,
+                "--news-dir", "data/news",
+                "--report-dir", args.report_dir,
+            ], allow_fail=True)
 
-        run([
-            sys.executable,
-            "scripts/apply_news_to_report.py",
-            "--date", date_text,
-            "--report-dir", args.report_dir,
-            "--news-dir", args.news_dir,
-            "--max-articles", "3",
-        ], allow_fail=True)
-
-        # 5. 가격 병합. 과거 날짜는 history.json 기준.
+        # 4. 가격 병합. 과거 날짜는 history.json 기준.
         run([
             sys.executable,
             "scripts/merge_prices_into_report.py",
@@ -194,7 +228,7 @@ def main() -> int:
             "--chart-months", str(args.chart_months),
         ])
 
-        # 6. HTML 리포트 생성.
+        # 5. HTML 리포트 생성.
         run([
             sys.executable,
             "scripts/generate_html_report.py",
@@ -203,7 +237,7 @@ def main() -> int:
             "--out-dir", args.html_dir,
         ])
 
-    # 7. 캘린더용 index 갱신.
+    # 6. 캘린더용 index 갱신.
     run([
         sys.executable,
         "scripts/generate_report_index.py",
