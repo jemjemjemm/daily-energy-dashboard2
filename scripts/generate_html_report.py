@@ -48,6 +48,83 @@ def read_json(path: Path) -> Dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+BAD_REPORT_PHRASES = [
+    "자동 추출된 일정 항목이 없습니다",
+    "본문 구조 확인 및 수동 검수가 필요합니다",
+    "세이프타임즈 '' 원문",
+    "원문 자동 매칭 실패",
+    "주요일정 원문 데이터 미확보",
+    "원문 데이터 없음",
+    "가격 데이터 중심 리포트",
+    "Data 없음",
+    "No data",
+]
+
+
+def has_bad_phrase(value: Any) -> bool:
+    text = "" if value is None else str(value)
+    return any(phrase in text for phrase in BAD_REPORT_PHRASES)
+
+
+def clean_text(value: Any) -> str:
+    text = "" if value is None else str(value)
+    text = text.replace("세이프타임즈", "").strip()
+    return text
+
+
+def clean_items(items: Sequence[Mapping[str, Any]], title_keys=("title", "text")) -> list[dict[str, Any]]:
+    cleaned: list[dict[str, Any]] = []
+    for item in items or []:
+        if not isinstance(item, Mapping):
+            continue
+        blob = " ".join(str(item.get(k, "")) for k in item.keys())
+        if has_bad_phrase(blob):
+            continue
+        copied = dict(item)
+        for key in ["title", "text", "description", "summary", "relevance", "press"]:
+            if key in copied:
+                copied[key] = clean_text(copied[key])
+        if any(str(copied.get(k, "")).strip() for k in title_keys):
+            cleaned.append(copied)
+    return cleaned
+
+
+def has_valid_report_content(report: Mapping[str, Any]) -> bool:
+    issues = clean_items(report.get("issues", []) or [], title_keys=("title",))
+    schedules = clean_items(report.get("schedules", []) or [], title_keys=("title",))
+    news = report.get("news_trend", {}) or {}
+    articles = clean_items(news.get("articles", []) or [], title_keys=("title",))
+    valid_articles = [
+        a for a in articles
+        if a.get("title") and a.get("url") and not has_bad_phrase(a.get("title", ""))
+    ]
+
+    # 가격 카드/그래프만 있는 날짜는 보고서로 만들지 않는다.
+    return bool(issues or schedules or valid_articles)
+
+
+def sanitize_report(report: Dict[str, Any]) -> Dict[str, Any]:
+    report = dict(report)
+    report["summary"] = clean_items(report.get("summary", []) or [], title_keys=("text",))
+    report["issues"] = clean_items(report.get("issues", []) or [], title_keys=("title",))
+    report["schedules"] = clean_items(report.get("schedules", []) or [], title_keys=("title",))
+
+    news = dict(report.get("news_trend", {}) or {})
+    if has_bad_phrase(news.get("summary", "")):
+        news["summary"] = ""
+    else:
+        news["summary"] = clean_text(news.get("summary", ""))
+    news["articles"] = [
+        a for a in clean_items(news.get("articles", []) or [], title_keys=("title",))
+        if a.get("title") and a.get("url") and "오늘의 주요일정" not in str(a.get("title", ""))
+    ][:3]
+    report["news_trend"] = news
+
+    # 사용자 프롬프트 기준: 일정 출처명과 내부 품질 메모는 본문에 노출하지 않는다.
+    report["quality_control"] = {"sources": []}
+    return report
+
+
 def atomic_write(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(
@@ -114,7 +191,6 @@ def render_schedules(items: Sequence[Mapping[str, Any]]) -> str:
             '<div class="schedule-org">' + esc(i.get("org", "")) + '</div>'
             '<div class="schedule-main">'
             '<div>' + esc(i.get("title", "")) + '</div>'
-            '<div class="schedule-rel">' + esc(i.get("relevance", "")) + '</div>'
             '</div></div>'
         )
     return "\n".join(rows)
@@ -142,11 +218,11 @@ def render_issues(items: Sequence[Mapping[str, Any]]) -> str:
 
 def render_news(report: Mapping[str, Any]) -> str:
     news = report.get("news_trend", {}) or {}
-    summary = news.get("summary_html") or esc(news.get("summary", "")) or "조간 신문 트렌드 데이터가 아직 없습니다."
+    summary = news.get("summary_html") or esc(clean_text(news.get("summary", ""))) or "관련 자료 찾지 못함"
     articles = news.get("articles", []) or []
 
     rows = []
-    for idx, a in enumerate(articles[:5], 1):
+    for idx, a in enumerate(articles[:3], 1):
         url = str(a.get("url", "") or "")
         title = esc(a.get("title", ""))
         press = esc(a.get("press", ""))
@@ -356,6 +432,7 @@ def css() -> str:
   .header-date { font-size:12px; color:rgba(255,255,255,.7); margin-top:2px; }
   .badge { flex-shrink:0; border-radius:999px; background:rgba(255,255,255,.12); padding:4px 10px; font-size:11px; }
   .meta { margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; color:rgba(255,255,255,.78); font-size:11px; }
+  .notice { background:#FFF7E6; border:1px solid #F5D08A; color:#5F4300; border-radius:12px; padding:11px 13px; margin:10px 0; font-size:12px; }
   .section { background:#fff; border:1px solid var(--line); border-radius:14px; margin:10px 0; overflow:hidden; }
   .section-head { display:flex; align-items:center; gap:8px; padding:11px 16px; background:#F8F9FA; border-bottom:1px solid var(--line); }
   .num { background:var(--navy); color:#fff; border-radius:4px; font-size:11px; font-weight:800; min-width:24px; text-align:center; padding:2px 7px; }
@@ -498,14 +575,14 @@ def build_html(report: Mapping[str, Any]) -> str:
         '<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
         '<meta name="format-detection" content="telephone=no">',
-        '<title>' + esc(meta.get("report_title") or "Daily 유가 동향") + '</title>',
+        '<title>' + esc(meta.get("report_title") or "Daily Issue Report") + '</title>',
         '<style>' + css() + '</style></head><body><div class="container">',
         '<header class="header"><div class="header-top"><div>',
-        '<div class="header-title">' + esc(meta.get("header_title") or "Daily 유가 동향") + '</div>',
+        '<div class="header-title">' + esc(meta.get("header_title") or "Daily Issue Report") + '</div>',
         '<div class="header-date">' + esc(meta.get("display_date") or meta.get("report_date") or "") + '</div>',
         '</div><div class="badge">' + esc(meta.get("report_badge") or "정유 · 석유화학 · LNG") + '</div></div>',
-        '<div class="meta"><div>기준일: ' + esc(meta.get("report_date", "")) + '</div>',
-        '<div>생성: ' + esc(meta.get("generated_at", "")) + '</div></div></header>',
+        '</header>',
+        '<div class="notice">본 보고서는 AI가 자동 생성한 초안입니다. 내용의 정확성을 반드시 확인 후 활용하시기 바랍니다. 확인된 사실만 기재했으며, 확인 불가 항목은 “확인 필요”로 표시했습니다.</div>',
         section("1", "Summary", render_summary(report.get("summary", []))),
         '<section class="section"><div class="section-head"><span class="num">2</span><span class="section-title">유가 동향</span></div>',
         '<div class="price-label-title">최신 유가 정보 ($/Bbl) — ' + esc(crude.get("base_label", "")) + ' 기준</div>',
@@ -531,15 +608,14 @@ def build_html(report: Mapping[str, Any]) -> str:
             + render_chart(product_series, PRODUCT_COLORS)
             + '</div>',
         ),
-        section("5", "전일 주요 이슈 (" + esc(meta.get("previous_day_label", "")) + ")", render_issues(report.get("issues", []))),
+        section("5", "주요 이해관계자 동향", render_issues(report.get("issues", []))),
         '<section class="section"><div class="section-head"><span class="num">6</span><span class="section-title">금일 주요 일정 ('
         + esc(meta.get("today_label", ""))
         + ')</span></div><div class="body">'
         + render_schedules(report.get("schedules", []))
-        + '</div><div class="note">※ 관련성·영향도는 일정 원문에 기재된 사실이 아니라, 정유/석화/LNG 관점의 작성자 해석입니다.</div></section>',
+        + '</div></section>',
         section("7", "조간 신문 트렌드", render_news(report)),
-        section("8", "주요 출처", render_quality(report)),
-        '<footer class="footer">자동 생성 리포트 · 사실/해석 구분 및 기사 원문 확인 필요</footer>',
+        '<footer class="footer">내용 확인 후 활용</footer>',
         '<div id="chart-tooltip" class="chart-tooltip hidden"></div>',
         '<script>' + tooltip_js() + '</script>',
         '</div></body></html>',
@@ -560,6 +636,14 @@ def main() -> int:
     try:
         report = read_json(Path(args.report_dir) / f"{args.date}.report.json")
         out_path = Path(args.out_dir) / f"{args.date}.html"
+        report = sanitize_report(report)
+        if not has_valid_report_content(report):
+            if out_path.exists():
+                out_path.unlink()
+                print(f"[SKIP] 가격 외 유효 콘텐츠 없음. 기존 HTML 삭제: {out_path}")
+            else:
+                print(f"[SKIP] 가격 외 유효 콘텐츠 없음. HTML 생성 제외: {args.date}")
+            return 0
         atomic_write(out_path, build_html(report))
         print(f"[OK] HTML 리포트 생성 완료: {out_path}")
         return 0
