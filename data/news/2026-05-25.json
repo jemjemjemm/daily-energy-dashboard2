@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-05-25",
+  "collected_at": "2026-05-25 13:54:38 KST",
+  "source": "Google News RSS",
+  "queries": [
+    "정유 OR 유가 OR 석유제품 OR 주유소 OR 유류세",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌",
+    "LNG OR 가스 OR 전력 OR 에너지 공급망",
+    "최고가격제 OR 민생물가 OR 생산자물가 석유",
+    "중동 위기 원유 수급 에너지"
+  ],
+  "time_window": "00:00~10:30 KST 우선",
+  "summary": "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다.",
+  "topics": [],
+  "articles": [],
+  "errors": [],
+  "success": false
+}

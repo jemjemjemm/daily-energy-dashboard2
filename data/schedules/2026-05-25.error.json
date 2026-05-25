@@ -1,0 +1,9 @@
+{
+  "schema_version": "2.0",
+  "source": "세이프타임즈",
+  "category": "오늘의 주요일정",
+  "date": "2026-05-25",
+  "collected_at": "2026-05-25 13:54:35 KST",
+  "success": false,
+  "error": "오늘의 주요일정 후보 기사를 찾지 못했습니다."
+}
