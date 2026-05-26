@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-19",
-  "collected_at": "2026-05-26 17:10:09 KST",
+  "collected_at": "2026-05-26 17:18:04 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -69,7 +69,7 @@
       "published_at_kst": "2026-05-19 11:24",
       "snippet": "'요동치는 국제유가' 정부, 최고가격제 유지 '고심' 프라임경제",
       "score": 36,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -150,23 +150,12 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2WDFTYTFERGtnZnU1OFlDM0I0c2pGMS02LTFvb2xvZk5VUll1cWtMRjBUOTJYUHdxLUtJWFVXTUhNQ1lKRll5NHNER0gzYzVaY2pDSU42ZWdIbk3SAWBBVV95cUxOR3N6eENjRUlPcXBwVXhtWFlBN0RPWHNJT19lRENxRGtYTFJSZ0JhdlBSWXBLZTd5SnhKTHU2ZUcwZWNRMUhLRFdHTlFwRHc1MWpwa1NKRlJHTU1SSmg0R0E?oc=5",
+      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑ - 연합뉴스TV",
+      "press": "연합뉴스TV",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1JUGxzN0xjVl9hMnV3dkRqeFpnempnMGJVWVMtR0VXVjJkWEZxYkVMSTBCTVNyZGFzS2MzU2I4bmVGQVBkQ05BYldIeG5fQ3M3dUZvLU5EMW9GTi1BdE5TTEdiMDA?oc=5",
       "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 04:57",
-      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 연합뉴스",
-      "score": 28,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5RQ0FfcGcwNEdTTUtaR1Bqa3dfZWpBclRXR1BkYWNMOXBiTkVTQ252RFZSaXZWelJQMGwtRGZxUGtEbXc1ZkE?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 04:59",
-      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 v.daum.net",
+      "published_at_kst": "2026-05-19 06:03",
+      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑ 연합뉴스TV",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -180,6 +169,17 @@
       "snippet": "이란전쟁 불확실성에 국제유가 급등‥WTI 3%↑, 108달러대 MBC 뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "中 항이석유화학, 신장에 ‘세계 최대’ 석탄-화학 공장 건설… 중동 전쟁 속 자원 안보 사수 - 글로벌이코노믹",
+      "press": "글로벌이코노믹",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUF9sU0NFZHR3NjdZbW1OTXk1UU95eno1a0N5NVd3WlR0NDZ0NThQYzFFUlVXejItRDRsSk5Mb1F5ZDJSY2RlckVVZlNtS3QzbW5UTW9VVjJlZjBTQmk0alBUVXV4a25CRGhkVks2OUNiTTRBZk9wRk9CbWxhcC1BVmxEc1JidVUw?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 07:32",
+      "snippet": "中 항이석유화학, 신장에 ‘세계 최대’ 석탄-화학 공장 건설… 중동 전쟁 속 자원 안보 사수 글로벌이코노믹",
+      "score": 27,
+      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
     }
   ],

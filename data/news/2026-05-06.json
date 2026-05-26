@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-06",
-  "collected_at": "2026-05-26 17:09:29 KST",
+  "collected_at": "2026-05-26 17:17:24 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,12 +42,12 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
     "중동 정세와 원유·LNG 수급 리스크",
-    "정유·석유화학 업계 실적·원가·제품 가격",
-    "물가 지표와 에너지 비용 부담"
+    "물가 지표와 에너지 비용 부담",
+    "정부·국회 에너지 정책"
   ],
   "articles": [
     {
@@ -161,17 +161,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "5조 잭팟? 고유가 착시 효과!… 역대급 실적에도 못 웃는 정유사들 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BSFZoclZsZGl1ai1rZmZKWTRMMXUyc3lUakVtanVqc0k3d0U1VVAtV1ljel9ZS1lSRXVaVVF5M1NoeGNPeldzYWRtc09FdTg?oc=5",
-      "published_date": "2026-05-05",
-      "published_at_kst": "2026-05-05 16:00",
-      "snippet": "5조 잭팟? 고유가 착시 효과!… 역대급 실적에도 못 웃는 정유사들 v.daum.net",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "중동긴장 재고조에 국제유가 급등 - 연합뉴스",
       "press": "연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBTdFhqV0g2LWpIcklqcmdROF9vdmNlcTZock9UMDhjbVY5OXlOXzhYbmZyZE9zWjJrOHF2VWt2cFhOSHMwZG5oMVpaTFpweXVGNjUxZnRJLWNaZjTSAWBBVV95cUxQcjJ0Vm4wMVk5ajFQVU8zWVFnMjdRaFN4R2JvTGNob21oQmxXTjBTQUJCQXpfaE1pR3huZXRfdnd5a1lRZGVuWjVpNDF4S3dSR1NjVWVRcG1sNU42UTBnTF8?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "중동긴장 재고조에 국제유가 급등 연합뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "[휘발유 2천원 시대] 정부 “원유 80% 확보”…공급망 다변화 - yonhapmidas.com",
+      "press": "yonhapmidas.com",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBXRm1aT0NWejA0Z1BSaHpWTEYteWI3WXYwNV84QTUwT1YtRGNNU1BNbkdpOTV0cUtQeEtDOWh4elp1MTNlbHJDNVYwa2VMUFhYVHVTZDFvbFdZR3dON1Z5VFVOX2hpSGd3VC1VV0JB?oc=5",
+      "published_date": "2026-05-05",
+      "published_at_kst": "2026-05-05 16:00",
+      "snippet": "[휘발유 2천원 시대] 정부 “원유 80% 확보”…공급망 다변화 yonhapmidas.com",
+      "score": 28,
+      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
     }
   ],

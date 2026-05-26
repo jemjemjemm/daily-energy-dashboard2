@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-22",
-  "collected_at": "2026-05-26 17:10:23 KST",
+  "collected_at": "2026-05-26 17:18:18 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",

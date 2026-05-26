@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 4일 (월)",
     "previous_day_label": "4/30",
     "today_label": "5/4",
-    "generated_at": "2026-05-26 17:09 KST",
+    "generated_at": "2026-05-26 17:17 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1529,7 +1529,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 17:09:25 KST",
+      "merged_at": "2026-05-26 17:17:20 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
