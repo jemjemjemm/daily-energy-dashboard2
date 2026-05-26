@@ -1,353 +1,316 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="format-detection" content="telephone=no" />
-  <title>유가 동향 Dashboard</title>
-  <style>
-    :root {
-      --bg:#F4F5F7; --card:#fff; --ink:#172033; --muted:#6B7280; --line:#E5E7EB;
-      --navy:#0A2444; --blue:#1A6FD4; --blue-soft:#EAF3FF; --shadow:0 8px 24px rgba(15,23,42,.08);
-    }
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-    body{margin:0;padding:14px;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;font-size:14px;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
-    .app{max-width:1080px;margin:0 auto}
-    .hero{background:linear-gradient(135deg,#0A2444,#153D69);color:#fff;border-radius:18px;padding:20px 18px;box-shadow:var(--shadow)}
-    .hero-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-    .title{font-size:24px;font-weight:850;letter-spacing:-.4px}
-    .subtitle{margin-top:4px;color:rgba(255,255,255,.76);font-size:13px}
-    .badge{flex-shrink:0;border-radius:999px;background:rgba(255,255,255,.13);padding:5px 10px;font-size:11px}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
-    .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px}
-    .stat-label{color:rgba(255,255,255,.68);font-size:11px}
-    .stat-value{margin-top:2px;font-weight:800;font-size:15px}
-    .warning{display:none;margin-top:10px;border-radius:12px;background:#FFF7ED;border:1px solid #FED7AA;color:#9A3412;padding:10px 12px;font-size:12px}
-    .layout{display:grid;grid-template-columns:380px 1fr;gap:12px;margin-top:12px}
-    .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
-    .panel-head{padding:13px 15px;background:#F8FAFC;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .panel-title{font-weight:850;font-size:14px}
-    .panel-sub{color:var(--muted);font-size:11px;margin-top:2px}
-    .calendar-nav{display:flex;align-items:center;gap:8px}
-    .nav-btn{border:1px solid var(--line);background:#fff;border-radius:9px;width:32px;height:32px;font-size:18px;cursor:pointer;color:var(--ink)}
-    .month-label{min-width:86px;text-align:center;font-weight:850}
-    .calendar{padding:12px}
-    .weekdays,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
-    .weekday{text-align:center;color:#8A94A6;font-size:11px;font-weight:800;padding:4px 0}
-    .day{position:relative;min-height:46px;border:1px solid #EDF0F4;background:#fff;border-radius:10px;padding:6px 5px;cursor:default;color:#C4CAD4}
-    .day.in-month{color:var(--ink)}
-    .day.has-report{cursor:pointer;background:var(--blue-soft);border-color:#B9D8FF}
-    .day.has-report:hover{outline:2px solid rgba(26,111,212,.18)}
-    .day.selected{background:var(--blue);color:#fff;border-color:var(--blue)}
-    .day.today:not(.selected){border-color:#F59E0B}
-    .day-number{font-weight:800;font-size:12px}
-    .dot{position:absolute;bottom:6px;left:50%;width:5px;height:5px;border-radius:50%;background:var(--blue);transform:translateX(-50%)}
-    .selected .dot{background:#fff}
-    .report-list{padding:0 12px 12px;max-height:190px;overflow:auto;border-top:1px solid #F1F3F5}
-    .report-list-title{font-size:11px;color:var(--muted);font-weight:800;margin:10px 0 6px}
-    .report-link{display:inline-block;margin:3px 4px 3px 0;border:1px solid #D8E7FF;background:#F5FAFF;border-radius:999px;padding:4px 8px;font-size:11px;color:#165DAA;text-decoration:none;cursor:pointer}
-    .report-link.selected{background:#1A6FD4;color:#fff;border-color:#1A6FD4}
-    .legend{display:flex;gap:10px;align-items:center;padding:0 12px 12px;color:var(--muted);font-size:11px}
-    .legend-dot{display:inline-block;width:7px;height:7px;background:var(--blue);border-radius:50%;margin-right:4px}
-    .report-panel{min-height:640px}
-    .report-head{padding:13px 15px;background:#F8FAFC;border-bottom:1px solid var(--line);display:flex;gap:12px;justify-content:space-between;align-items:center}
-    .selected-title{font-weight:850}
-    .selected-meta{color:var(--muted);font-size:11px;margin-top:2px}
-    .actions{display:flex;gap:6px;flex-shrink:0}
-    .action-btn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 10px;font-size:12px;color:var(--ink);cursor:pointer;text-decoration:none}
-    .report-frame-wrap{height:720px;background:#F9FAFB}
-    iframe{width:100%;height:100%;border:0;background:#fff;display:block}
-    .empty{padding:80px 20px;text-align:center;color:var(--muted)}
-    .empty-title{font-weight:850;color:var(--ink);margin-bottom:6px}
-    @media(max-width:860px){body{padding:10px}.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.title{font-size:22px}.report-frame-wrap{height:76vh;min-height:560px}}
-  </style>
-</head>
-<body>
-  <main class="app">
-    <section class="hero">
-      <div class="hero-top">
-        <div>
-          <div class="title">유가 동향 Dashboard</div>
-          <div class="subtitle">정유 · 석유화학 · LNG AI 리포트</div>
-        </div>
-        <div class="badge">Calendar Report Viewer</div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-label">등록 리포트 수</div><div class="stat-value" id="totalCount">-</div></div>
-        <div class="stat"><div class="stat-label">최신 기준일</div><div class="stat-value" id="latestDate">-</div></div>
-        <div class="stat"><div class="stat-label">선택 날짜</div><div class="stat-value" id="selectedDate">-</div></div>
-        <div class="stat"><div class="stat-label">목록 업데이트</div><div class="stat-value" id="updatedAt">-</div></div>
-      </div>
-      <div class="warning" id="warningBox"></div>
-    </section>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+fetch_news_candidates.py v2.0
 
-    <section class="layout">
-      <aside class="panel">
-        <div class="panel-head">
-          <div>
-            <div class="panel-title">월별 리포트 캘린더</div>
-            <div class="panel-sub">월 기준으로 리포트가 있는 날짜를 표시합니다.</div>
-          </div>
-          <div class="calendar-nav">
-            <button class="nav-btn" id="prevMonth" type="button">‹</button>
-            <div class="month-label" id="monthLabel">-</div>
-            <button class="nav-btn" id="nextMonth" type="button">›</button>
-          </div>
-        </div>
-        <div class="calendar">
-          <div class="weekdays"><div class="weekday">일</div><div class="weekday">월</div><div class="weekday">화</div><div class="weekday">수</div><div class="weekday">목</div><div class="weekday">금</div><div class="weekday">토</div></div>
-          <div class="days" id="calendarDays"></div>
-        </div>
-        <div class="legend"><span><span class="legend-dot"></span>리포트 있음</span><span>오늘</span></div>
-        <div class="report-list">
-          <div class="report-list-title">리포트 바로가기</div>
-          <div id="reportList"></div>
-        </div>
-      </aside>
+정유·석유화학·LNG Daily Issue Report용 조간 기사 후보를 수집합니다.
 
-      <section class="panel report-panel">
-        <div class="report-head">
-          <div>
-            <div class="selected-title" id="reportTitle">리포트를 선택해 주세요.</div>
-            <div class="selected-meta" id="reportMeta">캘린더 또는 바로가기에서 날짜를 선택해 주세요.</div>
-          </div>
-          <div class="actions">
-            <a class="action-btn" id="openNew" href="#" target="_blank" rel="noopener noreferrer">새 창</a>
-            <button class="action-btn" id="reloadBtn" type="button">새로고침</button>
-          </div>
-        </div>
-        <div class="report-frame-wrap">
-          <div class="empty" id="emptyState"><div class="empty-title">선택된 리포트가 없습니다.</div><div>캘린더에서 날짜를 선택해 주세요.</div></div>
-          <iframe id="reportFrame" title="선택한 날짜의 리포트" style="display:none;"></iframe>
-        </div>
-      </section>
-    </section>
-  </main>
+운영 원칙
+- 조간 기사 0건은 정상 상태가 아니라 수집 실패로 간주합니다.
+- 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
+- 기존에 정상 기사 JSON이 있으면 외부 RSS 일시 실패 시 기존 정상 JSON을 보존합니다.
+- 일정 공지·인사·부고·스포츠·연예성 기사는 제외합니다.
+"""
+from __future__ import annotations
 
-  <script>
-    const state = { reports: [], reportMap: new Map(), availableDates: new Set(), currentMonth: null, selectedDate: null, indexUpdatedAt: '' };
+import argparse
+import email.utils
+import html
+import json
+import re
+import tempfile
+import time
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any, Dict, Iterable, List
+from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 
-    function qs(name){ return new URLSearchParams(window.location.search).get(name); }
-    function normalizeDate(value){ if(!value) return ''; const m=String(value).match(/(\d{4})-(\d{2})-(\d{2})/); return m ? `${m[1]}-${m[2]}-${m[3]}` : ''; }
-    function parseDate(dateText){ const [y,m,d]=dateText.split('-').map(Number); return new Date(y,m-1,d); }
-    function formatShort(dateText){ const d=parseDate(dateText); return Number.isNaN(d.getTime()) ? (dateText||'-') : `${d.getMonth()+1}/${d.getDate()}`; }
-    function formatMonth(dateObj){ return `${dateObj.getFullYear()}년 ${dateObj.getMonth()+1}월`; }
-    function isSameDay(a,b){ return a&&b&&a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate(); }
-    function setWarning(message){ const box=document.getElementById('warningBox'); if(!message){box.style.display='none';box.textContent='';return;} box.style.display='block'; box.textContent=message; }
+import requests
 
-    function normalizeReportItem(item){
-      if(!item || typeof item !== 'object') return null;
-      const date = normalizeDate(item.date || item.report_date || item.reportDate || item.baseDate || item.id || item.fileName || item.file_name || item.url);
-      if(!date) return null;
-      let url = item.url || item.href || item.path || item.file || item.fileName || item.file_name || '';
-      if(!url) url = `reports/${date}.html`;
-      if(!String(url).includes('/')) url = `reports/${url}`;
-      return { date, displayDate:item.displayDate||item.display_date||item.label||formatShort(date), title:item.title||item.report_title||`Daily Issue Report — ${date}`, url, status:item.status||'', fileName:item.fileName||`${date}.html` };
-    }
+KST = timezone(timedelta(hours=9))
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+)
 
-    function normalizeIndex(payload){
-      let reports = [];
-      if(Array.isArray(payload)) reports = payload.map(normalizeReportItem).filter(Boolean);
-      else if(payload && typeof payload === 'object'){
-        if(Array.isArray(payload.reports)) reports = payload.reports.map(normalizeReportItem).filter(Boolean);
-        else if(Array.isArray(payload.items)) reports = payload.items.map(normalizeReportItem).filter(Boolean);
+# 1차: 보고서 핵심 키워드. 2차/3차로 갈수록 넓게 잡되, 이후 점수/금지어 필터는 유지.
+QUERY_TIERS = [
+    (6, [
+        "정유 OR 정유사 OR 유가 OR 원유 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+        "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+        "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 에너지 공급망",
+        "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+        "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+        "산업부 에너지 OR 기후에너지환경부 OR 공정위 석유 OR 국회 에너지",
+    ]),
+    (4, [
+        "에너지 OR 유가 OR 석유 OR 물가 OR 전력 OR 가스",
+        "산업부 OR 공정위 OR 기재부 OR 국회 OR 정부 에너지",
+        "정유사 OR 주유소 OR 휘발유 OR 경유 OR 석유제품",
+        "석유화학 OR 화학제품 OR 나프타 OR 배터리 OR 공급망",
+    ]),
+    (2, [
+        "경제 에너지",
+        "경제 유가",
+        "산업 에너지",
+        "물가 에너지",
+        "정부 물가",
+        "전력 가스",
+    ]),
+]
 
-        if(Array.isArray(payload.availableDates)){
-          const fromDates = payload.availableDates.map(normalizeDate).filter(Boolean).map(date => ({
-            date, displayDate:formatShort(date), title:`Daily Issue Report — ${date}`, url:`reports/${date}.html`, status:'', fileName:`${date}.html`
-          }));
-          reports = reports.concat(fromDates);
+POSITIVE = {
+    "정유":8,"정유사":9,"유가":8,"석유":8,"석유제품":9,"주유소":7,"유류세":7,"휘발유":7,"경유":7,"나프타":8,"항공유":6,
+    "석유화학":9,"화학제품":5,"에틸렌":6,"프로필렌":6,"LNG":8,"천연가스":7,"가스":5,"전력":4,"원전":4,"에너지":5,
+    "원유":8,"브렌트":6,"WTI":6,"두바이유":6,"OPEC":5,"중동":6,"호르무즈":8,"공급망":5,"수급":5,
+    "물가":5,"생산자물가":7,"소비자물가":5,"최고가격제":10,"가격상한":8,"정부":2,"산업부":5,"기후부":4,"공정위":5,"국회":4,"기재부":4,
+    "SK이노베이션":6,"SK에너지":6,"GS칼텍스":6,"에쓰오일":6,"S-OIL":6,"현대오일뱅크":6,"HD현대오일뱅크":6,
+}
+NEGATIVE = {
+    "오늘의 주요일정":80,"주요일정":70,"인사":25,"부고":25,"동정":18,"특징주":12,
+    "야구":20,"축구":20,"농구":20,"연예":20,"맛집":15,"여행":15,"공연":15,"전시":15,
+    "복권":20,"로또":20,"운세":20,"날씨":10,
+}
+TOPIC_RULES = [
+    ("석유 최고가격제·유류세 등 가격 안정 정책", ["최고가격제","유류세","가격상한","주유소","휘발유","경유"]),
+    ("중동 정세와 원유·LNG 수급 리스크", ["중동","호르무즈","원유","LNG","가스","수급","공급망"]),
+    ("정유·석유화학 업계 실적·원가·제품 가격", ["정유","정유사","석유화학","나프타","화학제품","원가"]),
+    ("물가 지표와 에너지 비용 부담", ["물가","생산자물가","소비자물가","에너지","석유제품"]),
+    ("정부·국회 에너지 정책", ["정부","산업부","기후부","공정위","국회","회의","브리핑"]),
+]
+
+
+def parse_args():
+    p = argparse.ArgumentParser(description="조간 기사 후보 수집")
+    p.add_argument("--date", required=True)
+    p.add_argument("--out-dir", default="data/news")
+    p.add_argument("--max-items", type=int, default=12)
+    p.add_argument("--min-required", type=int, default=1, help="최소 필요 기사 수. 미달 시 실패")
+    p.add_argument("--force-refresh", action="store_true")
+    return p.parse_args()
+
+
+def atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=str(path.parent), delete=False, prefix=f".{path.name}.", suffix=".tmp") as tmp:
+        tmp.write(text)
+        tmp_path = Path(tmp.name)
+    tmp_path.replace(path)
+
+
+def clean_text(v: str) -> str:
+    v = html.unescape(v or "")
+    v = re.sub(r"<[^>]+>", " ", v)
+    return re.sub(r"\s+", " ", v).strip()
+
+
+def original_url(link: str) -> str:
+    try:
+        qs = parse_qs(urlparse(link).query)
+        if qs.get("url"):
+            return unquote(qs["url"][0])
+    except Exception:
+        pass
+    return link
+
+
+def parse_pub_date(v: str) -> tuple[str, str]:
+    if not v:
+        return "", ""
+    try:
+        dt = email.utils.parsedate_to_datetime(v)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        k = dt.astimezone(KST)
+        return k.strftime("%Y-%m-%d"), k.strftime("%Y-%m-%d %H:%M")
+    except Exception:
+        return "", ""
+
+
+def score_article(title: str, snippet: str, source: str) -> int:
+    text = f"{title} {snippet} {source}"
+    low = text.lower()
+    score = sum(w for k, w in POSITIVE.items() if k.lower() in low)
+    score -= sum(w for k, w in NEGATIVE.items() if k.lower() in low)
+    if any(k in text for k in ["정유", "석유", "유가", "LNG", "나프타", "주유소", "에너지"]):
+        score += 4
+    if any(k in text for k in ["정부", "국회", "산업부", "공정위", "기재부", "기후"]):
+        score += 2
+    return score
+
+
+def fetch_google_news(query: str, target: datetime, min_score: int) -> list[dict[str, Any]]:
+    after = target.strftime("%Y-%m-%d")
+    before = (target + timedelta(days=1)).strftime("%Y-%m-%d")
+    q = f"({query}) after:{after} before:{before}"
+    url = "https://news.google.com/rss/search?q=" + quote_plus(q) + "&hl=ko&gl=KR&ceid=KR:ko"
+    r = requests.get(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "ko-KR,ko;q=0.9"}, timeout=25)
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+    out: list[dict[str, Any]] = []
+    for item in root.findall("./channel/item"):
+        title = clean_text(item.findtext("title", ""))
+        link = original_url(clean_text(item.findtext("link", "")))
+        pub_date, pub_kst = parse_pub_date(clean_text(item.findtext("pubDate", "")))
+        source_node = item.find("source")
+        source = clean_text(source_node.text if source_node is not None and source_node.text else "")
+        snippet = clean_text(item.findtext("description", ""))
+        if not title or not link:
+            continue
+        score = score_article(title, snippet, source)
+        if score < min_score:
+            continue
+        out.append({
+            "title": title,
+            "press": source or "Google News",
+            "url": link,
+            "published_date": pub_date,
+            "published_at_kst": pub_kst,
+            "snippet": snippet,
+            "score": score,
+            "source_query": query,
+        })
+    return out
+
+
+def is_same_day_morning(item: dict[str, Any], target_date: str) -> bool:
+    pub = item.get("published_at_kst") or ""
+    pub_date = item.get("published_date") or ""
+    # Google RSS가 pubDate를 주지 않는 예외는 당일 검색어 after/before로 이미 제한됐으므로 후보 허용.
+    if not pub and not pub_date:
+        return True
+    if pub_date and pub_date != target_date:
+        return False
+    if not pub:
+        return pub_date == target_date
+    if not pub.startswith(target_date):
+        return False
+    try:
+        h, m = map(int, pub.split()[1].split(":"))
+        return 0 <= h * 60 + m <= 11 * 60 + 30
+    except Exception:
+        return True
+
+
+def dedupe(items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen = set()
+    out = []
+    for it in sorted(items, key=lambda x: int(x.get("score", 0)), reverse=True):
+        title_key = re.sub(r"\s+", "", it.get("title", "").lower())[:90]
+        domain = urlparse(it.get("url", "")).netloc.lower()
+        key = (title_key, domain)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(it)
+    return out
+
+
+def infer_topics(items: list[dict[str, Any]]) -> list[str]:
+    text = " ".join(f"{i.get('title','')} {i.get('snippet','')}" for i in items)
+    topics = []
+    for label, keys in TOPIC_RULES:
+        if any(k in text for k in keys):
+            topics.append(label)
+    return topics[:4]
+
+
+def build_summary(topics: list[str], items: list[dict[str, Any]]) -> str:
+    if topics:
+        return "주요 매체는 " + ", ".join(topics) + " 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+    titles = ", ".join(i.get("title", "") for i in items[:3])
+    return f"정유·석유화학·LNG 관련 조간 기사 후보로 {titles} 등이 수집됐습니다."
+
+
+def read_existing_valid(path: Path) -> dict[str, Any] | None:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    arts = data.get("articles", []) if isinstance(data.get("articles"), list) else []
+    valid = [a for a in arts if isinstance(a, dict) and a.get("title") and a.get("url")]
+    if valid:
+        data["articles"] = valid
+        return data
+    return None
+
+
+def main() -> int:
+    a = parse_args()
+    target = datetime.strptime(a.date, "%Y-%m-%d").replace(tzinfo=KST)
+    out_path = Path(a.out_dir) / f"{a.date}.json"
+
+    existing = read_existing_valid(out_path) if out_path.exists() else None
+    if existing and not a.force_refresh:
+        print(f"[OK] 기존 정상 뉴스 후보 JSON 재사용: {out_path} / articles={len(existing.get('articles', []))}")
+        return 0
+
+    collected: list[dict[str, Any]] = []
+    errors: list[str] = []
+    selected: list[dict[str, Any]] = []
+    used_tier = ""
+
+    for tier_idx, (min_score, queries) in enumerate(QUERY_TIERS, 1):
+        for q in queries:
+            try:
+                collected.extend(fetch_google_news(q, target, min_score=min_score))
+                time.sleep(0.2)
+            except Exception as e:
+                errors.append(f"tier{tier_idx} {q}: {e}")
+        candidates = dedupe(collected)
+        morning = [i for i in candidates if is_same_day_morning(i, a.date)]
+        if len(morning) >= a.min_required:
+            selected = morning[:a.max_items]
+            used_tier = f"tier{tier_idx}"
+            break
+
+    if len(selected) < a.min_required:
+        # 외부 RSS 일시 실패라면 기존 정상 데이터를 보존하고 통과. 없으면 실패시켜 잘못된 리포트 배포를 막음.
+        if existing:
+            print(f"[WARN] 새 뉴스 수집 실패. 기존 정상 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
+            return 0
+        payload = {
+            "schema_version": "2.0",
+            "date": a.date,
+            "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
+            "source": "Google News RSS",
+            "queries": [q for _, qs in QUERY_TIERS for q in qs],
+            "time_window": "00:00~11:30 KST",
+            "summary": "",
+            "topics": [],
+            "articles": [],
+            "errors": errors + [f"기사 후보 {len(selected)}건: 최소 {a.min_required}건 미달"],
+            "success": False,
         }
-        state.indexUpdatedAt = payload.generatedAt || payload.generated_at || payload.updatedAt || payload.updated_at || '';
-      }
-      const map = new Map();
-      for(const item of reports) map.set(item.date, item);
-      reports = Array.from(map.values()).sort((a,b)=>a.date.localeCompare(b.date));
-      setReports(reports);
+        atomic_write_json(out_path, payload)
+        print(f"[ERROR] 조간 기사 후보 수집 실패: {out_path} / articles=0")
+        if errors:
+            print("[ERROR]", " | ".join(errors[:5]))
+        return 2
+
+    topics = infer_topics(selected)
+    payload = {
+        "schema_version": "2.0",
+        "date": a.date,
+        "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
+        "source": "Google News RSS",
+        "queries": [q for _, qs in QUERY_TIERS for q in qs],
+        "time_window": "00:00~11:30 KST",
+        "summary": build_summary(topics, selected),
+        "topics": topics,
+        "articles": selected,
+        "errors": errors,
+        "success": True,
+        "used_tier": used_tier,
     }
+    atomic_write_json(out_path, payload)
+    print(f"[OK] 뉴스 후보 저장 완료: {out_path} / articles={len(selected)} / {used_tier}")
+    if errors:
+        print("[WARN] 일부 검색 오류:", " | ".join(errors[:3]))
+    return 0
 
-    function setReports(reports){
-      state.reports = reports;
-      state.reportMap = new Map(reports.map(r => [r.date, r]));
-      state.availableDates = new Set(reports.map(r => r.date));
-    }
 
-    async function fileLooksValidReport(url){
-      try{
-        const res = await fetch(`${url}?probe=${Date.now()}`, { method:'GET', cache:'no-store' });
-        if(!res.ok) return false;
-        const html = await res.text();
-        const badPhrases = [
-          '자동 추출된 일정 항목이 없습니다',
-          '본문 구조 확인 및 수동 검수가 필요합니다',
-          '원문 자동 매칭 실패',
-          '주요일정 원문 데이터 미확보',
-          '가격 데이터 중심 리포트',
-          '정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다',
-          '자동 수집된 대표 기사 없음',
-          '대표 기사 미확인',
-          '기준일 조간 기준 주요 보도 없음',
-          '기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인',
-          '일정 관련성 평가는',
-          'A 직접',
-          'B 간접',
-          'C 참고',
-          '세이프타임즈'
-        ];
-        if(badPhrases.some(phrase => html.includes(phrase))) return false;
-        return html.includes('Daily Issue Report')
-          && html.includes('조간 신문 트렌드')
-          && html.includes('news-item')
-          && html.includes('유가 동향');
-      }catch(e){ return false; }
-    }
-
-    function dateRange(start, end){
-      const out=[]; let d=parseDate(start); const e=parseDate(end);
-      while(d<=e){
-        const text=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        if(d.getDay()!==0 && d.getDay()!==6) out.push(text);
-        d.setDate(d.getDate()+1);
-      }
-      return out;
-    }
-
-    async function fallbackProbeReports(){
-      // report-index.json이 깨졌을 때만 쓰는 비상 복구.
-      // index가 깨져도 구양식·fallback HTML을 다시 노출하지 않도록 HTML 본문까지 검증한다.
-      const requested = normalizeDate(qs('date'));
-      const today = new Date();
-      const fallbackEnd = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
-      const minEnd = parseDate('2026-05-31');
-      const endDate = fallbackEnd > minEnd ? fallbackEnd : minEnd;
-      const endText = `${endDate.getFullYear()}-${String(endDate.getMonth()+1).padStart(2,'0')}-${String(endDate.getDate()).padStart(2,'0')}`;
-      const candidates = dateRange('2026-05-01', endText);
-      if(requested && requested >= '2026-05-01' && !candidates.includes(requested)) candidates.push(requested);
-
-      const checks = await Promise.all(candidates.map(async date => {
-        const url = `reports/${date}.html`;
-        const ok = await fileLooksValidReport(url);
-        return ok ? { date, displayDate:formatShort(date), title:`Daily Issue Report — ${date}`, url, status:'', fileName:`${date}.html` } : null;
-      }));
-      const reports = checks.filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date));
-      setReports(reports);
-      state.indexUpdatedAt = '파일 직접 확인';
-    }
-
-    async function loadIndex(){
-      let indexOk = false;
-      let indexError = '';
-      try{
-        const response = await fetch(`report-index.json?ts=${Date.now()}`, { cache:'no-store' });
-        if(!response.ok) throw new Error(`HTTP ${response.status}`);
-        const payload = await response.json();
-        normalizeIndex(payload);
-        indexOk = state.reports.length > 0;
-      }catch(error){
-        indexError = error.message || String(error);
-      }
-
-      // 핵심: index가 실패했거나 5개 이하로 비정상적으로 적으면 실제 HTML 파일을 직접 찾아서 복구.
-      if(!indexOk || state.reports.length <= 5){
-        await fallbackProbeReports();
-        if(state.reports.length > 0){
-          setWarning(indexOk ? 'report-index.json 목록이 일부만 보여 실제 HTML 파일을 직접 확인해 복구했습니다.' : `report-index.json 로딩 실패(${indexError}). HTML 파일 직접 확인으로 복구했습니다.`);
-        }
-      }
-
-      if(state.reports.length === 0) throw new Error('표시 가능한 리포트 HTML을 찾지 못했습니다.');
-
-      const latest = state.reports[state.reports.length - 1];
-      const requested = normalizeDate(qs('date'));
-      const selected = requested && state.reportMap.has(requested) ? requested : latest.date;
-
-      state.selectedDate = selected;
-      const sd = parseDate(selected);
-      state.currentMonth = new Date(sd.getFullYear(), sd.getMonth(), 1);
-      updateStats(); renderCalendar(); renderReportList(); selectDate(selected, { replaceUrl:false });
-    }
-
-    function updateStats(){
-      const latest = state.reports[state.reports.length - 1];
-      document.getElementById('totalCount').textContent = String(state.reports.length);
-      document.getElementById('latestDate').textContent = latest ? formatShort(latest.date) : '-';
-      document.getElementById('selectedDate').textContent = state.selectedDate ? formatShort(state.selectedDate) : '-';
-      document.getElementById('updatedAt').textContent = state.indexUpdatedAt ? String(state.indexUpdatedAt).split(' ')[0] : '-';
-    }
-
-    function renderCalendar(){
-      const container=document.getElementById('calendarDays'); container.innerHTML='';
-      const year=state.currentMonth.getFullYear(); const month=state.currentMonth.getMonth();
-      document.getElementById('monthLabel').textContent=formatMonth(state.currentMonth);
-      const firstDay=new Date(year,month,1); const start=new Date(year,month,1-firstDay.getDay()); const today=new Date();
-
-      for(let i=0;i<42;i++){
-        const d=new Date(start); d.setDate(start.getDate()+i);
-        const dateText=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        const day=document.createElement('button'); day.type='button'; day.className='day';
-        if(d.getMonth()===month) day.classList.add('in-month');
-        if(state.availableDates.has(dateText)) day.classList.add('has-report');
-        if(state.selectedDate===dateText) day.classList.add('selected');
-        if(isSameDay(d,today)) day.classList.add('today');
-        day.innerHTML=`<div class="day-number">${d.getDate()}</div>${state.availableDates.has(dateText)?'<span class="dot"></span>':''}`;
-        if(state.availableDates.has(dateText)) day.addEventListener('click',()=>selectDate(dateText));
-        container.appendChild(day);
-      }
-    }
-
-    function renderReportList(){
-      const list=document.getElementById('reportList');
-      list.innerHTML='';
-      const monthReports=state.reports.filter(r=>{
-        if(!state.currentMonth) return true;
-        const d=parseDate(r.date);
-        return d.getFullYear()===state.currentMonth.getFullYear() && d.getMonth()===state.currentMonth.getMonth();
-      });
-      const source = monthReports.length ? monthReports : state.reports;
-      for(const r of source){
-        const a=document.createElement('a');
-        a.href='javascript:void(0)';
-        a.className='report-link' + (r.date===state.selectedDate ? ' selected' : '');
-        a.textContent=formatShort(r.date);
-        a.addEventListener('click',()=>selectDate(r.date));
-        list.appendChild(a);
-      }
-    }
-
-    function selectDate(dateText, options={}){
-      const report=state.reportMap.get(dateText);
-      if(!report){ setWarning(`${dateText} 리포트를 찾지 못했습니다.`); return; }
-      state.selectedDate=dateText; updateStats();
-      const d=parseDate(dateText); state.currentMonth=new Date(d.getFullYear(),d.getMonth(),1);
-      renderCalendar(); renderReportList();
-
-      document.getElementById('reportTitle').textContent=report.title || `Daily Issue Report — ${dateText}`;
-      document.getElementById('reportMeta').textContent=`${dateText} · ${report.url}`;
-      const frame=document.getElementById('reportFrame'); const empty=document.getElementById('emptyState');
-      frame.src=`${report.url}${report.url.includes('?')?'&':'?'}ts=${Date.now()}`;
-      frame.style.display='block'; empty.style.display='none';
-      document.getElementById('openNew').href=report.url;
-
-      if(options.replaceUrl!==false){
-        const url=new URL(window.location.href);
-        url.searchParams.set('date',dateText);
-        window.history.replaceState({},'',url.toString());
-      }
-    }
-
-    document.getElementById('prevMonth').addEventListener('click',()=>{ state.currentMonth=new Date(state.currentMonth.getFullYear(),state.currentMonth.getMonth()-1,1); renderCalendar(); renderReportList(); });
-    document.getElementById('nextMonth').addEventListener('click',()=>{ state.currentMonth=new Date(state.currentMonth.getFullYear(),state.currentMonth.getMonth()+1,1); renderCalendar(); renderReportList(); });
-    document.getElementById('reloadBtn').addEventListener('click',()=>{ if(state.selectedDate) selectDate(state.selectedDate,{replaceUrl:false}); });
-
-    loadIndex().catch(error=>{
-      console.error(error);
-      setWarning(`대시보드를 불러오지 못했습니다. ${error.message}`);
-      document.getElementById('totalCount').textContent='-';
-      document.getElementById('latestDate').textContent='-';
-      document.getElementById('selectedDate').textContent='-';
-      document.getElementById('updatedAt').textContent='-';
-    });
-  </script>
-</body>
-</html>
+if __name__ == "__main__":
+    raise SystemExit(main())
