@@ -116,13 +116,24 @@ jobs:
             --start "$DATE_FROM" \
             --end "$DATE_TO" \
             --skip-weekends \
+            --skip-korean-holidays \
             --report-dir data/reports \
+            --schedule-dir data/schedules \
             --price-dir data/prices \
             --history data/prices/history.json \
             --html-dir docs/reports \
             --index-out docs/report-index.json \
             --base-report report_sample.json \
-            --chart-months 2
+            --chart-months 2 \
+            --max-pages 80
+
+      - name: Validate report source separation for range
+        if: env.RUN_MODE == 'range'
+        run: |
+          python scripts/validate_report_sources.py \
+            --start "$DATE_FROM" \
+            --end "$DATE_TO" \
+            --report-dir data/reports
 
       - name: Try Fetch SafeTimes schedule
         if: env.RUN_MODE == 'single'
@@ -132,8 +143,7 @@ jobs:
             --date "$TARGET_DATE" \
             --out-dir data/schedules \
             --max-retries 1 \
-            --retry-delay 10 \
-            --force-refresh
+            --retry-delay 10
 
       - name: Try Fetch previous SafeTimes schedule
         if: env.RUN_MODE == 'single'
