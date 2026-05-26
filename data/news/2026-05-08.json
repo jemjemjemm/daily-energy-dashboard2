@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-08",
-  "collected_at": "2026-05-26 15:14:33 KST",
+  "collected_at": "2026-05-26 15:42:30 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,13 +51,13 @@
   ],
   "articles": [
     {
-      "title": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 - v.daum.net",
+      "title": "석유 최고가 또 동결…국제유가 불안에도 \"소비자물가 고려\" - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE44eGdoYldESTlrNVZ4cEtBekViN0o4N2ZWdHd1UkNYSXlBNkgwY1FGX1U2aFhpay1CRkFwYjYwZU5Sd0xLM0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1lMlJGTElaaUtaRXpmdUJ4NjNpRndPeGRQUnFLMXhBNThLbE4xQnFkWUpocDN4X1FwdWFoZVNCRkx3eVZTWERDa2l1VkI1Ujg?oc=5",
       "published_date": "2026-05-07",
       "published_at_kst": "2026-05-07 16:00",
-      "snippet": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 v.daum.net",
-      "score": 41,
+      "snippet": "석유 최고가 또 동결…국제유가 불안에도 \"소비자물가 고려\" v.daum.net",
+      "score": 40,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },

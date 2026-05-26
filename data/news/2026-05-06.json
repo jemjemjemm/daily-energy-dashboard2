@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-06",
-  "collected_at": "2026-05-26 15:14:23 KST",
+  "collected_at": "2026-05-26 15:42:21 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,17 +51,6 @@
   ],
   "articles": [
     {
-      "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3N0V2WnNHMXU2WEc1emRtSkdaWXp6ZHF2UXJvcHNWN0FTVjlEVmdHeHJ6R2tUd0VrSWNJd2UzOUtuV2pKS3Rvc2pfOXZyZzlKVkt5ZVZEZnZJNU3SAWBBVV95cUxONDZxby00V25mbndZbWJiUF9CQ0xkdWhjZ01kOWM1MUlpVS1QcFVjQmRiRnBNQ2JvOXVVb1Y3c3ltWVNQZmZiWEE3ZjY0VEVCcFBYMDRfeTlHMV9wb204WU8?oc=5",
-      "published_date": "2026-05-05",
-      "published_at_kst": "2026-05-05 16:00",
-      "snippet": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ 연합뉴스",
-      "score": 41,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.8%↑(종합) - 연합뉴스",
       "press": "연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2QlNhYlFNRlYxSzkxV2lYcmR6RWVSWnl0dHppZUE3NHZ2dWlDMGpKbmpyalYwUnNmWVl0T29SVmltWkRFR241MW5wWEppQ3FVS0NUSTFqWlh0WTTSAWBBVV95cUxOTUZ4RFhEV0N5ZG9yYTlEVy04WF9ld0dKOGotTngydURKcElPWXc5VHZwOF85ajVKM2s4N3NCeE15RlluUFlfNWZnYXRWVFZRbWRDbTd2aUhmR3FNeno5Qk4?oc=5",
@@ -91,17 +80,6 @@
       "published_at_kst": "2026-05-06 09:44",
       "snippet": "지난달 소비자물가 1년 9개월 만 최대 상승…국제유가 영향 knn.co.kr",
       "score": 32,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "호르무즈 긴장 재고조 국제유가 5% 급등...트럼프 \"유가 급락할 것\" - YTN",
-      "press": "YTN",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBNTUJkbVpIQldwZGd2dVJBSUtlN01uVzRRZzVneXhEa2FVQ3FMR0RkeVd1clFGbnBJUDVqdno4UlMtdmxGOGFuaE5wZjFQUExrSGktRDJEMGFXVDFUdFE?oc=5",
-      "published_date": "2026-05-05",
-      "published_at_kst": "2026-05-05 16:00",
-      "snippet": "호르무즈 긴장 재고조 국제유가 5% 급등...트럼프 \"유가 급락할 것\" YTN",
-      "score": 30,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
@@ -150,6 +128,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "[중동칼럼] 호르무즈 해협의 봉쇄와 글로벌 에너지 위기 상황 - 브랜드경제신문",
+      "press": "브랜드경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE84cHM2d1NNX20wM1VZbTRrcTBweF9kZDNGVjZHOGhXTkZzMktGX1pKakR5VmI5WXZSazUzdjVvY0lFaEdMX0tJbWFfa0o?oc=5",
+      "published_date": "2026-05-06",
+      "published_at_kst": "2026-05-06 06:12",
+      "snippet": "[중동칼럼] 호르무즈 해협의 봉쇄와 글로벌 에너지 위기 상황 브랜드경제신문",
+      "score": 23,
+      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "석유 최고가격제 뒤 남은 숙제…손실 보전 해법 '안갯속' - 뉴시스",
       "press": "뉴시스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxZ3pWbUxIRnRNVm1NTS0zeFk2NGRvY0VpdzdvQnZBUjE0c09zWWVvTEJ2ODdvT0FLV0NMUUY5UThMVW5PZld1U3JwOUxhem56QjBRaFRVU3IyRVRkbmRqMtIBeEFVX3lxTE5lUXQxcnNCdFNsaWNpQmRvLWNoT2JfN21ubXIyeUtaaWYxeV9tSF9qeElRbEpmY01RTDVYVXFISW1EWDhQX0h2VzZPa1oyeFBTWC00UVlxc3QtQ25aVmxCTmNhNUw4SUNFR0VLVjNHRHJPVjhta0pvYg?oc=5",
@@ -158,6 +147,17 @@
       "snippet": "석유 최고가격제 뒤 남은 숙제…손실 보전 해법 '안갯속' 뉴시스",
       "score": 22,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "석유화학 재편 용두사미?…울산·여수 ‘게걸음’ 지속 [비즈360] - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1VY1dSMXA4OXpVZXNSekRwYjBmMEZfdlozOHgyNW9TMWh2dExmZHBfQUx3eEVUNjlDVUNodEJ4VVhDZUROS1E?oc=5",
+      "published_date": "2026-05-05",
+      "published_at_kst": "2026-05-05 16:00",
+      "snippet": "석유화학 재편 용두사미?…울산·여수 ‘게걸음’ 지속 [비즈360] v.daum.net",
+      "score": 21,
+      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
     },
     {
@@ -172,12 +172,12 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "석유화학 재편 용두사미?…울산·여수 ‘게걸음’ 지속 [비즈360] - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1VY1dSMXA4OXpVZXNSekRwYjBmMEZfdlozOHgyNW9TMWh2dExmZHBfQUx3eEVUNjlDVUNodEJ4VVhDZUROS1E?oc=5",
+      "title": "울산 석유화학공장서 정전기 불꽃 튀어 화재…노동자 3명 화상 - 뉴스1",
+      "press": "뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBnZmlTeEZzVnFyODdVOWpwM1Z2bldTckFQNkJscmhTbW50ME5naFZ1SDk5OVJCa3lPaW96X0VzTURQTWNWTmx0NUxzSk13LUNPelE?oc=5",
       "published_date": "2026-05-05",
       "published_at_kst": "2026-05-05 16:00",
-      "snippet": "석유화학 재편 용두사미?…울산·여수 ‘게걸음’ 지속 [비즈360] v.daum.net",
+      "snippet": "울산 석유화학공장서 정전기 불꽃 튀어 화재…노동자 3명 화상 뉴스1",
       "score": 21,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 13일 (수)",
     "previous_day_label": "5/12",
     "today_label": "5/13",
-    "generated_at": "2026-05-26 15:14 KST",
+    "generated_at": "2026-05-26 15:42 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1536,7 +1536,7 @@
       {
         "title": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 - v.daum.net",
         "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1VeXVYZUhSZkhxb0pUbzViaWtsOE1vRFJLNmJsWklaQmdxVFMwWUd2bGlVcUFHWndhWWY1end6Mk8zc0daNDN6b2licTlCdjg?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE00djNyZDN3YVdYem5wcjNvYjUtQnlkamxWNWNtV1N6dS1UNFkyc2pUd1RESFdKMjNhdzhtS1E5SHdXcXFKbkE?oc=5",
         "summary": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 v.daum.net.",
         "published_at_kst": "2026-05-12 16:00"
       },
@@ -1666,7 +1666,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 15:14:47 KST",
+      "merged_at": "2026-05-26 15:42:44 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

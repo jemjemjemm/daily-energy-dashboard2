@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-26 15:15:24 KST",
+  "collected_at": "2026-05-26 15:43:19 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -127,6 +127,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBuTDB4bmZGNndtdVh5UHBUWEtCWUIwdGh4R2hMMXR4Y0xTRVN5YzRpVGFhZW52UGMyMjNmajI1NnZsb2UxcUE?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 07:30",
+      "snippet": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 v.daum.net",
+      "score": 36,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 한국경제",
       "press": "한국경제",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB5eEpMYzhZOHV6T3pBYUNCcGZya0pMRGNtWktTbGNUSGdPNnQxa0V2UGNCMXpVa2tNOU9KRk9GZFZuTmYwYlBwaFU2SGJjSkJaenBLZtIBVEFVX3lxTFB5eEpMYzhZOHV6T3pBYUNCcGZya0pMRGNtWktTbGNUSGdPNnQxa0V2UGNCMXpVa2tNOU9KRk9GZFZuTmYwYlBwaFU2SGJjSkJaenBLZg?oc=5",
@@ -166,17 +177,6 @@
       "published_date": "2026-05-26",
       "published_at_kst": "2026-05-26 08:17",
       "snippet": "미·이란 협상 기대감에 국제유가 급락…브렌트유 7% 넘게 하락 v.daum.net",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "미·이란 협상 진전에 국제유가 급락…브렌트유 7% 넘게 떨어져 - BBS불교방송",
-      "press": "BBS불교방송",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE95V1FUUWxMdG96ckxhbE9GS1E4TDFPd3dhZmIyVE5JcGthSmFHVmJXZ1B3SWZPR0daMmRhdWpRb2FPbGE1VU5aTEkyUkhnTFl4bTVuNXU3QWVZaFhBNFJ0cjhWRFZ2S1ZDUXh3?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 09:27",
-      "snippet": "미·이란 협상 진전에 국제유가 급락…브렌트유 7% 넘게 떨어져 BBS불교방송",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"

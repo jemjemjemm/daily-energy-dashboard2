@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-20",
-  "collected_at": "2026-05-26 15:15:10 KST",
+  "collected_at": "2026-05-26 15:43:06 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -94,17 +94,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBZZUtDQXZvTDlTWmdlMHN6RWZtVTNMbnZfUlVHdDB0WW5mcUZGa3lBMkhEVXRfc2pWT1dOam85ZkR3OUxXRjIwV20tVERLUkk?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 18:51",
-      "snippet": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 v.daum.net",
-      "score": 37,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 - 경기일보",
       "press": "경기일보",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIUnhVbUVwMWN6OFdpaUxxdlNDbGZHdmdoNEpVMmZzb2dPSkg4cWZRU1ItdGR0X0RVTmdTRmYyNEViZEU0M0FaLWk3Szc0bTdBeUhCNXFDVVlnTlE?oc=5",
@@ -177,6 +166,17 @@
       "published_date": "2026-05-19",
       "published_at_kst": "2026-05-19 22:02",
       "snippet": "한일, 원유·석유제품 스와프 체계 구축 추진…\"공급망 위기 공동대응\" 부산일보",
+      "score": 34,
+      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 - 파이낸셜뉴스",
+      "press": "파이낸셜뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5VUlQyak9IbEcxT3VubGU4ZVFWSXRvcFB5cGdpSXF0aHJCQlJkQ1N6dmdFejIzcVJmWFotclpONWhxbGlGU25WMzhDS3dXZXV4SGxrRnlaQjZFQdIBXkFVX3lxTFBrNzZNUXpJYW9ha1hfQmhIeEVSYS1TSDFVaW1TV09MTk9EOERhcGJtODMyQ0FhZXc4NFEyRG11a2tCc20xYTJwR3oyRHRDQ2RiM2RUbmpKanh0clJlM2c?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 20:36",
+      "snippet": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 파이낸셜뉴스",
       "score": 34,
       "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"

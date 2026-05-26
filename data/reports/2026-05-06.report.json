@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 6일 (수)",
     "previous_day_label": "5/4",
     "today_label": "5/6",
-    "generated_at": "2026-05-26 15:14 KST",
+    "generated_at": "2026-05-26 15:42 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1448,18 +1448,11 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "연합뉴스는 5/5 16:00 입력 기사에서 중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ 연합뉴스.",
       "연합뉴스는 5/5 16:00 입력 기사에서 중동 긴장 재고조에 국제유가 급등…브렌트유 5.8%↑(종합) 연합뉴스.",
-      "yonhapmidas.com는 5/5 16:00 입력 기사에서 [휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com."
+      "yonhapmidas.com는 5/5 16:00 입력 기사에서 [휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com.",
+      "knn.co.kr는 5/6 09:44 입력 기사에서 지난달 소비자물가 1년 9개월 만 최대 상승…국제유가 영향 knn.co.kr."
     ],
     "articles": [
-      {
-        "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ - 연합뉴스",
-        "press": "연합뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3N0V2WnNHMXU2WEc1emRtSkdaWXp6ZHF2UXJvcHNWN0FTVjlEVmdHeHJ6R2tUd0VrSWNJd2UzOUtuV2pKS3Rvc2pfOXZyZzlKVkt5ZVZEZnZJNU3SAWBBVV95cUxONDZxby00V25mbndZbWJiUF9CQ0xkdWhjZ01kOWM1MUlpVS1QcFVjQmRiRnBNQ2JvOXVVb1Y3c3ltWVNQZmZiWEE3ZjY0VEVCcFBYMDRfeTlHMV9wb204WU8?oc=5",
-        "summary": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ 연합뉴스.",
-        "published_at_kst": "2026-05-05 16:00"
-      },
       {
         "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.8%↑(종합) - 연합뉴스",
         "press": "연합뉴스",
@@ -1473,6 +1466,13 @@
         "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tdFhMOVl1Ykk2U3Q4UTFQbEp0bEtSZzdpWGluaGlUTHZKU2dsdUYzdThRNkNEcEc4QmQyXzh4U2RTekpTTlZHTlh6bXpmeGJWMFd4VnNjVHlfUmt6NThvR1RYYUJiZnJldjJWVGJB?oc=5",
         "summary": "[휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com.",
         "published_at_kst": "2026-05-05 16:00"
+      },
+      {
+        "title": "지난달 소비자물가 1년 9개월 만 최대 상승…국제유가 영향 - knn.co.kr",
+        "press": "knn.co.kr",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBlMGwwclZLWVJBNFdURG5GTTVtNnFPaXpXb3hHdFlhaUJvQ29kWUdvaHBNRXRQS2Nwc2tNVmRXTmlVai03ejFobk9NNGxVUG5hVGFFZ0ROdw?oc=5",
+        "summary": "지난달 소비자물가 1년 9개월 만 최대 상승…국제유가 영향 knn.co.kr.",
+        "published_at_kst": "2026-05-06 09:44"
       }
     ],
     "source": "Google News RSS",
@@ -1596,7 +1596,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 15:14:23 KST",
+      "merged_at": "2026-05-26 15:42:22 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

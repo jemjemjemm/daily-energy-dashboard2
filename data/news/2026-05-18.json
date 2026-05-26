@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-18",
-  "collected_at": "2026-05-26 15:15:01 KST",
+  "collected_at": "2026-05-26 15:42:57 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -73,14 +73,14 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "국제유가, 미·이란 협상 교착에 상승 지속…브렌트유 111달러 근접 - 블루밍비트",
-      "press": "블루밍비트",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB2OFVKRndLa3ZqSlBkYjNqUEx2amJhWTFuY0Q1cDFOT0tEWk5lU0JXT2NfMjVzRGlFRlhKUjg1TnJnbEhoVldvb3BDSXRqS1Fr?oc=5",
-      "published_date": "2026-05-18",
-      "published_at_kst": "2026-05-18 08:00",
-      "snippet": "국제유가, 미·이란 협상 교착에 상승 지속…브렌트유 111달러 근접 블루밍비트",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "title": "유가 하락에 수입물가 꺾였지만...생산자물가 '환율' 변수 남아 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RaUhFMy04Mk9OMWkzUk4waDhXQXl4YkxGMWM0OUluWUk4cURVX2FUV2JJdUFfM2J0TmlYcHhSZl9wQ1g5UmwtdFhqcWloclU?oc=5",
+      "published_date": "2026-05-17",
+      "published_at_kst": "2026-05-17 16:00",
+      "snippet": "유가 하락에 수입물가 꺾였지만...생산자물가 '환율' 변수 남아 v.daum.net",
+      "score": 29,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {
@@ -103,17 +103,6 @@
       "snippet": "중동 전쟁으로 실적 좋아진 석유화학… 채권단 지원 속도 조절 - 조선비즈 Chosunbiz",
       "score": 27,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "가장 저렴해진 두바이 유가…글로벌 석유시장 무슨 일? - 에너지경제신문",
-      "press": "에너지경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE40RFhUVE1UN25KRkRDdDlzUFQyRmVUekt1alFfNm9kTW94OXQtbG5uaWJqSUI3RGRJRU1zNXloMzdnNGx2dldZZnVlbTVFbHc5clZQUWNHSmxOYUE?oc=5",
-      "published_date": "2026-05-18",
-      "published_at_kst": "2026-05-18 08:53",
-      "snippet": "가장 저렴해진 두바이 유가…글로벌 석유시장 무슨 일? 에너지경제신문",
-      "score": 25,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -180,6 +169,17 @@
       "snippet": "국제유가 치솟자…韓 포함 16개국 ‘가격 상한제’ 꺼내들었다 v.daum.net",
       "score": 22,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "SK에너지, 자영 주유소 ‘파격 지원’…간판 하나 사이에 희비 교차 - 이코노미톡뉴스",
+      "press": "이코노미톡뉴스",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tOTRKUjlIcEtHQ3FOV3IyUVlFYmJ3MnFFc3BTUnQ5VkZjeERKWmNxTWVjMjZJNkRtcmVyeWdVQTNodmo3R2FPTld3MzhGWEQxUGh6ajZyMFRUY2s1Tm45VXNscFZ3ZmxmU2FMYw?oc=5",
+      "published_date": "2026-05-18",
+      "published_at_kst": "2026-05-18 07:22",
+      "snippet": "SK에너지, 자영 주유소 ‘파격 지원’…간판 하나 사이에 희비 교차 이코노미톡뉴스",
+      "score": 22,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     }
   ],

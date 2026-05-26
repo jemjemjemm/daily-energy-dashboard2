@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-12",
-  "collected_at": "2026-05-26 15:14:42 KST",
+  "collected_at": "2026-05-26 15:42:39 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -150,6 +150,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "[컨콜] 에쓰오일 \"석유 최고가격제로 상당한 규모 손실…정부 보상 절차 밟을 것\" - 데일리안",
+      "press": "데일리안",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPM0tmZ0FWNUtQaTNVS0x1bkp3SC1tbktXbDFaVmdlVlV1LXJNNmd2QzdyZUNLeVVqYW5aSEdhRlM1dFZVUXlLZ3ZEaGlYMWw1d2h6OFQ1N0tXd254UVZJenZTSElIVTlpM1JVRlpDNi1hTDludDVISHFTUUl2UzZWeVZlVk5qcjBneHo3WFEydlRPMkVpek9DNTNuclpoZUp6OVNNOWJpRy1xYkZMcjEzQzdKV2t6VUVtVl9JMTg0YzBtUHB5MW1lWVZtMmdpN19JcVIydk5kSElPLXozTWdqLVRSNXd4cGRKdmx5a3VmM2FaSnRIY0V4bU9aOG5GeDJrVEFNUkFaM2xOLUFiTG9VTjZvQ2cyTEhUenE4OHpUZmJ0NzjSAaYCQVVfeXFMT1JxbGVPeXRLbG5hd2w4MDZKRUt2cHZkNk53bzNoeUVtOGNsbW92TkNZb0JXaDNuVkFORzR2bUFKQ0dLWnU4U2o0ZzFFMnhocjRsa3cycHd6MGZubHpZYks3VTkzdWtwNy1hR3FBWTRNQmNQS2hITXFnS2dOR3BvWHNFbmhLSWQwTm5vRlp5cWxxWXpTTEtSZjFqQkNubWowVmVrczhBX1loZUxhTjNWZEthSmYxU1NpNkhtM3ZVbndiNFBxekd6YUxST1BfUEZaOThIQ1A3aC1kZ3kwcExIRHkxMGZKeWp4X2s4b3IyMlN1MXVlbkNDWjlOZUpQMmUzcUpxd2U4UVllVzFmR0VnWW9iZGxsTEhXMG9DMHJiV0w1ZVZhdkRB?oc=5",
+      "published_date": "2026-05-11",
+      "published_at_kst": "2026-05-11 16:00",
+      "snippet": "[컨콜] 에쓰오일 \"석유 최고가격제로 상당한 규모 손실…정부 보상 절차 밟을 것\" 데일리안",
+      "score": 32,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "관세청, 석유화학 원료 수급 대응 총력...\"공급망 불안 최소화\" - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBteW9wT2l1Z3N2Skcwa0kzcG1PcWthaVBhTzdCS2FtSk53VEQxOXZUTlFDZGZUSHpaelNrMmprV0ctcjZGOEVMazBuQnNqMkU?oc=5",
@@ -169,17 +180,6 @@
       "snippet": "관세청, 석유화학 원료 수급 대응 총력...공급망 불안 최소화 아주경제",
       "score": 31,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "문화체육관광부, 5차 석유제품 최고가격제 동결(5.8.~21.) - 케이에스피뉴스",
-      "press": "케이에스피뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9wcFdDTGw2dF9SNVNsMVJZMUdnbHNSQ1JnckNSYlEwLW5KV0ZGU1ZXRGNVaHdxVG1YQ1RYOG1Kdjd4aGZJYmc?oc=5",
-      "published_date": "2026-05-11",
-      "published_at_kst": "2026-05-11 16:00",
-      "snippet": "문화체육관광부, 5차 석유제품 최고가격제 동결(5.8.~21.) 케이에스피뉴스",
-      "score": 31,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     }
   ],

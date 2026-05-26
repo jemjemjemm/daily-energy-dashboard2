@@ -1,9 +1,70 @@
 {
-  "schemaVersion": "1.0",
-  "generatedAt": "2026-05-26 15:15:24 KST",
+  "schemaVersion": "1.1",
+  "generatedAt": "2026-05-26 15:43:19 KST",
   "count": 0,
   "latestDate": "",
   "availableDates": [],
-  "warnings": [],
+  "warnings": [
+    {
+      "fileName": "2026-05-04.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-06.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-07.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-08.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-11.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-12.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-13.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-14.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-15.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-18.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-19.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-20.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-21.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-22.html",
+      "reason": "missing_required_structure"
+    },
+    {
+      "fileName": "2026-05-26.html",
+      "reason": "missing_required_structure"
+    }
+  ],
   "reports": []
 }

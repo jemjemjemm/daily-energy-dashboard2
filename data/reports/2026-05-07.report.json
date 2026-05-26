@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 7일 (목)",
     "previous_day_label": "5/6",
     "today_label": "5/7",
-    "generated_at": "2026-05-26 15:14 KST",
+    "generated_at": "2026-05-26 15:42 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1473,18 +1473,11 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 5조 벌었다지만…속타는 '최고가격제 청구서' v.daum.net.",
       "매일경제는 5/6 16:00 입력 기사에서 정유사 \"팔수록 손해…최고가격제 손실 4조\" 매일경제.",
-      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net."
+      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net.",
+      "v.daum.net는 5/6 16:00 입력 기사에서 구윤철, 성장률 2.0% \"어떻게든 달성\"…고유가 지속 시 석유 최고가격제 이어간다 v.daum.net."
     ],
     "articles": [
-      {
-        "title": "정유사 5조 벌었다지만…속타는 '최고가격제 청구서' - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CY1NSRXA5WGdHTDVNZ3hVVjdYSjJ1TW1RUFlfX1BhYVhhd0pqMmVJNTNRTEZIbWZ3VkllM2xhYmwzUW41dWxURzlCaHh2T2M?oc=5",
-        "summary": "정유사 5조 벌었다지만…속타는 '최고가격제 청구서' v.daum.net.",
-        "published_at_kst": "2026-05-06 16:00"
-      },
       {
         "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - 매일경제",
         "press": "매일경제",
@@ -1497,6 +1490,13 @@
         "press": "v.daum.net",
         "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBIVjVHdjhTWkIxYklBb2E2NUNpZUQ5a1Ezd2lhMWQ2MnNzZnJJTFJlWXVDMVU1Z3Y4aV9odmM2YzVKRnUtQ1E?oc=5",
         "summary": "정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net.",
+        "published_at_kst": "2026-05-06 16:00"
+      },
+      {
+        "title": "구윤철, 성장률 2.0% \"어떻게든 달성\"…고유가 지속 시 석유 최고가격제 이어간다 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE02anlqRnp5RGJOZnItMlhQNWZIcldLMTNWREI3cWJWcEd0Rkp0bXo2bzU4TjNUVFJSR3dLQWZVMWt1N216X0gzTDVOUkJidVUwT3ZOWQ?oc=5",
+        "summary": "구윤철, 성장률 2.0% \"어떻게든 달성\"…고유가 지속 시 석유 최고가격제 이어간다 v.daum.net.",
         "published_at_kst": "2026-05-06 16:00"
       }
     ],
@@ -1618,7 +1618,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 15:14:28 KST",
+      "merged_at": "2026-05-26 15:42:26 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
