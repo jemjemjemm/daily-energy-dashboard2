@@ -1,204 +1,232 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>유가 동향 Dashboard</title>
-  <style>
-    *{box-sizing:border-box}
-    :root{--navy:#0A2444;--blue:#1A6FD4;--bg:#F4F5F7;--border:#E5E7EB;--text:#1A1A1A;--muted:#777}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;font-size:14px;line-height:1.5}
-    .page{max-width:1120px;margin:0 auto;padding:18px}
-    .hero{background:linear-gradient(135deg,#0A2444,#123D6B);color:#fff;border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(10,36,68,.16)}
-    .hero h1{margin:0;font-size:24px;letter-spacing:-.02em}.hero p{margin:6px 0 0;color:rgba(255,255,255,.72);font-size:13px}
-    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
-    .stat{background:#fff;border:1px solid var(--border);border-radius:14px;padding:13px 14px}.stat-label{font-size:11px;color:#888}.stat-value{font-size:18px;font-weight:700;margin-top:3px;color:var(--navy)}
-    .layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:14px;align-items:start}.panel{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px;border-bottom:1px solid var(--border);background:#FAFAFB}.panel-title{font-weight:700;color:var(--navy)}
-    .month-nav{display:flex;align-items:center;gap:8px}.month-nav button,.btn{border:1px solid var(--border);background:#fff;border-radius:9px;padding:7px 9px;font-size:12px;cursor:pointer;color:#333;text-decoration:none}.month-nav button:hover,.btn:hover{background:#F3F6FA}.month-label{min-width:86px;text-align:center;font-weight:700;color:#333}
-    .calendar{padding:12px}.dow,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.dow div{text-align:center;font-size:11px;color:#888;padding:4px 0}.day{height:38px;border:1px solid #EEF0F3;border-radius:10px;background:#fff;color:#AAA;font-size:12px;display:flex;align-items:center;justify-content:center;position:relative}.day.has{color:#111;font-weight:700;cursor:pointer;background:#F7FAFF;border-color:#D7E8FF}.day.has:after{content:'';position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--blue)}.day.active{background:var(--navy);color:#fff;border-color:var(--navy)}.day.today{outline:2px solid rgba(26,111,212,.25)}
-    .legend{display:flex;gap:10px;align-items:center;padding:0 12px 12px;color:#777;font-size:11px}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--blue)}.dot.today{background:transparent;border:2px solid var(--blue)}
-    .quick{padding:12px;border-top:1px solid var(--border)}.quick-title{font-size:12px;font-weight:700;color:#777;margin-bottom:8px}.quick-list{display:flex;flex-direction:column;gap:6px;max-height:220px;overflow:auto}.quick-item{display:flex;justify-content:space-between;gap:8px;align-items:center;text-decoration:none;color:#333;border:1px solid #EEF0F3;border-radius:10px;padding:8px 9px;font-size:12px}.quick-item:hover,.quick-item.active{background:#F7FAFF;border-color:#D7E8FF}.quick-date{font-weight:700;color:var(--navy)}.quick-name{color:#777;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .viewer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--border);background:#fff}.viewer-title{font-weight:700;color:var(--navy)}.viewer-sub{font-size:12px;color:#888;margin-top:2px}.viewer-actions{display:flex;gap:7px;flex-wrap:wrap}.viewer-frame{width:100%;height:calc(100vh - 236px);min-height:680px;border:0;background:#fff}.empty,.error{padding:34px;text-align:center;color:#777}.error strong{color:#B42318}.hidden{display:none!important}
-    @media(max-width:860px){.page{padding:10px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.viewer-frame{height:78vh;min-height:620px}.hero{border-radius:14px}.hero h1{font-size:21px}}
-  </style>
-</head>
-<body>
-  <div class="page">
-    <section class="hero">
-      <h1>유가 동향 Dashboard</h1>
-      <p>정유 · 석유화학 · LNG AI 리포트</p>
-    </section>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Generate docs/report-index.json for the dashboard calendar.
 
-    <section class="stats">
-      <div class="stat"><div class="stat-label">등록 리포트 수</div><div class="stat-value" id="reportCount">-</div></div>
-      <div class="stat"><div class="stat-label">최신 기준일</div><div class="stat-value" id="latestDate">-</div></div>
-      <div class="stat"><div class="stat-label">선택 날짜</div><div class="stat-value" id="selectedDate">-</div></div>
-      <div class="stat"><div class="stat-label">목록 업데이트</div><div class="stat-value" id="generatedAt">-</div></div>
-    </section>
+This script indexes already-rendered HTML reports under docs/reports.
+It accepts both the old report template and the new mobile "Daily 유가 동향" template.
 
-    <section class="layout">
-      <aside class="panel">
-        <div class="panel-head">
-          <div>
-            <div class="panel-title">월별 리포트 캘린더</div>
-            <div style="font-size:11px;color:#888;margin-top:2px">월 기준으로 리포트가 있는 날짜를 표시합니다.</div>
-          </div>
-          <div class="month-nav">
-            <button id="prevMonth" type="button">‹</button>
-            <div class="month-label" id="monthLabel">-</div>
-            <button id="nextMonth" type="button">›</button>
-          </div>
-        </div>
-        <div class="calendar">
-          <div class="dow"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div></div>
-          <div class="grid" id="calendarGrid"></div>
-        </div>
-        <div class="legend"><span><i class="dot"></i> 리포트 있음</span><span><i class="dot today"></i> 오늘</span></div>
-        <div class="quick">
-          <div class="quick-title">리포트 바로가기</div>
-          <div class="quick-list" id="quickList"><div style="color:#999;font-size:12px">리포트를 불러오는 중입니다.</div></div>
-        </div>
-      </aside>
+Operational notes:
+- This file is only responsible for making already-rendered HTML visible in the dashboard.
+- It does not collect schedules/news/prices and does not rewrite report contents.
+- It must remain CLI-compatible with generate_reports_range.py and the GitHub Actions workflow:
+  python scripts/generate_report_index.py --reports-dir docs/reports --out docs/report-index.json
+- argparse abbreviation is disabled so that --out is never ambiguous with --out-dir/--output aliases.
+"""
+from __future__ import annotations
 
-      <main class="panel">
-        <div class="viewer-head">
-          <div>
-            <div class="viewer-title" id="viewerTitle">리포트를 선택해 주세요.</div>
-            <div class="viewer-sub" id="viewerSub">캘린더 또는 바로가기에서 날짜를 선택해 주세요.</div>
-          </div>
-          <div class="viewer-actions">
-            <a class="btn hidden" id="openReport" href="#" target="_blank" rel="noopener">새 창</a>
-            <button class="btn" id="reloadBtn" type="button">새로고침</button>
-          </div>
-        </div>
-        <div class="empty" id="emptyBox">선택된 리포트가 없습니다.<br/>캘린더에서 날짜를 선택해 주세요.</div>
-        <div class="error hidden" id="errorBox"><strong>대시보드를 불러오지 못했습니다.</strong><br/><span id="errorMessage">report-index.json을 확인해 주세요.</span></div>
-        <iframe class="viewer-frame hidden" id="reportFrame" title="Daily 유가 동향 리포트"></iframe>
-      </main>
-    </section>
-  </div>
+import argparse
+import json
+import re
+import tempfile
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+from typing import Any
 
-  <script>
-    const state = { reports: [], byDate: new Map(), availableDates: new Set(), currentMonth: null, selectedDate: null, index: null };
-    const $ = (id) => document.getElementById(id);
-    const todayIso = new Date().toISOString().slice(0,10);
+DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
+TITLE_RE = re.compile(r"<title[^>]*>\s*(.*?)\s*</title>", re.I | re.S)
+HEADER_DATE_RE = re.compile(
+    r'<div[^>]*class=["\'][^"\']*header-date[^"\']*["\'][^>]*>\s*(.*?)\s*</div>',
+    re.I | re.S,
+)
 
-    function fmtDate(dateStr){
-      if(!dateStr) return '-';
-      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr);
-      if(!m) return dateStr;
-      return `${Number(m[2])}/${Number(m[3])}`;
+# Only true fallback/broken-report phrases. Do NOT include normal source labels such as
+# "세이프타임즈", "데이터 없음", "A 직접", "B 간접", "C 참고".
+BAD_HTML_PHRASES = [
+    "자동 추출된 일정 항목이 없습니다",
+    "본문 구조 확인 및 수동 검수가 필요합니다",
+    "원문 자동 매칭 실패",
+    "주요일정 원문 데이터 미확보",
+    "원문 데이터 없음",
+    "가격 데이터 중심 리포트",
+    "가격 중심 자동생성",
+    "Data 없음",
+    "No data",
+    "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다",
+    "조간 기사 후보를 찾지 못했습니다",
+    "자동 수집된 대표 기사 없음",
+    "대표 기사 데이터가 아직 없습니다",
+    "대표 기사 미확인",
+    "기준일 조간 기준 주요 보도 없음",
+    "기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인",
+]
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="캘린더 대시보드용 report-index.json 생성",
+        allow_abbrev=False,
+    )
+    parser.add_argument("--reports-dir", default="docs/reports", help="HTML 리포트 폴더")
+    # Backward/operational compatible output options. generate_reports_range.py uses --out.
+    parser.add_argument("--out", default=None, help="출력 JSON 파일. 기본값 docs/report-index.json")
+    parser.add_argument("--output", default=None, help="--out 별칭")
+    parser.add_argument("--out-dir", default=None, help="호환용 별칭. 파일 경로 또는 폴더 경로 모두 허용")
+    return parser.parse_args()
+
+
+def resolve_out_path(args: argparse.Namespace) -> Path:
+    value = args.out or args.output or args.out_dir or "docs/report-index.json"
+    path = Path(value)
+    if path.suffix.lower() != ".json":
+        path = path / "report-index.json"
+    return path
+
+
+def strip_tags(value: str) -> str:
+    value = re.sub(r"<br\s*/?>", " ", value or "", flags=re.I)
+    value = re.sub(r"<[^>]*>", "", value)
+    value = (
+        value.replace("&amp;", "&")
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("&quot;", '"')
+        .replace("&#x27;", "'")
+        .replace("&#39;", "'")
+    )
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def now_kst_text() -> str:
+    kst = timezone(timedelta(hours=9))
+    return datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S KST")
+
+
+def atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    with tempfile.NamedTemporaryFile(
+        "w",
+        encoding="utf-8",
+        dir=str(path.parent),
+        delete=False,
+        prefix=f".{path.name}.",
+        suffix=".tmp",
+    ) as tmp:
+        tmp.write(text)
+        tmp_path = Path(tmp.name)
+    tmp_path.replace(path)
+
+
+def has_bad_phrase(text: str) -> bool:
+    return any(phrase in text for phrase in BAD_HTML_PHRASES)
+
+
+def has_required_structure(text: str) -> tuple[bool, str]:
+    if not text.strip():
+        return False, "empty_html"
+    if has_bad_phrase(text):
+        return False, "bad_phrase"
+
+    # Accept both old and new report templates.
+    has_title = (
+        "Daily Issue Report" in text
+        or "Daily 유가 동향" in text
+        or "Daily_유가_동향" in text
+        or "유가 동향 Dashboard" in text
+    )
+    if not has_title:
+        return False, "missing_title"
+
+    required_sections = ["Summary", "유가 동향", "조간 신문 트렌드"]
+    missing = [token for token in required_sections if token not in text]
+    if missing:
+        return False, "missing_required_section:" + ",".join(missing)
+
+    # New template uses news-link; older templates may use news-item/article-card.
+    has_news_area = (
+        "대표 기사" in text
+        or "news-link" in text
+        or "news-item" in text
+        or "article-card" in text
+        or "조간" in text
+    )
+    if not has_news_area:
+        return False, "missing_news_area"
+
+    has_layout = (
+        'class="section"' in text
+        or "class='section'" in text
+        or "report-section" in text
+        or 'class="container"' in text
+        or "class='container'" in text
+    )
+    if not has_layout:
+        return False, "missing_layout"
+
+    return True, "ok"
+
+
+def read_report_meta(html_path: Path) -> tuple[dict[str, Any] | None, str | None]:
+    date_match = DATE_RE.search(html_path.name)
+    if not date_match:
+        return None, "missing_date_in_filename"
+    date = date_match.group(1)
+
+    try:
+        text = html_path.read_text(encoding="utf-8", errors="ignore")
+    except Exception as exc:
+        return None, f"read_failed:{exc.__class__.__name__}"
+
+    ok, reason = has_required_structure(text)
+    if not ok:
+        return None, reason
+
+    title_match = TITLE_RE.search(text)
+    header_date_match = HEADER_DATE_RE.search(text)
+    title = strip_tags(title_match.group(1)) if title_match else f"Daily 유가 동향 — {date}"
+    display_date = strip_tags(header_date_match.group(1)) if header_date_match else date
+
+    return {
+        "date": date,
+        "displayDate": display_date,
+        "title": title,
+        "url": f"reports/{html_path.name}",
+        "status": "발간",
+        "fileName": html_path.name,
+        "exists": True,
+    }, None
+
+
+def main() -> int:
+    args = parse_args()
+    reports_dir = Path(args.reports_dir)
+    out_path = resolve_out_path(args)
+
+    if not reports_dir.exists():
+        print(f"[ERROR] reports 폴더가 없습니다: {reports_dir}")
+        return 1
+
+    reports: list[dict[str, Any]] = []
+    warnings: list[dict[str, str]] = []
+
+    for html_path in sorted(reports_dir.glob("*.html")):
+        item, reason = read_report_meta(html_path)
+        if item:
+            reports.append(item)
+        else:
+            warnings.append({"fileName": html_path.name, "reason": reason or "unknown"})
+
+    reports.sort(key=lambda item: item["date"], reverse=True)
+    payload = {
+        "schemaVersion": "1.1",
+        "generatedAt": now_kst_text(),
+        "count": len(reports),
+        "latestDate": reports[0]["date"] if reports else "",
+        "availableDates": sorted([item["date"] for item in reports]),
+        "warnings": warnings,
+        "reports": reports,
     }
-    function monthKey(dateStr){ return dateStr ? dateStr.slice(0,7) : new Date().toISOString().slice(0,7); }
-    function normalizeReports(payload){
-      const reports = Array.isArray(payload?.reports) ? payload.reports : [];
-      return reports.filter(r => r && r.date && r.url).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    }
-    async function fetchJson(url){
-      const res = await fetch(`${url}?v=${Date.now()}`, {cache:'no-store'});
-      if(!res.ok) throw new Error(`${url} HTTP ${res.status}`);
-      return await res.json();
-    }
-    async function loadIndex(){
-      const candidates = ['report-index.json','./report-index.json','public/report-index.json'];
-      let lastError = null;
-      for(const url of candidates){
-        try{
-          const payload = await fetchJson(url);
-          const reports = normalizeReports(payload);
-          if(reports.length > 0){ return {payload, reports}; }
-          lastError = new Error(`${url} 리포트 0건`);
-        }catch(e){ lastError = e; }
-      }
-      throw lastError || new Error('report-index.json 로드 실패');
-    }
-    function initData(payload, reports){
-      state.index = payload;
-      state.reports = reports;
-      state.byDate = new Map(reports.map(r => [r.date, r]));
-      state.availableDates = new Set(reports.map(r => r.date));
-      const latest = reports[0]?.date || '';
-      state.currentMonth = monthKey(new URLSearchParams(location.search).get('date') || latest || todayIso);
-      $('reportCount').textContent = reports.length;
-      $('latestDate').textContent = fmtDate(latest);
-      $('generatedAt').textContent = payload.generatedAt ? String(payload.generatedAt).slice(5,16) : '-';
-      renderQuickList();
-      renderCalendar();
-      const paramDate = new URLSearchParams(location.search).get('date');
-      const initial = state.byDate.has(paramDate) ? paramDate : latest;
-      if(initial) selectReport(initial, {push:false});
-    }
-    function renderQuickList(){
-      const box = $('quickList');
-      box.innerHTML = '';
-      state.reports.forEach(r => {
-        const a = document.createElement('a');
-        a.href = `?date=${encodeURIComponent(r.date)}`;
-        a.className = 'quick-item' + (r.date === state.selectedDate ? ' active' : '');
-        a.innerHTML = `<span class="quick-date">${fmtDate(r.date)}</span><span class="quick-name">${r.displayDate || r.title || r.date}</span>`;
-        a.addEventListener('click', ev => { ev.preventDefault(); selectReport(r.date); });
-        box.appendChild(a);
-      });
-    }
-    function renderCalendar(){
-      const [yy, mm] = state.currentMonth.split('-').map(Number);
-      $('monthLabel').textContent = `${yy}.${String(mm).padStart(2,'0')}`;
-      const grid = $('calendarGrid');
-      grid.innerHTML = '';
-      const first = new Date(yy, mm-1, 1);
-      const last = new Date(yy, mm, 0);
-      for(let i=0; i<first.getDay(); i++) grid.appendChild(dayCell('', false));
-      for(let d=1; d<=last.getDate(); d++){
-        const iso = `${yy}-${String(mm).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-        grid.appendChild(dayCell(String(d), state.availableDates.has(iso), iso));
-      }
-    }
-    function dayCell(label, hasReport, iso){
-      const div = document.createElement('div');
-      div.className = 'day' + (hasReport ? ' has' : '') + (iso === state.selectedDate ? ' active' : '') + (iso === todayIso ? ' today' : '');
-      div.textContent = label;
-      if(hasReport){ div.addEventListener('click', () => selectReport(iso)); }
-      return div;
-    }
-    function selectReport(date, opts={push:true}){
-      const report = state.byDate.get(date);
-      if(!report) return;
-      state.selectedDate = date;
-      state.currentMonth = monthKey(date);
-      $('selectedDate').textContent = fmtDate(date);
-      $('viewerTitle').textContent = report.title || `Daily 유가 동향 — ${date}`;
-      $('viewerSub').textContent = report.displayDate || date;
-      $('emptyBox').classList.add('hidden');
-      $('errorBox').classList.add('hidden');
-      $('reportFrame').classList.remove('hidden');
-      $('reportFrame').src = `${report.url}?v=${Date.now()}`;
-      $('openReport').href = report.url;
-      $('openReport').classList.remove('hidden');
-      if(opts.push !== false){ history.replaceState(null, '', `?date=${encodeURIComponent(date)}`); }
-      renderCalendar();
-      renderQuickList();
-    }
-    function changeMonth(delta){
-      const [yy, mm] = state.currentMonth.split('-').map(Number);
-      const next = new Date(yy, mm-1 + delta, 1);
-      state.currentMonth = `${next.getFullYear()}-${String(next.getMonth()+1).padStart(2,'0')}`;
-      renderCalendar();
-    }
-    function showError(message){
-      $('emptyBox').classList.add('hidden');
-      $('reportFrame').classList.add('hidden');
-      $('errorMessage').textContent = message || 'report-index.json을 확인해 주세요.';
-      $('errorBox').classList.remove('hidden');
-      $('reportCount').textContent = '0';
-      $('latestDate').textContent = '-';
-      $('selectedDate').textContent = '-';
-      $('generatedAt').textContent = '-';
-      $('quickList').innerHTML = '<div style="color:#B42318;font-size:12px">리포트 목록이 비어 있습니다. report-index.json 생성 로직을 확인해 주세요.</div>';
-    }
-    $('prevMonth').addEventListener('click', () => changeMonth(-1));
-    $('nextMonth').addEventListener('click', () => changeMonth(1));
-    $('reloadBtn').addEventListener('click', () => location.reload());
-    loadIndex().then(({payload, reports}) => initData(payload, reports)).catch(e => showError(e.message));
-  </script>
-</body>
-</html>
+
+    atomic_write_json(out_path, payload)
+
+    print(f"[OK] report-index.json 생성 완료: {out_path}")
+    print(f"[OK] 리포트 수: {len(reports)}")
+    if warnings:
+        print(f"[WARN] 제외 HTML 수: {len(warnings)}")
+        for warning in warnings[:30]:
+            print(f" - {warning['fileName']}: {warning['reason']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
