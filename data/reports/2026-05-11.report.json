@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 11일 (월)",
     "previous_day_label": "5/8",
     "today_label": "5/11",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/8 기준 비상경제본부회의(08:30 정부서울청사), 비상경제본부회의 겸 국가창업시대 전략회의(09:30 정부서울청사), 농업·농촌 에너지 대전환 TF 1차회의(13:30 세종), 메르코수르 주한대사 면담(14:00 대한상의)."
+      "text": "주요 이해관계자 동향: 5/8 기준 08:30 비상경제본부회의 겸 경제관계장관회의(세종), 08:30 비상경제본부회의(정부서울청사), 김소희 의원실, 수소경제 바로알기 : 산업에서 발전까지(08:30 의원회관 제1간담회의실)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실), 김산업통상부, 인도 전문가 간담회(11:00 서울), 행안부, 고유가 피해지원금 2차 지급 브리핑(11:00 정부서울청사 본관 브리핑실), 기후부, 소속·산하기관 홍수대응 체계 점검회의(14:00 세종)."
+      "text": "금일 주요 일정: 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실), 정무위원회 법안심사제2소위원회(14:00 본관 604호)."
     },
     {
       "type": "news_trend",
@@ -1386,93 +1386,81 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "비상경제본부회의(08:30 정부서울청사)",
-      "description": "08:30 재경부 일정으로 확인된 '비상경제본부회의(08:30 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의 겸 경제관계장관회의(세종)",
+      "description": "08:30 · 김민재 차관 / 08:30 비상경제본부회의 겸 경제관계장관회의(세종)",
+      "time": "08:30",
+      "org": "김민재 차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "비상경제본부회의 겸 국가창업시대 전략회의(09:30 정부서울청사)",
-      "description": "09:30 산업부 일정으로 확인된 '비상경제본부회의 겸 국가창업시대 전략회의(09:30 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의(정부서울청사)",
+      "description": "08:30 · 재경부 / 08:30 비상경제본부회의(정부서울청사)",
+      "time": "08:30",
+      "org": "재경부",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "김소희 의원실, 수소경제 바로알기 : 산업에서 발전까지(08:30 의원회관 제1간담회의실)",
+      "description": "08:30 · 의원실 세미나 / 김소희 의원실, 수소경제 바로알기 : 산업에서 발전까지(08:30 의원회관 제1간담회의실)",
+      "time": "08:30",
+      "org": "의원실 세미나",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "09:30 비상경제본부회의 겸 국가창업시대 전략회의(정부서울청사)",
+      "description": "09:30 · 여한구 통상교섭본부장 / 09:30 비상경제본부회의 겸 국가창업시대 전략회의(정부서울청사)",
+      "time": "09:30",
+      "org": "여한구 통상교섭본부장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "농업·농촌 에너지 대전환 TF 1차회의(13:30 세종)",
-      "description": "13:30 농식품부 일정으로 확인된 '농업·농촌 에너지 대전환 TF 1차회의(13:30 세종)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "13:30 농업·농촌 에너지 대전환 TF 1차회의(세종)",
+      "description": "13:30 · 김종구 차관 / 13:30 농업·농촌 에너지 대전환 TF 1차회의(세종)",
+      "time": "13:30",
+      "org": "김종구 차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "메르코수르 주한대사 면담(14:00 대한상의)",
-      "description": "14:00 산업부 일정으로 확인된 '메르코수르 주한대사 면담(14:00 대한상의)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "산업부 타운홀미팅(14:30 정부세종청사)",
-      "description": "14:30 산업부 일정으로 확인된 '산업부 타운홀미팅(14:30 정부세종청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "제3차 규제개혁위원회(16:30 달개비)",
-      "description": "16:30 산업부 일정으로 확인된 '제3차 규제개혁위원회(16:30 달개비)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "title": "14:00 메르코수르 주한대사 면담(대한상의)",
+      "description": "14:00 · 여한구 통상교섭본부장 / 14:00 메르코수르 주한대사 면담(대한상의)",
+      "time": "14:00",
+      "org": "여한구 통상교섭본부장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
       "time": "11:00",
-      "org": "고유가",
+      "org": "윤호중 장관",
       "title": "11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실)",
       "relevance": ""
     },
     {
-      "time": "11:00",
-      "org": "확인",
-      "title": "김산업통상부, 인도 전문가 간담회(11:00 서울)",
-      "relevance": ""
-    },
-    {
-      "time": "11:00",
-      "org": "정부",
-      "title": "행안부, 고유가 피해지원금 2차 지급 브리핑(11:00 정부서울청사 본관 브리핑실)",
-      "relevance": ""
-    },
-    {
       "time": "14:00",
-      "org": "기후부",
-      "title": "기후부, 소속·산하기관 홍수대응 체계 점검회의(14:00 세종)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "공정위",
-      "title": "남동일 공정위 부위원장, 정무위 법안소위(14:00 국회)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "정무위",
+      "org": "국회",
       "title": "정무위원회 법안심사제2소위원회(14:00 본관 604호)",
-      "relevance": ""
-    },
-    {
-      "time": "시간미정",
-      "org": "산업부",
-      "title": "여한구 산업부 통상교섭본부장, 국외출장(10~15일 EU·멕시코)",
       "relevance": ""
     }
   ],
@@ -1589,11 +1577,11 @@
       "today_source_title": "",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242654",
       "today_source_published_at": "2026-05-11",
-      "today_parsed_schedule_count": 7,
+      "today_parsed_schedule_count": 2,
       "previous_source_file_date": "2026-05-08",
       "previous_source_title": "[오늘의 주요일정·8일] 범정부 허위가짜뉴스 단속협의체 회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242586",
-      "previous_parsed_schedule_count": 8,
+      "previous_parsed_schedule_count": 11,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1619,7 +1607,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:19 KST",
+      "merged_at": "2026-05-26 10:27:17 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

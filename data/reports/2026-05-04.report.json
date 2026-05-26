@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 4일 (월)",
     "previous_day_label": "4/30",
     "today_label": "5/4",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -21,7 +21,7 @@
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: ADB 연차총회(우즈벡)."
+      "text": "금일 주요 일정: 관련 자료 찾지 못함."
     },
     {
       "type": "news_trend",
@@ -1376,14 +1376,7 @@
     }
   },
   "issues": [],
-  "schedules": [
-    {
-      "time": "-",
-      "org": "재경부",
-      "title": "ADB 연차총회(우즈벡)",
-      "relevance": ""
-    }
-  ],
+  "schedules": [],
   "news_trend": {
     "summary": "주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
     "articles": [
@@ -1497,7 +1490,7 @@
       "today_source_title": "[오늘의 주요일정·4일] 우원식 국회의장 주재 기관장 업무보고",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242478",
       "today_source_published_at": "2026-05-04",
-      "today_parsed_schedule_count": 1,
+      "today_parsed_schedule_count": 0,
       "previous_source_file_date": "2026-04-30",
       "previous_source_title": "",
       "previous_source_url": "",
@@ -1506,6 +1499,7 @@
       "needs_review": true
     },
     "validation": {
+      "today_schedule_parse_failed": true,
       "previous_schedule_parse_failed": true
     },
     "news": {
@@ -1530,7 +1524,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:18 KST",
+      "merged_at": "2026-05-26 10:27:15 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

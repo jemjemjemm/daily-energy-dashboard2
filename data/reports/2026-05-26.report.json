@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 26일 (화)",
     "previous_day_label": "5/22",
     "today_label": "5/26",
-    "generated_at": "2026-05-26 09:44 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,15 +17,15 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/22 기준 08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사), 기획처, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대 전략회의(08:00 정부서울청사), 복지부, 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(08:00 서울), 재정경제부, 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(08:00 정부서울청사)."
+      "text": "주요 이해관계자 동향: 5/22 기준 08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사), 08:00 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(서울), 10:00 2026년 기후위기대응위원회 정기회의(중회의실)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 10:00 국무회의 겸 비상경제점검회의(청와대), 10:00 국무회의 및 비상경제 점검회의(청와대), 공정거래위원회, 국무회의 및 비상경제 점검회의(10:00 청와대), 기획예산처, 국무회의 겸 비상경제점검회의(10:00 청와대)."
+      "text": "금일 주요 일정: 10:00 국무회의(청와대), 제23회 국무회의 겸 제10차 비상경제점검회의(10:00 청와대), 14:00 주요 전력기자재 수급 관련 점검 간담회(서울), 14:30 서산 석유화학업종 현장간담회(서산)."
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다."
+      "text": "조간 보도: 기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인."
     }
   ],
   "prices": {
@@ -1375,127 +1375,86 @@
       "category": "정책",
       "category_class": "",
       "title": "08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사)",
-      "description": "08:00 정부 일정으로 확인된 '08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "description": "08:00 · 재경부 / 08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사)",
+      "time": "08:00",
+      "org": "재경부",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "기획처, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대 전략회의(08:00 정부서울청사)",
-      "description": "08:00 정부 일정으로 확인된 '기획처, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대 전략회의(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:00 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(서울)",
+      "description": "08:00 · 이형훈 2차관 / 08:00 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(서울)",
+      "time": "08:00",
+      "org": "이형훈 2차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "에너지",
+      "category_class": "",
+      "title": "10:00 2026년 기후위기대응위원회 정기회의(중회의실)",
+      "description": "10:00 · 강기정 광주시장 / 10:00 2026년 기후위기대응위원회 정기회의(중회의실)",
+      "time": "10:00",
+      "org": "강기정 광주시장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "에너지·산업",
+      "category_class": "",
+      "title": "11:00 고유가 피해지원금 관련 현장방문(서울 양천구)",
+      "description": "11:00 · 기획처 / 11:00 고유가 피해지원금 관련 현장방문(서울 양천구)",
+      "time": "11:00",
+      "org": "기획처",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "복지부, 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(08:00 서울)",
-      "description": "08:00 확인 일정으로 확인된 '복지부, 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(08:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "재정경제부, 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(08:00 정부서울청사)",
-      "description": "08:00 정부 일정으로 확인된 '재정경제부, 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "중기부, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대 전략회의(08:00 정부서울청사)",
-      "description": "08:00 정부 일정으로 확인된 '중기부, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대 전략회의(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "행안부, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대전략회의(08:00 서울)",
-      "description": "08:00 확인 일정으로 확인된 '행안부, 비상경제본부회의 겸 경제관계장관회의 겸 국가창업시대전략회의(08:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "국외 출장(19~22일 중국)",
+      "description": "여한구 통상교섭본부장 / 국외 출장(19~22일 중국)",
+      "time": "시간미정",
+      "org": "여한구 통상교섭본부장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
       "time": "10:00",
-      "org": "국무회의",
-      "title": "10:00 국무회의 겸 비상경제점검회의(청와대)",
+      "org": "재경부",
+      "title": "10:00 국무회의(청와대)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "국무회의",
-      "title": "10:00 국무회의 및 비상경제 점검회의(청와대)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "확인",
-      "title": "공정거래위원회, 국무회의 및 비상경제 점검회의(10:00 청와대)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "확인",
-      "title": "기획예산처, 국무회의 겸 비상경제점검회의(10:00 청와대)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "제23회",
+      "org": "대통령",
       "title": "제23회 국무회의 겸 제10차 비상경제점검회의(10:00 청와대)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "주요",
+      "org": "금한승 1차관",
       "title": "14:00 주요 전력기자재 수급 관련 점검 간담회(서울)",
       "relevance": ""
     },
     {
-      "time": "14:00",
-      "org": "기후부",
-      "title": "기후부, 주요 전력기자재 수급 관련 점검 간담회(14:00 서울)",
-      "relevance": ""
-    },
-    {
       "time": "14:30",
-      "org": "서산",
+      "org": "권창준 차관",
       "title": "14:30 서산 석유화학업종 현장간담회(서산)",
-      "relevance": ""
-    },
-    {
-      "time": "14:30",
-      "org": "확인",
-      "title": "노동부, 서산 석유화학업종 현장간담회(14:30 서산)",
-      "relevance": ""
-    },
-    {
-      "time": "14:30",
-      "org": "산업부",
-      "title": "산업부, K-뉴딜아카데미 현장 간담회(14:30 SK서린빌딩)",
-      "relevance": ""
-    },
-    {
-      "time": "15:00",
-      "org": "계란",
-      "title": "15:00 계란 수급상황 현장 점검(경기 평택)",
-      "relevance": ""
-    },
-    {
-      "time": "15:00",
-      "org": "확인",
-      "title": "농식품부, 계란 수급상황 현장 점검(15:00 경기 평택)",
       "relevance": ""
     }
   ],
   "news_trend": {
-    "summary": "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다.",
+    "summary": "기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인.",
     "articles": [],
     "source": "Google News RSS",
     "needs_review": true
@@ -1585,11 +1544,11 @@
       "today_source_title": "",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242993",
       "today_source_published_at": "2026-05-26",
-      "today_parsed_schedule_count": 12,
+      "today_parsed_schedule_count": 4,
       "previous_source_file_date": "2026-05-22",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242949",
-      "previous_parsed_schedule_count": 12,
+      "previous_parsed_schedule_count": 5,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1615,7 +1574,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 09:44:29 KST",
+      "merged_at": "2026-05-26 10:27:21 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

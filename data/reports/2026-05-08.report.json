@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 8일 (금)",
     "previous_day_label": "5/7",
     "today_label": "5/8",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/7 기준 기후부, 민생물가 특별관리 관계장관회의(09:00 서울), 식약처, 민생물가 특별관리 관계장관TF 회의(09:00 서울), 기후부, 한·EU대표부대사 양자면담(09:20 서울), 기후부, 법안소위(10:00 서울)."
+      "text": "주요 이해관계자 동향: 5/7 기준 기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호), 허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실), 정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 비상경제본부회의(08:30 정부서울청사), 비상경제본부회의 겸 국가창업시대 전략회의(09:30 정부서울청사), 농업·농촌 에너지 대전환 TF 1차회의(13:30 세종), 메르코수르 주한대사 면담(14:00 대한상의)."
+      "text": "금일 주요 일정: 08:30 비상경제본부회의 겸 경제관계장관회의(세종), 08:30 비상경제본부회의(정부서울청사), 김소희 의원실, 수소경제 바로알기 : 산업에서 발전까지(08:30 의원회관 제1간담회의실), 09:30 비상경제본부회의 겸 국가창업시대 전략회의(정부서울청사)."
     },
     {
       "type": "news_trend",
@@ -1386,99 +1386,102 @@
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후부, 민생물가 특별관리 관계장관회의(09:00 서울)",
-      "description": "09:00 기후부 일정으로 확인된 '기후부, 민생물가 특별관리 관계장관회의(09:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "식약처, 민생물가 특별관리 관계장관TF 회의(09:00 서울)",
-      "description": "09:00 확인 일정으로 확인된 '식약처, 민생물가 특별관리 관계장관TF 회의(09:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호)",
+      "description": "10:00 · 본회의 및 상임위원회 / 기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호)",
+      "time": "10:00",
+      "org": "본회의 및 상임위원회",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후부, 한·EU대표부대사 양자면담(09:20 서울)",
-      "description": "09:20 기후부 일정으로 확인된 '기후부, 한·EU대표부대사 양자면담(09:20 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실)",
+      "description": "10:00 · 의원실 세미나 / 허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실)",
+      "time": "10:00",
+      "org": "의원실 세미나",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후부, 법안소위(10:00 서울)",
-      "description": "10:00 기후부 일정으로 확인된 '기후부, 법안소위(10:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "에너지",
-      "category_class": "",
-      "title": "기후부, 햇빛소득마을 토론회 개최(10:00 서울)",
-      "description": "10:00 기후부 일정으로 확인된 '기후부, 햇빛소득마을 토론회 개최(10:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "에너지",
-      "category_class": "",
-      "title": "남부지법, 가상 무속인 내세워 '가스라이팅' 87억 갈취 1심 속행 공판(10:30 306호)",
-      "description": "10:30 확인 일정으로 확인된 '남부지법, 가상 무속인 내세워 '가스라이팅' 87억 갈취 1심 속행 공판(10:30 306호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)",
+      "description": "13:00 · 의원실 세미나 / 정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)",
+      "time": "13:00",
+      "org": "의원실 세미나",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
       "time": "08:30",
+      "org": "김민재 차관",
+      "title": "08:30 비상경제본부회의 겸 경제관계장관회의(세종)",
+      "relevance": ""
+    },
+    {
+      "time": "08:30",
       "org": "재경부",
-      "title": "비상경제본부회의(08:30 정부서울청사)",
+      "title": "08:30 비상경제본부회의(정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "08:30",
+      "org": "의원실 세미나",
+      "title": "김소희 의원실, 수소경제 바로알기 : 산업에서 발전까지(08:30 의원회관 제1간담회의실)",
       "relevance": ""
     },
     {
       "time": "09:30",
-      "org": "산업부",
-      "title": "비상경제본부회의 겸 국가창업시대 전략회의(09:30 정부서울청사)",
+      "org": "여한구 통상교섭본부장",
+      "title": "09:30 비상경제본부회의 겸 국가창업시대 전략회의(정부서울청사)",
       "relevance": ""
     },
     {
       "time": "13:30",
-      "org": "농식품부",
-      "title": "농업·농촌 에너지 대전환 TF 1차회의(13:30 세종)",
+      "org": "김종구 차관",
+      "title": "13:30 농업·농촌 에너지 대전환 TF 1차회의(세종)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "산업부",
-      "title": "메르코수르 주한대사 면담(14:00 대한상의)",
+      "org": "여한구 통상교섭본부장",
+      "title": "14:00 메르코수르 주한대사 면담(대한상의)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김성환 장관",
+      "title": "14:00 전력망 건설반대위 대표 간담회(서울)",
       "relevance": ""
     },
     {
       "time": "14:30",
-      "org": "산업부",
-      "title": "산업부 타운홀미팅(14:30 정부세종청사)",
+      "org": "김정관 장관",
+      "title": "14:30 산업부 타운홀미팅(정부세종청사)",
       "relevance": ""
     },
     {
-      "time": "16:30",
-      "org": "산업부",
-      "title": "제3차 규제개혁위원회(16:30 달개비)",
-      "relevance": ""
-    },
-    {
-      "time": "-",
-      "org": "공정위",
-      "title": "국제경쟁네트워크(ICN) 연차총회 참석",
+      "time": "15:00",
+      "org": "의원실 세미나",
+      "title": "김성회 의원실 등, 국제항공 탄소 감축 준비 점검과 대응 과제(15:00 의원회관 제6간담회의실)",
       "relevance": ""
     },
     {
       "time": "8:30",
-      "org": "외교안보",
-      "title": "외교부, 비상경제본부회의(8:30)",
+      "org": "김진아 2차관",
+      "title": "8:30 비상경제본부회의",
+      "relevance": ""
+    },
+    {
+      "time": "시간미정",
+      "org": "공정위 주병기 위원장",
+      "title": "국제경쟁네트워크(ICN) 연차총회 참석",
       "relevance": ""
     }
   ],
@@ -1595,11 +1598,11 @@
       "today_source_title": "[오늘의 주요일정·8일] 범정부 허위가짜뉴스 단속협의체 회의",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242586",
       "today_source_published_at": "2026-05-08",
-      "today_parsed_schedule_count": 8,
+      "today_parsed_schedule_count": 11,
       "previous_source_file_date": "2026-05-07",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242543",
-      "previous_parsed_schedule_count": 12,
+      "previous_parsed_schedule_count": 3,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1625,7 +1628,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:19 KST",
+      "merged_at": "2026-05-26 10:27:16 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

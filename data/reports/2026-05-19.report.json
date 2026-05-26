@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 19일 (화)",
     "previous_day_label": "5/18",
     "today_label": "5/19",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/18 기준 주한 아세안 대사 간담회(10:00 대한상의), 5·18 민주화운동 기념식(11:00 광주), 광주사무소 오찬 간담회(12:00 광주), 산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)."
+      "text": "주요 이해관계자 동향: 5/18 기준 10:00 주한 아세안 대사 간담회(대한상의), 13:30 한국에너지공대 방문(나주), 14:00 통상추진위원회(대한상의)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 공급망기금 상생협약식(10:00), 산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호), 기후에너지환경노동위원회 전체회의(11:30 본관 622호)."
+      "text": "금일 주요 일정: 08:00 중동전쟁 대응 보건의약단체 회의(서울), 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 10:00 공급망기금 상생협약식, 10:00 산중위 전체회의(국회)."
     },
     {
       "type": "news_trend",
@@ -1386,105 +1386,141 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "주한 아세안 대사 간담회(10:00 대한상의)",
-      "description": "10:00 산업부 일정으로 확인된 '주한 아세안 대사 간담회(10:00 대한상의)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "title": "10:00 주한 아세안 대사 간담회(대한상의)",
+      "description": "10:00 · 여한구 통상교섭본부장 / 10:00 주한 아세안 대사 간담회(대한상의)",
+      "time": "10:00",
+      "org": "여한구 통상교섭본부장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "에너지",
+      "category_class": "",
+      "title": "13:30 한국에너지공대 방문(나주)",
+      "description": "13:30 · 김성환 장관 / 13:30 한국에너지공대 방문(나주)",
+      "time": "13:30",
+      "org": "김성환 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
+      "category_class": "",
+      "title": "14:00 통상추진위원회(대한상의)",
+      "description": "14:00 · 여한구 통상교섭본부장 / 14:00 통상추진위원회(대한상의)",
+      "time": "14:00",
+      "org": "여한구 통상교섭본부장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "5·18 민주화운동 기념식(11:00 광주)",
-      "description": "11:00 공정위 일정으로 확인된 '5·18 민주화운동 기념식(11:00 광주)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "16:00 중동사태 장기화 대응 점검회의(시청 대회의실)",
+      "description": "16:00 · 김경덕 부산시장 권한대행 / 16:00 중동사태 장기화 대응 점검회의(시청 대회의실)",
+      "time": "16:00",
+      "org": "김경덕 부산시장 권한대행",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
-      "category": "정책",
+      "category": "에너지",
       "category_class": "",
-      "title": "광주사무소 오찬 간담회(12:00 광주)",
-      "description": "12:00 공정위 일정으로 확인된 '광주사무소 오찬 간담회(12:00 광주)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)",
-      "description": "14:00 산업부 일정으로 확인된 '산업성장펀드 출범식 및 기술금융 전략회의(14:00 SK증권빌딩)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "통상추진위원회(14:00 대한상의)",
-      "description": "14:00 산업부 일정으로 확인된 '통상추진위원회(14:00 대한상의)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "title": "16:30 나트륨 ESS 생산공정 및 기술현황 점검(완주)",
+      "description": "16:30 · 김성환 장관 / 16:30 나트륨 ESS 생산공정 및 기술현황 점검(완주)",
+      "time": "16:30",
+      "org": "김성환 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
       "title": "한국경제 설명회 및 G7 재무장관회의",
-      "description": "- 재경부 일정으로 확인된 '한국경제 설명회 및 G7 재무장관회의' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "description": "재경부 / 한국경제 설명회 및 G7 재무장관회의",
+      "time": "시간미정",
+      "org": "재경부",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
+      "time": "08:00",
+      "org": "이형훈 2차관",
+      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "relevance": ""
+    },
+    {
       "time": "09:30",
-      "org": "정치",
+      "org": "국회",
       "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "재경부",
-      "title": "공급망기금 상생협약식(10:00)",
+      "org": "허장 2차관",
+      "title": "10:00 공급망기금 상생협약식",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "정치",
+      "org": "김정관 장관",
+      "title": "10:00 산중위 전체회의(국회)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "노용석 1차관",
+      "title": "10:00 이병권 중기2차관, 산중위 전체회의(국회)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "오영훈 제주지사",
+      "title": "10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "국회",
       "title": "산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호)",
       "relevance": ""
     },
     {
       "time": "11:30",
-      "org": "정치",
+      "org": "김성환 장관",
+      "title": "11:30 국회 기후에너지환경노동위원회 전체회의(서울)",
+      "relevance": ""
+    },
+    {
+      "time": "11:30",
+      "org": "국회",
       "title": "기후에너지환경노동위원회 전체회의(11:30 본관 622호)",
       "relevance": ""
     },
     {
       "time": "11:30",
-      "org": "정치",
+      "org": "조국혁신당",
       "title": "서왕진 원내대표, 기후에너지환경노동위원회 전체회의(11:30 국회 본관 622호)",
       "relevance": ""
     },
     {
       "time": "13:00",
-      "org": "정치",
+      "org": "조국혁신당",
       "title": "서왕진 원내대표, 미래를 위한 탄소중립법 개정 기자회견(13:00 국회 본관 계단)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "정치",
-      "title": "산업통상자원중소벤처기업위원회 산업통상자원지식재산소위원회(14:00 본관 534호)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "정치",
-      "title": "서왕진 원내대표, 미래를 위한 탄소중립법 개정 토론회(14:00 국회의원회관 대회의실)",
-      "relevance": ""
-    },
-    {
-      "time": "-",
-      "org": "재경부",
-      "title": "한국경제 설명회 및 G7 재무장관회의",
+      "org": "경북지사 권한대행",
+      "title": "14:00 경상북도 2050 탄소중립 녹생성장 위원회(호국실)",
       "relevance": ""
     }
   ],
@@ -1601,7 +1637,7 @@
       "today_source_title": "[오늘의 주요일정·19일] 일본 핵오염수 해양투기 중단 기자회견",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242840",
       "today_source_published_at": "2026-05-19",
-      "today_parsed_schedule_count": 9,
+      "today_parsed_schedule_count": 12,
       "previous_source_file_date": "2026-05-18",
       "previous_source_title": "[오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809",
@@ -1631,7 +1667,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:22 KST",
+      "merged_at": "2026-05-26 10:27:19 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 12일 (화)",
     "previous_day_label": "5/11",
     "today_label": "5/12",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/11 기준 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실), 김산업통상부, 인도 전문가 간담회(11:00 서울), 행안부, 고유가 피해지원금 2차 지급 브리핑(11:00 정부서울청사 본관 브리핑실), 기후부, 소속·산하기관 홍수대응 체계 점검회의(14:00 세종)."
+      "text": "주요 이해관계자 동향: 5/11 기준 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실), 정무위원회 법안심사제2소위원회(14:00 본관 604호)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 권대영 금융부위원장, 정무위 법안소위(10:00 국회), 기획예산처, 국무회의 겸 비상경제점검회의(10:00 청와대), 제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대), 자동차의 날 기념식(11:00 JW메리어트H)."
+      "text": "금일 주요 일정: 08:00 중동전쟁 대응 보건의약단체 회의(서울), 10:00 국무회의(청와대), 정무위원회 법안심사제1소위원회(10:00 본관 604호), 제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대)."
     },
     {
       "type": "news_trend",
@@ -1384,101 +1384,93 @@
   },
   "issues": [
     {
-      "category": "정유",
+      "category": "에너지·산업",
       "category_class": "",
       "title": "11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실)",
-      "description": "11:00 고유가 일정으로 확인된 '11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "A 직접",
-      "grade_class": "grade-a"
+      "description": "11:00 · 윤호중 장관 / 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실)",
+      "time": "11:00",
+      "org": "윤호중 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
-      "category": "정책",
-      "category_class": "",
-      "title": "김산업통상부, 인도 전문가 간담회(11:00 서울)",
-      "description": "11:00 확인 일정으로 확인된 '김산업통상부, 인도 전문가 간담회(11:00 서울)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
-    },
-    {
-      "category": "정유",
-      "category_class": "",
-      "title": "행안부, 고유가 피해지원금 2차 지급 브리핑(11:00 정부서울청사 본관 브리핑실)",
-      "description": "11:00 정부 일정으로 확인된 '행안부, 고유가 피해지원금 2차 지급 브리핑(11:00 정부서울청사 본관 브리핑실)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "A 직접",
-      "grade_class": "grade-a"
-    },
-    {
-      "category": "에너지",
-      "category_class": "",
-      "title": "기후부, 소속·산하기관 홍수대응 체계 점검회의(14:00 세종)",
-      "description": "14:00 기후부 일정으로 확인된 '기후부, 소속·산하기관 홍수대응 체계 점검회의(14:00 세종)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "남동일 공정위 부위원장, 정무위 법안소위(14:00 국회)",
-      "description": "14:00 공정위 일정으로 확인된 '남동일 공정위 부위원장, 정무위 법안소위(14:00 국회)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
+      "category": "국회",
       "category_class": "",
       "title": "정무위원회 법안심사제2소위원회(14:00 본관 604호)",
-      "description": "14:00 정무위 일정으로 확인된 '정무위원회 법안심사제2소위원회(14:00 본관 604호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "description": "14:00 · 국회 / 정무위원회 법안심사제2소위원회(14:00 본관 604호)",
+      "time": "14:00",
+      "org": "국회",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
-      "time": "10:00",
-      "org": "경제",
-      "title": "권대영 금융부위원장, 정무위 법안소위(10:00 국회)",
+      "time": "08:00",
+      "org": "이형훈 2차관",
+      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "경제",
-      "title": "기획예산처, 국무회의 겸 비상경제점검회의(10:00 청와대)",
+      "org": "재경부",
+      "title": "10:00 국무회의(청와대)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "정치",
+      "org": "국회",
+      "title": "정무위원회 법안심사제1소위원회(10:00 본관 604호)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "대통령",
       "title": "제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대)",
       "relevance": ""
     },
     {
-      "time": "11:00",
-      "org": "산업통상부",
-      "title": "자동차의 날 기념식(11:00 JW메리어트H)",
+      "time": "14:30",
+      "org": "노용석 1차관",
+      "title": "14:30 중동전쟁 관련 수출기업 현장 방문(페스웰)",
       "relevance": ""
     },
     {
       "time": "15:00",
       "org": "재경부",
-      "title": "국채시장 자문위원회 정례회의(15:00)",
+      "title": "15:00 국채시장 자문위원회 정례회의",
+      "relevance": ""
+    },
+    {
+      "time": "15:30",
+      "org": "배경훈 부총리 겸 과기정통",
+      "title": "15:30 과기정통부-기후부 MOU(정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "15:30",
+      "org": "김성환 장관",
+      "title": "15:30 기후부·과기정통부 에너지 정책협력 업무협약 체결식(서울)",
       "relevance": ""
     },
     {
       "time": "16:00",
-      "org": "산업통상부",
-      "title": "'K수출스타 500' 간담회 및 출범식(16:00 성수동)",
+      "org": "금한승 1차관",
+      "title": "16:00 기후·환경·에너지 분야 정상화 TF 회의(서울)",
       "relevance": ""
     },
     {
       "time": "17:00",
       "org": "재경부",
-      "title": "외환시장 제도개선 관련 은행장 간담회(17:00)",
+      "title": "17:00 외환시장 제도개선 관련 은행장 간담회",
       "relevance": ""
     },
     {
-      "time": "-",
-      "org": "산업",
-      "title": "여한구 산업부 통상교섭본부장, 국외출장(10~15일 EU·멕시코)",
+      "time": "현지",
+      "org": "복지부, 중동전쟁 대응 보",
+      "title": "[국제](현지시간)",
       "relevance": ""
     }
   ],
@@ -1595,11 +1587,11 @@
       "today_source_title": "[오늘의 주요일정·12일] 이재명 대통령 비상경제점검회의",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242687",
       "today_source_published_at": "2026-05-12",
-      "today_parsed_schedule_count": 8,
+      "today_parsed_schedule_count": 11,
       "previous_source_file_date": "2026-05-11",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242654",
-      "previous_parsed_schedule_count": 7,
+      "previous_parsed_schedule_count": 2,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1625,7 +1617,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:20 KST",
+      "merged_at": "2026-05-26 10:27:17 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

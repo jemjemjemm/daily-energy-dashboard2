@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 20일 (수)",
     "previous_day_label": "5/19",
     "today_label": "5/20",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/19 기준 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 공급망기금 상생협약식(10:00), 산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호), 기후에너지환경노동위원회 전체회의(11:30 본관 622호)."
+      "text": "주요 이해관계자 동향: 5/19 기준 08:00 중동전쟁 대응 보건의약단체 회의(서울), 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 10:00 공급망기금 상생협약식."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관), 국무회의 겸 비상경제점검회의(14:00 청와대), 국무회의 겸 비상경제점검회의(14:00 청와대)."
+      "text": "금일 주요 일정: 08:00 에너지 DX·AX 전략 TF 4차 회의(서울), 10:00 산중위 법안소위(국회), 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 13:30 기후부 2030 청년세대 통합 발대식(서울)."
     },
     {
       "type": "news_trend",
@@ -1384,87 +1384,123 @@
   },
   "issues": [
     {
-      "category": "에너지",
-      "category_class": "",
-      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
-      "description": "09:30 정치 일정으로 확인된 '기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
       "category": "정책",
       "category_class": "",
-      "title": "공급망기금 상생협약식(10:00)",
-      "description": "10:00 재경부 일정으로 확인된 '공급망기금 상생협약식(10:00)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호)",
-      "description": "10:00 정치 일정으로 확인된 '산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "description": "08:00 · 이형훈 2차관 / 08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "time": "08:00",
+      "org": "이형훈 2차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후에너지환경노동위원회 전체회의(11:30 본관 622호)",
-      "description": "11:30 정치 일정으로 확인된 '기후에너지환경노동위원회 전체회의(11:30 본관 622호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "에너지",
-      "category_class": "",
-      "title": "서왕진 원내대표, 기후에너지환경노동위원회 전체회의(11:30 국회 본관 622호)",
-      "description": "11:30 정치 일정으로 확인된 '서왕진 원내대표, 기후에너지환경노동위원회 전체회의(11:30 국회 본관 622호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
+      "description": "09:30 · 국회 / 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
+      "time": "09:30",
+      "org": "국회",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "서왕진 원내대표, 미래를 위한 탄소중립법 개정 기자회견(13:00 국회 본관 계단)",
-      "description": "13:00 정치 일정으로 확인된 '서왕진 원내대표, 미래를 위한 탄소중립법 개정 기자회견(13:00 국회 본관 계단)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "title": "10:00 공급망기금 상생협약식",
+      "description": "10:00 · 허장 2차관 / 10:00 공급망기금 상생협약식",
+      "time": "10:00",
+      "org": "허장 2차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
+      "category_class": "",
+      "title": "10:00 산중위 전체회의(국회)",
+      "description": "10:00 · 김정관 장관 / 10:00 산중위 전체회의(국회)",
+      "time": "10:00",
+      "org": "김정관 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
+      "category_class": "",
+      "title": "10:00 이병권 중기2차관, 산중위 전체회의(국회)",
+      "description": "10:00 · 노용석 1차관 / 10:00 이병권 중기2차관, 산중위 전체회의(국회)",
+      "time": "10:00",
+      "org": "노용석 1차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
+      "description": "10:00 · 오영훈 제주지사 / 10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
+      "time": "10:00",
+      "org": "오영훈 제주지사",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
+      "time": "08:00",
+      "org": "이호현 2차관",
+      "title": "08:00 에너지 DX·AX 전략 TF 4차 회의(서울)",
+      "relevance": ""
+    },
+    {
       "time": "10:00",
-      "org": "정치",
+      "org": "노용석 1차관",
+      "title": "10:00 산중위 법안소위(국회)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "국회",
       "title": "산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)",
       "relevance": ""
     },
     {
+      "time": "13:30",
+      "org": "금한승 1차관",
+      "title": "13:30 기후부 2030 청년세대 통합 발대식(서울)",
+      "relevance": ""
+    },
+    {
       "time": "14:00",
-      "org": "정치",
+      "org": "노용석 1차관",
+      "title": "14:00 산중위 전체회의(국회)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "대통령",
       "title": "22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "정치",
-      "title": "국무회의 겸 비상경제점검회의(14:00 청와대)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "기획처",
-      "title": "국무회의 겸 비상경제점검회의(14:00 청와대)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "정치",
+      "org": "국회",
       "title": "산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)",
       "relevance": ""
     },
     {
-      "time": "-",
+      "time": "시간미정",
+      "org": "여한구 통상교섭본부장",
+      "title": "국외 출장(19~22일 중국)",
+      "relevance": ""
+    },
+    {
+      "time": "시간미정",
       "org": "재경부",
       "title": "한국경제 설명회 및 G7 재무장관회의",
       "relevance": ""
@@ -1583,11 +1619,11 @@
       "today_source_title": "[오늘의 주요일정·20일] 이재명 대통령 9차 비상경제점검회의",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242880",
       "today_source_published_at": "2026-05-20",
-      "today_parsed_schedule_count": 6,
+      "today_parsed_schedule_count": 9,
       "previous_source_file_date": "2026-05-19",
       "previous_source_title": "[오늘의 주요일정·19일] 일본 핵오염수 해양투기 중단 기자회견",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242840",
-      "previous_parsed_schedule_count": 9,
+      "previous_parsed_schedule_count": 12,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1613,7 +1649,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:22 KST",
+      "merged_at": "2026-05-26 10:27:20 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 21일 (목)",
     "previous_day_label": "5/20",
     "today_label": "5/21",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/20 기준 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관), 국무회의 겸 비상경제점검회의(14:00 청와대), 국무회의 겸 비상경제점검회의(14:00 청와대)."
+      "text": "주요 이해관계자 동향: 5/20 기준 08:00 에너지 DX·AX 전략 TF 4차 회의(서울), 10:00 산중위 법안소위(국회), 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 물가안정TF 회의(08:00 정부서울청사), 재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사), 구리 석유비축기지 방문(09:30 한국석유공사 구리지사), 남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)."
+      "text": "금일 주요 일정: 08:00 물가안정TF 회의(정부서울청사), 08:00 민생물가 특별관리 관계장관 TF 회의(서울), 08:00 민생물가 특별관리 관계장관 TF(정부서울청사), 08:00 민생물가 특별관리 관계장관 TF회의(세종)."
     },
     {
       "type": "news_trend",
@@ -1384,77 +1384,143 @@
   },
   "issues": [
     {
-      "category": "정책",
+      "category": "에너지",
+      "category_class": "",
+      "title": "08:00 에너지 DX·AX 전략 TF 4차 회의(서울)",
+      "description": "08:00 · 이호현 2차관 / 08:00 에너지 DX·AX 전략 TF 4차 회의(서울)",
+      "time": "08:00",
+      "org": "이호현 2차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
+      "category_class": "",
+      "title": "10:00 산중위 법안소위(국회)",
+      "description": "10:00 · 노용석 1차관 / 10:00 산중위 법안소위(국회)",
+      "time": "10:00",
+      "org": "노용석 1차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
       "category_class": "",
       "title": "산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)",
-      "description": "10:00 정치 일정으로 확인된 '산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
+      "description": "10:00 · 국회 / 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)",
+      "time": "10:00",
+      "org": "국회",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "에너지",
+      "category_class": "",
+      "title": "13:30 기후부 2030 청년세대 통합 발대식(서울)",
+      "description": "13:30 · 금한승 1차관 / 13:30 기후부 2030 청년세대 통합 발대식(서울)",
+      "time": "13:30",
+      "org": "금한승 1차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "국회",
+      "category_class": "",
+      "title": "14:00 산중위 전체회의(국회)",
+      "description": "14:00 · 노용석 1차관 / 14:00 산중위 전체회의(국회)",
+      "time": "14:00",
+      "org": "노용석 1차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
       "title": "22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)",
-      "description": "14:00 정치 일정으로 확인된 '22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "국무회의 겸 비상경제점검회의(14:00 청와대)",
-      "description": "14:00 정치 일정으로 확인된 '국무회의 겸 비상경제점검회의(14:00 청와대)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "국무회의 겸 비상경제점검회의(14:00 청와대)",
-      "description": "14:00 기획처 일정으로 확인된 '국무회의 겸 비상경제점검회의(14:00 청와대)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)",
-      "description": "14:00 정치 일정으로 확인된 '산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "C 참고",
-      "grade_class": "grade-c"
-    },
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "한국경제 설명회 및 G7 재무장관회의",
-      "description": "- 재경부 일정으로 확인된 '한국경제 설명회 및 G7 재무장관회의' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "description": "14:00 · 대통령 / 22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)",
+      "time": "14:00",
+      "org": "대통령",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
       "time": "08:00",
-      "org": "공정위",
-      "title": "물가안정TF 회의(08:00 정부서울청사)",
+      "org": "주병기 위원장",
+      "title": "08:00 물가안정TF 회의(정부서울청사)",
       "relevance": ""
     },
     {
       "time": "08:00",
-      "org": "경제",
-      "title": "재정경제부, 민생물가 특별관리 관계장관 TF(08:00 정부서울청사)",
+      "org": "김종구 차관",
+      "title": "08:00 민생물가 특별관리 관계장관 TF 회의(서울)",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "재경부",
+      "title": "08:00 민생물가 특별관리 관계장관 TF(정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "이형훈 2차관",
+      "title": "08:00 민생물가 특별관리 관계장관 TF회의(세종)",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "김민재 차관",
+      "title": "08:00 민생물가 특별관리 관계장관TF 회의 참석(정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "류제명 2차관",
+      "title": "08:00 민생물가 특별관리 관계장관TF회의(정부서울청사)",
+      "relevance": ""
+    },
+    {
+      "time": "09:00",
+      "org": "재경부",
+      "title": "09:00 대외경제장관회의(정부서울청사)",
       "relevance": ""
     },
     {
       "time": "09:30",
-      "org": "정치",
+      "org": "우원식 국회의장",
       "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
       "relevance": ""
     },
     {
+      "time": "13:30",
+      "org": "노용석 1차관",
+      "title": "13:30 중동상황 현장방문(익산 새롬)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "권창준 차관",
+      "title": "14:00 중동전쟁 관련 플라스틱·섬유산업 간담회 참석(서울)",
+      "relevance": ""
+    },
+    {
       "time": "15:00",
-      "org": "경제",
-      "title": "남동일 공정위 부위원장, 업무점검회의(15:00 대회의실)",
+      "org": "재경부",
+      "title": "15:00 글로벌 AI 허브 비전선포식(서울용산구)",
+      "relevance": ""
+    },
+    {
+      "time": "16:15",
+      "org": "문신학 1차관",
+      "title": "16:15 한-EU 공급망산업정책대화(정부서울청사)",
       "relevance": ""
     }
   ],
@@ -1571,11 +1637,11 @@
       "today_source_title": "[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918",
       "today_source_published_at": "2026-05-21",
-      "today_parsed_schedule_count": 4,
+      "today_parsed_schedule_count": 12,
       "previous_source_file_date": "2026-05-20",
       "previous_source_title": "[오늘의 주요일정·20일] 이재명 대통령 9차 비상경제점검회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242880",
-      "previous_parsed_schedule_count": 6,
+      "previous_parsed_schedule_count": 9,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1601,7 +1667,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:22 KST",
+      "merged_at": "2026-05-26 10:27:20 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 6일 (수)",
     "previous_day_label": "5/4",
     "today_label": "5/6",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/4 기준 ADB 연차총회(우즈벡)."
+      "text": "주요 이해관계자 동향: 5/4 기준 관련 자료 찾지 못함."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 국무회의 겸 비상경제점검회의(10:00 청와대), 김민석 국무총리, 국무회의 겸 비상경제점검회의(10:00 청와대), 남동일 공정위 부위원장, 국무회의(10:00 서울), 우원식 국회의장, 중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실)."
+      "text": "금일 주요 일정: 10:00 국무회의 겸 비상경제점검회의(청와대), 중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실), 한반도평화외교자문위원회 결과보고회(12:00 의원회관 제2간담회의실), 김소희 의원실 등, 자발적 탄소시장(VCM) 활성화 전략(13:30 국회도서관 대강당)."
     },
     {
       "type": "news_trend",
@@ -1382,75 +1382,66 @@
       }
     }
   },
-  "issues": [
-    {
-      "category": "정책",
-      "category_class": "",
-      "title": "ADB 연차총회(우즈벡)",
-      "description": "- 재경부 일정으로 확인된 'ADB 연차총회(우즈벡)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
-    }
-  ],
+  "issues": [],
   "schedules": [
     {
       "time": "10:00",
       "org": "기획처",
-      "title": "국무회의 겸 비상경제점검회의(10:00 청와대)",
+      "title": "10:00 국무회의 겸 비상경제점검회의(청와대)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "주요일정",
-      "title": "김민석 국무총리, 국무회의 겸 비상경제점검회의(10:00 청와대)",
+      "org": "국회의장",
+      "title": "중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실)",
       "relevance": ""
     },
     {
-      "time": "10:00",
-      "org": "경제",
-      "title": "남동일 공정위 부위원장, 국무회의(10:00 서울)",
+      "time": "12:00",
+      "org": "우원식 국회의장, 중동전쟁",
+      "title": "한반도평화외교자문위원회 결과보고회(12:00 의원회관 제2간담회의실)",
       "relevance": ""
     },
     {
-      "time": "10:00",
-      "org": "주요일정",
-      "title": "우원식 국회의장, 중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "주요일정",
-      "title": "이재명 대통령, 제20회 국무회의 겸 제7차 비상경제점검회의(10:00 청와대 본관)",
+      "time": "13:30",
+      "org": "의원실 세미나",
+      "title": "김소희 의원실 등, 자발적 탄소시장(VCM) 활성화 전략(13:30 국회도서관 대강당)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "중기부",
-      "title": "중동상황 현장방문(14:00 대구 케이아이비)",
+      "org": "노용석 1차관",
+      "title": "14:00 중동상황 현장방문(대구 케이아이비)",
       "relevance": ""
     },
     {
-      "time": "-",
-      "org": "공정위",
+      "time": "14:00",
+      "org": "의원실 세미나",
+      "title": "서왕진 의원실 등, 탄소중립기본법 개정, 공론화 결과를 어떻게 반영할 것인가(14:00 의원회관 제8간담회의실)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "우원식 국회의장, 중동전쟁",
+      "title": "외투기업 철수와 집단해고 3년, 노동자의 삶과 고용을 묻다 토론회(14:00 본관 220호)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "의원실 세미나",
+      "title": "이용선 의원실 등, 남북 에너지 공영을 어떻게 추진할 것인가?: 국회 남북 에너지 토론회(14:00 의원회관 제2간담회의실)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "의원실 세미나",
+      "title": "정혜경 의원실 등, 시민주도 지역에너지 전환을 위한 국회 정책토론회(14:00 의원회관 제1간담회의실)",
+      "relevance": ""
+    },
+    {
+      "time": "시간미정",
+      "org": "공정위 주병기 위원장",
       "title": "국제경쟁네트워크(ICN) 연차총회 참석",
-      "relevance": ""
-    },
-    {
-      "time": "-",
-      "org": "산업",
-      "title": "김정관 산업부 장관, 국외 출장(5~10일·캐나다·미국)",
-      "relevance": ""
-    },
-    {
-      "time": "-",
-      "org": "문화",
-      "title": "김정관 산업통상부 장관 방미(미국 워싱턴DC)",
-      "relevance": ""
-    },
-    {
-      "time": "-",
-      "org": "재경부",
-      "title": "이형일 1차관",
       "relevance": ""
     }
   ],
@@ -1571,9 +1562,12 @@
       "previous_source_file_date": "2026-05-04",
       "previous_source_title": "[오늘의 주요일정·4일] 우원식 국회의장 주재 기관장 업무보고",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242478",
-      "previous_parsed_schedule_count": 1,
+      "previous_parsed_schedule_count": 0,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
+    },
+    "validation": {
+      "previous_schedule_parse_failed": true
     },
     "news": {
       "source_file": "data/news/2026-05-06.json",
@@ -1597,7 +1591,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:18 KST",
+      "merged_at": "2026-05-26 10:27:15 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 14일 (목)",
     "previous_day_label": "5/13",
     "today_label": "5/14",
-    "generated_at": "2026-05-22 17:30 KST",
+    "generated_at": "2026-05-26 10:27 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,11 +17,11 @@
   "summary": [
     {
       "type": "stakeholder",
-      "text": "주요 이해관계자 동향: 5/13 기준 기획처, 비상경제본부회의(08:00), 재경부, 일자리 TF(08:00 정부서울청사), 공정위, 비상경제본부회의(08:30 세종청사), 비상경제본부회의(08:30 정부서울청사)."
+      "text": "주요 이해관계자 동향: 5/13 기준 07:45 ESS 생산 및 실증 현장방문(계룡·대전), 08:00 비상경제본부회의, 08:30 비상경제본부회의 참석(서울)."
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 재경부, 시장상황점검회의(08:00), 정무위원회 법안심사제1소위원회(09:20 본관 604호), 공정위, 정무위 전체회의(10:00 국회), 권대영 금융부위원장, 정무위 전체회의(10:00 국회)."
+      "text": "금일 주요 일정: 08:00 시장상황점검회의, 정무위원회 법안심사제1소위원회(09:20 본관 604호), 10:00 정무위 전체회의(10:00 국회), 10:00 정무위 전체회의(국회)."
     },
     {
       "type": "news_trend",
@@ -1384,125 +1384,143 @@
   },
   "issues": [
     {
-      "category": "정책",
+      "category": "에너지",
       "category_class": "",
-      "title": "기획처, 비상경제본부회의(08:00)",
-      "description": "08:00 확인 일정으로 확인된 '기획처, 비상경제본부회의(08:00)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "07:45 ESS 생산 및 실증 현장방문(계룡·대전)",
+      "description": "07:45 · 김성환 장관 / 07:45 ESS 생산 및 실증 현장방문(계룡·대전)",
+      "time": "07:45",
+      "org": "김성환 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "재경부, 일자리 TF(08:00 정부서울청사)",
-      "description": "08:00 재경부 일정으로 확인된 '재경부, 일자리 TF(08:00 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:00 비상경제본부회의",
+      "description": "08:00 · 기획처 / 08:00 비상경제본부회의",
+      "time": "08:00",
+      "org": "기획처",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "공정위, 비상경제본부회의(08:30 세종청사)",
-      "description": "08:30 공정위 일정으로 확인된 '공정위, 비상경제본부회의(08:30 세종청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의 참석(서울)",
+      "description": "08:30 · 김민재 차관 / 08:30 비상경제본부회의 참석(서울)",
+      "time": "08:30",
+      "org": "김민재 차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "비상경제본부회의(08:30 정부서울청사)",
-      "description": "08:30 정부 일정으로 확인된 '비상경제본부회의(08:30 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의(국무총리실)",
+      "description": "08:30 · 조현 장관 / 08:30 비상경제본부회의(국무총리실)",
+      "time": "08:30",
+      "org": "조현 장관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "산업통상부, 비상경제본부회의(08:30 정부서울청사)",
-      "description": "08:30 정부 일정으로 확인된 '산업통상부, 비상경제본부회의(08:30 정부서울청사)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의(세종청사)",
+      "description": "08:30 · 공정위 주병기 위원장 / 08:30 비상경제본부회의(세종청사)",
+      "time": "08:30",
+      "org": "공정위 주병기 위원장",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "외교부, 비상경제본부회의(08:30 국무총리실)",
-      "description": "08:30 국무총리 일정으로 확인된 '외교부, 비상경제본부회의(08:30 국무총리실)' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다.",
-      "grade": "B 간접",
-      "grade_class": "grade-b"
+      "title": "08:30 비상경제본부회의(정부서울청사)",
+      "description": "08:30 · 이형일 1차관 / 08:30 비상경제본부회의(정부서울청사)",
+      "time": "08:30",
+      "org": "이형일 1차관",
+      "links": [],
+      "grade": "",
+      "grade_class": ""
     }
   ],
   "schedules": [
     {
       "time": "08:00",
       "org": "재경부",
-      "title": "재경부, 시장상황점검회의(08:00)",
+      "title": "08:00 시장상황점검회의",
       "relevance": ""
     },
     {
       "time": "09:20",
-      "org": "정무위",
+      "org": "국회",
       "title": "정무위원회 법안심사제1소위원회(09:20 본관 604호)",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "공정위",
-      "title": "공정위, 정무위 전체회의(10:00 국회)",
+      "org": "권오을 장관",
+      "title": "10:00 정무위 전체회의(10:00 국회)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "공정위 주병기 위원장",
+      "title": "10:00 정무위 전체회의(국회)",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "이형일 1차관",
+      "title": "10:00 중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
       "relevance": ""
     },
     {
       "time": "10:00",
       "org": "국회",
-      "title": "권대영 금융부위원장, 정무위 전체회의(10:00 국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "금융위",
-      "title": "금융위, 정무위 전체회의(10:00 국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "국회",
-      "title": "보훈부, 정무위 전체회의(10:00 국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "재경부",
-      "title": "재경부, 중동전쟁 물가대응팀 회의 겸 물가관계차관회의(10:00)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "정무위",
       "title": "정무위원회 전체회의(10:00 본관 604호)",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "확인",
-      "title": "산업통상부, 원전수출전략협의회(14:00 무보)",
+      "org": "김하균 세종시장 권한대행",
+      "title": "14:00 2026년 제2차 기후위기대응위원회 회의(집현실(517호))",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "확인",
-      "title": "산업통상부, 자동차 생태계 전환 협의체 출범식(14:00 자동차산업회관)",
+      "org": "김민재 차관",
+      "title": "14:00 고유가 피해지원금 2차 지급준비 현장방문(충남 공주 옥룡동행정복지센터)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "홍지선 2차관",
+      "title": "14:00 아스콘 수급상황 점검회의(세종)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김정관 장관",
+      "title": "14:00 원전수출전략협의회(무보)",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김영록 전남지사",
+      "title": "14:00 재생e 확산을 위한 전력계통 혁신대책 보고회(정약용실)",
       "relevance": ""
     },
     {
       "time": "15:00",
       "org": "재경부",
-      "title": "재경부, 주한캐나다대사 면담(15:00)",
-      "relevance": ""
-    },
-    {
-      "time": "시간미정",
-      "org": "산업부",
-      "title": "여한구 산업부 통상교섭본부장, 국외출장(10~15일 EU·멕시코)",
+      "title": "15:00 주한캐나다대사 면담",
       "relevance": ""
     }
   ],
@@ -1623,7 +1641,7 @@
       "previous_source_file_date": "2026-05-13",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242723",
-      "previous_parsed_schedule_count": 12,
+      "previous_parsed_schedule_count": 11,
       "parser_version": "build_report_draft_from_schedule.py v2.1-prevday-separated",
       "needs_review": true
     },
@@ -1649,7 +1667,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-22 17:30:21 KST",
+      "merged_at": "2026-05-26 10:27:18 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
