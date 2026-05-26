@@ -49,6 +49,18 @@ def check(path: Path) -> list[str]:
 
     if today_src and prev_src and prev_src == today_src:
         errors.append(f'{path}: today_source_file_date와 previous_source_file_date가 동일함: {today_src}')
+
+    # 조간신문 트렌드는 매일 발행 기사 기반으로 반드시 존재해야 함.
+    # 기사 0건/fallback은 정상 리포트가 아니므로 배포 전 실패 처리.
+    news = data.get('news_trend', {}) if isinstance(data.get('news_trend'), dict) else {}
+    articles = news.get('articles', []) if isinstance(news.get('articles'), list) else []
+    valid_articles = [a for a in articles if isinstance(a, dict) and a.get('title') and a.get('url')]
+    if not valid_articles:
+        errors.append(f'{path}: 조간 신문 트렌드 대표 기사 0건')
+    summary_blob = str(news.get('summary', '')) + ' ' + ' '.join(str(a.get('title','')) for a in valid_articles if isinstance(a, dict))
+    bad_news_phrases = ['찾지 못했습니다', '대표 기사 미확인', '주요 보도 없음', '자동 수집된 대표 기사 없음']
+    if any(p in summary_blob for p in bad_news_phrases):
+        errors.append(f'{path}: 조간 fallback 문구 잔존')
     return errors
 
 def main() -> int:
