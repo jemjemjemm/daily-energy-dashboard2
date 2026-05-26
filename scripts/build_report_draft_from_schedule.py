@@ -389,16 +389,16 @@ def guess_relevance(org: str, title: str) -> str:
     combined = f"{org} {title}"
 
     if any(word in combined for word in ["유가", "석유", "주유소", "정유", "기름", "유류세"]):
-        return "석유제품 가격·정유업계 현안과 직접 연결될 수 있는 일정입니다. 실제 발언·자료 확인 후 정책 리스크를 점검할 필요가 있습니다."
+        return "석유제품 가격·정유업계 현안과 직접 연결 가능. 실제 발언·자료 확인 후 정책 리스크 점검 필요."
 
     if any(word in combined for word in ["산업", "에너지", "전력", "LNG", "가스", "수소", "ESS", "기후"]):
-        return "에너지·산업 정책 관련 일정입니다. 정유·석화·LNG 업계 영향은 구체 발언 및 후속 자료 확인이 필요합니다."
+        return "에너지·산업 정책 관련 일정. 정유·석화·LNG 업계 영향은 구체 발언 및 후속 자료 확인 필요."
 
     if any(word in combined for word in ["국회", "위원회", "소위", "전체회의", "법안"]):
-        return "국회 일정입니다. 에너지 비용, 산업 지원, 석유제품 가격 관련 질의가 나올 경우 업계 모니터링이 필요합니다."
+        return "국회 일정. 에너지 비용, 산업 지원, 석유제품 가격 관련 질의 시 업계 모니터링 필요."
 
     if any(word in combined for word in ["금리", "환율", "공급망", "재정", "경제", "비상경제"]):
-        return "거시경제·공급망 관련 일정입니다. 원유 도입비용, 환율, 물가 대응과의 간접 관련성을 확인할 필요가 있습니다."
+        return "거시경제·공급망 관련 일정. 원유 도입비용, 환율, 물가 대응과의 간접 관련성 확인 필요."
 
     return DEFAULT_RELEVANCE
 
@@ -475,17 +475,31 @@ def parse_schedule_items(body: str, max_items: int) -> List[Dict[str, str]]:
         if len(items) >= max_items:
             break
 
-    # 중복 제거: 기관만 다르고 같은 회의가 반복되는 경우가 많아 제목 중심으로 제거
+    # 중복 제거: 기관·표기가 달라도 같은 회의가 반복되는 경우가 많아 회의명 중심으로 제거
+    def dedupe_key(item: Dict[str, str]) -> tuple[str, str]:
+        title = re.sub(r"\s+", "", item.get("title", ""))
+        title = re.sub(r"^(기획처|재정경제부|복지부|중기부|행안부|공정거래위원회|공정위|산업부|기후부|노동부|농식품부|대통령실|국무총리),?", "", title)
+        title = re.sub(r"(참석|주재|개최|브리핑|모두발언|현장방문)$", "", title)
+        if "민생물가" in title and "관계장관" in title and "TF" in title.upper():
+            title = "민생물가특별관리관계장관TF"
+        elif "국무회의" in title and "비상경제" in title:
+            title = "국무회의겸비상경제점검회의"
+        elif "국무회의" in title:
+            title = "국무회의"
+        elif "비상경제본부" in title and "경제관계장관회의" in title:
+            title = "비상경제본부회의겸경제관계장관회의"
+        elif "경제관계장관회의" in title:
+            title = "경제관계장관회의"
+        # 같은 회의가 여러 기관 일정에 중복 기재되는 경우 시간 차이가 있어도 1건만 노출
+        no_time_topics = ("민생물가특별관리관계장관TF", "국무회의", "국무회의겸비상경제점검회의", "경제관계장관회의")
+        if title in no_time_topics:
+            return ("", title)
+        return (item.get("time", ""), title[:70])
+
     seen = set()
     deduped = []
     for item in items:
-        norm_title = re.sub(r"\s+", "", item["title"])
-        norm_title = re.sub(r"^(기획처|재정경제부|복지부|중기부|행안부|공정거래위원회|공정위|산업부|기후부|노동부|농식품부),?", "", norm_title)
-        if "국무회의" in norm_title and "비상경제" in norm_title:
-            norm_title = "국무회의겸비상경제점검회의"
-        if "비상경제본부" in norm_title and "경제관계장관회의" in norm_title:
-            norm_title = "비상경제본부회의겸경제관계장관회의"
-        key = (item.get("time", ""), norm_title[:70])
+        key = dedupe_key(item)
         if key in seen:
             continue
         seen.add(key)
@@ -583,7 +597,7 @@ def update_sources(base_report: Dict[str, Any], schedule_data: Dict[str, Any]) -
     quality["sources"] = sources
 
     notes = quality.setdefault("quality_notes", [])
-    notes.append("일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.")
+    notes.append("일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.")
 
 
 def build_report_draft(
