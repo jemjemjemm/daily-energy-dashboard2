@@ -75,6 +75,7 @@ RELEVANT_KEYWORDS = [
 EXCLUDE_KEYWORDS = [
     "지원유세", "후보", "선거", "시장 방문", "체육", "야구", "농구", "테니스", "골프",
     "문화", "축제", "공연", "전시", "스승의날", "어린이", "도박문제", "한센인의 날",
+    "부동산관계장관회의", "계란 수급", "양파 수급",
 ]
 
 
@@ -153,7 +154,11 @@ def normalize_schedule_item(item: Dict[str, Any]) -> Optional[Dict[str, str]]:
 
 def is_relevant_schedule_item(item: Dict[str, str]) -> bool:
     combined = f"{item.get('org','')} {item.get('title','')} {item.get('relevance','')}"
-    if any(word in combined for word in EXCLUDE_KEYWORDS) and not any(word in combined for word in RELEVANT_KEYWORDS):
+    # 선거·농축산물·부동산 등은 단어상 '수급/전력/시장'이 섞여도 본 보고서 대상에서 제외
+    hard_exclude = ["지원유세", "후보", "선거", "전력노조", "계란 수급", "양파 수급", "부동산관계장관회의"]
+    if any(word in combined for word in hard_exclude):
+        return False
+    if any(word in combined for word in EXCLUDE_KEYWORDS) and not any(word in combined for word in ["석유", "정유", "석유화학", "LNG", "가스", "에너지", "전력기자재", "유가", "유류세"]):
         return False
     return any(word in combined for word in RELEVANT_KEYWORDS)
 
@@ -170,28 +175,39 @@ def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[s
         title = item.get('title', '')
         time = item.get('time', '')
         combined = f"{org} {title}"
-        if any(k in combined for k in ["석유", "정유", "주유소", "유가", "유류세"]):
-            category, grade, cls = "정유", "A 직접", "grade-a"
+        if any(k in combined for k in ["석유", "정유", "주유소", "유가", "유류세", "석유화학"]):
+            category = "에너지·산업"
         elif any(k in combined for k in ["LNG", "가스", "에너지", "전력", "원전", "ESS", "기후"]):
-            category, grade, cls = "에너지", "B 간접", "grade-b"
+            category = "에너지"
         elif any(k in combined for k in ["물가", "공급망", "비상경제", "재경부", "기재부", "공정위"]):
-            category, grade, cls = "정책", "B 간접", "grade-b"
+            category = "정책"
+        elif any(k in combined for k in ["국회", "위원회"]):
+            category = "국회"
         else:
-            category, grade, cls = "정책", "C 참고", "grade-c"
-        time_text = f"{time} " if time and time != "시간미정" else ""
-        desc = f"{time_text}{org} 일정으로 확인된 '{title}' 항목입니다. 세부 발언이나 후속 보도자료가 확인되지 않은 경우, 보고서에는 일정명 이상의 해석을 추가하지 않습니다."
+            category = "정책"
+        meta = " · ".join([x for x in [time if time != "시간미정" else "", org] if x])
+        desc = f"{meta} / {title}" if meta else title
         cards.append({
             "category": category,
             "category_class": "",
             "title": title,
             "description": desc,
-            "grade": grade,
-            "grade_class": cls,
+            "time": time,
+            "org": org,
+            "links": [],
+            "grade": "",
+            "grade_class": "",
         })
     return cards
 
 
 def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: int) -> List[Dict[str, str]]:
+    # 세이프타임즈 items는 text만 저장되는 경우가 많아 직전 기관 헤더(▲ 산업부 등)가 사라진다.
+    # 따라서 원문 body를 우선 파싱해 기관 문맥을 살리고, body 파싱이 실패할 때만 items를 fallback으로 사용한다.
+    parsed = parse_schedule_items(source_body(schedule_data), max_items=max_items * 30)
+    if parsed:
+        return filter_relevant_items(parsed, max_items=max_items)
+
     structured = []
     for raw_item in schedule_data.get("items") or []:
         if isinstance(raw_item, dict):
@@ -199,11 +215,7 @@ def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: i
             if normalized:
                 structured.append(normalized)
 
-    if structured:
-        return filter_relevant_items(structured, max_items=max_items)
-
-    parsed = parse_schedule_items(source_body(schedule_data), max_items=max_items * 3)
-    return filter_relevant_items(parsed, max_items=max_items)
+    return filter_relevant_items(structured, max_items=max_items)
 
 
 def parse_args() -> argparse.Namespace:
@@ -391,45 +403,89 @@ def guess_relevance(org: str, title: str) -> str:
     return DEFAULT_RELEVANCE
 
 
+def normalize_context_org(value: str) -> str:
+    value = clean_title(value)
+    if not value:
+        return "확인"
+    if "대통령" in value:
+        return "대통령"
+    if "국무총리" in value or value == "총리":
+        return "국무총리"
+    aliases = {
+        "공정거래위원회": "공정위",
+        "기획재정부": "기재부",
+        "재정경제부": "재경부",
+        "기획예산처": "기획처",
+        "기후에너지환경부": "기후부",
+        "산업통상부": "산업부",
+        "산업통상자원부": "산업부",
+    }
+    for k, v in aliases.items():
+        if k in value:
+            return v
+    return value[:14]
+
+
 def parse_schedule_items(body: str, max_items: int) -> List[Dict[str, str]]:
     lines = split_body_lines(body)
     items: List[Dict[str, str]] = []
+    current_org = ""
 
     for line in lines:
-        # 일정 기사에는 날짜/분류 제목 줄이 섞일 수 있으므로 시간 또는 주요 기관 키워드가 있는 줄 중심으로 추출
-        has_time = any(pattern.search(line) for pattern in TIME_PATTERNS)
-        has_org = any(keyword in line for keyword in ORG_KEYWORDS)
-        has_schedule_word = any(word in line for word in ["회의", "간담회", "브리핑", "토론회", "방문", "행사", "면담", "발표", "공개"])
+        clean_line = normalize_line(line)
+        if not clean_line:
+            continue
 
+        # 분야 헤더는 제외
+        if re.fullmatch(r"\[.+\]", clean_line):
+            continue
+
+        # 세이프타임즈 원문은 '▲ 산업부' 다음 줄들에 일정이 이어지는 구조가 많다.
+        # 이 문맥을 저장해야 '정치/경제/확인/제23회' 같은 잘못된 기관명이 줄어든다.
+        if clean_line.startswith("▲"):
+            current_org = normalize_context_org(clean_line)
+            continue
+
+        has_time = any(pattern.search(clean_line) for pattern in TIME_PATTERNS)
+        has_org = any(keyword in clean_line for keyword in ORG_KEYWORDS)
+        has_schedule_word = any(word in clean_line for word in ["회의", "간담회", "브리핑", "토론회", "방문", "행사", "면담", "발표", "공개", "점검"])
         if not (has_time or has_org or has_schedule_word):
             continue
 
-        time_text, without_time = extract_time(line)
-        org, title = extract_org(without_time)
+        time_text, without_time = extract_time(clean_line)
+        if current_org:
+            org = current_org
+            title = clean_line
+        else:
+            org, title = extract_org(without_time)
 
-        title = normalize_line(title)
-        if not title:
+        title = clean_title(title)
+        if not title or is_section_header_only(title):
             continue
-
-        # 너무 긴 본문 문장 전체가 title로 들어가지 않게 제한
-        if len(title) > 120:
-            title = title[:117] + "..."
+        if len(title) > 110:
+            title = title[:107] + "..."
 
         items.append({
             "time": time_text or "시간미정",
-            "org": org,
+            "org": org or "확인",
             "title": title,
-            "relevance": guess_relevance(org, title),
+            "relevance": "",
         })
 
         if len(items) >= max_items:
             break
 
-    # 중복 제거
+    # 중복 제거: 기관만 다르고 같은 회의가 반복되는 경우가 많아 제목 중심으로 제거
     seen = set()
     deduped = []
     for item in items:
-        key = (item["time"], item["org"], item["title"])
+        norm_title = re.sub(r"\s+", "", item["title"])
+        norm_title = re.sub(r"^(기획처|재정경제부|복지부|중기부|행안부|공정거래위원회|공정위|산업부|기후부|노동부|농식품부),?", "", norm_title)
+        if "국무회의" in norm_title and "비상경제" in norm_title:
+            norm_title = "국무회의겸비상경제점검회의"
+        if "비상경제본부" in norm_title and "경제관계장관회의" in norm_title:
+            norm_title = "비상경제본부회의겸경제관계장관회의"
+        key = (item.get("time", ""), norm_title[:70])
         if key in seen:
             continue
         seen.add(key)
@@ -461,7 +517,7 @@ def update_summary(
     # 중요: 주요 이해관계자 동향/이슈는 기준일 전일(또는 직전 영업일) 일정에서,
     # 금일 주요 일정은 기준일 일정에서 각각 만든다. 같은 데이터를 양쪽에 복사하지 않는다.
     if previous_items:
-        previous_titles = ", ".join(item["title"] for item in previous_items[:4])
+        previous_titles = ", ".join(item["title"] for item in previous_items[:3])
         stakeholder_text = f"주요 이해관계자 동향: {previous_label} 기준 {previous_titles}."
     else:
         stakeholder_text = f"주요 이해관계자 동향: {previous_label} 기준 관련 자료 찾지 못함."
@@ -479,7 +535,7 @@ def update_summary(
         news_titles = ", ".join(a.get("title", "") for a in valid_articles[:3])
         news_text = f"조간 보도: {news_titles}."
     else:
-        news_text = "조간 보도: 자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요."
+        news_text = "조간 보도: 기준일 조간 기준 대표 기사 미확인."
 
     base_report["summary"] = [
         {"type": "stakeholder", "text": stakeholder_text},
@@ -544,7 +600,7 @@ def build_report_draft(
     report["summary"] = []
     report["issues"] = []
     report["schedules"] = []
-    report["news_trend"] = {"summary": "자동 수집된 대표 기사 없음. 별도 기사 후보가 제공될 경우 반영 필요.", "articles": []}
+    report["news_trend"] = {"summary": "기준일 조간 기준 대표 기사 미확인.", "articles": []}
 
     today_items = schedule_items_from_json_or_body(schedule_data, max_items=max_items)
     previous_items: List[Dict[str, str]] = []
