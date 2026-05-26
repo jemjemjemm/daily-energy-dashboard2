@@ -36,7 +36,7 @@ HEADER_DATE_RE = re.compile(r'<div class="header-date">\s*(.*?)\s*</div>', re.I 
 BAD_HTML_PHRASES = [
     "자동 추출된 일정 항목이 없습니다",
     "본문 구조 확인 및 수동 검수가 필요합니다",
-    "세이프타임즈 '' 원문",
+    "세이프타임즈",
     "원문 자동 매칭 실패",
     "주요일정 원문 데이터 미확보",
     "원문 데이터 없음",
@@ -45,6 +45,17 @@ BAD_HTML_PHRASES = [
     "가격 중심 자동생성",
     "Data 없음",
     "No data",
+    "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다",
+    "조간 기사 후보를 찾지 못했습니다",
+    "자동 수집된 대표 기사 없음",
+    "대표 기사 데이터가 아직 없습니다",
+    "대표 기사 미확인",
+    "기준일 조간 기준 주요 보도 없음",
+    "기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인",
+    "일정 관련성 평가는",
+    "A 직접",
+    "B 간접",
+    "C 참고",
 ]
 
 
@@ -82,11 +93,16 @@ def report_json_allows_index(html_path: Path) -> bool:
     if not target or today_src != target or not prev_src or prev_src == today_src:
         return False
 
-    issues = data.get("issues", []) if isinstance(data.get("issues"), list) else []
-    schedules = data.get("schedules", []) if isinstance(data.get("schedules"), list) else []
     news = data.get("news_trend", {}) if isinstance(data.get("news_trend"), dict) else {}
     articles = news.get("articles", []) if isinstance(news.get("articles"), list) else []
     valid_articles = [a for a in articles if isinstance(a, dict) and a.get("title") and a.get("url")]
+    # 조간 신문 트렌드는 매일 존재해야 하는 필수 섹션으로 본다.
+    # 기사 0건 리포트는 index에 올리지 않는다.
+    if not valid_articles:
+        return False
+
+    issues = data.get("issues", []) if isinstance(data.get("issues"), list) else []
+    schedules = data.get("schedules", []) if isinstance(data.get("schedules"), list) else []
     return bool(issues or schedules or valid_articles)
 
 
