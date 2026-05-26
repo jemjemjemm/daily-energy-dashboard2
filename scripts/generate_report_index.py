@@ -4,11 +4,12 @@
 generate_report_index.py
 
 Build docs/report-index.json from docs/reports/*.html for the dashboard.
-This file is intentionally tolerant of both the old report template
-("Daily Issue Report") and the new report template ("Daily 유가 동향").
 
-Required compatibility:
-  python scripts/generate_report_index.py --reports-dir docs/reports --out docs/report-index.json
+핵심 수정
+- docs/reports/YYYY-MM-DD.html 파일이 실제로 존재하면 기본적으로 인덱스에 포함한다.
+- 본문에 '데이터 확인 필요' 같은 문구가 일부 포함되어도 전체 리포트를 제외하지 않는다.
+- 기존 대시보드 호환을 위해 schemaVersion/count/latestDate/availableDates/reports 구조를 유지한다.
+- docs/report-index.json 생성 시 public/report-index.json도 함께 동기화한다.
 """
 from __future__ import annotations
 
@@ -16,23 +17,16 @@ import argparse
 import json
 import re
 import tempfile
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 TITLE_RE = re.compile(r"<title[^>]*>\s*(.*?)\s*</title>", re.I | re.S)
-HEADER_DATE_RE = re.compile(r"class=[\"'][^\"']*header-date[^\"']*[\"'][^>]*>\s*(.*?)\s*</", re.I | re.S)
-
-BAD_HTML_PHRASES = [
-    "자동 추출된 일정 항목이 없습니다",
-    "본문 구조 확인 및 수동 검수가 필요합니다",
-    "원문 자동 매칭 실패",
-    "주요일정 원문 데이터 미확보",
-    "원문 데이터 없음",
-    "가격 데이터 중심 리포트",
-    "가격 중심 자동생성",
-]
+HEADER_DATE_RE = re.compile(
+    r"class=[\"'][^\"']*header-date[^\"']*[\"'][^>]*>\s*(.*?)\s*</",
+    re.I | re.S,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -42,14 +36,18 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--reports-dir", default="docs/reports", help="HTML 리포트 폴더")
     parser.add_argument("--out", default="docs/report-index.json", help="출력 JSON 파일")
-    parser.add_argument("--strict-json", action="store_true", help="data/reports JSON 검증까지 수행")
+    # 기존 workflow 호환용. 더 이상 인덱스 제외 조건으로 쓰지 않음.
+    parser.add_argument("--strict-json", action="store_true", help="호환 옵션: 현재는 HTML 존재 여부 중심으로 인덱싱")
     return parser.parse_args()
 
 
 def strip_tags(value: str) -> str:
-    value = re.sub(r"<[^>]*>", "", value or "")
+    value = re.sub(r"<script\b[^<]*(?:(?!</script>)<[^<]*)*</script>", "", value or "", flags=re.I | re.S)
+    value = re.sub(r"<style\b[^<]*(?:(?!</style>)<[^<]*)*</style>", "", value, flags=re.I | re.S)
+    value = re.sub(r"<[^>]*>", " ", value)
     value = (
-        value.replace("&amp;", "&")
+        value.replace("&nbsp;", " ")
+        .replace("&amp;", "&")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
         .replace("&quot;", '"')
@@ -59,117 +57,72 @@ def strip_tags(value: str) -> str:
 
 
 def now_kst_text() -> str:
-    kst = timezone(timedelta(hours=9))
-    return datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S KST")
+    return datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d %H:%M:%S KST")
 
 
-def atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
+def atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    text = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
     with tempfile.NamedTemporaryFile(
-        "w",
-        encoding="utf-8",
-        dir=str(path.parent),
-        delete=False,
-        prefix=f".{path.name}.",
-        suffix=".tmp",
+        "w", encoding="utf-8", dir=str(path.parent), delete=False,
+        prefix=f".{path.name}.", suffix=".tmp",
     ) as tmp:
         tmp.write(text)
         tmp_path = Path(tmp.name)
     tmp_path.replace(path)
 
 
-def has_bad_phrase(text: str) -> bool:
-    return any(phrase in text for phrase in BAD_HTML_PHRASES)
-
-
-def has_required_structure(text: str) -> bool:
-    if not text:
-        return False
-    has_title = (
-        "Daily 유가 동향" in text
-        or "Daily Issue Report" in text
-        or "Daily_유가_동향" in text
-    )
-    has_summary = "Summary" in text
-    has_price = "유가 동향" in text or "원유 가격" in text or "석유제품" in text
-    has_news = "조간 신문 트렌드" in text or "조간 보도" in text or "대표 기사" in text
-    has_layout = "section" in text or "container" in text or "report-section" in text
-    return has_title and has_summary and has_price and has_news and has_layout
-
-
-def has_article_block(text: str) -> bool:
-    # The new template uses news-link; older versions use news-item/article cards.
-    if "news-link" in text or "news-item" in text or "대표 기사" in text:
-        return True
-    return bool(re.search(r"<a[^>]+href=[\"']https?://", text, re.I | re.S))
-
-
-def infer_report_json_path(html_path: Path) -> Path:
-    date_match = DATE_RE.search(html_path.name)
-    date = date_match.group(1) if date_match else html_path.stem
-    return Path("data/reports") / f"{date}.report.json"
-
-
-def report_json_allows_index(html_path: Path) -> bool:
-    json_path = infer_report_json_path(html_path)
-    if not json_path.exists():
-        return False
+def display_date_from_file(date_text: str, html_text: str) -> str:
+    header_match = HEADER_DATE_RE.search(html_text)
+    if header_match:
+        header_date = strip_tags(header_match.group(1))
+        if header_date:
+            return header_date
     try:
-        data = json.loads(json_path.read_text(encoding="utf-8"))
-    except Exception:
-        return False
-    date_match = DATE_RE.search(html_path.name)
-    target = date_match.group(1) if date_match else ""
-    if not target:
-        return False
-    auto = data.get("automation") if isinstance(data.get("automation"), dict) else {}
-    safe = auto.get("safetimes") if isinstance(auto.get("safetimes"), dict) else {}
-    today_src = safe.get("today_source_file_date")
-    prev_src = safe.get("previous_source_file_date")
-    if today_src and today_src != target:
-        return False
-    if today_src and prev_src and today_src == prev_src:
-        return False
-    news = data.get("news_trend") if isinstance(data.get("news_trend"), dict) else {}
-    articles = news.get("articles") if isinstance(news.get("articles"), list) else []
-    valid_articles = [a for a in articles if isinstance(a, dict) and a.get("title") and a.get("url")]
-    issues = data.get("issues") if isinstance(data.get("issues"), list) else []
-    schedules = data.get("schedules") if isinstance(data.get("schedules"), list) else []
-    return bool(valid_articles or issues or schedules)
+        d = datetime.strptime(date_text, "%Y-%m-%d")
+        weekdays = "월화수목금토일"
+        return f"{d.year}년 {d.month}월 {d.day}일 ({weekdays[d.weekday()]})"
+    except ValueError:
+        return date_text
 
 
-def is_valid_report_html(text: str) -> Tuple[bool, str]:
-    if not text:
-        return False, "empty_html"
-    if has_bad_phrase(text):
-        return False, "bad_phrase"
-    if not has_required_structure(text):
-        return False, "missing_required_structure"
-    if not has_article_block(text):
-        return False, "missing_article_block"
-    return True, "ok"
+def title_from_file(date_text: str, html_text: str) -> str:
+    title_match = TITLE_RE.search(html_text)
+    if title_match:
+        title = strip_tags(title_match.group(1))
+        if title:
+            return title
+    return f"Daily 유가 동향 — {date_text}"
 
 
-def read_report_meta(html_path: Path, *, strict_json: bool = False) -> Tuple[Optional[Dict[str, Any]], Optional[str]]:
+def is_probably_report(html_text: str) -> bool:
+    # 생성 템플릿이 몇 차례 바뀌었으므로 과도한 구조 검증을 하지 않는다.
+    if not html_text or len(html_text.strip()) < 200:
+        return False
+    lowered = html_text.lower()
+    has_html_shape = "<html" in lowered or "<section" in lowered or "class=\"section" in lowered or "class='section" in lowered
+    has_report_word = any(token in html_text for token in ("Daily 유가 동향", "유가 동향", "조간 신문 트렌드", "Summary"))
+    return has_html_shape or has_report_word
+
+
+def read_report_meta(html_path: Path) -> tuple[dict[str, Any] | None, str | None]:
     date_match = DATE_RE.search(html_path.name)
     if not date_match:
         return None, "missing_date_in_filename"
-    date = date_match.group(1)
-    text = html_path.read_text(encoding="utf-8", errors="ignore")
-    ok, reason = is_valid_report_html(text)
-    if not ok:
-        return None, reason
-    if strict_json and not report_json_allows_index(html_path):
-        return None, "report_json_validation_failed"
-    title_match = TITLE_RE.search(text)
-    header_date_match = HEADER_DATE_RE.search(text)
-    title = strip_tags(title_match.group(1)) if title_match else f"Daily 유가 동향 — {date}"
-    display_date = strip_tags(header_date_match.group(1)) if header_date_match else date
+
+    date_text = date_match.group(1)
+    try:
+        html_text = html_path.read_text(encoding="utf-8", errors="ignore")
+    except Exception as exc:
+        return None, f"read_failed:{exc}"
+
+    if not is_probably_report(html_text):
+        return None, "not_report_html"
+
     return {
-        "date": date,
-        "displayDate": display_date,
-        "title": title,
+        "date": date_text,
+        "displayDate": display_date_from_file(date_text, html_text),
+        "title": title_from_file(date_text, html_text),
         "url": f"reports/{html_path.name}",
         "status": "발간",
         "fileName": html_path.name,
@@ -177,9 +130,7 @@ def read_report_meta(html_path: Path, *, strict_json: bool = False) -> Tuple[Opt
     }, None
 
 
-def mirror_to_public_if_needed(out_path: Path, payload: Dict[str, Any]) -> None:
-    # Some older dashboard variants probe public/report-index.json. Keep it in sync
-    # only when the canonical output is docs/report-index.json.
+def mirror_to_public_if_needed(out_path: Path, payload: dict[str, Any]) -> None:
     normalized = out_path.as_posix().replace("\\", "/")
     if normalized == "docs/report-index.json":
         public_path = Path("public/report-index.json")
@@ -194,14 +145,26 @@ def main() -> int:
     args = parse_args()
     reports_dir = Path(args.reports_dir)
     out_path = Path(args.out)
-    if not reports_dir.exists():
-        print(f"[ERROR] reports 폴더가 없습니다: {reports_dir}")
-        return 1
 
-    reports: List[Dict[str, Any]] = []
-    warnings: List[Dict[str, str]] = []
+    if not reports_dir.exists():
+        payload = {
+            "schemaVersion": "1.1",
+            "generatedAt": now_kst_text(),
+            "count": 0,
+            "latestDate": "",
+            "availableDates": [],
+            "warnings": [{"fileName": str(reports_dir), "reason": "reports_dir_missing"}],
+            "reports": [],
+        }
+        atomic_write_json(out_path, payload)
+        mirror_to_public_if_needed(out_path, payload)
+        print(f"[WARN] reports 폴더가 없습니다: {reports_dir}")
+        return 0
+
+    reports: list[dict[str, Any]] = []
+    warnings: list[dict[str, str]] = []
     for html_path in sorted(reports_dir.glob("*.html")):
-        item, reason = read_report_meta(html_path, strict_json=args.strict_json)
+        item, reason = read_report_meta(html_path)
         if item:
             reports.append(item)
         else:
@@ -219,6 +182,7 @@ def main() -> int:
     }
     atomic_write_json(out_path, payload)
     mirror_to_public_if_needed(out_path, payload)
+
     print(f"[OK] report-index.json 생성 완료: {out_path}")
     print(f"[OK] 리포트 수: {len(reports)}")
     if warnings:
