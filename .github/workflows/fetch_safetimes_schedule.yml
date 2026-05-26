@@ -170,16 +170,13 @@ jobs:
             --out-dir data/reports \
             --base-report report_sample.json
 
-      - name: Try fetch and apply news candidates
+      - name: Fetch and apply news candidates
         if: env.RUN_MODE == 'single'
-        continue-on-error: true
         run: |
-          if [ -f scripts/fetch_news_candidates.py ] && [ -f scripts/apply_news_to_report.py ]; then
-            python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news || true
-            python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports || true
-          else
-            echo "[INFO] 뉴스 후보 수집 스크립트가 없어 조간 뉴스 자동 반영을 건너뜁니다."
-          fi
+          test -f scripts/fetch_news_candidates.py || (echo "ERROR: scripts/fetch_news_candidates.py 파일이 없습니다." && exit 1)
+          test -f scripts/apply_news_to_report.py || (echo "ERROR: scripts/apply_news_to_report.py 파일이 없습니다." && exit 1)
+          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news --force-refresh --min-required 1
+          python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports --min-required 1
 
       - name: Fetch Opinet international prices for today only
         if: env.RUN_MODE == 'single'
