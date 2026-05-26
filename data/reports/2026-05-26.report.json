@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 26일 (화)",
     "previous_day_label": "5/22",
     "today_label": "5/26",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 14:02 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인."
+      "text": "조간 보도: 주요 매체는 중동 정세와 원유·LNG 수급 리스크 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
     }
   ],
   "prices": {
@@ -1454,8 +1454,30 @@
     }
   ],
   "news_trend": {
-    "summary": "기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인.",
-    "articles": [],
+    "summary": "주요 매체는 중동 정세와 원유·LNG 수급 리스크 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "articles": [
+      {
+        "title": "국제유가, 호르무즈 개방 기대감에 급락…브렌트유 100 달러 아래 - 여성신문",
+        "press": "여성신문",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFAzaWNEVjdjN0dNZUhIOVF5VDM4Z1FZYks0MEEwWlotWlJBZzlNbnRyckpteWFkNnN4MHBJLVdNd1QwNHRQYXBTRDFqdmxTUHhaQndIdzI2bXhrNmVDX2h1VDBUZUVsdjhJT3ZNVVk0M1JwMHPSAXNBVV95cUxQM2ljRFY3YzdHTWVISDlReVQzOGdRWWJLNDBBMFpaLVpSQWc5TW50cnJKbXlhZDZzeDBwSS1XTXdUMDR0UGFwU0QxanZsU1B4WkJ3SHcyNm14azZlQ19odVQwVGVFbHY4SU92TVVZNDNScDBz?oc=5",
+        "summary": "국제유가, 호르무즈 개방 기대감에 급락…브렌트유 100 달러 아래 여성신문",
+        "published_at_kst": "2026-05-26 10:11"
+      },
+      {
+        "title": "국제유가, 호르무즈 개방 기대감에 7% 급락⋯브렌트유 96달러 - 브릿지경제",
+        "press": "브릿지경제",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5fekJtM0ZMRW1FeXdJVjJtVTZLN3FYSnJfVzJIazlWR0JCNjRPR1hTdW5maUgtZWFuUEY0N0VzSjNHYTltWWRaTllxRkRXZThqdklJX3dybnpMdw?oc=5",
+        "summary": "국제유가, 호르무즈 개방 기대감에 7% 급락⋯브렌트유 96달러 브릿지경제",
+        "published_at_kst": "2026-05-26 08:21"
+      },
+      {
+        "title": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 - 비욘드포스트",
+        "press": "비욘드포스트",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFdGt2NlBmeHBUWkdRRmVTV3c2RXhmeEtGTkVTR2hBU2JKdDhuN19PeHlCZG1NRU1XX2ZPSDJfSVUzZUY4NnhQMWxQdEd3eGRlZWwtS1FGN01pLTdSSldQMlBTbzloQlZvZXFBRGNQRzNPUVd2THR3dEZ2QWI?oc=5",
+        "summary": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 비욘드포스트",
+        "published_at_kst": "2026-05-26 06:50"
+      }
+    ],
     "source": "Google News RSS",
     "needs_review": true
   },
@@ -1554,9 +1576,9 @@
     },
     "news": {
       "source_file": "data/news/2026-05-26.json",
-      "article_count": 0,
+      "article_count": 3,
       "source": "Google News RSS",
-      "status": "no_articles",
+      "status": "updated",
       "needs_review": true
     },
     "opinet_prices": {
@@ -1574,7 +1596,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:21 KST",
+      "merged_at": "2026-05-26 14:03:05 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
