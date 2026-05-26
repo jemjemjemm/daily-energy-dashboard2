@@ -87,6 +87,46 @@ def clean_text(value: Any) -> str:
     return text.strip()
 
 
+
+
+def _has_batchim(text: str) -> bool:
+    t = clean_text(text)
+    if not t:
+        return False
+    ch = t[-1]
+    code = ord(ch)
+    if 0xAC00 <= code <= 0xD7A3:
+        return (code - 0xAC00) % 28 != 0
+    return False
+
+
+def topic_particle(text: str) -> str:
+    return "은" if _has_batchim(text) else "는"
+
+
+def to_report_style(text: Any) -> str:
+    t = clean_text(text)
+    if not t:
+        return ""
+    replacements = [
+        ("다뤘습니다.", "다룸."), ("다뤘습니다", "다룸."),
+        ("보도했습니다.", "보도."), ("보도했습니다", "보도."),
+        ("소개했습니다.", "소개."), ("소개했습니다", "소개."),
+        ("분석했습니다.", "분석."), ("분석했습니다", "분석."),
+        ("전망했습니다.", "전망."), ("전망했습니다", "전망."),
+        ("설명했습니다.", "설명."), ("설명했습니다", "설명."),
+        ("밝혔습니다.", "밝힘."), ("밝혔습니다", "밝힘."),
+        ("했습니다.", "함."), ("했습니다", "함."),
+        ("입니다.", "임."), ("입니다", "임."),
+    ]
+    for src, dst in replacements:
+        if t.endswith(src):
+            t = t[: -len(src)] + dst
+            break
+    t = t.replace(" 다뤘음.", " 다룸.").replace(" 보도함.", " 보도.")
+    t = re.sub(r"\s+([은는이가을를])\s+", r"\1 ", t)
+    return t
+
 def clean_items(items: Sequence[Mapping[str, Any]], title_keys=("title", "text")) -> list[dict[str, Any]]:
     cleaned: list[dict[str, Any]] = []
     for item in items or []:
@@ -98,7 +138,7 @@ def clean_items(items: Sequence[Mapping[str, Any]], title_keys=("title", "text")
         copied = dict(item)
         for key in ["title", "text", "description", "summary", "relevance", "press"]:
             if key in copied:
-                copied[key] = clean_text(copied[key])
+                copied[key] = to_report_style(copied[key]) if key in {"text", "description", "summary", "relevance"} else clean_text(copied[key])
         if any(str(copied.get(k, "")).strip() for k in title_keys):
             cleaned.append(copied)
     return cleaned
@@ -170,7 +210,7 @@ def render_summary(items: Sequence[Mapping[str, Any]]) -> str:
 
 def render_cards(cards: Sequence[Mapping[str, Any]]) -> str:
     if not cards:
-        return '<div class="empty">가격 데이터가 없습니다.</div>'
+        return '<div class="empty">가격 데이터 없음</div>'
 
     rows = []
     for c in cards:
@@ -195,7 +235,7 @@ def render_cards(cards: Sequence[Mapping[str, Any]]) -> str:
 
 def render_schedules(items: Sequence[Mapping[str, Any]]) -> str:
     if not items:
-        return '<div class="empty">금일 주요 일정 데이터가 없습니다.</div>'
+        return '<div class="empty">금일 주요 일정 데이터 없음</div>'
 
     rows = []
     for i in items:
@@ -260,7 +300,7 @@ def render_news(report: Mapping[str, Any]) -> str:
             articles.append(copied)
     articles = articles[:3]
 
-    raw_summary = clean_text(news.get("summary_html") or news.get("summary", ""))
+    raw_summary = to_report_style(news.get("summary_html") or news.get("summary", ""))
     if has_bad_phrase(raw_summary):
         raw_summary = ""
 
@@ -272,24 +312,22 @@ def render_news(report: Mapping[str, Any]) -> str:
 
     trend_paras = []
     for para in news.get("trend_paragraphs", []) or []:
-        t = clean_text(para)
+        t = to_report_style(para)
         if t and not has_bad_phrase(t):
             trend_paras.append(t)
     if not trend_paras:
         for a in articles:
             press = clean_text(a.get("press", "")) or "해당 매체"
-            desc = clean_text(a.get("summary", "")) or clean_text(a.get("title", ""))
-            if desc.endswith("습니다."):
-                desc = desc[:-4] + "음."
-            elif not desc.endswith("."):
+            desc = to_report_style(a.get("summary", "")) or clean_text(a.get("title", ""))
+            if not desc.endswith("."):
                 desc += "."
-            trend_paras.append(f"{press}는 {desc}")
+            trend_paras.append(f"{press}{topic_particle(press)} {desc}")
 
     trend_html = '<div class="news-summary">' + esc(raw_summary) + '</div>'
     for para in trend_paras[:3]:
-        m = re.match(r"([^는]{2,20})는\s+(.+)", para)
+        m = re.match(r"^(.{2,24}?)(은|는)\s+(.+)$", para)
         if m:
-            trend_html += '<p class="news-trend-para"><strong>' + esc(m.group(1)) + '</strong>는 ' + esc(m.group(2)) + '</p>'
+            trend_html += '<p class="news-trend-para"><strong>' + esc(m.group(1)) + '</strong>' + esc(m.group(2)) + ' ' + esc(m.group(3)) + '</p>'
         else:
             trend_html += '<p class="news-trend-para">' + esc(para) + '</p>'
 
@@ -299,7 +337,7 @@ def render_news(report: Mapping[str, Any]) -> str:
         title = esc(a.get("title", ""))
         press = esc(a.get("press", ""))
         link = '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
-        summary_text = esc(a.get("summary", ""))
+        summary_text = esc(to_report_style(a.get("summary", "")))
         rows.append(
             '<div class="news-item"><div>'
             '<div class="news-title">' + link + '</div>'
@@ -339,7 +377,7 @@ def render_quality(report: Mapping[str, Any]) -> str:
 
     return (
         '<ul class="quality-list">'
-        + ("".join(source_rows) or "<li>주요 출처 데이터가 없습니다.</li>")
+        + ("".join(source_rows) or "<li>주요 출처 데이터 없음</li>")
         + '</ul>'
     )
 
@@ -373,7 +411,7 @@ def render_chart(series: Mapping[str, Sequence[Mapping[str, Any]]], colors: Mapp
     vals = get_values(series)
 
     if not dates or not vals:
-        return '<div class="empty">표시 가능한 그래프 데이터가 없습니다.</div>'
+        return '<div class="empty">표시 가능한 그래프 데이터 없음</div>'
 
     lo, hi = min(vals), max(vals)
     if lo == hi:
@@ -650,7 +688,7 @@ def build_html(report: Mapping[str, Any]) -> str:
         '<div class="header-date">' + esc(meta.get("display_date") or meta.get("report_date") or "") + '</div>',
         '</div><div class="badge">' + esc(meta.get("report_badge") or "정유 · 석유화학 · LNG") + '</div></div>',
         '</header>',
-        '<div class="notice">본 보고서는 AI가 자동 생성한 초안입니다. 내용의 정확성을 반드시 확인 후 활용하시기 바랍니다. 확인된 사실만 기재했으며, 확인 불가 항목은 “확인 필요”로 표시했습니다.</div>',
+        '<div class="notice">본 보고서는 AI 자동 생성 초안. 내용 정확성 확인 후 활용 필요. 확인된 사실 중심 기재, 확인 불가 항목은 “확인 필요”로 표시.</div>',
         section("1", "Summary", render_summary(report.get("summary", []))),
         '<section class="section"><div class="section-head"><span class="num">2</span><span class="section-title">유가 동향</span></div>',
         '<div class="price-label-title">최신 유가 정보 ($/Bbl) — ' + esc(crude.get("base_label", "")) + ' 기준</div>',
