@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 4일 (월)",
     "previous_day_label": "4/30",
     "today_label": "5/4",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 15:03 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1378,28 +1378,33 @@
   "issues": [],
   "schedules": [],
   "news_trend": {
-    "summary": "주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "미주중앙일보는 5/3 16:00 입력 기사에서 출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 미주중앙일보.",
+      "중앙일보는 5/3 16:00 입력 기사에서 출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보.",
+      "뉴스1는 5/3 16:00 입력 기사에서 5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1."
+    ],
     "articles": [
       {
-        "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10SG9MektqN2FzUGd3MVMzdFJhYVdCU0g1c1VvdXhlaGFPa0J2a2xaOW1URHpIV29tYlZ5V1hBUUV4eUxUUHhRTUNaMks3bi1DdzNYVA?oc=5",
-        "summary": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 v.daum.net",
-        "published_at_kst": "2026-05-04 16:00"
+        "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 미주중앙일보",
+        "press": "미주중앙일보",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE42RW9xRldubS1DOFl4aVVUejlObU9aSVo2dG4yTGY5QWxhV0NmVFBxbHh6Q1laZWFOcFhodVRnc3BVX2oxZVpackg2N2IyZnFCMWdfZUNDdGRsVTBrLURHTkZn?oc=5",
+        "summary": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 미주중앙일보.",
+        "published_at_kst": "2026-05-03 16:00"
       },
       {
-        "title": "[휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 - yonhapmidas.com",
-        "press": "yonhapmidas.com",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tdFhMOVl1Ykk2U3Q4UTFQbEp0bEtSZzdpWGluaGlUTHZKU2dsdUYzdThRNkNEcEc4QmQyXzh4U2RTekpTTlZHTlh6bXpmeGJWMFd4VnNjVHlfUmt6NThvR1RYYUJiZnJldjJWVGJB?oc=5",
-        "summary": "[휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com",
-        "published_at_kst": "2026-05-05 16:00"
+        "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
+        "press": "중앙일보",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
+        "summary": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보.",
+        "published_at_kst": "2026-05-03 16:00"
       },
       {
-        "title": "'최고가격제'로 막은 3월 물가…중동발 고유가, 장바구니 압박 본격화되나 - 뉴스핌",
-        "press": "뉴스핌",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9LTDNvT3R5NFR5YzFpcllSdFY2OXY0eU5zTnF2azRCTTFsZmoycklRWElvMnp6cFN2SmZlVHdMVmJ0UUxveEFYLUgyeVVjR1k5TkY2UUU2SnpRMy1J?oc=5",
-        "summary": "'최고가격제'로 막은 3월 물가…중동발 고유가, 장바구니 압박 본격화되나 뉴스핌",
-        "published_at_kst": "2026-05-04 16:00"
+        "title": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 - 뉴스1",
+        "press": "뉴스1",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBMeVJHNGhpWW5yR1JrcVVtaXNVeDVhS1N4Vmc1Q1FXR2JzazYyaTJIWlZsTmQwaXBJSFVHTVdxWlU0c0FYMzJuczQwVnN5UlVmNjlXRg?oc=5",
+        "summary": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1.",
+        "published_at_kst": "2026-05-03 16:00"
       }
     ],
     "source": "Google News RSS",
@@ -1411,7 +1416,7 @@
       "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
       "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
       "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
-      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.",
       "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/3~5/3)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
       "값이 0인 가격은 그래프 이력에서 제외했습니다.",
       "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
@@ -1524,7 +1529,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:15 KST",
+      "merged_at": "2026-05-26 15:03:34 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

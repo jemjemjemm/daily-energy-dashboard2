@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.2",
+  "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-26 14:03:04 KST",
-  "source": "Google News RSS",
+  "collected_at": "2026-05-26 15:04:33 KST",
+  "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
     "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
@@ -20,11 +20,29 @@
     "물가 에너지 OR 정부 물가 OR 전력 가스",
     "산업부 OR 기재부 OR 공정위 OR 에너지",
     "석유 OR 가스 OR 전력 OR 화학",
-    "경제 OR 산업 OR 물가 OR 에너지",
-    "정부 OR 산업부 OR 기재부 OR 공정위 OR 국회"
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "전력",
+    "에너지",
+    "생산자물가",
+    "민생물가",
+    "최고가격제",
+    "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체는 중동 정세와 원유·LNG 수급 리스크 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 등을 중심으로 보도.",
   "topics": [
     "중동 정세와 원유·LNG 수급 리스크"
   ],
@@ -37,7 +55,8 @@
       "published_at_kst": "2026-05-26 10:11",
       "snippet": "국제유가, 호르무즈 개방 기대감에 급락…브렌트유 100 달러 아래 여성신문",
       "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "국제유가, 호르무즈 개방 기대감에 7% 급락⋯브렌트유 96달러 - 브릿지경제",
@@ -47,7 +66,8 @@
       "published_at_kst": "2026-05-26 08:21",
       "snippet": "국제유가, 호르무즈 개방 기대감에 7% 급락⋯브렌트유 96달러 브릿지경제",
       "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 - 비욘드포스트",
@@ -57,7 +77,8 @@
       "published_at_kst": "2026-05-26 06:50",
       "snippet": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 비욘드포스트",
       "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "국제유가, 호르무즈 개방 기대감에 급락...브렌트유도 100달러 밑으로 - 미디어펜",
@@ -67,7 +88,8 @@
       "published_at_kst": "2026-05-26 06:05",
       "snippet": "국제유가, 호르무즈 개방 기대감에 급락...브렌트유도 100달러 밑으로 미디어펜",
       "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 연합뉴스",
@@ -77,7 +99,8 @@
       "published_at_kst": "2026-05-26 06:22",
       "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 연합뉴스",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - KBS 뉴스",
@@ -87,7 +110,8 @@
       "published_at_kst": "2026-05-26 06:37",
       "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 KBS 뉴스",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 개방 기대감에 국제유가 7% ‘뚝’…WTI 90달러까지 내려 - 서울신문",
@@ -97,7 +121,8 @@
       "published_at_kst": "2026-05-26 10:03",
       "snippet": "호르무즈 개방 기대감에 국제유가 7% ‘뚝’…WTI 90달러까지 내려 서울신문",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 재개방 기대감에 국제유가↓…WTI 90달러선으로 - dt.co.kr",
@@ -107,7 +132,8 @@
       "published_at_kst": "2026-05-26 10:19",
       "snippet": "호르무즈 재개방 기대감에 국제유가↓…WTI 90달러선으로 dt.co.kr",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 해협 재개방 기대에 국제유가 7% 급락…WTI 90달러선으로 후퇴 - 뉴스로드",
@@ -117,7 +143,19 @@
       "published_at_kst": "2026-05-26 08:14",
       "snippet": "호르무즈 해협 재개방 기대에 국제유가 7% 급락…WTI 90달러선으로 후퇴 뉴스로드",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBuTDB4bmZGNndtdVh5UHBUWEtCWUIwdGh4R2hMMXR4Y0xTRVN5YzRpVGFhZW52UGMyMjNmajI1NnZsb2UxcUE?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 07:30",
+      "snippet": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 v.daum.net",
+      "score": 36,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 한국경제",
@@ -127,7 +165,8 @@
       "published_at_kst": "2026-05-26 06:59",
       "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 한국경제",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     },
     {
       "title": "뉴욕증시,메모리얼데이 휴장...국제유가 호르무즈 재개방 기대감 WTI 급락 - 퍼블릭타임스",
@@ -137,20 +176,11 @@
       "published_at_kst": "2026-05-26 07:35",
       "snippet": "뉴욕증시,메모리얼데이 휴장...국제유가 호르무즈 재개방 기대감 WTI 급락 퍼블릭타임스",
       "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
-    },
-    {
-      "title": "국제유가, 호르무즈 재개방 기대감에 급락...WTI 6.51%↓ - 이투데이",
-      "press": "이투데이",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAzZ2J4S0tzSldURXJWb1Y5MWNQZDZwT3I1RTJ6RU5ENkx6V2FCbWZBWkQ0TEM5NUlGbzJwUWY4WkNrdWVUdTJLQWZSRXBFYkxHcUsxdg?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 06:48",
-      "snippet": "국제유가, 호르무즈 재개방 기대감에 급락...WTI 6.51%↓ 이투데이",
-      "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유"
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
     }
   ],
   "errors": [],
   "success": true,
-  "used_tier": "tier1"
+  "used_tier": "google_tier1"
 }

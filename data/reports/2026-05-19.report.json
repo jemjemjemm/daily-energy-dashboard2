@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 19일 (화)",
     "previous_day_label": "5/18",
     "today_label": "5/19",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 15:04 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체는 중동 정세와 원유·LNG 수급 리스크, 물가 지표와 에너지 비용 부담, 정부·국회 에너지 정책 일정 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1525,28 +1525,33 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체는 중동 정세와 원유·LNG 수급 리스크, 물가 지표와 에너지 비용 부담, 정부·국회 에너지 정책 일정 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "Vietnam.vn는 5/18 16:00 입력 기사에서 응이손 정유 및 석유화학 공장은 콩고산 원유를 95만 배럴 이상 공급받습니다. Vietnam.vn.",
+      "프라임경제는 5/19 11:24 입력 기사에서 '요동치는 국제유가' 정부, 최고가격제 유지 '고심' 프라임경제.",
+      "v.daum.net는 5/19 05:06 입력 기사에서 [국제유가] 브렌트유, 110달러 돌파 v.daum.net."
+    ],
     "articles": [
       {
-        "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 대한민국 정책브리핑",
-        "press": "대한민국 정책브리핑",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPd2g1d25JZV9ibE8wM0RsWGdQckZZXzJqT2I3eUV3M1owUVF4bG12WU5TWHFVUVZ3Nm4xS1hOei1HMEJmUi1GakhqNDBqd2JCdzIyajNOZGRxYk1sQ0VIZHc0RFVjWVlTTi0zNzNYUnNWWmdKalBveC1vSmx6RkVOOGZzeFFycm13cFE?oc=5",
-        "summary": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 대한민국 정책브리핑",
-        "published_at_kst": "2026-05-20 14:03"
+        "title": "응이손 정유 및 석유화학 공장은 콩고산 원유를 95만 배럴 이상 공급받습니다. - Vietnam.vn",
+        "press": "Vietnam.vn",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQW9WY3ZRb0k4RmZEVWhXR3pqb3ktUmhSb2gxMHNLUzR0NkVKMEFEVGNoaDJiSXdvY0U5dmdRb3l4Z2dsYzF6TVF4WHZvRHI0TTAzNm1lSWllQUMwOWtMYlNNU2pocUdrN3h4LVZNV2Z6TC11UHJmRG9YQlh3U1FMMmtDa1JnbWVpRzdkdTlwTkFSUTVw?oc=5",
+        "summary": "응이손 정유 및 석유화학 공장은 콩고산 원유를 95만 배럴 이상 공급받습니다. Vietnam.vn.",
+        "published_at_kst": "2026-05-18 16:00"
       },
       {
-        "title": "한일 '에너지 동맹' 시동..\"원유 석유제품 LNG 스와프\" - 코리아리포트",
-        "press": "코리아리포트",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBtbDlsNXY1UTVaaUxFd1RVWmgyUHhFME0wSWstRlZOaXhYamFYaVpCbnVLM21obnQwTVBtb0xYNllJNVdITVNmV2NyTUt5VjlVWjF1U2tZMjlmUm5PV1dTdTFtRkg0c2xaUmxZUjBJUmE?oc=5",
-        "summary": "한일 '에너지 동맹' 시동..\"원유 석유제품 LNG 스와프\" 코리아리포트",
-        "published_at_kst": "2026-05-20 10:55"
+        "title": "'요동치는 국제유가' 정부, 최고가격제 유지 '고심' - 프라임경제",
+        "press": "프라임경제",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE44U0JDODRZVFdob2taSGxmUzVpY3ZUQk5SWkR5NHZSdFplektfRVQ3eDF2Z1VDX2R5OE8xV21PX3VXUmQzSl9XQ2FjRnNhcjlldnZ0OTJQdHo1TXBmQXBkcjRHaw?oc=5",
+        "summary": "'요동치는 국제유가' 정부, 최고가격제 유지 '고심' 프라임경제.",
+        "published_at_kst": "2026-05-19 11:24"
       },
       {
-        "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 한국방송뉴스",
-        "press": "한국방송뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ubTNOU2xoQWl4M1hKNXJBZzdJd3RNTGlhN1JsLXNTZTdVOFdkVzI4UG1zMWMwemRRTmgtS09NaEgyU1J4ckhESXI4Sjc5MV9KLUp5dTFuVTRsZlQyZmc?oc=5",
-        "summary": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 한국방송뉴스",
-        "published_at_kst": "2026-05-20 14:41"
+        "title": "[국제유가] 브렌트유, 110달러 돌파 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZQ2kyY3I5VDI5aHRJSzJmaWxxR1lzRDFWck9KMERDcUlOV2V4Nm1JM3ZaUXhKNEh5dS1ueVlIZFdOZ0JzY3FZTENBajBySUU?oc=5",
+        "summary": "[국제유가] 브렌트유, 110달러 돌파 v.daum.net.",
+        "published_at_kst": "2026-05-19 05:06"
       }
     ],
     "source": "Google News RSS",
@@ -1558,7 +1563,7 @@
       "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
       "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
       "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
-      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.",
       "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/18~5/18)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
       "값이 0인 가격은 그래프 이력에서 제외했습니다.",
       "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
@@ -1667,7 +1672,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:19 KST",
+      "merged_at": "2026-05-26 15:04:17 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

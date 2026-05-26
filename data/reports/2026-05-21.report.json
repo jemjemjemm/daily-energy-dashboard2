@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 21일 (목)",
     "previous_day_label": "5/20",
     "today_label": "5/21",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 15:04 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -21,11 +21,11 @@
     },
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 물가안정TF 회의(정부서울청사), 08:00 민생물가 특별관리 관계장관 TF 회의(서울), 08:00 민생물가 특별관리 관계장관 TF(정부서울청사), 08:00 민생물가 특별관리 관계장관 TF회의(세종)."
+      "text": "금일 주요 일정: 08:00 물가안정TF 회의(정부서울청사), 08:00 민생물가 특별관리 관계장관 TF(정부서울청사), 09:00 대외경제장관회의(정부서울청사), 구리 석유비축기지 방문(09:30 한국석유공사 구리지사)."
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담, 정부·국회 에너지 정책 일정 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1459,32 +1459,8 @@
     },
     {
       "time": "08:00",
-      "org": "김종구 차관",
-      "title": "08:00 민생물가 특별관리 관계장관 TF 회의(서울)",
-      "relevance": ""
-    },
-    {
-      "time": "08:00",
       "org": "재경부",
       "title": "08:00 민생물가 특별관리 관계장관 TF(정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:00",
-      "org": "이형훈 2차관",
-      "title": "08:00 민생물가 특별관리 관계장관 TF회의(세종)",
-      "relevance": ""
-    },
-    {
-      "time": "08:00",
-      "org": "김민재 차관",
-      "title": "08:00 민생물가 특별관리 관계장관TF 회의 참석(정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:00",
-      "org": "류제명 2차관",
-      "title": "08:00 민생물가 특별관리 관계장관TF회의(정부서울청사)",
       "relevance": ""
     },
     {
@@ -1522,31 +1498,42 @@
       "org": "문신학 1차관",
       "title": "16:15 한-EU 공급망산업정책대화(정부서울청사)",
       "relevance": ""
+    },
+    {
+      "time": "시간미정",
+      "org": "여한구 통상교섭본부장",
+      "title": "국외 출장(19~22일 중국)",
+      "relevance": ""
     }
   ],
   "news_trend": {
-    "summary": "주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담, 정부·국회 에너지 정책 일정 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "대한민국 정책브리핑은 5/21 07:55 입력 기사에서 한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 대한민국 정책브리핑.",
+      "네이트는 5/20 16:32 입력 기사에서 한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 네이트.",
+      "뉴스1는 5/21 06:00 입력 기사에서 4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1."
+    ],
     "articles": [
       {
-        "title": "정부, 석유 최고가격제 정유사 손실 보전 착수 - 2news.co.kr",
-        "press": "2news.co.kr",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5kMHZxajREdmkweURzdnB4RWpXZ0xVYTJYVENsVTlMRFllclFiTllJcVg4bTNVMWVqd0EyaVdpbi1fTWt1bTN1dVNqOVVpYThOcGo4SHVGUUJJc203ZUxqdWR1Wk1qLU0?oc=5",
-        "summary": "정부, 석유 최고가격제 정유사 손실 보전 착수 2news.co.kr",
-        "published_at_kst": "2026-05-22 13:05"
+        "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 대한민국 정책브리핑",
+        "press": "대한민국 정책브리핑",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95UkliNFE1MXRObWYwcjktRU10d1Y5anU0OHdlNzNiWU5YTGZRUmZPdjNMZDVGU0RycXR1VXd5aVJINzFqUUo1NVlmN19CSEVsMzRkZFcxWTVnRVFsMzBUSUEybzQ3VUJySmt5UA?oc=5",
+        "summary": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 대한민국 정책브리핑.",
+        "published_at_kst": "2026-05-21 07:55"
       },
       {
-        "title": "6차 석유 최고가격제 동결…휘발유-경유 가격 소폭 하락 - 동아일보",
-        "press": "동아일보",
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfTDFBbWFXS2hjZXlXalZsbWhVMU5qUUg5ZG1WOVVHWHQ5ZGlVT0h2d3g3YXJka09tOUVOV0RCcjhEMTZoWkNTYWZ4QThuZk0zOS1UbTdUNHpIMEtKRjV3WkNxLUFfQdIBZkFVX3lxTFBfTDFBbWFXS2hjZXlXalZsbWhVMU5qUUg5ZG1WOVVHWHQ5ZGlVT0h2d3g3YXJka09tOUVOV0RCcjhEMTZoWkNTYWZ4QThuZk0zOS1UbTdUNHpIMEtKRjV3WkNxLUFfQQ?oc=5",
-        "summary": "6차 석유 최고가격제 동결…휘발유-경유 가격 소폭 하락 동아일보",
-        "published_at_kst": "2026-05-22 14:21"
-      },
-      {
-        "title": "6차 석유 최고가격제 동결…휘발유-경유 가격 소폭 하락 - 네이트",
+        "title": "한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 - 네이트",
         "press": "네이트",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5SSHVadVZIeFNnVzRpaXQ5akRYODJGT0M0OGhsbXNwazdRSVVTQ0FXOVZhOW1aZTk4aVdkZWdtMjAwZEZodlRlYnFvOTBFazJwa2Z3UXRmTlpncUZFanZibw?oc=5",
-        "summary": "6차 석유 최고가격제 동결…휘발유-경유 가격 소폭 하락 네이트",
-        "published_at_kst": "2026-05-22 14:22"
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE42dC14eVNjd0lzdVp1LTQwVkxSVWd6M0xRa043VXpvcjBSc3c4b0NCeTlUWTVsYUNCam9LdzZZYmtzVV9TQjBqSGxFZEJhd1lFdk04?oc=5",
+        "summary": "한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 네이트.",
+        "published_at_kst": "2026-05-20 16:32"
+      },
+      {
+        "title": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ - 뉴스1",
+        "press": "뉴스1",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5sX2VsSGJLMzVNbGo2NWE0QjdOMmxtWGJLT1loT25ZWWZpSUt2dkhOV3o3MTg1REx5NDRGeU9OQS1rVm8zeFEwTlZDNmRoeHJSS2JTdw?oc=5",
+        "summary": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1.",
+        "published_at_kst": "2026-05-21 06:00"
       }
     ],
     "source": "Google News RSS",
@@ -1558,7 +1545,7 @@
       "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
       "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
       "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
-      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.",
       "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/20~5/20)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
       "값이 0인 가격은 그래프 이력에서 제외했습니다.",
       "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
@@ -1637,7 +1624,7 @@
       "today_source_title": "[오늘의 주요일정·21일] 5공피해자단체 연합회, 스타벅스 규탄 기자회견",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242918",
       "today_source_published_at": "2026-05-21",
-      "today_parsed_schedule_count": 12,
+      "today_parsed_schedule_count": 9,
       "previous_source_file_date": "2026-05-20",
       "previous_source_title": "[오늘의 주요일정·20일] 이재명 대통령 9차 비상경제점검회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242880",
@@ -1667,7 +1654,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:20 KST",
+      "merged_at": "2026-05-26 15:04:25 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

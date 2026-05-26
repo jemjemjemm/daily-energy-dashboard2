@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 15일 (금)",
     "previous_day_label": "5/14",
     "today_label": "5/15",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 15:04 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1501,28 +1501,33 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "폴리뉴스 Polinews는 5/14 16:00 입력 기사에서 [이슈] 국제유가 다시 100달러 돌파, 정유 · 항공 · 석유화학업계 긴장 폴리뉴스 Polinews.",
+      "이콘밍글은 5/15 09:00 입력 기사에서 석유 최고가격제 9주, 경유 소비 8% 줄었다…정유사 손실은 '1.2조' 누적 이콘밍글.",
+      "v.daum.net는 5/14 16:00 입력 기사에서 석유제품 최고가격제 시행 후 휘발유·경유 소비량 3%·8% 감소 v.daum.net."
+    ],
     "articles": [
       {
-        "title": "“호르무즈·LNG·원유 스와프까지”…한일, 중동 위기 속 ‘에너지 공조’ 본격화 - 이슈밸리",
-        "press": "이슈밸리",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jMFI0N2ZDbnB6VUhPaDJXTWxUcEk2ZHRxNWpRVTV6ei0ycE1NaGhNZnFxRU5jX09HTmNlOXhqblNQQWlIc0puNGluQWdGNzZzMm5vMThjUVpjRTFTUjNjV3dXOXZKVm9zMW4zX01R?oc=5",
-        "summary": "“호르무즈·LNG·원유 스와프까지”…한일, 중동 위기 속 ‘에너지 공조’ 본격화 이슈밸리",
-        "published_at_kst": "2026-05-16 16:00"
+        "title": "[이슈] 국제유가 다시 100달러 돌파, 정유 · 항공 · 석유화학업계 긴장 - 폴리뉴스 Polinews",
+        "press": "폴리뉴스 Polinews",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45d2k4SU1ETjByM2RlT0x0akdzZWNNQ0tIaFBRVU9ib0FQM0xXWWwtMzRkV3h2b3VUWWRHMThIUTFxeUp0MzVqdTZDWWprb0lyNjdvcnRtOW1jcWc0TVZCOE9rZWhDeUdlWjltRWFn0gFyQVVfeXFMUE9HTkEzdmJmTVNLNmNTbU9nbVZhR2FIYjZ4SFVmUG9zT3lBeFVaX1BOLUt2WTRPMWlaOUZHMjc1emxwWjBMZTJyZGMtUk12WWg4b0llenJFaTd5cDRKall1bE9Sc2dYLUt5a3p4ZDJkMDJ3?oc=5",
+        "summary": "[이슈] 국제유가 다시 100달러 돌파, 정유 · 항공 · 석유화학업계 긴장 폴리뉴스 Polinews.",
+        "published_at_kst": "2026-05-14 16:00"
       },
       {
-        "title": "5차 석유제품 최고가격제 동결(5.8.~21.) - 카드/한컷 | 멀티미디어 - 대한민국 정책브리핑",
-        "press": "대한민국 정책브리핑",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1KRkRfbEJoNWozOFdxb0xEMl9naDlKOW9EcG1CcDlOVkNBMk4tUlN0cUNocW9kWGF0azZzQnRaZWlKdm56d3J1cmJEcVhxRFRLTnRhUWdjLVlCcktsOURETU43MTFnTWFrWVlBaTl3?oc=5",
-        "summary": "5차 석유제품 최고가격제 동결(5.8.~21.) | 멀티미디어 대한민국 정책브리핑",
-        "published_at_kst": "2026-05-16 08:45"
+        "title": "석유 최고가격제 9주, 경유 소비 8% 줄었다…정유사 손실은 '1.2조' 누적 - 이콘밍글",
+        "press": "이콘밍글",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52aXVfRXBoSk04X3MzRW5mQkRuTldLY3JLOHVXOUlYbDVsMXFnQW5JYWdaMHFkVEtnX1Fza19MaXNZaV9iR0RJVVFVUnNoa1I4dk51Zi14bl9iWG1YOE42UlA0RHVXaXhtckNCTkptVFBNZ3hxUEVKSTc4Uk9kLVnSAYcBQVVfeXFMTzh5Rm1kS0FQQ0dKYkRjanZaaXBld3JoYkxaMUFrazZEaVI0YlpWWDNFd2l4R3FGcjZNOUVpRzBNMTRoODRkWnl6UW9OcjVzQ2hENDdkZ1BfMHZlNWZHejlWMzQ2SkZXX2Q1NG9ZWHVaaHZoNlFQbTVSM1ZFSVR6UDRTZklrZHFz?oc=5",
+        "summary": "석유 최고가격제 9주, 경유 소비 8% 줄었다…정유사 손실은 '1.2조' 누적 이콘밍글.",
+        "published_at_kst": "2026-05-15 09:00"
       },
       {
-        "title": "5차 석유제품 최고가격제 동결(5.8.~21.) - 대한민국 정책브리핑",
-        "press": "대한민국 정책브리핑",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQdjRBWExZTGR5aUZ5djI1ODA1VTg0UUFrS0E0MEdyem5QN25FR0M3dWhmbm1iX2ZXd1FXcjZEX2FRbmFxNVdnUDhtVnFHSHUyMG5mTTY4SEp3aGp0VU9XRW9YNGZrZG9BZ2NmMFVhcHhWd1AzakJBWW9WTi1ibGh6NFR3?oc=5",
-        "summary": "5차 석유제품 최고가격제 동결(5.8.~21.) 대한민국 정책브리핑",
-        "published_at_kst": "2026-05-16 01:41"
+        "title": "석유제품 최고가격제 시행 후 휘발유·경유 소비량 3%·8% 감소 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RdXBWOTFNaGpseWZtOXlvVlVDV0hhM2xTdi01VmFpdlNIMHg1NGxubDZrVTFwemc5eGNmYXdrbE1jU0ZVMG8xbGM3ODNWSms?oc=5",
+        "summary": "석유제품 최고가격제 시행 후 휘발유·경유 소비량 3%·8% 감소 v.daum.net.",
+        "published_at_kst": "2026-05-14 16:00"
       }
     ],
     "source": "Google News RSS",
@@ -1534,7 +1539,7 @@
       "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
       "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
       "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
-      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.",
       "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/14~5/14)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
       "값이 0인 가격은 그래프 이력에서 제외했습니다.",
       "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
@@ -1643,7 +1648,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:18 KST",
+      "merged_at": "2026-05-26 15:04:08 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

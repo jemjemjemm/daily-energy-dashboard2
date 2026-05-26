@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 18일 (월)",
     "previous_day_label": "5/15",
     "today_label": "5/18",
-    "generated_at": "2026-05-26 10:27 KST",
+    "generated_at": "2026-05-26 15:04 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1489,28 +1489,33 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체는 석유 최고가격제·유류세 등 가격 안정 정책, 중동 정세와 원유·LNG 수급 리스크, 정유·석유화학 업계 실적·원가·제품 가격, 물가 지표와 에너지 비용 부담 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "전자신문은 5/18 08:46 입력 기사에서 브렌트유 110달러·WTI 107달러 돌파…국제유가 다시 급등 전자신문.",
+      "한겨레는 5/17 16:00 입력 기사에서 중동발 고유가에…한국 말고도 16개국 ‘석유 최고가격제’ 시행 한겨레.",
+      "v.daum.net는 5/17 16:00 입력 기사에서 유가 하락에 수입물가 꺾였지만...생산자물가 '환율' 변수 남아 v.daum.net."
+    ],
     "articles": [
       {
-        "title": "응이손 정유 및 석유화학 공장은 콩고산 원유를 95만 배럴 이상 공급받습니다. - Vietnam.vn",
-        "press": "Vietnam.vn",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQW9WY3ZRb0k4RmZEVWhXR3pqb3ktUmhSb2gxMHNLUzR0NkVKMEFEVGNoaDJiSXdvY0U5dmdRb3l4Z2dsYzF6TVF4WHZvRHI0TTAzNm1lSWllQUMwOWtMYlNNU2pocUdrN3h4LVZNV2Z6TC11UHJmRG9YQlh3U1FMMmtDa1JnbWVpRzdkdTlwTkFSUTVw?oc=5",
-        "summary": "응이손 정유 및 석유화학 공장은 콩고산 원유를 95만 배럴 이상 공급받습니다. Vietnam.vn",
-        "published_at_kst": "2026-05-18 16:00"
+        "title": "브렌트유 110달러·WTI 107달러 돌파…국제유가 다시 급등 - 전자신문",
+        "press": "전자신문",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9wclJsdkRwT0ZNbHEzM01qNXBEWW43amFDUzNkYWhHZm9DdFB0QmNUQk1GRTdpWmpxeFNRTVh6NFF0dC1JaEdwYTBhdzZXUQ?oc=5",
+        "summary": "브렌트유 110달러·WTI 107달러 돌파…국제유가 다시 급등 전자신문.",
+        "published_at_kst": "2026-05-18 08:46"
       },
       {
-        "title": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 - 파이낸셜뉴스",
-        "press": "파이낸셜뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBrNzZNUXpJYW9ha1hfQmhIeEVSYS1TSDFVaW1TV09MTk9EOERhcGJtODMyQ0FhZXc4NFEyRG11a2tCc20xYTJwR3oyRHRDQ2RiM2RUbmpKanh0clJlM2fSAV5BVV95cUxQazc2TVF6SWFvYWtYX0JoSHhFUmEtU0gxVWltU1dPTE5PRDhEYXBibTgzMkNBYWV3ODRRMkRtdWtrQnNtMWEycEd6MkR0Q0NkYjNkVG5qSmp4dHJSZTNn?oc=5",
-        "summary": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 파이낸셜뉴스",
-        "published_at_kst": "2026-05-19 08:36"
+        "title": "중동발 고유가에…한국 말고도 16개국 ‘석유 최고가격제’ 시행 - 한겨레",
+        "press": "한겨레",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9oQXNnRC0yTEY0ckt5ZzlBOWRfNXVMY29vVlRwRy1hazJrVjR6U2Jub3VPcnVXTktJSVpWTEFoZFhrMHNUN2tuRkRrTFc5OVVXWEJiQVNtMkRWeGJ3OXRLWmVIaGswMmMyVFhqbkU3UE5CZw?oc=5",
+        "summary": "중동발 고유가에…한국 말고도 16개국 ‘석유 최고가격제’ 시행 한겨레.",
+        "published_at_kst": "2026-05-17 16:00"
       },
       {
-        "title": "위기의 석유화학, 생존 해법 찾는다…국회서 공급망·사업전환 전략 논의:동아경제신문 & daenews.co.kr - 동아경제",
-        "press": "동아경제",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5JNlFBTmRscTFGRnlnM3pQenJrU0VKdklUQ1FyNUxBRVJpV1dMZVR4VjZfcm1EWWQyamN3ZjBEdGczOWFuRHfSAWJBVV95cUxOV2FCUGJQNEdseXhQUEM0R2xFQmc0OUtSV2hfam00LXpoMkQ2WXh0aTduNTNIQ1BFeVVuOGRRWVo5SVI1Y2tqRk5WWmhKQjNrVTJDMUc2Q3BjRnlyMHdhaHNHQQ?oc=5",
-        "summary": "위기의 석유화학, 생존 해법 찾는다…국회서 공급망·사업전환 전략 논의:동아경제신문 & daenews.co.kr 동아경제",
-        "published_at_kst": "2026-05-19 13:15"
+        "title": "유가 하락에 수입물가 꺾였지만...생산자물가 '환율' 변수 남아 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RaUhFMy04Mk9OMWkzUk4waDhXQXl4YkxGMWM0OUluWUk4cURVX2FUV2JJdUFfM2J0TmlYcHhSZl9wQ1g5UmwtdFhqcWloclU?oc=5",
+        "summary": "유가 하락에 수입물가 꺾였지만...생산자물가 '환율' 변수 남아 v.daum.net.",
+        "published_at_kst": "2026-05-17 16:00"
       }
     ],
     "source": "Google News RSS",
@@ -1522,7 +1527,7 @@
       "일정 관련성·영향도는 원문 사실이 아니라 정유/석화/LNG 관점의 작성자 해석으로 구분합니다.",
       "가격 데이터에서 0값은 카드·그래프 산출에서 제외합니다.",
       "정책 방향, 정부 의도, 업계 손익 영향은 원문 근거가 없는 경우 단정하지 않습니다.",
-      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인이 필요합니다.",
+      "일정은 자동 추출 결과이므로 시간·기관·일정명 확인 필요.",
       "가격 추이 그래프는 기준일 전일 기준 과거 2개월(3/17~5/17)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
       "값이 0인 가격은 그래프 이력에서 제외했습니다.",
       "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
@@ -1631,7 +1636,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 10:27:19 KST",
+      "merged_at": "2026-05-26 15:04:12 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
