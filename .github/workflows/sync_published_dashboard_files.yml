@@ -30,6 +30,36 @@ jobs:
         run: |
           git pull --ff-only origin main
 
+      - name: Remove unindexed stale report HTML
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          idx_path = Path("docs/report-index.json")
+          reports_dir = Path("docs/reports")
+
+          if not idx_path.exists() or not reports_dir.exists():
+              raise SystemExit("ERROR: docs/report-index.json 또는 docs/reports 없음")
+
+          idx = json.loads(idx_path.read_text(encoding="utf-8"))
+          keep = set()
+          for item in idx.get("reports", []):
+              url = item.get("url", "")
+              if url.startswith("reports/") and url.endswith(".html"):
+                  keep.add(Path(url).name)
+
+          removed = []
+          for html in reports_dir.glob("*.html"):
+              if html.name not in keep:
+                  removed.append(html.name)
+                  html.unlink()
+
+          print(f"[OK] unindexed stale HTML removed: {len(removed)}")
+          if removed:
+              print("\n".join(sorted(removed)[:80]))
+          PY
+
       - name: Validate docs output
         run: |
           set -e
@@ -55,6 +85,13 @@ jobs:
               "원문 자동 매칭 실패",
               "주요일정 원문 데이터 미확보",
               "가격 데이터 중심 리포트",
+              "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다",
+              "자동 수집된 대표 기사 없음",
+              "일정 관련성 평가는",
+              "A 직접",
+              "B 간접",
+              "C 참고",
+              "세이프타임즈",
           ]
           idx = json.loads(Path("docs/report-index.json").read_text(encoding="utf-8"))
           dates = set(idx.get("availableDates", []))
