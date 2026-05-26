@@ -5,7 +5,7 @@
 원칙
 - 새 뉴스 후보가 1건 이상 있을 때만 기존 news_trend를 대체한다.
 - Google News RSS 오류/무결과로 기존 정상 기사 3건을 빈 값으로 덮어쓰지 않는다.
-- 기사 후보가 없으면 '찾지 못함'으로만 명시하고, 임의 기사/요약을 만들지 않는다.
+- 기사 후보가 없으면 오류처럼 보이는 문구를 HTML에 노출하지 않고, 대표 기사 미확인으로 표시한다.
 """
 from __future__ import annotations
 import argparse, json, re, tempfile
@@ -68,12 +68,12 @@ def build_news_summary(news:Dict[str,Any], articles:List[Dict[str,Any]])->str:
     if topics:
         return "주요 매체는 " + ", ".join(topics[:4]) + " 등을 중심으로 정유·석유화학·LNG 업계 관련 이슈를 다뤘습니다."
     provided=clean(news.get("summary"))
-    if provided and not any(x in provided for x in ["찾지 못했습니다", "오류", "실패"]):
+    if provided and not any(x in provided for x in ["찾지 못했습니다", "미확인", "오류", "실패"]):
         return provided
     if articles:
         titles=", ".join(a.get("title","") for a in articles[:3])
         return f"정유·석유화학·LNG 관련 조간 기사 후보로 {titles} 등이 수집됐습니다."
-    return "정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다."
+    return "기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인."
 
 def update_summary(report:Dict[str,Any], news_summary:str):
     existing=report.get("summary",[]) if isinstance(report.get("summary"),list) else []
@@ -118,7 +118,7 @@ def main():
         status="preserved_existing"
     else:
         articles=[]
-        news_summary="정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다."
+        news_summary="기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인."
         source="Google News RSS"
         status="no_articles"
 
