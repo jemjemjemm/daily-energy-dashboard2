@@ -37,13 +37,18 @@ def check(path: Path) -> list[str]:
     prev_src = auto.get('previous_source_file_date')
     expected_prev = prev_workday(target_d).isoformat()
     errors = []
-    if today_src and today_src != target:
+    if not today_src:
+        errors.append(f'{path}: today_source_file_date 누락')
+    elif today_src != target:
         errors.append(f'{path}: today_source_file_date={today_src}, expected={target}')
-    if target_d != prev_workday(target_d):
-        if prev_src and prev_src != expected_prev:
-            errors.append(f'{path}: previous_source_file_date={prev_src}, expected={expected_prev}')
-        if prev_src and prev_src == today_src:
-            errors.append(f'{path}: today_source_file_date와 previous_source_file_date가 동일함: {today_src}')
+
+    if not prev_src:
+        errors.append(f'{path}: previous_source_file_date 누락')
+    elif prev_src != expected_prev:
+        errors.append(f'{path}: previous_source_file_date={prev_src}, expected={expected_prev}')
+
+    if today_src and prev_src and prev_src == today_src:
+        errors.append(f'{path}: today_source_file_date와 previous_source_file_date가 동일함: {today_src}')
     return errors
 
 def main() -> int:
