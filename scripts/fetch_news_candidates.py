@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-fetch_news_candidates.py v2.2
+fetch_news_candidates.py v2.3
 
 정유·석유화학·LNG Daily Issue Report용 조간 기사 후보를 수집합니다.
 
 운영 원칙
 - 조간 기사 0건은 정상 상태가 아니라 수집 실패입니다.
-- 조간 기사에는 당일 00:00~오전 기사뿐 아니라 전일 저녁에 온라인 선공개된 조간 기사도 포함될 수 있으므로
+- 조간은 기준일 당일 00:00~오전 기사뿐 아니라 전일 저녁 온라인 선공개 기사를 포함할 수 있으므로
   기본 검색창은 전일 18:00 KST ~ 기준일 11:30 KST로 봅니다.
-- 검색은 1차 핵심 에너지 키워드 → 2차 산업/물가 키워드 → 3차 광역 경제·산업 키워드로 확대합니다.
+- Google News RSS만 의존하지 않고, Naver/Daum 뉴스 검색 HTML도 보조 수집원으로 사용합니다.
 - 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
-- 기존에 정상 기사 JSON이 있으면 외부 RSS 일시 실패 시 기존 정상 JSON을 보존합니다.
+- 기존에 정상 기사 JSON이 있으면 외부 검색 일시 실패 시 기존 정상 JSON을 보존합니다.
 - 일정 공지·인사·부고·스포츠·연예성 기사는 제외합니다.
 """
 from __future__ import annotations
@@ -30,6 +30,11 @@ from typing import Any, Dict, Iterable
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 
 import requests
+
+try:
+    from bs4 import BeautifulSoup  # type: ignore
+except Exception:  # pragma: no cover
+    BeautifulSoup = None
 
 KST = timezone(timedelta(hours=9))
 USER_AGENT = (
@@ -60,10 +65,12 @@ QUERY_TIERS: list[tuple[int, list[str]]] = [
         "산업부 OR 기재부 OR 공정위 OR 에너지",
         "석유 OR 가스 OR 전력 OR 화학",
     ]),
-    (0, [
-        "경제 OR 산업 OR 물가 OR 에너지",
-        "정부 OR 산업부 OR 기재부 OR 공정위 OR 국회",
-    ]),
+]
+
+# 보조 검색원은 OR 구문보다 단일/복합 키워드가 안정적으로 동작합니다.
+PLAIN_QUERIES = [
+    "국제유가", "유가", "원유", "석유제품", "정유", "정유사", "주유소", "유류세", "휘발유", "경유",
+    "석유화학", "나프타", "LNG", "천연가스", "전력", "에너지", "생산자물가", "민생물가", "최고가격제", "호르무즈",
 ]
 
 POSITIVE = {
@@ -150,6 +157,24 @@ def score_article(title: str, snippet: str, source: str) -> int:
     return score
 
 
+def in_morning_issue_window(item: dict[str, Any], target_date: str, lookback_hours: int, cutoff_hour: int, cutoff_minute: int) -> bool:
+    target = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=KST)
+    start = target - timedelta(hours=lookback_hours)
+    end = target.replace(hour=cutoff_hour, minute=cutoff_minute, second=59)
+    pub = item.get("published_at_kst") or ""
+    pub_date = item.get("published_date") or ""
+    if pub:
+        try:
+            dt = datetime.strptime(pub, "%Y-%m-%d %H:%M").replace(tzinfo=KST)
+            return start <= dt <= end
+        except Exception:
+            pass
+    if pub_date:
+        return pub_date in {start.strftime("%Y-%m-%d"), target.strftime("%Y-%m-%d")}
+    # 보조 검색원에서 발행시각을 파싱하지 못한 경우, 검색 기간 조건으로 보정된 후보로 보고 허용합니다.
+    return True
+
+
 def fetch_google_news(query: str, target: datetime, min_score: int, lookback_hours: int) -> list[dict[str, Any]]:
     start = target - timedelta(hours=lookback_hours)
     after = start.strftime("%Y-%m-%d")
@@ -172,35 +197,69 @@ def fetch_google_news(query: str, target: datetime, min_score: int, lookback_hou
         score = score_article(title, snippet, source)
         if score < min_score:
             continue
-        out.append({
-            "title": title,
-            "press": source or "Google News",
-            "url": link,
-            "published_date": pub_date,
-            "published_at_kst": pub_kst,
-            "snippet": snippet,
-            "score": score,
-            "source_query": query,
-        })
+        out.append({"title": title, "press": source or "Google News", "url": link, "published_date": pub_date, "published_at_kst": pub_kst, "snippet": snippet, "score": score, "source_query": query, "collector": "google_news_rss"})
     return out
 
 
-def in_morning_issue_window(item: dict[str, Any], target_date: str, lookback_hours: int, cutoff_hour: int, cutoff_minute: int) -> bool:
-    target = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=KST)
+def fetch_naver_news(query: str, target: datetime, min_score: int, lookback_hours: int) -> list[dict[str, Any]]:
+    if BeautifulSoup is None:
+        return []
     start = target - timedelta(hours=lookback_hours)
-    end = target.replace(hour=cutoff_hour, minute=cutoff_minute, second=59)
-    pub = item.get("published_at_kst") or ""
-    pub_date = item.get("published_date") or ""
-    if pub:
-        try:
-            dt = datetime.strptime(pub, "%Y-%m-%d %H:%M").replace(tzinfo=KST)
-            return start <= dt <= end
-        except Exception:
-            pass
-    if pub_date:
-        allowed = {start.strftime("%Y-%m-%d"), target.strftime("%Y-%m-%d")}
-        return pub_date in allowed
-    return True
+    ds = start.strftime("%Y.%m.%d")
+    de = target.strftime("%Y.%m.%d")
+    nso = f"so:r,p:from{start.strftime('%Y%m%d')}to{target.strftime('%Y%m%d')},a:all"
+    url = (
+        "https://search.naver.com/search.naver?where=news&sm=tab_opt&sort=1&photo=0&field=0&pd=3"
+        f"&ds={quote_plus(ds)}&de={quote_plus(de)}&nso={quote_plus(nso)}&query={quote_plus(query)}"
+    )
+    r = requests.get(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "ko-KR,ko;q=0.9"}, timeout=25)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    out: list[dict[str, Any]] = []
+    for a in soup.select("a.news_tit"):
+        title = clean_text(a.get("title") or a.get_text(" "))
+        link = clean_text(a.get("href") or "")
+        parent = a.find_parent("li") or a.find_parent("div")
+        snippet = clean_text(parent.get_text(" ") if parent else "")
+        press = "Naver News"
+        if parent:
+            press_node = parent.select_one("a.info.press") or parent.select_one("span.info.press")
+            if press_node:
+                press = clean_text(press_node.get_text(" ")).replace("언론사 선정", "").strip() or press
+        if not title or not link:
+            continue
+        score = score_article(title, snippet, press)
+        if score < min_score:
+            continue
+        out.append({"title": title, "press": press, "url": link, "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500], "score": score, "source_query": query, "collector": "naver_news_search"})
+    return out
+
+
+def fetch_daum_news(query: str, target: datetime, min_score: int, lookback_hours: int) -> list[dict[str, Any]]:
+    if BeautifulSoup is None:
+        return []
+    start = target - timedelta(hours=lookback_hours)
+    sd = start.strftime("%Y%m%d%H%M%S")
+    ed = target.replace(hour=23, minute=59, second=59).strftime("%Y%m%d%H%M%S")
+    url = f"https://search.daum.net/search?w=news&q={quote_plus(query)}&period=u&sd={sd}&ed={ed}&sort=recency"
+    r = requests.get(url, headers={"User-Agent": USER_AGENT, "Accept-Language": "ko-KR,ko;q=0.9"}, timeout=25)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    out: list[dict[str, Any]] = []
+    anchors = soup.select("a.tit_main, a.f_link_b, .item-title a, a[href*='news.v.daum.net'], a[href*='v.daum.net']")
+    for a in anchors:
+        title = clean_text(a.get("title") or a.get_text(" "))
+        link = clean_text(a.get("href") or "")
+        if not title or not link or len(title) < 6:
+            continue
+        parent = a.find_parent("li") or a.find_parent("div")
+        snippet = clean_text(parent.get_text(" ") if parent else "")
+        press = "Daum News"
+        score = score_article(title, snippet, press)
+        if score < min_score:
+            continue
+        out.append({"title": title, "press": press, "url": link, "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500], "score": score, "source_query": query, "collector": "daum_news_search"})
+    return out
 
 
 def dedupe(items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -210,7 +269,7 @@ def dedupe(items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         title_key = re.sub(r"\s+", "", it.get("title", "").lower())[:90]
         domain = urlparse(it.get("url", "")).netloc.lower()
         key = (title_key, domain)
-        if key in seen:
+        if not title_key or key in seen:
             continue
         seen.add(key)
         out.append(it)
@@ -261,30 +320,47 @@ def main() -> int:
     selected: list[dict[str, Any]] = []
     used_tier = ""
 
+    # 1) Google RSS: 가장 안정적인 구조화 소스
     for tier_idx, (min_score, queries) in enumerate(QUERY_TIERS, 1):
         for q in queries:
             try:
                 collected.extend(fetch_google_news(q, target, min_score=min_score, lookback_hours=a.lookback_hours))
-                time.sleep(0.2)
+                time.sleep(0.15)
             except Exception as e:
-                errors.append(f"tier{tier_idx} {q}: {e}")
+                errors.append(f"google tier{tier_idx} {q}: {e}")
         candidates = dedupe(collected)
         windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
         if len(windowed) >= a.min_required:
             selected = windowed[:a.max_items]
-            used_tier = f"tier{tier_idx}"
+            used_tier = f"google_tier{tier_idx}"
             break
+
+    # 2) 보조 수집원: Google RSS가 0건일 때만 사용
+    if len(selected) < a.min_required:
+        for collector_name, fn in [("naver", fetch_naver_news), ("daum", fetch_daum_news)]:
+            for q in PLAIN_QUERIES:
+                try:
+                    collected.extend(fn(q, target, min_score=2, lookback_hours=a.lookback_hours))
+                    time.sleep(0.2)
+                except Exception as e:
+                    errors.append(f"{collector_name} {q}: {e}")
+            candidates = dedupe(collected)
+            windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+            if len(windowed) >= a.min_required:
+                selected = windowed[:a.max_items]
+                used_tier = f"{collector_name}_fallback"
+                break
 
     if len(selected) < a.min_required:
         if existing:
             print(f"[WARN] 새 뉴스 수집 실패. 기존 정상 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
             return 0
         payload = {
-            "schema_version": "2.2",
+            "schema_version": "2.3",
             "date": a.date,
             "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
-            "source": "Google News RSS",
-            "queries": [q for _, qs in QUERY_TIERS for q in qs],
+            "source": "Google News RSS + Naver/Daum News Search",
+            "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
             "time_window": f"전일 {24 - a.lookback_hours:02d}:00~기준일 {a.cutoff_hour:02d}:{a.cutoff_minute:02d} KST",
             "summary": "",
             "topics": [],
@@ -295,16 +371,16 @@ def main() -> int:
         atomic_write_json(out_path, payload)
         print(f"[ERROR] 조간 기사 후보 수집 실패: {out_path} / articles=0")
         if errors:
-            print("[ERROR]", " | ".join(errors[:5]))
+            print("[ERROR]", " | ".join(errors[:8]))
         return 2
 
     topics = infer_topics(selected)
     payload = {
-        "schema_version": "2.2",
+        "schema_version": "2.3",
         "date": a.date,
         "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
-        "source": "Google News RSS",
-        "queries": [q for _, qs in QUERY_TIERS for q in qs],
+        "source": "Google News RSS + Naver/Daum News Search",
+        "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
         "time_window": f"전일 {24 - a.lookback_hours:02d}:00~기준일 {a.cutoff_hour:02d}:{a.cutoff_minute:02d} KST",
         "summary": build_summary(topics, selected),
         "topics": topics,
@@ -316,7 +392,7 @@ def main() -> int:
     atomic_write_json(out_path, payload)
     print(f"[OK] 뉴스 후보 저장 완료: {out_path} / articles={len(selected)} / {used_tier}")
     if errors:
-        print("[WARN] 일부 검색 오류:", " | ".join(errors[:3]))
+        print("[WARN] 일부 검색 오류:", " | ".join(errors[:5]))
     return 0
 
 
