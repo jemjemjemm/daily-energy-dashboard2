@@ -173,10 +173,33 @@
       state.availableDates = new Set(reports.map(r => r.date));
     }
 
-    async function fileExists(url){
+    async function fileLooksValidReport(url){
       try{
         const res = await fetch(`${url}?probe=${Date.now()}`, { method:'GET', cache:'no-store' });
-        return res.ok;
+        if(!res.ok) return false;
+        const html = await res.text();
+        const badPhrases = [
+          '자동 추출된 일정 항목이 없습니다',
+          '본문 구조 확인 및 수동 검수가 필요합니다',
+          '원문 자동 매칭 실패',
+          '주요일정 원문 데이터 미확보',
+          '가격 데이터 중심 리포트',
+          '정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다',
+          '자동 수집된 대표 기사 없음',
+          '대표 기사 미확인',
+          '기준일 조간 기준 주요 보도 없음',
+          '기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인',
+          '일정 관련성 평가는',
+          'A 직접',
+          'B 간접',
+          'C 참고',
+          '세이프타임즈'
+        ];
+        if(badPhrases.some(phrase => html.includes(phrase))) return false;
+        return html.includes('Daily Issue Report')
+          && html.includes('조간 신문 트렌드')
+          && html.includes('news-item')
+          && html.includes('유가 동향');
       }catch(e){ return false; }
     }
 
@@ -191,14 +214,20 @@
     }
 
     async function fallbackProbeReports(){
-      // report-index.json이 깨졌거나 일부만 읽힐 때를 위한 안전장치.
+      // report-index.json이 깨졌을 때만 쓰는 비상 복구.
+      // index가 깨져도 구양식·fallback HTML을 다시 노출하지 않도록 HTML 본문까지 검증한다.
       const requested = normalizeDate(qs('date'));
-      const candidates = dateRange('2026-03-01', '2026-05-31');
-      if(requested && !candidates.includes(requested)) candidates.push(requested);
+      const today = new Date();
+      const fallbackEnd = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
+      const minEnd = parseDate('2026-05-31');
+      const endDate = fallbackEnd > minEnd ? fallbackEnd : minEnd;
+      const endText = `${endDate.getFullYear()}-${String(endDate.getMonth()+1).padStart(2,'0')}-${String(endDate.getDate()).padStart(2,'0')}`;
+      const candidates = dateRange('2026-05-01', endText);
+      if(requested && requested >= '2026-05-01' && !candidates.includes(requested)) candidates.push(requested);
 
       const checks = await Promise.all(candidates.map(async date => {
         const url = `reports/${date}.html`;
-        const ok = await fileExists(url);
+        const ok = await fileLooksValidReport(url);
         return ok ? { date, displayDate:formatShort(date), title:`Daily Issue Report — ${date}`, url, status:'', fileName:`${date}.html` } : null;
       }));
       const reports = checks.filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date));
