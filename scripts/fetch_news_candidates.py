@@ -292,13 +292,31 @@ def build_summary(topics: list[str], items: list[dict[str, Any]]) -> str:
     return f"정유·석유화학·LNG 관련 조간 기사 후보로 {titles} 등 수집."
 
 
-def read_existing_valid(path: Path) -> dict[str, Any] | None:
+def read_existing_valid(
+    path: Path,
+    target_date: str,
+    lookback_hours: int,
+    cutoff_hour: int,
+    cutoff_minute: int,
+) -> dict[str, Any] | None:
+    """기존 뉴스 JSON도 기준일 조간 시간창을 통과한 기사만 유효로 본다.
+
+    과거 백필에서 잘못 저장된 오후 기사·익일 기사가 계속 재사용되는 것을 막기 위한
+    최종 방어선입니다. published_at_kst가 있는 기사는 시간창을 엄격히 검증하고,
+    시간이 없더라도 published_date가 전일/기준일 범위를 벗어나면 폐기합니다.
+    """
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return None
     arts = data.get("articles", []) if isinstance(data.get("articles"), list) else []
-    valid = [a for a in arts if isinstance(a, dict) and a.get("title") and a.get("url")]
+    valid = [
+        a for a in arts
+        if isinstance(a, dict)
+        and a.get("title")
+        and a.get("url")
+        and in_morning_issue_window(a, target_date, lookback_hours, cutoff_hour, cutoff_minute)
+    ]
     if valid:
         data["articles"] = valid
         return data
@@ -310,7 +328,7 @@ def main() -> int:
     target = datetime.strptime(a.date, "%Y-%m-%d").replace(tzinfo=KST)
     out_path = Path(a.out_dir) / f"{a.date}.json"
 
-    existing = read_existing_valid(out_path) if out_path.exists() else None
+    existing = read_existing_valid(out_path, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute) if out_path.exists() else None
     if existing and not a.force_refresh:
         print(f"[OK] 기존 정상 뉴스 후보 JSON 재사용: {out_path} / articles={len(existing.get('articles', []))}")
         return 0
@@ -352,8 +370,8 @@ def main() -> int:
                 break
 
     if len(selected) < a.min_required:
-        if existing:
-            print(f"[WARN] 새 뉴스 수집 실패. 기존 정상 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
+        if existing and not a.force_refresh:
+            print(f"[WARN] 새 뉴스 수집 실패. 기존 시간창 통과 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
             return 0
         payload = {
             "schema_version": "2.3",
