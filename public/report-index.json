@@ -1,12 +1,9 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-05-26 09:44:29 KST",
-  "count": 18,
+  "generatedAt": "2026-05-26 10:27:21 KST",
+  "count": 15,
   "latestDate": "2026-05-26",
   "availableDates": [
-    "2026-03-03",
-    "2026-04-01",
-    "2026-04-28",
     "2026-05-04",
     "2026-05-06",
     "2026-05-07",
@@ -158,33 +155,6 @@
       "url": "reports/2026-05-04.html",
       "status": "초안",
       "fileName": "2026-05-04.html",
-      "exists": true
-    },
-    {
-      "date": "2026-04-28",
-      "displayDate": "4/28(화)",
-      "title": "Daily Issue Report",
-      "url": "reports/2026-04-28.html",
-      "status": "초안",
-      "fileName": "2026-04-28.html",
-      "exists": true
-    },
-    {
-      "date": "2026-04-01",
-      "displayDate": "4/1(수)",
-      "title": "Daily Issue Report",
-      "url": "reports/2026-04-01.html",
-      "status": "초안",
-      "fileName": "2026-04-01.html",
-      "exists": true
-    },
-    {
-      "date": "2026-03-03",
-      "displayDate": "3/3(화)",
-      "title": "Daily Issue Report",
-      "url": "reports/2026-03-03.html",
-      "status": "초안",
-      "fileName": "2026-03-03.html",
       "exists": true
     }
   ]
