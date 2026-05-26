@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-13",
-  "collected_at": "2026-05-26 16:40:05 KST",
+  "collected_at": "2026-05-26 17:01:11 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -50,17 +50,6 @@
     "물가 지표와 에너지 비용 부담"
   ],
   "articles": [
-    {
-      "title": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 - 조선비즈 - Chosunbiz",
-      "press": "Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUmhVeE0zVkM1djd3bWlLbUY5blZEVlJ1M3ZWek1pZWZxb3JpR09IV3pCcmJJbTVBMWVyWXd6Z2YyclR1RnJWMVZGajdzbk5CTTlJd1lCb3pXTkY3UWo3eXpKLXZUTTdvSTM4bUxoX1l2X2pBSkNzZmtmZ0sycTNlWXd5SVfSAZgBQVVfeXFMTmFHN3VBMGxVNHAzTGsxNkdpZkxsQzdsUEF1Um0wZngzQkpULWxqaEdVajFZMG9RSko4cTY0U0tLdE9kT25xRzFxdzVIVGxHTTVmQk1qWDFFRVExSkExR3dnbnZNVWlRTlBjZHdEVG1famg2d3FBdmlYNGszZ21HSnZxU19pMmFvM2JjM2N5b2FFQVBGQlN1bHk?oc=5",
-      "published_date": "2026-05-12",
-      "published_at_kst": "2026-05-12 16:00",
-      "snippet": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 - 조선비즈 Chosunbiz",
-      "score": 37,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
     {
       "title": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 - v.daum.net",
       "press": "v.daum.net",
@@ -178,6 +167,17 @@
       "published_date": "2026-05-12",
       "published_at_kst": "2026-05-12 16:00",
       "snippet": "미·이란 긴장 재고조에 국제유가 3% 상승…에너지 쇼크 '경고' v.daum.net",
+      "score": 27,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "국제유가 3일째 오름세…고물가 압력에 Fed 연내 인하 전망 후퇴 - 중앙일보",
+      "press": "중앙일보",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE80dmdCeFFIdVI4b2ZUQWkxTDc1U1haR1pOaTZraE4xbVNLbWZmSEdveDl0cGI4TUNfdUdJaWpTbGd2WTUxam4yWFptLTJscXpCNF8tVmVB?oc=5",
+      "published_date": "2026-05-12",
+      "published_at_kst": "2026-05-12 16:00",
+      "snippet": "국제유가 3일째 오름세…고물가 압력에 Fed 연내 인하 전망 후퇴 중앙일보",
       "score": 27,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 8일 (금)",
     "previous_day_label": "5/7",
     "today_label": "5/8",
-    "generated_at": "2026-05-26 16:39 KST",
+    "generated_at": "2026-05-26 17:00 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1488,16 +1488,16 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "v.daum.net는 5/7 16:00 입력 기사에서 [국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 v.daum.net.",
+      "v.daum.net는 5/7 16:00 입력 기사에서 석유 최고가 또 동결…국제유가 불안에도 \"소비자물가 고려\" v.daum.net.",
       "미디어펜은 5/7 16:00 입력 기사에서 민주 중동특위 \"석유최고가격제·유류세 인하...물가 상승분 3분의 1 경감\" 미디어펜.",
       "v.daum.net는 5/7 16:00 입력 기사에서 [오일쇼크 폭풍전야] 최고가격제 언제까지...정유사·주유소 임계점 임박 v.daum.net."
     ],
     "articles": [
       {
-        "title": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 - v.daum.net",
+        "title": "석유 최고가 또 동결…국제유가 불안에도 \"소비자물가 고려\" - v.daum.net",
         "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE44eGdoYldESTlrNVZ4cEtBekViN0o4N2ZWdHd1UkNYSXlBNkgwY1FGX1U2aFhpay1CRkFwYjYwZU5Sd0xLM0E?oc=5",
-        "summary": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 v.daum.net.",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1lMlJGTElaaUtaRXpmdUJ4NjNpRndPeGRQUnFLMXhBNThLbE4xQnFkWUpocDN4X1FwdWFoZVNCRkx3eVZTWERDa2l1VkI1Ujg?oc=5",
+        "summary": "석유 최고가 또 동결…국제유가 불안에도 \"소비자물가 고려\" v.daum.net.",
         "published_at_kst": "2026-05-07 16:00"
       },
       {
@@ -1633,7 +1633,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 16:39:52 KST",
+      "merged_at": "2026-05-26 17:00:58 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
