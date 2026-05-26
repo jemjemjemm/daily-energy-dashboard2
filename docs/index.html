@@ -1,85 +1,39 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="format-detection" content="telephone=no" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>유가 동향 Dashboard</title>
   <style>
-    :root {
-      --bg:#F4F5F7; --card:#fff; --ink:#172033; --muted:#6B7280; --line:#E5E7EB;
-      --navy:#0A2444; --blue:#1A6FD4; --blue-soft:#EAF3FF; --shadow:0 8px 24px rgba(15,23,42,.08);
-    }
     *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-    body{margin:0;padding:14px;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;font-size:14px;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
-    .app{max-width:1080px;margin:0 auto}
-    .hero{background:linear-gradient(135deg,#0A2444,#153D69);color:#fff;border-radius:18px;padding:20px 18px;box-shadow:var(--shadow)}
-    .hero-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-    .title{font-size:24px;font-weight:850;letter-spacing:-.4px}
-    .subtitle{margin-top:4px;color:rgba(255,255,255,.76);font-size:13px}
-    .badge{flex-shrink:0;border-radius:999px;background:rgba(255,255,255,.13);padding:5px 10px;font-size:11px}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
-    .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px}
-    .stat-label{color:rgba(255,255,255,.68);font-size:11px}
-    .stat-value{margin-top:2px;font-weight:800;font-size:15px}
-    .warning{display:none;margin-top:10px;border-radius:12px;background:#FFF7ED;border:1px solid #FED7AA;color:#9A3412;padding:10px 12px;font-size:12px}
-    .layout{display:grid;grid-template-columns:380px 1fr;gap:12px;margin-top:12px}
-    .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
-    .panel-head{padding:13px 15px;background:#F8FAFC;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .panel-title{font-weight:850;font-size:14px}
-    .panel-sub{color:var(--muted);font-size:11px;margin-top:2px}
-    .calendar-nav{display:flex;align-items:center;gap:8px}
-    .nav-btn{border:1px solid var(--line);background:#fff;border-radius:9px;width:32px;height:32px;font-size:18px;cursor:pointer;color:var(--ink)}
-    .month-label{min-width:86px;text-align:center;font-weight:850}
-    .calendar{padding:12px}
-    .weekdays,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
-    .weekday{text-align:center;color:#8A94A6;font-size:11px;font-weight:800;padding:4px 0}
-    .day{position:relative;min-height:46px;border:1px solid #EDF0F4;background:#fff;border-radius:10px;padding:6px 5px;cursor:default;color:#C4CAD4}
-    .day.in-month{color:var(--ink)}
-    .day.has-report{cursor:pointer;background:var(--blue-soft);border-color:#B9D8FF}
-    .day.has-report:hover{outline:2px solid rgba(26,111,212,.18)}
-    .day.selected{background:var(--blue);color:#fff;border-color:var(--blue)}
-    .day.today:not(.selected){border-color:#F59E0B}
-    .day-number{font-weight:800;font-size:12px}
-    .dot{position:absolute;bottom:6px;left:50%;width:5px;height:5px;border-radius:50%;background:var(--blue);transform:translateX(-50%)}
-    .selected .dot{background:#fff}
-    .report-list{padding:0 12px 12px;max-height:190px;overflow:auto;border-top:1px solid #F1F3F5}
-    .report-list-title{font-size:11px;color:var(--muted);font-weight:800;margin:10px 0 6px}
-    .report-link{display:inline-block;margin:3px 4px 3px 0;border:1px solid #D8E7FF;background:#F5FAFF;border-radius:999px;padding:4px 8px;font-size:11px;color:#165DAA;text-decoration:none;cursor:pointer}
-    .report-link.selected{background:#1A6FD4;color:#fff;border-color:#1A6FD4}
-    .legend{display:flex;gap:10px;align-items:center;padding:0 12px 12px;color:var(--muted);font-size:11px}
-    .legend-dot{display:inline-block;width:7px;height:7px;background:var(--blue);border-radius:50%;margin-right:4px}
-    .report-panel{min-height:640px}
-    .report-head{padding:13px 15px;background:#F8FAFC;border-bottom:1px solid var(--line);display:flex;gap:12px;justify-content:space-between;align-items:center}
-    .selected-title{font-weight:850}
-    .selected-meta{color:var(--muted);font-size:11px;margin-top:2px}
-    .actions{display:flex;gap:6px;flex-shrink:0}
-    .action-btn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 10px;font-size:12px;color:var(--ink);cursor:pointer;text-decoration:none}
-    .report-frame-wrap{height:720px;background:#F9FAFB}
-    iframe{width:100%;height:100%;border:0;background:#fff;display:block}
-    .empty{padding:80px 20px;text-align:center;color:var(--muted)}
-    .empty-title{font-weight:850;color:var(--ink);margin-bottom:6px}
-    @media(max-width:860px){body{padding:10px}.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.title{font-size:22px}.report-frame-wrap{height:76vh;min-height:560px}}
+    :root{--navy:#0A2444;--blue:#1A6FD4;--bg:#F4F5F7;--border:#E5E7EB;--text:#1A1A1A;--muted:#777}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;font-size:14px;line-height:1.5}
+    .page{max-width:1120px;margin:0 auto;padding:18px}
+    .hero{background:linear-gradient(135deg,#0A2444,#123D6B);color:#fff;border-radius:18px;padding:20px;box-shadow:0 10px 26px rgba(10,36,68,.16)}
+    .hero h1{margin:0;font-size:24px;letter-spacing:-.02em}.hero p{margin:6px 0 0;color:rgba(255,255,255,.72);font-size:13px}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+    .stat{background:#fff;border:1px solid var(--border);border-radius:14px;padding:13px 14px}.stat-label{font-size:11px;color:#888}.stat-value{font-size:18px;font-weight:700;margin-top:3px;color:var(--navy)}
+    .layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:14px;align-items:start}.panel{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px;border-bottom:1px solid var(--border);background:#FAFAFB}.panel-title{font-weight:700;color:var(--navy)}
+    .month-nav{display:flex;align-items:center;gap:8px}.month-nav button,.btn{border:1px solid var(--border);background:#fff;border-radius:9px;padding:7px 9px;font-size:12px;cursor:pointer;color:#333;text-decoration:none}.month-nav button:hover,.btn:hover{background:#F3F6FA}.month-label{min-width:86px;text-align:center;font-weight:700;color:#333}
+    .calendar{padding:12px}.dow,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.dow div{text-align:center;font-size:11px;color:#888;padding:4px 0}.day{height:38px;border:1px solid #EEF0F3;border-radius:10px;background:#fff;color:#AAA;font-size:12px;display:flex;align-items:center;justify-content:center;position:relative}.day.has{color:#111;font-weight:700;cursor:pointer;background:#F7FAFF;border-color:#D7E8FF}.day.has:after{content:'';position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--blue)}.day.active{background:var(--navy);color:#fff;border-color:var(--navy)}.day.today{outline:2px solid rgba(26,111,212,.25)}
+    .legend{display:flex;gap:10px;align-items:center;padding:0 12px 12px;color:#777;font-size:11px}.dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--blue)}.dot.today{background:transparent;border:2px solid var(--blue)}
+    .quick{padding:12px;border-top:1px solid var(--border)}.quick-title{font-size:12px;font-weight:700;color:#777;margin-bottom:8px}.quick-list{display:flex;flex-direction:column;gap:6px;max-height:220px;overflow:auto}.quick-item{display:flex;justify-content:space-between;gap:8px;align-items:center;text-decoration:none;color:#333;border:1px solid #EEF0F3;border-radius:10px;padding:8px 9px;font-size:12px}.quick-item:hover,.quick-item.active{background:#F7FAFF;border-color:#D7E8FF}.quick-date{font-weight:700;color:var(--navy)}.quick-name{color:#777;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .viewer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--border);background:#fff}.viewer-title{font-weight:700;color:var(--navy)}.viewer-sub{font-size:12px;color:#888;margin-top:2px}.viewer-actions{display:flex;gap:7px;flex-wrap:wrap}.viewer-frame{width:100%;height:calc(100vh - 236px);min-height:680px;border:0;background:#fff}.empty,.error{padding:34px;text-align:center;color:#777}.error strong{color:#B42318}.hidden{display:none!important}
+    @media(max-width:860px){.page{padding:10px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.viewer-frame{height:78vh;min-height:620px}.hero{border-radius:14px}.hero h1{font-size:21px}}
   </style>
 </head>
 <body>
-  <main class="app">
+  <div class="page">
     <section class="hero">
-      <div class="hero-top">
-        <div>
-          <div class="title">유가 동향 Dashboard</div>
-          <div class="subtitle">정유 · 석유화학 · LNG AI 리포트</div>
-        </div>
-        <div class="badge">Calendar Report Viewer</div>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-label">등록 리포트 수</div><div class="stat-value" id="totalCount">-</div></div>
-        <div class="stat"><div class="stat-label">최신 기준일</div><div class="stat-value" id="latestDate">-</div></div>
-        <div class="stat"><div class="stat-label">선택 날짜</div><div class="stat-value" id="selectedDate">-</div></div>
-        <div class="stat"><div class="stat-label">목록 업데이트</div><div class="stat-value" id="updatedAt">-</div></div>
-      </div>
-      <div class="warning" id="warningBox"></div>
+      <h1>유가 동향 Dashboard</h1>
+      <p>정유 · 석유화학 · LNG AI 리포트</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><div class="stat-label">등록 리포트 수</div><div class="stat-value" id="reportCount">-</div></div>
+      <div class="stat"><div class="stat-label">최신 기준일</div><div class="stat-value" id="latestDate">-</div></div>
+      <div class="stat"><div class="stat-label">선택 날짜</div><div class="stat-value" id="selectedDate">-</div></div>
+      <div class="stat"><div class="stat-label">목록 업데이트</div><div class="stat-value" id="generatedAt">-</div></div>
     </section>
 
     <section class="layout">
@@ -87,267 +41,164 @@
         <div class="panel-head">
           <div>
             <div class="panel-title">월별 리포트 캘린더</div>
-            <div class="panel-sub">월 기준으로 리포트가 있는 날짜를 표시합니다.</div>
+            <div style="font-size:11px;color:#888;margin-top:2px">월 기준으로 리포트가 있는 날짜를 표시합니다.</div>
           </div>
-          <div class="calendar-nav">
-            <button class="nav-btn" id="prevMonth" type="button">‹</button>
+          <div class="month-nav">
+            <button id="prevMonth" type="button">‹</button>
             <div class="month-label" id="monthLabel">-</div>
-            <button class="nav-btn" id="nextMonth" type="button">›</button>
+            <button id="nextMonth" type="button">›</button>
           </div>
         </div>
         <div class="calendar">
-          <div class="weekdays"><div class="weekday">일</div><div class="weekday">월</div><div class="weekday">화</div><div class="weekday">수</div><div class="weekday">목</div><div class="weekday">금</div><div class="weekday">토</div></div>
-          <div class="days" id="calendarDays"></div>
+          <div class="dow"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div></div>
+          <div class="grid" id="calendarGrid"></div>
         </div>
-        <div class="legend"><span><span class="legend-dot"></span>리포트 있음</span><span>오늘</span></div>
-        <div class="report-list">
-          <div class="report-list-title">리포트 바로가기</div>
-          <div id="reportList"></div>
+        <div class="legend"><span><i class="dot"></i> 리포트 있음</span><span><i class="dot today"></i> 오늘</span></div>
+        <div class="quick">
+          <div class="quick-title">리포트 바로가기</div>
+          <div class="quick-list" id="quickList"><div style="color:#999;font-size:12px">리포트를 불러오는 중입니다.</div></div>
         </div>
       </aside>
 
-      <section class="panel report-panel">
-        <div class="report-head">
+      <main class="panel">
+        <div class="viewer-head">
           <div>
-            <div class="selected-title" id="reportTitle">리포트를 선택해 주세요.</div>
-            <div class="selected-meta" id="reportMeta">캘린더 또는 바로가기에서 날짜를 선택해 주세요.</div>
+            <div class="viewer-title" id="viewerTitle">리포트를 선택해 주세요.</div>
+            <div class="viewer-sub" id="viewerSub">캘린더 또는 바로가기에서 날짜를 선택해 주세요.</div>
           </div>
-          <div class="actions">
-            <a class="action-btn" id="openNew" href="#" target="_blank" rel="noopener noreferrer">새 창</a>
-            <button class="action-btn" id="reloadBtn" type="button">새로고침</button>
+          <div class="viewer-actions">
+            <a class="btn hidden" id="openReport" href="#" target="_blank" rel="noopener">새 창</a>
+            <button class="btn" id="reloadBtn" type="button">새로고침</button>
           </div>
         </div>
-        <div class="report-frame-wrap">
-          <div class="empty" id="emptyState"><div class="empty-title">선택된 리포트가 없습니다.</div><div>캘린더에서 날짜를 선택해 주세요.</div></div>
-          <iframe id="reportFrame" title="선택한 날짜의 리포트" style="display:none;"></iframe>
-        </div>
-      </section>
+        <div class="empty" id="emptyBox">선택된 리포트가 없습니다.<br/>캘린더에서 날짜를 선택해 주세요.</div>
+        <div class="error hidden" id="errorBox"><strong>대시보드를 불러오지 못했습니다.</strong><br/><span id="errorMessage">report-index.json을 확인해 주세요.</span></div>
+        <iframe class="viewer-frame hidden" id="reportFrame" title="Daily 유가 동향 리포트"></iframe>
+      </main>
     </section>
-  </main>
+  </div>
 
   <script>
-    const state = { reports: [], reportMap: new Map(), availableDates: new Set(), currentMonth: null, selectedDate: null, indexUpdatedAt: '' };
+    const state = { reports: [], byDate: new Map(), availableDates: new Set(), currentMonth: null, selectedDate: null, index: null };
+    const $ = (id) => document.getElementById(id);
+    const todayIso = new Date().toISOString().slice(0,10);
 
-    function qs(name){ return new URLSearchParams(window.location.search).get(name); }
-    function normalizeDate(value){ if(!value) return ''; const m=String(value).match(/(\d{4})-(\d{2})-(\d{2})/); return m ? `${m[1]}-${m[2]}-${m[3]}` : ''; }
-    function parseDate(dateText){ const [y,m,d]=dateText.split('-').map(Number); return new Date(y,m-1,d); }
-    function formatShort(dateText){ const d=parseDate(dateText); return Number.isNaN(d.getTime()) ? (dateText||'-') : `${d.getMonth()+1}/${d.getDate()}`; }
-    function formatMonth(dateObj){ return `${dateObj.getFullYear()}년 ${dateObj.getMonth()+1}월`; }
-    function isSameDay(a,b){ return a&&b&&a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate(); }
-    function setWarning(message){ const box=document.getElementById('warningBox'); if(!message){box.style.display='none';box.textContent='';return;} box.style.display='block'; box.textContent=message; }
-
-    function normalizeReportItem(item){
-      if(!item || typeof item !== 'object') return null;
-      const date = normalizeDate(item.date || item.report_date || item.reportDate || item.baseDate || item.id || item.fileName || item.file_name || item.url);
-      if(!date) return null;
-      let url = item.url || item.href || item.path || item.file || item.fileName || item.file_name || '';
-      if(!url) url = `reports/${date}.html`;
-      if(!String(url).includes('/')) url = `reports/${url}`;
-      return { date, displayDate:item.displayDate||item.display_date||item.label||formatShort(date), title:item.title||item.report_title||`Daily Issue Report — ${date}`, url, status:item.status||'', fileName:item.fileName||`${date}.html` };
+    function fmtDate(dateStr){
+      if(!dateStr) return '-';
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr);
+      if(!m) return dateStr;
+      return `${Number(m[2])}/${Number(m[3])}`;
     }
-
-    function normalizeIndex(payload){
-      let reports = [];
-      if(Array.isArray(payload)) reports = payload.map(normalizeReportItem).filter(Boolean);
-      else if(payload && typeof payload === 'object'){
-        if(Array.isArray(payload.reports)) reports = payload.reports.map(normalizeReportItem).filter(Boolean);
-        else if(Array.isArray(payload.items)) reports = payload.items.map(normalizeReportItem).filter(Boolean);
-
-        if(Array.isArray(payload.availableDates)){
-          const fromDates = payload.availableDates.map(normalizeDate).filter(Boolean).map(date => ({
-            date, displayDate:formatShort(date), title:`Daily Issue Report — ${date}`, url:`reports/${date}.html`, status:'', fileName:`${date}.html`
-          }));
-          reports = reports.concat(fromDates);
-        }
-        state.indexUpdatedAt = payload.generatedAt || payload.generated_at || payload.updatedAt || payload.updated_at || '';
-      }
-      const map = new Map();
-      for(const item of reports) map.set(item.date, item);
-      reports = Array.from(map.values()).sort((a,b)=>a.date.localeCompare(b.date));
-      setReports(reports);
+    function monthKey(dateStr){ return dateStr ? dateStr.slice(0,7) : new Date().toISOString().slice(0,7); }
+    function normalizeReports(payload){
+      const reports = Array.isArray(payload?.reports) ? payload.reports : [];
+      return reports.filter(r => r && r.date && r.url).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
     }
-
-    function setReports(reports){
-      state.reports = reports;
-      state.reportMap = new Map(reports.map(r => [r.date, r]));
-      state.availableDates = new Set(reports.map(r => r.date));
+    async function fetchJson(url){
+      const res = await fetch(`${url}?v=${Date.now()}`, {cache:'no-store'});
+      if(!res.ok) throw new Error(`${url} HTTP ${res.status}`);
+      return await res.json();
     }
-
-    async function fileLooksValidReport(url){
-      try{
-        const res = await fetch(`${url}?probe=${Date.now()}`, { method:'GET', cache:'no-store' });
-        if(!res.ok) return false;
-        const html = await res.text();
-        const badPhrases = [
-          '자동 추출된 일정 항목이 없습니다',
-          '본문 구조 확인 및 수동 검수가 필요합니다',
-          '원문 자동 매칭 실패',
-          '주요일정 원문 데이터 미확보',
-          '가격 데이터 중심 리포트',
-          '정유·석유화학·LNG 관련 조간 기사 후보를 찾지 못했습니다',
-          '자동 수집된 대표 기사 없음',
-          '대표 기사 미확인',
-          '기준일 조간 기준 주요 보도 없음',
-          '기준일 조간 기준 정유·석유화학·LNG 관련 대표 기사 미확인',
-          '일정 관련성 평가는',
-          'A 직접',
-          'B 간접',
-          'C 참고',
-          '세이프타임즈'
-        ];
-        if(badPhrases.some(phrase => html.includes(phrase))) return false;
-        return html.includes('Daily Issue Report')
-          && html.includes('조간 신문 트렌드')
-          && html.includes('news-item')
-          && html.includes('유가 동향');
-      }catch(e){ return false; }
-    }
-
-    function dateRange(start, end){
-      const out=[]; let d=parseDate(start); const e=parseDate(end);
-      while(d<=e){
-        const text=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        if(d.getDay()!==0 && d.getDay()!==6) out.push(text);
-        d.setDate(d.getDate()+1);
-      }
-      return out;
-    }
-
-    async function fallbackProbeReports(){
-      // report-index.json이 깨졌을 때만 쓰는 비상 복구.
-      // index가 깨져도 구양식·fallback HTML을 다시 노출하지 않도록 HTML 본문까지 검증한다.
-      const requested = normalizeDate(qs('date'));
-      const today = new Date();
-      const fallbackEnd = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
-      const minEnd = parseDate('2026-05-31');
-      const endDate = fallbackEnd > minEnd ? fallbackEnd : minEnd;
-      const endText = `${endDate.getFullYear()}-${String(endDate.getMonth()+1).padStart(2,'0')}-${String(endDate.getDate()).padStart(2,'0')}`;
-      const candidates = dateRange('2026-05-01', endText);
-      if(requested && requested >= '2026-05-01' && !candidates.includes(requested)) candidates.push(requested);
-
-      const checks = await Promise.all(candidates.map(async date => {
-        const url = `reports/${date}.html`;
-        const ok = await fileLooksValidReport(url);
-        return ok ? { date, displayDate:formatShort(date), title:`Daily Issue Report — ${date}`, url, status:'', fileName:`${date}.html` } : null;
-      }));
-      const reports = checks.filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date));
-      setReports(reports);
-      state.indexUpdatedAt = '파일 직접 확인';
-    }
-
     async function loadIndex(){
-      let indexOk = false;
-      let indexError = '';
-      try{
-        const response = await fetch(`report-index.json?ts=${Date.now()}`, { cache:'no-store' });
-        if(!response.ok) throw new Error(`HTTP ${response.status}`);
-        const payload = await response.json();
-        normalizeIndex(payload);
-        indexOk = state.reports.length > 0;
-      }catch(error){
-        indexError = error.message || String(error);
+      const candidates = ['report-index.json','./report-index.json','public/report-index.json'];
+      let lastError = null;
+      for(const url of candidates){
+        try{
+          const payload = await fetchJson(url);
+          const reports = normalizeReports(payload);
+          if(reports.length > 0){ return {payload, reports}; }
+          lastError = new Error(`${url} 리포트 0건`);
+        }catch(e){ lastError = e; }
       }
-
-      // 핵심: index가 실패했거나 5개 이하로 비정상적으로 적으면 실제 HTML 파일을 직접 찾아서 복구.
-      if(!indexOk || state.reports.length <= 5){
-        await fallbackProbeReports();
-        if(state.reports.length > 0){
-          setWarning(indexOk ? 'report-index.json 목록이 일부만 보여 실제 HTML 파일을 직접 확인해 복구했습니다.' : `report-index.json 로딩 실패(${indexError}). HTML 파일 직접 확인으로 복구했습니다.`);
-        }
-      }
-
-      if(state.reports.length === 0) throw new Error('표시 가능한 리포트 HTML을 찾지 못했습니다.');
-
-      const latest = state.reports[state.reports.length - 1];
-      const requested = normalizeDate(qs('date'));
-      const selected = requested && state.reportMap.has(requested) ? requested : latest.date;
-
-      state.selectedDate = selected;
-      const sd = parseDate(selected);
-      state.currentMonth = new Date(sd.getFullYear(), sd.getMonth(), 1);
-      updateStats(); renderCalendar(); renderReportList(); selectDate(selected, { replaceUrl:false });
+      throw lastError || new Error('report-index.json 로드 실패');
     }
-
-    function updateStats(){
-      const latest = state.reports[state.reports.length - 1];
-      document.getElementById('totalCount').textContent = String(state.reports.length);
-      document.getElementById('latestDate').textContent = latest ? formatShort(latest.date) : '-';
-      document.getElementById('selectedDate').textContent = state.selectedDate ? formatShort(state.selectedDate) : '-';
-      document.getElementById('updatedAt').textContent = state.indexUpdatedAt ? String(state.indexUpdatedAt).split(' ')[0] : '-';
+    function initData(payload, reports){
+      state.index = payload;
+      state.reports = reports;
+      state.byDate = new Map(reports.map(r => [r.date, r]));
+      state.availableDates = new Set(reports.map(r => r.date));
+      const latest = reports[0]?.date || '';
+      state.currentMonth = monthKey(new URLSearchParams(location.search).get('date') || latest || todayIso);
+      $('reportCount').textContent = reports.length;
+      $('latestDate').textContent = fmtDate(latest);
+      $('generatedAt').textContent = payload.generatedAt ? String(payload.generatedAt).slice(5,16) : '-';
+      renderQuickList();
+      renderCalendar();
+      const paramDate = new URLSearchParams(location.search).get('date');
+      const initial = state.byDate.has(paramDate) ? paramDate : latest;
+      if(initial) selectReport(initial, {push:false});
     }
-
-    function renderCalendar(){
-      const container=document.getElementById('calendarDays'); container.innerHTML='';
-      const year=state.currentMonth.getFullYear(); const month=state.currentMonth.getMonth();
-      document.getElementById('monthLabel').textContent=formatMonth(state.currentMonth);
-      const firstDay=new Date(year,month,1); const start=new Date(year,month,1-firstDay.getDay()); const today=new Date();
-
-      for(let i=0;i<42;i++){
-        const d=new Date(start); d.setDate(start.getDate()+i);
-        const dateText=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-        const day=document.createElement('button'); day.type='button'; day.className='day';
-        if(d.getMonth()===month) day.classList.add('in-month');
-        if(state.availableDates.has(dateText)) day.classList.add('has-report');
-        if(state.selectedDate===dateText) day.classList.add('selected');
-        if(isSameDay(d,today)) day.classList.add('today');
-        day.innerHTML=`<div class="day-number">${d.getDate()}</div>${state.availableDates.has(dateText)?'<span class="dot"></span>':''}`;
-        if(state.availableDates.has(dateText)) day.addEventListener('click',()=>selectDate(dateText));
-        container.appendChild(day);
-      }
-    }
-
-    function renderReportList(){
-      const list=document.getElementById('reportList');
-      list.innerHTML='';
-      const monthReports=state.reports.filter(r=>{
-        if(!state.currentMonth) return true;
-        const d=parseDate(r.date);
-        return d.getFullYear()===state.currentMonth.getFullYear() && d.getMonth()===state.currentMonth.getMonth();
+    function renderQuickList(){
+      const box = $('quickList');
+      box.innerHTML = '';
+      state.reports.forEach(r => {
+        const a = document.createElement('a');
+        a.href = `?date=${encodeURIComponent(r.date)}`;
+        a.className = 'quick-item' + (r.date === state.selectedDate ? ' active' : '');
+        a.innerHTML = `<span class="quick-date">${fmtDate(r.date)}</span><span class="quick-name">${r.displayDate || r.title || r.date}</span>`;
+        a.addEventListener('click', ev => { ev.preventDefault(); selectReport(r.date); });
+        box.appendChild(a);
       });
-      const source = monthReports.length ? monthReports : state.reports;
-      for(const r of source){
-        const a=document.createElement('a');
-        a.href='javascript:void(0)';
-        a.className='report-link' + (r.date===state.selectedDate ? ' selected' : '');
-        a.textContent=formatShort(r.date);
-        a.addEventListener('click',()=>selectDate(r.date));
-        list.appendChild(a);
+    }
+    function renderCalendar(){
+      const [yy, mm] = state.currentMonth.split('-').map(Number);
+      $('monthLabel').textContent = `${yy}.${String(mm).padStart(2,'0')}`;
+      const grid = $('calendarGrid');
+      grid.innerHTML = '';
+      const first = new Date(yy, mm-1, 1);
+      const last = new Date(yy, mm, 0);
+      for(let i=0; i<first.getDay(); i++) grid.appendChild(dayCell('', false));
+      for(let d=1; d<=last.getDate(); d++){
+        const iso = `${yy}-${String(mm).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        grid.appendChild(dayCell(String(d), state.availableDates.has(iso), iso));
       }
     }
-
-    function selectDate(dateText, options={}){
-      const report=state.reportMap.get(dateText);
-      if(!report){ setWarning(`${dateText} 리포트를 찾지 못했습니다.`); return; }
-      state.selectedDate=dateText; updateStats();
-      const d=parseDate(dateText); state.currentMonth=new Date(d.getFullYear(),d.getMonth(),1);
-      renderCalendar(); renderReportList();
-
-      document.getElementById('reportTitle').textContent=report.title || `Daily Issue Report — ${dateText}`;
-      document.getElementById('reportMeta').textContent=`${dateText} · ${report.url}`;
-      const frame=document.getElementById('reportFrame'); const empty=document.getElementById('emptyState');
-      frame.src=`${report.url}${report.url.includes('?')?'&':'?'}ts=${Date.now()}`;
-      frame.style.display='block'; empty.style.display='none';
-      document.getElementById('openNew').href=report.url;
-
-      if(options.replaceUrl!==false){
-        const url=new URL(window.location.href);
-        url.searchParams.set('date',dateText);
-        window.history.replaceState({},'',url.toString());
-      }
+    function dayCell(label, hasReport, iso){
+      const div = document.createElement('div');
+      div.className = 'day' + (hasReport ? ' has' : '') + (iso === state.selectedDate ? ' active' : '') + (iso === todayIso ? ' today' : '');
+      div.textContent = label;
+      if(hasReport){ div.addEventListener('click', () => selectReport(iso)); }
+      return div;
     }
-
-    document.getElementById('prevMonth').addEventListener('click',()=>{ state.currentMonth=new Date(state.currentMonth.getFullYear(),state.currentMonth.getMonth()-1,1); renderCalendar(); renderReportList(); });
-    document.getElementById('nextMonth').addEventListener('click',()=>{ state.currentMonth=new Date(state.currentMonth.getFullYear(),state.currentMonth.getMonth()+1,1); renderCalendar(); renderReportList(); });
-    document.getElementById('reloadBtn').addEventListener('click',()=>{ if(state.selectedDate) selectDate(state.selectedDate,{replaceUrl:false}); });
-
-    loadIndex().catch(error=>{
-      console.error(error);
-      setWarning(`대시보드를 불러오지 못했습니다. ${error.message}`);
-      document.getElementById('totalCount').textContent='-';
-      document.getElementById('latestDate').textContent='-';
-      document.getElementById('selectedDate').textContent='-';
-      document.getElementById('updatedAt').textContent='-';
-    });
+    function selectReport(date, opts={push:true}){
+      const report = state.byDate.get(date);
+      if(!report) return;
+      state.selectedDate = date;
+      state.currentMonth = monthKey(date);
+      $('selectedDate').textContent = fmtDate(date);
+      $('viewerTitle').textContent = report.title || `Daily 유가 동향 — ${date}`;
+      $('viewerSub').textContent = report.displayDate || date;
+      $('emptyBox').classList.add('hidden');
+      $('errorBox').classList.add('hidden');
+      $('reportFrame').classList.remove('hidden');
+      $('reportFrame').src = `${report.url}?v=${Date.now()}`;
+      $('openReport').href = report.url;
+      $('openReport').classList.remove('hidden');
+      if(opts.push !== false){ history.replaceState(null, '', `?date=${encodeURIComponent(date)}`); }
+      renderCalendar();
+      renderQuickList();
+    }
+    function changeMonth(delta){
+      const [yy, mm] = state.currentMonth.split('-').map(Number);
+      const next = new Date(yy, mm-1 + delta, 1);
+      state.currentMonth = `${next.getFullYear()}-${String(next.getMonth()+1).padStart(2,'0')}`;
+      renderCalendar();
+    }
+    function showError(message){
+      $('emptyBox').classList.add('hidden');
+      $('reportFrame').classList.add('hidden');
+      $('errorMessage').textContent = message || 'report-index.json을 확인해 주세요.';
+      $('errorBox').classList.remove('hidden');
+      $('reportCount').textContent = '0';
+      $('latestDate').textContent = '-';
+      $('selectedDate').textContent = '-';
+      $('generatedAt').textContent = '-';
+      $('quickList').innerHTML = '<div style="color:#B42318;font-size:12px">리포트 목록이 비어 있습니다. report-index.json 생성 로직을 확인해 주세요.</div>';
+    }
+    $('prevMonth').addEventListener('click', () => changeMonth(-1));
+    $('nextMonth').addEventListener('click', () => changeMonth(1));
+    $('reloadBtn').addEventListener('click', () => location.reload());
+    loadIndex().then(({payload, reports}) => initData(payload, reports)).catch(e => showError(e.message));
   </script>
 </body>
 </html>
