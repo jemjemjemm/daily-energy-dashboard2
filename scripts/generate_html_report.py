@@ -9,6 +9,7 @@ Render data/reports/YYYY-MM-DD.report.json to docs/reports/YYYY-MM-DD.html.
 - prices.crude.chart_series / prices.products.chart_series 중첩 구조를 직접 지원한다.
 - price cards도 중첩형 cards/latest/chart_series/history 구조를 모두 탐색한다.
 - 조간 신문 트렌드 대표 기사는 제목 클릭만 남기고, 화면에 긴 URL 텍스트를 출력하지 않는다.
+- 그래프 mouse/touch tooltip을 HTML에 포함해 날짜별 가격을 다시 표시한다.
 - 기존 CLI(--date --report-dir --out-dir / --input --output)를 유지한다.
 """
 from __future__ import annotations
@@ -33,7 +34,7 @@ COLORS = {
 
 STYLE = r"""
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-*{box-sizing:border-box}body{margin:0;padding:16px;background:#F4F5F7;color:#1A1A1A;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}.container{max-width:480px;margin:0 auto}.header{background:#0A2444;color:#fff;padding:18px 16px 14px;border-radius:12px 12px 0 0}.header-top{display:flex;justify-content:space-between;gap:12px}.header-title{font-size:20px;font-weight:700}.header-date{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}.header-badge{font-size:11px;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 10px;height:fit-content;white-space:nowrap}.section{background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin:10px 0;overflow:hidden}.section-header{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #E5E7EB;background:#F8F9FA}.section-num{font-size:11px;font-weight:700;color:#fff;background:#0A2444;border-radius:4px;padding:2px 7px;min-width:24px;text-align:center}.section-title{font-size:14px;font-weight:700}.summary-body,.news-body{padding:14px 16px}.summary-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0;font-size:13px}.summary-item:last-child{border-bottom:none}.summary-dot{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#1A6FD4;margin-top:8px}.price-section-label{font-size:12px;font-weight:500;color:#666;padding:12px 16px 6px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px 14px}.price-card{background:#F8F9FA;border-radius:8px;padding:10px 8px;text-align:center}.price-label{font-size:11px;color:#666;margin-bottom:4px}.price-value{font-size:18px;font-weight:700;line-height:1}.price-unit{font-size:10px;color:#999;margin-top:2px}.price-change{font-size:11px;margin-top:3px}.up{color:#C0392B}.down{color:#0A7B4E}.flat{color:#888}.divider{height:1px;background:#F0F0F0;margin:0 16px 4px}.chart-wrap{padding:12px 14px}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#666}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:12px;height:3px;border-radius:2px}.chart-svg{width:100%;height:auto;display:block;overflow:visible}.no-data{padding:24px 8px;text-align:center;color:#888;background:#F8F9FA;border-radius:8px}.issue-list,.schedule-list{padding:10px 12px}.issue-card{background:#F8F9FA;border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid #1A6FD4}.issue-tag{display:inline-block;font-size:10px;font-weight:700;background:#E6F1FB;color:#185FA5;border-radius:3px;padding:2px 6px;margin-bottom:6px}.issue-title{font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.5}.issue-desc{font-size:12px;color:#444;line-height:1.65}.issue-links{margin-top:8px;font-size:11px}.issue-links a{display:block;color:#0A2444;text-decoration:underline;margin-top:3px}.schedule-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #F0F0F0}.schedule-row:last-child{border-bottom:none}.schedule-time{flex:0 0 38px;font-size:11px;font-weight:700;color:#185FA5;margin-top:1px}.schedule-org{flex:0 0 48px;font-size:10px;background:#F0F1F3;border:1px solid #E0E0E0;border-radius:3px;padding:1px 4px;color:#555;text-align:center}.schedule-main{flex:1;font-size:12px;line-height:1.5}.schedule-rel{font-size:11px;color:#777;margin-top:2px}.news-trend{font-size:13px;line-height:1.75;margin-bottom:14px}.news-separator{height:1px;background:#F0F0F0;margin:12px 0}.news-links-title{font-size:11px;font-weight:700;color:#999;letter-spacing:.5px;margin-bottom:8px}.news-link{display:block;padding:9px 0;border-bottom:1px solid #F0F0F0;text-decoration:none;color:inherit}.news-link-title{font-size:13px;font-weight:600;color:#0A2444;line-height:1.45;text-decoration:underline}.news-link-press{font-size:11px;color:#888;margin:2px 0}.news-link-desc{font-size:11px;color:#555;line-height:1.55}.fact-note{font-size:11px;color:#888;background:#F8F9FA;border-top:1px solid #E5E7EB;padding:10px 16px}.footer{text-align:center;padding:12px;font-size:11px;color:#aaa;border-top:1px solid #E5E7EB;margin-top:4px}@media(max-width:430px){body{padding:10px}.header-title{font-size:18px}.header-badge{font-size:10px;padding:4px 8px}.price-grid{gap:6px;padding:0 12px 12px}.price-value{font-size:16px}.chart-wrap{padding:10px 8px}.schedule-org{flex-basis:42px}}
+*{box-sizing:border-box}body{margin:0;padding:16px;background:#F4F5F7;color:#1A1A1A;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}.container{max-width:480px;margin:0 auto}.header{background:#0A2444;color:#fff;padding:18px 16px 14px;border-radius:12px 12px 0 0}.header-top{display:flex;justify-content:space-between;gap:12px}.header-title{font-size:20px;font-weight:700}.header-date{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}.header-badge{font-size:11px;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 10px;height:fit-content;white-space:nowrap}.section{background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin:10px 0;overflow:hidden}.section-header{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #E5E7EB;background:#F8F9FA}.section-num{font-size:11px;font-weight:700;color:#fff;background:#0A2444;border-radius:4px;padding:2px 7px;min-width:24px;text-align:center}.section-title{font-size:14px;font-weight:700}.summary-body,.news-body{padding:14px 16px}.summary-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0;font-size:13px}.summary-item:last-child{border-bottom:none}.summary-dot{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#1A6FD4;margin-top:8px}.price-section-label{font-size:12px;font-weight:500;color:#666;padding:12px 16px 6px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px 14px}.price-card{background:#F8F9FA;border-radius:8px;padding:10px 8px;text-align:center}.price-label{font-size:11px;color:#666;margin-bottom:4px}.price-value{font-size:18px;font-weight:700;line-height:1}.price-unit{font-size:10px;color:#999;margin-top:2px}.price-change{font-size:11px;margin-top:3px}.up{color:#C0392B}.down{color:#0A7B4E}.flat{color:#888}.divider{height:1px;background:#F0F0F0;margin:0 16px 4px}.chart-wrap{padding:12px 14px}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#666}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:12px;height:3px;border-radius:2px}.chart-box{position:relative;width:100%;min-height:245px;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;overflow:visible}.chart-svg{width:100%;height:auto;display:block;overflow:visible}.chart-hover-line{opacity:0}.chart-tooltip{position:absolute;z-index:20;display:none;min-width:132px;max-width:220px;background:rgba(10,36,68,.96);color:#fff;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.45;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}.chart-tooltip .date{font-weight:700;margin-bottom:4px}.tooltip-row{display:flex;justify-content:space-between;gap:12px}.no-data{padding:24px 8px;text-align:center;color:#888;background:#F8F9FA;border-radius:8px}.issue-list,.schedule-list{padding:10px 12px}.issue-card{background:#F8F9FA;border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid #1A6FD4}.issue-tag{display:inline-block;font-size:10px;font-weight:700;background:#E6F1FB;color:#185FA5;border-radius:3px;padding:2px 6px;margin-bottom:6px}.issue-title{font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.5}.issue-desc{font-size:12px;color:#444;line-height:1.65}.issue-links{margin-top:8px;font-size:11px}.issue-links a{display:block;color:#0A2444;text-decoration:underline;margin-top:3px}.schedule-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #F0F0F0}.schedule-row:last-child{border-bottom:none}.schedule-time{flex:0 0 38px;font-size:11px;font-weight:700;color:#185FA5;margin-top:1px}.schedule-org{flex:0 0 48px;font-size:10px;background:#F0F1F3;border:1px solid #E0E0E0;border-radius:3px;padding:1px 4px;color:#555;text-align:center}.schedule-main{flex:1;font-size:12px;line-height:1.5}.schedule-rel{font-size:11px;color:#777;margin-top:2px}.news-trend{font-size:13px;line-height:1.75;margin-bottom:14px}.news-separator{height:1px;background:#F0F0F0;margin:12px 0}.news-links-title{font-size:11px;font-weight:700;color:#999;letter-spacing:.5px;margin-bottom:8px}.news-link{display:block;padding:9px 0;border-bottom:1px solid #F0F0F0;text-decoration:none;color:inherit}.news-link-title{font-size:13px;font-weight:600;color:#0A2444;line-height:1.45;text-decoration:underline}.news-link-press{font-size:11px;color:#888;margin:2px 0}.news-link-desc{font-size:11px;color:#555;line-height:1.55}.fact-note{font-size:11px;color:#888;background:#F8F9FA;border-top:1px solid #E5E7EB;padding:10px 16px}.footer{text-align:center;padding:12px;font-size:11px;color:#aaa;border-top:1px solid #E5E7EB;margin-top:4px}@media(max-width:430px){body{padding:10px}.header-title{font-size:18px}.header-badge{font-size:10px;padding:4px 8px}.price-grid{gap:6px;padding:0 12px 12px}.price-value{font-size:16px}.chart-wrap{padding:10px 8px}.chart-box{min-height:230px}.chart-tooltip{font-size:10.5px;min-width:124px}.schedule-org{flex-basis:42px}}
 """.strip()
 
 
@@ -90,6 +91,17 @@ def short_date(date_text: str) -> str:
     except Exception:
         return date_text
 
+
+
+
+def get_report_date(data: Mapping[str, Any], fallback: str) -> str:
+    report = dict_of(data.get("report"))
+    value = report.get("report_date") or data.get("date") or fallback
+    value = str(value or fallback).strip()
+    # 자동화 입력값은 YYYY-MM-DD로 들어오므로, 형식이 깨진 값은 fallback 유지
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", value):
+        return value
+    return fallback
 
 def display_date(date_text: str, data: Mapping[str, Any]) -> str:
     report = dict_of(data.get("report"))
@@ -328,7 +340,20 @@ def extract_series(data: Mapping[str, Any], group: str) -> list[dict[str, Any]]:
     return []
 
 
-def make_svg(rows: list[dict[str, Any]], keys: Sequence[str], labels: Mapping[str, str] | None = None) -> str:
+def chart_js_rows(rows: Sequence[Mapping[str, Any]], keys: Sequence[str]) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        item: dict[str, Any] = {
+            "date": str(row.get("date") or ""),
+            "label": str(row.get("label") or short_date(str(row.get("date") or ""))),
+        }
+        for key in keys:
+            item[key] = as_number(row.get(key))
+        out.append(item)
+    return out
+
+
+def make_svg(rows: list[dict[str, Any]], keys: Sequence[str], chart_id: str, labels: Mapping[str, str] | None = None) -> str:
     values = []
     for r in rows:
         for k in keys:
@@ -383,20 +408,38 @@ def make_svg(rows: list[dict[str, Any]], keys: Sequence[str], labels: Mapping[st
         label = labels.get(key, key) if labels else key
         legend.append(f'<span class="legend-item"><span class="legend-dot" style="background:{COLORS.get(key, "#1A6FD4")}"></span>{esc(label)}</span>')
 
+    payload = {
+        "id": chart_id,
+        "left": left,
+        "right": right,
+        "width": W,
+        "top": top,
+        "bottomY": H - bottom,
+        "data": chart_js_rows(rows, keys),
+        "keys": [[key, labels.get(key, key) if labels else key] for key in keys],
+    }
+    payload_json = html.escape(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), quote=True)
+
     return f"""
 <div class="chart-legend">{''.join(legend)}</div>
-<svg class="chart-svg" viewBox="0 0 {W} {H}" role="img" aria-label="가격 추이 그래프">
-  {''.join(grid)}
-  {''.join(paths)}
-  {''.join(axis_labels)}
-</svg>
+<div class="chart-box" id="{esc(chart_id)}" data-chart='{payload_json}'>
+  <svg class="chart-svg" viewBox="0 0 {W} {H}" role="img" aria-label="가격 추이 그래프">
+    {''.join(grid)}
+    {''.join(paths)}
+    {''.join(axis_labels)}
+    <line class="chart-hover-line" x1="{left}" x2="{left}" y1="{top}" y2="{H-bottom}" stroke="#0A2444" stroke-width="1"/>
+    <rect class="chart-hit-area" x="{left}" y="{top}" width="{pw}" height="{ph}" fill="transparent"/>
+  </svg>
+  <div class="chart-tooltip"></div>
+</div>
 """
 
 
 def render_chart(title: str, rows: list[dict[str, Any]], keys: Sequence[str], labels: Mapping[str, str] | None = None) -> str:
     if rows:
         title = f"{title} ({short_date(str(rows[0].get('date','')))} ~ {short_date(str(rows[-1].get('date','')))})"
-    body = '<div class="chart-wrap">' + make_svg(rows, keys, labels) + '</div>'
+    chart_id = 'crudeChart' if keys == CRUDE_KEYS else 'productChart'
+    body = '<div class="chart-wrap">' + make_svg(rows, keys, chart_id, labels) + '</div>'
     return section(3 if keys == CRUDE_KEYS else 4, title, body)
 
 
@@ -472,6 +515,82 @@ def render_news(data: Mapping[str, Any]) -> str:
     return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성. 기사 내용 밖의 업계 영향 평가는 작성자 해석</div>'
 
 
+
+TOOLTIP_SCRIPT = r"""
+<script>
+(function(){
+  function fmtValue(v){
+    if(v === null || v === undefined || v === "" || Number.isNaN(Number(v))) return "-";
+    return Number(v).toFixed(2);
+  }
+  function attachChartTooltip(box){
+    if(!box) return;
+    var raw = box.getAttribute('data-chart');
+    if(!raw) return;
+    var cfg;
+    try { cfg = JSON.parse(raw); } catch(e) { return; }
+    var data = Array.isArray(cfg.data) ? cfg.data : [];
+    if(!data.length) return;
+    var tip = box.querySelector('.chart-tooltip');
+    var line = box.querySelector('.chart-hover-line');
+    var svg = box.querySelector('svg');
+    if(!tip || !svg) return;
+    var left = Number(cfg.left || 38);
+    var right = Number(cfg.right || 10);
+    var width = Number(cfg.width || 440);
+    var plotWidth = width - left - right;
+    function showAt(clientX, clientY){
+      var rect = box.getBoundingClientRect();
+      if(!rect.width) return;
+      var relX = (clientX - rect.left) / rect.width * width;
+      relX = Math.max(left, Math.min(width - right, relX));
+      var idx = Math.round((relX - left) / plotWidth * (data.length - 1));
+      idx = Math.max(0, Math.min(data.length - 1, idx));
+      var r = data[idx] || {};
+      var x = left + (data.length <= 1 ? 0 : idx / (data.length - 1) * plotWidth);
+      if(line){ line.setAttribute('x1', x); line.setAttribute('x2', x); line.setAttribute('opacity', '0.45'); line.style.opacity = '0.45'; }
+      var html = '<div class="date">' + (r.label || r.date || '-') + '</div>';
+      (cfg.keys || []).forEach(function(pair){
+        var key = pair[0], label = pair[1] || key;
+        html += '<div class="tooltip-row"><span>' + label + '</span><b>' + fmtValue(r[key]) + '</b></div>';
+      });
+      tip.innerHTML = html;
+      tip.style.display = 'block';
+      var localX = clientX - rect.left;
+      var localY = clientY - rect.top;
+      var l = localX + 12;
+      var t = localY - 10;
+      var tw = tip.offsetWidth || 150;
+      var th = tip.offsetHeight || 104;
+      if(l + tw > rect.width) l = localX - tw - 12;
+      if(l < 4) l = 4;
+      if(t + th > rect.height) t = rect.height - th - 4;
+      if(t < 4) t = 4;
+      tip.style.left = l + 'px';
+      tip.style.top = t + 'px';
+    }
+    function hide(){
+      if(line){ line.setAttribute('opacity', '0'); line.style.opacity = '0'; }
+      tip.style.display = 'none';
+    }
+    // Desktop + iPad pointer devices
+    box.addEventListener('mousemove', function(e){ showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('mouseleave', hide, {passive:true});
+    // iPhone/iPad Safari: support both Touch Events and Pointer Events.
+    box.addEventListener('touchstart', function(e){ if(e.touches && e.touches[0]) showAt(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+    box.addEventListener('touchmove', function(e){ if(e.touches && e.touches[0]) showAt(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+    box.addEventListener('pointerdown', function(e){ if(e.pointerType === 'touch' || e.pointerType === 'pen') showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('pointermove', function(e){ if(e.pointerType === 'touch' || e.pointerType === 'pen') showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('click', function(e){ showAt(e.clientX, e.clientY); }, {passive:true});
+  }
+  function init(){
+    document.querySelectorAll('.chart-box[data-chart]').forEach(attachChartTooltip);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+""".strip()
+
 def resolve_paths(args: argparse.Namespace) -> tuple[Path, Path, str]:
     if args.input:
         input_path = Path(args.input)
@@ -524,6 +643,7 @@ def render(data: Mapping[str, Any], date_text: str) -> str:
     {section(7, f"조간 신문 트렌드 ({today_label})", render_news(data))}
     <footer class="footer">SK Innovation Communication Division · {esc(date_text.replace('-', '.'))}</footer>
   </main>
+  {TOOLTIP_SCRIPT}
 </body>
 </html>
 """
@@ -536,6 +656,9 @@ def main() -> int:
     if not input_path.exists():
         raise FileNotFoundError(f"입력 JSON을 찾을 수 없습니다: {input_path}")
     data = json.loads(input_path.read_text(encoding="utf-8"))
+    date_text = get_report_date(data, date_text)
+    if not args.output:
+        output_path = Path(args.out_dir) / f"{date_text}.html"
     html_text = render(data, date_text)
     atomic_write(output_path, html_text)
     print(f"[OK] HTML 리포트 생성 완료: {output_path}")
