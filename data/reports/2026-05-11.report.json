@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 11일 (월)",
     "previous_day_label": "5/8",
     "today_label": "5/11",
-    "generated_at": "2026-05-26 15:03 KST",
+    "generated_at": "2026-05-26 15:14 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1465,11 +1465,11 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
     "trend_paragraphs": [
       "네이트는 5/10 16:00 입력 기사에서 韓, G7 국가보다 에너지 물가 관리 선방…유류세 인하·석유 최고가격제 시행 영향 네이트.",
-      "매일경제 마켓은 5/10 16:00 입력 기사에서 달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 매일경제 마켓.",
-      "v.daum.net는 5/10 16:00 입력 기사에서 재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 v.daum.net."
+      "데일리안은 5/11 10:51 입력 기사에서 [컨콜] 에쓰오일 \"석유 최고가격제로 상당한 규모 손실…정부 보상 절차 밟을 것\" 데일리안.",
+      "매일경제 마켓은 5/10 16:00 입력 기사에서 달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 매일경제 마켓."
     ],
     "articles": [
       {
@@ -1480,17 +1480,17 @@
         "published_at_kst": "2026-05-10 16:00"
       },
       {
+        "title": "[컨콜] 에쓰오일 \"석유 최고가격제로 상당한 규모 손실…정부 보상 절차 밟을 것\" - 데일리안",
+        "press": "데일리안",
+        "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPM0tmZ0FWNUtQaTNVS0x1bkp3SC1tbktXbDFaVmdlVlV1LXJNNmd2QzdyZUNLeVVqYW5aSEdhRlM1dFZVUXlLZ3ZEaGlYMWw1d2h6OFQ1N0tXd254UVZJenZTSElIVTlpM1JVRlpDNi1hTDludDVISHFTUUl2UzZWeVZlVk5qcjBneHo3WFEydlRPMkVpek9DNTNuclpoZUp6OVNNOWJpRy1xYkZMcjEzQzdKV2t6VUVtVl9JMTg0YzBtUHB5MW1lWVZtMmdpN19JcVIydk5kSElPLXozTWdqLVRSNXd4cGRKdmx5a3VmM2FaSnRIY0V4bU9aOG5GeDJrVEFNUkFaM2xOLUFiTG9VTjZvQ2cyTEhUenE4OHpUZmJ0NzjSAaYCQVVfeXFMT1JxbGVPeXRLbG5hd2w4MDZKRUt2cHZkNk53bzNoeUVtOGNsbW92TkNZb0JXaDNuVkFORzR2bUFKQ0dLWnU4U2o0ZzFFMnhocjRsa3cycHd6MGZubHpZYks3VTkzdWtwNy1hR3FBWTRNQmNQS2hITXFnS2dOR3BvWHNFbmhLSWQwTm5vRlp5cWxxWXpTTEtSZjFqQkNubWowVmVrczhBX1loZUxhTjNWZEthSmYxU1NpNkhtM3ZVbndiNFBxekd6YUxST1BfUEZaOThIQ1A3aC1kZ3kwcExIRHkxMGZKeWp4X2s4b3IyMlN1MXVlbkNDWjlOZUpQMmUzcUpxd2U4UVllVzFmR0VnWW9iZGxsTEhXMG9DMHJiV0w1ZVZhdkRB?oc=5",
+        "summary": "[컨콜] 에쓰오일 \"석유 최고가격제로 상당한 규모 손실…정부 보상 절차 밟을 것\" 데일리안.",
+        "published_at_kst": "2026-05-11 10:51"
+      },
+      {
         "title": "달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 - 매일경제 마켓",
         "press": "매일경제 마켓",
         "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5uVXFvSlpLNEZIN0VXN09LMWlPZDZ4aXlHZng2MG5IaU11cW1CbFBSNGg0d1UtTHh0dF91QWxoMVZ0NXV1RjVsR3lJTVVzc293S2c?oc=5",
         "summary": "달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 매일경제 마켓.",
-        "published_at_kst": "2026-05-10 16:00"
-      },
-      {
-        "title": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE45a21zUnc0cXA4WmFYaXV2a1E0TlotNlhUeEFCdmhJbUtvNi03Z2JEZXVja1huWnRKTUZNTDljcXlCRVVnZkR4cWpyZC1NWTcyNnZkMQ?oc=5",
-        "summary": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 v.daum.net.",
         "published_at_kst": "2026-05-10 16:00"
       }
     ],
@@ -1612,7 +1612,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 15:03:51 KST",
+      "merged_at": "2026-05-26 15:14:38 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

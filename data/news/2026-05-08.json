@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-08",
-  "collected_at": "2026-05-26 15:03:46 KST",
+  "collected_at": "2026-05-26 15:14:33 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,12 +42,12 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
-    "중동 정세와 원유·LNG 수급 리스크",
     "정유·석유화학 업계 실적·원가·제품 가격",
-    "물가 지표와 에너지 비용 부담"
+    "물가 지표와 에너지 비용 부담",
+    "정부·국회 에너지 정책"
   ],
   "articles": [
     {
@@ -59,17 +59,6 @@
       "snippet": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 v.daum.net",
       "score": 41,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "민주 중동특위 \"석유최고가격제·유류세 인하...물가 상승분 3분의 1 경감\" - 미디어펜",
-      "press": "미디어펜",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95RDBfWlBUdFpQWVIyRnNvVWhSdzJtXzJZdXZ4cVRpRHh3RDhUTl9GSFZLS19KYnhLZDEyTnRpUWx2clJsclU1dGNjcmNwTTVITWZNUdIBWEFVX3lxTE10T3NDN1VEbG9XLUppUzhrYU5HZVBCSExvTHB6Y21JSnV3TmtrLTNmdWN6VWRaY1hNblVzaGszcEI1aHNZZXB0OVdLMkZNMEl4VjhERGYtNVg?oc=5",
-      "published_date": "2026-05-07",
-      "published_at_kst": "2026-05-07 16:00",
-      "snippet": "민주 중동특위 \"석유최고가격제·유류세 인하...물가 상승분 3분의 1 경감\" 미디어펜",
-      "score": 40,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {
@@ -178,6 +167,17 @@
       "published_date": "2026-05-07",
       "published_at_kst": "2026-05-07 16:00",
       "snippet": "고유가 지속…정부, 5차 석유 최고가격제 금일 발표 뉴스1",
+      "score": 34,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "고유가 상황 지속…정부, 7시에 5차 석유 최고가격제 발표 - 뉴스1",
+      "press": "뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE51TEd5U3RBV1RGTkZ0WndfUC0tZGVEcF9wTnRJSDZMUlJSb2RJTy04WjZmdnlnRVZkU1BvUXBLcHR6YWx5T1JWRERJYw?oc=5",
+      "published_date": "2026-05-07",
+      "published_at_kst": "2026-05-07 16:00",
+      "snippet": "고유가 상황 지속…정부, 7시에 5차 석유 최고가격제 발표 뉴스1",
       "score": 34,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"

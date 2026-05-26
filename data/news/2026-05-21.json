@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-21",
-  "collected_at": "2026-05-26 15:04:25 KST",
+  "collected_at": "2026-05-26 15:15:15 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,6 +51,17 @@
   ],
   "articles": [
     {
+      "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CMnZXT0hjZlhEWWU1MC1zQUF5WXR4YUZxN2oybnd2NnNWNDFhOHZWMVBqLVZER0Jnak1PemhaZ1NxTGl0Z1BxUmw3Q0RUTEk?oc=5",
+      "published_date": "2026-05-21",
+      "published_at_kst": "2026-05-21 08:03",
+      "snippet": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 v.daum.net",
+      "score": 43,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 대한민국 정책브리핑",
       "press": "대한민국 정책브리핑",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95UkliNFE1MXRObWYwcjktRU10d1Y5anU0OHdlNzNiWU5YTGZRUmZPdjNMZDVGU0RycXR1VXd5aVJINzFqUUo1NVlmN19CSEVsMzRkZFcxWTVnRVFsMzBUSUEybzQ3VUJySmt5UA?oc=5",
@@ -80,13 +91,13 @@
       "published_at_kst": "2026-05-21 06:00",
       "snippet": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1",
       "score": 33,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {
       "title": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1jQnBJSTlIaXJ1S3FwS1dmNTZsakQ2dDNZS3FiZm11RXpSVmZjZ3Jtd05JNUJwLVB4WVJNclMxSUZFVUZXSlE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9fLXo4VlE4Z3pTeXNhR1UwNUxIQkU2RUpaMVVPMzBPUFZQdGRib1ZHYThJOWctU0NmZEpzVnN0enlqMGh6MTV4dzY2UUFNV2JWYlhLNw?oc=5",
       "published_date": "2026-05-21",
       "published_at_kst": "2026-05-21 06:02",
       "snippet": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ v.daum.net",
@@ -128,14 +139,14 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "유류세 인하 2개월 더…휘발유(-15%)·경유(25%) 유지 - 에너지타임즈",
-      "press": "에너지타임즈",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBhb0JYYXV6MVRPZnZnYjVQd1AwQ0dnd2FVOFlBemJYWFBOaGNISFIzUnAzcWRXZ2ItclQ4SlY4U2lzQXByZldCUDFXanFoZi05R21vUlZyMUxacmF5LTZSamsxUkppUWNTTDBBZw?oc=5",
+      "title": "석유가격 주도 인플레…4월 생산자물가 상승률 외환 위기 이후 최고치 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5WTTRHWnE0VENpZFZOLU85Q001cGNseVE5c3hIR2N0a0gyTmRmTGQ5enp0WFhSeS02V040aXFoMllTejYzNGpMSFlfUENldVE?oc=5",
       "published_date": "2026-05-21",
-      "published_at_kst": "2026-05-21 09:20",
-      "snippet": "유류세 인하 2개월 더…휘발유(-15%)·경유(25%) 유지 에너지타임즈",
-      "score": 30,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "published_at_kst": "2026-05-21 09:00",
+      "snippet": "석유가격 주도 인플레…4월 생산자물가 상승률 외환 위기 이후 최고치 v.daum.net",
+      "score": 32,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {
@@ -161,17 +172,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1vRjdUR1pjaEF6OFlWc1BvUGdxTk5udGZ2a3VjUVQ5MzUxalhrY3Y5NDJGLURoYldPTGdUTVRzU2lBZXo4ZHdocGpDNA?oc=5",
-      "published_date": "2026-05-20",
-      "published_at_kst": "2026-05-20 22:23",
-      "snippet": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” v.daum.net",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” - KBS 뉴스",
       "press": "KBS 뉴스",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE56bEdMQmk1VE5wRHBTd1A1bW1sUnJPb1RBdEp2VWdSSjBmbE5DTWRaYUt1VFlCVmpnMGxSVlhtLXgzRXphRjdWblVZNUpJMmk5V1E2RDN6NXgxbXc?oc=5",
@@ -179,7 +179,7 @@
       "published_at_kst": "2026-05-20 22:21",
       "snippet": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” KBS 뉴스",
       "score": 29,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     }
   ],

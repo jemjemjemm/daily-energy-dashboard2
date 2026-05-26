@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-26 15:04:33 KST",
+  "collected_at": "2026-05-26 15:15:24 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,9 +42,11 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 등을 중심으로 보도.",
+  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
-    "중동 정세와 원유·LNG 수급 리스크"
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
   ],
   "articles": [
     {
@@ -65,28 +67,6 @@
       "published_date": "2026-05-26",
       "published_at_kst": "2026-05-26 08:21",
       "snippet": "국제유가, 호르무즈 개방 기대감에 7% 급락⋯브렌트유 96달러 브릿지경제",
-      "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 - 비욘드포스트",
-      "press": "비욘드포스트",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFdGt2NlBmeHBUWkdRRmVTV3c2RXhmeEtGTkVTR2hBU2JKdDhuN19PeHlCZG1NRU1XX2ZPSDJfSVUzZUY4NnhQMWxQdEd3eGRlZWwtS1FGN01pLTdSSldQMlBTbzloQlZvZXFBRGNQRzNPUVd2THR3dEZ2QWI?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 06:50",
-      "snippet": "국제유가, 호르무즈해협 개방 기대감에 급락...브렌트유, 7% 가까이 급락하며 배럴당 93달러까지 하락 비욘드포스트",
-      "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 호르무즈 개방 기대감에 급락...브렌트유도 100달러 밑으로 - 미디어펜",
-      "press": "미디어펜",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9ndGw0cWtoMmM5Z3dUazFIYTE5LWRDbDV0a3dhcE91aHF1V2RrM0oxMDlGZlJtVEJ6TGthQmtuODMtOXZRSWZZTmVXbGl6dTRtanJRMWlwSlPSAVhBVV95cUxPZ3RsNHFraDJjOWd3VGsxSGExOS1kQ2w1dGt3YXBPdWhxdVdkazNKMTA5RmZSbVRCekxrYUJrbjgzLTl2UUlmWU5lV2xpenU0bWpyUTFpcEpT?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 06:05",
-      "snippet": "국제유가, 호르무즈 개방 기대감에 급락...브렌트유도 100달러 밑으로 미디어펜",
       "score": 43,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -147,17 +127,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBuTDB4bmZGNndtdVh5UHBUWEtCWUIwdGh4R2hMMXR4Y0xTRVN5YzRpVGFhZW52UGMyMjNmajI1NnZsb2UxcUE?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 07:30",
-      "snippet": "'호르무즈 열리나' 기대감에 국제유가 7% 급락…WTI 90달러선 v.daum.net",
-      "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 한국경제",
       "press": "한국경제",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB5eEpMYzhZOHV6T3pBYUNCcGZya0pMRGNtWktTbGNUSGdPNnQxa0V2UGNCMXpVa2tNOU9KRk9GZFZuTmYwYlBwaFU2SGJjSkJaenBLZtIBVEFVX3lxTFB5eEpMYzhZOHV6T3pBYUNCcGZya0pMRGNtWktTbGNUSGdPNnQxa0V2UGNCMXpVa2tNOU9KRk9GZFZuTmYwYlBwaFU2SGJjSkJaenBLZg?oc=5",
@@ -169,13 +138,46 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "뉴욕증시,메모리얼데이 휴장...국제유가 호르무즈 재개방 기대감 WTI 급락 - 퍼블릭타임스",
-      "press": "퍼블릭타임스",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBaRDBpMmkxZFJnMTdlUlRWQ0FYdnBTUkJUZjB3XzdoY3ZQUVJ1WFV5SjJIdFNUS2ZESjlQT3FVTEZJZXhRdTRfbE9DcV9VQTJrVXpIUWFEczhfZ0JHTWVzVlJDVG9hQ2pMdS1xby1R0gFuQVVfeXFMUFpEMGkyaTFkUmcxN2VSVFZDQVh2cFNSQlRmMHdfN2hjdlBRUnVYVXlKMkh0U1RLZkRKOVBPcVVMRklleFF1NF9sT0NxX1VBMmtVekhRYURzOF9nQkdNZXNWUkNUb2FDakx1LXFvLVE?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 07:35",
-      "snippet": "뉴욕증시,메모리얼데이 휴장...국제유가 호르무즈 재개방 기대감 WTI 급락 퍼블릭타임스",
+      "title": "[특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 - 기후에너지경제",
+      "press": "기후에너지경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQcERBbHUzM1Q0NkplWmhSZFdlM2dVUlhaM0xxaHNhc0xIS2FlM3l2SGpaVFFaMnY3S2I1WUtjdU9yYTNtaWQxVTNkY1Vod25YY0JyM0RmMFB1bTBKd0drUFlhR1E?oc=5",
+      "published_date": "2026-05-25",
+      "published_at_kst": "2026-05-25 18:07",
+      "snippet": "[특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 기후에너지경제",
       "score": 36,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 - KBS 뉴스",
+      "press": "KBS 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42MzFaS1BXRkM4VnM1aEFsQWoyZXBYLUlRU0pzOEVkWl9ZOVBKVmNiWXhWVnRfblQwcnV4a3lPdG9ZcElzSmlWTU82Q1FCeFhTWFoxYzF5WmxLcmc?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 06:05",
+      "snippet": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 KBS 뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "미·이란 협상 기대감에 국제유가 급락…브렌트유 7% 넘게 하락 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5XaGlmaW9jZGdLNmR5dlRibXIwQ2tJanBhRVRfWG1ESUtGNmR5T2cxRFZDOXpqSlF2ckdwMTg2c0JTOVBRRURyT09peU9tZFE?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 08:17",
+      "snippet": "미·이란 협상 기대감에 국제유가 급락…브렌트유 7% 넘게 하락 v.daum.net",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "미·이란 협상 진전에 국제유가 급락…브렌트유 7% 넘게 떨어져 - BBS불교방송",
+      "press": "BBS불교방송",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE95V1FUUWxMdG96ckxhbE9GS1E4TDFPd3dhZmIyVE5JcGthSmFHVmJXZ1B3SWZPR0daMmRhdWpRb2FPbGE1VU5aTEkyUkhnTFl4bTVuNXU3QWVZaFhBNFJ0cjhWRFZ2S1ZDUXh3?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 09:27",
+      "snippet": "미·이란 협상 진전에 국제유가 급락…브렌트유 7% 넘게 떨어져 BBS불교방송",
+      "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }

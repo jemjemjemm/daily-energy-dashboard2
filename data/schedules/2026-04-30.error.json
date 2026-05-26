@@ -3,7 +3,7 @@
   "source": "세이프타임즈",
   "category": "오늘의 주요일정",
   "date": "2026-04-30",
-  "collected_at": "2026-05-26 15:03:30 KST",
+  "collected_at": "2026-05-26 15:14:15 KST",
   "success": false,
   "error": "오늘의 주요일정 대상 기사를 찾지 못했습니다. target=2026-04-30, sample_candidates=['[오늘의 주요일정·26일] 이재명 대통령 비상경제점검회의'], day_matched=[]"
 }

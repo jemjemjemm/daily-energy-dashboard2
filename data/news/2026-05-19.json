@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-19",
-  "collected_at": "2026-05-26 15:04:16 KST",
+  "collected_at": "2026-05-26 15:15:05 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -69,7 +69,7 @@
       "published_at_kst": "2026-05-19 11:24",
       "snippet": "'요동치는 국제유가' 정부, 최고가격제 유지 '고심' 프라임경제",
       "score": 36,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -95,23 +95,23 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "미, 해상 러시아 원유 거래 30일 추가 허가...국제유가 3% 상승 - YTN",
+      "press": "YTN",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAzbmVqdjVoMlg2cFZrNEhSLXdSS3hySFYzLUgtbG9pSWlpMkw3Rk9ocHM0djVLNlZmdS1rajR1cFZQY3dVOUVPY0R0ZTZCVDNBdW5DTldwUUVTems1Q3c?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 10:46",
+      "snippet": "미, 해상 러시아 원유 거래 30일 추가 허가...국제유가 3% 상승 YTN",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "\"한국산 석유제품 제발 팔아달라\"…전쟁 장기회에 치솟는 K정유 몸값 - 머니투데이 - 머니투데이",
       "press": "머니투데이",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DZG9mTlNzb3BSWXRNb3ZsMTBVRzZObXFoZWVTT1c1MEVPTDl4eG1BZFBOcXlvNXlfbW9Bb2NSSEk2QjNqZ2lweWV6OWFmMDRHVGpLNFZHY2p5ekF0Q2tkWTFWQ1o1QURjcmREb9IBckFVX3lxTFBUbndOOHQtLVlscnRKdjJNZUZrZUt2bzRxXzROTnZqdDVXUkp4dXlDNjhKS2RuNHBDdnhFenlNSkU5VFdza2ZfR0t3cExBM3I5QV9adVU4TEg2ajh4YTZyaTRVX2Y2VHNwSy1ZU2hrWmxHUQ?oc=5",
       "published_date": "2026-05-18",
       "published_at_kst": "2026-05-18 17:00",
       "snippet": "\"한국산 석유제품 제발 팔아달라\"…전쟁 장기회에 치솟는 K정유 몸값 - 머니투데이 머니투데이",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54OFp0eEdpR2lYdFZHNTc3d3lUNmxXUFhvSFhQZ3FUY1Nzc3RjRzRJd1ZvZ0RpUFAxMzhhTkRWQ1A0VVRtc2xieTlQZFZRZ2s?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 11:11",
-      "snippet": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 v.daum.net",
       "score": 29,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
@@ -128,34 +128,45 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2WDFTYTFERGtnZnU1OFlDM0I0c2pGMS02LTFvb2xvZk5VUll1cWtMRjBUOTJYUHdxLUtJWFVXTUhNQ1lKRll5NHNER0gzYzVaY2pDSU42ZWdIbk3SAWBBVV95cUxOR3N6eENjRUlPcXBwVXhtWFlBN0RPWHNJT19lRENxRGtYTFJSZ0JhdlBSWXBLZTd5SnhKTHU2ZUcwZWNRMUhLRFdHTlFwRHc1MWpwa1NKRlJHTU1SSmg0R0E?oc=5",
+      "title": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE54OFp0eEdpR2lYdFZHNTc3d3lUNmxXUFhvSFhQZ3FUY1Nzc3RjRzRJd1ZvZ0RpUFAxMzhhTkRWQ1A0VVRtc2xieTlQZFZRZ2s?oc=5",
       "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 04:57",
-      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 연합뉴스",
+      "published_at_kst": "2026-05-19 11:11",
+      "snippet": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 v.daum.net",
+      "score": 29,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 - 아시아경제",
+      "press": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkd2ROcTE1bEVNZ2tfNnRyd0g5WjBHblVrQkJkZVhZaUlVN2VpYkVHR3JBMHdxWjhfalp0VENPWlViQk5YQUFQeFVHb1pGYVhPRnRwOGx1OWNMRmhHUklQYQ?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 11:09",
+      "snippet": "李대통령, 다카이치와 안동서 정상회담…'원유·석유제품 대여' 논의 아시아경제",
+      "score": 29,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑ - 연합뉴스TV",
+      "press": "연합뉴스TV",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1JUGxzN0xjVl9hMnV3dkRqeFpnempnMGJVWVMtR0VXVjJkWEZxYkVMSTBCTVNyZGFzS2MzU2I4bmVGQVBkQ05BYldIeG5fQ3M3dUZvLU5EMW9GTi1BdE5TTEdiMDA?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 06:03",
+      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑ 연합뉴스TV",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
-      "title": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5RQ0FfcGcwNEdTTUtaR1Bqa3dfZWpBclRXR1BkYWNMOXBiTkVTQ252RFZSaXZWelJQMGwtRGZxUGtEbXc1ZkE?oc=5",
+      "title": "이란전쟁 불확실성에 국제유가 급등‥WTI 3%↑, 108달러대 - MBC 뉴스",
+      "press": "MBC 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1fMG5ySV8yU1pSMEx0dlZVRDlyU3lFa01pS2h3aEtJRFM5aVBVUjhucVlCQURmYmYzZDh5ZUlvQTBJUU5jdlJzOEVXUlAxeVFiRFl3Zml1QmotbXNsMF9UY1RmV0ZIbVhzc0N0UXVsemIwVlBz0gF0QVVfeXFMTjRoY2xvYndLdU9OdzJmaVFkenFzUkhCZlVXaFFnMU1HS04ySzZhOFJhd19OR2xIZDFOQ2NjRnM4dTJYbExJOFlrRkhnUzlNU0d6Ynp3QTNEaHFJeE5CMWN4aTFIajVKUG50TkNMeGJvQVdpcGI?oc=5",
       "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 04:59",
-      "snippet": "이란전쟁 불확실성에 국제유가 급등…WTI 3%↑, 108달러대 v.daum.net",
-      "score": 28,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 이란전 불확실성 속 상승…WTI 3%↑ [상보] - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE00YnVpbXVrUlJSc3VTam1uVmJYWU1fTHRreWJzR0UtQ2x6bXdIWFlYWlpjeHNmUzU0U0NwQmVHZm1XcktsaFpsVG1LNVMwQVAzbnhWdg?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 07:28",
-      "snippet": "국제유가, 이란전 불확실성 속 상승…WTI 3%↑ [상보] v.daum.net",
+      "published_at_kst": "2026-05-19 05:36",
+      "snippet": "이란전쟁 불확실성에 국제유가 급등‥WTI 3%↑, 108달러대 MBC 뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -169,17 +180,6 @@
       "snippet": "中 항이석유화학, 신장에 ‘세계 최대’ 석탄-화학 공장 건설… 중동 전쟁 속 자원 안보 사수 글로벌이코노믹",
       "score": 27,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "IB들 \"내년에도 유가 100불 가능성\"…정부 '최고가격제' 딜레마 - 뉴스1",
-      "press": "뉴스1",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10d0lQeUV4XzR1aGhEellvT2ZpRVBxUGZFQTduYm1QOWtFMVZrUnFJVGVGd0F1dnhTR0ZmNHpxLTFKbGlBWlkxME1BOG1QZ3loTV9NWQ?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 06:00",
-      "snippet": "IB들 \"내년에도 유가 100불 가능성\"…정부 '최고가격제' 딜레마 뉴스1",
-      "score": 26,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     }
   ],

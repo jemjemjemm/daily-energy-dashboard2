@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-12",
-  "collected_at": "2026-05-26 15:03:55 KST",
+  "collected_at": "2026-05-26 15:14:42 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -95,6 +95,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 - 아시아경제",
+      "press": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ySzZRVUt1Y3Q0SFRDTmpKWUpvaUNUa0RscjVHUWdiNXhrcWdUR0NXd3g0ZVpMR015MmkybnFjUk5ETGpVekwzT0l4RkN6SlpzUDFYUXlMaENvYVBBQXZrYw?oc=5",
+      "published_date": "2026-05-12",
+      "published_at_kst": "2026-05-12 09:45",
+      "snippet": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 아시아경제",
+      "score": 35,
+      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "정부, 당분간 ‘석유 최고가격제’ 유지…폐업 주유소는 급증 - JTBC",
       "press": "JTBC",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9UYi1kNW9WZlNNQTh4NWt3YXZFZ1pDc1Y0REVkM3pubVlWRDA1blE5Ul84TW1hTUc4UjkyMWR6cEwwcm8tR1lyUzd3MF9XTzFqS0lXbw?oc=5",
@@ -169,17 +180,6 @@
       "snippet": "문화체육관광부, 5차 석유제품 최고가격제 동결(5.8.~21.) 케이에스피뉴스",
       "score": 31,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[단독] 석유 최고가격제 두 달… 주유소 60곳 줄어 - 조선일보",
-      "press": "조선일보",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPc1Y4a2xVQ2ZnbnFCTGhNZWtkOTFSeEZzNUhJdEVRY05TSk1DYVRFZDFHWUd2aTRqT244bW5ieC1UMk9aQko2dEp4blBQTldxRjlkZGRGZlQ4Z05PaVFwcl8wVVNiODlJektXUmgxREVsS1JoMVlRMnp1SC1vN0JOdFBXZlNIY19hNHZPVWVXaw?oc=5",
-      "published_date": "2026-05-11",
-      "published_at_kst": "2026-05-11 16:00",
-      "snippet": "[단독] 석유 최고가격제 두 달… 주유소 60곳 줄어 조선일보",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-22",
-  "collected_at": "2026-05-26 15:04:29 KST",
+  "collected_at": "2026-05-26 15:15:20 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -73,6 +73,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ - KBS 뉴스",
+      "press": "KBS 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ER25uajRnUEo4dXlfQVdUU3dYd3FHdmlVaXprbTRBMjgwVGZ0ZFdLNHBkNk43X3ZyZndkT2s1XzF5TUxzelYyeWlTc1VuQXFyUVVqbnRXa1RzWTA?oc=5",
+      "published_date": "2026-05-22",
+      "published_at_kst": "2026-05-22 05:03",
+      "snippet": "국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ KBS 뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "국제유가, 이란 협상 진전 기대에 하락 마감‥브렌트유 2.3%↓ - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBUXzFWeWd6bnBhdFlrSzJ1NHNJZ0E3RzJZcjZOUGZPTFJlbHJhUHRxQzNQVWRXSUJDUzJZTTExdDFlUkNFTF9NLW5Xbw?oc=5",
@@ -125,17 +136,6 @@
       "snippet": "정부 \"국제유가 횡보\"로 석유 최고가격 연속 동결…조정주기 4주로 변경 BBS불교방송",
       "score": 34,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "석유제품 '사후정산제 폐지법안' 국회 통과 앞둬, 영세 주유소 부담 우려는 과제 - 비즈니스포스트",
-      "press": "비즈니스포스트",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBHWThQQXUtamRGZ2w3dzFxTlA1bU9jcU9zMEdwdDN3a3FPQS04T1BqT1MxbVpHNi1GT1RzSjZMd3Y0aHF6NmpCMlVuMkczQmd1LVgxd2d3ZWhSU1BaZHdvRFhydXRqazhjTHFNbHZJak9TZVE?oc=5",
-      "published_date": "2026-05-21",
-      "published_at_kst": "2026-05-21 16:32",
-      "snippet": "석유제품 '사후정산제 폐지법안' 국회 통과 앞둬, 영세 주유소 부담 우려는 과제 비즈니스포스트",
-      "score": 34,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     },
     {

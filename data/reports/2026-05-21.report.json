@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 21일 (목)",
     "previous_day_label": "5/20",
     "today_label": "5/21",
-    "generated_at": "2026-05-26 15:04 KST",
+    "generated_at": "2026-05-26 15:15 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1509,11 +1509,18 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
+      "v.daum.net는 5/21 08:03 입력 기사에서 정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 v.daum.net.",
       "대한민국 정책브리핑은 5/21 07:55 입력 기사에서 한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 대한민국 정책브리핑.",
-      "네이트는 5/20 16:32 입력 기사에서 한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 네이트.",
-      "뉴스1는 5/21 06:00 입력 기사에서 4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1."
+      "네이트는 5/20 16:32 입력 기사에서 한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 네이트."
     ],
     "articles": [
+      {
+        "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CMnZXT0hjZlhEWWU1MC1zQUF5WXR4YUZxN2oybnd2NnNWNDFhOHZWMVBqLVZER0Jnak1PemhaZ1NxTGl0Z1BxUmw3Q0RUTEk?oc=5",
+        "summary": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 v.daum.net.",
+        "published_at_kst": "2026-05-21 08:03"
+      },
       {
         "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 대한민국 정책브리핑",
         "press": "대한민국 정책브리핑",
@@ -1527,13 +1534,6 @@
         "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE42dC14eVNjd0lzdVp1LTQwVkxSVWd6M0xRa043VXpvcjBSc3c4b0NCeTlUWTVsYUNCam9LdzZZYmtzVV9TQjBqSGxFZEJhd1lFdk04?oc=5",
         "summary": "한·일 '원유·석유제품 스와프' 추진 배경은?…한국은 정제, 일본은 수급에 강점 네이트.",
         "published_at_kst": "2026-05-20 16:32"
-      },
-      {
-        "title": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ - 뉴스1",
-        "press": "뉴스1",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5sX2VsSGJLMzVNbGo2NWE0QjdOMmxtWGJLT1loT25ZWWZpSUt2dkhOV3o3MTg1REx5NDRGeU9OQS1rVm8zeFEwTlZDNmRoeHJSS2JTdw?oc=5",
-        "summary": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1.",
-        "published_at_kst": "2026-05-21 06:00"
       }
     ],
     "source": "Google News RSS",
@@ -1654,7 +1654,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-26 15:04:25 KST",
+      "merged_at": "2026-05-26 15:15:15 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

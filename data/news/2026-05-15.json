@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-15",
-  "collected_at": "2026-05-26 15:04:08 KST",
+  "collected_at": "2026-05-26 15:14:56 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -161,6 +161,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "산업부 \"국제유가 100달러 이하면 최고가격제 해제 검토\" - 국제신문",
+      "press": "국제신문",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQnh2R2pzUzl6WlprRnRCR0ttU0NENmh5TGdXNWw2endMazAzdTZtN1V2blZnWnZpWjVzUTB3YlV2UVluZVdJeEtKdEFrVTZVY0ZJVGZLbXpmN2dMaHRzOVFoZDZDbHdoSWRQY2xqdXpCTS1jSzltcUowX2puVzZsM3FzZUtFLV82cnFCWWlR?oc=5",
+      "published_date": "2026-05-14",
+      "published_at_kst": "2026-05-14 18:51",
+      "snippet": "산업부 \"국제유가 100달러 이하면 최고가격제 해제 검토\" 국제신문",
+      "score": 39,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "산업부 “정유사 최고가격제 손실 보전, ‘기회이익’ 기준 아냐… 3조원보단 상당히 낮아” - 조선비즈 - Chosunbiz",
       "press": "Chosunbiz",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcUNndWdjMmNNVmN4TFlCS3Nkc2Fic2l2UG5nc0FCSE1EenpNUVYtU3BCY1RLaFdxN3BiX0NtSFdvQW5oVTctNFJwUnNPYXBoRzZHVmhZTjRORkJQeUFwMGNvek90dGhDVW1RYlV3bXRhd25JY3hnakJLMkItekxQMmRfQVpoQdIBmgFBVV95cUxONjVBNzZ4UDI5MTFsN3N1cGF4SUNIU0R0bDdiWUtvVDBXRFdwY240bGN2MlpMOGVaM0Fhb2hYX1p6Wnp3dF9Bc1BzRmdwVHBXZFdxT2RBelVTbkY4WXNSRGVzLVM5Z1lxRFFjd0JuZ3hpRjl3STY2TDVmRGxFV3V4dHdpTkUyXzg0bjJqbVFVNGFzcWQ2YzdVRFZn?oc=5",
@@ -169,17 +180,6 @@
       "snippet": "산업부 “정유사 최고가격제 손실 보전, ‘기회이익’ 기준 아냐… 3조원보단 상당히 낮아” - 조선비즈 Chosunbiz",
       "score": 38,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "정부 \"국제유가 100달러 아래 돼야 최고가격제 해제 검토\" - MBC 뉴스",
-      "press": "MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03azVWVTNGRk9feHdSVTZkQkUtMS1pVUp1bHR4Q3BaMDRDZXhwVUNXTzhvaV9jbUlpNEl5S3NuT0JUSThJVEtPc1JDNnB4Wi1uREhVeWtkRV9RQzRvWEN6Y2tjQzZReDdRaHVZYlF2Sjdud2pV0gF0QVVfeXFMTXRxT1lQWVU4cGpTRVhsd2djRW0yNFNzUWhmTTRYTnFNNmZvS3JrODJ6NXgtU0dNVXpRcm5US1JDN1A1TC1TTmpSU3hfN3FoSnhuOFdJYlZvQThVQjF6Y0FKaGY2TGd0NVBmUXNPamphX3gzM1U?oc=5",
-      "published_date": "2026-05-14",
-      "published_at_kst": "2026-05-14 16:00",
-      "snippet": "정부 \"국제유가 100달러 아래 돼야 최고가격제 해제 검토\" MBC 뉴스",
-      "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }
   ],
