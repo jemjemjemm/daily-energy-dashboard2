@@ -175,7 +175,7 @@ jobs:
         run: |
           test -f scripts/fetch_news_candidates.py || (echo "ERROR: scripts/fetch_news_candidates.py 파일이 없습니다." && exit 1)
           test -f scripts/apply_news_to_report.py || (echo "ERROR: scripts/apply_news_to_report.py 파일이 없습니다." && exit 1)
-          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news --force-refresh --min-required 1
+          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news --min-required 1
           python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports --min-required 1
 
       - name: Fetch Opinet international prices for today only
