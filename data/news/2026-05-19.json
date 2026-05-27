@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-19",
-  "collected_at": "2026-05-28 00:47:24 KST",
+  "collected_at": "2026-05-28 01:11:58 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -128,6 +128,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "日언론 \"한일 정상회담, 비상시 원유·석유제품 상호대여 논의\" - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBaMC16M05vRDlkN18tQVdnaWNEOUQyWGVWLXRNNmcweFNfRndxRGtna0d1TnlZeDNpWW5XT0k4a1hiQTJzaFE?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 09:00",
+      "snippet": "日언론 \"한일 정상회담, 비상시 원유·석유제품 상호대여 논의\" v.daum.net",
+      "score": 29,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "주유소 기름값 2000원대 유지…정유업계 \"최고가격제 부담 누적\" - 뉴시스",
       "press": "뉴시스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB5QjB2bmxjNkthdkRKc0xCdG55VVBhMy1UZTUySTlPR1ZvTkVTTm1UZFZLejByZmd2ODllR0daRTJhWElBZE9GaEk2NUh6Sk53UGpZOGM0Sm9LdWlTMk1JWNIBeEFVX3lxTE5YXzJ6Z05FVFhOV2ZGbC1lM1c5bGhSQW1IblZObDZFYXVyZEpaaUNiZE5FR2VVTDlIY2RtbXNlcS1OMEF2ZVlpMXpmNUF2YXJQWXFBallRcHlGb19JX1ZrbTRHN2owSzNRVHRqUmUyajV0cGwydzZZOQ?oc=5",
@@ -167,17 +178,6 @@
       "published_date": "2026-05-19",
       "published_at_kst": "2026-05-19 07:28",
       "snippet": "국제유가, 이란전 불확실성 속 상승…WTI 3%↑ [상보] v.daum.net",
-      "score": 28,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "이란전쟁 불확실성에 국제유가 급등‥WTI 3%↑, 108달러대 - MBC 뉴스",
-      "press": "MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1fMG5ySV8yU1pSMEx0dlZVRDlyU3lFa01pS2h3aEtJRFM5aVBVUjhucVlCQURmYmYzZDh5ZUlvQTBJUU5jdlJzOEVXUlAxeVFiRFl3Zml1QmotbXNsMF9UY1RmV0ZIbVhzc0N0UXVsemIwVlBz0gF0QVVfeXFMTjRoY2xvYndLdU9OdzJmaVFkenFzUkhCZlVXaFFnMU1HS04ySzZhOFJhd19OR2xIZDFOQ2NjRnM4dTJYbExJOFlrRkhnUzlNU0d6Ynp3QTNEaHFJeE5CMWN4aTFIajVKUG50TkNMeGJvQVdpcGI?oc=5",
-      "published_date": "2026-05-19",
-      "published_at_kst": "2026-05-19 05:36",
-      "snippet": "이란전쟁 불확실성에 국제유가 급등‥WTI 3%↑, 108달러대 MBC 뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"

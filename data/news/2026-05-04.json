@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-04",
-  "collected_at": "2026-05-28 00:46:37 KST",
+  "collected_at": "2026-05-28 01:11:09 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,17 +51,6 @@
   ],
   "articles": [
     {
-      "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
-      "press": "중앙일보",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보",
-      "score": 35,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ - 아시아투데이",
       "press": "아시아투데이",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBtalN3V2k4Nks0V2lpa2JRLVN2S3Fhcm5qSl82Y2RKM3NRcE80dnEwU2tkcXhKM0U2OFlHTEptMEZDVlBNSWRtcWNrV0lrbDBVRVo2cXJ6MjNZZk9Yci1yYk9jT3hKY240S2pZUVp3?oc=5",
@@ -81,6 +70,17 @@
       "snippet": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 이투데이",
       "score": 35,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
+      "press": "중앙일보",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보",
+      "score": 35,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {
@@ -161,17 +161,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "한-호주, LNG 및 광물 등 에너지자원 안보 공조 강화 - 가스신문",
-      "press": "가스신문",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1EeF9iMjRpeE0zbFVDaHVlMnlFN0s1Y284c3NzV1FGOE11b0xNNWpvTExwZzdfdWU4UjBUNC1SUHRieVpmVFB3QVpTaDF3eHdObG1ZZnc0bXVRNGJaeFo3cGpOOHZvc2tNa0HSAW5BVV95cUxPNUhoXzh2aUdTRUJtTlZsM1lDeUNlbWx3QlMxMWJiR3FjNE1aTWlXU1dFRF91YVJ6RDU5TllWTk5XSGJWSVlVWUJxLUhWSEdZREk0eWNjTWVSVWZNNWxTdXJYVGZENzliYk9wWlRVUQ?oc=5",
-      "published_date": "2026-05-04",
-      "published_at_kst": "2026-05-04 10:57",
-      "snippet": "한-호주, LNG 및 광물 등 에너지자원 안보 공조 강화 가스신문",
-      "score": 22,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QN0V6VWhwMFA5UzNyRlprRTc2cUkzZlNEZURhRW5tbWhMSG5DUHp1aXozV09jTE9yVG1oakpyTXhxdjFwc1NzNnRMTU5XVTg?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ v.daum.net",
       "score": 22,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "[사설] 호르무즈가 불러온 공급망 위기, 에너지 안보 새 틀 짜자 - 중앙일보",
+      "press": "중앙일보",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGM3hiVmRTNDVTdDVrYUhSTWhqYUlVakNMYnEyUGpRVU4xVTJfZWZULVk4b3pIdUVkVFZncndkQ3dQbWlQYWNIcUxfRDZnX25xQzNWYnVB?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "[사설] 호르무즈가 불러온 공급망 위기, 에너지 안보 새 틀 짜자 중앙일보",
+      "score": 22,
+      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"
     }
   ],

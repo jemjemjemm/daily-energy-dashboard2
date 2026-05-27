@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-14",
-  "collected_at": "2026-05-28 00:47:10 KST",
+  "collected_at": "2026-05-28 01:11:43 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -62,14 +62,14 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "산업부 \"국제유가 100달러 이하로 떨어져야 최고가격제 종료 검토\" - 아시아경제",
-      "press": "아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1YdXhfVHVZT1N4SVA4UHZWYjJ0RGZ4bE5NX1hjUGZmMDRNalNsUVUzcmx4VEFtZDg0cU4zclYwWk1kQU9sMzR1UGg5Z2FhMHFIelJLRXFoWjFWSEIwU3FjVw?oc=5",
-      "published_date": "2026-05-14",
-      "published_at_kst": "2026-05-14 11:30",
-      "snippet": "산업부 \"국제유가 100달러 이하로 떨어져야 최고가격제 종료 검토\" 아시아경제",
-      "score": 39,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "title": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN - Investing.com 한국어",
+      "press": "Investing.com 한국어",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwbzZLZW5FMkcwd2FhckNEQ09Fb1RzZzR2akduY1RqeUI3WXVPY3laS1RxX3lVRHMxX0RpbDM4Sm5sS3B2NFVhb29aYXkwRGZoanJ3UTVRbGRrdmg0STBUdGVaY3dMTk5KSnl1eDRSSQ?oc=5",
+      "published_date": "2026-05-13",
+      "published_at_kst": "2026-05-13 16:00",
+      "snippet": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN Investing.com 한국어",
+      "score": 36,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -174,7 +174,7 @@
     {
       "title": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9abTZRcU9wT2JQbWItU3o2WWREOFhDS3NKd3RCTklHQ1dsckUzTDhLX0REZGJZdW5BakZxMjd5SDM1MjlsQ3c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9SbVJfTEZONVdBbG94YTlXQlJtNUhNSFlraEpVTDFqbG9aTnpiQy1jS3FwVXg0dzY3VVlSQ19Rak9rY2J3SW9WYkNEYzNpaUtYaFlwYg?oc=5",
       "published_date": "2026-05-13",
       "published_at_kst": "2026-05-13 16:00",
       "snippet": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” v.daum.net",

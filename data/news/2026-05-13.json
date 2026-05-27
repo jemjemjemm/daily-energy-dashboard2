@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-13",
-  "collected_at": "2026-05-28 00:47:05 KST",
+  "collected_at": "2026-05-28 01:11:37 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,6 +51,17 @@
   ],
   "articles": [
     {
+      "title": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 - 조선비즈 - Chosunbiz",
+      "press": "Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUmhVeE0zVkM1djd3bWlLbUY5blZEVlJ1M3ZWek1pZWZxb3JpR09IV3pCcmJJbTVBMWVyWXd6Z2YyclR1RnJWMVZGajdzbk5CTTlJd1lCb3pXTkY3UWo3eXpKLXZUTTdvSTM4bUxoX1l2X2pBSkNzZmtmZ0sycTNlWXd5SVfSAZgBQVVfeXFMTmFHN3VBMGxVNHAzTGsxNkdpZkxsQzdsUEF1Um0wZngzQkpULWxqaEdVajFZMG9RSko4cTY0U0tLdE9kT25xRzFxdzVIVGxHTTVmQk1qWDFFRVExSkExR3dnbnZNVWlRTlBjZHdEVG1famg2d3FBdmlYNGszZ21HSnZxU19pMmFvM2JjM2N5b2FFQVBGQlN1bHk?oc=5",
+      "published_date": "2026-05-12",
+      "published_at_kst": "2026-05-12 16:00",
+      "snippet": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 - 조선비즈 Chosunbiz",
+      "score": 37,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” - 물류신문",
       "press": "물류신문",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Oekdvc281V240R3BKZGhqazhFQ3NmY1dfbjVweUZaaGVnRVJ6NFM1UVVabHRFQlpIVXVHcTZTMFlYN1E2eHIzZWxXRVNjeVNwOUNKRG8zMDZ4bHI3VHJJOHR6TWllNFdtZF84?oc=5",
@@ -79,6 +90,17 @@
       "published_date": "2026-05-12",
       "published_at_kst": "2026-05-12 16:00",
       "snippet": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] MTN 머니투데이방송",
+      "score": 31,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB0VnRSYTFJeVcxRHBlSTR1WS12eUhaLXZ4YzFtS0dUTWpwOUhRWTJrNVdnX200M0ZXOGpPNXVHbURQa3FhN1dWSjk5R3RjY2hwWUpiUg?oc=5",
+      "published_date": "2026-05-12",
+      "published_at_kst": "2026-05-12 16:00",
+      "snippet": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] v.daum.net",
       "score": 31,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
@@ -117,12 +139,12 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "국제유가, 이란 긴장 재고조에 상승…브렌트 3%↑ - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE43LTIyNEhYN0JUM1VQNTZEMGxOX0RuNGRWNzVpV2VERWZXeHBwLS1DVERlZGZkdG9Rck45QUUzUzYwQXFBMlE?oc=5",
+      "title": "국제유가, 이란 긴장 재고조에 상승‥브렌트 3%↑ - MBC 뉴스",
+      "press": "MBC 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNVzEtaFRrZ3ZSdjZ0UEdUT3NvYnVXMHdOVHg3Tkt5SFdmVWRlU2lWYVlTdDN4UnpHY0hrWW5CVWc5TTJsdHRhNUZjUER1bElmZFVPZllqSVA5bExNU3czNVZGNjh4MWNIY2Ric2RaUk40bXkt0gF0QVVfeXFMT0xOMHdBS1Y1UVp3a2FuU3Nmc1dvdUlpYXBFeU5JNlV3dkN4Q2M2bTlGdGlYb0JsdnlpTVlMc0VGaHVveHdGOUh0d0hhaEVucm1RSHUxdHQ3M0oxRFN6Ty1KYzZsQld0SjM4YlVnLXpCSGwxQng?oc=5",
       "published_date": "2026-05-12",
       "published_at_kst": "2026-05-12 16:00",
-      "snippet": "국제유가, 이란 긴장 재고조에 상승…브렌트 3%↑ v.daum.net",
+      "snippet": "국제유가, 이란 긴장 재고조에 상승‥브렌트 3%↑ MBC 뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -134,17 +156,6 @@
       "published_date": "2026-05-12",
       "published_at_kst": "2026-05-12 16:00",
       "snippet": "국제유가 3일째 오름세…고물가 압력에 Fed 연내 인하 전망 후퇴 중앙일보",
-      "score": 27,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "미·이란 긴장 재고조에 국제유가 3% 상승…에너지 쇼크 '경고' - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44bHlUMGZ0NjZtZWYxeW1aVVNtaGN3bEUxUGlsYWhxUTJGbmZobjBReFdhV0VmMnc2UnhKVHd6YUhicVFFWGx3TWlWVlFlWEk?oc=5",
-      "published_date": "2026-05-12",
-      "published_at_kst": "2026-05-12 16:00",
-      "snippet": "미·이란 긴장 재고조에 국제유가 3% 상승…에너지 쇼크 '경고' v.daum.net",
       "score": 27,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -169,17 +180,6 @@
       "snippet": "UAE, OPEC 탈퇴로 에너지 지형 균열… 수급 변화로 흔들리는 ‘정유 손익계산서’ 쿠키뉴스",
       "score": 27,
       "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "호르무즈 봉쇄 9주…글로벌 원유시장 ‘공급 충격→에너지 질서 재편’ 본격화 - 해사신문",
-      "press": "해사신문",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5xSkt1WW84TFdKMkhZYXk4SlFxY1JQRnhkZzZZcG82a0pwQjVVbmFZaG5XVUdVaHhWRDVQa0lJaHAwME4xd2ZsM055NGpGZGNDTFRGWk9rRGlsVDA3UmRVZzJXUEhyM0pUT1Nv?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 09:09",
-      "snippet": "호르무즈 봉쇄 9주…글로벌 원유시장 ‘공급 충격→에너지 질서 재편’ 본격화 해사신문",
-      "score": 25,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }
   ],

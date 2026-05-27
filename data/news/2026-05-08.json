@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-08",
-  "collected_at": "2026-05-28 00:46:51 KST",
+  "collected_at": "2026-05-28 01:11:23 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -128,17 +128,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "미국·이란 협상 기대감에 국제유가 급락‥브렌트유 7.8%↓ - MBC 뉴스",
-      "press": "MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE81bWt0aUdoMnNEcERXNDg3dkJQRFBpRV9mdWczWExHb3U1S3JMYUhxOEl0UUVFYnczV1B0Sl9paGtBckQ4Vllldi1ra09hUHpsbzZMclJEdzh4WXBLek1EenlnQ0t4T2lfNFFYR2ZSSDFlQVRI0gF0QVVfeXFMUHVpVUUzUTh6NC00Q1FPY0VncUpSNDJqZEVHLUk0TGNTOENCVmZHcktWTDRhU3hxUUFCc0FvTjhkWE40WlZ1eGdKWkZmMzVmY05yai1kVTFxNHRxb0lfSi1scXVYSjlwQ3AtcXl2bGNtMVFuSkc?oc=5",
-      "published_date": "2026-05-07",
-      "published_at_kst": "2026-05-07 16:00",
-      "snippet": "미국·이란 협상 기대감에 국제유가 급락‥브렌트유 7.8%↓ MBC 뉴스",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "민주 한정애 “석유 최고가격제, 물가 낮추는 방파제…고유가 부담완화 신속 입법” - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAwb3lCUE1TdkdJVks3dU5BUXFZd2hXODYycndkd1dsVWtzYXB0N3QzSVpiSHhoemhoM2dkSmx2ZldKMXBZdjJiVHlvZFV2RHdSMGZaUQ?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "정부, 석유 최고가격제 당분간 유지…유가 안정 조짐에 화학업계 기대감 녹색경제신문",
       "score": 34,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "고유가 지속…정부, 5차 석유 최고가격제 금일 발표 - 뉴스1",
+      "press": "뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE82eE9Sc0N3NmJlT04ydWdZSmZpQVRUd1JvaV9aZnJ1UWEzYm91ZHBJeWU3anpicldCVm9qVXVmV1VReGJGNUJ3TS1oMA?oc=5",
+      "published_date": "2026-05-07",
+      "published_at_kst": "2026-05-07 16:00",
+      "snippet": "고유가 지속…정부, 5차 석유 최고가격제 금일 발표 뉴스1",
+      "score": 34,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     }
   ],

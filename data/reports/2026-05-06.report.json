@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 6일 (수)",
     "previous_day_label": "5/4",
     "today_label": "5/6",
-    "generated_at": "2026-05-28 00:46 KST",
+    "generated_at": "2026-05-28 01:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1446,7 +1446,7 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
     "trend_paragraphs": [
       "연합뉴스는 5/5 16:00 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
       "연합뉴스는 5/5 16:00 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
@@ -1596,7 +1596,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 00:46:42 KST",
+      "merged_at": "2026-05-28 01:11:14 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

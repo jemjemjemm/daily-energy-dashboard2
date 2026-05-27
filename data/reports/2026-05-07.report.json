@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 7일 (목)",
     "previous_day_label": "5/6",
     "today_label": "5/7",
-    "generated_at": "2026-05-28 00:46 KST",
+    "generated_at": "2026-05-28 01:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1473,11 +1473,18 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "매일경제는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
       "v.daum.net는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "매일경제는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
       "v.daum.net는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
+      {
+        "title": "[오일쇼크 폭풍전야] 최고가격제 언제까지...정유사·주유소 임계점 임박 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBIcG9tZWFZbWFsb0tSdDh0YV9ubTdYN1dxSUZSWEdpcVNYZEYxUTlKMXh3ZVBUeG9BemdCM1NMalQ3a2U4YTBUV2YyQ0ZFNzA?oc=5",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "2026-05-06 16:00"
+      },
       {
         "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - 매일경제",
         "press": "매일경제",
@@ -1489,13 +1496,6 @@
         "title": "정유사 5조 벌었다지만…속타는 '최고가격제 청구서' - v.daum.net",
         "press": "v.daum.net",
         "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBmQVpncXZNUDA4ZkVqS09JV0pOd0lRb25tTWsxYjNqZ2dxS0lVdDJRR3A1akhHZl9JdlV2T09sRi1PTFZlRWc?oc=5",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "2026-05-06 16:00"
-      },
-      {
-        "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA0dlVMa0xwV3c4UC1EUThMdUZqdkJTbkZEX2ZOWFd3X05faVlMdnNYenNxQk9YcWhhWVlNYlRpRlc5Q3BFcGJxQzBDWjBkb1U?oc=5",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "2026-05-06 16:00"
       }
@@ -1618,7 +1618,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 00:46:47 KST",
+      "merged_at": "2026-05-28 01:11:18 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
