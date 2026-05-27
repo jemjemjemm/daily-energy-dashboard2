@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 13일 (수)",
     "previous_day_label": "5/12",
     "today_label": "5/13",
-    "generated_at": "2026-05-27 15:07 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1521,31 +1521,31 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "물류신문은 5/12 17:15 입력 기사에서 관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” 물류신문.",
-      "조선일보는 5/12 16:00 입력 기사에서 나프타 수급 차질에도 석유화학 1분기 깜짝 실적 조선일보.",
-      "v.daum.net는 5/12 16:00 입력 기사에서 정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] v.daum.net."
+      "Chosunbiz는 5/12 16:00 입력 기사에서 [단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 Chosunbiz.",
+      "v.daum.net는 5/12 16:00 입력 기사에서 호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 v.daum.net.",
+      "물류신문은 5/12 17:15 입력 기사에서 관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” 물류신문."
     ],
     "articles": [
+      {
+        "title": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 - 조선비즈 - Chosunbiz",
+        "press": "Chosunbiz",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNUmhVeE0zVkM1djd3bWlLbUY5blZEVlJ1M3ZWek1pZWZxb3JpR09IV3pCcmJJbTVBMWVyWXd6Z2YyclR1RnJWMVZGajdzbk5CTTlJd1lCb3pXTkY3UWo3eXpKLXZUTTdvSTM4bUxoX1l2X2pBSkNzZmtmZ0sycTNlWXd5SVfSAZgBQVVfeXFMTmFHN3VBMGxVNHAzTGsxNkdpZkxsQzdsUEF1Um0wZngzQkpULWxqaEdVajFZMG9RSko4cTY0U0tLdE9kT25xRzFxdzVIVGxHTTVmQk1qWDFFRVExSkExR3dnbnZNVWlRTlBjZHdEVG1famg2d3FBdmlYNGszZ21HSnZxU19pMmFvM2JjM2N5b2FFQVBGQlN1bHk?oc=5",
+        "summary": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 Chosunbiz.",
+        "published_at_kst": "2026-05-12 16:00"
+      },
+      {
+        "title": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE00djNyZDN3YVdYem5wcjNvYjUtQnlkamxWNWNtV1N6dS1UNFkyc2pUd1RESFdKMjNhdzhtS1E5SHdXcXFKbkE?oc=5",
+        "summary": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 v.daum.net.",
+        "published_at_kst": "2026-05-12 16:00"
+      },
       {
         "title": "관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” - 물류신문",
         "press": "물류신문",
         "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Oekdvc281V240R3BKZGhqazhFQ3NmY1dfbjVweUZaaGVnRVJ6NFM1UVVabHRFQlpIVXVHcTZTMFlYN1E2eHIzZWxXRVNjeVNwOUNKRG8zMDZ4bHI3VHJJOHR6TWllNFdtZF84?oc=5",
         "summary": "관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” 물류신문.",
         "published_at_kst": "2026-05-12 17:15"
-      },
-      {
-        "title": "나프타 수급 차질에도 석유화학 1분기 깜짝 실적 - 조선일보",
-        "press": "조선일보",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdHgxTkRyV2JMUjNtZHBBM3FmeExiMl8xS01MeFd6OUxKcHZWYmdiVHQ2QjdjQmFaSlVOMFBSSERFUEdnMFRXSlVSTHNlcmpWMTlXSUtGQjAwTlZQWGR6QUtreDdxcmkyM0FENmJPckNJX3ZYSllBOEEwZUNxbmF3ZHlVSmFKMVRUVEZHMHAwTQ?oc=5",
-        "summary": "나프타 수급 차질에도 석유화학 1분기 깜짝 실적 조선일보.",
-        "published_at_kst": "2026-05-12 16:00"
-      },
-      {
-        "title": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9SYVdsMzhVMUYxZXJkWlhqZUVjaldDaHplN0FCY1BtT1hOaDZUZURUSm1uVGpuWmR5V3JPV1FRakxtNmZrdWc?oc=5",
-        "summary": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] v.daum.net.",
-        "published_at_kst": "2026-05-12 16:00"
       }
     ],
     "source": "Google News RSS",
@@ -1666,7 +1666,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 15:07:26 KST",
+      "merged_at": "2026-05-27 22:10:40 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

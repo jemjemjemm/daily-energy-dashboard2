@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 11일 (월)",
     "previous_day_label": "5/8",
     "today_label": "5/11",
-    "generated_at": "2026-05-27 15:07 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1465,11 +1465,11 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
       "네이트는 5/10 16:00 입력 기사에서 韓, G7 국가보다 에너지 물가 관리 선방…유류세 인하·석유 최고가격제 시행 영향 네이트.",
       "매일경제 마켓은 5/10 16:00 입력 기사에서 달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 매일경제 마켓.",
-      "헤럴드경제는 5/10 16:00 입력 기사에서 재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 헤럴드경제."
+      "v.daum.net는 5/10 16:00 입력 기사에서 재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 v.daum.net."
     ],
     "articles": [
       {
@@ -1487,10 +1487,10 @@
         "published_at_kst": "2026-05-10 16:00"
       },
       {
-        "title": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 - 헤럴드경제",
-        "press": "헤럴드경제",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SUmpvVFVlZkJjeVRfMWdmY1U5TWRHZnkzeXo5MDItOE1pN04yLU5uaEtjUzljd1A4cWxQNzJYQ2h3MG85S1M2X3VzWVdsQzNSWUVHTm9n?oc=5",
-        "summary": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 헤럴드경제.",
+        "title": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0wRGZCR3BKempiNUczQ24zMHhITUhCUW54YVhlUmlCU1F4ZEszYnppZWlwV1d4VUVqb3hobW90dGZsMzQyTEdfcXNjOVJnbWs?oc=5",
+        "summary": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 v.daum.net.",
         "published_at_kst": "2026-05-10 16:00"
       }
     ],
@@ -1612,7 +1612,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 15:07:17 KST",
+      "merged_at": "2026-05-27 22:10:31 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

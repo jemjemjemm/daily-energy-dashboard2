@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 7일 (목)",
     "previous_day_label": "5/6",
     "today_label": "5/7",
-    "generated_at": "2026-05-27 15:07 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1473,11 +1473,18 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
+      "연합뉴스는 5/6 16:00 입력 기사에서 국제유가 상승에 소비자물가 21개월 만에 최고 연합뉴스.",
       "매일경제는 5/6 16:00 입력 기사에서 정유사 \"팔수록 손해…최고가격제 손실 4조\" 매일경제.",
-      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 5조 벌었다지만…속타는 '최고가격제 청구서' v.daum.net.",
-      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net."
+      "v.daum.net는 5/6 16:00 입력 기사에서 정유사 5조 벌었다지만…속타는 '최고가격제 청구서' v.daum.net."
     ],
     "articles": [
+      {
+        "title": "국제유가 상승에 소비자물가 21개월 만에 최고 - 연합뉴스",
+        "press": "연합뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5UREVldmh5cVN5RFdYeFk0QWFSNnNjMHdyZzBKR3djbVJjMlpfZEgxOFRadGpHSXM5cDJSUDBtdjJNTEpzek1FUXZIVmRNb2tZRjJ6bUVGQjVtTVHSAWBBVV95cUxNM0cxTDZKcTZxWlJVV0c0MHB3X2JONFZJNEVsbnpqMXBLZWx4S0ppMVAzRXVFcUhEZXJNZGRHRzJFNEJCMmhBNXpMQTdvQkYtMmpPdGRXem1NMFRhMlNqY0w?oc=5",
+        "summary": "국제유가 상승에 소비자물가 21개월 만에 최고 연합뉴스.",
+        "published_at_kst": "2026-05-06 16:00"
+      },
       {
         "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - 매일경제",
         "press": "매일경제",
@@ -1490,13 +1497,6 @@
         "press": "v.daum.net",
         "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBmQVpncXZNUDA4ZkVqS09JV0pOd0lRb25tTWsxYjNqZ2dxS0lVdDJRR3A1akhHZl9JdlV2T09sRi1PTFZlRWc?oc=5",
         "summary": "정유사 5조 벌었다지만…속타는 '최고가격제 청구서' v.daum.net.",
-        "published_at_kst": "2026-05-06 16:00"
-      },
-      {
-        "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBIVjVHdjhTWkIxYklBb2E2NUNpZUQ5a1Ezd2lhMWQ2MnNzZnJJTFJlWXVDMVU1Z3Y4aV9odmM2YzVKRnUtQ1E?oc=5",
-        "summary": "정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net.",
         "published_at_kst": "2026-05-06 16:00"
       }
     ],
@@ -1618,7 +1618,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 15:07:08 KST",
+      "merged_at": "2026-05-27 22:10:22 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

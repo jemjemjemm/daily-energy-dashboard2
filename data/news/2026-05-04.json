@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-04",
-  "collected_at": "2026-05-27 15:06:58 KST",
+  "collected_at": "2026-05-27 22:10:13 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -58,7 +58,7 @@
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보",
       "score": 35,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     },
     {
@@ -69,7 +69,18 @@
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ 아시아투데이",
       "score": 35,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 - 이투데이",
+      "press": "이투데이",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10T3FpTVhQMnNha3BKVlJVX0NlT1ZObXdlc0g0NFpvU3N0QXBQbFg4UmlXci1TcFQ3dUVfbVRtcmpIQktHVnlWVGk5elRCdDIyMDhXXw?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 이투데이",
+      "score": 35,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     },
     {
@@ -79,17 +90,6 @@
       "published_date": "2026-05-03",
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1",
-      "score": 33,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "5월 원유 87%·나프타 90% 수급 ‘숨통’…고유가 리스크는 여전 - 동아일보",
-      "press": "동아일보",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9ta21pWjRKMFh1cnY0ai1mbkMzdGhwd3VRbTJ0anVVZWF2NXp5UzlSanhzS1Y1NGhObS1UV3VRempEamhucks2QndkV2UybVhKbXozcFFfTkNjdFo1dVh3UkMxUEdqMWlRSlVZ0gFmQVVfeXFMTUZ0X1ZsbHVid1FzYTNDRTFmQ0tDUmhrcWVPVGhRU0pfVzd0LWlNSWZqS1FXNHNtSkZuN285SEhnWmlOYURJZWNEZnVZYkw0VDdmVEFaUURqeF94NDdOaklRTXpYMk5n?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "5월 원유 87%·나프타 90% 수급 ‘숨통’…고유가 리스크는 여전 동아일보",
       "score": 33,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
@@ -141,7 +141,7 @@
     {
       "title": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE45TzRkWVBOOUNrVmdUMk1DS1ROV2ZiVGJfUnJFc2JOaFMxZkZzQXlYNHhJOVNFaV9URXBWOWpwVVBwV0FaOHd3bzYtQQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1yU052X0w5bmZRZ0RRSFdNb3NzcUVpOE1ZM2k4dHdRUTFyOWZsM3ZGM3JTRFF5RUU0RlVtLW1VVDVHVzVSRHA2Vm1WTkpVbzhTOWVRTg?oc=5",
       "published_date": "2026-05-03",
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 v.daum.net",

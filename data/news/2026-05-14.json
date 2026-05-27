@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-14",
-  "collected_at": "2026-05-27 15:07:31 KST",
+  "collected_at": "2026-05-27 22:10:44 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -73,17 +73,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN - Investing.com 한국어",
-      "press": "Investing.com 한국어",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwbzZLZW5FMkcwd2FhckNEQ09Fb1RzZzR2akduY1RqeUI3WXVPY3laS1RxX3lVRHMxX0RpbDM4Sm5sS3B2NFVhb29aYXkwRGZoanJ3UTVRbGRrdmg0STBUdGVaY3dMTk5KSnl1eDRSSQ?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN Investing.com 한국어",
-      "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "제조 AI로 석유화학 위기 돌파…산업장관, SK에너지 현장 점검 - 연합인포맥스",
       "press": "연합인포맥스",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8xWm9xMzF3ZWQtOTh4OU1lYUhnNUZrcV9VYk92Q3A4V0cyNUZWQ0Zkd3JiUjE1OWFDTHFzVmt4cW5VZGlQTG5PejNxZFFHeEpiVEdSMXJxRXoyUlJiU05Qa1ExbEtUcGNLRGxSRHFsWUo?oc=5",
@@ -125,6 +114,17 @@
       "snippet": "정유4사 1분기 ‘조 단위’ 깜짝 실적…“국제유가 시차 효과 때문” v.daum.net",
       "score": 30,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "金총리 \"원유 등 수급 비교적 안정적…정부, 물가관리 전력\" - 연합뉴스",
+      "press": "연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1CQnNPd0tRblVJcE9rTWRVODVOU2M1MnlXSnJpZ3o5a05rbk5pVHRmcGd6OWRqQ2VIaThVdmNRb3hPaG4xYXJVT2E3YUw5enZPY3ktWFA2SDdOWDjSAWBBVV95cUxNc0pZeXphcjFGa2JqODFYZ0VPNE5kSXBmZWlUSGNOckRjNVlmZ193Mk5abHdRMjVORzBwempyQnJuVHRIR3JUNUJsa1k3VmR0b1RJNDZfRlFHU3d5TjdqNmI?oc=5",
+      "published_date": "2026-05-13",
+      "published_at_kst": "2026-05-13 16:00",
+      "snippet": "金총리 \"원유 등 수급 비교적 안정적…정부, 물가관리 전력\" 연합뉴스",
+      "score": 30,
+      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
     },
     {

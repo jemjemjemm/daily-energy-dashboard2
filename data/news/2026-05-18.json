@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-18",
-  "collected_at": "2026-05-27 15:07:40 KST",
+  "collected_at": "2026-05-27 22:10:53 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -139,6 +139,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "‘호르무즈 봉쇄’에 세계 57개국 시장 개입…석유 상한제·유류세 인하 총력 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE92SHdOZXkteElTWlkxOGdNX1ZteUhOZ3NsLXN1U0RXTE5vb0trMDVDdXFNbmJEYUVGVGI0YV9vbEx5SHpISEE?oc=5",
+      "published_date": "2026-05-17",
+      "published_at_kst": "2026-05-17 16:00",
+      "snippet": "‘호르무즈 봉쇄’에 세계 57개국 시장 개입…석유 상한제·유류세 인하 총력 v.daum.net",
+      "score": 27,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "‘호르무즈 봉쇄’에 세계 57개국 시장 개입…석유 상한제·유류세 인하 총력 - 아시아경제",
       "press": "아시아경제",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5EOVFTUG1xM092UWJNRzRZRURKb2djNFRnd18zS0ZVY0lJRmNueEp6UWFoUi03cFlSVWxtVlgtN3dFU1pvdElSWm9ZdmFnWTJjZ0VJUnRYSnN4SXJ5d1oxcg?oc=5",
@@ -156,17 +167,6 @@
       "published_date": "2026-05-18",
       "published_at_kst": "2026-05-18 08:53",
       "snippet": "가장 저렴해진 두바이 유가…글로벌 석유시장 무슨 일? 에너지경제신문",
-      "score": 25,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "이란 종전협상 교착에 유가 반등…브렌트유 다시 110달러대 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5NaGRwNmg1R3ZwdDRBMGVXS3AzdUJpNVpmQ0NtVEJEWkF5YVA5QWtoZ2lfOXN4dHBwN0VlWnJPdkdLank3WkR1YlJ6VQ?oc=5",
-      "published_date": "2026-05-18",
-      "published_at_kst": "2026-05-18 09:11",
-      "snippet": "이란 종전협상 교착에 유가 반등…브렌트유 다시 110달러대 v.daum.net",
       "score": 25,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-19",
-  "collected_at": "2026-05-27 15:07:45 KST",
+  "collected_at": "2026-05-27 22:10:57 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -75,7 +75,7 @@
     {
       "title": "[국제유가] 브렌트유, 110달러 돌파 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBLYmdHcDVHbFhDMnZxWkUwR3g4Tm53RDZVNXZtYTBIZ3dDc21rc002dlJtMkcwZFZScUJlYVBXQXdycWc4d3c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZQ2kyY3I5VDI5aHRJSzJmaWxxR1lzRDFWck9KMERDcUlOV2V4Nm1JM3ZaUXhKNEh5dS1ueVlIZFdOZ0JzY3FZTENBajBySUU?oc=5",
       "published_date": "2026-05-19",
       "published_at_kst": "2026-05-19 05:06",
       "snippet": "[국제유가] 브렌트유, 110달러 돌파 v.daum.net",

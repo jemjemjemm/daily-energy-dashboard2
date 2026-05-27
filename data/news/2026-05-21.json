@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-21",
-  "collected_at": "2026-05-27 15:07:54 KST",
+  "collected_at": "2026-05-27 22:11:06 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -69,7 +69,7 @@
       "published_at_kst": "2026-05-21 07:55",
       "snippet": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 대한민국 정책브리핑",
       "score": 42,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -108,7 +108,7 @@
     {
       "title": "4월 생산자물가 2.5% 상승…석탄·석유제품 31.9% 급등 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9SVGM2eGYwSkJRTzAyWnpodXZ4ZzIwMk82ZEU3SFU3VlBHc3hBTXcyMEhEX1hiOEpaRkFJMWFSX2kzNWd0YUxxRVBSZw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZQmZ4THJiaVVZZndaSU1hZVNmR0cxSWVwOW5DenI3eUlGeHo1N25vM2QtQllKVlkzTDlDMmhJSnVXSXRtVFhmV2hCa2ljVWM?oc=5",
       "published_date": "2026-05-21",
       "published_at_kst": "2026-05-21 06:00",
       "snippet": "4월 생산자물가 2.5% 상승…석탄·석유제품 31.9% 급등 v.daum.net",

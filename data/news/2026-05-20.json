@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-20",
-  "collected_at": "2026-05-27 15:07:49 KST",
+  "collected_at": "2026-05-27 22:11:02 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -101,7 +101,7 @@
       "published_at_kst": "2026-05-19 18:51",
       "snippet": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 v.daum.net",
       "score": 37,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -122,6 +122,17 @@
       "published_date": "2026-05-19",
       "published_at_kst": "2026-05-19 20:02",
       "snippet": "한일, 원유·석유제품 스와프 추진…\"공급망 위기 공동대응\" 연합뉴스",
+      "score": 34,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "한일, 원유·석유제품 스와프 추진…공급망 공조 강화 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1taFlzN05wLVFPNFZlRkJ1cUV5cHVZWTJzM0RXTTZRbl9fcTN2MW9sOG5PMlhFV3g1ejJFTHFrOXFHUzZQMkZSZTA5bVlsM3c?oc=5",
+      "published_date": "2026-05-20",
+      "published_at_kst": "2026-05-20 07:15",
+      "snippet": "한일, 원유·석유제품 스와프 추진…공급망 공조 강화 v.daum.net",
       "score": 34,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -166,17 +177,6 @@
       "published_date": "2026-05-20",
       "published_at_kst": "2026-05-20 05:59",
       "snippet": "한일, 원유·석유제품 공급차질시 빌려준다…“공급망 위기 공동대응” 헤럴드경제",
-      "score": 34,
-      "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "한일, 원유·석유제품 스와프 추진…공급망 공조 강화 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBtNUFNdk9RbDFNd1VTSTc1Z1loS2hPaGI5VmMzcEhPc1RfMFhEcDhNbTE1cWVEUzMwOHhuU0JVeno4dS1JN0FkMm9UMk1DUVpfYUhIbg?oc=5",
-      "published_date": "2026-05-20",
-      "published_at_kst": "2026-05-20 07:15",
-      "snippet": "한일, 원유·석유제품 스와프 추진…공급망 공조 강화 v.daum.net",
       "score": 34,
       "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
       "collector": "google_news_rss"

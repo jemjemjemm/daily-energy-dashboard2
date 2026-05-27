@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-27 15:08:03 KST",
+  "collected_at": "2026-05-27 22:11:16 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,6 +51,17 @@
   ],
   "articles": [
     {
+      "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 연합뉴스",
+      "press": "연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Id00yaFRVS1Nubi1XN1JrbF9EekpUQ0dlZm1WcEpiWkxCcEtRaEo0aUZTMVpOcW5LbE5qZVp6NldKeTV5VGpPRmN0U2JuUmt1OEhuRFpISTFOQ2vSAWBBVV95cUxQbGpqeVhUMnVfT1gwaXkxbWlrVGNzaUJ1QXBBSUhsWGFkYUZsX1hnaThyMkhLUlZFeDZaeG5tX2E1QXo4MUhmemwxRUVXV2NhcGpjSjFPRWV3MGNzbDNCOXY?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 06:22",
+      "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 연합뉴스",
+      "score": 36,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "[특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 - 기후에너지경제",
       "press": "기후에너지경제",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQcERBbHUzM1Q0NkplWmhSZFdlM2dVUlhaM0xxaHNhc0xIS2FlM3l2SGpaVFFaMnY3S2I1WUtjdU9yYTNtaWQxVTNkY1Vod25YY0JyM0RmMFB1bTBKd0drUFlhR1E?oc=5",
@@ -73,12 +84,45 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "원유·LNG 등 자원 개발 반세기, SK이노베이션 광고에 담는다 - 에너지플랫폼뉴스",
+      "press": "에너지플랫폼뉴스",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBEVW4wTW1aZVlNTktsN3p2YVU3Z0VBS3lMVnpXY3ZsZFZ4UVRqSnBPenJ2U2Z2bWtJSlBhQXJQMDJkYV9nSGtRMkdPS0ZvNUpMZ3pFb1ROVUVkc1gwbklCSGxwRkV3RldnZ2FFZ9IBcEFVX3lxTFBWamVTTHlMVXN1SVh4UEkzWUhudW5qdzJUVVNkODMyWUFMWWtITkF0UXY3aXJXNWhuNk5nRUFLMlN6T0hNMkx0dzZONUswTEZ2dGRLbUY4WmNJMnoycTc5ZWh6c0ZKTkM2THNyZEV0ZEU?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 09:07",
+      "snippet": "원유·LNG 등 자원 개발 반세기, SK이노베이션 광고에 담는다 에너지플랫폼뉴스",
+      "score": 31,
+      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 - 연합뉴스",
       "press": "연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4dzljUlhla18ycEVXczk3VmlMV1BielBxUnZBdlRiYkJMZFR0VnZQQmI5R3VKdWlfbm4zUTh5Z3NnRTI2WFNOX21ka2YwejMxVWwycVhXTnhzN3lTdkRKVtIBYEFVX3lxTFA4dzljUlhla18ycEVXczk3VmlMV1BielBxUnZBdlRiYkJMZFR0VnZQQmI5R3VKdWlfbm4zUTh5Z3NnRTI2WFNOX21ka2YwejMxVWwycVhXTnhzN3lTdkRKVg?oc=5",
       "published_date": "2026-05-26",
       "published_at_kst": "2026-05-26 07:26",
       "snippet": "국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 연합뉴스",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "“호르무즈 열린다?”…국제유가 하루 만에 폭락, 시장 '환호' - 전자신문",
+      "press": "전자신문",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB1UFJNNjQyR2llcmNDMV9ZaHZhOU1kcjNvcE1WcDV4MEpURk8tZUtZa2tJS2RtUWRBMmt0bUlwNXV2SExveXZrUnVvS2FDQQ?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 07:31",
+      "snippet": "“호르무즈 열린다?”…국제유가 하루 만에 폭락, 시장 '환호' 전자신문",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "'전쟁 끝나나' 국제유가 7% 급락…호르무즈 재개방 기대감 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5TRjVkMmRMaWxhWjVseWpZS0tLdWVaTXBtOEJvRjF4RmxCZWNoaF8yVTcwc085Vm9uNjVNVk5YelY4QUgyWmRCWlJ1ZWZHalU?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 06:45",
+      "snippet": "'전쟁 끝나나' 국제유가 7% 급락…호르무즈 재개방 기대감 v.daum.net",
       "score": 30,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -106,14 +150,14 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ - 울산신문",
-      "press": "울산신문",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUd9IBckFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUdw?oc=5",
-      "published_date": "2026-05-25",
-      "published_at_kst": "2026-05-25 21:39",
-      "snippet": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ 울산신문",
-      "score": 25,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "title": "호르무즈 개방 기대에 국제 유가 급락···WTI 90달러선 마감 - 경향신문",
+      "press": "경향신문",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5hUDVYNVZYTjVsLTdHcUp5RkhqcjUwRG9nUGlvRHo2c2hCMXhPdlF2enZZbnJSTWhhY0t0b1dfcDZJd3ZkbEU3QnBaM0loMWlIZUFTSDlGYVpjd9IBX0FVX3lxTFBqU1VoQ01IRnlxZEhfaHZkRGpfcnpCcGxpcnRVYXBkX0JKWXA4c1BMdENkOWVvQWpYd2pSbjRrQlJYTjJsYnFFNXBLQW5jcnZsRTVMaEZFY0lFcHlLNTkw?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 08:57",
+      "snippet": "호르무즈 개방 기대에 국제 유가 급락···WTI 90달러선 마감 경향신문",
+      "score": 26,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -136,50 +180,6 @@
       "snippet": "람동 주유소는 산업통상부와 협력하여 람동성 내 E10 휘발유 유통 및 사용 로드맵 이행을 위한 회의를 개최했습니다. Vietnam.vn",
       "score": 25,
       "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "미·이란 협상 진전 소식에 국제유가 7% 급락…배럴당 90달러대 - 국제신문",
-      "press": "국제신문",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNenlzSWt6T2hsZkl1X2dEc2VDWXJjeEZlYTN4SkNVOVpTdHZlOUtTWkZBVklybVlTRUo3RGhTOG1LT1p6dW9VbDYxVDBIUk5YdlhGbktpeUdoWkVUTzZ3UkJ2VjZoZHU2Q0pPNmE1SGYzalVMZ2VDeEs0VG4zOTFYOWVkMWVWeVl5RTZWYmZB?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 08:14",
-      "snippet": "미·이란 협상 진전 소식에 국제유가 7% 급락…배럴당 90달러대 국제신문",
-      "score": 22,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[안전상황실·26일] 울산 석유화학업체 공사장서 40대 직원 의식 잃고 사망 - 세이프타임즈",
-      "press": "세이프타임즈",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9GRVQ1N1ZzYmRNY2I0S0tLLXlDVXNxTFNHVFdHUVRveExWakZWeWg3UFRIRmVVcjVVZUxtRmpUVGJQODhnNkNDajVKM205N09TODJGN3hST3dob2ZJa0RWbTZ0MHdOVDExMDc3UVRsZ2wtaWvSAXNBVV95cUxPRkVUNTdWc2JkTWNiNEtLSy15Q1VzcUxTR1RXR1FUb3hMVmpGVnloN1BUSEZlVXI1VWVMbUZqVFRiUDg4ZzZDQ2o1SjNtOTdPUzgyRjd4Uk93aG9mSWtEVm02dDB3TlQxMTA3N1FUbGdsLWlr?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 07:05",
-      "snippet": "[안전상황실·26일] 울산 석유화학업체 공사장서 40대 직원 의식 잃고 사망 세이프타임즈",
-      "score": 21,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "해경·해수부, SK인천석유화학 해양오염 예방점검…유조선 접안·유류 이송시설 집중 확인 - 해사신문",
-      "press": "해사신문",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1jeUhuSnhRY3BjRmFONDYxM0o2b19xRHBWMzhVbVpnWkVGa2VvR0E5dmZpTXhqOTRQQUlDeDJjLTc0V3VIQWx6dDVyR09ieXFnUDVkRFBob3BwV2t1NFJ1YXRIVzZkYzBnMDcw?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 06:49",
-      "snippet": "해경·해수부, SK인천석유화학 해양오염 예방점검…유조선 접안·유류 이송시설 집중 확인 해사신문",
-      "score": 21,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "울산 석유화학 공사장서 40대 근로자 숨져…원인 조사 - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1id0hsNF95YkRxZVk0YjY4cUJJandPRG5kV3N1V2lORzB3TEdnOU1kejdjZ1huUW9WWkF4MHJvRnRHTVRoaHpFRlAzeVZmSk44MlRuTUdETHA0NGfSAWBBVV95cUxPNmpaWHNoNFZ3eEREMEFrMVNfWi1jV3RhNVZFcnd4LVZFSEhVM0J0U2ktMmZzbHE1ZGZvWEcwN01PTHJsRmc3T3lyQzBqeGNmU3hTc3pubVVfR1p5dENTSUI?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 06:20",
-      "snippet": "울산 석유화학 공사장서 40대 근로자 숨져…원인 조사 연합뉴스",
-      "score": 21,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"
     }
   ],

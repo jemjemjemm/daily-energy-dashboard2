@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-11",
-  "collected_at": "2026-05-27 15:07:17 KST",
+  "collected_at": "2026-05-27 22:10:31 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,12 +42,11 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
     "중동 정세와 원유·LNG 수급 리스크",
-    "물가 지표와 에너지 비용 부담",
-    "정부·국회 에너지 정책"
+    "물가 지표와 에너지 비용 부담"
   ],
   "articles": [
     {
@@ -70,6 +69,17 @@
       "snippet": "달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 매일경제 마켓",
       "score": 31,
       "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0wRGZCR3BKempiNUczQ24zMHhITUhCUW54YVhlUmlCU1F4ZEszYnppZWlwV1d4VUVqb3hobW90dGZsMzQyTEdfcXNjOVJnbWs?oc=5",
+      "published_date": "2026-05-10",
+      "published_at_kst": "2026-05-10 16:00",
+      "snippet": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 v.daum.net",
+      "score": 31,
+      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"
     },
     {
@@ -169,17 +179,6 @@
       "snippet": "석유 최고가격제 도입 두 달에도 6주연속 상승한 주유소 기름값 뉴스1",
       "score": 29,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "정부, 원유 수급·금융지원 상황 점검…\"석유수입기업 적극 지원\" - 머니투데이 - 머니투데이",
-      "press": "머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBNS1lfZWxRZ2lGN0NKUklodjZEYkhoZmV6Q01kbUVWbElmT0E5dlZpQXpzUGoyYUZBcVdyR1dyRTE4eVlXQlFXaFdmNmpkd3pKRW1FSlVfbFFubVNieUZXUF9sZXpQTEVseWdF0gFwQVVfeXFMT2Vaem5sd1JQOGZPblo1cnJIVXB5Q3dobVg3dkhxT0dWT0tWU1B2ZXdrd0VmUWJNME5NUlVGTTZhSWNWU2I3eVR1ZUlGUnJ6ZmlxeWJ5OW5ubzBhV2xMaXlkYjhXWmpWZ3RjcUZ1R2hTUw?oc=5",
-      "published_date": "2026-05-10",
-      "published_at_kst": "2026-05-10 16:00",
-      "snippet": "정부, 원유 수급·금융지원 상황 점검…\"석유수입기업 적극 지원\" - 머니투데이 머니투데이",
-      "score": 29,
-      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"
     }
   ],

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 22일 (금)",
     "previous_day_label": "5/21",
     "today_label": "5/22",
-    "generated_at": "2026-05-27 15:07 KST",
+    "generated_at": "2026-05-27 22:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1487,7 +1487,7 @@
     "trend_paragraphs": [
       "네이트는 5/21 16:36 입력 기사에서 중동發 유가 폭탄에 4월 생산자물가 'IMF 이후 최대'…정부, 유류세 인하 전격 연장 네이트.",
       "연합뉴스는 5/22 04:47 입력 기사에서 국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ 연합뉴스.",
-      "v.daum.net는 5/22 04:58 입력 기사에서 국제유가, 이란 협상 진전 기대에 하락 마감‥브렌트유 2.3%↓ v.daum.net."
+      "v.daum.net는 5/22 05:02 입력 기사에서 국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ v.daum.net."
     ],
     "articles": [
       {
@@ -1505,11 +1505,11 @@
         "published_at_kst": "2026-05-22 04:47"
       },
       {
-        "title": "국제유가, 이란 협상 진전 기대에 하락 마감‥브렌트유 2.3%↓ - v.daum.net",
+        "title": "국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ - v.daum.net",
         "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pNUlLaElpMXM5SFRtdGRCdDZWMk1INDVXNWEybTF4ZFU4QTNGREpGRElBaUlFdERYbWVQdE5POWZtejhXTnBwdEJwYWRQakxaM3lBOA?oc=5",
-        "summary": "국제유가, 이란 협상 진전 기대에 하락 마감‥브렌트유 2.3%↓ v.daum.net.",
-        "published_at_kst": "2026-05-22 04:58"
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hbHhtSmNCRExsaFlxa3FMdGwxN0UzTU5JQVJKTGktaGhHX1U2a1ktRllRdTZzeEEtNWxKZ1VnbkxqN2RrZXgzZjNmaEsyR2c?oc=5",
+        "summary": "국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ v.daum.net.",
+        "published_at_kst": "2026-05-22 05:02"
       }
     ],
     "source": "Google News RSS",
@@ -1630,7 +1630,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 15:07:59 KST",
+      "merged_at": "2026-05-27 22:11:11 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
