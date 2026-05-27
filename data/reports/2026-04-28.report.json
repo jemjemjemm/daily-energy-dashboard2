@@ -29,7 +29,7 @@
                    {
                        "category":  "주요일정",
                        "title":  "18회 국무회의 겸 6차 비상경제점검회의",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 산업 일정으로 분류",
+                       "description":  "청와대",
                        "grade":  "B 주시",
                        "location":  "청와대",
                        "links":  [
@@ -42,7 +42,7 @@
                    {
                        "category":  "주요일정",
                        "title":  "국무회의",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "description":  "청와대",
                        "grade":  "B 주시",
                        "location":  "청와대",
                        "links":  [
@@ -68,7 +68,7 @@
                    {
                        "category":  "주요일정",
                        "title":  "다이가 미에리냐 라트비아 국회의장 회담",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "description":  "국회접견실",
                        "grade":  "B 주시",
                        "location":  "국회접견실",
                        "links":  [

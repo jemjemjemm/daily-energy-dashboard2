@@ -169,26 +169,33 @@ def filter_relevant_items(items: List[Dict[str, str]], max_items: int) -> List[D
     return sort_schedule_items(filtered[:max_items])
 
 
-def split_title_location(title: str) -> Tuple[str, str]:
+def split_title_time_location(title: str) -> Tuple[str, str, str]:
     title = clean_title(title)
+    parsed_time = ""
     location = ""
     while True:
         match = re.search(r"\(([^()]*)\)\s*$", title)
         if not match:
             break
         inner = normalize_line(match.group(1))
+        inner_time_match = re.search(r"\b\d{1,2}[:：]\d{2}\b", inner)
+        if inner_time_match and not parsed_time:
+            parsed_time = inner_time_match.group(0).replace("：", ":")
         inner_location = re.sub(r"\b\d{1,2}[:：]\d{2}\b", "", inner).strip()
         inner_location = normalize_line(inner_location)
         if inner_location:
             location = inner_location if not location else f"{inner_location} · {location}"
         title = normalize_line(title[:match.start()])
+    leading_time = re.match(r"^\b\d{1,2}[:：]\d{2}\b", title)
+    if leading_time and not parsed_time:
+        parsed_time = leading_time.group(0).replace("：", ":")
     title = re.sub(r"^\b\d{1,2}[:：]\d{2}\b\s*", "", title).strip()
     # 일부 원문은 '10:00 참석자, 회의명' 형태로 들어온다.
     if "," in title:
         left, right = [part.strip() for part in title.split(",", 1)]
         if any(role in left for role in ["장관", "차관", "위원장", "의장", "지사", "시장", "대표", "원내대표"]) and right:
             title = right
-    return title or clean_title(title), location
+    return title or clean_title(title), parsed_time, location
 
 
 def issue_description(time: str, org: str, location: str) -> str:
@@ -208,7 +215,9 @@ def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[s
         org = item.get('org', '')
         raw_title = item.get('title', '')
         time = item.get('time', '')
-        title, location = split_title_location(raw_title)
+        title, parsed_time, location = split_title_time_location(raw_title)
+        if (not time or time == "시간미정") and parsed_time:
+            time = parsed_time
         combined = f"{org} {raw_title} {title}"
         if any(k in combined for k in ["석유", "정유", "주유소", "유가", "유류세", "석유화학"]):
             category = "에너지·산업"

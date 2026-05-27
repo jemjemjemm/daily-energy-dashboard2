@@ -214,6 +214,58 @@ def clean(v: Any) -> str:
     return re.sub(r"\s+", " ", "" if v is None else str(v)).strip()
 
 
+def split_issue_title_time_location(title: str) -> tuple[str, str, str]:
+    title = clean(title)
+    parsed_time = ""
+    location = ""
+    while True:
+        match = re.search(r"\(([^()]*)\)\s*$", title)
+        if not match:
+            break
+        inner = clean(match.group(1))
+        inner_time_match = re.search(r"\b\d{1,2}[:：]\d{2}\b", inner)
+        if inner_time_match and not parsed_time:
+            parsed_time = inner_time_match.group(0).replace("：", ":")
+        inner_location = clean(re.sub(r"\b\d{1,2}[:：]\d{2}\b", "", inner))
+        if inner_location:
+            location = inner_location if not location else f"{inner_location} · {location}"
+        title = clean(title[:match.start()])
+
+    leading_time = re.match(r"^\b\d{1,2}[:：]\d{2}\b", title)
+    if leading_time and not parsed_time:
+        parsed_time = leading_time.group(0).replace("：", ":")
+    title = re.sub(r"^\b\d{1,2}[:：]\d{2}\b\s*", "", title).strip()
+    return title, parsed_time, location
+
+
+def normalize_issue_fields(issue: Dict[str, Any]) -> None:
+    raw_title = clean(issue.get("title") or issue.get("name") or "")
+    title, parsed_time, parsed_location = split_issue_title_time_location(raw_title)
+    if title:
+        issue["title"] = title
+    if parsed_time and clean(issue.get("time")) in {"", "시간미정", "-"}:
+        issue["time"] = parsed_time
+    if parsed_location and not clean(issue.get("location")):
+        issue["location"] = parsed_location
+
+    parts = []
+    time_text = clean(issue.get("time"))
+    org = clean(issue.get("org") or issue.get("organization") or issue.get("agency"))
+    location = clean(issue.get("location"))
+    if time_text and time_text not in {"시간미정", "-"}:
+        parts.append(time_text)
+    if org:
+        parts.append(org)
+    if location:
+        parts.append(location)
+    if parts:
+        issue["description"] = " · ".join(parts)
+
+    links = issue.get("links")
+    if not isinstance(links, list) or not links:
+        issue["links"] = [{"label": "관련 기사 없음", "url": ""}]
+
+
 def strip_article_source_suffix(text: str, press: str = "") -> str:
     text = clean(text)
     press = clean(press)
@@ -438,20 +490,22 @@ def main() -> int:
         return re.sub(r"[\s\W_]+", "", t, flags=re.U).lower()
 
     related_default = {"label": "관련 기사 없음", "url": ""}
+    target_date = a.date
     issue_list = report.get("issues", []) if isinstance(report.get("issues"), list) else []
     for issue in issue_list:
         try:
+            normalize_issue_fields(issue)
             it_title = clean(issue.get("title") or issue.get("name") or "")
             it_n = _norm_for_compare(it_title)
             candidates = []
-            for a in articles:
-                a_title = clean(a.get("title") or "")
-                a_url = clean(a.get("url") or "")
+            for article in articles:
+                a_title = clean(article.get("title") or "")
+                a_url = clean(article.get("url") or "")
                 if not a_url:
                     continue
                 a_n = _norm_for_compare(a_title)
                 if (it_n and a_n and (a_n in it_n or it_n in a_n)) or (a_title and it_title and (a_title in it_title or it_title in a_title)) or (a_n and it_n and a_n[:16] == it_n[:16]):
-                    candidates.append(a)
+                    candidates.append(article)
             chosen = None
             # 국회 회의는 의회 영상 회의록 링크 우선 탐색
             for c in candidates:
@@ -471,7 +525,7 @@ def main() -> int:
                     assembly_link = cached or None
                 else:
                     # search_assembly_for_title은 네트워크 호출을 수행할 수 있음
-                    assembly_link = search_assembly_for_title(it_title, a.date)
+                    assembly_link = search_assembly_for_title(it_title, target_date)
                     # rate limit: 사이트 부담을 줄이기 위해 소량 sleep
                     time.sleep(0.4)
                     _assembly_cache[key] = assembly_link or ""
@@ -491,6 +545,7 @@ def main() -> int:
                     issue["links"] = [related_default]
         except Exception:
             issue.setdefault("links", [related_default])
+        normalize_issue_fields(issue)
     atomic_write_json(report_path, report)
     # 캐시 저장(있으면)
     try:

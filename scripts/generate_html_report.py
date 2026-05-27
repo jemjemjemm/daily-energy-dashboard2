@@ -450,31 +450,52 @@ def normalize_issue_compare(text: str) -> str:
     return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
 
 
-def split_issue_title_location(title: str) -> tuple[str, str]:
+def split_issue_title_time_location(title: str) -> tuple[str, str, str]:
     title = clean_text(title)
+    parsed_time = ""
     location = ""
     while True:
         match = re.search(r"\(([^()]*)\)\s*$", title)
         if not match:
             break
         inner = clean_text(match.group(1))
+        inner_time_match = re.search(r"\b\d{1,2}[:：]\d{2}\b", inner)
+        if inner_time_match and not parsed_time:
+            parsed_time = inner_time_match.group(0).replace("：", ":")
         inner_location = clean_text(re.sub(r"\b\d{1,2}[:：]\d{2}\b", "", inner))
         if inner_location:
             location = inner_location if not location else f"{inner_location} · {location}"
         title = clean_text(title[:match.start()])
+    leading_time = re.match(r"^\b\d{1,2}[:：]\d{2}\b", title)
+    if leading_time and not parsed_time:
+        parsed_time = leading_time.group(0).replace("：", ":")
     title = re.sub(r"^\b\d{1,2}[:：]\d{2}\b\s*", "", title).strip()
     if "," in title:
         left, right = [part.strip() for part in title.split(",", 1)]
         if any(role in left for role in ["장관", "차관", "위원장", "의장", "지사", "시장", "대표", "원내대표"]) and right:
             title = right
-    return title, location
+    return title, parsed_time, location
 
 
-def issue_desc_for_display(item: Mapping[str, Any], display_title: str, location: str) -> str:
+def issue_desc_for_display(item: Mapping[str, Any], display_title: str, parsed_time: str, location: str) -> str:
     raw_desc = clean_text(item.get("description") or item.get("desc") or item.get("summary") or item.get("impact") or "")
-    time = clean_text(item.get("time") or item.get("start_time") or "")
+    time = clean_text(item.get("time") or item.get("start_time") or parsed_time)
     org = clean_text(item.get("org") or item.get("organization") or item.get("agency") or "")
     item_location = clean_text(item.get("location") or location)
+
+    desc_parts = []
+    if time and time != "시간미정":
+        desc_parts.append(time)
+    if org:
+        desc_parts.append(org)
+    if item_location:
+        desc_parts.append(item_location)
+    canonical_desc = " · ".join(desc_parts)
+
+    # Section 5 is schedule-derived: render the meta line from normalized
+    # fields, so legacy description text cannot repeat the title or omit place.
+    if canonical_desc:
+        return canonical_desc
 
     if raw_desc:
         # 방어 로직: 설명에 제목(또는 괄호 포함 제목)이 그대로 포함된 경우 제거
@@ -533,9 +554,9 @@ def render_issues(data: Mapping[str, Any]) -> str:
             continue
         tag = clean_text(item.get("tag") or item.get("category") or "동향")
         raw_title = clean_text(item.get("title") or item.get("name") or "주요 동향")
-        title, location = split_issue_title_location(raw_title)
+        title, parsed_time, location = split_issue_title_time_location(raw_title)
         title = title or raw_title
-        desc = issue_desc_for_display(item, title, location)
+        desc = issue_desc_for_display(item, title, parsed_time, location)
         links = normalize_links(item)
         link_html = ""
         if links:

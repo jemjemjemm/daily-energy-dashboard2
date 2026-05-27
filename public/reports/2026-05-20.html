@@ -1,300 +1,214 @@
-﻿<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="format-detection" content="telephone=no">
-<title>Daily Issue Report</title>
-<style>
-  :root { --bg:#F4F5F7; --card:#fff; --ink:#1A1A1A; --muted:#666; --line:#E5E7EB; --navy:#0A2444; --blue:#1A6FD4; --red:#C0392B; --green:#0A7B4E; }
-  * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
-  body { margin:0; padding:14px; padding-left:max(14px, env(safe-area-inset-left)); padding-right:max(14px, env(safe-area-inset-right)); background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif; font-size:14px; line-height:1.62; word-break:keep-all; overflow-wrap:anywhere; }
-  a { color:inherit; }
-  .container { max-width:480px; margin:0 auto; }
-  .header { background:var(--navy); color:#fff; border-radius:14px; padding:18px 16px; }
-  .header-top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
-  .header-title { font-size:20px; font-weight:800; letter-spacing:-.3px; }
-  .header-date { font-size:12px; color:rgba(255,255,255,.7); margin-top:2px; }
-  .badge { flex-shrink:0; border-radius:999px; background:rgba(255,255,255,.12); padding:4px 10px; font-size:11px; }
-  .meta { margin-top:10px; display:grid; grid-template-columns:1fr 1fr; gap:6px 10px; color:rgba(255,255,255,.78); font-size:11px; }
-  .notice { background:#FFF7E6; border:1px solid #F5D08A; color:#5F4300; border-radius:12px; padding:11px 13px; margin:10px 0; font-size:12px; }
-  .section { background:#fff; border:1px solid var(--line); border-radius:14px; margin:10px 0; overflow:hidden; }
-  .section-head { display:flex; align-items:center; gap:8px; padding:11px 16px; background:#F8F9FA; border-bottom:1px solid var(--line); }
-  .num { background:var(--navy); color:#fff; border-radius:4px; font-size:11px; font-weight:800; min-width:24px; text-align:center; padding:2px 7px; }
-  .section-title { font-size:14px; font-weight:800; }
-  .body { padding:14px 16px; }
-  .summary-item { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid #F0F0F0; font-size:13px; }
-  .summary-item:last-child { border-bottom:0; }
-  .dot { flex-shrink:0; width:6px; height:6px; border-radius:50%; background:var(--blue); margin-top:8px; }
-  .price-label-title { padding:12px 16px 6px; font-size:12px; color:var(--muted); }
-  .price-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; padding:0 16px 14px; }
-  .price-card { background:#F8F9FA; border-radius:10px; text-align:center; padding:10px 6px; }
-  .price-label { font-size:11px; color:#666; }
-  .price-value { font-size:18px; font-weight:800; line-height:1.1; margin-top:2px; }
-  .price-unit { font-size:10px; color:#999; }
-  .price-change { font-size:11px; margin-top:2px; }
-  .up { color:var(--red); } .down { color:var(--green); } .flat { color:#888; }
-  .note { padding:0 16px 12px; font-size:11px; color:#999; }
-  .chart-wrap { padding:12px 10px 14px; }
-  .legend { display:flex; flex-wrap:wrap; gap:10px; padding:0 6px 8px; font-size:12px; color:#666; }
-  .legend-item { display:inline-flex; align-items:center; gap:5px; }
-  .legend-dot { width:12px; height:3px; border-radius:2px; display:inline-block; }
-  .chart-svg { width:100%; height:auto; display:block; }
-  .hover-band { cursor:crosshair; pointer-events:all; }
-  .chart-tooltip { position:fixed; z-index:9999; pointer-events:none; background:rgba(10,36,68,.94); color:#fff; border-radius:8px; padding:7px 9px; font-size:11px; line-height:1.45; box-shadow:0 6px 18px rgba(0,0,0,.18); transform:translate(10px, -30px); white-space:nowrap; max-width:260px; }
-  .chart-tooltip.hidden { display:none; }
-  .issue-card { background:#F8F9FA; border-left:3px solid var(--blue); border-radius:10px; padding:12px 14px; margin-bottom:8px; }
-  .issue-tag { display:inline-block; font-size:10px; font-weight:800; color:#185FA5; background:#E6F1FB; border-radius:3px; padding:2px 6px; margin-bottom:6px; }
-  .issue-title { font-size:13px; font-weight:800; margin-bottom:4px; }
-  .issue-desc { font-size:12px; color:#444; }
-  .issue-links { margin-top:8px; display:flex; flex-direction:column; gap:4px; font-size:11px; }
-  .issue-links a { color:var(--navy); text-decoration:underline; }
-  .issue-links span { color:#777; }
-  .schedule-row { display:flex; gap:8px; padding:9px 0; border-bottom:1px solid #F0F0F0; }
-  .schedule-row:last-child { border-bottom:0; }
-  .schedule-time { min-width:40px; color:#185FA5; font-size:11px; font-weight:800; }
-  .schedule-org { min-width:44px; height:max-content; background:#F0F1F3; border:1px solid #E0E0E0; border-radius:4px; padding:1px 6px; font-size:10px; text-align:center; color:#555; }
-  .schedule-main { flex:1; min-width:0; font-size:12px; }
-  .schedule-rel { color:#777; font-size:11px; margin-top:2px; }
-  .news-summary { font-size:13px; line-height:1.85; margin-bottom:14px; }
-  .news-trend-para { font-size:13px; line-height:1.85; margin:14px 0; }
-  .section-divider { height:1px; background:#F0F0F0; margin:12px 0; }
-  .small-title { color:#999; font-size:11px; font-weight:800; margin-bottom:8px; }
-  .news-item { display:block; padding:9px 0; border-bottom:1px solid #F0F0F0; }
-  .news-num { display:none; }
-  .news-title { font-size:13px; font-weight:700; text-decoration:underline; text-underline-offset:2px; }
-  .news-press { color:#888; font-size:11px; margin-top:2px; }
-  .news-desc { color:#555; font-size:11px; line-height:1.55; margin-top:3px; }
-  .news-url { color:#999; font-size:10px; line-height:1.4; margin-top:3px; word-break:break-all; }
-  .quality-list { margin:0; padding-left:18px; font-size:12px; color:#555; }
-  .quality-list li { margin:5px 0; }
-  .empty { background:#F8F9FA; border-radius:10px; padding:12px; color:#777; font-size:12px; }
-  .footer { text-align:center; color:#aaa; font-size:11px; padding:14px; }
-  @media(max-width:430px) { body { padding:10px; } .header-title { font-size:19px; } .price-grid { gap:6px; padding-left:12px; padding-right:12px; } .price-value { font-size:17px; } .meta { grid-template-columns:1fr; } }
-</style></head><body><div class="container">
-<header class="header"><div class="header-top"><div>
-<div class="header-title">Daily Issue Report</div>
-<div class="header-date">2026년 5월 20일 (수)</div>
-</div><div class="badge">정유 · 석유화학 · LNG</div></div>
-</header>
-<div class="notice">본 보고서는 AI 자동 생성 초안. 내용 정확성 확인 후 활용 필요. 확인된 사실 중심 기재, 확인 불가 항목은 “확인 필요”로 표시.</div>
-<section class="section"><div class="section-head"><span class="num">1</span><span class="section-title">Summary</span></div><div class="body"><div class="summary-item"><span class="dot"></span><div>주요 이해관계자 동향: 5/19 기준 08:00 중동전쟁 대응 보건의약단체 회의(서울), 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 10:00 공급망기금 상생협약식.</div></div>
-<div class="summary-item"><span class="dot"></span><div>금일 주요 일정: 08:00 에너지 DX·AX 전략 TF 4차 회의(서울), 10:00 산중위 법안소위(국회), 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 13:30 기후부 2030 청년세대 통합 발대식(서울).</div></div>
-<div class="summary-item"><span class="dot"></span><div>조간 보도: 주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.</div></div></div></section>
-<section class="section"><div class="section-head"><span class="num">2</span><span class="section-title">유가 동향</span></div>
-<div class="price-label-title">최신 유가 정보 ($/Bbl) — 5/19 기준</div>
-<div class="price-grid"><div class="price-card"><div class="price-label">Brent</div><div class="price-value">111.28</div><div class="price-unit">$/Bbl</div><div class="price-change down">▼ 0.82</div></div>
-<div class="price-card"><div class="price-label">WTI</div><div class="price-value">107.77</div><div class="price-unit">$/Bbl</div><div class="price-change down">▼ 0.89</div></div>
-<div class="price-card"><div class="price-label">Dubai</div><div class="price-value">106.80</div><div class="price-unit">$/Bbl</div><div class="price-change down">▼ 1.09</div></div></div>
-<div class="price-label-title">최신 석유제품 가격 정보 ($/Bbl) — 5/19 기준</div>
-<div class="price-grid"><div class="price-card"><div class="price-label">휘발유</div><div class="price-value">137.87</div><div class="price-unit">$/Bbl</div><div class="price-change down">▼ 0.73</div></div>
-<div class="price-card"><div class="price-label">경유</div><div class="price-value">166.59</div><div class="price-unit">$/Bbl</div><div class="price-change up">▲ 1.57</div></div>
-<div class="price-card"><div class="price-label">나프타</div><div class="price-value">111.05</div><div class="price-unit">$/Bbl</div><div class="price-change down">▼ 0.77</div></div></div>
-<div class="note">※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.</div></section>
-<section class="section"><div class="section-head"><span class="num">3</span><span class="section-title">원유 가격 추이 그래프 (3/19~5/19)</span></div><div class="body"><div class="chart-wrap"><div class="legend"><span class="legend-item"><span class="legend-dot" style="background:#1A6FD4"></span>Brent</span><span class="legend-item"><span class="legend-dot" style="background:#E24B4A"></span>WTI</span><span class="legend-item"><span class="legend-dot" style="background:#1D9E75"></span>Dubai</span></div><svg class="chart-svg" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
-<line x1="40" y1="188.0" x2="430" y2="188.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="191.0" text-anchor="end" font-size="9" fill="#888">73.5</text>
-<line x1="40" y1="144.5" x2="430" y2="144.5" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="147.5" text-anchor="end" font-size="9" fill="#888">100.2</text>
-<line x1="40" y1="101.0" x2="430" y2="101.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="104.0" text-anchor="end" font-size="9" fill="#888">126.8</text>
-<line x1="40" y1="57.5" x2="430" y2="57.5" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="60.5" text-anchor="end" font-size="9" fill="#888">153.4</text>
-<line x1="40" y1="14.0" x2="430" y2="14.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="17.0" text-anchor="end" font-size="9" fill="#888">180.1</text>
-<text x="40.0" y="210" text-anchor="middle" font-size="9" fill="#888">3/19</text>
-<text x="105.0" y="210" text-anchor="middle" font-size="9" fill="#888">3/30</text>
-<text x="170.0" y="210" text-anchor="middle" font-size="9" fill="#888">4/9</text>
-<text x="235.0" y="210" text-anchor="middle" font-size="9" fill="#888">4/20</text>
-<text x="300.0" y="210" text-anchor="middle" font-size="9" fill="#888">4/29</text>
-<text x="365.0" y="210" text-anchor="middle" font-size="9" fill="#888">5/8</text>
-<text x="430.0" y="210" text-anchor="middle" font-size="9" fill="#888">5/19</text>
-<polyline fill="none" stroke="#1A6FD4" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,130.6 49.3,124.9 58.6,144.9 67.9,137.4 77.1,141.2 86.4,131.7 95.7,124.2 105.0,123.9 114.3,114.8 123.6,142.9 132.9,130.0 142.1,128.8 151.4,129.6 160.7,153.4 170.0,151.4 179.3,152.6 188.6,145.8 197.9,153.3 207.1,153.1 216.4,145.8 225.7,160.5 235.0,152.2 244.3,147.3 253.6,141.7 262.9,136.5 272.1,136.1 281.4,131.3 290.7,126.4 300.0,115.3 309.3,121.9 318.6,131.4 327.9,121.2 337.1,128.7 346.4,142.7 355.7,144.7 365.0,142.7 374.3,137.9 383.6,132.1 392.9,135.6 402.1,135.4 411.4,129.7 420.7,125.0 430.0,126.4" />
-<polyline fill="none" stroke="#E24B4A" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,151.1 49.3,147.5 58.6,164.2 67.9,157.3 77.1,160.6 86.4,153.8 95.7,145.4 105.0,140.1 114.3,142.5 123.6,144.6 132.9,125.9 142.1,124.5 151.4,123.6 160.7,153.9 170.0,148.3 179.3,150.4 188.6,146.3 197.9,159.0 207.1,159.0 216.4,153.5 225.7,171.2 235.0,161.8 244.3,157.6 253.6,156.3 262.9,151.6 272.1,153.9 281.4,150.7 290.7,144.9 300.0,133.5 309.3,136.5 318.6,141.6 327.9,134.3 337.1,141.1 346.4,152.8 355.7,153.3 365.0,152.3 374.3,147.9 383.6,141.2 392.9,143.1 402.1,142.9 411.4,135.9 420.7,130.6 430.0,132.1" />
-<polyline fill="none" stroke="#1D9E75" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,35.7 49.3,48.6 58.6,30.8 67.9,51.6 77.1,75.3 86.4,123.5 95.7,108.6 105.0,103.5 114.3,110.3 123.6,130.2 132.9,120.9 142.1,111.8 151.4,109.1 160.7,142.8 170.0,141.5 179.3,143.4 188.6,134.2 197.9,139.6 207.1,143.0 216.4,141.8 225.7,141.2 235.0,147.2 244.3,154.1 253.6,144.1 262.9,136.9 272.1,133.0 281.4,137.9 290.7,133.0 300.0,134.2 309.3,124.8 327.9,140.1 337.1,134.0 346.4,138.8 355.7,148.7 365.0,149.0 374.3,143.0 383.6,136.8 392.9,136.8 402.1,135.8 411.4,132.9 420.7,131.9 430.0,133.7" />
-<rect x="40.0" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-19 | Brent: 108.65 $/Bbl | WTI: 96.14 $/Bbl | Dubai: 166.80 $/Bbl" />
-<rect x="44.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-20 | Brent: 112.19 $/Bbl | WTI: 98.32 $/Bbl | Dubai: 158.85 $/Bbl" />
-<rect x="53.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-23 | Brent: 99.94 $/Bbl | WTI: 88.13 $/Bbl | Dubai: 169.75 $/Bbl" />
-<rect x="63.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-24 | Brent: 104.49 $/Bbl | WTI: 92.35 $/Bbl | Dubai: 157.03 $/Bbl" />
-<rect x="72.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-25 | Brent: 102.22 $/Bbl | WTI: 90.32 $/Bbl | Dubai: 142.55 $/Bbl" />
-<rect x="81.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-26 | Brent: 108.01 $/Bbl | WTI: 94.48 $/Bbl | Dubai: 113.04 $/Bbl" />
-<rect x="91.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-27 | Brent: 112.57 $/Bbl | WTI: 99.64 $/Bbl | Dubai: 122.14 $/Bbl" />
-<rect x="100.4" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-30 | Brent: 112.78 $/Bbl | WTI: 102.88 $/Bbl | Dubai: 125.29 $/Bbl" />
-<rect x="109.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-31 | Brent: 118.35 $/Bbl | WTI: 101.38 $/Bbl | Dubai: 121.10 $/Bbl" />
-<rect x="118.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-01 | Brent: 101.16 $/Bbl | WTI: 100.12 $/Bbl | Dubai: 108.90 $/Bbl" />
-<rect x="128.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-02 | Brent: 109.03 $/Bbl | WTI: 111.54 $/Bbl | Dubai: 114.60 $/Bbl" />
-<rect x="137.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-06 | Brent: 109.77 $/Bbl | WTI: 112.41 $/Bbl | Dubai: 120.20 $/Bbl" />
-<rect x="146.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-07 | Brent: 109.27 $/Bbl | WTI: 112.95 $/Bbl | Dubai: 121.86 $/Bbl" />
-<rect x="156.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-08 | Brent: 94.75 $/Bbl | WTI: 94.41 $/Bbl | Dubai: 101.20 $/Bbl" />
-<rect x="165.4" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-09 | Brent: 95.92 $/Bbl | WTI: 97.87 $/Bbl | Dubai: 102.00 $/Bbl" />
-<rect x="174.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-10 | Brent: 95.20 $/Bbl | WTI: 96.57 $/Bbl | Dubai: 100.87 $/Bbl" />
-<rect x="183.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-13 | Brent: 99.36 $/Bbl | WTI: 99.08 $/Bbl | Dubai: 106.50 $/Bbl" />
-<rect x="193.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-14 | Brent: 94.79 $/Bbl | WTI: 91.28 $/Bbl | Dubai: 103.18 $/Bbl" />
-<rect x="202.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-15 | Brent: 94.93 $/Bbl | WTI: 91.29 $/Bbl | Dubai: 101.09 $/Bbl" />
-<rect x="211.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-16 | Brent: 99.39 $/Bbl | WTI: 94.69 $/Bbl | Dubai: 101.80 $/Bbl" />
-<rect x="221.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-17 | Brent: 90.38 $/Bbl | WTI: 83.85 $/Bbl | Dubai: 102.20 $/Bbl" />
-<rect x="230.4" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-20 | Brent: 95.48 $/Bbl | WTI: 89.61 $/Bbl | Dubai: 98.50 $/Bbl" />
-<rect x="239.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-21 | Brent: 98.48 $/Bbl | WTI: 92.13 $/Bbl | Dubai: 94.27 $/Bbl" />
-<rect x="248.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-22 | Brent: 101.91 $/Bbl | WTI: 92.96 $/Bbl | Dubai: 100.40 $/Bbl" />
-<rect x="258.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-23 | Brent: 105.07 $/Bbl | WTI: 95.85 $/Bbl | Dubai: 104.81 $/Bbl" />
-<rect x="267.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-24 | Brent: 105.33 $/Bbl | WTI: 94.40 $/Bbl | Dubai: 107.20 $/Bbl" />
-<rect x="276.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-27 | Brent: 108.23 $/Bbl | WTI: 96.37 $/Bbl | Dubai: 104.20 $/Bbl" />
-<rect x="286.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-28 | Brent: 111.26 $/Bbl | WTI: 99.93 $/Bbl | Dubai: 107.20 $/Bbl" />
-<rect x="295.4" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-29 | Brent: 118.03 $/Bbl | WTI: 106.88 $/Bbl | Dubai: 106.49 $/Bbl" />
-<rect x="304.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-30 | Brent: 114.01 $/Bbl | WTI: 105.07 $/Bbl | Dubai: 112.20 $/Bbl" />
-<rect x="313.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-01 | Brent: 108.17 $/Bbl | WTI: 101.94 $/Bbl" />
-<rect x="323.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-04 | Brent: 114.44 $/Bbl | WTI: 106.42 $/Bbl | Dubai: 102.84 $/Bbl" />
-<rect x="332.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-05 | Brent: 109.87 $/Bbl | WTI: 102.27 $/Bbl | Dubai: 106.60 $/Bbl" />
-<rect x="341.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-06 | Brent: 101.27 $/Bbl | WTI: 95.08 $/Bbl | Dubai: 103.69 $/Bbl" />
-<rect x="351.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-07 | Brent: 100.06 $/Bbl | WTI: 94.81 $/Bbl | Dubai: 97.59 $/Bbl" />
-<rect x="360.4" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-08 | Brent: 101.29 $/Bbl | WTI: 95.42 $/Bbl | Dubai: 97.39 $/Bbl" />
-<rect x="369.6" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-11 | Brent: 104.21 $/Bbl | WTI: 98.07 $/Bbl | Dubai: 101.11 $/Bbl" />
-<rect x="378.9" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-12 | Brent: 107.77 $/Bbl | WTI: 102.18 $/Bbl | Dubai: 104.90 $/Bbl" />
-<rect x="388.2" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-13 | Brent: 105.63 $/Bbl | WTI: 101.02 $/Bbl | Dubai: 104.90 $/Bbl" />
-<rect x="397.5" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-14 | Brent: 105.72 $/Bbl | WTI: 101.17 $/Bbl | Dubai: 105.50 $/Bbl" />
-<rect x="406.8" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-15 | Brent: 109.26 $/Bbl | WTI: 105.42 $/Bbl | Dubai: 107.30 $/Bbl" />
-<rect x="416.1" y="14" width="9.3" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-18 | Brent: 112.10 $/Bbl | WTI: 108.66 $/Bbl | Dubai: 107.89 $/Bbl" />
-<rect x="425.4" y="14" width="4.6" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-19 | Brent: 111.28 $/Bbl | WTI: 107.77 $/Bbl | Dubai: 106.80 $/Bbl" />
-</svg></div></div></section>
-<section class="section"><div class="section-head"><span class="num">4</span><span class="section-title">석유제품 가격 추이 그래프 (3/19~5/19)</span></div><div class="body"><div class="chart-wrap"><div class="legend"><span class="legend-item"><span class="legend-dot" style="background:#1A6FD4"></span>Gasoline</span><span class="legend-item"><span class="legend-dot" style="background:#E24B4A"></span>Diesel</span><span class="legend-item"><span class="legend-dot" style="background:#1D9E75"></span>Naphtha</span></div><svg class="chart-svg" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
-<line x1="40" y1="188.0" x2="430" y2="188.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="191.0" text-anchor="end" font-size="9" fill="#888">79.1</text>
-<line x1="40" y1="144.5" x2="430" y2="144.5" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="147.5" text-anchor="end" font-size="9" fill="#888">138.2</text>
-<line x1="40" y1="101.0" x2="430" y2="101.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="104.0" text-anchor="end" font-size="9" fill="#888">197.4</text>
-<line x1="40" y1="57.5" x2="430" y2="57.5" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="60.5" text-anchor="end" font-size="9" fill="#888">256.5</text>
-<line x1="40" y1="14.0" x2="430" y2="14.0" stroke="rgba(0,0,0,.09)" />
-<text x="34" y="17.0" text-anchor="end" font-size="9" fill="#888">315.7</text>
-<text x="40.0" y="210" text-anchor="middle" font-size="9" fill="#888">3/19</text>
-<text x="106.6" y="210" text-anchor="middle" font-size="9" fill="#888">3/30</text>
-<text x="173.2" y="210" text-anchor="middle" font-size="9" fill="#888">4/9</text>
-<text x="239.8" y="210" text-anchor="middle" font-size="9" fill="#888">4/20</text>
-<text x="306.3" y="210" text-anchor="middle" font-size="9" fill="#888">4/29</text>
-<text x="372.9" y="210" text-anchor="middle" font-size="9" fill="#888">5/11</text>
-<text x="430.0" y="210" text-anchor="middle" font-size="9" fill="#888">5/19</text>
-<polyline fill="none" stroke="#1A6FD4" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,134.4 49.5,135.4 59.0,130.5 68.5,141.9 78.0,149.8 87.6,152.4 97.1,150.2 106.6,143.5 116.1,144.3 125.6,146.1 135.1,139.9 144.6,141.8 154.1,144.5 163.7,158.3 173.2,149.8 182.7,151.9 192.2,151.7 201.7,155.1 211.2,158.6 220.7,157.3 230.2,156.3 239.8,158.9 249.3,159.2 258.8,154.8 268.3,153.6 277.8,154.5 287.3,152.0 296.8,153.1 306.3,150.7 315.9,147.4 325.4,149.9 334.9,145.7 344.4,148.1 353.9,153.4 363.4,155.7 372.9,152.4 382.4,148.8 392.0,147.1 401.5,147.0 411.0,146.4 420.5,144.2 430.0,144.8" />
-<polyline fill="none" stroke="#E24B4A" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,81.1 49.5,82.2 59.0,67.5 68.5,84.4 78.0,95.0 87.6,86.9 97.1,71.3 106.6,60.7 116.1,70.5 125.6,65.3 135.1,30.8 144.6,45.7 154.1,58.4 163.7,100.3 173.2,91.0 182.7,91.6 192.2,96.7 201.7,105.2 211.2,118.7 220.7,119.5 230.2,120.9 239.8,132.1 249.3,133.8 258.8,123.2 268.3,120.2 277.8,119.0 287.3,118.2 296.8,123.1 306.3,121.5 315.9,114.8 325.4,128.0 334.9,127.8 344.4,130.7 353.9,136.4 363.4,133.3 372.9,131.9 382.4,128.3 392.0,124.5 401.5,127.1 411.0,125.9 420.5,124.8 430.0,123.6" />
-<polyline fill="none" stroke="#1D9E75" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" points="40.0,144.9 49.5,147.6 59.0,144.1 68.5,152.4 78.0,159.7 87.6,151.2 97.1,147.8 106.6,142.1 116.1,141.9 125.6,145.6 135.1,142.3 144.6,145.3 154.1,145.2 163.7,159.0 173.2,154.9 182.7,155.6 192.2,153.5 201.7,156.7 211.2,160.7 220.7,160.9 230.2,161.1 239.8,168.2 249.3,169.7 258.8,164.8 268.3,161.7 277.8,159.2 287.3,158.1 296.8,159.4 306.3,157.7 315.9,151.6 325.4,159.7 334.9,159.5 344.4,166.2 353.9,171.2 363.4,170.8 372.9,165.6 382.4,162.6 392.0,162.4 401.5,162.3 411.0,162.5 420.5,163.9 430.0,164.5" />
-<rect x="40.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-19 | Gasoline: 151.92 $/Bbl | Diesel: 224.49 $/Bbl | Naphtha: 137.72 $/Bbl" />
-<rect x="44.8" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-20 | Gasoline: 150.60 $/Bbl | Diesel: 222.99 $/Bbl | Naphtha: 133.97 $/Bbl" />
-<rect x="54.3" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-23 | Gasoline: 157.22 $/Bbl | Diesel: 242.89 $/Bbl | Naphtha: 138.75 $/Bbl" />
-<rect x="63.8" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-24 | Gasoline: 141.76 $/Bbl | Diesel: 219.90 $/Bbl | Naphtha: 127.52 $/Bbl" />
-<rect x="73.3" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-25 | Gasoline: 131.00 $/Bbl | Diesel: 205.54 $/Bbl | Naphtha: 117.62 $/Bbl" />
-<rect x="82.8" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-26 | Gasoline: 127.48 $/Bbl | Diesel: 216.56 $/Bbl | Naphtha: 129.12 $/Bbl" />
-<rect x="92.3" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-27 | Gasoline: 130.51 $/Bbl | Diesel: 237.83 $/Bbl | Naphtha: 133.74 $/Bbl" />
-<rect x="101.8" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-30 | Gasoline: 139.65 $/Bbl | Diesel: 252.14 $/Bbl | Naphtha: 141.53 $/Bbl" />
-<rect x="111.3" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-03-31 | Gasoline: 138.45 $/Bbl | Diesel: 238.88 $/Bbl | Naphtha: 141.72 $/Bbl" />
-<rect x="120.9" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-01 | Gasoline: 136.03 $/Bbl | Diesel: 245.99 $/Bbl | Naphtha: 136.69 $/Bbl" />
-<rect x="130.4" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-02 | Gasoline: 144.48 $/Bbl | Diesel: 292.80 $/Bbl | Naphtha: 141.26 $/Bbl" />
-<rect x="139.9" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-06 | Gasoline: 141.88 $/Bbl | Diesel: 272.65 $/Bbl | Naphtha: 137.08 $/Bbl" />
-<rect x="149.4" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-07 | Gasoline: 138.22 $/Bbl | Diesel: 255.33 $/Bbl | Naphtha: 137.24 $/Bbl" />
-<rect x="158.9" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-08 | Gasoline: 119.48 $/Bbl | Diesel: 198.37 $/Bbl | Naphtha: 118.46 $/Bbl" />
-<rect x="168.4" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-09 | Gasoline: 130.98 $/Bbl | Diesel: 210.99 $/Bbl | Naphtha: 124.14 $/Bbl" />
-<rect x="177.9" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-10 | Gasoline: 128.19 $/Bbl | Diesel: 210.13 $/Bbl | Naphtha: 123.14 $/Bbl" />
-<rect x="187.4" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-13 | Gasoline: 128.48 $/Bbl | Diesel: 203.21 $/Bbl | Naphtha: 126.04 $/Bbl" />
-<rect x="197.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-14 | Gasoline: 123.87 $/Bbl | Diesel: 191.74 $/Bbl | Naphtha: 121.59 $/Bbl" />
-<rect x="206.5" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-15 | Gasoline: 119.00 $/Bbl | Diesel: 173.32 $/Bbl | Naphtha: 116.14 $/Bbl" />
-<rect x="216.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-16 | Gasoline: 120.86 $/Bbl | Diesel: 172.23 $/Bbl | Naphtha: 115.88 $/Bbl" />
-<rect x="225.5" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-17 | Gasoline: 122.19 $/Bbl | Diesel: 170.31 $/Bbl | Naphtha: 115.60 $/Bbl" />
-<rect x="235.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-20 | Gasoline: 118.68 $/Bbl | Diesel: 155.07 $/Bbl | Naphtha: 106.04 $/Bbl" />
-<rect x="244.5" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-21 | Gasoline: 118.21 $/Bbl | Diesel: 152.84 $/Bbl | Naphtha: 103.99 $/Bbl" />
-<rect x="254.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-22 | Gasoline: 124.25 $/Bbl | Diesel: 167.20 $/Bbl | Naphtha: 110.61 $/Bbl" />
-<rect x="263.5" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-23 | Gasoline: 125.92 $/Bbl | Diesel: 171.26 $/Bbl | Naphtha: 114.90 $/Bbl" />
-<rect x="273.0" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-24 | Gasoline: 124.68 $/Bbl | Diesel: 172.84 $/Bbl | Naphtha: 118.30 $/Bbl" />
-<rect x="282.6" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-27 | Gasoline: 128.04 $/Bbl | Diesel: 174.04 $/Bbl | Naphtha: 119.67 $/Bbl" />
-<rect x="292.1" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-28 | Gasoline: 126.52 $/Bbl | Diesel: 167.38 $/Bbl | Naphtha: 117.94 $/Bbl" />
-<rect x="301.6" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-29 | Gasoline: 129.83 $/Bbl | Diesel: 169.49 $/Bbl | Naphtha: 120.30 $/Bbl" />
-<rect x="311.1" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-04-30 | Gasoline: 134.29 $/Bbl | Diesel: 178.67 $/Bbl | Naphtha: 128.56 $/Bbl" />
-<rect x="320.6" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-04 | Gasoline: 130.90 $/Bbl | Diesel: 160.73 $/Bbl | Naphtha: 117.57 $/Bbl" />
-<rect x="330.1" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-05 | Gasoline: 136.61 $/Bbl | Diesel: 160.96 $/Bbl | Naphtha: 117.79 $/Bbl" />
-<rect x="339.6" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-06 | Gasoline: 133.35 $/Bbl | Diesel: 157.05 $/Bbl | Naphtha: 108.70 $/Bbl" />
-<rect x="349.1" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-07 | Gasoline: 126.12 $/Bbl | Diesel: 149.29 $/Bbl | Naphtha: 101.97 $/Bbl" />
-<rect x="358.7" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-08 | Gasoline: 123.01 $/Bbl | Diesel: 153.49 $/Bbl | Naphtha: 102.45 $/Bbl" />
-<rect x="368.2" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-11 | Gasoline: 127.42 $/Bbl | Diesel: 155.33 $/Bbl | Naphtha: 109.53 $/Bbl" />
-<rect x="377.7" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-12 | Gasoline: 132.42 $/Bbl | Diesel: 160.25 $/Bbl | Naphtha: 113.64 $/Bbl" />
-<rect x="387.2" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-13 | Gasoline: 134.71 $/Bbl | Diesel: 165.41 $/Bbl | Naphtha: 113.92 $/Bbl" />
-<rect x="396.7" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-14 | Gasoline: 134.84 $/Bbl | Diesel: 161.88 $/Bbl | Naphtha: 113.98 $/Bbl" />
-<rect x="406.2" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-15 | Gasoline: 135.65 $/Bbl | Diesel: 163.47 $/Bbl | Naphtha: 113.74 $/Bbl" />
-<rect x="415.7" y="14" width="9.5" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-18 | Gasoline: 138.60 $/Bbl | Diesel: 165.02 $/Bbl | Naphtha: 111.82 $/Bbl" />
-<rect x="425.2" y="14" width="4.8" height="174" fill="transparent" class="hover-band" data-tooltip="2026-05-19 | Gasoline: 137.87 $/Bbl | Diesel: 166.59 $/Bbl | Naphtha: 111.05 $/Bbl" />
-</svg></div></div></section>
-<section class="section"><div class="section-head"><span class="num">5</span><span class="section-title">주요 이해관계자 동향</span></div><div class="body"><div class="issue-card"><span class="issue-tag">정책</span><div class="issue-title">중동전쟁 대응 보건의약단체 회의</div><div class="issue-desc">08:00 &#183; 이형훈 2차관</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div>
-<div class="issue-card"><span class="issue-tag">에너지</span><div class="issue-title">기후에너지환경노동위원회 기후에너지환경법안심사소위원회</div><div class="issue-desc">09:30 &#183; 국회</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div>
-<div class="issue-card"><span class="issue-tag">정책</span><div class="issue-title">공급망기금 상생협약식</div><div class="issue-desc">10:00 &#183; 허장 2차관</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div>
-<div class="issue-card"><span class="issue-tag">국회</span><div class="issue-title">산중위 전체회의</div><div class="issue-desc">10:00 &#183; 김정관 장관</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div>
-<div class="issue-card"><span class="issue-tag">국회</span><div class="issue-title">산중위 전체회의</div><div class="issue-desc">10:00 &#183; 노용석 1차관</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div>
-<div class="issue-card"><span class="issue-tag">정책</span><div class="issue-title">중동상황에 따른 대응상황 점검회의</div><div class="issue-desc">10:00 &#183; 오영훈 제주지사</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div></div></section><section class="section"><div class="section-head"><span class="num">6</span><span class="section-title">금일 주요 일정 (5/20)</span></div><div class="body"><div class="schedule-row"><div class="schedule-time">08:00</div><div class="schedule-org">이호현 2차관</div><div class="schedule-main"><div>08:00 에너지 DX·AX 전략 TF 4차 회의(서울)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">10:00</div><div class="schedule-org">노용석 1차관</div><div class="schedule-main"><div>10:00 산중위 법안소위(국회)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">10:00</div><div class="schedule-org">국회</div><div class="schedule-main"><div>산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">13:30</div><div class="schedule-org">금한승 1차관</div><div class="schedule-main"><div>13:30 기후부 2030 청년세대 통합 발대식(서울)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">노용석 1차관</div><div class="schedule-main"><div>14:00 산중위 전체회의(국회)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">대통령</div><div class="schedule-main"><div>22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">국회</div><div class="schedule-main"><div>산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">시간미정</div><div class="schedule-org">여한구 통상교섭본부장</div><div class="schedule-main"><div>국외 출장(19~22일 중국)</div></div></div>
-<div class="schedule-row"><div class="schedule-time">시간미정</div><div class="schedule-org">재경부</div><div class="schedule-main"><div>한국경제 설명회 및 G7 재무장관회의</div></div></div></div></section>
-<section class="section"><div class="section-head"><span class="num">7</span><span class="section-title">조간 신문 트렌드 (5/20)</span></div><div class="body"><div class="news-summary">주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.</div><p class="news-trend-para"><strong>코리아리포트</strong>는 5/20 10:55 입력 기사에서 한일 &#x27;에너지 동맹&#x27; 시동..&quot;원유 석유제품 LNG 스와프&quot; 코리아리포트.</p><p class="news-trend-para"><strong>매일일보</strong>는 5/19 17:22 입력 기사에서 중동발 에너지 위기 속 韓日, LNG·원유 수급 협력 공급망 파트너십 강화 매일일보.</p><p class="news-trend-para"><strong>국제신문</strong>은 5/19 23:12 입력 기사에서 한일, 원유·석유제품 스와프 추진…&quot;중동발 에너지 위기 대응&quot; 국제신문.</p><div class="section-divider"></div><div class="small-title">대표 기사</div><div class="news-item"><div><div class="news-title"><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBtbDlsNXY1UTVaaUxFd1RVWmgyUHhFME0wSWstRlZOaXhYamFYaVpCbnVLM21obnQwTVBtb0xYNllJNVdITVNmV2NyTUt5VjlVWjF1U2tZMjlmUm5PV1dTdTFtRkg0c2xaUmxZUjBJUmE?oc=5" target="_blank" rel="noopener noreferrer">한일 &#x27;에너지 동맹&#x27; 시동..&quot;원유 석유제품 LNG 스와프&quot; - 코리아리포트</a></div><div class="news-press">코리아리포트</div><div class="news-desc">한일 &#x27;에너지 동맹&#x27; 시동..&quot;원유 석유제품 LNG 스와프&quot; 코리아리포트.</div><div class="news-url">https://news.google.com/rss/articles/CBMicEFVX3lxTFBtbDlsNXY1UTVaaUxFd1RVWmgyUHhFME0wSWstRlZOaXhYamFYaVpCbnVLM21obnQwTVBtb0xYNllJNVdITVNmV2NyTUt5VjlVWjF1U2tZMjlmUm5PV1dTdTFtRkg0c2xaUmxZUjBJUmE?oc=5</div></div></div><div class="news-item"><div><div class="news-title"><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9lSUVTOUI2ZHFUd0FPajhUT0g4V0NwUjZwVjJhazZuWXBRSURGblhJZFRrTG5BY1RkS3hxMmtYb3BjUTZOeXM1U2pELWcwaEs4X0JJLWw4eURITzNNU1BOTkZGOXY?oc=5" target="_blank" rel="noopener noreferrer">중동발 에너지 위기 속 韓日, LNG·원유 수급 협력 공급망 파트너십 강화 - 매일일보</a></div><div class="news-press">매일일보</div><div class="news-desc">중동발 에너지 위기 속 韓日, LNG·원유 수급 협력 공급망 파트너십 강화 매일일보.</div><div class="news-url">https://news.google.com/rss/articles/CBMiZEFVX3lxTE9lSUVTOUI2ZHFUd0FPajhUT0g4V0NwUjZwVjJhazZuWXBRSURGblhJZFRrTG5BY1RkS3hxMmtYb3BjUTZOeXM1U2pELWcwaEs4X0JJLWw4eURITzNNU1BOTkZGOXY?oc=5</div></div></div><div class="news-item"><div><div class="news-title"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNMmF3OFE4WG1oSjdyTTQ4ZjFzdDI1Vm1KNGVlS00yTk9LcXg3RkswS1dRdkFKMVNuR2V5M0VTR3RvZHV4MndoYlNYem9ZYkxoN0NMQXd0cVZkeTRBUGlKQVVPX1B3a3o2SWs5b2xIQVJtQWs3SkI1VkJzTUxqcmMtOWhoVFpXQXpBbzFMOS1B?oc=5" target="_blank" rel="noopener noreferrer">한일, 원유·석유제품 스와프 추진…&quot;중동발 에너지 위기 대응&quot; - 국제신문</a></div><div class="news-press">국제신문</div><div class="news-desc">한일, 원유·석유제품 스와프 추진…&quot;중동발 에너지 위기 대응&quot; 국제신문.</div><div class="news-url">https://news.google.com/rss/articles/CBMijgFBVV95cUxNMmF3OFE4WG1oSjdyTTQ4ZjFzdDI1Vm1KNGVlS00yTk9LcXg3RkswS1dRdkFKMVNuR2V5M0VTR3RvZHV4MndoYlNYem9ZYkxoN0NMQXd0cVZkeTRBUGlKQVVPX1B3a3o2SWs5b2xIQVJtQWs3SkI1VkJzTUxqcmMtOWhoVFpXQXpBbzFMOS1B?oc=5</div></div></div></div></section>
-<footer class="footer">내용 확인 후 활용</footer>
-<div id="chart-tooltip" class="chart-tooltip hidden"></div>
-<script>
-(function () {
-  var tooltip = document.getElementById('chart-tooltip');
-  if (!tooltip) return;
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Issue Report — 2026.05.20</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+*{box-sizing:border-box}body{margin:0;padding:16px;background:#F4F5F7;color:#1A1A1A;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}.container{max-width:480px;margin:0 auto}.header{background:#0A2444;color:#fff;padding:18px 16px 14px;border-radius:12px 12px 0 0}.header-top{display:flex;justify-content:space-between;gap:12px}.header-title{font-size:20px;font-weight:700}.header-date{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}.header-badge{font-size:11px;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 10px;height:fit-content;white-space:nowrap}.section{background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin:10px 0;overflow:hidden}.section-header{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #E5E7EB;background:#F8F9FA}.section-num{font-size:11px;font-weight:700;color:#fff;background:#0A2444;border-radius:4px;padding:2px 7px;min-width:24px;text-align:center}.section-title{font-size:14px;font-weight:700}.summary-body,.news-body{padding:14px 16px}.summary-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0;font-size:13px}.summary-item:last-child{border-bottom:none}.summary-dot{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#1A6FD4;margin-top:8px}.price-section-label{font-size:12px;font-weight:500;color:#666;padding:12px 16px 6px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px 14px}.price-card{background:#F8F9FA;border-radius:8px;padding:10px 8px;text-align:center}.price-label{font-size:11px;color:#666;margin-bottom:4px}.price-value{font-size:18px;font-weight:700;line-height:1}.price-unit{font-size:10px;color:#999;margin-top:2px}.price-change{font-size:11px;margin-top:3px}.up{color:#C0392B}.down{color:#0A7B4E}.flat{color:#888}.divider{height:1px;background:#F0F0F0;margin:0 16px 4px}.chart-wrap{padding:12px 14px}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#666}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:12px;height:3px;border-radius:2px}.chart-box{position:relative;width:100%;min-height:245px;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;overflow:visible}.chart-svg{width:100%;height:auto;display:block;overflow:visible}.chart-hover-line{opacity:0}.chart-tooltip{position:absolute;z-index:20;display:none;min-width:132px;max-width:220px;background:rgba(10,36,68,.96);color:#fff;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.45;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}.chart-tooltip .date{font-weight:700;margin-bottom:4px}.tooltip-row{display:flex;justify-content:space-between;gap:12px}.no-data{padding:24px 8px;text-align:center;color:#888;background:#F8F9FA;border-radius:8px}.issue-list,.schedule-list{padding:10px 12px}.issue-card{background:#F8F9FA;border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid #1A6FD4}.issue-tag{display:inline-block;font-size:10px;font-weight:700;background:#E6F1FB;color:#185FA5;border-radius:3px;padding:2px 6px;margin-bottom:6px}.issue-title{font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.5}.issue-desc{font-size:12px;color:#444;line-height:1.65}.issue-links{margin-top:8px;font-size:11px}.issue-links a{display:block;color:#0A2444;text-decoration:underline;margin-top:3px}.issue-links span{display:block;color:#777;margin-top:3px}.schedule-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #F0F0F0}.schedule-row:last-child{border-bottom:none}.schedule-time{flex:0 0 38px;font-size:11px;font-weight:700;color:#185FA5;margin-top:1px}.schedule-org{flex:0 0 48px;font-size:10px;background:#F0F1F3;border:1px solid #E0E0E0;border-radius:3px;padding:1px 4px;color:#555;text-align:center}.schedule-main{flex:1;font-size:12px;line-height:1.5}.schedule-rel{font-size:11px;color:#777;margin-top:2px}.news-trend{font-size:13px;line-height:1.75;margin-bottom:14px}.news-separator{height:1px;background:#F0F0F0;margin:12px 0}.news-links-title{font-size:11px;font-weight:700;color:#999;letter-spacing:.5px;margin-bottom:8px}.news-link{display:block;padding:9px 0;border-bottom:1px solid #F0F0F0;text-decoration:none;color:inherit}.news-link-title{font-size:13px;font-weight:600;color:#0A2444;line-height:1.45;text-decoration:underline}.news-link-press{font-size:11px;color:#888;margin:2px 0}.news-link-desc{font-size:11px;color:#555;line-height:1.55}.fact-note{font-size:11px;color:#888;background:#F8F9FA;border-top:1px solid #E5E7EB;padding:10px 16px}.footer{text-align:center;padding:12px;font-size:11px;color:#aaa;border-top:1px solid #E5E7EB;margin-top:4px}@media(max-width:430px){body{padding:10px}.header-title{font-size:18px}.header-badge{font-size:10px;padding:4px 8px}.price-grid{gap:6px;padding:0 12px 12px}.price-value{font-size:16px}.chart-wrap{padding:10px 8px}.chart-box{min-height:230px}.chart-tooltip{font-size:10.5px;min-width:124px}.schedule-org{flex-basis:42px}}</style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="header-top">
+        <div><div class="header-title">Daily Issue Report</div><div class="header-date">2026년 5월 20일 (수)</div></div>
+        <div class="header-badge">정유 · 석유화학 · LNG</div>
+      </div>
+    </header>
 
-  function formatText(text) {
-    return String(text || '').split(' | ').join('\n');
+<section class="section">
+  <div class="section-header"><span class="section-num">1</span><span class="section-title">Summary</span></div>
+  <div class="summary-body"><div class="summary-item"><span class="summary-dot"></span><span>주요 이해관계자 동향: 5/19 기준 08:00 중동전쟁 대응 보건의약단체 회의(서울), 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 10:00 공급망기금 상생협약식.</span></div>
+<div class="summary-item"><span class="summary-dot"></span><span>금일 주요 일정: 08:00 에너지 DX·AX 전략 TF 4차 회의(서울), 10:00 산중위 법안소위(국회), 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 13:30 기후부 2030 청년세대 통합 발대식(서울).</span></div>
+<div class="summary-item"><span class="summary-dot"></span><span>조간 보도: 주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.</span></div></div>
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">2</span><span class="section-title">유가 동향</span></div>
+
+<div class="price-section-label">원유 ($/Bbl)</div>
+<div class="price-grid">
+<div class="price-card">
+  <div class="price-label">Brent</div>
+  <div class="price-value">111.28</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change down">▼ 0.82</div>
+</div>
+
+
+<div class="price-card">
+  <div class="price-label">WTI</div>
+  <div class="price-value">107.77</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change down">▼ 0.89</div>
+</div>
+
+
+<div class="price-card">
+  <div class="price-label">Dubai</div>
+  <div class="price-value">106.80</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change down">▼ 1.09</div>
+</div>
+</div>
+<div class="divider"></div>
+<div class="price-section-label">석유제품 ($/Bbl)</div>
+<div class="price-grid">
+<div class="price-card">
+  <div class="price-label">휘발유</div>
+  <div class="price-value">137.87</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change down">▼ 0.73</div>
+</div>
+
+
+<div class="price-card">
+  <div class="price-label">경유</div>
+  <div class="price-value">166.59</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change up">▲ 1.57</div>
+</div>
+
+
+<div class="price-card">
+  <div class="price-label">나프타</div>
+  <div class="price-value">111.05</div>
+  <div class="price-unit">$/Bbl</div>
+  <div class="price-change down">▼ 0.77</div>
+</div>
+</div>
+<div class="fact-note">※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.</div>
+
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">3</span><span class="section-title">원유 가격 추이 (3/19 ~ 5/19)</span></div>
+  <div class="chart-wrap">
+<div class="chart-legend"><span class="legend-item"><span class="legend-dot" style="background:#1A6FD4"></span>Brent</span><span class="legend-item"><span class="legend-dot" style="background:#E24B4A"></span>WTI</span><span class="legend-item"><span class="legend-dot" style="background:#1D9E75"></span>Dubai</span></div>
+<div class="chart-box" id="crudeChart" data-chart='{&quot;id&quot;:&quot;crudeChart&quot;,&quot;left&quot;:38,&quot;right&quot;:10,&quot;width&quot;:440,&quot;top&quot;:16,&quot;bottomY&quot;:198,&quot;data&quot;:[{&quot;date&quot;:&quot;2026-03-19&quot;,&quot;label&quot;:&quot;3/19&quot;,&quot;Brent&quot;:108.65,&quot;WTI&quot;:96.14,&quot;Dubai&quot;:166.8},{&quot;date&quot;:&quot;2026-03-20&quot;,&quot;label&quot;:&quot;3/20&quot;,&quot;Brent&quot;:112.19,&quot;WTI&quot;:98.32,&quot;Dubai&quot;:158.85},{&quot;date&quot;:&quot;2026-03-23&quot;,&quot;label&quot;:&quot;3/23&quot;,&quot;Brent&quot;:99.94,&quot;WTI&quot;:88.13,&quot;Dubai&quot;:169.75},{&quot;date&quot;:&quot;2026-03-24&quot;,&quot;label&quot;:&quot;3/24&quot;,&quot;Brent&quot;:104.49,&quot;WTI&quot;:92.35,&quot;Dubai&quot;:157.03},{&quot;date&quot;:&quot;2026-03-25&quot;,&quot;label&quot;:&quot;3/25&quot;,&quot;Brent&quot;:102.22,&quot;WTI&quot;:90.32,&quot;Dubai&quot;:142.55},{&quot;date&quot;:&quot;2026-03-26&quot;,&quot;label&quot;:&quot;3/26&quot;,&quot;Brent&quot;:108.01,&quot;WTI&quot;:94.48,&quot;Dubai&quot;:113.04},{&quot;date&quot;:&quot;2026-03-27&quot;,&quot;label&quot;:&quot;3/27&quot;,&quot;Brent&quot;:112.57,&quot;WTI&quot;:99.64,&quot;Dubai&quot;:122.14},{&quot;date&quot;:&quot;2026-03-30&quot;,&quot;label&quot;:&quot;3/30&quot;,&quot;Brent&quot;:112.78,&quot;WTI&quot;:102.88,&quot;Dubai&quot;:125.29},{&quot;date&quot;:&quot;2026-03-31&quot;,&quot;label&quot;:&quot;3/31&quot;,&quot;Brent&quot;:118.35,&quot;WTI&quot;:101.38,&quot;Dubai&quot;:121.1},{&quot;date&quot;:&quot;2026-04-01&quot;,&quot;label&quot;:&quot;4/1&quot;,&quot;Brent&quot;:101.16,&quot;WTI&quot;:100.12,&quot;Dubai&quot;:108.9},{&quot;date&quot;:&quot;2026-04-02&quot;,&quot;label&quot;:&quot;4/2&quot;,&quot;Brent&quot;:109.03,&quot;WTI&quot;:111.54,&quot;Dubai&quot;:114.6},{&quot;date&quot;:&quot;2026-04-06&quot;,&quot;label&quot;:&quot;4/6&quot;,&quot;Brent&quot;:109.77,&quot;WTI&quot;:112.41,&quot;Dubai&quot;:120.2},{&quot;date&quot;:&quot;2026-04-07&quot;,&quot;label&quot;:&quot;4/7&quot;,&quot;Brent&quot;:109.27,&quot;WTI&quot;:112.95,&quot;Dubai&quot;:121.86},{&quot;date&quot;:&quot;2026-04-08&quot;,&quot;label&quot;:&quot;4/8&quot;,&quot;Brent&quot;:94.75,&quot;WTI&quot;:94.41,&quot;Dubai&quot;:101.2},{&quot;date&quot;:&quot;2026-04-09&quot;,&quot;label&quot;:&quot;4/9&quot;,&quot;Brent&quot;:95.92,&quot;WTI&quot;:97.87,&quot;Dubai&quot;:102.0},{&quot;date&quot;:&quot;2026-04-10&quot;,&quot;label&quot;:&quot;4/10&quot;,&quot;Brent&quot;:95.2,&quot;WTI&quot;:96.57,&quot;Dubai&quot;:100.87},{&quot;date&quot;:&quot;2026-04-13&quot;,&quot;label&quot;:&quot;4/13&quot;,&quot;Brent&quot;:99.36,&quot;WTI&quot;:99.08,&quot;Dubai&quot;:106.5},{&quot;date&quot;:&quot;2026-04-14&quot;,&quot;label&quot;:&quot;4/14&quot;,&quot;Brent&quot;:94.79,&quot;WTI&quot;:91.28,&quot;Dubai&quot;:103.18},{&quot;date&quot;:&quot;2026-04-15&quot;,&quot;label&quot;:&quot;4/15&quot;,&quot;Brent&quot;:94.93,&quot;WTI&quot;:91.29,&quot;Dubai&quot;:101.09},{&quot;date&quot;:&quot;2026-04-16&quot;,&quot;label&quot;:&quot;4/16&quot;,&quot;Brent&quot;:99.39,&quot;WTI&quot;:94.69,&quot;Dubai&quot;:101.8},{&quot;date&quot;:&quot;2026-04-17&quot;,&quot;label&quot;:&quot;4/17&quot;,&quot;Brent&quot;:90.38,&quot;WTI&quot;:83.85,&quot;Dubai&quot;:102.2},{&quot;date&quot;:&quot;2026-04-20&quot;,&quot;label&quot;:&quot;4/20&quot;,&quot;Brent&quot;:95.48,&quot;WTI&quot;:89.61,&quot;Dubai&quot;:98.5},{&quot;date&quot;:&quot;2026-04-21&quot;,&quot;label&quot;:&quot;4/21&quot;,&quot;Brent&quot;:98.48,&quot;WTI&quot;:92.13,&quot;Dubai&quot;:94.27},{&quot;date&quot;:&quot;2026-04-22&quot;,&quot;label&quot;:&quot;4/22&quot;,&quot;Brent&quot;:101.91,&quot;WTI&quot;:92.96,&quot;Dubai&quot;:100.4},{&quot;date&quot;:&quot;2026-04-23&quot;,&quot;label&quot;:&quot;4/23&quot;,&quot;Brent&quot;:105.07,&quot;WTI&quot;:95.85,&quot;Dubai&quot;:104.81},{&quot;date&quot;:&quot;2026-04-24&quot;,&quot;label&quot;:&quot;4/24&quot;,&quot;Brent&quot;:105.33,&quot;WTI&quot;:94.4,&quot;Dubai&quot;:107.2},{&quot;date&quot;:&quot;2026-04-27&quot;,&quot;label&quot;:&quot;4/27&quot;,&quot;Brent&quot;:108.23,&quot;WTI&quot;:96.37,&quot;Dubai&quot;:104.2},{&quot;date&quot;:&quot;2026-04-28&quot;,&quot;label&quot;:&quot;4/28&quot;,&quot;Brent&quot;:111.26,&quot;WTI&quot;:99.93,&quot;Dubai&quot;:107.2},{&quot;date&quot;:&quot;2026-04-29&quot;,&quot;label&quot;:&quot;4/29&quot;,&quot;Brent&quot;:118.03,&quot;WTI&quot;:106.88,&quot;Dubai&quot;:106.49},{&quot;date&quot;:&quot;2026-04-30&quot;,&quot;label&quot;:&quot;4/30&quot;,&quot;Brent&quot;:114.01,&quot;WTI&quot;:105.07,&quot;Dubai&quot;:112.2},{&quot;date&quot;:&quot;2026-05-01&quot;,&quot;label&quot;:&quot;5/1&quot;,&quot;Brent&quot;:108.17,&quot;WTI&quot;:101.94,&quot;Dubai&quot;:null},{&quot;date&quot;:&quot;2026-05-04&quot;,&quot;label&quot;:&quot;5/4&quot;,&quot;Brent&quot;:114.44,&quot;WTI&quot;:106.42,&quot;Dubai&quot;:102.84},{&quot;date&quot;:&quot;2026-05-05&quot;,&quot;label&quot;:&quot;5/5&quot;,&quot;Brent&quot;:109.87,&quot;WTI&quot;:102.27,&quot;Dubai&quot;:106.6},{&quot;date&quot;:&quot;2026-05-06&quot;,&quot;label&quot;:&quot;5/6&quot;,&quot;Brent&quot;:101.27,&quot;WTI&quot;:95.08,&quot;Dubai&quot;:103.69},{&quot;date&quot;:&quot;2026-05-07&quot;,&quot;label&quot;:&quot;5/7&quot;,&quot;Brent&quot;:100.06,&quot;WTI&quot;:94.81,&quot;Dubai&quot;:97.59},{&quot;date&quot;:&quot;2026-05-08&quot;,&quot;label&quot;:&quot;5/8&quot;,&quot;Brent&quot;:101.29,&quot;WTI&quot;:95.42,&quot;Dubai&quot;:97.39},{&quot;date&quot;:&quot;2026-05-11&quot;,&quot;label&quot;:&quot;5/11&quot;,&quot;Brent&quot;:104.21,&quot;WTI&quot;:98.07,&quot;Dubai&quot;:101.11},{&quot;date&quot;:&quot;2026-05-12&quot;,&quot;label&quot;:&quot;5/12&quot;,&quot;Brent&quot;:107.77,&quot;WTI&quot;:102.18,&quot;Dubai&quot;:104.9},{&quot;date&quot;:&quot;2026-05-13&quot;,&quot;label&quot;:&quot;5/13&quot;,&quot;Brent&quot;:105.63,&quot;WTI&quot;:101.02,&quot;Dubai&quot;:104.9},{&quot;date&quot;:&quot;2026-05-14&quot;,&quot;label&quot;:&quot;5/14&quot;,&quot;Brent&quot;:105.72,&quot;WTI&quot;:101.17,&quot;Dubai&quot;:105.5},{&quot;date&quot;:&quot;2026-05-15&quot;,&quot;label&quot;:&quot;5/15&quot;,&quot;Brent&quot;:109.26,&quot;WTI&quot;:105.42,&quot;Dubai&quot;:107.3},{&quot;date&quot;:&quot;2026-05-18&quot;,&quot;label&quot;:&quot;5/18&quot;,&quot;Brent&quot;:112.1,&quot;WTI&quot;:108.66,&quot;Dubai&quot;:107.89},{&quot;date&quot;:&quot;2026-05-19&quot;,&quot;label&quot;:&quot;5/19&quot;,&quot;Brent&quot;:111.28,&quot;WTI&quot;:107.77,&quot;Dubai&quot;:106.8}],&quot;keys&quot;:[[&quot;Brent&quot;,&quot;Brent&quot;],[&quot;WTI&quot;,&quot;WTI&quot;],[&quot;Dubai&quot;,&quot;Dubai&quot;]]}'>
+  <svg class="chart-svg" viewBox="0 0 440 230" role="img" aria-label="가격 추이 그래프">
+    <line x1="38" y1="198.0" x2="430" y2="198.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="202.0" font-size="10" fill="#8A8F98">74</text><line x1="38" y1="152.5" x2="430" y2="152.5" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="156.5" font-size="10" fill="#8A8F98">100</text><line x1="38" y1="107.0" x2="430" y2="107.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="111.0" font-size="10" fill="#8A8F98">127</text><line x1="38" y1="61.5" x2="430" y2="61.5" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="65.5" font-size="10" fill="#8A8F98">153</text><line x1="38" y1="16.0" x2="430" y2="16.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="20.0" font-size="10" fill="#8A8F98">180</text>
+    <polyline points="38.0,138.0 47.3,132.0 56.7,152.9 66.0,145.1 75.3,149.0 84.7,139.1 94.0,131.3 103.3,131.0 112.7,121.4 122.0,150.8 131.3,137.4 140.7,136.1 150.0,137.0 159.3,161.8 168.7,159.8 178.0,161.0 187.3,153.9 196.7,161.7 206.0,161.5 215.3,153.8 224.7,169.2 234.0,160.5 243.3,155.4 252.7,149.5 262.0,144.1 271.3,143.7 280.7,138.7 290.0,133.6 299.3,122.0 308.7,128.9 318.0,138.8 327.3,128.1 336.7,135.9 346.0,150.6 355.3,152.7 364.7,150.6 374.0,145.6 383.3,139.5 392.7,143.2 402.0,143.0 411.3,137.0 420.7,132.1 430.0,133.5" fill="none" stroke="#1A6FD4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="38.0,159.4 47.3,155.7 56.7,173.1 66.0,165.9 75.3,169.3 84.7,162.2 94.0,153.4 103.3,147.9 112.7,150.4 122.0,152.6 131.3,133.1 140.7,131.6 150.0,130.7 159.3,162.3 168.7,156.4 178.0,158.7 187.3,154.4 196.7,167.7 206.0,167.7 215.3,161.9 224.7,180.4 234.0,170.5 243.3,166.2 252.7,164.8 262.0,159.9 271.3,162.4 280.7,159.0 290.0,152.9 299.3,141.0 308.7,144.1 318.0,149.5 327.3,141.8 336.7,148.9 346.0,161.2 355.3,161.7 364.7,160.6 374.0,156.1 383.3,149.1 392.7,151.0 402.0,150.8 411.3,143.5 420.7,138.0 430.0,139.5" fill="none" stroke="#E24B4A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="38.0,38.7 47.3,52.2 56.7,33.6 66.0,55.3 75.3,80.1 84.7,130.5 94.0,115.0 103.3,109.6 112.7,116.7 122.0,137.6 131.3,127.8 140.7,118.3 150.0,115.4 159.3,150.7 168.7,149.4 178.0,151.3 187.3,141.7 196.7,147.4 206.0,150.9 215.3,149.7 224.7,149.0 234.0,155.4 243.3,162.6 252.7,152.1 262.0,144.6 271.3,140.5 280.7,145.6 290.0,140.5 299.3,141.7 308.7,131.9 327.3,147.9 336.7,141.5 346.0,146.5 355.3,156.9 364.7,157.3 374.0,150.9 383.3,144.4 392.7,144.4 402.0,143.4 411.3,140.3 420.7,139.3 430.0,141.2" fill="none" stroke="#1D9E75" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="38.0" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">3/19</text><text x="168.7" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">4/9</text><text x="299.3" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">4/29</text><text x="430.0" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">5/19</text>
+    <line class="chart-hover-line" x1="38" x2="38" y1="16" y2="198" stroke="#0A2444" stroke-width="1"/>
+    <rect class="chart-hit-area" x="38" y="16" width="392" height="182" fill="transparent"/>
+  </svg>
+  <div class="chart-tooltip"></div>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">4</span><span class="section-title">석유제품 가격 추이 (3/19 ~ 5/19)</span></div>
+  <div class="chart-wrap">
+<div class="chart-legend"><span class="legend-item"><span class="legend-dot" style="background:#1A6FD4"></span>휘발유</span><span class="legend-item"><span class="legend-dot" style="background:#E24B4A"></span>경유</span><span class="legend-item"><span class="legend-dot" style="background:#1D9E75"></span>나프타</span></div>
+<div class="chart-box" id="productChart" data-chart='{&quot;id&quot;:&quot;productChart&quot;,&quot;left&quot;:38,&quot;right&quot;:10,&quot;width&quot;:440,&quot;top&quot;:16,&quot;bottomY&quot;:198,&quot;data&quot;:[{&quot;date&quot;:&quot;2026-03-19&quot;,&quot;label&quot;:&quot;3/19&quot;,&quot;Gasoline&quot;:151.92,&quot;Diesel&quot;:224.49,&quot;Naphtha&quot;:137.72},{&quot;date&quot;:&quot;2026-03-20&quot;,&quot;label&quot;:&quot;3/20&quot;,&quot;Gasoline&quot;:150.6,&quot;Diesel&quot;:222.99,&quot;Naphtha&quot;:133.97},{&quot;date&quot;:&quot;2026-03-23&quot;,&quot;label&quot;:&quot;3/23&quot;,&quot;Gasoline&quot;:157.22,&quot;Diesel&quot;:242.89,&quot;Naphtha&quot;:138.75},{&quot;date&quot;:&quot;2026-03-24&quot;,&quot;label&quot;:&quot;3/24&quot;,&quot;Gasoline&quot;:141.76,&quot;Diesel&quot;:219.9,&quot;Naphtha&quot;:127.52},{&quot;date&quot;:&quot;2026-03-25&quot;,&quot;label&quot;:&quot;3/25&quot;,&quot;Gasoline&quot;:131.0,&quot;Diesel&quot;:205.54,&quot;Naphtha&quot;:117.62},{&quot;date&quot;:&quot;2026-03-26&quot;,&quot;label&quot;:&quot;3/26&quot;,&quot;Gasoline&quot;:127.48,&quot;Diesel&quot;:216.56,&quot;Naphtha&quot;:129.12},{&quot;date&quot;:&quot;2026-03-27&quot;,&quot;label&quot;:&quot;3/27&quot;,&quot;Gasoline&quot;:130.51,&quot;Diesel&quot;:237.83,&quot;Naphtha&quot;:133.74},{&quot;date&quot;:&quot;2026-03-30&quot;,&quot;label&quot;:&quot;3/30&quot;,&quot;Gasoline&quot;:139.65,&quot;Diesel&quot;:252.14,&quot;Naphtha&quot;:141.53},{&quot;date&quot;:&quot;2026-03-31&quot;,&quot;label&quot;:&quot;3/31&quot;,&quot;Gasoline&quot;:138.45,&quot;Diesel&quot;:238.88,&quot;Naphtha&quot;:141.72},{&quot;date&quot;:&quot;2026-04-01&quot;,&quot;label&quot;:&quot;4/1&quot;,&quot;Gasoline&quot;:136.03,&quot;Diesel&quot;:245.99,&quot;Naphtha&quot;:136.69},{&quot;date&quot;:&quot;2026-04-02&quot;,&quot;label&quot;:&quot;4/2&quot;,&quot;Gasoline&quot;:144.48,&quot;Diesel&quot;:292.8,&quot;Naphtha&quot;:141.26},{&quot;date&quot;:&quot;2026-04-06&quot;,&quot;label&quot;:&quot;4/6&quot;,&quot;Gasoline&quot;:141.88,&quot;Diesel&quot;:272.65,&quot;Naphtha&quot;:137.08},{&quot;date&quot;:&quot;2026-04-07&quot;,&quot;label&quot;:&quot;4/7&quot;,&quot;Gasoline&quot;:138.22,&quot;Diesel&quot;:255.33,&quot;Naphtha&quot;:137.24},{&quot;date&quot;:&quot;2026-04-08&quot;,&quot;label&quot;:&quot;4/8&quot;,&quot;Gasoline&quot;:119.48,&quot;Diesel&quot;:198.37,&quot;Naphtha&quot;:118.46},{&quot;date&quot;:&quot;2026-04-09&quot;,&quot;label&quot;:&quot;4/9&quot;,&quot;Gasoline&quot;:130.98,&quot;Diesel&quot;:210.99,&quot;Naphtha&quot;:124.14},{&quot;date&quot;:&quot;2026-04-10&quot;,&quot;label&quot;:&quot;4/10&quot;,&quot;Gasoline&quot;:128.19,&quot;Diesel&quot;:210.13,&quot;Naphtha&quot;:123.14},{&quot;date&quot;:&quot;2026-04-13&quot;,&quot;label&quot;:&quot;4/13&quot;,&quot;Gasoline&quot;:128.48,&quot;Diesel&quot;:203.21,&quot;Naphtha&quot;:126.04},{&quot;date&quot;:&quot;2026-04-14&quot;,&quot;label&quot;:&quot;4/14&quot;,&quot;Gasoline&quot;:123.87,&quot;Diesel&quot;:191.74,&quot;Naphtha&quot;:121.59},{&quot;date&quot;:&quot;2026-04-15&quot;,&quot;label&quot;:&quot;4/15&quot;,&quot;Gasoline&quot;:119.0,&quot;Diesel&quot;:173.32,&quot;Naphtha&quot;:116.14},{&quot;date&quot;:&quot;2026-04-16&quot;,&quot;label&quot;:&quot;4/16&quot;,&quot;Gasoline&quot;:120.86,&quot;Diesel&quot;:172.23,&quot;Naphtha&quot;:115.88},{&quot;date&quot;:&quot;2026-04-17&quot;,&quot;label&quot;:&quot;4/17&quot;,&quot;Gasoline&quot;:122.19,&quot;Diesel&quot;:170.31,&quot;Naphtha&quot;:115.6},{&quot;date&quot;:&quot;2026-04-20&quot;,&quot;label&quot;:&quot;4/20&quot;,&quot;Gasoline&quot;:118.68,&quot;Diesel&quot;:155.07,&quot;Naphtha&quot;:106.04},{&quot;date&quot;:&quot;2026-04-21&quot;,&quot;label&quot;:&quot;4/21&quot;,&quot;Gasoline&quot;:118.21,&quot;Diesel&quot;:152.84,&quot;Naphtha&quot;:103.99},{&quot;date&quot;:&quot;2026-04-22&quot;,&quot;label&quot;:&quot;4/22&quot;,&quot;Gasoline&quot;:124.25,&quot;Diesel&quot;:167.2,&quot;Naphtha&quot;:110.61},{&quot;date&quot;:&quot;2026-04-23&quot;,&quot;label&quot;:&quot;4/23&quot;,&quot;Gasoline&quot;:125.92,&quot;Diesel&quot;:171.26,&quot;Naphtha&quot;:114.9},{&quot;date&quot;:&quot;2026-04-24&quot;,&quot;label&quot;:&quot;4/24&quot;,&quot;Gasoline&quot;:124.68,&quot;Diesel&quot;:172.84,&quot;Naphtha&quot;:118.3},{&quot;date&quot;:&quot;2026-04-27&quot;,&quot;label&quot;:&quot;4/27&quot;,&quot;Gasoline&quot;:128.04,&quot;Diesel&quot;:174.04,&quot;Naphtha&quot;:119.67},{&quot;date&quot;:&quot;2026-04-28&quot;,&quot;label&quot;:&quot;4/28&quot;,&quot;Gasoline&quot;:126.52,&quot;Diesel&quot;:167.38,&quot;Naphtha&quot;:117.94},{&quot;date&quot;:&quot;2026-04-29&quot;,&quot;label&quot;:&quot;4/29&quot;,&quot;Gasoline&quot;:129.83,&quot;Diesel&quot;:169.49,&quot;Naphtha&quot;:120.3},{&quot;date&quot;:&quot;2026-04-30&quot;,&quot;label&quot;:&quot;4/30&quot;,&quot;Gasoline&quot;:134.29,&quot;Diesel&quot;:178.67,&quot;Naphtha&quot;:128.56},{&quot;date&quot;:&quot;2026-05-04&quot;,&quot;label&quot;:&quot;5/4&quot;,&quot;Gasoline&quot;:130.9,&quot;Diesel&quot;:160.73,&quot;Naphtha&quot;:117.57},{&quot;date&quot;:&quot;2026-05-05&quot;,&quot;label&quot;:&quot;5/5&quot;,&quot;Gasoline&quot;:136.61,&quot;Diesel&quot;:160.96,&quot;Naphtha&quot;:117.79},{&quot;date&quot;:&quot;2026-05-06&quot;,&quot;label&quot;:&quot;5/6&quot;,&quot;Gasoline&quot;:133.35,&quot;Diesel&quot;:157.05,&quot;Naphtha&quot;:108.7},{&quot;date&quot;:&quot;2026-05-07&quot;,&quot;label&quot;:&quot;5/7&quot;,&quot;Gasoline&quot;:126.12,&quot;Diesel&quot;:149.29,&quot;Naphtha&quot;:101.97},{&quot;date&quot;:&quot;2026-05-08&quot;,&quot;label&quot;:&quot;5/8&quot;,&quot;Gasoline&quot;:123.01,&quot;Diesel&quot;:153.49,&quot;Naphtha&quot;:102.45},{&quot;date&quot;:&quot;2026-05-11&quot;,&quot;label&quot;:&quot;5/11&quot;,&quot;Gasoline&quot;:127.42,&quot;Diesel&quot;:155.33,&quot;Naphtha&quot;:109.53},{&quot;date&quot;:&quot;2026-05-12&quot;,&quot;label&quot;:&quot;5/12&quot;,&quot;Gasoline&quot;:132.42,&quot;Diesel&quot;:160.25,&quot;Naphtha&quot;:113.64},{&quot;date&quot;:&quot;2026-05-13&quot;,&quot;label&quot;:&quot;5/13&quot;,&quot;Gasoline&quot;:134.71,&quot;Diesel&quot;:165.41,&quot;Naphtha&quot;:113.92},{&quot;date&quot;:&quot;2026-05-14&quot;,&quot;label&quot;:&quot;5/14&quot;,&quot;Gasoline&quot;:134.84,&quot;Diesel&quot;:161.88,&quot;Naphtha&quot;:113.98},{&quot;date&quot;:&quot;2026-05-15&quot;,&quot;label&quot;:&quot;5/15&quot;,&quot;Gasoline&quot;:135.65,&quot;Diesel&quot;:163.47,&quot;Naphtha&quot;:113.74},{&quot;date&quot;:&quot;2026-05-18&quot;,&quot;label&quot;:&quot;5/18&quot;,&quot;Gasoline&quot;:138.6,&quot;Diesel&quot;:165.02,&quot;Naphtha&quot;:111.82},{&quot;date&quot;:&quot;2026-05-19&quot;,&quot;label&quot;:&quot;5/19&quot;,&quot;Gasoline&quot;:137.87,&quot;Diesel&quot;:166.59,&quot;Naphtha&quot;:111.05}],&quot;keys&quot;:[[&quot;Gasoline&quot;,&quot;휘발유&quot;],[&quot;Diesel&quot;,&quot;경유&quot;],[&quot;Naphtha&quot;,&quot;나프타&quot;]]}'>
+  <svg class="chart-svg" viewBox="0 0 440 230" role="img" aria-label="가격 추이 그래프">
+    <line x1="38" y1="198.0" x2="430" y2="198.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="202.0" font-size="10" fill="#8A8F98">79</text><line x1="38" y1="152.5" x2="430" y2="152.5" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="156.5" font-size="10" fill="#8A8F98">138</text><line x1="38" y1="107.0" x2="430" y2="107.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="111.0" font-size="10" fill="#8A8F98">197</text><line x1="38" y1="61.5" x2="430" y2="61.5" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="65.5" font-size="10" fill="#8A8F98">257</text><line x1="38" y1="16.0" x2="430" y2="16.0" stroke="#E9EDF2" stroke-width="1"/><text x="4" y="20.0" font-size="10" fill="#8A8F98">316</text>
+    <polyline points="38.0,142.0 47.6,143.0 57.1,137.9 66.7,149.8 76.2,158.1 85.8,160.8 95.4,158.4 104.9,151.4 114.5,152.3 124.0,154.2 133.6,147.7 143.2,149.7 152.7,152.5 162.3,166.9 171.9,158.1 181.4,160.2 191.0,160.0 200.5,163.5 210.1,167.3 219.7,165.9 229.2,164.8 238.8,167.5 248.3,167.9 257.9,163.3 267.5,162.0 277.0,162.9 286.6,160.3 296.1,161.5 305.7,159.0 315.3,155.5 324.8,158.1 334.4,153.7 344.0,156.3 353.5,161.8 363.1,164.2 372.6,160.8 382.2,157.0 391.8,155.2 401.3,155.1 410.9,154.5 420.4,152.2 430.0,152.8" fill="none" stroke="#1A6FD4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="38.0,86.2 47.6,87.3 57.1,72.0 66.7,89.7 76.2,100.7 85.8,92.3 95.4,75.9 104.9,64.9 114.5,75.1 124.0,69.6 133.6,33.6 143.2,49.1 152.7,62.4 162.3,106.2 171.9,96.5 181.4,97.2 191.0,102.5 200.5,111.3 210.1,125.5 219.7,126.3 229.2,127.8 238.8,139.5 248.3,141.3 257.9,130.2 267.5,127.1 277.0,125.9 286.6,125.0 296.1,130.1 305.7,128.5 315.3,121.4 324.8,135.2 334.4,135.0 344.0,138.0 353.5,144.0 363.1,140.8 372.6,139.3 382.2,135.6 391.8,131.6 401.3,134.3 410.9,133.1 420.4,131.9 430.0,130.7" fill="none" stroke="#E24B4A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="38.0,152.9 47.6,155.8 57.1,152.1 66.7,160.7 76.2,168.4 85.8,159.5 95.4,156.0 104.9,150.0 114.5,149.8 124.0,153.7 133.6,150.2 143.2,153.4 152.7,153.3 162.3,167.7 171.9,163.3 181.4,164.1 191.0,161.9 200.5,165.3 210.1,169.5 219.7,169.7 229.2,169.9 238.8,177.3 248.3,178.8 257.9,173.7 267.5,170.4 277.0,167.8 286.6,166.8 296.1,168.1 305.7,166.3 315.3,159.9 324.8,168.4 334.4,168.2 344.0,175.2 353.5,180.4 363.1,180.0 372.6,174.6 382.2,171.4 391.8,171.2 401.3,171.1 410.9,171.3 420.4,172.8 430.0,173.4" fill="none" stroke="#1D9E75" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="38.0" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">3/19</text><text x="171.9" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">4/9</text><text x="305.7" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">4/29</text><text x="430.0" y="218" text-anchor="middle" font-size="10" fill="#8A8F98">5/19</text>
+    <line class="chart-hover-line" x1="38" x2="38" y1="16" y2="198" stroke="#0A2444" stroke-width="1"/>
+    <rect class="chart-hit-area" x="38" y="16" width="392" height="182" fill="transparent"/>
+  </svg>
+  <div class="chart-tooltip"></div>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">5</span><span class="section-title">이해관계자·정책 주요 동향 (전일 기준)</span></div>
+  <div class="issue-list"><div class="issue-card"><div class="issue-tag">정책</div><div class="issue-title">중동전쟁 대응 보건의약단체 회의</div><div class="issue-desc">08:00 · 이형훈 2차관 · 서울</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div><div class="issue-card"><div class="issue-tag">에너지</div><div class="issue-title">기후에너지환경노동위원회 기후에너지환경법안심사소위원회</div><div class="issue-desc">09:30 · 국회 · 본관 622호</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div><div class="issue-card"><div class="issue-tag">정책</div><div class="issue-title">공급망기금 상생협약식</div><div class="issue-desc">10:00 · 허장 2차관</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div><div class="issue-card"><div class="issue-tag">국회</div><div class="issue-title">산중위 전체회의</div><div class="issue-desc">10:00 · 김정관 장관 · 국회</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div><div class="issue-card"><div class="issue-tag">국회</div><div class="issue-title">산중위 전체회의</div><div class="issue-desc">10:00 · 노용석 1차관 · 국회</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div><div class="issue-card"><div class="issue-tag">정책</div><div class="issue-title">중동상황에 따른 대응상황 점검회의</div><div class="issue-desc">10:00 · 오영훈 제주지사 · 재난안전대책본부 상황실</div><div class="issue-links">관련 링크<span>관련 기사 없음</span></div></div></div><div class="fact-note">※ 관련 링크가 없는 항목은 일정·보도자료 원문 확인 범위 내에서 작성</div>
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">6</span><span class="section-title">금일 주요 일정 (5/20)</span></div>
+  <div class="schedule-list"><div class="schedule-row"><div class="schedule-time">08:00</div><div class="schedule-org">이호현 2차관</div><div class="schedule-main">08:00 에너지 DX·AX 전략 TF 4차 회의(서울)</div></div><div class="schedule-row"><div class="schedule-time">10:00</div><div class="schedule-org">노용석 1차관</div><div class="schedule-main">10:00 산중위 법안소위(국회)</div></div><div class="schedule-row"><div class="schedule-time">10:00</div><div class="schedule-org">국회</div><div class="schedule-main">산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)</div></div><div class="schedule-row"><div class="schedule-time">13:30</div><div class="schedule-org">금한승 1차관</div><div class="schedule-main">13:30 기후부 2030 청년세대 통합 발대식(서울)</div></div><div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">노용석 1차관</div><div class="schedule-main">14:00 산중위 전체회의(국회)</div></div><div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">대통령</div><div class="schedule-main">22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)</div></div><div class="schedule-row"><div class="schedule-time">14:00</div><div class="schedule-org">국회</div><div class="schedule-main">산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)</div></div><div class="schedule-row"><div class="schedule-time">시간미정</div><div class="schedule-org">여한구 통상교섭</div><div class="schedule-main">국외 출장(19~22일 중국)</div></div><div class="schedule-row"><div class="schedule-time">시간미정</div><div class="schedule-org">재경부</div><div class="schedule-main">한국경제 설명회 및 G7 재무장관회의</div></div></div>
+</section>
+
+
+<section class="section">
+  <div class="section-header"><span class="section-num">7</span><span class="section-title">조간 신문 트렌드 (5/20)</span></div>
+  <div class="news-body"><div class="news-trend">주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div><a class="news-link" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBtbDlsNXY1UTVaaUxFd1RVWmgyUHhFME0wSWstRlZOaXhYamFYaVpCbnVLM21obnQwTVBtb0xYNllJNVdITVNmV2NyTUt5VjlVWjF1U2tZMjlmUm5PV1dTdTFtRkg0c2xaUmxZUjBJUmE?oc=5" target="_blank" rel="noopener noreferrer"><div class="news-link-title">한일 &#x27;에너지 동맹&#x27; 시동..&quot;원유 석유제품 LNG 스와프&quot; - 코리아리포트</div><div class="news-link-press">코리아리포트</div><div class="news-link-desc">LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도</div></a><a class="news-link" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9lSUVTOUI2ZHFUd0FPajhUT0g4V0NwUjZwVjJhazZuWXBRSURGblhJZFRrTG5BY1RkS3hxMmtYb3BjUTZOeXM1U2pELWcwaEs4X0JJLWw4eURITzNNU1BOTkZGOXY?oc=5" target="_blank" rel="noopener noreferrer"><div class="news-link-title">중동발 에너지 위기 속 韓日, LNG·원유 수급 협력 공급망 파트너십 강화 - 매일일보</div><div class="news-link-press">매일일보</div><div class="news-link-desc">LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도</div></a><a class="news-link" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNMmF3OFE4WG1oSjdyTTQ4ZjFzdDI1Vm1KNGVlS00yTk9LcXg3RkswS1dRdkFKMVNuR2V5M0VTR3RvZHV4MndoYlNYem9ZYkxoN0NMQXd0cVZkeTRBUGlKQVVPX1B3a3o2SWs5b2xIQVJtQWs3SkI1VkJzTUxqcmMtOWhoVFpXQXpBbzFMOS1B?oc=5" target="_blank" rel="noopener noreferrer"><div class="news-link-title">한일, 원유·석유제품 스와프 추진…&quot;중동발 에너지 위기 대응&quot; - 국제신문</div><div class="news-link-press">국제신문</div><div class="news-link-desc">국제유가와 석유시장 변동 요인을 중심으로 정리</div></a></div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성.</div>
+</section>
+
+    <footer class="footer">SK Innovation Communication Division · 2026.05.20</footer>
+  </main>
+  <script>
+(function(){
+  function fmtValue(v){
+    if(v === null || v === undefined || v === "" || Number.isNaN(Number(v))) return "-";
+    return Number(v).toFixed(2);
   }
-
-  function show(evt) {
-    var target = evt.target;
-    var text = target.getAttribute('data-tooltip');
-    if (!text) return;
-    tooltip.textContent = formatText(text);
-    tooltip.style.whiteSpace = 'pre-line';
-    tooltip.classList.remove('hidden');
-    move(evt);
-  }
-
-  function move(evt) {
-    if (tooltip.classList.contains('hidden')) return;
-    var clientX = evt.clientX;
-    var clientY = evt.clientY;
-    if (evt.touches && evt.touches.length) {
-      clientX = evt.touches[0].clientX;
-      clientY = evt.touches[0].clientY;
+  function attachChartTooltip(box){
+    if(!box) return;
+    var raw = box.getAttribute('data-chart');
+    if(!raw) return;
+    var cfg;
+    try { cfg = JSON.parse(raw); } catch(e) { return; }
+    var data = Array.isArray(cfg.data) ? cfg.data : [];
+    if(!data.length) return;
+    var tip = box.querySelector('.chart-tooltip');
+    var line = box.querySelector('.chart-hover-line');
+    var svg = box.querySelector('svg');
+    if(!tip || !svg) return;
+    var left = Number(cfg.left || 38);
+    var right = Number(cfg.right || 10);
+    var width = Number(cfg.width || 440);
+    var plotWidth = width - left - right;
+    function showAt(clientX, clientY){
+      var rect = box.getBoundingClientRect();
+      if(!rect.width) return;
+      var relX = (clientX - rect.left) / rect.width * width;
+      relX = Math.max(left, Math.min(width - right, relX));
+      var idx = Math.round((relX - left) / plotWidth * (data.length - 1));
+      idx = Math.max(0, Math.min(data.length - 1, idx));
+      var r = data[idx] || {};
+      var x = left + (data.length <= 1 ? 0 : idx / (data.length - 1) * plotWidth);
+      if(line){ line.setAttribute('x1', x); line.setAttribute('x2', x); line.setAttribute('opacity', '0.45'); line.style.opacity = '0.45'; }
+      var html = '<div class="date">' + (r.label || r.date || '-') + '</div>';
+      (cfg.keys || []).forEach(function(pair){
+        var key = pair[0], label = pair[1] || key;
+        html += '<div class="tooltip-row"><span>' + label + '</span><b>' + fmtValue(r[key]) + '</b></div>';
+      });
+      tip.innerHTML = html;
+      tip.style.display = 'block';
+      var localX = clientX - rect.left;
+      var localY = clientY - rect.top;
+      var l = localX + 12;
+      var t = localY - 10;
+      var tw = tip.offsetWidth || 150;
+      var th = tip.offsetHeight || 104;
+      if(l + tw > rect.width) l = localX - tw - 12;
+      if(l < 4) l = 4;
+      if(t + th > rect.height) t = rect.height - th - 4;
+      if(t < 4) t = 4;
+      tip.style.left = l + 'px';
+      tip.style.top = t + 'px';
     }
-    var x = clientX + 12;
-    var y = clientY - 34;
-    var maxX = window.innerWidth - tooltip.offsetWidth - 8;
-    var maxY = window.innerHeight - tooltip.offsetHeight - 8;
-    if (x > maxX) x = Math.max(8, clientX - tooltip.offsetWidth - 12);
-    if (y < 8) y = clientY + 18;
-    if (y > maxY) y = maxY;
-    tooltip.style.left = x + 'px';
-    tooltip.style.top = y + 'px';
-  }
-
-  function hide() {
-    tooltip.classList.add('hidden');
-  }
-
-  document.addEventListener('mouseover', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) show(evt);
-  });
-
-  document.addEventListener('mousemove', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) move(evt);
-  });
-
-  document.addEventListener('mouseout', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) hide();
-  });
-
-  document.addEventListener('touchstart', function (evt) {
-    if (evt.target && evt.target.classList && evt.target.classList.contains('hover-band')) {
-      show(evt);
-      window.setTimeout(hide, 1800);
+    function hide(){
+      if(line){ line.setAttribute('opacity', '0'); line.style.opacity = '0'; }
+      tip.style.display = 'none';
     }
-  }, { passive: true });
+    // Desktop + iPad pointer devices
+    box.addEventListener('mousemove', function(e){ showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('mouseleave', hide, {passive:true});
+    // iPhone/iPad Safari: support both Touch Events and Pointer Events.
+    box.addEventListener('touchstart', function(e){ if(e.touches && e.touches[0]) showAt(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+    box.addEventListener('touchmove', function(e){ if(e.touches && e.touches[0]) showAt(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+    box.addEventListener('pointerdown', function(e){ if(e.pointerType === 'touch' || e.pointerType === 'pen') showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('pointermove', function(e){ if(e.pointerType === 'touch' || e.pointerType === 'pen') showAt(e.clientX, e.clientY); }, {passive:true});
+    box.addEventListener('click', function(e){ showAt(e.clientX, e.clientY); }, {passive:true});
+  }
+  function init(){
+    document.querySelectorAll('.chart-box[data-chart]').forEach(attachChartTooltip);
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
-</div></body></html>
+</body>
+</html>
