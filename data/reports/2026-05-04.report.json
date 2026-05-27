@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 4일 (월)",
     "previous_day_label": "4/30",
     "today_label": "5/4",
-    "generated_at": "2026-05-27 22:10 KST",
+    "generated_at": "2026-05-28 01:50 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1380,18 +1380,11 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "중앙일보는 5/3 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
       "아시아투데이는 5/3 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "이투데이는 5/3 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "이투데이는 5/3 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "중앙일보는 5/3 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
-      {
-        "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
-        "press": "중앙일보",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "2026-05-03 16:00"
-      },
       {
         "title": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ - 아시아투데이",
         "press": "아시아투데이",
@@ -1403,6 +1396,13 @@
         "title": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 - 이투데이",
         "press": "이투데이",
         "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10T3FpTVhQMnNha3BKVlJVX0NlT1ZObXdlc0g0NFpvU3N0QXBQbFg4UmlXci1TcFQ3dUVfbVRtcmpIQktHVnlWVGk5elRCdDIyMDhXXw?oc=5",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "2026-05-03 16:00"
+      },
+      {
+        "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
+        "press": "중앙일보",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "2026-05-03 16:00"
       }
@@ -1508,7 +1508,7 @@
       "previous_schedule_parse_failed": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-04.json",
+      "source_file": "data/news/2026-05-04.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1529,7 +1529,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 22:10:13 KST",
+      "merged_at": "2026-05-28 01:50:39 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

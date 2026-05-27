@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-28 01:12:18 KST",
+  "collected_at": "2026-05-28 01:52:02 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,9 +42,8 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
-    "석유 최고가격제·유류세 등 가격 안정 정책",
     "중동 정세와 원유·LNG 수급 리스크",
     "정유·석유화학 업계 실적·원가·제품 가격",
     "물가 지표와 에너지 비용 부담"
@@ -68,6 +67,17 @@
       "published_date": "2026-05-26",
       "published_at_kst": "2026-05-26 06:37",
       "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 KBS 뉴스",
+      "score": 36,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xbExnYWJoVE9uQUVzLXV0c0JoOHN0bERJOFRremp0ZVJqT3BCeWw0SXllazZKNjhseFFSa185MkR2bUFOQW9vMDJUY1p5c2VPekVacg?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 06:24",
+      "snippet": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 v.daum.net",
       "score": 36,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -169,17 +179,6 @@
       "snippet": "호르무즈 개방 기대에 국제 유가 급락···WTI 90달러선 마감 경향신문",
       "score": 26,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ - 울산신문",
-      "press": "울산신문",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUd9IBckFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUdw?oc=5",
-      "published_date": "2026-05-25",
-      "published_at_kst": "2026-05-25 21:39",
-      "snippet": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ 울산신문",
-      "score": 25,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"
     }
   ],

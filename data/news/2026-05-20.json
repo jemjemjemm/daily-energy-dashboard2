@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-20",
-  "collected_at": "2026-05-28 01:12:03 KST",
+  "collected_at": "2026-05-28 01:51:43 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -101,7 +101,7 @@
       "published_at_kst": "2026-05-19 18:51",
       "snippet": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 v.daum.net",
       "score": 37,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -138,9 +138,20 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "한일, 원유·석유제품 스와프 추진…\"공급망 위기 공동대응\" - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9yUkF6b2RXWnJkZ0RUcG5wZ3NjZS05c0lqZTUxeEk3X3lfV3UtQzBYUzFRam5MUWx4djg1Ni1LRUw0bzE0TUtMMWNiMlRxRmc?oc=5",
+      "published_date": "2026-05-19",
+      "published_at_kst": "2026-05-19 20:03",
+      "snippet": "한일, 원유·석유제품 스와프 추진…\"공급망 위기 공동대응\" v.daum.net",
+      "score": 34,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1XdXI4WlI5RFlaaS1yU2NWcFlMYXUwMHBLVGRZWDFjbkxIRXE0bWZpQlZEQnVtdjM3ZnFoN1BzVFpoM0lFcTB3QXdSVQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE52TWNyT2xUdHpzRlJ3T0QyaE5ZOFFYT09MZjlpc3ZYaXhRNy02UEdrREJSeGJIRDUzLTN2aXIyVW9aa2Y3Z0N1QTc1RnJzeUpjRXFXLQ?oc=5",
       "published_date": "2026-05-19",
       "published_at_kst": "2026-05-19 20:39",
       "snippet": "李·다카이치 '에너지 안보 밀착'…한일 '원유·석유제품' 스와프 v.daum.net",
@@ -168,17 +179,6 @@
       "snippet": "韓日, 원유·석유제품 스와프 추진…에너지 위기 공동 대응 한국경제",
       "score": 34,
       "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "한일, 원유·석유제품 공급차질시 빌려준다…“공급망 위기 공동대응” - 헤럴드경제",
-      "press": "헤럴드경제",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHUzhYMHdWUjJBdENRZXNPaHZDMjk1MGRQZktZb3g2MXloc0ROaEFoMzc1c3ZjNUwxaGFKX0RLUllJalhUWkRoa0JUeUpiekE5X1RzRnh3?oc=5",
-      "published_date": "2026-05-20",
-      "published_at_kst": "2026-05-20 05:59",
-      "snippet": "한일, 원유·석유제품 공급차질시 빌려준다…“공급망 위기 공동대응” 헤럴드경제",
-      "score": 34,
-      "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
       "collector": "google_news_rss"
     }
   ],

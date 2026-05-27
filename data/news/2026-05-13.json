@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-13",
-  "collected_at": "2026-05-28 01:11:37 KST",
+  "collected_at": "2026-05-28 01:51:12 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -102,7 +102,7 @@
       "published_at_kst": "2026-05-12 16:00",
       "snippet": "정유사 수익구조와 최고가격제 손실 4兆의 정체는? [이슈체크] v.daum.net",
       "score": 31,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
     {

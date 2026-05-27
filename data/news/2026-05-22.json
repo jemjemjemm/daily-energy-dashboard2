@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-22",
-  "collected_at": "2026-05-28 01:12:13 KST",
+  "collected_at": "2026-05-28 01:51:56 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -150,6 +150,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "IMF, 석유제품 최고가격제 등 전면적 가격동결 자제 권고 - 2news.co.kr",
+      "press": "2news.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE03ZWNkZDJfeHFvQWd6MVFHQ3RSc19KZWdxU2F4X3M3V0pIekF3YWxjUDRpZDUzV2hqT0ltOG0zSHdWeVJoTDVtdkZUekV5M01yaDg4eEhuOEo2R01MLU5MZXdxMEczdnM?oc=5",
+      "published_date": "2026-05-22",
+      "published_at_kst": "2026-05-22 10:32",
+      "snippet": "IMF, 석유제품 최고가격제 등 전면적 가격동결 자제 권고 2news.co.kr",
+      "score": 31,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "정부, 6차 석유 최고가격 동결…휘발유 1934원·경유 1923원 - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBoUnVtb1JiQ0R0RVRQc3JYa0tkSjAzZWlRWmJvMjQ1X05XamZvTmNqTEc5NjFOUnBVWlhwdVdfcEVZVFVPWk1EbFJ1Y3NFUjQ?oc=5",
@@ -167,17 +178,6 @@
       "published_date": "2026-05-22",
       "published_at_kst": "2026-05-22 07:08",
       "snippet": "정부, 6차 석유 최고가격 동결…휘발유 1934원·경유 1923원 아시아경제",
-      "score": 30,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "정부, 석유 최고 도매가 또 동결… 휘발유 1934원·경유 1923원 - 조선비즈 - Chosunbiz",
-      "press": "Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOekFtRFJ4Mms3YnBVWlRNcm1qX2RMcTNIRG1HdTh5ZjVHRVhsVEt1UEp2YUlSajlnUlliWHJYN0RlWEJVY3hxUGptMmZ6cTRYZElyR2d6NUxHS3dJTFJKTVlNNmpJd1FjcHYwVzdqaG03ZWtWU3RnVGQ4ZGFyMl9mNlV2ajRzd9IBmgFBVV95cUxPc0EzaFU3STVYWDE4eHg2cTdUZkhvVDFESGI1ZWk3S2ItcW00dVBZUm9lMGlKTXFTTmJXcEZvd3BiN3d0VTU4SVR0X0lQbjZOWjAyS0p0VnpMX2FSYzdHVDhSN1BtN05xZTlfX0trTkJBeW9wczkyUEJQdUp2blNKbG9jRkEwRXhadE5QejRfckRRenhIbXU3NGZB?oc=5",
-      "published_date": "2026-05-21",
-      "published_at_kst": "2026-05-21 19:03",
-      "snippet": "정부, 석유 최고 도매가 또 동결… 휘발유 1934원·경유 1923원 - 조선비즈 Chosunbiz",
       "score": 30,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-21",
-  "collected_at": "2026-05-28 01:12:08 KST",
+  "collected_at": "2026-05-28 01:51:49 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -51,6 +51,17 @@
   ],
   "articles": [
     {
+      "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CMnZXT0hjZlhEWWU1MC1zQUF5WXR4YUZxN2oybnd2NnNWNDFhOHZWMVBqLVZER0Jnak1PemhaZ1NxTGl0Z1BxUmw3Q0RUTEk?oc=5",
+      "published_date": "2026-05-21",
+      "published_at_kst": "2026-05-21 08:03",
+      "snippet": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 v.daum.net",
+      "score": 43,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "한일, 원유·석유제품 스와프 추진…LNG 수급도 공조 - 대한민국 정책브리핑",
       "press": "대한민국 정책브리핑",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95UkliNFE1MXRObWYwcjktRU10d1Y5anU0OHdlNzNiWU5YTGZRUmZPdjNMZDVGU0RycXR1VXd5aVJINzFqUUo1NVlmN19CSEVsMzRkZFcxWTVnRVFsMzBUSUEybzQ3VUJySmt5UA?oc=5",
@@ -90,6 +101,28 @@
       "published_date": "2026-05-21",
       "published_at_kst": "2026-05-21 06:00",
       "snippet": "4월 생산자물가 2.5%↑, 외환위기 후 최대폭 상승…석유제품 31.9%↑ 뉴스1",
+      "score": 33,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "4월 생산자물가 2.5%↑…석유제품 급등에 1998년 이후 최고 - 머니투데이 - 머니투데이",
+      "press": "머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0ycThmb2otQ0FnWU1UeHV5a0JtTG1oNURzM091aDNROG5KMHgtRTZ5UWZ3U2hObjl4d2Jud0R5OExYeDFlaGdHSFRrTmlGM2dvVF9nR2Q0anpfQ0U1b1RueWp4OGZqUzBZUXg40gFwQVVfeXFMTjQ5QXM3UmFLUlNITEZvNmFWZlh6ODdlQUdMMlFfdGZmWWZQaUprY1JTU295eDBTcVp2RTA4aTRPZERfWWpkclZDd3NFV1FOWGdSV0tFdUwyUjA5eHAteXVuMGhaRHNHSEVYTThUYmZ4LQ?oc=5",
+      "published_date": "2026-05-21",
+      "published_at_kst": "2026-05-21 06:00",
+      "snippet": "4월 생산자물가 2.5%↑…석유제품 급등에 1998년 이후 최고 - 머니투데이 머니투데이",
+      "score": 33,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "4월 생산자물가 2.5% 상승…석탄·석유제품 31.9% 급등 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZQmZ4THJiaVVZZndaSU1hZVNmR0cxSWVwOW5DenI3eUlGeHo1N25vM2QtQllKVlkzTDlDMmhJSnVXSXRtVFhmV2hCa2ljVWM?oc=5",
+      "published_date": "2026-05-21",
+      "published_at_kst": "2026-05-21 06:00",
+      "snippet": "4월 생산자물가 2.5% 상승…석탄·석유제품 31.9% 급등 v.daum.net",
       "score": 33,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
@@ -146,39 +179,6 @@
       "published_at_kst": "2026-05-20 17:50",
       "snippet": "한·일, 원유·LNG 공조 강화…에너지·공급망 협력 확대 대한일보",
       "score": 30,
-      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” - KBS 뉴스",
-      "press": "KBS 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE56bEdMQmk1VE5wRHBTd1A1bW1sUnJPb1RBdEp2VWdSSjBmbE5DTWRaYUt1VFlCVmpnMGxSVlhtLXgzRXphRjdWblVZNUpJMmk5V1E2RDN6NXgxbXc?oc=5",
-      "published_date": "2026-05-20",
-      "published_at_kst": "2026-05-20 22:21",
-      "snippet": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” KBS 뉴스",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8yQV9vZXhfQWd6UHRlbm1zNm9OSjRTbVRSMXp4REsxZEFEZUhQS19RVFRlTlktUEtJam1QeTR4MXpXTWIyMThpVGNjVmRPQnlWeGVqRg?oc=5",
-      "published_date": "2026-05-20",
-      "published_at_kst": "2026-05-20 22:23",
-      "snippet": "전국 주유소 기름값 2,000원대 유지…정유업계 “최고가격제 부담 누적” v.daum.net",
-      "score": 29,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "韓·日, 원유·석유제품 스와프 및 상호공급 협력 강화 - 데일리메이커",
-      "press": "데일리메이커",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1ucXlnUUo5aUM0aUVlSlRWb0pVWXFKTVlmeDZUSU90U2JPZ04xNXh3X2JTYnk5a1Utc1BQTzNFaTNUd3BLSzVzMlhURHBEVlVlY0hVVzJBOWhrbFNQMUQ2aGp4aE1ydw?oc=5",
-      "published_date": "2026-05-21",
-      "published_at_kst": "2026-05-21 07:04",
-      "snippet": "韓·日, 원유·석유제품 스와프 및 상호공급 협력 강화 데일리메이커",
-      "score": 29,
       "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"
     }

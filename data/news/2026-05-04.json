@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-04",
-  "collected_at": "2026-05-28 01:11:09 KST",
+  "collected_at": "2026-05-28 01:50:39 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -106,6 +106,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "이란, 이미 원유 생산량 감축 중...국제유가 변동성 확대 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBNTHdDWUhUbjRENFRlOFRIbTlvUWktR2pwazFUdDhGTGprTjZ1Mmk4a05MMDQ2ejdRNWdMU0pfNTVFSkFDd2RRS1Rsa2h4akE?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "이란, 이미 원유 생산량 감축 중...국제유가 변동성 확대 v.daum.net",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "베트남·호주와 ‘위기 협력’…원유·석유제품 나누고 신뢰자산 얻었다 - 한겨레",
       "press": "한겨레",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE52TkF4UmE0MEEySnV6ckRZTzB4cHVjM3NuZ2Jhbm91QVhEN1ZMV0JyYTN2NXg2RFVCaFFVNXhqYm1Kb2JmWk9sNFpmSjE0OE1ycmtiVkYxTWZUMzJDQXJfQXBTVGhwakpkbk1iZnRXbUJLQQ?oc=5",
@@ -130,7 +141,7 @@
     {
       "title": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA3dV8zTzVNRUJGSmVhRG5OMmJQTUtYV0lpUExYN1JYRUF0bW95azEzNU5yMV9uY3RFRFJtM0ZpSjdLbmtBQTRiUmk2WHJ6X2c?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE45TzRkWVBOOUNrVmdUMk1DS1ROV2ZiVGJfUnJFc2JOaFMxZkZzQXlYNHhJOVNFaV9URXBWOWpwVVBwV0FaOHd3bzYtQQ?oc=5",
       "published_date": "2026-05-03",
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 v.daum.net",
@@ -150,6 +161,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "'중동전쟁 3개월' 광주·전남, 유가 급등·원자재 수급난에 '울상' - 진일보",
+      "press": "진일보",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE8tSE5WckQ3NnJzUm5vaWNkWjhkT19wUF9lUnMtOUhEV1B4NmhkT25hbkQ0cUNPaG05aU1GRjZnOVMwaDZJclRTUEZjRGxTR04tbVV6MndwSHBYVUhNLU9xYy1xQlVna3pJWDQ4VkNaSQ?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "'중동전쟁 3개월' 광주·전남, 유가 급등·원자재 수급난에 '울상' 진일보",
+      "score": 23,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "[청년발언대] 중동전쟁 쇼크에 의료 현장 비상…정부, 나프타 긴급 확보 - 청년일보",
       "press": "청년일보",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50S2F5LTNJQTVqdkpBNjY5OWFtRlpRV0RYc0EzVTdNOXBacWNmUk5BY3dKV1pVcmtqRWFaUVBCMEc4a3FiUTBrcXBHUzdUOTJyWlBCRHR1MWxld3FiTXl1TS1Gd20zV0E?oc=5",
@@ -158,28 +180,6 @@
       "snippet": "[청년발언대] 중동전쟁 쇼크에 의료 현장 비상…정부, 나프타 긴급 확보 청년일보",
       "score": 22,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QN0V6VWhwMFA5UzNyRlprRTc2cUkzZlNEZURhRW5tbWhMSG5DUHp1aXozV09jTE9yVG1oakpyTXhxdjFwc1NzNnRMTU5XVTg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ v.daum.net",
-      "score": 22,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[사설] 호르무즈가 불러온 공급망 위기, 에너지 안보 새 틀 짜자 - 중앙일보",
-      "press": "중앙일보",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGM3hiVmRTNDVTdDVrYUhSTWhqYUlVakNMYnEyUGpRVU4xVTJfZWZULVk4b3pIdUVkVFZncndkQ3dQbWlQYWNIcUxfRDZnX25xQzNWYnVB?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "[사설] 호르무즈가 불러온 공급망 위기, 에너지 안보 새 틀 짜자 중앙일보",
-      "score": 22,
-      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
       "collector": "google_news_rss"
     }
   ],
