@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-14",
-  "collected_at": "2026-05-28 00:40:34 KST",
+  "collected_at": "2026-05-28 00:47:10 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -58,6 +58,17 @@
       "published_at_kst": "2026-05-13 16:00",
       "snippet": "정부 “석유 최고가격제, 국제유가 100달러 이하 돼야 해제 검토” v.daum.net",
       "score": 44,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "산업부 \"국제유가 100달러 이하로 떨어져야 최고가격제 종료 검토\" - 아시아경제",
+      "press": "아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1YdXhfVHVZT1N4SVA4UHZWYjJ0RGZ4bE5NX1hjUGZmMDRNalNsUVUzcmx4VEFtZDg0cU4zclYwWk1kQU9sMzR1UGg5Z2FhMHFIelJLRXFoWjFWSEIwU3FjVw?oc=5",
+      "published_date": "2026-05-14",
+      "published_at_kst": "2026-05-14 11:30",
+      "snippet": "산업부 \"국제유가 100달러 이하로 떨어져야 최고가격제 종료 검토\" 아시아경제",
+      "score": 39,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     },
@@ -163,23 +174,12 @@
     {
       "title": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9SbVJfTEZONVdBbG94YTlXQlJtNUhNSFlraEpVTDFqbG9aTnpiQy1jS3FwVXg0dzY3VVlSQ19Rak9rY2J3SW9WYkNEYzNpaUtYaFlwYg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9abTZRcU9wT2JQbWItU3o2WWREOFhDS3NKd3RCTklHQ1dsckUzTDhLX0REZGJZdW5BakZxMjd5SDM1MjlsQ3c?oc=5",
       "published_date": "2026-05-13",
       "published_at_kst": "2026-05-13 16:00",
       "snippet": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” v.daum.net",
       "score": 29,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 이란 협상 기대감 약화에 상승…WTI 100달러 위로 - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBoQ3lwaXJRTEFmczZqdUo5NTFzeTlfczhmenN6cU9XbGFfNlo4QTczbTQxalJldnlSWF93cjRBWE1pLWQxOGtVYUhQYmh2LW1SV1NlSFctTGh6QknSAWBBVV95cUxQcTgzclpteG9FekVjX1NWUTNfNm9ra3EzVlkzZW54UmZ6Y09Kc0tsR1p2eHllSUVIcHdnbFRRNWpYdUxlWGZURUJDcndFZ3ktb01UamZKVzFVUnU1Y2RqcjA?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "국제유가, 이란 협상 기대감 약화에 상승…WTI 100달러 위로 연합뉴스",
-      "score": 28,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }
   ],

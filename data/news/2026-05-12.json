@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-12",
-  "collected_at": "2026-05-28 00:40:25 KST",
+  "collected_at": "2026-05-28 00:47:00 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -97,7 +97,7 @@
     {
       "title": "정부, 당분간 '석유 최고가격제' 유지…폐업 주유소는 급증 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBCbVZCcGYzSVo1ME1sUWt4ZV92b2MtVDMweERwLWRDUDRFZGRoSmlnemR0T1c5T0dVWFh1SzE2LU1sbnA2dnc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFByMDhtYlVTeXNUTThPZTBvNUFENmljblE3Uzh3NFR4Mk9uWEJYQTNwbkFVdGZBa3BZUlp0Ul94YmNvR3pVbUljbDNEcw?oc=5",
       "published_date": "2026-05-11",
       "published_at_kst": "2026-05-11 16:00",
       "snippet": "정부, 당분간 '석유 최고가격제' 유지…폐업 주유소는 급증 v.daum.net",

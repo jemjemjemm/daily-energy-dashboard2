@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-06",
-  "collected_at": "2026-05-28 00:40:06 KST",
+  "collected_at": "2026-05-28 00:46:42 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,12 +42,12 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
     "중동 정세와 원유·LNG 수급 리스크",
-    "물가 지표와 에너지 비용 부담",
-    "정부·국회 에너지 정책"
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
   ],
   "articles": [
     {
@@ -117,17 +117,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "[국제]호르무즈 긴장 재고조 국제유가 5% 급등...트럼프 \"유가 급락할 것\" - YTN",
-      "press": "YTN",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9HS2ZJTHdNYWRvQUxVREhFWFN4OEw0Qk95QlpSWHBIendUNWFNMDhHZVFXNXBqRTdTcmJFcTk5bTRtVGwzZWlqeFJJbzhTdldqOVlRdERwX1NpcVF0SjNnTGJqSWZ1TWpReEIzeGsybw?oc=5",
-      "published_date": "2026-05-05",
-      "published_at_kst": "2026-05-05 16:00",
-      "snippet": "[국제]호르무즈 긴장 재고조 국제유가 5% 급등...트럼프 \"유가 급락할 것\" YTN",
-      "score": 30,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "호르무즈 긴장속 국제유가 하루만에 하락 전환 - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lVWtuN2tHeVBXNzVwOVFOZTVaNU54aXpNVFZvRzJQX1lyczNYak5QVUpLU0xDZTNNZnNmWXJ4TjRCUlRnVWdVdzNXTWlGMFBfcXhrSQ?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "[휘발유 2천원 시대] 정부 “원유 80% 확보”…공급망 다변화 yonhapmidas.com",
       "score": 28,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "원가냐, 시세냐… 정부·업계, 석유 최고가격제 손실보전 방식 두고 ‘이견’ - 브릿지경제",
+      "press": "브릿지경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45ZThPY0Z2MEVLTF9RRUNZbjJrWmRTNFFyMmJ5U1pnSy1nSXN4RkZ2amNnTDE3UDBlY1RGazMwYm94VGNfTkU0WUV0dWwtY1NmQ3Q0M2dMaGJpdw?oc=5",
+      "published_date": "2026-05-05",
+      "published_at_kst": "2026-05-05 16:00",
+      "snippet": "원가냐, 시세냐… 정부·업계, 석유 최고가격제 손실보전 방식 두고 ‘이견’ 브릿지경제",
+      "score": 26,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
       "collector": "google_news_rss"
     }
   ],

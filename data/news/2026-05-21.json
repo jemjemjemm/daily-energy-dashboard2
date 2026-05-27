@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-21",
-  "collected_at": "2026-05-28 00:40:58 KST",
+  "collected_at": "2026-05-28 00:47:34 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -106,17 +106,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "국제유가 불안에 유류세 인하 계속...정부 “7월까지 유지” - ebn.co.kr",
-      "press": "ebn.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1FREczazJhR045bUF6Zm1NeTRSLWUybW42MHNIV3VNdHZ5ZVhCeklSVzVJbHlLY0NLX0VSYmF6VFhPVG8zWFlmREdiWURqSE9PUEpxdTVCSFVhLXA2ZHNKSVJRdTVwMGZ2?oc=5",
-      "published_date": "2026-05-21",
-      "published_at_kst": "2026-05-21 08:25",
-      "snippet": "국제유가 불안에 유류세 인하 계속...정부 “7월까지 유지” ebn.co.kr",
-      "score": 33,
-      "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "석유가격 주도 인플레…4월 생산자물가 상승률 외환 위기 이후 최고치 - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE81WkY4VmxfQTJGcnVCUlRlM0M4Z3JFUGFFOUR1LWNybnBNMTF4dWFYdjVqaEwzSjV3Y2xhWWJyRUhid095NGM4TW5wcFdwQVlTVzNnZA?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "韓·日, 원유·석유제품 스와프 및 상호공급 협력 강화 데일리메이커",
       "score": 29,
       "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "韓·日, 원유·석유제품 스와프 및 상호공급 협력 강화 - gukjenews.com",
+      "press": "gukjenews.com",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FbUx2TlhIZXB4aDlPeHFmZ0d4Ml9NcUFGS2tkcVBBNVMzcjdrZmRhQ2tJSG90ZTYxX2J6Z2JtNFZ6alFKTTY2dHBMRWxSWnR2SkRfWHpiZ1A2Rk5vUFZZZWVmT1MzT01JZ05TVXV3?oc=5",
+      "published_date": "2026-05-21",
+      "published_at_kst": "2026-05-21 07:04",
+      "snippet": "韓·日, 원유·석유제품 스와프 및 상호공급 협력 강화 gukjenews.com",
+      "score": 29,
+      "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
       "collector": "google_news_rss"
     }
   ],
