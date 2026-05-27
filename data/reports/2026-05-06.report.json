@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 6일 (수)",
     "previous_day_label": "5/4",
     "today_label": "5/6",
-    "generated_at": "2026-05-27 13:42 KST",
+    "generated_at": "2026-05-27 15:06 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1450,7 +1450,7 @@
     "trend_paragraphs": [
       "연합뉴스는 5/5 16:00 입력 기사에서 중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ 연합뉴스.",
       "연합뉴스는 5/5 16:00 입력 기사에서 중동 긴장 재고조에 국제유가 급등…브렌트유 5.8%↑(종합) 연합뉴스.",
-      "yonhapmidas.com는 5/5 16:00 입력 기사에서 [휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com."
+      "인더스트리뉴스는 5/5 16:00 입력 기사에서 국제유가, 美-이란 휴전 붕괴 위기에 급등…브렌트 6%·WTI 4% 올라 인더스트리뉴스."
     ],
     "articles": [
       {
@@ -1468,10 +1468,10 @@
         "published_at_kst": "2026-05-05 16:00"
       },
       {
-        "title": "[휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 - yonhapmidas.com",
-        "press": "yonhapmidas.com",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9tdFhMOVl1Ykk2U3Q4UTFQbEp0bEtSZzdpWGluaGlUTHZKU2dsdUYzdThRNkNEcEc4QmQyXzh4U2RTekpTTlZHTlh6bXpmeGJWMFd4VnNjVHlfUmt6NThvR1RYYUJiZnJldjJWVGJB?oc=5",
-        "summary": "[휘발유 2천원 시대] ‘석유 최고가격제’로도 버겁다…오일쇼크급 물가충격 yonhapmidas.com.",
+        "title": "국제유가, 美-이란 휴전 붕괴 위기에 급등…브렌트 6%·WTI 4% 올라 - 인더스트리뉴스",
+        "press": "인더스트리뉴스",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jWGVacGtUUE80TFNZbGFaajl5ellUV3lUQVV0M1JYRTFyM3hvTnh3OVJFWGoxeU1WTXVaTkVhRWRBaGN3bW1EX1pheWZEeTVqdmJsRFNCZW4tellZOTFNUkhYNXNtMUVWbVN2Y3VwMTExQQ?oc=5",
+        "summary": "국제유가, 美-이란 휴전 붕괴 위기에 급등…브렌트 6%·WTI 4% 올라 인더스트리뉴스.",
         "published_at_kst": "2026-05-05 16:00"
       }
     ],
@@ -1596,7 +1596,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 13:42:31 KST",
+      "merged_at": "2026-05-27 15:07:03 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

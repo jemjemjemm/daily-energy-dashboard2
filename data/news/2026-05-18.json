@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-18",
-  "collected_at": "2026-05-27 13:43:05 KST",
+  "collected_at": "2026-05-27 15:07:40 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -117,6 +117,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "국제유가 다시 들썩…대전 휘발유 2000원 턱밑 - 대전일보",
+      "press": "대전일보",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9CZ01MQVdNTXJ3SDhkVHE1VlQ0OTNPalJhRUhsdk1sYUVKbWlXTU1BZUYwdU5PNkJLWDlkdTdwVlYwa1VSeVBONHdkX2xxUzNnMlIzd1M4aVBuVUtNbFZwN0k5RngtY0FzblU3MWhmc9IBc0FVX3lxTE91SUhjbHdoQlpPeWhtd2ZmcDd3cFFmNXc1SWVLZGFRb25OUHRKMG54Z0NjbU9FSUZhRkxwczUzSUI3UFlnSXhfZmtlZmJCTGhneExQZUtrcXctUXdUVVFCbUlUbEFMSWtDdHBDa0pzOS1aTWM?oc=5",
+      "published_date": "2026-05-17",
+      "published_at_kst": "2026-05-17 16:00",
+      "snippet": "국제유가 다시 들썩…대전 휘발유 2000원 턱밑 대전일보",
+      "score": 29,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "[진단] 중동發 LNG공급망 위기…효자노릇 한 가스公 해외사업 - 이투뉴스",
       "press": "이투뉴스",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9VZEZRT25tS2djcHR1X2ZPNGhPbVdkeko2MjFSM1pweWRsNTI4bzE3NmtyZmlCX1ZWYWxjanpyYjdXUG9QcWxHSDlxYWVaUVJEZDRXU2pIM0IwYkttR1dUMTRvU0VvcjjSAWtBVV95cUxQekdjUUhDNTdGRHNsWlJMZE5idjN0Szl6TjB6UjZWUjFZdGlyd2N5WklrbzdJUHRxSkUzTm5LM3VrWGtVSFJVS1hiVmJFUXN3eW9WRDRBUFFwd1NJcjVPeC1IMWdrYU9DRThFZw?oc=5",
@@ -167,17 +178,6 @@
       "published_date": "2026-05-17",
       "published_at_kst": "2026-05-17 16:00",
       "snippet": "나프타 수급 거의 회복됐다지만…정유업계는 '한숨' v.daum.net",
-      "score": 25,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "나프타 수급 거의 회복됐다지만…정유업계는 '한숨' - 노컷뉴스",
-      "press": "노컷뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1kTmdqOWlPTkUtVFdjc0FCdXI4WklvTjBZNnhMX2ZuRGFReWl4STZraDZmLWRBc29Jc3F3V3cyb3Q1dU90OEUwekRySHVLRlB0ZkE?oc=5",
-      "published_date": "2026-05-17",
-      "published_at_kst": "2026-05-17 16:00",
-      "snippet": "나프타 수급 거의 회복됐다지만…정유업계는 '한숨' 노컷뉴스",
       "score": 25,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
       "collector": "google_news_rss"

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-04",
-  "collected_at": "2026-05-27 13:42:27 KST",
+  "collected_at": "2026-05-27 15:06:58 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -62,6 +62,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ - 아시아투데이",
+      "press": "아시아투데이",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBtalN3V2k4Nks0V2lpa2JRLVN2S3Fhcm5qSl82Y2RKM3NRcE80dnEwU2tkcXhKM0U2OFlHTEptMEZDVlBNSWRtcWNrV0lrbDBVRVo2cXJ6MjNZZk9Yci1yYk9jT3hKY240S2pZUVp3?oc=5",
+      "published_date": "2026-05-03",
+      "published_at_kst": "2026-05-03 16:00",
+      "snippet": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ 아시아투데이",
+      "score": 35,
+      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 - 뉴스1",
       "press": "뉴스1",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBMeVJHNGhpWW5yR1JrcVVtaXNVeDVhS1N4Vmc1Q1FXR2JzazYyaTJIWlZsTmQwaXBJSFVHTVdxWlU0c0FYMzJuczQwVnN5UlVmNjlXRg?oc=5",
@@ -69,7 +80,7 @@
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1",
       "score": 33,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -169,17 +180,6 @@
       "snippet": "[청년발언대] 중동전쟁 쇼크에 의료 현장 비상…정부, 나프타 긴급 확보 청년일보",
       "score": 22,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "한-호주, LNG 및 광물 등 에너지자원 안보 공조 강화 - 가스신문",
-      "press": "가스신문",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1EeF9iMjRpeE0zbFVDaHVlMnlFN0s1Y284c3NzV1FGOE11b0xNNWpvTExwZzdfdWU4UjBUNC1SUHRieVpmVFB3QVpTaDF3eHdObG1ZZnc0bXVRNGJaeFo3cGpOOHZvc2tNa0HSAW5BVV95cUxPNUhoXzh2aUdTRUJtTlZsM1lDeUNlbWx3QlMxMWJiR3FjNE1aTWlXU1dFRF91YVJ6RDU5TllWTk5XSGJWSVlVWUJxLUhWSEdZREk0eWNjTWVSVWZNNWxTdXJYVGZENzliYk9wWlRVUQ?oc=5",
-      "published_date": "2026-05-04",
-      "published_at_kst": "2026-05-04 10:57",
-      "snippet": "한-호주, LNG 및 광물 등 에너지자원 안보 공조 강화 가스신문",
-      "score": 22,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
       "collector": "google_news_rss"
     }
   ],

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 26일 (화)",
     "previous_day_label": "5/22",
     "today_label": "5/26",
-    "generated_at": "2026-05-27 13:43 KST",
+    "generated_at": "2026-05-27 15:07 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1451,8 +1451,8 @@
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
       "기후에너지경제는 5/25 18:07 입력 기사에서 [특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 기후에너지경제.",
-      "연합뉴스는 5/26 07:26 입력 기사에서 국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 연합뉴스.",
-      "v.daum.net는 5/26 08:03 입력 기사에서 국제유가 80달러 보인다…WTI 90. 31달러에 마감 v.daum.net."
+      "KBS 뉴스는 5/26 06:05 입력 기사에서 종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 KBS 뉴스.",
+      "연합뉴스는 5/26 07:26 입력 기사에서 국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 연합뉴스."
     ],
     "articles": [
       {
@@ -1463,18 +1463,18 @@
         "published_at_kst": "2026-05-25 18:07"
       },
       {
+        "title": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 - KBS 뉴스",
+        "press": "KBS 뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42MzFaS1BXRkM4VnM1aEFsQWoyZXBYLUlRU0pzOEVkWl9ZOVBKVmNiWXhWVnRfblQwcnV4a3lPdG9ZcElzSmlWTU82Q1FCeFhTWFoxYzF5WmxLcmc?oc=5",
+        "summary": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 KBS 뉴스.",
+        "published_at_kst": "2026-05-26 06:05"
+      },
+      {
         "title": "국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 - 연합뉴스",
         "press": "연합뉴스",
         "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4dzljUlhla18ycEVXczk3VmlMV1BielBxUnZBdlRiYkJMZFR0VnZQQmI5R3VKdWlfbm4zUTh5Z3NnRTI2WFNOX21ka2YwejMxVWwycVhXTnhzN3lTdkRKVtIBYEFVX3lxTFA4dzljUlhla18ycEVXczk3VmlMV1BielBxUnZBdlRiYkJMZFR0VnZQQmI5R3VKdWlfbm4zUTh5Z3NnRTI2WFNOX21ka2YwejMxVWwycVhXTnhzN3lTdkRKVg?oc=5",
         "summary": "국제유가, 호르무즈 재개방 기대에 7% 안팎 급락 연합뉴스.",
         "published_at_kst": "2026-05-26 07:26"
-      },
-      {
-        "title": "국제유가 80달러 보인다…WTI 90. 31달러에 마감 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1BRk4wN1BwVFdrNEMyVl92LVd0M0xKRlZHTnJLRUhKVzRXel8zYWhJQlVHeks2NVdSTWFFaHJzMExOdnVWV1VtVWZDRk5Bd1E?oc=5",
-        "summary": "국제유가 80달러 보인다…WTI 90. 31달러에 마감 v.daum.net.",
-        "published_at_kst": "2026-05-26 08:03"
       }
     ],
     "source": "Google News RSS",
@@ -1595,7 +1595,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 13:43:28 KST",
+      "merged_at": "2026-05-27 15:08:03 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

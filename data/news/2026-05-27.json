@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-27",
-  "collected_at": "2026-05-27 13:43:32 KST",
+  "collected_at": "2026-05-27 15:08:08 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -115,6 +115,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ - MBC 뉴스",
+      "press": "MBC 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jb29leEpwTGgyYkRUQ09RMGpxR1pCUHNnazZBUlV6VzU3dVFkWElhdG5uQkZxY0RoblY1V2FzXzkwWVRZdm9SMk9XT2YtWl9Zb0xqQkZLSkxpMkI0MnFPWU9uMC1jNDY4dTgzaV8zbGZtMF9o0gF0QVVfeXFMUF9yX2dYdVdRa19CYVJlb0JsUXJZSEc0eDhCM2k3SEZzbmZMRnRYakVTLUpydUtHdU5vNUxpYVNpT2l1SFE5d004Mm1ZcHpUcWVaakxPbzNfcDNLWllvN2t2b1UyVjltNVcxNExyZFh0MXdobXU?oc=5",
+      "published_date": "2026-05-27",
+      "published_at_kst": "2026-05-27 05:35",
+      "snippet": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ MBC 뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "국제유가, 美 공습에 다시 출렁⋯브렌트유 4%반등 - 브릿지경제",
       "press": "브릿지경제",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5CR0wxMTdIbF9ocFdvYjE1UjkwZllwTlMyYlJZN1VXZjI1ZkFzaXBaMTdZWEt4ejY3NEQxS25DUnV4TE81T0E4Y0d6dVRDUGpDeDYwTkxfMk4xdw?oc=5",
@@ -132,17 +143,6 @@
       "published_date": "2026-05-27",
       "published_at_kst": "2026-05-27 07:19",
       "snippet": "미국 이란 공습에 국제유가 브렌트유 3%대 강세 [상보] 이투데이",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ - MBC 뉴스",
-      "press": "MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jb29leEpwTGgyYkRUQ09RMGpxR1pCUHNnazZBUlV6VzU3dVFkWElhdG5uQkZxY0RoblY1V2FzXzkwWVRZdm9SMk9XT2YtWl9Zb0xqQkZLSkxpMkI0MnFPWU9uMC1jNDY4dTgzaV8zbGZtMF9o0gF0QVVfeXFMUF9yX2dYdVdRa19CYVJlb0JsUXJZSEc0eDhCM2k3SEZzbmZMRnRYakVTLUpydUtHdU5vNUxpYVNpT2l1SFE5d004Mm1ZcHpUcWVaakxPbzNfcDNLWllvN2t2b1UyVjltNVcxNExyZFh0MXdobXU?oc=5",
-      "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 05:35",
-      "snippet": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ MBC 뉴스",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -170,12 +170,12 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "이란 협상 불확실성에 국제유가 또 요동…브렌트유 4%↑ - 뉴시스",
-      "press": "뉴시스",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9zcG55bUQ0ZGJRT3FrNVJ4NmY4WDlrSTZ5eUlWcTNvSDVZc0JPZ1JHYzRwczdSb0tsMy1qSHQ2alFxUHNsbnk4UWZvdmJLWkdzcE9mSjVnanlxRV90ZkRNNWJwYXozRkxnenRKdmNlbXVNNzhoZjdSTNIBeEFVX3lxTE9zcG55bUQ0ZGJRT3FrNVJ4NmY4WDlrSTZ5eUlWcTNvSDVZc0JPZ1JHYzRwczdSb0tsMy1qSHQ2alFxUHNsbnk4UWZvdmJLWkdzcE9mSjVnanlxRV90ZkRNNWJwYXozRkxnenRKdmNlbXVNNzhoZjdSTA?oc=5",
+      "title": "미, 이란 남부 전격 공습에 국제유가 급반등…브렌트유 4% 가까이 급등 - 뉴스로드",
+      "press": "뉴스로드",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBaVE51ckxEWk5NVjB4emVCZmZKZDVKalRKbi1RcWV1eTMxRm9jLWRON3JGMVNVaTB1Mm9ob0JFX1N6UFpGaXlnYVhvdzktbTJkVlpiOHBWQmxvRjZ3SGhZRnotV3pRZFh5aG1z0gFvQVVfeXFMTjlfc2NxVFBpRFFRWC1YcERRSFJRdlp2Mm14V1R2MTNnWTN6MFZYcGZ0MWpkMUw0WjRzT21Ya0hjUXcyNElfWUcyRFBlV0txSXRNcDdRdXdtVi03aTRDMDc1am4zekxHZXN5ZVR5OFdV?oc=5",
       "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 06:49",
-      "snippet": "이란 협상 불확실성에 국제유가 또 요동…브렌트유 4%↑ 뉴시스",
+      "published_at_kst": "2026-05-27 07:58",
+      "snippet": "미, 이란 남부 전격 공습에 국제유가 급반등…브렌트유 4% 가까이 급등 뉴스로드",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"

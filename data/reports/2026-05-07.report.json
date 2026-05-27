@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 7일 (목)",
     "previous_day_label": "5/6",
     "today_label": "5/7",
-    "generated_at": "2026-05-27 13:42 KST",
+    "generated_at": "2026-05-27 15:07 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1495,7 +1495,7 @@
       {
         "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - v.daum.net",
         "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA0dlVMa0xwV3c4UC1EUThMdUZqdkJTbkZEX2ZOWFd3X05faVlMdnNYenNxQk9YcWhhWVlNYlRpRlc5Q3BFcGJxQzBDWjBkb1U?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBIVjVHdjhTWkIxYklBb2E2NUNpZUQ5a1Ezd2lhMWQ2MnNzZnJJTFJlWXVDMVU1Z3Y4aV9odmM2YzVKRnUtQ1E?oc=5",
         "summary": "정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net.",
         "published_at_kst": "2026-05-06 16:00"
       }
@@ -1618,7 +1618,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 13:42:36 KST",
+      "merged_at": "2026-05-27 15:07:08 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

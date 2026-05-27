@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-07",
-  "collected_at": "2026-05-27 13:42:35 KST",
+  "collected_at": "2026-05-27 15:07:08 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -75,7 +75,7 @@
     {
       "title": "정유사 \"팔수록 손해…최고가격제 손실 4조\" - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA0dlVMa0xwV3c4UC1EUThMdUZqdkJTbkZEX2ZOWFd3X05faVlMdnNYenNxQk9YcWhhWVlNYlRpRlc5Q3BFcGJxQzBDWjBkb1U?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBIVjVHdjhTWkIxYklBb2E2NUNpZUQ5a1Ezd2lhMWQ2MnNzZnJJTFJlWXVDMVU1Z3Y4aV9odmM2YzVKRnUtQ1E?oc=5",
       "published_date": "2026-05-06",
       "published_at_kst": "2026-05-06 16:00",
       "snippet": "정유사 \"팔수록 손해…최고가격제 손실 4조\" v.daum.net",
@@ -152,7 +152,7 @@
     {
       "title": "휘발유 21%↑·경유 30%↑…소비자물가 1년9개월 만에 최고 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE54QlBYRGJXYTdkSUVYUGozRGVfSE04c3JPZWFmbl81cVBhckJqdVQ5TjFsOG03UHlleUcyUlhXeXFUR1laMl9lYzlNTzlsSi1TLUdRcA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBwRW9rSnlDZFVlVWJhWFVwYV9vN3Q1ZGlhdzF6N2lPb04ycmN1NVVpUkVITks5SjBLTlJmRi1waW9ua2dJT28taF8xZHZNSG8?oc=5",
       "published_date": "2026-05-06",
       "published_at_kst": "2026-05-06 16:00",
       "snippet": "휘발유 21%↑·경유 30%↑…소비자물가 1년9개월 만에 최고 v.daum.net",

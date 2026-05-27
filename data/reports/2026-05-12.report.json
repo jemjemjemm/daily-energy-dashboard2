@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 12일 (화)",
     "previous_day_label": "5/11",
     "today_label": "5/12",
-    "generated_at": "2026-05-27 13:42 KST",
+    "generated_at": "2026-05-27 15:07 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1473,7 +1473,7 @@
     "trend_paragraphs": [
       "v.daum.net는 5/11 16:00 입력 기사에서 '더 멀어지는' 석유 최고가격제 출구... 종전협상 결렬에 국제유가 3.4% ↑ v.daum.net.",
       "머니투데이는 5/11 16:00 입력 기사에서 [컨콜]에쓰오일 \"석유가격 최고가격제 따른 손실, 상당한 규모\" 머니투데이.",
-      "JTBC는 5/11 16:00 입력 기사에서 정부, 당분간 ‘석유 최고가격제’ 유지…폐업 주유소는 급증 JTBC."
+      "문화일보는 5/11 16:00 입력 기사에서 [속보]트럼프, 이란 제안 거절하자 국제유가 급등…브렌트유 3%대↑ 문화일보."
     ],
     "articles": [
       {
@@ -1491,10 +1491,10 @@
         "published_at_kst": "2026-05-11 16:00"
       },
       {
-        "title": "정부, 당분간 ‘석유 최고가격제’ 유지…폐업 주유소는 급증 - JTBC",
-        "press": "JTBC",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9UYi1kNW9WZlNNQTh4NWt3YXZFZ1pDc1Y0REVkM3pubVlWRDA1blE5Ul84TW1hTUc4UjkyMWR6cEwwcm8tR1lyUzd3MF9XTzFqS0lXbw?oc=5",
-        "summary": "정부, 당분간 ‘석유 최고가격제’ 유지…폐업 주유소는 급증 JTBC.",
+        "title": "[속보]트럼프, 이란 제안 거절하자 국제유가 급등…브렌트유 3%대↑ - 문화일보",
+        "press": "문화일보",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBNNDJRWmM5V0tHM25XdDI1Nm94TmZYOWhiLTdIYzZ0cG56RTZCMzZMakZPVURHS283WFlEZnlRcEtrVXA0UGhPNWh0UHFXN1hR?oc=5",
+        "summary": "[속보]트럼프, 이란 제안 거절하자 국제유가 급등…브렌트유 3%대↑ 문화일보.",
         "published_at_kst": "2026-05-11 16:00"
       }
     ],
@@ -1616,7 +1616,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 13:42:49 KST",
+      "merged_at": "2026-05-27 15:07:22 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

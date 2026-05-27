@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-27 13:43:28 KST",
+  "collected_at": "2026-05-27 15:08:03 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -59,6 +59,17 @@
       "snippet": "[특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 기후에너지경제",
       "score": 36,
       "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 - KBS 뉴스",
+      "press": "KBS 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42MzFaS1BXRkM4VnM1aEFsQWoyZXBYLUlRU0pzOEVkWl9ZOVBKVmNiWXhWVnRfblQwcnV4a3lPdG9ZcElzSmlWTU82Q1FCeFhTWFoxYzF5WmxLcmc?oc=5",
+      "published_date": "2026-05-26",
+      "published_at_kst": "2026-05-26 06:05",
+      "snippet": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 KBS 뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -156,17 +167,6 @@
       "published_date": "2026-05-26",
       "published_at_kst": "2026-05-26 06:49",
       "snippet": "해경·해수부, SK인천석유화학 해양오염 예방점검…유조선 접안·유류 이송시설 집중 확인 해사신문",
-      "score": 21,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[K-석유화학 진단] 1분기 반짝 석유화학업계, 공급과잉 그림자는 그대로 - 한스경제",
-      "press": "한스경제",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBVZ1QtUGtIbzY2YzNUSmpQOF9zVk1sSDdYUjBydERJN1BCRW45SG1iQkNSaUZGbHZKV1Q0Y3lHMUk1T2ZMa1QwOC1nQlp2T2lXU2ptNndPNHU2OE1nYUFqdFNBX0FPMHBZVHNfUHQ2SdIBb0FVX3lxTFBVZ1QtUGtIbzY2YzNUSmpQOF9zVk1sSDdYUjBydERJN1BCRW45SG1iQkNSaUZGbHZKV1Q0Y3lHMUk1T2ZMa1QwOC1nQlp2T2lXU2ptNndPNHU2OE1nYUFqdFNBX0FPMHBZVHNfUHQ2SQ?oc=5",
-      "published_date": "2026-05-26",
-      "published_at_kst": "2026-05-26 07:33",
-      "snippet": "[K-석유화학 진단] 1분기 반짝 석유화학업계, 공급과잉 그림자는 그대로 한스경제",
       "score": 21,
       "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
       "collector": "google_news_rss"

@@ -3,7 +3,7 @@
   "source": "세이프타임즈",
   "category": "오늘의 주요일정",
   "date": "2026-04-30",
-  "collected_at": "2026-05-27 13:42:23 KST",
+  "collected_at": "2026-05-27 15:06:54 KST",
   "success": false,
   "error": "오늘의 주요일정 대상 기사를 찾지 못했습니다. target=2026-04-30, sample_candidates=['[오늘의 주요일정·27일] 서울시 서소문고가 붕괴 브리핑'], day_matched=[]"
 }
