@@ -16,6 +16,12 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List
+try:
+    from scripts.find_assembly_video import search_assembly_for_title
+except Exception:
+    # optional helper; network lookup may be unavailable in some environments
+    def search_assembly_for_title(title: str, date: str | None = None) -> None:
+        return None
 
 BAD_TITLES = ["오늘의 주요일정", "주요일정", "대표 기사 데이터 없음", "자동 수집 미적용", "대표 기사 미확인"]
 BAD_SUMMARY_PHRASES = [
@@ -186,7 +192,8 @@ def parse_args():
 def read_json(path: Path) -> Dict[str, Any]:
     if not path.exists():
         return {}
-    return json.loads(path.read_text(encoding="utf-8"))
+    # 사용되는 JSON 파일이 BOM(utf-8-sig)을 포함할 수 있으므로 안전하게 처리
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
@@ -439,10 +446,25 @@ def main() -> int:
                     break
             if not chosen and candidates:
                 chosen = candidates[0]
+            # 추가: 국회 영상회의록 자동 조회 통합
+            assembly_link = None
+            try:
+                # search_assembly_for_title은 네트워크 호출을 수행할 수 있음
+                assembly_link = search_assembly_for_title(it_title, a.date)
+            except Exception:
+                assembly_link = None
+
             if chosen:
-                issue["links"] = [{"label": clean(chosen.get("press") or "관련 자료"), "url": clean(chosen.get("url") or "")}]
+                links = [{"label": clean(chosen.get("press") or "관련 자료"), "url": clean(chosen.get("url") or "")}]
+                # 후보가 assembly 링크가 아닐 경우, 자동 검색으로 assembly 링크가 발견되면 우선 추가
+                if assembly_link and "assembly.go.kr" in assembly_link:
+                    links.insert(0, {"label": "국회 영상회의록", "url": assembly_link})
+                issue["links"] = links
             else:
-                issue["links"] = [related_default]
+                if assembly_link and "assembly.go.kr" in assembly_link:
+                    issue["links"] = [{"label": "국회 영상회의록", "url": assembly_link}]
+                else:
+                    issue["links"] = [related_default]
         except Exception:
             issue.setdefault("links", [related_default])
     atomic_write_json(report_path, report)
