@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 15일 (금)",
     "previous_day_label": "5/14",
     "today_label": "5/15",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 시장상황점검회의",
-      "description": "08:00 · 재경부 / 08:00 시장상황점검회의",
+      "title": "시장상황점검회의",
+      "description": "08:00 · 재경부",
       "time": "08:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": ""
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "정무위원회 법안심사제1소위원회(09:20 본관 604호)",
-      "description": "09:20 · 국회 / 정무위원회 법안심사제1소위원회(09:20 본관 604호)",
+      "title": "정무위원회 법안심사제1소위원회",
+      "description": "09:20 · 국회",
       "time": "09:20",
       "org": "국회",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "본관 604호"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "10:00 정무위 전체회의(10:00 국회)",
-      "description": "10:00 · 권오을 장관 / 10:00 정무위 전체회의(10:00 국회)",
+      "title": "정무위 전체회의",
+      "description": "10:00 · 권오을 장관",
       "time": "10:00",
       "org": "권오을 장관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "국회"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 정무위 전체회의(국회)",
-      "description": "10:00 · 공정위 주병기 위원장 / 10:00 정무위 전체회의(국회)",
+      "title": "정무위 전체회의",
+      "description": "10:00 · 공정위 주병기 위원장",
       "time": "10:00",
       "org": "공정위 주병기 위원장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "국회"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
-      "description": "10:00 · 이형일 1차관 / 10:00 중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
+      "title": "중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
+      "description": "10:00 · 이형일 1차관",
       "time": "10:00",
       "org": "이형일 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": ""
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "정무위원회 전체회의(10:00 본관 604호)",
-      "description": "10:00 · 국회 / 정무위원회 전체회의(10:00 본관 604호)",
+      "title": "정무위원회 전체회의",
+      "description": "10:00 · 국회",
       "time": "10:00",
       "org": "국회",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "본관 604호"
     }
   ],
   "schedules": [
@@ -1627,7 +1663,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-15.json",
+      "source_file": "data\\news\\2026-05-15.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1648,7 +1684,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:48 KST",
+      "merged_at": "2026-05-27 22:10:49 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

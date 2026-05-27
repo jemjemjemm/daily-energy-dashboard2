@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 18일 (월)",
     "previous_day_label": "5/15",
     "today_label": "5/18",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 비상경제본부회의 겸 경제관계장관회의(정부세종청사)",
-      "description": "08:00 · 기획처 / 08:00 비상경제본부회의 겸 경제관계장관회의(정부세종청사)",
+      "title": "비상경제본부회의 겸 경제관계장관회의",
+      "description": "08:00 · 기획처",
       "time": "08:00",
       "org": "기획처",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부세종청사"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 비상경제본부회의 참석(서울)",
-      "description": "08:00 · 김민재 차관 / 08:00 비상경제본부회의 참석(서울)",
+      "title": "비상경제본부회의 참석",
+      "description": "08:00 · 김민재 차관",
       "time": "08:00",
       "org": "김민재 차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 비상경제본부회의(정부서울청사)",
-      "description": "08:00 · 재경부 / 08:00 비상경제본부회의(정부서울청사)",
+      "title": "비상경제본부회의",
+      "description": "08:00 · 재경부",
       "time": "08:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "10:00 공동주택 수열에너지 보급을 위한 간담회 및 발전협의체 발족식(서울)",
-      "description": "10:00 · 금한승 1차관 / 10:00 공동주택 수열에너지 보급을 위한 간담회 및 발전협의체 발족식(서울)",
+      "title": "공동주택 수열에너지 보급을 위한 간담회 및 발전협의체 발족식",
+      "description": "10:00 · 금한승 1차관",
       "time": "10:00",
       "org": "금한승 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "12:00 경인사연·KDI컨퍼런스(서울)",
-      "description": "12:00 · 재경부 / 12:00 경인사연·KDI컨퍼런스(서울)",
+      "title": "경인사연·KDI컨퍼런스",
+      "description": "12:00 · 재경부",
       "time": "12:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "박지혜 의원실 등, (수도권 전력수요 분산과 국가균형발전을 위한) 지역별 전기요금 차등제 수립 방향 토론회(14:00 의원회관 제10간담회의실)",
-      "description": "14:00 · 의원실 세미나 / 박지혜 의원실 등, (수도권 전력수요 분산과 국가균형발전을 위한) 지역별 전기요금 차등제 수립 방향 토론회(14:00 의원회관 제10간담회의실)",
+      "title": "박지혜 의원실 등, (수도권 전력수요 분산과 국가균형발전을 위한) 지역별 전기요금 차등제 수립 방향 토론회",
+      "description": "14:00 · 의원실 세미나",
       "time": "14:00",
       "org": "의원실 세미나",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제10간담회의실"
     }
   ],
   "schedules": [
@@ -1615,7 +1651,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-18.json",
+      "source_file": "data\\news\\2026-05-18.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1636,7 +1672,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:54 KST",
+      "merged_at": "2026-05-27 22:10:53 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

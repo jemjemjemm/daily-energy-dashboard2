@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 22일 (금)",
     "previous_day_label": "5/21",
     "today_label": "5/22",
-    "generated_at": "2026-05-28 01:12 KST",
+    "generated_at": "2026-05-27 22:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 물가안정TF 회의(정부서울청사)",
-      "description": "08:00 · 주병기 위원장 / 08:00 물가안정TF 회의(정부서울청사)",
+      "title": "물가안정TF 회의",
+      "description": "08:00 · 주병기 위원장",
       "time": "08:00",
       "org": "주병기 위원장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 민생물가 특별관리 관계장관 TF(정부서울청사)",
-      "description": "08:00 · 재경부 / 08:00 민생물가 특별관리 관계장관 TF(정부서울청사)",
+      "title": "민생물가 특별관리 관계장관 TF",
+      "description": "08:00 · 재경부",
       "time": "08:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "09:00 대외경제장관회의(정부서울청사)",
-      "description": "09:00 · 재경부 / 09:00 대외경제장관회의(정부서울청사)",
+      "title": "대외경제장관회의",
+      "description": "09:00 · 재경부",
       "time": "09:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     },
     {
       "category": "에너지·산업",
       "category_class": "",
-      "title": "구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
-      "description": "09:30 · 우원식 국회의장 / 구리 석유비축기지 방문(09:30 한국석유공사 구리지사)",
+      "title": "구리 석유비축기지 방문",
+      "description": "09:30 · 우원식 국회의장",
       "time": "09:30",
       "org": "우원식 국회의장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "한국석유공사 구리지사"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "13:30 중동상황 현장방문(익산 새롬)",
-      "description": "13:30 · 노용석 1차관 / 13:30 중동상황 현장방문(익산 새롬)",
+      "title": "중동상황 현장방문",
+      "description": "13:30 · 노용석 1차관",
       "time": "13:30",
       "org": "노용석 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "익산 새롬"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "14:00 중동전쟁 관련 플라스틱·섬유산업 간담회 참석(서울)",
-      "description": "14:00 · 권창준 차관 / 14:00 중동전쟁 관련 플라스틱·섬유산업 간담회 참석(서울)",
+      "title": "중동전쟁 관련 플라스틱·섬유산업 간담회 참석",
+      "description": "14:00 · 권창준 차관",
       "time": "14:00",
       "org": "권창준 차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     }
   ],
   "schedules": [
@@ -1487,7 +1523,7 @@
     "trend_paragraphs": [
       "네이트는 5/21 16:36 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
       "연합뉴스는 5/22 04:47 입력 기사에서 이란 협상 진전 기대가 국제유가 하락 요인으로 작용.",
-      "v.daum.net는 5/22 04:58 입력 기사에서 이란 협상 진전 기대가 국제유가 하락 요인으로 작용."
+      "v.daum.net는 5/22 05:02 입력 기사에서 이란 협상 진전 기대가 국제유가 하락 요인으로 작용."
     ],
     "articles": [
       {
@@ -1505,11 +1541,11 @@
         "published_at_kst": "2026-05-22 04:47"
       },
       {
-        "title": "국제유가, 이란 협상 진전 기대에 하락 마감‥브렌트유 2.3%↓ - v.daum.net",
+        "title": "국제유가, 이란 협상 진전 기대에 하락 마감…브렌트유 2.3%↓ - v.daum.net",
         "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9pNUlLaElpMXM5SFRtdGRCdDZWMk1INDVXNWEybTF4ZFU4QTNGREpGRElBaUlFdERYbWVQdE5POWZtejhXTnBwdEJwYWRQakxaM3lBOA?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hbHhtSmNCRExsaFlxa3FMdGwxN0UzTU5JQVJKTGktaGhHX1U2a1ktRllRdTZzeEEtNWxKZ1VnbkxqN2RrZXgzZjNmaEsyR2c?oc=5",
         "summary": "이란 협상 진전 기대가 국제유가 하락 요인으로 작용",
-        "published_at_kst": "2026-05-22 04:58"
+        "published_at_kst": "2026-05-22 05:02"
       }
     ],
     "source": "Google News RSS",
@@ -1609,7 +1645,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-22.json",
+      "source_file": "data\\news\\2026-05-22.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1630,7 +1666,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:12:13 KST",
+      "merged_at": "2026-05-27 22:11:11 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 27일 (수)",
     "previous_day_label": "5/26",
     "today_label": "5/27",
-    "generated_at": "2026-05-28 01:12 KST",
+    "generated_at": "2026-05-27 22:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1381,35 +1381,53 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "제23회 국무회의 겸 제10차 비상경제점검회의(10:00 청와대)",
-      "description": "10:00 · 대통령 / 제23회 국무회의 겸 제10차 비상경제점검회의(10:00 청와대)",
+      "title": "제23회 국무회의 겸 제10차 비상경제점검회의",
+      "description": "10:00 · 대통령",
       "time": "10:00",
       "org": "대통령",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "청와대"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "14:00 주요 전력기자재 수급 관련 점검 간담회(서울)",
-      "description": "14:00 · 금한승 1차관 / 14:00 주요 전력기자재 수급 관련 점검 간담회(서울)",
+      "title": "주요 전력기자재 수급 관련 점검 간담회",
+      "description": "14:00 · 금한승 1차관",
       "time": "14:00",
       "org": "금한승 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "에너지·산업",
       "category_class": "",
-      "title": "14:30 서산 석유화학업종 현장간담회(서산)",
-      "description": "14:30 · 권창준 차관 / 14:30 서산 석유화학업종 현장간담회(서산)",
+      "title": "서산 석유화학업종 현장간담회",
+      "description": "14:30 · 권창준 차관",
       "time": "14:30",
       "org": "권창준 차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서산"
     }
   ],
   "schedules": [
@@ -1565,7 +1583,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-27.json",
+      "source_file": "data\\news\\2026-05-27.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1586,7 +1604,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:12:23 KST",
+      "merged_at": "2026-05-27 22:11:20 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

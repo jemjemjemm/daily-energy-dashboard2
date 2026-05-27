@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 7일 (목)",
     "previous_day_label": "5/6",
     "today_label": "5/7",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 국무회의 겸 비상경제점검회의(청와대)",
-      "description": "10:00 · 기획처 / 10:00 국무회의 겸 비상경제점검회의(청와대)",
+      "title": "국무회의 겸 비상경제점검회의",
+      "description": "10:00 · 기획처",
       "time": "10:00",
       "org": "기획처",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "청와대"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실)",
-      "description": "10:00 · 국회의장 / 중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼(10:00 의원회관 제1세미나실)",
+      "title": "중동전쟁과 한반도 안보의 미래 - 질서 전환시 전략적 선택 정책포럼",
+      "description": "10:00 · 국회의장",
       "time": "10:00",
       "org": "국회의장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제1세미나실"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "한반도평화외교자문위원회 결과보고회(12:00 의원회관 제2간담회의실)",
-      "description": "12:00 · 우원식 국회의장, 중동전쟁 / 한반도평화외교자문위원회 결과보고회(12:00 의원회관 제2간담회의실)",
+      "title": "한반도평화외교자문위원회 결과보고회",
+      "description": "12:00 · 우원식 국회의장, 중동전쟁",
       "time": "12:00",
       "org": "우원식 국회의장, 중동전쟁",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제2간담회의실"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "김소희 의원실 등, 자발적 탄소시장(VCM) 활성화 전략(13:30 국회도서관 대강당)",
-      "description": "13:30 · 의원실 세미나 / 김소희 의원실 등, 자발적 탄소시장(VCM) 활성화 전략(13:30 국회도서관 대강당)",
+      "title": "김소희 의원실 등, 자발적 탄소시장(VCM) 활성화 전략",
+      "description": "13:30 · 의원실 세미나",
       "time": "13:30",
       "org": "의원실 세미나",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "국회도서관 대강당"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "14:00 중동상황 현장방문(대구 케이아이비)",
-      "description": "14:00 · 노용석 1차관 / 14:00 중동상황 현장방문(대구 케이아이비)",
+      "title": "중동상황 현장방문",
+      "description": "14:00 · 노용석 1차관",
       "time": "14:00",
       "org": "노용석 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "대구 케이아이비"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "서왕진 의원실 등, 탄소중립기본법 개정, 공론화 결과를 어떻게 반영할 것인가(14:00 의원회관 제8간담회의실)",
-      "description": "14:00 · 의원실 세미나 / 서왕진 의원실 등, 탄소중립기본법 개정, 공론화 결과를 어떻게 반영할 것인가(14:00 의원회관 제8간담회의실)",
+      "title": "서왕진 의원실 등, 탄소중립기본법 개정, 공론화 결과를 어떻게 반영할 것인가",
+      "description": "14:00 · 의원실 세미나",
       "time": "14:00",
       "org": "의원실 세미나",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제8간담회의실"
     }
   ],
   "schedules": [
@@ -1473,16 +1509,16 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "v.daum.net는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "연합뉴스는 5/6 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리.",
       "매일경제는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
       "v.daum.net는 5/6 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "[오일쇼크 폭풍전야] 최고가격제 언제까지...정유사·주유소 임계점 임박 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBIcG9tZWFZbWFsb0tSdDh0YV9ubTdYN1dxSUZSWEdpcVNYZEYxUTlKMXh3ZVBUeG9BemdCM1NMalQ3a2U4YTBUV2YyQ0ZFNzA?oc=5",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "title": "국제유가 상승에 소비자물가 21개월 만에 최고 - 연합뉴스",
+        "press": "연합뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5UREVldmh5cVN5RFdYeFk0QWFSNnNjMHdyZzBKR3djbVJjMlpfZEgxOFRadGpHSXM5cDJSUDBtdjJNTEpzek1FUXZIVmRNb2tZRjJ6bUVGQjVtTVHSAWBBVV95cUxNM0cxTDZKcTZxWlJVV0c0MHB3X2JONFZJNEVsbnpqMXBLZWx4S0ppMVAzRXVFcUhEZXJNZGRHRzJFNEJCMmhBNXpMQTdvQkYtMmpPdGRXem1NMFRhMlNqY0w?oc=5",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "2026-05-06 16:00"
       },
       {
@@ -1597,7 +1633,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-07.json",
+      "source_file": "data\\news\\2026-05-07.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1618,7 +1654,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:18 KST",
+      "merged_at": "2026-05-27 22:10:22 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

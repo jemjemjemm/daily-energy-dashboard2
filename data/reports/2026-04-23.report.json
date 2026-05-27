@@ -30,7 +30,14 @@
                        "category":  "데이터",
                        "title":  "주요일정 원문 데이터 미확보",
                        "description":  "세이프타임즈 기사 자동 매칭 실패로 일정 기반 해석은 보류했습니다.",
-                       "grade":  "C 참고"
+                       "grade":  "C 참고",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    }
                ],
     "schedules":  [

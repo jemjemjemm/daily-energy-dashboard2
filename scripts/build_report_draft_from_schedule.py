@@ -61,6 +61,7 @@ ORG_KEYWORDS = [
 ]
 
 DEFAULT_RELEVANCE = ""
+NO_RELATED_LINK = {"label": "관련 기사 없음", "url": ""}
 
 # 리포트에 올릴 일정은 정유·석유화학·LNG 및 정책/물가/공급망 인접 이슈만 남긴다.
 # 선거 유세, 문화·스포츠, 일반 지자체 행사는 제외한다.
@@ -168,13 +169,47 @@ def filter_relevant_items(items: List[Dict[str, str]], max_items: int) -> List[D
     return sort_schedule_items(filtered[:max_items])
 
 
+def split_title_location(title: str) -> Tuple[str, str]:
+    title = clean_title(title)
+    location = ""
+    while True:
+        match = re.search(r"\(([^()]*)\)\s*$", title)
+        if not match:
+            break
+        inner = normalize_line(match.group(1))
+        inner_location = re.sub(r"\b\d{1,2}[:：]\d{2}\b", "", inner).strip()
+        inner_location = normalize_line(inner_location)
+        if inner_location:
+            location = inner_location if not location else f"{inner_location} · {location}"
+        title = normalize_line(title[:match.start()])
+    title = re.sub(r"^\b\d{1,2}[:：]\d{2}\b\s*", "", title).strip()
+    # 일부 원문은 '10:00 참석자, 회의명' 형태로 들어온다.
+    if "," in title:
+        left, right = [part.strip() for part in title.split(",", 1)]
+        if any(role in left for role in ["장관", "차관", "위원장", "의장", "지사", "시장", "대표", "원내대표"]) and right:
+            title = right
+    return title or clean_title(title), location
+
+
+def issue_description(time: str, org: str, location: str) -> str:
+    parts = []
+    if time and time != "시간미정":
+        parts.append(time)
+    if org:
+        parts.append(org)
+    if location:
+        parts.append(location)
+    return " · ".join(parts)
+
+
 def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
     cards = []
     for item in items[:6]:
         org = item.get('org', '')
-        title = item.get('title', '')
+        raw_title = item.get('title', '')
         time = item.get('time', '')
-        combined = f"{org} {title}"
+        title, location = split_title_location(raw_title)
+        combined = f"{org} {raw_title} {title}"
         if any(k in combined for k in ["석유", "정유", "주유소", "유가", "유류세", "석유화학"]):
             category = "에너지·산업"
         elif any(k in combined for k in ["LNG", "가스", "에너지", "전력", "원전", "ESS", "기후"]):
@@ -185,8 +220,7 @@ def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[s
             category = "국회"
         else:
             category = "정책"
-        meta = " · ".join([x for x in [time if time != "시간미정" else "", org] if x])
-        desc = f"{meta} / {title}" if meta else title
+        desc = issue_description(time, org, location)
         cards.append({
             "category": category,
             "category_class": "",
@@ -194,7 +228,8 @@ def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[s
             "description": desc,
             "time": time,
             "org": org,
-            "links": [],
+            "location": location,
+            "links": [dict(NO_RELATED_LINK)],
             "grade": "",
             "grade_class": "",
         })

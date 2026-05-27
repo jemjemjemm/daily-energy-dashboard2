@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 13일 (수)",
     "previous_day_label": "5/12",
     "today_label": "5/13",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
-      "description": "08:00 · 이형훈 2차관 / 08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "title": "중동전쟁 대응 보건의약단체 회의",
+      "description": "08:00 · 이형훈 2차관",
       "time": "08:00",
       "org": "이형훈 2차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "정무위원회 법안심사제1소위원회(10:00 본관 604호)",
-      "description": "10:00 · 국회 / 정무위원회 법안심사제1소위원회(10:00 본관 604호)",
+      "title": "정무위원회 법안심사제1소위원회",
+      "description": "10:00 · 국회",
       "time": "10:00",
       "org": "국회",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "본관 604호"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대)",
-      "description": "10:00 · 대통령 / 제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대)",
+      "title": "제21회 국무회의 겸 제8차 비상경제점검회의",
+      "description": "10:00 · 대통령",
       "time": "10:00",
       "org": "대통령",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "청와대"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "14:30 중동전쟁 관련 수출기업 현장 방문(페스웰)",
-      "description": "14:30 · 노용석 1차관 / 14:30 중동전쟁 관련 수출기업 현장 방문(페스웰)",
+      "title": "중동전쟁 관련 수출기업 현장 방문",
+      "description": "14:30 · 노용석 1차관",
       "time": "14:30",
       "org": "노용석 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "페스웰"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "15:00 국채시장 자문위원회 정례회의",
-      "description": "15:00 · 재경부 / 15:00 국채시장 자문위원회 정례회의",
+      "title": "국채시장 자문위원회 정례회의",
+      "description": "15:00 · 재경부",
       "time": "15:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": ""
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "15:30 과기정통부-기후부 MOU(정부서울청사)",
-      "description": "15:30 · 배경훈 부총리 겸 과기정통 / 15:30 과기정통부-기후부 MOU(정부서울청사)",
+      "title": "과기정통부-기후부 MOU",
+      "description": "15:30 · 배경훈 부총리 겸 과기정통",
       "time": "15:30",
       "org": "배경훈 부총리 겸 과기정통",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     }
   ],
   "schedules": [
@@ -1522,8 +1558,8 @@
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
       "Chosunbiz는 5/12 16:00 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "물류신문은 5/12 17:15 입력 기사에서 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리.",
-      "조선일보는 5/12 16:00 입력 기사에서 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리."
+      "v.daum.net는 5/12 16:00 입력 기사에서 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "물류신문은 5/12 17:15 입력 기사에서 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리."
     ],
     "articles": [
       {
@@ -1534,18 +1570,18 @@
         "published_at_kst": "2026-05-12 16:00"
       },
       {
+        "title": "호르무즈 봉쇄 등 에너지 수급 여건 악화에…가스公, LNG기지 정밀점검 - v.daum.net",
+        "press": "v.daum.net",
+        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE00djNyZDN3YVdYem5wcjNvYjUtQnlkamxWNWNtV1N6dS1UNFkyc2pUd1RESFdKMjNhdzhtS1E5SHdXcXFKbkE?oc=5",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "2026-05-12 16:00"
+      },
+      {
         "title": "관세청, “호르무즈 우회한 석유화학 원료 수급 적극 지원” - 물류신문",
         "press": "물류신문",
         "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Oekdvc281V240R3BKZGhqazhFQ3NmY1dfbjVweUZaaGVnRVJ6NFM1UVVabHRFQlpIVXVHcTZTMFlYN1E2eHIzZWxXRVNjeVNwOUNKRG8zMDZ4bHI3VHJJOHR6TWllNFdtZF84?oc=5",
         "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
         "published_at_kst": "2026-05-12 17:15"
-      },
-      {
-        "title": "나프타 수급 차질에도 석유화학 1분기 깜짝 실적 - 조선일보",
-        "press": "조선일보",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdHgxTkRyV2JMUjNtZHBBM3FmeExiMl8xS01MeFd6OUxKcHZWYmdiVHQ2QjdjQmFaSlVOMFBSSERFUEdnMFRXSlVSTHNlcmpWMTlXSUtGQjAwTlZQWGR6QUtreDdxcmkyM0FENmJPckNJX3ZYSllBOEEwZUNxbmF3ZHlVSmFKMVRUVEZHMHAwTQ?oc=5",
-        "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
-        "published_at_kst": "2026-05-12 16:00"
       }
     ],
     "source": "Google News RSS",
@@ -1645,7 +1681,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-13.json",
+      "source_file": "data\\news\\2026-05-13.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1666,7 +1702,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:37 KST",
+      "merged_at": "2026-05-27 22:10:40 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

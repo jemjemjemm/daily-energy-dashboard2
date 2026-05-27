@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 20일 (수)",
     "previous_day_label": "5/19",
     "today_label": "5/20",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
-      "description": "08:00 · 이형훈 2차관 / 08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "title": "중동전쟁 대응 보건의약단체 회의",
+      "description": "08:00 · 이형훈 2차관",
       "time": "08:00",
       "org": "이형훈 2차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
-      "description": "09:30 · 국회 / 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
+      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회",
+      "description": "09:30 · 국회",
       "time": "09:30",
       "org": "국회",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "본관 622호"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 공급망기금 상생협약식",
-      "description": "10:00 · 허장 2차관 / 10:00 공급망기금 상생협약식",
+      "title": "공급망기금 상생협약식",
+      "description": "10:00 · 허장 2차관",
       "time": "10:00",
       "org": "허장 2차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": ""
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "10:00 산중위 전체회의(국회)",
-      "description": "10:00 · 김정관 장관 / 10:00 산중위 전체회의(국회)",
+      "title": "산중위 전체회의",
+      "description": "10:00 · 김정관 장관",
       "time": "10:00",
       "org": "김정관 장관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "국회"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "10:00 이병권 중기2차관, 산중위 전체회의(국회)",
-      "description": "10:00 · 노용석 1차관 / 10:00 이병권 중기2차관, 산중위 전체회의(국회)",
+      "title": "산중위 전체회의",
+      "description": "10:00 · 노용석 1차관",
       "time": "10:00",
       "org": "노용석 1차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "국회"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
-      "description": "10:00 · 오영훈 제주지사 / 10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
+      "title": "중동상황에 따른 대응상황 점검회의",
+      "description": "10:00 · 오영훈 제주지사",
       "time": "10:00",
       "org": "오영훈 제주지사",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "재난안전대책본부 상황실"
     }
   ],
   "schedules": [
@@ -1633,7 +1669,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-20.json",
+      "source_file": "data\\news\\2026-05-20.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1654,7 +1690,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:12:03 KST",
+      "merged_at": "2026-05-27 22:11:02 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

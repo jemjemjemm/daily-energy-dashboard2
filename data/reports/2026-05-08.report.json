@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 8일 (금)",
     "previous_day_label": "5/7",
     "today_label": "5/8",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,35 +1386,53 @@
     {
       "category": "에너지",
       "category_class": "",
-      "title": "기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호)",
-      "description": "10:00 · 본회의 및 상임위원회 / 기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호)",
+      "title": "기후위기특별위원회 탄소중립기본법심사소위원회",
+      "description": "10:00 · 본회의 및 상임위원회",
       "time": "10:00",
       "org": "본회의 및 상임위원회",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "본관 621호"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실)",
-      "description": "10:00 · 의원실 세미나 / 허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실)",
+      "title": "허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약",
+      "description": "10:00 · 의원실 세미나",
       "time": "10:00",
       "org": "의원실 세미나",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제2소회의실"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)",
-      "description": "13:00 · 의원실 세미나 / 정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)",
+      "title": "정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로",
+      "description": "13:00 · 의원실 세미나",
       "time": "13:00",
       "org": "의원실 세미나",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "의원회관 제4간담회의실"
     }
   ],
   "schedules": [
@@ -1612,7 +1630,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-08.json",
+      "source_file": "data\\news\\2026-05-08.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1633,7 +1651,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:23 KST",
+      "merged_at": "2026-05-27 22:10:27 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

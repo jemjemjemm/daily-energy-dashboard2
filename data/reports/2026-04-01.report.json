@@ -28,39 +28,81 @@
     "issues":  [
                    {
                        "category":  "주요일정",
-                       "title":  "제3차 비상경제점검 회의(16:00 청와대)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "제3차 비상경제점검 회의",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "청와대",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
                        "title":  "우원식 국회의장",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
                        "title":  "",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "기후에너지환경노동위원회 기후에너지환경법안심사소위(10:00 본관 622호)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "기후에너지환경노동위원회 기후에너지환경법안심사소위",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "본관 622호",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "정청래 당대표, 정치휴먼 다큐 \u003c빨간 나라를 보았니\u003e 국회 상영회(19:00 의원회관 제1소회의실)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "정치휴먼 다큐 \u003c빨간 나라를 보았니\u003e 국회 상영회",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "의원회관 제1소회의실",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "한병도 원내대표, 석유화학업계 및 여천공단 입주기업 간담회(15:05 전남 여수 산단)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "석유화학업계 및 여천공단 입주기업 간담회",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "전남 여수 산단",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    }
                ],
     "schedules":  [

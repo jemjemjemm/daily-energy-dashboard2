@@ -28,39 +28,81 @@
     "issues":  [
                    {
                        "category":  "주요일정",
-                       "title":  "18회 국무회의 겸 6차 비상경제점검회의(10:00 청와대)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "18회 국무회의 겸 6차 비상경제점검회의",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "청와대",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "국무회의(10:00 청와대)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "국무회의",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "청와대",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
                        "title":  "우원식 국회의장",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "다이가 미에리냐 라트비아 국회의장 회담(11:00 국회접견실)",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "다이가 미에리냐 라트비아 국회의장 회담",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "국회접견실",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
                        "title":  "",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    },
                    {
                        "category":  "주요일정",
-                       "title":  "이준석 대표, 흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
-                       "description":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류",
-                       "grade":  "B 주시"
+                       "title":  "흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
+                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+                       "grade":  "B 주시",
+                       "location":  "",
+                       "links":  [
+                                     {
+                                         "label":  "관련 기사 없음",
+                                         "url":  ""
+                                     }
+                                 ]
                    }
                ],
     "schedules":  [

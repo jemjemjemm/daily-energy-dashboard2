@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 19일 (화)",
     "previous_day_label": "5/18",
     "today_label": "5/19",
-    "generated_at": "2026-05-28 01:11 KST",
+    "generated_at": "2026-05-27 22:10 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1386,68 +1386,104 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "10:00 주한 아세안 대사 간담회(대한상의)",
-      "description": "10:00 · 여한구 통상교섭본부장 / 10:00 주한 아세안 대사 간담회(대한상의)",
+      "title": "주한 아세안 대사 간담회",
+      "description": "10:00 · 여한구 통상교섭본부장",
       "time": "10:00",
       "org": "여한구 통상교섭본부장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "대한상의"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "13:30 한국에너지공대 방문(나주)",
-      "description": "13:30 · 김성환 장관 / 13:30 한국에너지공대 방문(나주)",
+      "title": "한국에너지공대 방문",
+      "description": "13:30 · 김성환 장관",
       "time": "13:30",
       "org": "김성환 장관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "나주"
     },
     {
       "category": "국회",
       "category_class": "",
-      "title": "14:00 통상추진위원회(대한상의)",
-      "description": "14:00 · 여한구 통상교섭본부장 / 14:00 통상추진위원회(대한상의)",
+      "title": "통상추진위원회",
+      "description": "14:00 · 여한구 통상교섭본부장",
       "time": "14:00",
       "org": "여한구 통상교섭본부장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "대한상의"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "16:00 중동사태 장기화 대응 점검회의(시청 대회의실)",
-      "description": "16:00 · 김경덕 부산시장 권한대행 / 16:00 중동사태 장기화 대응 점검회의(시청 대회의실)",
+      "title": "중동사태 장기화 대응 점검회의",
+      "description": "16:00 · 김경덕 부산시장 권한대행",
       "time": "16:00",
       "org": "김경덕 부산시장 권한대행",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "시청 대회의실"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "16:30 나트륨 ESS 생산공정 및 기술현황 점검(완주)",
-      "description": "16:30 · 김성환 장관 / 16:30 나트륨 ESS 생산공정 및 기술현황 점검(완주)",
+      "title": "나트륨 ESS 생산공정 및 기술현황 점검",
+      "description": "16:30 · 김성환 장관",
       "time": "16:30",
       "org": "김성환 장관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "완주"
     },
     {
       "category": "정책",
       "category_class": "",
       "title": "한국경제 설명회 및 G7 재무장관회의",
-      "description": "재경부 / 한국경제 설명회 및 G7 재무장관회의",
+      "description": "재경부",
       "time": "시간미정",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": ""
     }
   ],
   "schedules": [
@@ -1651,7 +1687,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-19.json",
+      "source_file": "data\\news\\2026-05-19.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1672,7 +1708,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:11:58 KST",
+      "merged_at": "2026-05-27 22:10:58 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

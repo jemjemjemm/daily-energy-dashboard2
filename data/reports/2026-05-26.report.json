@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 26일 (화)",
     "previous_day_label": "5/22",
     "today_label": "5/26",
-    "generated_at": "2026-05-28 01:12 KST",
+    "generated_at": "2026-05-27 22:11 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1374,57 +1374,87 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사)",
-      "description": "08:00 · 재경부 / 08:00 비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의(정부서울청사)",
+      "title": "비상경제본부 회의 겸 경제관계장관회의 겸 국가창업시대 전략회의의",
+      "description": "08:00 · 재경부",
       "time": "08:00",
       "org": "재경부",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "정부서울청사"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "08:00 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(서울)",
-      "description": "08:00 · 이형훈 2차관 / 08:00 비상경제본부회의, 경제장관회의, 국가창업시대 전략회의(서울)",
+      "title": "비상경제본부회의, 경제장관회의, 국가창업시대 전략회의",
+      "description": "08:00 · 이형훈 2차관",
       "time": "08:00",
       "org": "이형훈 2차관",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울"
     },
     {
       "category": "에너지",
       "category_class": "",
-      "title": "10:00 2026년 기후위기대응위원회 정기회의(중회의실)",
-      "description": "10:00 · 강기정 광주시장 / 10:00 2026년 기후위기대응위원회 정기회의(중회의실)",
+      "title": "2026년 기후위기대응위원회 정기회의",
+      "description": "10:00 · 강기정 광주시장",
       "time": "10:00",
       "org": "강기정 광주시장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "중회의실"
     },
     {
       "category": "에너지·산업",
       "category_class": "",
-      "title": "11:00 고유가 피해지원금 관련 현장방문(서울 양천구)",
-      "description": "11:00 · 기획처 / 11:00 고유가 피해지원금 관련 현장방문(서울 양천구)",
+      "title": "고유가 피해지원금 관련 현장방문",
+      "description": "11:00 · 기획처",
       "time": "11:00",
       "org": "기획처",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "서울 양천구"
     },
     {
       "category": "정책",
       "category_class": "",
-      "title": "국외 출장(19~22일 중국)",
-      "description": "여한구 통상교섭본부장 / 국외 출장(19~22일 중국)",
+      "title": "국외 출장",
+      "description": "여한구 통상교섭본부장",
       "time": "시간미정",
       "org": "여한구 통상교섭본부장",
-      "links": [],
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
       "grade": "",
-      "grade_class": ""
+      "grade_class": "",
+      "location": "19~22일 중국"
     }
   ],
   "schedules": [
@@ -1451,8 +1481,8 @@
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
       "연합뉴스는 5/26 06:22 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "KBS 뉴스는 5/26 06:37 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "기후에너지경제는 5/25 18:07 입력 기사에서 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리."
+      "기후에너지경제는 5/25 18:07 입력 기사에서 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리.",
+      "KBS 뉴스는 5/26 06:05 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
@@ -1463,18 +1493,18 @@
         "published_at_kst": "2026-05-26 06:22"
       },
       {
-        "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - KBS 뉴스",
-        "press": "KBS 뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9US2Q2NWZJRkVNdWRMTU1HQUFXWFN0Zy1pS0sybHZDZ1NwUTIzcU1WeEpzYlpnLXpqZk9ZN2tEUl9xSUxyN1I2TURsR0gtZXBPbGNiSUVmMGEzTU0?oc=5",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "2026-05-26 06:37"
-      },
-      {
         "title": "[특별기사]④정유·석유화학·조선·배터리 산업은 어떻게 바뀌나 - 기후에너지경제",
         "press": "기후에너지경제",
         "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQcERBbHUzM1Q0NkplWmhSZFdlM2dVUlhaM0xxaHNhc0xIS2FlM3l2SGpaVFFaMnY3S2I1WUtjdU9yYTNtaWQxVTNkY1Vod25YY0JyM0RmMFB1bTBKd0drUFlhR1E?oc=5",
         "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
         "published_at_kst": "2026-05-25 18:07"
+      },
+      {
+        "title": "종전 협상 기대감에 국제유가 급락…브렌트유 100달러 아래로 - KBS 뉴스",
+        "press": "KBS 뉴스",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE42MzFaS1BXRkM4VnM1aEFsQWoyZXBYLUlRU0pzOEVkWl9ZOVBKVmNiWXhWVnRfblQwcnV4a3lPdG9ZcElzSmlWTU82Q1FCeFhTWFoxYzF5WmxLcmc?oc=5",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "2026-05-26 06:05"
       }
     ],
     "source": "Google News RSS",
@@ -1574,7 +1604,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-26.json",
+      "source_file": "data\\news\\2026-05-26.json",
       "article_count": 3,
       "source": "Google News RSS",
       "status": "updated",
@@ -1595,7 +1625,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 01:12:18 KST",
+      "merged_at": "2026-05-27 22:11:16 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
