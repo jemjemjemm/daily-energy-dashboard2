@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-07",
-  "collected_at": "2026-05-27 22:45:56 KST",
+  "collected_at": "2026-05-28 00:40:10 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -161,17 +161,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "휘발유 21%↑·경유 30%↑…소비자물가 1년9개월 만에 최고 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9zM3FwcWpjRHNpczZ2SVcyVEZ0dXlULXh0Vm1QS2tlUElheFU1dGZLYXc1c2l5MGNVQ2g0RmpNZE95WjBPYUc1NW1Hdw?oc=5",
-      "published_date": "2026-05-06",
-      "published_at_kst": "2026-05-06 16:00",
-      "snippet": "휘발유 21%↑·경유 30%↑…소비자물가 1년9개월 만에 최고 v.daum.net",
-      "score": 28,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "\"중동전쟁 끝날때까지 석유최고가격제 유지\" - 매일경제",
       "press": "매일경제",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBORmVuVjN3ZTNPTXNKeGc2WjZYZk4wRjZYbVJWbFNucmhicUdpVnZCZkxzUDg5cnVtcFEyV3VCQjdnTS1oSnU0bFRhc19wb21QNmFvcA?oc=5",
@@ -180,6 +169,17 @@
       "snippet": "\"중동전쟁 끝날때까지 석유최고가격제 유지\" 매일경제",
       "score": 28,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "유가 폭등이 끌어올린 물가…최고가격제 없었다면 4% 육박 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlQW9qNi1aY3piZXVFV0wwMzBWNXhzbkpMNm9CNFhTM2hQX0VDWmFwODB4Y1UzUDNfU0FBUEVXdEZDTlpVNHA3X2ZDYnY0anc?oc=5",
+      "published_date": "2026-05-06",
+      "published_at_kst": "2026-05-06 16:00",
+      "snippet": "유가 폭등이 끌어올린 물가…최고가격제 없었다면 4% 육박 v.daum.net",
+      "score": 27,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }
   ],

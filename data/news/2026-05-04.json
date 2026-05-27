@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-04",
-  "collected_at": "2026-05-27 22:45:47 KST",
+  "collected_at": "2026-05-28 00:40:01 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -91,7 +91,7 @@
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1",
       "score": 33,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
@@ -141,7 +141,7 @@
     {
       "title": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 - v.daum.net",
       "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1yU052X0w5bmZRZ0RRSFdNb3NzcUVpOE1ZM2k4dHdRUTFyOWZsM3ZGM3JTRFF5RUU0RlVtLW1VVDVHVzVSRHA2Vm1WTkpVbzhTOWVRTg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE45TzRkWVBOOUNrVmdUMk1DS1ROV2ZiVGJfUnJFc2JOaFMxZkZzQXlYNHhJOVNFaV9URXBWOWpwVVBwV0FaOHd3bzYtQQ?oc=5",
       "published_date": "2026-05-03",
       "published_at_kst": "2026-05-03 16:00",
       "snippet": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 v.daum.net",
