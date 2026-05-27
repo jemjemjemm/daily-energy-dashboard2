@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 27일 (수)",
     "previous_day_label": "5/26",
     "today_label": "5/27",
-    "generated_at": "2026-05-27 09:56 KST",
+    "generated_at": "2026-05-27 12:55 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1442,8 +1442,8 @@
     "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 등을 중심으로 보도.",
     "trend_paragraphs": [
       "신아일보는 5/27 08:31 입력 기사에서 [국제유가] 美 이란 공습에 브렌트유 4% 급등…호르무즈 재개 기대 ‘찬물’ 신아일보.",
-      "네이트는 5/27 06:48 입력 기사에서 [국제유가] 안 열리는 호르무즈 해협…브렌트유 4% 급등 네이트.",
-      "CEO스코어데일리는 5/27 09:09 입력 기사에서 호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ CEO스코어데일리."
+      "CEO스코어데일리는 5/27 09:09 입력 기사에서 호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ CEO스코어데일리.",
+      "연합뉴스TV는 5/27 06:16 입력 기사에서 국제유가, 美 이란 공습에 반등…브렌트유 4%↑ 연합뉴스TV."
     ],
     "articles": [
       {
@@ -1454,18 +1454,18 @@
         "published_at_kst": "2026-05-27 08:31"
       },
       {
-        "title": "[국제유가] 안 열리는 호르무즈 해협…브렌트유 4% 급등 - 네이트",
-        "press": "네이트",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1YckJiVU9pSncwNTk3NDlOZ1g5dUtTMEp2bDN3Skl6ekNHOVFsS082a21STzRvbGZBYmg2RGV0YndISEpIdktDR3p5eDBiZFZEd1hn?oc=5",
-        "summary": "[국제유가] 안 열리는 호르무즈 해협…브렌트유 4% 급등 네이트.",
-        "published_at_kst": "2026-05-27 06:48"
-      },
-      {
         "title": "호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ - CEO스코어데일리",
         "press": "CEO스코어데일리",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Xckg5bkZOR2QwS2JJU3d4WG1qWV8ySEpJNzloMzJNRk01ekNYM3NNSjJKZWNHdmVmdUNEbE1XWHgtN2pkWmstRE9yNWVSQmZaMUd4Q21VT3NESGV3U2RzeVhMbk9TMlcx?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MMEFaMmV0RjkwOEF5QjVRR0l1alZIeEJ1bEZYYzAtT2lxQVE0bVpPeVlEdnQzRXZlTDFMQjVoMllHaTlYaFZoNDF5d29BRHFROWNRTG8tVHhxYlRIck5kZGwyQ1hhSUwtRW1v?oc=5",
         "summary": "호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ CEO스코어데일리.",
         "published_at_kst": "2026-05-27 09:09"
+      },
+      {
+        "title": "국제유가, 美 이란 공습에 반등…브렌트유 4%↑ - 연합뉴스TV",
+        "press": "연합뉴스TV",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxWTdydGtDRnhrc0FUdnRGOEdINUlWYU9WZXI1eGRmbVpvelQxUzBEeHhtbnVmUWlvTHFOMVdjR2Q3dGNKVFdPVGlxOVNOSU15S0I5Z2d1bEFwQzhZaTJpdjlKeFltZ0U?oc=5",
+        "summary": "국제유가, 美 이란 공습에 반등…브렌트유 4%↑ 연합뉴스TV.",
+        "published_at_kst": "2026-05-27 06:16"
       }
     ],
     "source": "Google News RSS",
@@ -1586,7 +1586,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-27 09:56:12 KST",
+      "merged_at": "2026-05-27 12:55:45 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

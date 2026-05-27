@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-27",
-  "collected_at": "2026-05-27 09:56:04 KST",
+  "collected_at": "2026-05-27 12:55:44 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -60,20 +60,9 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "[국제유가] 안 열리는 호르무즈 해협…브렌트유 4% 급등 - 네이트",
-      "press": "네이트",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1YckJiVU9pSncwNTk3NDlOZ1g5dUtTMEp2bDN3Skl6ekNHOVFsS082a21STzRvbGZBYmg2RGV0YndISEpIdktDR3p5eDBiZFZEd1hn?oc=5",
-      "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 06:48",
-      "snippet": "[국제유가] 안 열리는 호르무즈 해협…브렌트유 4% 급등 네이트",
-      "score": 43,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ - CEO스코어데일리",
       "press": "CEO스코어데일리",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Xckg5bkZOR2QwS2JJU3d4WG1qWV8ySEpJNzloMzJNRk01ekNYM3NNSjJKZWNHdmVmdUNEbE1XWHgtN2pkWmstRE9yNWVSQmZaMUd4Q21VT3NESGV3U2RzeVhMbk9TMlcx?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MMEFaMmV0RjkwOEF5QjVRR0l1alZIeEJ1bEZYYzAtT2lxQVE0bVpPeVlEdnQzRXZlTDFMQjVoMllHaTlYaFZoNDF5d29BRHFROWNRTG8tVHhxYlRIck5kZGwyQ1hhSUwtRW1v?oc=5",
       "published_date": "2026-05-27",
       "published_at_kst": "2026-05-27 09:09",
       "snippet": "호르무즈 개방 기대감 커지니, 유가 ‘뚝뚝’…K-정유, 원유수급 안정성↑ 수익성 압박은 ‘지속’ CEO스코어데일리",
@@ -82,9 +71,20 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "국제유가, 美 이란 공습에 반등…브렌트유 4%↑ - 연합뉴스TV",
+      "press": "연합뉴스TV",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxWTdydGtDRnhrc0FUdnRGOEdINUlWYU9WZXI1eGRmbVpvelQxUzBEeHhtbnVmUWlvTHFOMVdjR2Q3dGNKVFdPVGlxOVNOSU15S0I5Z2d1bEFwQzhZaTJpdjlKeFltZ0U?oc=5",
+      "published_date": "2026-05-27",
+      "published_at_kst": "2026-05-27 06:16",
+      "snippet": "국제유가, 美 이란 공습에 반등…브렌트유 4%↑ 연합뉴스TV",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "국제유가, 미군 이란 공습에 반등…브렌트유 4%↑ - 연합뉴스",
       "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1hYUtSck9IQTBvYVZmVnlRT0ZCMjEyQm85STVMR2pfS1p3Ul8yZnpWdmZNZk43eFlod1Nnak8ydV9mVkxMX01taXNjbHlYaTV4NjdiQ09rcURTc2tqQ0xGMtIBYEFVX3lxTE1hYUtSck9IQTBvYVZmVnlRT0ZCMjEyQm85STVMR2pfS1p3Ul8yZnpWdmZNZk43eFlod1Nnak8ydV9mVkxMX01taXNjbHlYaTV4NjdiQ09rcURTc2tqQ0xGMg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBoSlJ6alVycXhQOXZXSU9KWFQ4WDFHVUdYWlUxM1llczRjd1pRNXVIamRtUEVJNFQxUVFEQzliaXNQYTluQnpQNU1qRkNLS0hmT3M3Z1JlaDhOS2fSAWBBVV95cUxNYWFLUnJPSEEwb2FWZlZ5UU9GQjIxMkJvOUk1TEdqX0tad1JfMmZ6VnZmTWZON3hZaHdTZ2pPMnVfZlZMTF9NbWlzY2x5WGk1eDY3YkNPa3FEU3NrakNMRjI?oc=5",
       "published_date": "2026-05-27",
       "published_at_kst": "2026-05-27 05:08",
       "snippet": "국제유가, 미군 이란 공습에 반등…브렌트유 4%↑ 연합뉴스",
@@ -126,12 +126,34 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "미국 이란 공습에 국제유가 브렌트유 3%대 강세 [상보] - 이투데이",
+      "press": "이투데이",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JaXhYeXlnTzJNQlJVLUxDd3A2cHliTzRwTV9FZjhrTWdVeVlhTXFrMjZlMzEyd1ZhNDhQQjgwbURsNG1ybERYRTZZY3ZnOGFWQ1Npcw?oc=5",
+      "published_date": "2026-05-27",
+      "published_at_kst": "2026-05-27 07:19",
+      "snippet": "미국 이란 공습에 국제유가 브렌트유 3%대 강세 [상보] 이투데이",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ - MBC 뉴스",
       "press": "MBC 뉴스",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1jb29leEpwTGgyYkRUQ09RMGpxR1pCUHNnazZBUlV6VzU3dVFkWElhdG5uQkZxY0RoblY1V2FzXzkwWVRZdm9SMk9XT2YtWl9Zb0xqQkZLSkxpMkI0MnFPWU9uMC1jNDY4dTgzaV8zbGZtMF9o0gF0QVVfeXFMUF9yX2dYdVdRa19CYVJlb0JsUXJZSEc0eDhCM2k3SEZzbmZMRnRYakVTLUpydUtHdU5vNUxpYVNpT2l1SFE5d004Mm1ZcHpUcWVaakxPbzNfcDNLWllvN2t2b1UyVjltNVcxNExyZFh0MXdobXU?oc=5",
       "published_date": "2026-05-27",
       "published_at_kst": "2026-05-27 05:35",
       "snippet": "국제유가, 미군 이란 공습에 반등‥브렌트유 4%↑ MBC 뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "[국제유가] 엇갈린 이란 정세에 브렌트유, 100달러 육박 - v.daum.net",
+      "press": "v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZSUJTVmJmZWtNejJDeHlJZ1lCeHVjWktmRWNHWnpGTFVoZ2ZGQW04X3JqcjB5MmZHQnJRVWt2RTFvTFFRRDNEbG9OS3VaWFI5eWF3LQ?oc=5",
+      "published_date": "2026-05-27",
+      "published_at_kst": "2026-05-27 05:00",
+      "snippet": "[국제유가] 엇갈린 이란 정세에 브렌트유, 100달러 육박 v.daum.net",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -154,28 +176,6 @@
       "published_date": "2026-05-27",
       "published_at_kst": "2026-05-27 06:49",
       "snippet": "이란 협상 불확실성에 국제유가 또 요동…브렌트유 4%↑ 뉴시스",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "미국 이란 공습에 국제유가 브렌트유 3%대 강세 [상보] - 이투데이",
-      "press": "이투데이",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1JaXhYeXlnTzJNQlJVLUxDd3A2cHliTzRwTV9FZjhrTWdVeVlhTXFrMjZlMzEyd1ZhNDhQQjgwbURsNG1ybERYRTZZY3ZnOGFWQ1Npcw?oc=5",
-      "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 07:19",
-      "snippet": "미국 이란 공습에 국제유가 브렌트유 3%대 강세 [상보] 이투데이",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[국제유가] 미·이란 협상 불확실성에 출렁…브렌트유 장중 다시 100달러 돌파 - 굿모닝경제",
-      "press": "굿모닝경제",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBPNy1waUo5ektScHU2WWg3SmZaZHpNTjVpV0JhY1FEbG5sVHRnZnAwTjJicnRHeDN1cXowblY3SGU2N2c5X3V4R294OFVzaTQ4aHRhSkR5LU1uNzZIZG5yNnJDRnBFNTEwUzNqRw?oc=5",
-      "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 08:47",
-      "snippet": "[국제유가] 미·이란 협상 불확실성에 출렁…브렌트유 장중 다시 100달러 돌파 굿모닝경제",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
