@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-20",
-  "collected_at": "2026-05-27 22:11:02 KST",
+  "collected_at": "2026-05-27 22:46:38 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -101,7 +101,7 @@
       "published_at_kst": "2026-05-19 18:51",
       "snippet": "한일, 원유·석유제품 스와프 협의 착수…LNG 협력 확대 v.daum.net",
       "score": 37,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
       "collector": "google_news_rss"
     },
     {

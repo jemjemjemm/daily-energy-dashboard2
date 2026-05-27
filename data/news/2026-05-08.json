@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-08",
-  "collected_at": "2026-05-27 22:10:27 KST",
+  "collected_at": "2026-05-27 22:46:01 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -95,12 +95,34 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "미·이란 협상 기대감에 국제유가 급락…브렌트유 7.8%↓ - 연합뉴스",
+      "press": "연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kb1I5dmRXSl8wb0plZXU0U0JMRlBGWjR3aU9mSnpnQlU0SXJGX0xuc3h4MlRaRFNVQ0tqbFhjczlFbGJZT040Tm83SUtMWUt2SVhjVHNwT3hMa2fSAWBBVV95cUxNeV9Wa1hsU3NVemRRN3J4R2YxU2o0NmZMd3M2YlNFdG9OM2pESUhyVU1kT09ZUGRSblBfaDRrR3pPYy1tcWNTcHhDeWRTaUIzZDJyNW1mS1BWYTNwQXBleFM?oc=5",
+      "published_date": "2026-05-07",
+      "published_at_kst": "2026-05-07 16:00",
+      "snippet": "미·이란 협상 기대감에 국제유가 급락…브렌트유 7.8%↓ 연합뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "미·이란 종전 논의에 국제유가 급락…브렌트유 7.8%↓ - 연합뉴스",
       "press": "연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1pWHhWaHQ3RmNvYVJsWHM2aUhmYXAtdFFDbDZEWTZNUFBBVFJrTzZSeElnMjlSU3ZkM21RNmx0YkVkc1VsaWM5ak0xaENQa0MyeGlVUlZFMFFiUTjSAWBBVV95cUxOeTlVOE1lbkV1WjFiT1ZkUXE4WXF4dGUzeDI5c0V6aGw1RTA2SndUZVI5dXRhTnJzbjJOYjkya1pDX1JTR2FRNTh4NEVGMlF2ZHhpQXpIWVp0X3c3Z1J3SXo?oc=5",
       "published_date": "2026-05-07",
       "published_at_kst": "2026-05-07 16:00",
       "snippet": "미·이란 종전 논의에 국제유가 급락…브렌트유 7.8%↓ 연합뉴스",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "美·이란 종전 합의 기대감에 국제유가 급락… 브렌트유 7.8%↓ - 글로벌이코노믹",
+      "press": "글로벌이코노믹",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMTdJUGdJTFozWXgyb1B0M0hJQTRneHRhaHprUkJfV3NmUlIxRnNYcnpZRE1tcWVOMFk1emh5djBiSDZCUV9LMXpiSDJoR0xtZGUyZHJoVVl3MEJNcV9KTjJ2X25XckxOem1KXzh0bUxWMEJHR1N6QXRMa1lzWDN1cjBXa0JWYzZK?oc=5",
+      "published_date": "2026-05-07",
+      "published_at_kst": "2026-05-07 16:00",
+      "snippet": "美·이란 종전 합의 기대감에 국제유가 급락… 브렌트유 7.8%↓ 글로벌이코노믹",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -158,28 +180,6 @@
       "snippet": "고유가 지속…정부, 5차 석유 최고가격제 금일 발표 뉴스1",
       "score": 34,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "고유가 상황 지속…정부, 7시에 5차 석유 최고가격제 발표 - 뉴스1",
-      "press": "뉴스1",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE51TEd5U3RBV1RGTkZ0WndfUC0tZGVEcF9wTnRJSDZMUlJSb2RJTy04WjZmdnlnRVZkU1BvUXBLcHR6YWx5T1JWRERJYw?oc=5",
-      "published_date": "2026-05-07",
-      "published_at_kst": "2026-05-07 16:00",
-      "snippet": "고유가 상황 지속…정부, 7시에 5차 석유 최고가격제 발표 뉴스1",
-      "score": 34,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "美·이란 합의 기대에 원유시장 '패닉셀'...유가 '폭락' 브렌트유 7.83% 급락 - 전자신문",
-      "press": "전자신문",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9aQjRjS0M0eVlUZmpMZE1LbGJZWUhwTkh1SWJ4YUNrZ3JZZE9WbEgxdGZJYmJBNXQ2YkVjTTZmemxtd25IZmpBRzNDbTB4QQ?oc=5",
-      "published_date": "2026-05-07",
-      "published_at_kst": "2026-05-07 16:00",
-      "snippet": "美·이란 합의 기대에 원유시장 '패닉셀'...유가 '폭락' 브렌트유 7.83% 급락 전자신문",
-      "score": 33,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     }
   ],

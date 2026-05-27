@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-26",
-  "collected_at": "2026-05-27 22:11:16 KST",
+  "collected_at": "2026-05-27 22:46:51 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -161,6 +161,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ - 울산신문",
+      "press": "울산신문",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUd9IBckFVX3lxTE5neGUwVGZXUUd6cGhsdFZnWHp0eTJUczFWWHhaQXY0THMzU2o0N3ZRUGRQTTlaOUpURUNIYUdxSkh2d3pITzJJS0JZTlF3SkRrU05LWm0wdFZLaENtVW1DMzNaU3RldnJ6M1UtWXlrZlNUdw?oc=5",
+      "published_date": "2026-05-25",
+      "published_at_kst": "2026-05-25 21:39",
+      "snippet": "울산 주유소 기름값 휘발유 1원↓ 경유 1.2원↓ 울산신문",
+      "score": 25,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "“정부 지시로 기름값 제한 했는데” 보상 4조냐 2조냐… 정유사·정부 ‘시각차’ - 아시아투데이",
       "press": "아시아투데이",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5EZGhnaDAyR3lPVnhRMnEwWnFic2dOR1h0MW4yUmEwZUpQNkhRY29RdEdlcUlCS2tOaVhXYWtnczl4VTA3TXRta0ZOc0V1VFR4U1NkVTFhVzdtTFpOYTl3d3NyTVY5NHdtQldNREZ3?oc=5",
@@ -169,17 +180,6 @@
       "snippet": "“정부 지시로 기름값 제한 했는데” 보상 4조냐 2조냐… 정유사·정부 ‘시각차’ 아시아투데이",
       "score": 25,
       "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "람동 주유소는 산업통상부와 협력하여 람동성 내 E10 휘발유 유통 및 사용 로드맵 이행을 위한 회의를 개최했습니다. - Vietnam.vn",
-      "press": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNaWJ3SXR0UjNoSDVrVGhUWW9QaGtyckxYUDFWTnRWMmw4SWRWa21IZ0JYNzRPbExCTFNfREdrdU5lVnNPT0dqUFdacnBfYjdpeDVydUhZUWl2Z1Iwek13ejhSZl9EdzFFZmJrcXFPQjVjZGJ6TkZLUHVhZmJwRFBVUWdILXN2RGlQS1JoY1lGdEF4SmxUMUluSTluSUdoUTU1UElSOWtlQlptcThPMXhzLVh5dk1oVk1CaEhrelF2MHIwSnlOdkQtamc5ZHBWMm45S3RObDc3RDFYa1ZFYlpNRGZlQUYxRkFBQzhWT3FCMlhIN0lhb0o5ei1fQms2UG1zbXFFdkV3?oc=5",
-      "published_date": "2026-05-25",
-      "published_at_kst": "2026-05-25 16:00",
-      "snippet": "람동 주유소는 산업통상부와 협력하여 람동성 내 E10 휘발유 유통 및 사용 로드맵 이행을 위한 회의를 개최했습니다. Vietnam.vn",
-      "score": 25,
-      "source_query": "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
       "collector": "google_news_rss"
     }
   ],
