@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Daily Issue Dashboard</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#f4f5f7;color:#172033;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',Arial,sans-serif;font-size:14px;line-height:1.55}
+    .app{max-width:1180px;margin:0 auto;padding:18px}
+    .top{background:#0A2444;color:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+    .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+    h1{margin:0;font-size:26px;line-height:1.2}.subtitle{margin-top:6px;color:rgba(255,255,255,.72);font-size:13px}.badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;font-size:12px;white-space:nowrap}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}.stat{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px 14px}.stat-label{font-size:11px;color:#6b7280;margin-bottom:4px}.stat-value{font-size:18px;font-weight:800;color:#111827;min-height:27px}
+    .grid{display:grid;grid-template-columns:360px minmax(0,1fr);gap:14px}.panel{background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:13px 14px;border-bottom:1px solid #e5e7eb;background:#f8fafc}.panel-title{font-weight:800}.panel-sub{font-size:12px;color:#6b7280;margin-top:2px}.btn{border:1px solid #d1d5db;background:#fff;border-radius:10px;padding:7px 10px;font-size:12px;cursor:pointer}.btn:hover{background:#f3f4f6}.calendar{padding:12px}.month-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.month-title{font-weight:800}.weekdays,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.weekday{text-align:center;font-size:11px;color:#6b7280;padding:4px 0}.day{height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#9ca3af;border:1px solid transparent}.day.in-month{color:#374151;background:#f9fafb}.day.has-report{background:#e8f1ff;color:#0A2444;border-color:#bfd7ff;font-weight:800;cursor:pointer}.day.has-report:hover{background:#dbeafe}.day.selected{background:#0A2444;color:#fff;border-color:#0A2444}.day.today{box-shadow:inset 0 0 0 2px #f59e0b}.legend{display:flex;gap:12px;margin:12px 2px 2px;color:#6b7280;font-size:11px}.legend span{display:inline-flex;align-items:center;gap:5px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.dot.report{background:#1A6FD4}.dot.today{background:#f59e0b}.links{padding:0 12px 12px;max-height:350px;overflow:auto}.report-link{display:block;padding:10px 8px;border-bottom:1px solid #f0f0f0;color:#111827;text-decoration:none;border-radius:8px}.report-link:hover{background:#f8fafc}.report-link.active{background:#eff6ff;color:#0A2444}.report-date{font-weight:800}.report-title{font-size:12px;color:#6b7280;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.viewer-wrap{height:calc(100vh - 188px);min-height:680px;background:#fff}.viewer-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #e5e7eb;background:#fff}.viewer-title{font-weight:800}.viewer-meta{font-size:12px;color:#6b7280;margin-top:2px}.viewer-actions{display:flex;gap:8px}.viewer{width:100%;height:calc(100% - 62px);border:0;background:#f4f5f7}.empty{padding:30px;text-align:center;color:#6b7280}.error{margin:12px 0;padding:12px 14px;border-radius:12px;background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;display:none;white-space:pre-wrap}.loading{padding:24px;text-align:center;color:#6b7280}.mobile-select{display:none;width:100%;border:1px solid #d1d5db;border-radius:10px;padding:9px 10px;background:#fff;margin-top:10px}
+    @media(max-width:860px){.app{padding:10px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.viewer-wrap{height:72vh;min-height:560px}.links{display:none}.mobile-select{display:block}h1{font-size:22px}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="top-row">
+        <div>
+          <h1>Daily Issue Dashboard</h1>
+          <div class="subtitle">정유 · 석유화학 · LNG AI 리포트</div>
+        </div>
+        <div class="badge">Calendar Report Viewer</div>
+      </div>
+    </header>
+
+    <div id="errorBox" class="error"></div>
+
+    <section class="stats">
+      <div class="stat"><div class="stat-label">등록 리포트 수</div><div id="count" class="stat-value">-</div></div>
+      <div class="stat"><div class="stat-label">최신 기준일</div><div id="latestDate" class="stat-value">-</div></div>
+      <div class="stat"><div class="stat-label">선택 날짜</div><div id="selectedDate" class="stat-value">-</div></div>
+      <div class="stat"><div class="stat-label">목록 업데이트</div><div id="generatedAt" class="stat-value">-</div></div>
+    </section>
+
+    <main class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <div><div class="panel-title">월별 리포트 캘린더</div><div class="panel-sub">월 기준으로 리포트가 있는 날짜를 표시합니다.</div></div>
+        </div>
+        <div class="calendar">
+          <div class="month-nav">
+            <button id="prevMonth" class="btn" type="button">‹</button>
+            <div id="monthTitle" class="month-title">-</div>
+            <button id="nextMonth" class="btn" type="button">›</button>
+          </div>
+          <div class="weekdays"><div class="weekday">일</div><div class="weekday">월</div><div class="weekday">화</div><div class="weekday">수</div><div class="weekday">목</div><div class="weekday">금</div><div class="weekday">토</div></div>
+          <div id="days" class="days"></div>
+          <div class="legend"><span><i class="dot report"></i>리포트 있음</span><span><i class="dot today"></i>오늘</span></div>
+          <select id="mobileSelect" class="mobile-select" aria-label="리포트 선택"></select>
+        </div>
+        <div class="panel-head"><div><div class="panel-title">리포트 바로가기</div></div></div>
+        <div id="links" class="links"><div class="loading">리포트를 불러오는 중입니다.</div></div>
+      </section>
+
+      <section class="panel viewer-wrap">
+        <div class="viewer-toolbar">
+          <div><div id="viewerTitle" class="viewer-title">리포트를 선택해 주세요.</div><div id="viewerMeta" class="viewer-meta">캘린더 또는 바로가기에서 날짜를 선택해 주세요.</div></div>
+          <div class="viewer-actions"><a id="openNew" class="btn" href="#" target="_blank" rel="noopener">새 창</a><button id="reloadBtn" class="btn" type="button">새로고침</button></div>
+        </div>
+        <iframe id="viewer" class="viewer" title="Daily Issue Report 리포트"></iframe>
+      </section>
+    </main>
+  </div>
+
+<script>
+(function(){
+  const state = { reports: [], byDate: new Map(), selected: null, month: null };
+  const $ = (id) => document.getElementById(id);
+  const pad = (n) => String(n).padStart(2,'0');
+  const fmtMonth = (d) => `${d.getFullYear()}년 ${d.getMonth()+1}월`;
+  const todayKey = (()=>{ const d=new Date(); return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; })();
+
+  async function fetchJson(){
+    const urls = ['report-index.json','./report-index.json','docs/report-index.json','public/report-index.json'];
+    let lastErr = '';
+    for(const url of urls){
+      try{
+        const res = await fetch(`${url}?v=${Date.now()}`, { cache:'no-store' });
+        if(!res.ok){ lastErr = `${url}: HTTP ${res.status}`; continue; }
+        const data = await res.json();
+        if(data && Array.isArray(data.reports)) return data;
+        lastErr = `${url}: reports 배열 없음`;
+      }catch(e){ lastErr = `${url}: ${e && e.message ? e.message : e}`; }
+    }
+    throw new Error(lastErr || 'report-index.json을 찾지 못했습니다.');
+  }
+
+  function showError(msg){ const box=$('errorBox'); box.style.display='block'; box.textContent=msg; }
+  function clearError(){ const box=$('errorBox'); box.style.display='none'; box.textContent=''; }
+
+  function parseDate(date){ const [y,m,d]=date.split('-').map(Number); return new Date(y,m-1,d); }
+
+  function setStats(data){
+    $('count').textContent = String(data.count ?? state.reports.length);
+    $('latestDate').textContent = data.latestDate || (state.reports[0] && state.reports[0].date) || '-';
+    $('generatedAt').textContent = data.generatedAt || '-';
+  }
+
+  function renderLinks(){
+    const links=$('links');
+    const select=$('mobileSelect');
+    links.innerHTML=''; select.innerHTML='';
+    if(!state.reports.length){ links.innerHTML='<div class="empty">등록된 리포트가 없습니다.</div>'; return; }
+    state.reports.forEach(r=>{
+      const a=document.createElement('a');
+      a.href='#'; a.className='report-link'+(state.selected===r.date?' active':'');
+      a.innerHTML=`<div class="report-date">${r.date}</div><div class="report-title">${escapeHtml(r.title || r.fileName || '')}</div>`;
+      a.addEventListener('click', e=>{ e.preventDefault(); selectReport(r.date); });
+      links.appendChild(a);
+      const opt=document.createElement('option'); opt.value=r.date; opt.textContent=`${r.date} ${r.title || ''}`; select.appendChild(opt);
+    });
+    select.value = state.selected || '';
+  }
+
+  function renderCalendar(){
+    const wrap=$('days'); wrap.innerHTML='';
+    const month=state.month || new Date();
+    $('monthTitle').textContent=fmtMonth(month);
+    const y=month.getFullYear(), m=month.getMonth();
+    const first=new Date(y,m,1); const start=new Date(y,m,1-first.getDay());
+    for(let i=0;i<42;i++){
+      const d=new Date(start); d.setDate(start.getDate()+i);
+      const key=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+      const div=document.createElement('div');
+      div.className='day'+(d.getMonth()===m?' in-month':'')+(state.byDate.has(key)?' has-report':'')+(state.selected===key?' selected':'')+(todayKey===key?' today':'');
+      div.textContent=d.getDate();
+      if(state.byDate.has(key)) div.addEventListener('click',()=>selectReport(key));
+      wrap.appendChild(div);
+    }
+  }
+
+  function selectReport(date){
+    const r=state.byDate.get(date); if(!r) return;
+    state.selected=date; $('selectedDate').textContent=date;
+    $('viewerTitle').textContent=r.title || `Daily Issue Report — ${date}`;
+    $('viewerMeta').textContent=r.displayDate || date;
+    const url=r.url || `reports/${date}.html`;
+    $('viewer').src=`${url}?v=${Date.now()}`;
+    $('openNew').href=url;
+    if(!state.month || state.month.getFullYear()!==parseDate(date).getFullYear() || state.month.getMonth()!==parseDate(date).getMonth()) state.month=new Date(parseDate(date).getFullYear(), parseDate(date).getMonth(), 1);
+    renderCalendar(); renderLinks();
+  }
+
+  function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  async function init(){
+    clearError();
+    try{
+      const data=await fetchJson();
+      state.reports=(data.reports||[]).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+      state.byDate=new Map(state.reports.map(r=>[r.date,r]));
+      setStats(data);
+      const first=(data.latestDate && state.byDate.get(data.latestDate)) ? data.latestDate : (state.reports[0] && state.reports[0].date);
+      state.month= first ? new Date(parseDate(first).getFullYear(), parseDate(first).getMonth(), 1) : new Date();
+      renderCalendar(); renderLinks();
+      if(first) selectReport(first); else showError('등록된 리포트가 없습니다. report-index.json의 count를 확인해 주세요.');
+    }catch(e){
+      showError('대시보드를 불러오지 못했습니다.\n' + (e && e.message ? e.message : e));
+      renderCalendar(); renderLinks();
+    }
+  }
+
+  $('prevMonth').addEventListener('click',()=>{ state.month.setMonth(state.month.getMonth()-1); renderCalendar(); });
+  $('nextMonth').addEventListener('click',()=>{ state.month.setMonth(state.month.getMonth()+1); renderCalendar(); });
+  $('mobileSelect').addEventListener('change', e=>selectReport(e.target.value));
+  $('reloadBtn').addEventListener('click',()=>{ if(state.selected) selectReport(state.selected); else init(); });
+  init();
+})();
+</script>
+</body>
+</html>
