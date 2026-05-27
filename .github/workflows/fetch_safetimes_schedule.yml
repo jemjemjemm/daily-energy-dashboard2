@@ -1,0 +1,307 @@
+name: Daily Energy Dashboard - Daily Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: "단일 생성 날짜(YYYY-MM-DD). 기간 생성 시 비워두세요."
+        required: false
+        default: ""
+      date_from:
+        description: "기간 생성 시작일(YYYY-MM-DD). 예: 2026-05-01"
+        required: false
+        default: ""
+      date_to:
+        description: "기간 생성 종료일(YYYY-MM-DD). 예: 2026-05-21"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-energy-dashboard-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  daily-data-pipeline:
+    runs-on: ubuntu-latest
+
+    env:
+      TZ: Asia/Seoul
+      OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Sync latest main
+        run: |
+          git pull --ff-only origin main
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Check required files
+        run: |
+          test -f scripts/fetch_safetimes_schedule.py || (echo "ERROR: scripts/fetch_safetimes_schedule.py 파일이 없습니다." && exit 1)
+          test -f scripts/build_report_draft_from_schedule.py || (echo "ERROR: scripts/build_report_draft_from_schedule.py 파일이 없습니다." && exit 1)
+          test -f scripts/fetch_opinet_international_prices.py || (echo "ERROR: scripts/fetch_opinet_international_prices.py 파일이 없습니다." && exit 1)
+          test -f scripts/merge_prices_into_report.py || (echo "ERROR: scripts/merge_prices_into_report.py 파일이 없습니다." && exit 1)
+          test -f scripts/generate_html_report.py || (echo "ERROR: scripts/generate_html_report.py 파일이 없습니다." && exit 1)
+          test -f scripts/generate_report_index.py || (echo "ERROR: scripts/generate_report_index.py 파일이 없습니다." && exit 1)
+          test -f scripts/ensure_report_draft.py || (echo "ERROR: scripts/ensure_report_draft.py 파일이 없습니다." && exit 1)
+          test -f scripts/generate_reports_range.py || (echo "ERROR: scripts/generate_reports_range.py 파일이 없습니다." && exit 1)
+          test -f scripts/validate_report_sources.py || (echo "ERROR: scripts/validate_report_sources.py 파일이 없습니다." && exit 1)
+          test -f report_sample.json || (echo "ERROR: report_sample.json 파일이 없습니다." && exit 1)
+          test -f data/prices/history.json || (echo "ERROR: data/prices/history.json 파일이 없습니다." && exit 1)
+
+      - name: Decide mode
+        run: |
+          if [ -n "${{ github.event.inputs.date_from }}" ] && [ -n "${{ github.event.inputs.date_to }}" ]; then
+            echo "RUN_MODE=range" >> $GITHUB_ENV
+            echo "DATE_FROM=${{ github.event.inputs.date_from }}" >> $GITHUB_ENV
+            echo "DATE_TO=${{ github.event.inputs.date_to }}" >> $GITHUB_ENV
+          else
+            echo "RUN_MODE=single" >> $GITHUB_ENV
+            if [ -n "${{ github.event.inputs.target_date }}" ]; then
+              echo "TARGET_DATE=${{ github.event.inputs.target_date }}" >> $GITHUB_ENV
+            else
+              echo "TARGET_DATE=$(TZ=Asia/Seoul date +%Y-%m-%d)" >> $GITHUB_ENV
+            fi
+          fi
+
+      - name: Show mode
+        run: |
+          echo "RUN_MODE=$RUN_MODE"
+          echo "TARGET_DATE=${TARGET_DATE:-}"
+          echo "DATE_FROM=${DATE_FROM:-}"
+          echo "DATE_TO=${DATE_TO:-}"
+
+      - name: Decide single business day
+        if: env.RUN_MODE == 'single'
+        run: |
+          python - <<'PY' >> "$GITHUB_ENV"
+          import datetime as dt
+          target = dt.date.fromisoformat("${{ env.TARGET_DATE }}")
+          holidays = {
+              "2026-01-01", "2026-02-16", "2026-02-17", "2026-02-18",
+              "2026-03-02", "2026-05-01", "2026-05-05", "2026-05-25",
+              "2026-06-03", "2026-08-17", "2026-09-24", "2026-09-25", "2026-09-28",
+              "2026-10-05", "2026-10-09", "2026-12-25",
+          }
+          is_business_day = target.weekday() < 5 and target.isoformat() not in holidays
+          print(f"IS_BUSINESS_DAY={'true' if is_business_day else 'false'}")
+          PY
+          echo "IS_BUSINESS_DAY=$IS_BUSINESS_DAY"
+
+      - name: Skip non-business day
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY != 'true'
+        run: |
+          echo "[INFO] 비영업일이므로 자동 수집/리포트 생성을 건너뜁니다: $TARGET_DATE"
+
+      - name: Decide previous report date
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python - <<'PY' >> "$GITHUB_ENV"
+          import datetime as dt
+          target = dt.date.fromisoformat("${{ env.TARGET_DATE }}")
+          holidays = {
+              "2026-01-01", "2026-02-16", "2026-02-17", "2026-02-18",
+              "2026-03-02", "2026-05-01", "2026-05-05", "2026-05-25",
+              "2026-06-03", "2026-08-17", "2026-09-24", "2026-09-25", "2026-09-28",
+              "2026-10-05", "2026-10-09", "2026-12-25",
+          }
+          cur = target - dt.timedelta(days=1)
+          for _ in range(14):
+              if cur.weekday() < 5 and cur.isoformat() not in holidays:
+                  break
+              cur -= dt.timedelta(days=1)
+          print(f"PREVIOUS_DATE={cur.isoformat()}")
+          PY
+          echo "PREVIOUS_DATE=$PREVIOUS_DATE"
+
+      - name: Generate weekday reports for range
+        if: env.RUN_MODE == 'range'
+        run: |
+          python scripts/generate_reports_range.py \
+            --start "$DATE_FROM" \
+            --end "$DATE_TO" \
+            --skip-weekends \
+            --skip-korean-holidays \
+            --report-dir data/reports \
+            --schedule-dir data/schedules \
+            --price-dir data/prices \
+            --history data/prices/history.json \
+            --html-dir docs/reports \
+            --index-out docs/report-index.json \
+            --base-report report_sample.json \
+            --chart-months 2 \
+            --max-pages 80
+
+      - name: Validate report source separation for range
+        if: env.RUN_MODE == 'range'
+        run: |
+          python scripts/validate_report_sources.py \
+            --start "$DATE_FROM" \
+            --end "$DATE_TO" \
+            --report-dir data/reports
+
+      - name: Try Fetch SafeTimes schedule
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/schedules \
+            --max-retries 1 \
+            --retry-delay 10
+
+      - name: Try Fetch previous SafeTimes schedule
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/fetch_safetimes_schedule.py \
+            --date "$PREVIOUS_DATE" \
+            --out-dir data/schedules \
+            --max-retries 1 \
+            --retry-delay 10
+
+      - name: Try Build report draft from SafeTimes
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        continue-on-error: true
+        run: |
+          rm -f "data/reports/$TARGET_DATE.report.json"
+          if [ -f "data/schedules/$TARGET_DATE.json" ]; then
+            python scripts/build_report_draft_from_schedule.py \
+              --date "$TARGET_DATE" \
+              --schedule-dir data/schedules \
+              --previous-date "$PREVIOUS_DATE" \
+              --previous-schedule-dir data/schedules \
+              --base-report report_sample.json \
+              --out-dir data/reports
+          else
+            echo "[WARN] 일정 JSON이 없어 일정 기반 초안 생성을 건너뜁니다."
+          fi
+
+      - name: Ensure report draft exists
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/ensure_report_draft.py \
+            --date "$TARGET_DATE" \
+            --out-dir data/reports \
+            --base-report report_sample.json
+
+      - name: Fetch and apply news candidates
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          test -f scripts/fetch_news_candidates.py || (echo "ERROR: scripts/fetch_news_candidates.py 파일이 없습니다." && exit 1)
+          test -f scripts/apply_news_to_report.py || (echo "ERROR: scripts/apply_news_to_report.py 파일이 없습니다." && exit 1)
+          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news --min-required 1 --max-items 12 --force-refresh
+          python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports --min-required 1
+
+      - name: Fetch Opinet international prices for today only
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
+          if [ -f "data/prices/$TARGET_DATE.json" ]; then
+            echo "[OK] 기존 가격 JSON 사용: data/prices/$TARGET_DATE.json"
+          elif [ "$TARGET_DATE" = "$TODAY" ]; then
+            python scripts/fetch_opinet_international_prices.py \
+              --date "$TARGET_DATE" \
+              --out-dir data/prices
+          else
+            echo "[INFO] 과거 날짜 가격 JSON은 새로 수집하지 않습니다. history.json으로 생성합니다."
+          fi
+
+      - name: Merge prices into report
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/merge_prices_into_report.py \
+            --date "$TARGET_DATE" \
+            --report-dir data/reports \
+            --price-dir data/prices \
+            --history data/prices/history.json \
+            --chart-months 2
+
+      - name: Validate report source separation
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/validate_report_sources.py --date "$TARGET_DATE" --report-dir data/reports
+
+      - name: Generate HTML report
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/generate_html_report.py \
+            --date "$TARGET_DATE" \
+            --report-dir data/reports \
+            --out-dir docs/reports
+
+      - name: Generate report index
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/generate_report_index.py \
+            --reports-dir docs/reports \
+            --out docs/report-index.json
+
+      - name: Show generated files
+        if: env.RUN_MODE == 'range' || env.IS_BUSINESS_DAY == 'true'
+        run: |
+          echo "생성된 파일:"
+          find data -maxdepth 3 -type f || true
+          find docs -maxdepth 3 -type f || true
+
+      - name: Commit collected data and dashboard files
+        if: env.RUN_MODE == 'range' || env.IS_BUSINESS_DAY == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/schedules/ || true
+          git add data/reports/ || true
+          git add data/prices/ || true
+          git add data/news/ || true
+          git add docs/index.html || true
+          git add docs/reports/ || true
+          git add docs/report-index.json || true
+
+          if git diff --cached --quiet; then
+            echo "변경된 파일이 없습니다. 커밋하지 않습니다."
+            exit 0
+          fi
+
+          git commit -m "Update dashboard reports"
+
+          if git push; then
+            echo "정상적으로 push 완료"
+            exit 0
+          fi
+
+          git fetch origin main
+          git reset --soft origin/main
+
+          git add data/schedules/ || true
+          git add data/reports/ || true
+          git add data/prices/ || true
+          git add data/news/ || true
+          git add docs/index.html || true
+          git add docs/reports/ || true
+          git add docs/report-index.json || true
+
+          if git diff --cached --quiet; then
+            echo "최신 원격 기준으로 보니 추가 변경이 없습니다."
+            exit 0
+          fi
+
+          git commit -m "Update dashboard reports"
+          git push
