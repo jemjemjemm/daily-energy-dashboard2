@@ -1,4 +1,4 @@
-{
+﻿{
   "template_version": "2.0",
   "report": {
     "report_date": "2026-05-25",
@@ -29,7 +29,7 @@
   ],
   "prices": {
     "unit": "$/Bbl",
-    "price_data_note": "※ 가격 데이터는 오피넷 및 장기 이력(history.json) 기준입니다. 그래프는 기준일 전일 기준 과거 2개월(3/24~5/24)만 표시하며, 값이 0인 가격은 제외했습니다.",
+    "price_data_note": "※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.",
     "crude": {
       "base_label": "5/22",
       "cards": [

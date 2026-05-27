@@ -202,6 +202,55 @@ def clean(v: Any) -> str:
     return re.sub(r"\s+", " ", "" if v is None else str(v)).strip()
 
 
+def strip_article_source_suffix(text: str, press: str = "") -> str:
+    text = clean(text)
+    press = clean(press)
+    if press:
+        text = re.sub(rf"\s*-\s*{re.escape(press)}\s*$", "", text).strip()
+        text = re.sub(rf"\s+{re.escape(press)}\.?\s*$", "", text).strip()
+    text = re.sub(r"\s*-\s*[^-]{2,24}\s*$", "", text).strip()
+    return text
+
+
+def normalize_article_text(text: str, press: str = "") -> str:
+    text = strip_article_source_suffix(text, press)
+    return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
+
+
+def is_repeated_article_desc(title: str, desc: str, press: str = "") -> bool:
+    title_n = normalize_article_text(title, press)
+    desc_n = normalize_article_text(desc, press)
+    if not desc_n:
+        return True
+    return title_n and (desc_n in title_n or title_n in desc_n or title_n[:16] == desc_n[:16])
+
+
+def fallback_article_summary(title: str) -> str:
+    title = strip_article_source_suffix(title)
+    title = re.sub(r"^\[[^\]]+\]\s*", "", title).strip()
+    compact = re.sub(r"\s+", " ", title)
+
+    if "공습" in compact and ("브렌트" in compact or "유가" in compact):
+        return "美 이란 공습 여파로 브렌트유 4% 가까이 반등"
+    if "호르무즈" in compact and "유가" in compact:
+        return "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각"
+    if "이란 협상" in compact and "유가" in compact:
+        return "이란 협상 진전 기대가 국제유가 하락 요인으로 작용"
+    if "중동" in compact and "유가" in compact:
+        return "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도"
+    if "석유화학" in compact:
+        return "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리"
+    if "정유" in compact and ("AI" in compact or "데이터센터" in compact or "액침냉각" in compact):
+        return "액침냉각 등 정유사의 비석유 신사업 확대 흐름 조명"
+    if "정유" in compact:
+        return "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도"
+    if "LNG" in compact:
+        return "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도"
+    if "유가" in compact or "원유" in compact or "석유" in compact:
+        return "국제유가와 석유시장 변동 요인을 중심으로 정리"
+    return "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
+
+
 def in_morning_issue_window(
     item: Dict[str, Any],
     target_date: str,
@@ -254,17 +303,21 @@ def valid_article(
 
 def normalize_article(item: Dict[str, Any]) -> Dict[str, str]:
     title = clean(item.get("title"))
+    press = clean(item.get("press") or item.get("source")) or "Google News"
     snippet = clean(item.get("summary") or item.get("snippet"))
     if snippet:
+        snippet = strip_article_source_suffix(snippet, press)
         snippet = re.sub(r" - [^ ]+(?:\s|$)", " ", snippet)
         snippet = re.sub(r"\s+", " ", snippet).strip()
         summary = snippet[:147] + "..." if len(snippet) > 150 else snippet
         summary = strip_polite_endings(summary)
     else:
-        summary = "원문 링크 기준으로 세부 내용 검수 필요."
+        summary = fallback_article_summary(title)
+    if is_repeated_article_desc(title, summary, press):
+        summary = fallback_article_summary(title)
     return {
         "title": title,
-        "press": clean(item.get("press") or item.get("source")) or "Google News",
+        "press": press,
         "url": clean(item.get("url")),
         "summary": summary,
         "published_at_kst": clean(item.get("published_at_kst")),

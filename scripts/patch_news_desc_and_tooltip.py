@@ -216,7 +216,7 @@ def replace_render_news(text: str) -> str:
         rows.append(f'<a class="news-link" href="{esc(url)}" rel="noopener" target="_blank"><div class="news-link-title">{esc(title)}</div><div class="news-link-press">{esc(press)}</div>{desc_html}</a>')
     if not rows:
         rows.append('<div class="news-link"><div class="news-link-title">대표 기사 데이터 확인 필요</div><div class="news-link-press">-</div><div class="news-link-desc">조간 기사 후보가 report JSON에 반영되지 않음</div></div>')
-    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성. 기사 내용 밖의 업계 영향 평가는 작성자 해석</div>'
+    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성.</div>'
 '''
     pattern = r'def render_news\(data: Mapping\[str, Any\]\) -> str:\n.*?\n(?=TOOLTIP_SCRIPT\s*=)'
     new_text, n = re.subn(pattern, replacement + "\n", text, flags=re.S)

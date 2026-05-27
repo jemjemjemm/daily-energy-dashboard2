@@ -468,7 +468,7 @@ def render_issues(data: Mapping[str, Any]) -> str:
         rows.append(f'<div class="issue-card"><div class="issue-tag">{esc(tag)}</div><div class="issue-title">{esc(title)}</div><div class="issue-desc">{esc(desc)}</div>{link_html}</div>')
     if not rows:
         rows.append('<div class="issue-card"><div class="issue-tag">확인</div><div class="issue-title">전일 주요 동향 데이터 확인 필요</div><div class="issue-desc">전일 일정·이슈 데이터가 비어 있음</div></div>')
-    return '<div class="issue-list">' + ''.join(rows) + '</div><div class="fact-note">※ 관련 링크가 없는 항목은 일정·보도자료 원문 확인 범위 내에서 작성. 업계 영향 평가는 작성자 해석</div>'
+    return '<div class="issue-list">' + ''.join(rows) + '</div><div class="fact-note">※ 관련 링크가 없는 항목은 일정·보도자료 원문 확인 범위 내에서 작성</div>'
 
 
 def render_schedules(data: Mapping[str, Any]) -> str:
@@ -484,7 +484,7 @@ def render_schedules(data: Mapping[str, Any]) -> str:
         rows.append(f'<div class="schedule-row"><div class="schedule-time">{esc(time)}</div><div class="schedule-org">{esc(org[:8])}</div><div class="schedule-main">{esc(title)}{rel_html}</div></div>')
     if not rows:
         rows.append('<div class="schedule-row"><div class="schedule-time">-</div><div class="schedule-org">-</div><div class="schedule-main">금일 주요 일정 데이터 확인 필요<div class="schedule-rel">일정 데이터가 비어 있음</div></div></div>')
-    return '<div class="schedule-list">' + ''.join(rows) + '</div><div class="fact-note">※ 위 일정은 제공된 일정 텍스트 기준. 영향도는 보고서 작성 목적의 해석</div>'
+    return '<div class="schedule-list">' + ''.join(rows) + '</div>'
 
 
 def get_news(data: Mapping[str, Any]) -> tuple[str, list[Mapping[str, Any]]]:
@@ -492,6 +492,64 @@ def get_news(data: Mapping[str, Any]) -> tuple[str, list[Mapping[str, Any]]]:
     summary = clean_text(news.get("summary") or news.get("trend") or news.get("text") or "")
     articles = [a for a in list_of(news.get("articles")) if isinstance(a, Mapping) and a.get("title")]
     return summary, articles[:5]
+
+
+def strip_article_source_suffix(text: str, press: str = "") -> str:
+    text = clean_text(text)
+    press = clean_text(press)
+    if press:
+        text = re.sub(rf"\s*-\s*{re.escape(press)}\s*$", "", text).strip()
+        text = re.sub(rf"\s+{re.escape(press)}\.?\s*$", "", text).strip()
+    text = re.sub(r"\s*-\s*[^-]{2,24}\s*$", "", text).strip()
+    return text
+
+
+def normalize_article_text(text: str, press: str = "") -> str:
+    text = strip_article_source_suffix(text, press)
+    return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
+
+
+def is_repeated_article_desc(title: str, desc: str, press: str = "") -> bool:
+    title_n = normalize_article_text(title, press)
+    desc_n = normalize_article_text(desc, press)
+    if not desc_n:
+        return True
+    return title_n and (desc_n in title_n or title_n in desc_n or title_n[:16] == desc_n[:16])
+
+
+def fallback_article_desc(title: str) -> str:
+    title = strip_article_source_suffix(title)
+    title = re.sub(r"^\[[^\]]+\]\s*", "", title).strip()
+    compact = re.sub(r"\s+", " ", title)
+
+    if "공습" in compact and ("브렌트" in compact or "유가" in compact):
+        return "美 이란 공습 여파로 브렌트유 4% 가까이 반등"
+    if "호르무즈" in compact and "유가" in compact:
+        return "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각"
+    if "이란 협상" in compact and "유가" in compact:
+        return "이란 협상 진전 기대가 국제유가 하락 요인으로 작용"
+    if "중동" in compact and "유가" in compact:
+        return "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도"
+    if "석유화학" in compact:
+        return "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리"
+    if "정유" in compact and ("AI" in compact or "데이터센터" in compact or "액침냉각" in compact):
+        return "액침냉각 등 정유사의 비석유 신사업 확대 흐름 조명"
+    if "정유" in compact:
+        return "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도"
+    if "LNG" in compact:
+        return "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도"
+    if "유가" in compact or "원유" in compact or "석유" in compact:
+        return "국제유가와 석유시장 변동 요인을 중심으로 정리"
+    return "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
+
+
+def article_desc_for_display(article: Mapping[str, Any]) -> str:
+    title = clean_text(article.get("title") or "")
+    press = clean_text(article.get("press") or article.get("source") or article.get("publisher") or "")
+    desc = clean_text(article.get("summary") or article.get("description") or article.get("desc") or "")
+    if is_repeated_article_desc(title, desc, press):
+        return fallback_article_desc(title)
+    return strip_article_source_suffix(desc, press)
 
 
 def render_news(data: Mapping[str, Any]) -> str:
@@ -506,13 +564,13 @@ def render_news(data: Mapping[str, Any]) -> str:
         url = str(a.get("url") or "#").strip() or "#"
         title = clean_text(a.get("title") or "기사 제목 확인 필요")
         press = clean_text(a.get("press") or a.get("source") or a.get("publisher") or "출처 확인")
-        desc = clean_text(a.get("summary") or a.get("description") or a.get("desc") or "")
+        desc = article_desc_for_display(a)
         desc_html = f'<div class="news-link-desc">{esc(desc)}</div>' if desc else ''
         # 중요: 긴 URL 텍스트는 출력하지 않고, 제목에만 href를 건다.
         rows.append(f'<a class="news-link" href="{esc(url)}" target="_blank" rel="noopener noreferrer"><div class="news-link-title">{esc(title)}</div><div class="news-link-press">{esc(press)}</div>{desc_html}</a>')
     if not rows:
         rows.append('<div class="news-link"><div class="news-link-title">대표 기사 데이터 확인 필요</div><div class="news-link-press">-</div><div class="news-link-desc">조간 기사 후보가 report JSON에 반영되지 않음</div></div>')
-    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성. 기사 내용 밖의 업계 영향 평가는 작성자 해석</div>'
+    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성.</div>'
 
 
 

@@ -325,11 +325,7 @@ def update_price_section(report: Dict[str, Any], price_data: Optional[Mapping[st
 
     report["prices"] = {
         "unit": "$/Bbl",
-        "price_data_note": (
-            "※ 가격 데이터는 오피넷 및 장기 이력(history.json) 기준입니다. "
-            f"그래프는 기준일 전일 기준 과거 2개월({short_date(start_date)}~{short_date(end_date)})만 표시하며, "
-            "값이 0인 가격은 제외했습니다."
-        ),
+        "price_data_note": "※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.",
         "crude": {
             "base_label": short_date(crude_latest_date),
             "cards": crude_cards,
