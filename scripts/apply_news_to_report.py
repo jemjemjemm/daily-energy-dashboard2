@@ -16,6 +16,11 @@ import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List
+import time
+
+# 간단한 로컬 캐시: 국회 영상 조회 결과를 저장하여 반복 호출을 피합니다.
+CACHE_DIR = Path(".cache")
+CACHE_FILE = CACHE_DIR / "assembly_links.json"
 try:
     from scripts.find_assembly_video import search_assembly_for_title
 except Exception:
@@ -370,6 +375,16 @@ def update_summary(report: Dict[str, Any], news_summary: str) -> None:
 
 def main() -> int:
     a = parse_args()
+    # load assembly lookup cache
+    try:
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        if CACHE_FILE.exists():
+            with CACHE_FILE.open("r", encoding="utf-8") as fh:
+                _assembly_cache: Dict[str, str] = json.load(fh)
+        else:
+            _assembly_cache = {}
+    except Exception:
+        _assembly_cache = {}
     report_path = Path(a.report_dir) / f"{a.date}.report.json"
     news_path = Path(a.news_dir) / f"{a.date}.json"
     report = read_json(report_path)
@@ -449,8 +464,17 @@ def main() -> int:
             # 추가: 국회 영상회의록 자동 조회 통합
             assembly_link = None
             try:
-                # search_assembly_for_title은 네트워크 호출을 수행할 수 있음
-                assembly_link = search_assembly_for_title(it_title, a.date)
+                # 캐시 우선 조회: 키는 정규화된 제목 문자열
+                key = _norm_for_compare(it_title) or clean(it_title)
+                cached = _assembly_cache.get(key)
+                if cached is not None:
+                    assembly_link = cached or None
+                else:
+                    # search_assembly_for_title은 네트워크 호출을 수행할 수 있음
+                    assembly_link = search_assembly_for_title(it_title, a.date)
+                    # rate limit: 사이트 부담을 줄이기 위해 소량 sleep
+                    time.sleep(0.4)
+                    _assembly_cache[key] = assembly_link or ""
             except Exception:
                 assembly_link = None
 
@@ -468,6 +492,13 @@ def main() -> int:
         except Exception:
             issue.setdefault("links", [related_default])
     atomic_write_json(report_path, report)
+    # 캐시 저장(있으면)
+    try:
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        with CACHE_FILE.open("w", encoding="utf-8") as fh:
+            json.dump(_assembly_cache, fh, ensure_ascii=False, indent=2)
+    except Exception:
+        pass
     print(f"[OK] 뉴스 후보 반영 완료: {report_path} / status={status} / articles={len(articles)}")
     return 0
 
