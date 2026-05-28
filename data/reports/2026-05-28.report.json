@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 28일 (목)",
     "previous_day_label": "5/27",
     "today_label": "5/28",
-    "generated_at": "2026-05-28 09:02 KST",
+    "generated_at": "2026-05-28 12:41 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △중동 정세와 원유·LNG 수급 리스크 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1459,11 +1459,11 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
       "뉴시스는 5/28 04:55 입력 기사에서 이란 협상 진전 기대가 국제유가 하락 요인으로 작용.",
       "국제신문은 5/28 08:37 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
-      "초이스경제는 5/28 04:03 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각."
+      "에너지플랫폼뉴스는 5/28 09:20 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
@@ -1481,11 +1481,11 @@
         "published_at_kst": "2026-05-28 08:37"
       },
       {
-        "title": "호르무즈는?...장중 유가 '폭락', 美증시 OIL주 '뚝', 천연가스 '폭등' - 초이스경제",
-        "press": "초이스경제",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9kZ3NTRTVyODJ5cGJabEREWDFNOFlUQTZLMXZicGNodWhXWVpOenY1Y2MzY2k0b0ZST3VjVGdaMDR3RjV1ZW1Rem55WDZ4aF9ZOG83VHVPQXNVcTBhcTFBamcwMzNCZUJ1bTVPZHl2UdIBc0FVX3lxTFA0Z1ZXUVFsM2s2V0RnZzBTSDBCaXN3eTE5UEFvUXczdGNxdzhQM2NjSHpzU00wZ3hvS0g2RmdpbGNCTlphS2daWkI2RWRuX2tfOEVxaGxzWEJXdFhvYkFONWl1NllGbVFUUjRrRlA1aWl3d1U?oc=5",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "2026-05-28 04:03"
+        "title": "‘정유사 사후정산 폐지되면 주유소 보수적 가격 책정 완화’ - 에너지플랫폼뉴스",
+        "press": "에너지플랫폼뉴스",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xMjdKSlhNOVV5LVV3OG5oeFdmX0FPZUJSSXB4c3FvM25qNTNJRngxZmFEVUFNR3lIa0x1eWFVc2NGNk1sX2k4ZFdMUW0zZGUtR3NNdzdYYWk1anI3ajg5alZ2VXAzZnJhM29Ia2pJSnPSAXBBVV95cUxNcTI3SkpYTTlVeS1VdzhuaHhXZl9BT2VCUklweHNxbzNuajUzSUZ4MWZhRFVBTUd5SGtMdXlhVXNjRjZNbF9pOGRXTFFtM2RlLUdzTXc3WGFpNWpyN2o4OWpWdlVwM2ZyYTNvSGtqSUpz?oc=5",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "2026-05-28 09:20"
       }
     ],
     "source": "Google News RSS",
@@ -1606,7 +1606,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-28 09:02:57 KST",
+      "merged_at": "2026-05-28 12:41:47 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

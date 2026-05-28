@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-28",
-  "collected_at": "2026-05-28 09:02:48 KST",
+  "collected_at": "2026-05-28 12:41:45 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -42,9 +42,12 @@
     "호르무즈"
   ],
   "time_window": "전일 06:00~기준일 11:30 KST",
-  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 등을 중심으로 보도.",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
-    "중동 정세와 원유·LNG 수급 리스크"
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
   ],
   "articles": [
     {
@@ -70,6 +73,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "‘정유사 사후정산 폐지되면 주유소 보수적 가격 책정 완화’ - 에너지플랫폼뉴스",
+      "press": "에너지플랫폼뉴스",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xMjdKSlhNOVV5LVV3OG5oeFdmX0FPZUJSSXB4c3FvM25qNTNJRngxZmFEVUFNR3lIa0x1eWFVc2NGNk1sX2k4ZFdMUW0zZGUtR3NNdzdYYWk1anI3ajg5alZ2VXAzZnJhM29Ia2pJSnPSAXBBVV95cUxNcTI3SkpYTTlVeS1VdzhuaHhXZl9BT2VCUklweHNxbzNuajUzSUZ4MWZhRFVBTUd5SGtMdXlhVXNjRjZNbF9pOGRXTFFtM2RlLUdzTXc3WGFpNWpyN2o4OWpWdlVwM2ZyYTNvSGtqSUpz?oc=5",
+      "published_date": "2026-05-28",
+      "published_at_kst": "2026-05-28 09:20",
+      "snippet": "‘정유사 사후정산 폐지되면 주유소 보수적 가격 책정 완화’ 에너지플랫폼뉴스",
+      "score": 33,
+      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "호르무즈는?...장중 유가 '폭락', 美증시 OIL주 '뚝', 천연가스 '폭등' - 초이스경제",
       "press": "초이스경제",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9kZ3NTRTVyODJ5cGJabEREWDFNOFlUQTZLMXZicGNodWhXWVpOenY1Y2MzY2k0b0ZST3VjVGdaMDR3RjV1ZW1Rem55WDZ4aF9ZOG83VHVPQXNVcTBhcTFBamcwMzNCZUJ1bTVPZHl2UdIBc0FVX3lxTFA0Z1ZXUVFsM2s2V0RnZzBTSDBCaXN3eTE5UEFvUXczdGNxdzhQM2NjSHpzU00wZ3hvS0g2RmdpbGNCTlphS2daWkI2RWRuX2tfOEVxaGxzWEJXdFhvYkFONWl1NllGbVFUUjRrRlA1aWl3d1U?oc=5",
@@ -81,23 +95,23 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "이란 협상 기대감에 유가 급락…브렌트유 5% 하락, WTI도 큰 폭 하락 - 공감신문",
-      "press": "공감신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5HaUhNTWhkb2JEeUtkUTgwa0NNalBCMGp0WGZPcG5GVktIQ3RtVVdRNC1HazBWZm05QUhlMHRHU0d6NEN2dFluM1RGMjg3MUwyc2N1Uy1Gd1pEZnBfTEZOZXpJaG00MmRE?oc=5",
-      "published_date": "2026-05-28",
-      "published_at_kst": "2026-05-28 08:35",
-      "snippet": "이란 협상 기대감에 유가 급락…브렌트유 5% 하락, WTI도 큰 폭 하락 공감신문",
-      "score": 31,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "국제유가 5% 급락…호르무즈 재개방 기대에 한 달만에 최저 - 뉴스1",
       "press": "뉴스1",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5nV1NxdWp4SEI4aWpCVXRweExVVjRYSjBqRUZfWkhtRDNmTWxHYVNtWVQzdW5aMUUxNnNydC1yd1hpdFc0N1I4d1oyT25DYXpBVEstNEhqQ2NoZ2VoV2ttRmZtS0VkV00?oc=5",
       "published_date": "2026-05-28",
       "published_at_kst": "2026-05-28 06:02",
       "snippet": "국제유가 5% 급락…호르무즈 재개방 기대에 한 달만에 최저 뉴스1",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "국제유가, 미·이란 협상 교착에 반등…호르무즈 긴장 재부각 - 블루밍비트",
+      "press": "블루밍비트",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE45VHhHek9SUVNTWkdnOFU2OHFIbENKc1laRkxyYzhHMGlRQ2ZUVnN5U09veE9Xa0N3OWkxeUtwS3duVUpNeUZOV0RHMTNidUFp?oc=5",
+      "published_date": "2026-05-28",
+      "published_at_kst": "2026-05-28 09:52",
+      "snippet": "국제유가, 미·이란 협상 교착에 반등…호르무즈 긴장 재부각 블루밍비트",
       "score": 30,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -125,28 +139,6 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "국제유가 4%대 급락…'이란, 호르무즈 통항 한 달 내 복원' - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NdE1YOXBpa1lobll4ajRaZFZ6eE53Yk5fcmJCS25qOTVURUFiZTRYZU9LLUJsaGx6OTVnSVRENkMzUHNRSm8zVmRpTjhkeVE?oc=5",
-      "published_date": "2026-05-27",
-      "published_at_kst": "2026-05-27 22:24",
-      "snippet": "국제유가 4%대 급락…'이란, 호르무즈 통항 한 달 내 복원' v.daum.net",
-      "score": 30,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가 급락했다 낙폭 축소…백악관 “호르무즈 개방 합의 보도는 조작” - 이데일리",
-      "press": "이데일리",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNFRzM3ZDWFl0bFA5T3ZGWWh5N1hCVkRKTWZYSGw5RXQ1cjNucG9zTlc1RVE1OU16bDBodGRhdHE4S084SFBJR2VQOFVmNGFsQ18wWGVFWW9CYUVmNUlwemxCTHREQ3A2QlZUcmxlUUNhcUh6Y00zUzBqa0dFQTVuXw?oc=5",
-      "published_date": "2026-05-28",
-      "published_at_kst": "2026-05-28 01:20",
-      "snippet": "국제유가 급락했다 낙폭 축소…백악관 “호르무즈 개방 합의 보도는 조작” 이데일리",
-      "score": 30,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
       "title": "국제유가 5%급락…WTI 88달러 - v.daum.net",
       "press": "v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4zZFFqVlJVdHhZMi1lV2VQUEp5QUloS1ZGaE54dEZLcm81QzJhT09pdVQwRGIwVzN1MF8xWDRfUFFlNUU3VVhwdl9Na1g3V0U?oc=5",
@@ -158,23 +150,34 @@
       "collector": "google_news_rss"
     },
     {
-      "title": "[속보] 국제유가, 급락...WTI 5.55% ↓ - 이투데이",
-      "press": "이투데이",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1RTmlNb2xrU1E0NTZLREwyZXdIRVZkR0F0X0VQQmhBUDdNREVHdmxTdzM0eVhTVUh0Ukh3bVhOaG1vLWdnZDhuYWZnenBCRUNzeHdnTw?oc=5",
+      "title": "국제유가, 미·이란 협상타결 기대에 급락…WTI 90달러 하회 - 연합뉴스TV",
+      "press": "연합뉴스TV",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1cHBqWl9QWGYzYV9ud3RIaGlSSWVEbGd5a0RtQ3RyV1BvVXhxc01QM1pWWm5XZTl5aGlpWHNTX01YX0RzQ1lTQXNIdnpyeF96VTBTYTMzOWR6WUZEVE9pVzk3TzlwRDQ?oc=5",
       "published_date": "2026-05-28",
-      "published_at_kst": "2026-05-28 06:08",
-      "snippet": "[속보] 국제유가, 급락...WTI 5.55% ↓ 이투데이",
+      "published_at_kst": "2026-05-28 08:33",
+      "snippet": "국제유가, 미·이란 협상타결 기대에 급락…WTI 90달러 하회 연합뉴스TV",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
     },
     {
-      "title": "국제유가, 이란 협상타결 기대고조에 급락…WTI 90달러 하회 - news.sbs.co.kr",
-      "press": "news.sbs.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE45TXBQdDlOVVI1LWdSVXhTdnQ2VFFQeVdSR1Z3dHNLVmVreXg2dF9NUUVINXhFTDJJcWREdmp3NXQ1a2UtbWZsdmlWVl9UYUFHSU9vX05SOVJ4SmJtSk04R3R0NVg5UQ?oc=5",
+      "title": "국제유가, 루비오 협상 선호 발언에 급락...WTI 5.6%↓ - 여성신문",
+      "press": "여성신문",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE13UjZvMmRHa3dZbW1Xd2xXWm1HWk5GOWdsQmd4R0M2c2wwVm9UWEZPVkttOExsbnpUQlNlbkhiM3RUa2hSN25wVkFNY0ZLRmY1QmFWek1tRWlYYlNFQjQwSVFkcUhCVlhxcS1DVjAtYWFqR2_SAXNBVV95cUxNd1I2bzJkR2t3WW1tV3dsV1ptR1pORjlnbEJneEdDNnNsMFZvVFhGT1ZLbThMbG56VEJTZW5IYjN0VGtoUjducFZBTWNGS0ZmNUJhVnpNbUVpWGJTRUI0MElRZHFIQlZYcXEtQ1YwLWFhakdv?oc=5",
       "published_date": "2026-05-28",
-      "published_at_kst": "2026-05-28 06:44",
-      "snippet": "국제유가, 이란 협상타결 기대고조에 급락…WTI 90달러 하회 news.sbs.co.kr",
+      "published_at_kst": "2026-05-28 11:20",
+      "snippet": "국제유가, 루비오 협상 선호 발언에 급락...WTI 5.6%↓ 여성신문",
+      "score": 28,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
+      "title": "국제유가 고점 찍고 내려가나…WTI 90달러 밑으로 - 서울신문",
+      "press": "서울신문",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ZOExBalBDbHZpWnJoNklqWUk0V2MwNlFEa1BVZHpGV0V0WnUwYUtNb1Mxa1dVWERtMHQ0TDExbkFqWnhzYWtxOUlMRXZWV3NSaW1XZWFZUkhDMnFYQThZZzBHaDJWMlVJdnl4NGdYUQ?oc=5",
+      "published_date": "2026-05-28",
+      "published_at_kst": "2026-05-28 10:40",
+      "snippet": "국제유가 고점 찍고 내려가나…WTI 90달러 밑으로 서울신문",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
