@@ -1,0 +1,274 @@
+{
+  "schema_version": "2.5",
+  "date": "2026-05-29",
+  "report_slot": "evening",
+  "collected_at": "2026-05-30 00:06:10 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
+    "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
+    "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
+    "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
+    "에너지 OR 유가 OR 석유 OR 물가 OR 전력 OR 가스",
+    "산업부 OR 공정위 OR 기재부 OR 국회 OR 정부 에너지",
+    "정유사 OR 주유소 OR 휘발유 OR 경유 OR 석유제품",
+    "석유화학 OR 화학제품 OR 나프타 OR 배터리 OR 공급망",
+    "생산자물가 OR 소비자물가 OR 수입물가 OR 에너지 가격",
+    "경제 에너지 OR 경제 유가 OR 산업 에너지",
+    "물가 에너지 OR 정부 물가 OR 전력 가스",
+    "산업부 OR 기재부 OR 공정위 OR 에너지",
+    "석유 OR 가스 OR 전력 OR 화학",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "전력",
+    "에너지",
+    "생산자물가",
+    "민생물가",
+    "최고가격제",
+    "호르무즈"
+  ],
+  "time_window": "2026-05-29 09:00~2026-05-29 17:00 KST",
+  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "topics": [
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
+  ],
+  "articles": [
+    {
+      "title": "유가 75달러 복귀냐, 100달러 돌파냐...트럼프 서명에 달렸다",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529163602150",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "뉴스웨이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 유가 75달러 복귀냐, 100달러 돌파냐...트럼프 서명에 달렸다 질 것으로 내다 봤다. 아울러 미국 석유 기업 셰브런 최고경영자(CEO) 마이크 워스는 중동 사태 장기화로 인해 \"오는 6~7월 국제 유가 가 추가 상승 압박을 받을 가능성이 높다\"는 경고성 전망을 내놓았다. 사우디아라비아 아람코는 \"호르무즈 해협이 앞으로 몇 주 더... 7시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "국제유가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 전략비축유, 2년만 최저…에너지업계 \"6~7월 유가 상승\" 경고",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529160017798",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 3 美 전략비축유, 2년만 최저…에너지업계 \"6~7월 유가 상승\" 경고 국제유가의 상승이 불가피하다는 뜻으로 해석된다. 유럽 최대 석유 기업 셸의 와엘 사완 CEO도 최근 에너지 콘퍼런스에서 \"최근 국제...여름 성수기가 본격화하는 6~7월 국제 원유 및 정제 제품 (휘발유 등)이 재고 고갈 문제가 수면 위로 드러날 것\"이라며 국제유가... 8시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 전략비축유 2년래 최저⋯정유사 셰브런 \"6∼7월 유가급등\" 경고",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529135903730",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 美 전략비축유 2년래 최저⋯정유사 셰브런 \"6∼7월 유가급등\" 경고 방출한 전략 비축유(SPR)가 5000만 배럴에 달하는 것으로 전해졌다. 우리나라 전체가 약 20일 사용할 수 있는 물량이다. 현지 정유 업계는 6~7월 큰 폭의 국제유가 상승세가 이어질 것으로 우려 중이다. 28일(현지시간) CNN과 AP통신 등은 “미국이 이란과 전쟁을... 10시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 리스크 완화됐지만…K석화, 수익성 부담·중국 공급과잉 '한숨'",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529165753822",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "동행미디어 시대 개별문서메뉴 톡으로 바로 공유 공유하기 중동 리스크 완화됐지만…K석화, 수익성 부담·중국 공급과잉 '한숨' 사진=LG화학 미국·이란 전쟁이 종전 국면에 접어들었지만 국내 석유화학 기업들의 경영 환경은 녹록지 못할 전망이다. 원재료 나프타 보다 주력 제품인 에틸렌 가격 하락 폭이 큰 데다 중국발 공급과잉이 이어지면서 수익성이 위협받고 있다. 현 위기를 돌파하기... 7시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "나프타",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동발 LNG 폭등…6월 발전용 가스 요금 3개월 새 20% 뛰었다",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529143343142",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "에너지경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 중동발 LNG 폭등…6월 발전용 가스 요금 3개월 새 20% 뛰었다 오른 데 이어 두 달 연속 7%대 상승세를 이어간 것이다. 중동 전쟁이 본격화되기 전에 결정된 3월 요금(약 GJ당 1만6048원)과 비교하면 약 20.1% 상승했다. 발전용 천연 가스 도매요금 추이(2026년 1~6월) 자료=한국 가스 공사 가스 공사가 공개한 6월 도시 가스 용도별... 9시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "천연가스",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[단독] 서울에만 6만7000호 멈췄다…착공 지연 10만호 중 86%는 민간사업",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529164624463",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "에너지경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 [단독] 서울에만 6만7000호 멈췄다…착공 지연 10만호 중 86%는 민간사업 의미가 있다\"고 말했다. 함 랩장은 현재 착공 지연의 주요 원인으로 PF와 공사비 문제를 꼽았다. 그는 “중동 지역 불안에 따른 유가 변동성과 환율 불안이 지속되면서 건설 자재 가격과 공사비 부담이 커졌다\"며 “PF 조달 여건 역시 여전히 녹록지 않은 상황... 7시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 4,
+        "title_importance": 1,
+        "press": 0,
+        "originality": 3,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "유가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동전쟁발 유가 영향 본격화…건설공사비 상승폭, 4년3개월래 최대",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529153817837",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 중동전쟁발 유가 영향 본격화…건설공사비 상승폭, 4년3개월래 최대 기록한 것은 원유 가격과 연관이 깊은 '아스콘 및 아스팔트 제품 '이다. 전월에 비해 무려 28.83% 폭등했다. 이는 공사비지수 집계 이후...상승세다. 이전 최고 기록은 1998년 4월의 21.54%였다. 한국 석유 공사 유가정보시스템에 따르면 전쟁 발발 전인 2월27... 8시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "한미 증시 일제히 급등… WTI는 80달러대로 하락",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529114420945",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "문화일보 개별문서메뉴 톡으로 바로 공유 공유하기 한미 증시 일제히 급등… WTI는 80달러대로 하락 늘리기로 했다. 따라서 내달 19일까지는 6차 최고가격을 유지하면서 상황을 지켜볼 수 있는 시간을 벌어 놓은 셈이다. 그러나 정유 업계의 손실 보전 정산 시기가 도래하면서 제도를 오래 유지하는 것에 대한 정부의 재정적 부담도 만만치 않은 상황이다. 이에 정부... 12시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[이덕환의 경제논단]정부 시장개입, 정유 ·석화에도 분명한 명분이 필요하다",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529110900476",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "아시아경제 개별문서메뉴 톡으로 바로 공유 공유하기 3 [이덕환의 경제논단]정부 시장개입, 정유 ·석화에도 분명한 명분이 필요하다 꿈' 덕분에 벌어지는 기적과도 같은 일이다. 오늘날 세계 5위의 정제 설비와 세계 4위의 에틸렌 생산 시설을 갖춘 우리나라의 정유 ·석유화학산업이 국가기간산업의 역할을 톡톡히 수행하고 있다는 뜻으로 풀이된다. 하지만 이에 반해, 정유 ·석유화학산업에 대한... 12시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美전략유, 이란전쟁 후 5000만배럴 소진…80년대 초 이후 최저",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529154907280",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 美전략유, 이란전쟁 후 5000만배럴 소진…80년대 초 이후 최저 내 휘발유 가격을 일시적으로 낮출 수 있다. 그러나 분석가들은 이런 조치가 세계 에너지 시스템을 더욱 불안정하게 만들고 미국 정유사 와 생산업체에 심각한 피해를 줄 위험이 있다고 지적한다. 백악관은 현재 수출 제한 또는 금지 조치는 검토 대상이 아니라는... 8시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "세계 최대 정유사 “재고 사상 최저…유가 150달러 갈수도”",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529143515215",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "국민일보 개별문서메뉴 톡으로 바로 공유 공유하기 세계 최대 정유사 “재고 사상 최저…유가 150달러 갈수도” 22일(현지시간) 미국 뉴욕에 미국 에너지기업 엑슨모빌의 주유소 모습. 로이터연합뉴스 글로벌 원유 재고가 수주 안에 사상 최저치로 떨어지면서 국제유가가 배럴당 150달러까지 치솟을 수 있다는 미국 최대 에너지 기업 엑슨모빌의 경고가 나왔다. 28일(현지시간... 9시간 전 1",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프 “호르무즈 개방되면 유가 안정”…전문가들이 부정적인 이유",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260529130217140",
+      "published_date": "2026-05-29",
+      "published_at_kst": "",
+      "snippet": "조선일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 5 트럼프 “호르무즈 개방되면 유가 안정”…전문가들이 부정적인 이유 석유 수출을 통제할 경우 미국 내 유가는 일시적으로 하락하겠지만 에너지 시장 전체가 불안해질 우려가 있다. 수출 물량 감소로 정유사 가 가동을 줄이기 때문이다. 또 세계 유가가 천정부지로 치솟아 오르면서 세계 경제가 큰 타격을 받게 된다. 고유가를 타개... 11시간 전 6",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "daum_html"
+}
