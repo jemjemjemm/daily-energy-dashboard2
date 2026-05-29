@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 6일 (수)",
     "previous_day_label": "5/4",
     "today_label": "5/6",
-    "generated_at": "2026-05-29 14:28 KST",
+    "generated_at": "2026-05-30 00:19 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1448,35 +1448,60 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "연합뉴스는 5/5 16:00 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
-      "연합뉴스는 5/5 16:00 입력 기사에서 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
-      "인더스트리뉴스는 5/5 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.8%↑(종합) - 연합뉴스",
-        "press": "연합뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2QlNhYlFNRlYxSzkxV2lYcmR6RWVSWnl0dHppZUE3NHZ2dWlDMGpKbmpyalYwUnNmWVl0T29SVmltWkRFR241MW5wWEppQ3FVS0NUSTFqWlh0WTTSAWBBVV95cUxOTUZ4RFhEV0N5ZG9yYTlEVy04WF9ld0dKOGotTngydURKcElPWXc5VHZwOF85ajVKM2s4N3NCeE15RlluUFlfNWZnYXRWVFZRbWRDbTd2aUhmR3FNeno5Qk4?oc=5",
-        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
-        "published_at_kst": "2026-05-05 16:00"
+        "title": "최고가 규제 정유사 손실 보전 기준 놓고 정부·업계 '이견'",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260506071132079",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "중동 긴장 재고조에 국제유가 급등…브렌트유 5.80%↑ - 연합뉴스",
-        "press": "연합뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3N0V2WnNHMXU2WEc1emRtSkdaWXp6ZHF2UXJvcHNWN0FTVjlEVmdHeHJ6R2tUd0VrSWNJd2UzOUtuV2pKS3Rvc2pfOXZyZzlKVkt5ZVZEZnZJNU3SAWBBVV95cUxONDZxby00V25mbndZbWJiUF9CQ0xkdWhjZ01kOWM1MUlpVS1QcFVjQmRiRnBNQ2JvOXVVb1Y3c3ltWVNQZmZiWEE3ZjY0VEVCcFBYMDRfeTlHMV9wb204WU8?oc=5",
-        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
-        "published_at_kst": "2026-05-05 16:00"
-      },
-      {
-        "title": "국제유가, 美-이란 휴전 붕괴 위기에 급등…브렌트 6%·WTI 4% 올라 - 인더스트리뉴스",
-        "press": "인더스트리뉴스",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jWGVacGtUUE80TFNZbGFaajl5ellUV3lUQVV0M1JYRTFyM3hvTnh3OVJFWGoxeU1WTXVaTkVhRWRBaGN3bW1EX1pheWZEeTVqdmJsRFNCZW4tellZOTFNUkhYNXNtMUVWbVN2Y3VwMTExQQ?oc=5",
+        "title": "유가가 밀어올린 물가…석유류 21.9% 급등-소비자물가 2.6%↑(종합)",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260506084216845",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-05 16:00"
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "사우디 원유 프리미엄 '20달러' 육박… 정유 업계 \"불확실성 최악\"",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260506063115380",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1578,11 +1603,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-06.json",
+      "source_file": "data/news/2026-05-06.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": false,
@@ -1599,7 +1625,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:28:42 KST",
+      "merged_at": "2026-05-30 00:19:51 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

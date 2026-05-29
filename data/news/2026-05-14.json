@@ -1,8 +1,9 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.5",
   "date": "2026-05-14",
-  "collected_at": "2026-05-29 14:29:53 KST",
-  "source": "Google News RSS + Naver/Daum News Search",
+  "report_slot": "morning",
+  "collected_at": "2026-05-30 00:24:59 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
     "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
@@ -41,7 +42,7 @@
     "최고가격제",
     "호르무즈"
   ],
-  "time_window": "전일 06:00~기준일 11:30 KST",
+  "time_window": "2026-05-13 17:00~2026-05-14 09:00 KST",
   "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
@@ -51,139 +52,223 @@
   ],
   "articles": [
     {
-      "title": "석유제품 최고가격제 시행 후 휘발유·경유 소비량 3%·8% 감소 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9Jb0F2Rnk0V1Q3cnl0T0UyS3ptOW9ZaWRtZXRMWUNzYWlrN29nYXJJRy1mMTRvZzAyU183WTRFLUswMEhsQUEzZVZlMA?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "석유제품 최고가격제 시행 후 휘발유·경유 소비량 3%·8% 감소 v.daum.net",
-      "score": 45,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "정부 “석유 최고가격제, 국제유가 100달러 이하 돼야 해제 검토” - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5BWGFSdWs0U19SREVsSnRETkQtZldXbkZhS3VNLXFkZzFSSUR4alU1SFNHXzdlbUhuZUdESFpFUW11Y0pveklvOUVCN3BzMDA?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "정부 “석유 최고가격제, 국제유가 100달러 이하 돼야 해제 검토” v.daum.net",
-      "score": 44,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN - Investing.com 한국어",
-      "press": "Investing.com 한국어",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwbzZLZW5FMkcwd2FhckNEQ09Fb1RzZzR2akduY1RqeUI3WXVPY3laS1RxX3lVRHMxX0RpbDM4Sm5sS3B2NFVhb29aYXkwRGZoanJ3UTVRbGRrdmg0STBUdGVaY3dMTk5KSnl1eDRSSQ?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "[국제 유가] 중동 긴장에 브렌트·두바이유 급등...WTI는 102달러선 약보합 By EBN Investing.com 한국어",
-      "score": 36,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "[국제유가] 국제유가 일제히 약세...브렌트 105달러·WTI 100달러 - ebn.co.kr",
-      "press": "ebn.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE44MVRMNzV5LW9pMDY3ODNhYUdrY1phdnRpWEJmUTJ1VzBmR1hjRlNkTlFaNDI3UHBWM3hmdURlWXV0alp6X3NnNHdyRFE3d1NNcmZHN2Y5Vm1RajdTQ1A2b1k3NlhuV0VE?oc=5",
+      "title": "\"최고가격제 두 달, 4조원 손실…종전 후 유가 하락땐 손실 눈덩이\"",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514060319075",
       "published_date": "2026-05-14",
-      "published_at_kst": "2026-05-14 09:00",
-      "snippet": "[국제유가] 국제유가 일제히 약세...브렌트 105달러·WTI 100달러 ebn.co.kr",
-      "score": 34,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 \"최고가격제 두 달, 4조원 손실…종전 후 유가 하락땐 손실 눈덩이\" 원에 육박할 거란 분석들이 나온다. 최고가격제는 말 그대로 석유제품의 상한선을 지정하는 것인데, 이 상한선이 없었을 경우에 정유사 들이 4조원은 더 벌 수 있었을 거란 얘기다. 정부는 지난 3월13일 중동발 고유가로 석유 최고가격제를 실시하기로 하면서 이에... 2026.05.14",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
     },
     {
-      "title": "제조 AI로 석유화학 위기 돌파…산업장관, SK에너지 현장 점검 - 연합인포맥스",
-      "press": "연합인포맥스",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8xWm9xMzF3ZWQtOTh4OU1lYUhnNUZrcV9VYk92Q3A4V0cyNUZWQ0Zkd3JiUjE1OWFDTHFzVmt4cW5VZGlQTG5PejNxZFFHeEpiVEdSMXJxRXoyUlJiU05Qa1ExbEtUcGNLRGxSRHFsWUo?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "제조 AI로 석유화학 위기 돌파…산업장관, SK에너지 현장 점검 연합인포맥스",
-      "score": 32,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "제조 AI로 석유화학 위기 돌파…산업장관, SK에너지 현장 점검 - KB Think",
-      "press": "KB Think",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDd0dtaFVzX0VDT1hndG9GTFhrUHpWbXBDWE1Gd2t0eHVyb0g0eWRuMVFLZHV0QTNTeTAwaHhfWEptbFdtV2prTFM1MjU1MzBOcHZOSk1aNjdJMFZxZlh5dEYtUmh0d3RXU0J6Mnc0WHFjZw?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "제조 AI로 석유화학 위기 돌파…산업장관, SK에너지 현장 점검 KB Think",
-      "score": 32,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "金총리 \"원유 등 수급 비교적 안정적…정부, 물가관리 전력\"(종합) - 연합뉴스",
-      "press": "연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwbHQwMGs1b1FMRmJENEl6Q2pUbjlfY2Z5aDc0VGF5NHJSRVo2OUFORHNveEhmUWNCYzZ6dmtLeUlKcFpodkVVSmFoRHJfaGhoSDE0b1B2ekxqRUXSAWBBVV95cUxPT0dyRTBFc2NEUXpfLW84dGJoZU1kbnR3a0FMMzRGd2Y4bVdvZEFtVmpvbl9nVDg0aUVET0d1TGNld0lNMTF4M2hqSEw4d0YtcUdBTE5TSjBxZmpVRkZCNWQ?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "金총리 \"원유 등 수급 비교적 안정적…정부, 물가관리 전력\"(종합) 연합뉴스",
-      "score": 30,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "정유4사 1분기 ‘조 단위’ 깜짝 실적…“국제유가 시차 효과 때문” - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9YY2czZHp1Um51VDZnQm1Xb2E4RVlSVV9ESk1UbGh4a2Nxb01NS0VLYWI3ZmZobG5SNGpBN2w2X2pYbFowN285NDBEZw?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "정유4사 1분기 ‘조 단위’ 깜짝 실적…“국제유가 시차 효과 때문” v.daum.net",
-      "score": 30,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "\"중동發 유가 충격 현실화\" … 美 생산자물가 6% 급등, 2년여 만에 최고 - 뉴데일리",
-      "press": "뉴데일리",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5EY3F2UFh0MFphMTl0alExcFY0dXBNbl9tRzk2Mi02eTdGaUFqem9CclVCZ0VvUDViOTNzeXBiZ0NVM0JNREUzX2ZiM3VoS2RmTUZHMGtiOERHUVVieWt2T3JLYy1YUGRlLTg4VzdIQmpFQ3dRSFZpZXZkRQ?oc=5",
+      "title": "브렌트유 105달러·WTI 101달러로 하락…국제유가 2%↓",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514075353352",
       "published_date": "2026-05-14",
-      "published_at_kst": "2026-05-14 07:09",
-      "snippet": "\"중동發 유가 충격 현실화\" … 美 생산자물가 6% 급등, 2년여 만에 최고 뉴데일리",
-      "score": 30,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
+      "published_at_kst": "",
+      "snippet": "전자신문 개별문서메뉴 톡으로 바로 공유 공유하기 브렌트유 105달러·WTI 101달러로 하락…국제유가 2%↓ 미중 정상회담 기대감에 유가 숨 고르기 美 물가 급등에 금리 부담 커졌지만 원유 수요 둔화 전망 반영 유가 로스앤젤레스의 한 주유소 모습. 도널드 트럼프 미국 대통령이 13일(현지시간) 중국 베이징에 도착해 2박 3일간의 국빈 방문 일정에 돌입한 가운데 국제... 2026.05.14",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "주유소",
+      "collector": "daum_news_search"
     },
     {
-      "title": "중동발 유가 급등 수혜…SK이노베이션 영업이익 2조 돌파 - 에너지타임즈",
-      "press": "에너지타임즈",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96ajVjdFVPOHdrNzBIdVdwT0tEaWx6UE1KQ0otdGZ0WWFzUWhUVjFUblU3QUMyZzItNExqc0JUNE1aQkdHOWpQT2UtSjJiQkxpVG1jRGlWVnRDSXBDazRwYm9DUHVQd1d5RWFYaA?oc=5",
+      "title": "“석유 최고가격제 정산, 시장가로 계산해야”",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514060319077",
       "published_date": "2026-05-14",
-      "published_at_kst": "2026-05-14 00:15",
-      "snippet": "중동발 유가 급등 수혜…SK이노베이션 영업이익 2조 돌파 에너지타임즈",
-      "score": 29,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 “석유 최고가격제 정산, 시장가로 계산해야” [백철우 덕성여대 국제통상학과 교수] 국제유가 급등에 대응해 정부는 석유제품에 최고가격제를 도입했다. 정유사 가 제품을 시장가격이 아닌 정해진 가격으로만 팔아야 하는 만큼, 그 차액을 어떻게 보전할 것인가가 차후 과제로 떠올랐다. 정부는 보전의 기준을... 2026.05.14 2",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
     },
     {
-      "title": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” - KBS 뉴스",
-      "press": "KBS 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vLWR4cE56MUQtUVFqZFJZRDBDOXZWNlBEdDVBZXpva2lOcllmNzVqMXVlYUhQN3FsNzNXN2FWT0hVZVpNZVU4VTVPaTRfNFJxTUtoZ1V1c0daRE0?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "김 총리 “원유 80%·나프타 90% 공급물량 안정적 확보…물가 관리 전력” KBS 뉴스",
-      "score": 29,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
+      "title": "한국가스공사, 유가 하락 시기 및 하락폭 등 관건…목표가↓-대신",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514075617408",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 한국가스공사, 유가 하락 시기 및 하락폭 등 관건…목표가↓-대신 첫 번째 관건은 유가 하락 시기 및 하락폭이다. 현재 미국과 이란과의 종전 시기 이외에도 종전 이후에도 중동지역의 석유와 LNG 인프라 복구까지 상당한 시간 소요에 대한 우려가 존재한다”고 분석했다. 그러면서 “UAE의 OPEC+ 탈퇴, 북미 및 베네수엘라의 석유... 2026.05.14",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "LNG",
+      "collector": "daum_news_search"
     },
     {
-      "title": "석유 최고가격제 시행 두달째, 자영 주유소 존폐위기 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1GMUVkZGNCcWtYZU9xc0tlUlJmSVlicVdlRHlFRlVfM25WeWF2cEZqdWZBN2pzUDBoTlN0ZGN4ZFdxZ2tZSkF5YllNZw?oc=5",
-      "published_date": "2026-05-13",
-      "published_at_kst": "2026-05-13 16:00",
-      "snippet": "석유 최고가격제 시행 두달째, 자영 주유소 존폐위기 v.daum.net",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "\"100달러 웃도는 유가에 '인플레' 수면 위⋯1490원대서 등락\" [환율전망]",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514083406393",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 \"100달러 웃도는 유가에 '인플레' 수면 위⋯1490원대서 등락\" [환율전망] 환율 예상 범위는 1487~1497원이다. 민 선임연구원은 \"중동 지역의 지정학적 충돌이 장기화되는 가운데 5월 말까 지 사실상 호르무즈 해협 봉쇄 상태가 유지될 것이라는 전망이 나오며 국제유가는 WTI 기준 배럴당 100달러를 상회하는 수준에서 유지되고 있다\"며 \"이... 2026.05.14",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "국제유가, 미·중 정상회담·美 물가 부담에 하락…브렌트유 2%↓",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514082625095",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "브릿지경제 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가, 미·중 정상회담·美 물가 부담에 하락…브렌트유 2%↓ 인도분 브렌트유는 배럴당 105.63달러로 전장 대비 2.14달러(1.99%) 하락했다. 뉴욕상업거래소에서 6월 인도분 미국 서부텍사스산 원유 (WTI)는 전장 대비 1.16달러(1.14%) 내린 101.02달러로 장을 마쳤다. 이날 시장은 미·중 정상회담과 물가 지표에 주목했다. 외신... 2026.05.14",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "㈜GS, 1분기 영업익 1조2586억원…정유 호실적에 전년比 57%↑",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514081247784",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "에너지경제 개별문서메뉴 톡으로 바로 공유 공유하기 ㈜GS, 1분기 영업익 1조2586억원…정유 호실적에 전년比 57%↑ 증가한 9853억원을 기록했다. 2월 말 시작된 미국과 이란 간 전쟁으로 호르무즈 해협이 봉쇄되는 등 중동 사태로 국제 유가와 석유 제품 가격이 상승하며 매출이 올랐고, 영업이익도 일시적 재고 효과에 힘입어 상승했다. 다만 정부가 3월 13일부터 시행한 석유 제품 ... 2026.05.14",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "연료비에 엔진오일까지…고유가에 4월 '차량 유지비' 16% 급등",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514081138752",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "국제신문 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 연료비에 엔진오일까지…고유가에 4월 '차량 유지비' 16% 급등 석유 제품 4차 최고가격제 적용(24일 0시)을 하루 앞뒀던 지난 4월 23일 서울의 한 주유소에서 운전자들이 주유를 하고 있다. 사진은 기사 내용과 직접적인 관련이 없음. 연합뉴스 중동전쟁 장기화 여파로 국내외 유가가 크게 오르면서 연료비와 엔진오일 교체비 등... 2026.05.14 1",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "HD현대그룹, 1분기 영업익 120% 급등…조선ㆍ정유ㆍ건설기계ㆍ전력기기 동반질주",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514062010438",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "대한경제 개별문서메뉴 톡으로 바로 공유 공유하기 HD현대그룹, 1분기 영업익 120% 급등…조선ㆍ정유ㆍ건설기계ㆍ전력기기 동반질주 상승했다. 호르무즈 해협 봉쇄에 따른 원유 수급 차질로 두바이유가가 직전 분기 배럴당 63.8달러에서 86.3달러로 뛰었고, 중동 정유사 피해로 등ㆍ경유 공급이 감소해 제품 크랙도 대폭 확대됐다. 등유 크랙은 같은 기간 배럴당 24.6달러에서 36.3달러로, 경유 크랙... 2026.05.14 3",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "IBK證 \"SK이노, 배터리 적자에도 1분기 영업이익 증가⋯하반기 LNG 수익성 기대\"",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514080503627",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 IBK證 \"SK이노, 배터리 적자에도 1분기 영업이익 증가⋯하반기 LNG 수익성 기대\" 1조2832억원으로 전 분기 대비 353.9% 늘었는데, 유가 상승에 따른 재고 관련 이익 증가와 중동·아시아 생산 차질로 인한 등· 경유 수급 타이트 현상, 긍정적인 래깅 효과가 복합적으로 반영된 결과로 분석됐다. 화학과 E&S도 힘을 보탰다. SK지오센트릭은 재고... 2026.05.14",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "金총리 “원유·나프타 수급 안정 지속”",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260513183319211",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "세계일보 개별문서메뉴 톡으로 바로 공유 공유하기 金총리 “원유·나프타 수급 안정 지속” 의약품과 의료제품 수급 상황이 안정세로 전환됐다고 평가했다. 물가 관리에도 전력을 다해 달라고 당부했다. 김 총리는 재정경제부...고 했다. 재경부는 물가 관리를 위해 유류비 부담 완화 및 민생 밀접품목 가격 안정 정책을 이어갈 계획이라고 설명했다. 김 총리... 2026.05.13",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "민생물가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[국제유가] 美 금리 인상 가능성 부각에 하락 마감",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260514083141258",
+      "published_date": "2026-05-14",
+      "published_at_kst": "",
+      "snippet": "신아일보 개별문서메뉴 톡으로 바로 공유 공유하기 [국제유가] 美 금리 인상 가능성 부각에 하락 마감 전쟁 종식이 가능하다고 언급한 지 하루 만인 이날 중국 베이징에 도착했다. 다만 장기적인 평화 협정 가능성이 약화되고 이란이 호르무즈 해협 통제를 강화하면서 시장 긴장은 여전한 상황이다. 중국은 트럼프 행정부의 제재 압박 속에서도 이란산 원유를 가장 많이... 2026.05.14",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
     }
   ],
   "errors": [],
   "success": true,
-  "used_tier": "google_tier1"
+  "used_tier": "daum_html"
 }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 11일 (월)",
     "previous_day_label": "5/8",
     "today_label": "5/11",
-    "generated_at": "2026-05-29 14:29 KST",
+    "generated_at": "2026-05-30 00:21 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1501,37 +1501,62 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "네이트는 5/10 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "매일경제 마켓은 5/10 16:00 입력 기사에서 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
-      "v.daum.net는 5/10 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "韓, G7 국가보다 에너지 물가 관리 선방…유류세 인하·석유 최고가격제 시행 영향 - 네이트",
-        "press": "네이트",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBaYVdoU21sQ3laWXozZFJPQlp3d0IxeXluSkZPSXZCdWNWR0tKNUoxX1N5UFlqV21hUFAwN21WaHl1a20yeHpNeGt0WXlNRU11eFQ4?oc=5",
+        "title": "[단독] 석유 최고가격제 두 달… 주유소 60곳 줄어",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260511003302120",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-10 16:00"
+        "published_at_kst": "",
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 3,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "달라진 韓 에너지 지도 …석유·LNG 중동 의존 줄어 - 매일경제 마켓",
-        "press": "매일경제 마켓",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5uVXFvSlpLNEZIN0VXN09LMWlPZDZ4aXlHZng2MG5IaU11cW1CbFBSNGg0d1UtTHh0dF91QWxoMVZ0NXV1RjVsR3lJTVVzc293S2c?oc=5",
-        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
-        "published_at_kst": "2026-05-10 16:00"
+        "title": "유가보다 센 ‘공급 충격파’…정유 웃고 석화 버틴다",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260511073004248",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "재경부, 중동전쟁發 원유수급 불안 점검…석유수입기업 금융지원 확대 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1MSGU3SFRJd0F1MkVwYTdTSk1rSmlBYVhNRlFRNktyMF9ndWQ5bE5DeVZIUG1ZYTBweGFhRDJNSzlHTkdSUUtYN2pvdw?oc=5",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-10 16:00"
+        "title": "[단독] “트럼프는 이도 저도 못하는 호르무즈 해협의 늪에 빠졌다”…주한 이란 대사가 말하는 미·이란 전쟁의 향방",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260511060545017",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 0,
+          "originality": 3,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1633,11 +1658,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-11.json",
+      "source_file": "data/news/2026-05-11.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": false,
@@ -1654,7 +1680,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:29:20 KST",
+      "merged_at": "2026-05-30 00:22:27 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

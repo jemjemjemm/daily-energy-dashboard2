@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 21일 (목)",
     "previous_day_label": "5/20",
     "today_label": "5/21",
-    "generated_at": "2026-05-29 14:32 KST",
+    "generated_at": "2026-05-30 00:28 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1545,35 +1545,60 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "v.daum.net는 5/21 08:03 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "뉴시스는 5/20 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "v.daum.net는 5/20 16:00 입력 기사에서 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9CMnZXT0hjZlhEWWU1MC1zQUF5WXR4YUZxN2oybnd2NnNWNDFhOHZWMVBqLVZER0Jnak1PemhaZ1NxTGl0Z1BxUmw3Q0RUTEk?oc=5",
+        "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260521080312912",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "2026-05-21 08:03"
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "6차 최고가격제 앞둔 정부…국제유가 '100달러선' 언제까지 버티나 - 뉴시스",
-        "press": "뉴시스",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5nd0s5M3NCVFNxNnpWWmhiaUVmclUxeXZlMlVST2I1OTFuOVlDZTlEZ3FHNHhoZGdBYTZZRUMwdlVwMk9INENwOHN1T0UwTlhLV0Jod2liYTRRenBfeC1hQdIBeEFVX3lxTFB4S3dtNFctY2JDYzVyY0VDeE4tN0Itb3Y3MWVIbDNXV19ucE5TeVZCM0FwNjJqa1FIWnBNZmNiVWxyWW9NSHRJaEItZ3poOGxmS2xZZjZpeE5qcnlGOVJwNE9rWUlucEh2MW1jNk9oUVViSTFpc1ZONg?oc=5",
+        "title": "원유 200만배럴 호르무즈 뚫고 한국행… 정유 업계, '수급 정상화' 가능성 촉각",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260521050207678",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "6차 석유 최고가격도 '동결' 가닥…유류세 인하 7월까지 연장",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260521083137605",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-20 16:00"
-      },
-      {
-        "title": "[국제유가] 브렌트유, 배럴당 111달러…이란 공격 재개 촉각 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE44X0xmRElSeWVFVlNjd1UyVFBzeGpqSk9BOTJSWndUaDJrQ0JHOXMtVk95eC1Dem9vTkNsX1huQVlGZG01djRuMjQzMzEzbnM?oc=5",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "2026-05-20 16:00"
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1675,11 +1700,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-21.json",
+      "source_file": "data/news/2026-05-21.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1696,7 +1722,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:32:24 KST",
+      "merged_at": "2026-05-30 00:29:17 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 8일 (금)",
     "previous_day_label": "5/7",
     "today_label": "5/8",
-    "generated_at": "2026-05-29 14:28 KST",
+    "generated_at": "2026-05-30 00:20 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1504,37 +1504,62 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "v.daum.net는 5/7 16:00 입력 기사에서 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "미디어펜은 5/7 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "연합인포맥스는 5/7 16:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "[국제유가] 미·이란 합의 임박에 브렌트유 7.8% 급락… WTI는 배럴당 100달러 아래로 - v.daum.net",
-        "press": "v.daum.net",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE44eGdoYldESTlrNVZ4cEtBekViN0o4N2ZWdHd1UkNYSXlBNkgwY1FGX1U2aFhpay1CRkFwYjYwZU5Sd0xLM0E?oc=5",
+        "title": "\"최고가격제 안 했으면 경유 2800원\" 5차도 동결…정유업계는 '울상'",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260508071742072",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "나프타 확보율 90% 회복...중동 줄고 美가 1위 공급국",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260508084154662",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "2026-05-07 16:00"
+        "published_at_kst": "",
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "민주 중동특위 \"석유최고가격제·유류세 인하...물가 상승분 3분의 1 경감\" - 미디어펜",
-        "press": "미디어펜",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95RDBfWlBUdFpQWVIyRnNvVWhSdzJtXzJZdXZ4cVRpRHh3RDhUTl9GSFZLS19KYnhLZDEyTnRpUWx2clJsclU1dGNjcmNwTTVITWZNUdIBWEFVX3lxTE10T3NDN1VEbG9XLUppUzhrYU5HZVBCSExvTHB6Y21JSnV3TmtrLTNmdWN6VWRaY1hNblVzaGszcEI1aHNZZXB0OVdLMkZNMEl4VjhERGYtNVg?oc=5",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-07 16:00"
-      },
-      {
-        "title": "정부 \"석유 최고가격제 없었다면 4월 물가 3.8%…경유 2천800원 넘었을 것\" - 연합인포맥스",
-        "press": "연합인포맥스",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1nb0lfamx1SEQ3OERuM1dzbU80TTk1Tlo0b3hpS3ZocW5McmprZ2Exd21nenhIUlZEUlBKTC15c2Nwek1SRDlpdENrMGtDODQ0X0pyb0RLejd4aFBkZlN4VjBaeGs3c1lFRDFNcUMydHM?oc=5",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-07 16:00"
+        "title": "호르무즈 곧 열린다지만… K- 정유 , '중동 의존도' 깨고 공급망 재편 사활",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260508072301170",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1636,11 +1661,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-08.json",
+      "source_file": "data/news/2026-05-08.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": false,
@@ -1657,7 +1683,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:29:07 KST",
+      "merged_at": "2026-05-30 00:21:33 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

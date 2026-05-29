@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 29일 (금)",
     "previous_day_label": "5/28",
     "today_label": "5/29",
-    "generated_at": "2026-05-29 23:59 KST",
+    "generated_at": "2026-05-30 00:32 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1715,75 +1715,9 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-30 00:00:34 KST",
+      "merged_at": "2026-05-30 00:33:36 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
-    },
-    "news_afternoon": {
-      "source_file": "data/news/2026-05-29.evening.json",
-      "article_count": 3,
-      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
-      "status": "updated",
-      "needs_review": true,
-      "report_slot": "evening"
     }
-  },
-  "news_trend_afternoon": {
-    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
-    "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
-    ],
-    "articles": [
-      {
-        "title": "유가 75달러 복귀냐, 100달러 돌파냐...트럼프 서명에 달렸다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529163602150",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "美 전략비축유 2년래 최저⋯정유사 셰브런 \"6∼7월 유가급등\" 경고",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529135903730",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "중동 리스크 완화됐지만…K석화, 수익성 부담·중국 공급과잉 '한숨'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529165753822",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      }
-    ],
-    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
-    "needs_review": true,
-    "report_slot": "evening"
   }
 }

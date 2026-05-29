@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 26일 (화)",
     "previous_day_label": "5/22",
     "today_label": "5/26",
-    "generated_at": "2026-05-29 14:32 KST",
+    "generated_at": "2026-05-30 00:30 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -25,7 +25,7 @@
     },
     {
       "type": "news_trend",
-      "text": "조간 보도: 주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
+      "text": "조간 보도: 주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1478,37 +1478,62 @@
     }
   ],
   "news_trend": {
-    "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+    "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "티제이비는 5/26 07:17 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "연합뉴스는 5/26 06:22 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "KBS 뉴스는 5/26 06:37 입력 기사에서 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각."
+      "Daum News는 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
+      "Daum News는 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리.",
+      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "호르무즈 재개방 기대감에 국제유가 급락…브렌트유 7% 하락 - 티제이비",
-        "press": "티제이비",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9RdlNTRG5kd3BJMW9XcndCNDR4WGtGQlRzUWtrRGNOZ3o4Q3ZtbklSUl9ub042NndiOWZvdlAtdjFkM1JyT0xIYXU3WFl2eXRKS2xiU3VkUzhtUy1VMDlscQ?oc=5",
+        "title": "호르무즈 긴장 완화에 유가 하락… 정유 ·화학업계 숨통 트이나",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260526054706146",
         "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "2026-05-26 07:17"
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 0,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - 연합뉴스",
-        "press": "연합뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Id00yaFRVS1Nubi1XN1JrbF9EekpUQ0dlZm1WcEpiWkxCcEtRaEo0aUZTMVpOcW5LbE5qZVp6NldKeTV5VGpPRmN0U2JuUmt1OEhuRFpISTFOQ2vSAWBBVV95cUxQbGpqeVhUMnVfT1gwaXkxbWlrVGNzaUJ1QXBBSUhsWGFkYUZsX1hnaThyMkhLUlZFeDZaeG5tX2E1QXo4MUhmemwxRUVXV2NhcGpjSjFPRWV3MGNzbDNCOXY?oc=5",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "2026-05-26 06:22"
+        "title": "[K-석유화학 진단] 1분기 반짝 석유화학업계, 공급과잉 그림자는 그대로",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260526073005699",
+        "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "호르무즈 재개방 기대감에 국제유가 7% 안팎 급락…WTI 90달러선 - KBS 뉴스",
-        "press": "KBS 뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9US2Q2NWZJRkVNdWRMTU1HQUFXWFN0Zy1pS0sybHZDZ1NwUTIzcU1WeEpzYlpnLXpqZk9ZN2tEUl9xSUxyN1I2TURsR0gtZXBPbGNiSUVmMGEzTU0?oc=5",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "2026-05-26 06:37"
+        "title": "코스닥 급등 ‘성장주 순환매’ 기대…추세 전환엔 ‘물음표’ [주간증시]",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260526090002720",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 0,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1610,11 +1635,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-26.json",
+      "source_file": "data/news/2026-05-26.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1631,7 +1657,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:32:46 KST",
+      "merged_at": "2026-05-30 00:31:01 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

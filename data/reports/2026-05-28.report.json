@@ -5,7 +5,7 @@
     "display_date": "2026년 5월 28일 (목)",
     "previous_day_label": "5/27",
     "today_label": "5/28",
-    "generated_at": "2026-05-29 14:32 KST",
+    "generated_at": "2026-05-30 00:31 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -1461,35 +1461,60 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "에너지플랫폼뉴스는 5/28 09:04 입력 기사에서 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "KB Think는 5/28 10:00 입력 기사에서 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "연합뉴스는 5/28 08:33 입력 기사에서 이란 협상 진전 기대가 국제유가 하락 요인으로 작용."
+      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "Daum News는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
+      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "‘정유사 사후정산 폐지되면 주유소 보수적 가격 책정 완화’ - 에너지플랫폼뉴스",
-        "press": "에너지플랫폼뉴스",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5sQzgzODdyVW1tMlY4SWN5UmVZeFRUd1FqY1pHNGJwYVp2Y1pWM2tkTXBNXzVIUlZBeDNScldWaVVoeXNfLV9Kb1Nhd0NfY0dJQ1NCSm5TdXVGVF9lQTVqVHkzRWFUYnk3Tmk4X9IBcEFVX3lxTE1xMjdKSlhNOVV5LVV3OG5oeFdmX0FPZUJSSXB4c3FvM25qNTNJRngxZmFEVUFNR3lIa0x1eWFVc2NGNk1sX2k4ZFdMUW0zZGUtR3NNdzdYYWk1anI3ajg5alZ2VXAzZnJhM29Ia2pJSnM?oc=5",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "2026-05-28 09:04"
+        "title": "\"적자 나도 공급가 낮춰라”…울고싶은 석화 뺨 때린 정치권[only 이데일리]",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260528055307112",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 0,
+          "originality": 3,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "UAE OPEC 탈퇴 선언… 국제유가와 물가에 어떤 영향 줄까? - KB Think",
-        "press": "KB Think",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ObGloc1BHSG9JWktRRkg4Y2lyX0FSS3FqUHRYeFE0OG5OeG40STZ1SnZ1T21tcnVFS0RmaE41NGlxVEZTSXVHMzhEX3Y4ZTA5WUVodjFmQTI3d3I3UmNoQ0RVN3JEQ1FDdVE?oc=5",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "2026-05-28 10:00"
+        "title": "중동전쟁 종식 기대감에 국제 유가 급락…WTI, 90달러 하회",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260528085716827",
+        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
+        "published_at_kst": "",
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 0,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
       },
       {
-        "title": "국제유가, 미·이란 협상타결 기대에 급락…WTI 90달러 하회 - 연합뉴스",
-        "press": "연합뉴스",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1HZ0tSZ28tNXd6NXdxSWt2TzNuY0h3Q09rMHdoSG5nQ1FPZURtTkpKeXNqZTl3MnVIMDlweHJUZFdfekFUTkhRRkRfWXYyY1ZCZzJod1BiY2dqc1F6VUxTQdIBYEFVX3lxTE1HZ0tSZ28tNXd6NXdxSWt2TzNuY0h3Q09rMHdoSG5nQ1FPZURtTkpKeXNqZTl3MnVIMDlweHJUZFdfekFUTkhRRkRfWXYyY1ZCZzJod1BiY2dqc1F6VUxTQQ?oc=5",
-        "summary": "이란 협상 진전 기대가 국제유가 하락 요인으로 작용",
-        "published_at_kst": "2026-05-28 08:33"
+        "title": "도시유전, 국내 기술로 만든 나프타급 재생원료 수출",
+        "press": "Daum News",
+        "url": "http://v.daum.net/v/20260527215138585",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 0,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
       }
     ],
-    "source": "Google News RSS",
-    "needs_review": true
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
+    "needs_review": true,
+    "report_slot": "morning"
   },
   "quality_control": {
     "quality_notes": [
@@ -1591,11 +1616,12 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-05-28.json",
+      "source_file": "data/news/2026-05-28.json",
       "article_count": 3,
-      "source": "Google News RSS",
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
-      "needs_review": true
+      "needs_review": true,
+      "report_slot": "morning"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1612,7 +1638,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-05-29 14:33:07 KST",
+      "merged_at": "2026-05-30 00:32:45 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }

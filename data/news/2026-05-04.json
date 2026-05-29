@@ -1,8 +1,9 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.5",
   "date": "2026-05-04",
-  "collected_at": "2026-05-29 14:35:06 KST",
-  "source": "Google News RSS + Naver/Daum News Search",
+  "report_slot": "morning",
+  "collected_at": "2026-05-30 00:19:01 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
     "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
@@ -41,7 +42,7 @@
     "최고가격제",
     "호르무즈"
   ],
-  "time_window": "전일 06:00~기준일 11:30 KST",
+  "time_window": "2026-05-03 17:00~2026-05-04 09:00 KST",
   "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
@@ -51,139 +52,223 @@
   ],
   "articles": [
     {
-      "title": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 - 중앙일보",
-      "press": "중앙일보",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hNngtQkJDOGlJc0VtTWhqdHhxdEFjSHJZZVF6a2FWWUxOM0dWRlpQaS1xM1otZzlKZzBuanVGTnM2X3kyTkZxY3M5VXBfa1JIclhEblJR?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "출구 모를 최고가격제…정부·정유사, 보상 기준 샅바싸움 중앙일보",
-      "score": 35,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "호르무즈 막혀도, 공급망 뚫은 韓기업 저력",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504040636643",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 막혀도, 공급망 뚫은 韓기업 저력 달리 국내 정유업체들의 수출비중은 50~70%에 달한다. 이같은 환경은 '전쟁 중 호실적'으로 이어질 전망이다. 증권가는 국내 4대 정유사 의 올해 1분기 합산영업이익이 5조원에 근접할 것이라고 본다. 유가와 석유제품 가격이 급등하며 과거 값싸게 들여온 원료를... 2026.05.04",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
     },
     {
-      "title": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ - 아시아투데이",
-      "press": "아시아투데이",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBtalN3V2k4Nks0V2lpa2JRLVN2S3Fhcm5qSl82Y2RKM3NRcE80dnEwU2tkcXhKM0U2OFlHTEptMEZDVlBNSWRtcWNrV0lrbDBVRVo2cXJ6MjNZZk9Yci1yYk9jT3hKY240S2pZUVp3?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "손실 계산부터 막혔다… 정부-정유사, 최고가격제 보상 논의 ‘난항’ 아시아투데이",
-      "score": 35,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "\"고유가에 고환율…4월 물가 2.6% 상승 전망\"[물가폴]",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504050246127",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 2 \"고유가에 고환율…4월 물가 2.6% 상승 전망\"[물가폴] 전쟁 발발 이후 국제유가와 환율 상승 영향이 본격적으로 반영될 것으로 예상한다”면서 “다만 정부의 석유류 최고가격제 시행과 유류세 인하, 추경을 통한 유류비 및 지원 등 정책적 노력으로 일부나마 상승압력이 상쇄됐을 것”이라고 분석했다. 내수에서는... 2026.05.04",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "유류세",
+      "collector": "daum_news_search"
     },
     {
-      "title": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 - 이투데이",
-      "press": "이투데이",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10T3FpTVhQMnNha3BKVlJVX0NlT1ZObXdlc0g0NFpvU3N0QXBQbFg4UmlXci1TcFQ3dUVfbVRtcmpIQktHVnlWVGk5elRCdDIyMDhXXw?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "\"회계상 도출 가능\"vs\"원가 산정 불가\"⋯정부ㆍ정유사, 최고가격제 정산 샅바싸움 이투데이",
-      "score": 35,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "OPEC+ 7개국, 6월부터 원유 증산...미 재무 \"전쟁 이후 유가 급락할 것\"",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504081018865",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "YTN 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 OPEC+ 7개국, 6월부터 원유 증산...미 재무 \"전쟁 이후 유가 급락할 것\" 6월부터 원유 증산에 합의했지만, 호르무즈 해협이 막혀 증산의 영향은 제한적일 거라는 관측이 나옵니다. 전쟁 발발 이후 미국 휘발유 가격은 50% 가까이 상승한 가운데, 미 재무장관은 이란 전쟁이 끝나면 유가가 급락할 것으로 전망했습니다. 뉴욕을 연결해 자세... 2026.05.04",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
     },
     {
-      "title": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 - 뉴스1",
-      "press": "뉴스1",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBMeVJHNGhpWW5yR1JrcVVtaXNVeDVhS1N4Vmc1Q1FXR2JzazYyaTJIWlZsTmQwaXBJSFVHTVdxWlU0c0FYMzJuczQwVnN5UlVmNjlXRg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "5월 원유 87%·나프타 90% 수급 '숨통'…고유가 리스크는 여전 뉴스1",
-      "score": 33,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
+      "title": "[매아리] \"4일부터 호르무즈에 갇힌 선박 빼낸다\"…애플 호실적에 증시 또 사상 최고치",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504090002964",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "매일경제TV 개별문서메뉴 톡으로 바로 공유 공유하기 [매아리] \"4일부터 호르무즈에 갇힌 선박 빼낸다\"…애플 호실적에 증시 또 사상 최고치 회사는 호르무즈 해협이 2분기 내내 폐쇄될 경우에는 중동 생산량이 작년 대비 하루 75만 배럴 감소할 거라고 밝혔고 동시에 원유 수송량도 3% 줄어들 것으로 전망했습니다. CEO는 자사의 생산량 중에서 약 15% 정도에 해당하는 비율이 이란전쟁에 따른 영향을 받고... 2026.05.04",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "원유",
+      "collector": "daum_news_search"
     },
     {
-      "title": "중동전쟁으로 석유, 가스, 원전의 중요성이 확인되는 역설 - 에너지플랫폼뉴스",
-      "press": "에너지플랫폼뉴스",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrMlBUV3Q0eXFKZEdITGVSbk1IX3pRNXBtMk4xODVUZDF1MlBXVFFPaWNGaFpmTExOVEFqUlZYVXhmWGxVRUhfTkNTaHpSU3ZDSzJsdlNhbTRDcWszNHRNU3A2OTFXNjRTT1pNa9IBcEFVX3lxTFBFSEdtUmd2cHZTeE9IVk9JbV9DZkVNb2QyVlo2eHByRFNyTE1pRDVMVlpmc0lFREtJQkNna2tJbklBVnZHeUEwUHRUUGZtcGlwcFV4b1lwLVZ6dnBvYkJ4OEZKNjA4eWwySWJqRVp1TUg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "중동전쟁으로 석유, 가스, 원전의 중요성이 확인되는 역설 에너지플랫폼뉴스",
-      "score": 32,
-      "source_query": "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
-      "collector": "google_news_rss"
+      "title": "호르무즈 봉쇄 직격탄…일본 원유 수입 37년 만에 '최저 추락'",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504060234953",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "전자신문 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 봉쇄 직격탄…일본 원유 수입 37년 만에 '최저 추락' 비축유를 방출하면서 정제업체의 원유 소비량 감소율은 4% 수준에 그친 것으로 나타났다. 재고를 활용한 영향으로 3월 말 기준 정유사 들의 원유 재고는 역대 최저 수준으로 낮아진 것으로 분석됐다. 같은 기간 일본 내 가솔린 생산량은 2%, 중유 생산량은 3% 각각... 2026.05.04 1",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search"
     },
     {
-      "title": "베트남·호주와 ‘위기 협력’…원유·석유제품 나누고 신뢰자산 얻었다 - 한겨레",
-      "press": "한겨레",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE52TkF4UmE0MEEySnV6ckRZTzB4cHVjM3NuZ2Jhbm91QVhEN1ZMV0JyYTN2NXg2RFVCaFFVNXhqYm1Kb2JmWk9sNFpmSjE0OE1ycmtiVkYxTWZUMzJDQXJfQXBTVGhwakpkbk1iZnRXbUJLQQ?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "베트남·호주와 ‘위기 협력’…원유·석유제품 나누고 신뢰자산 얻었다 한겨레",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "위험해서 대체 수송로 된 홍해…호르무즈 밖 UAE 항구도 대체 공급망",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504083710425",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "MBN 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 위험해서 대체 수송로 된 홍해…호르무즈 밖 UAE 항구도 대체 공급망 친이란 무장세력 예멘의 후티 반군이, 아덴만에는 소말리아 해적이 위협을 가하고 있습니다. 실제 현지 시각 2일, 석유 제품 을 실은 소형 유조선이 소말리아 앞바다에서 해적에 납치됐습니다. 호르무즈 해협 인근 UAE의 푸자이라 항구는 또 다른 대체 항로로 거론되고... 2026.05.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
     },
     {
-      "title": "美 제재 뚫은 中 민간 정유사 ‘티폿’, 이란 석유 싹쓸이 - 글로벌이코노믹",
-      "press": "글로벌이코노믹",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRnNxUkJaRXRuSnBTaFZUa29fQ3d0NlJncmNNSlBQLUVRYjJVQlVManlSZDlmOG9lYTU0eHZIXzdKZFpmQ1ZuNTV0bjBpOVR1dEQtT2h0M1RyejczZm4zWXhPc3NfeXY4enoxWERqQU1WbGJrVXcwMmNOdlZwMkFreGRKLWdWM2th?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "美 제재 뚫은 中 민간 정유사 ‘티폿’, 이란 석유 싹쓸이 글로벌이코노믹",
-      "score": 29,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "호르무즈 봉쇄 후 두 번째 한국 선박 홍해 통해 원유 수송",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504083550387",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "MBN 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 호르무즈 봉쇄 후 두 번째 한국 선박 홍해 통해 원유 수송 선박 역시 초대형 원유운반선(VLCC)로 200만 배럴의 원유가 실렸습니다. 우리나라의 하루 사용량인 280만 배럴에는 미치지 못하는 양이지만, 정유 플랜트에 적합한 중동유가 지속적으로 들어오는 상황은 상당히 고무적이라는 평가입니다. ▶ 인터뷰(☎) : 유승훈... 2026.05.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유",
+      "collector": "daum_news_search"
     },
     {
-      "title": "AI가 키운 '전력 인프라' 고유가 올라탄 '정유·에너지' 강세 [ETF 스퀘어] - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CTnN6S1BZU1FTWlRuX3FJeTdIS3hJckRsTHRQdEY0VzZzSTJxb0djeVQyNTBnSVJTWGFGbDczSnIxczU3elpIOFpkc0NuUjg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "AI가 키운 '전력 인프라' 고유가 올라탄 '정유·에너지' 강세 [ETF 스퀘어] v.daum.net",
-      "score": 29,
-      "source_query": "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
-      "collector": "google_news_rss"
+      "title": "IBK證 \"SK이노베이션, 석유사업 공급 충격 누적…목표가↑\"",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504082111094",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 IBK證 \"SK이노베이션, 석유사업 공급 충격 누적…목표가↑\" 원으로 전년 대비 823.2% 증가할 것\"으로 전망했다. 그는 \"석유사업의 공급 측 충격이 누적되고 있다\"며 \"우크라이나의 러시아 정유 설비 공격으로 러시아 가동량이 감소하면서 경유 등 주요 석유제품의 공급 차질 우려가 확대된 가운데, 미국 이란 전쟁발 호르무즈... 2026.05.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 0,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유",
+      "collector": "daum_news_search"
     },
     {
-      "title": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA3dV8zTzVNRUJGSmVhRG5OMmJQTUtYV0lpUExYN1JYRUF0bW95azEzNU5yMV9uY3RFRFJtM0ZpSjdLbmtBQTRiUmk2WHJ6X2c?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "중동전쟁 피해 해운업 지원 검토…석유화학·건설·철강 이어 네 번째 v.daum.net",
-      "score": 27,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
+      "title": "'싼 기름 넣으러 국경 넘는다'... 유가 급등 속 유럽서 '원정 주유' 성행",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260503222602041",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "kbc광주방송 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 '싼 기름 넣으러 국경 넘는다'... 유가 급등 속 유럽서 '원정 주유' 성행 좀 더 많은 사람들이 보다 적극적으로 국경을 넘고 있다고 네덜란드 타임스가 3일(현지시간) 전했습니다. 유럽 국가들은 유류세 와 유통구조, 지정학적 위치에 따른 수입 비용 차이 등으로 인해 나라 별로 유가가 천차만별입니다. 지난 2일 기준으로 1L당 휘발유 가격... 2026.05.03 1",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "유류세",
+      "collector": "daum_news_search"
     },
     {
-      "title": "‘제품 가격’ 이어 ‘재고자산’까지… 정유사·정부, 손실 산정 전쟁 예고 - 조선비즈 - Chosunbiz",
-      "press": "Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWG1idU9QbDBrSU03SWpUeTJrR1VZV1Y5VmRIS04ycm1GaGpYenVmUmdMQ2pWSjRJcFp2QmJLakY1UnBvY2ViREx0WElwM1J0dXNtRXE0RjN1QVB5d2lYaWtJUzhtMUFsd21wLXB4SWJ2UER1MkJNR3FTeHJ3VVk1SEw2SznSAZgBQVVfeXFMTW1Ua3lVQnFka3RDS2ZaYlo1a2NHOE81ZTBGQjZHanNnUVQ1QVdFLURueVhsX3VYRVBVTzh6MW5hd01qSVlxX0QzVjZKeGNYWVV1ZnExVkhZbS1IaUd0NEdtaU1FWU5rMXU4MV9yY1lwbzN6UGZtNDNUY1R0SkVxeEEweEZLRHZjNnFyUXI2RXZCVDc4aUZ5Mjg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "‘제품 가격’ 이어 ‘재고자산’까지… 정유사·정부, 손실 산정 전쟁 예고 - 조선비즈 Chosunbiz",
-      "score": 25,
-      "source_query": "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
-      "collector": "google_news_rss"
+      "title": "나프타 쇼크에 종이 대체재 뜨지만…제지업계 \"가격·수요 변수\"",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504062110321",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 4 나프타 쇼크에 종이 대체재 뜨지만…제지업계 \"가격·수요 변수\" 서울 중구 방산시장에 진열된 플라스틱 제품. 2026.4.22 ⓒ 뉴스1 김성진 기자 (서울=뉴스1) 이재상 기자 = 중동 전쟁 장기화로 나프타 수급 불확실성이 확대하면서 플라스틱을 대신한 종이 기반 대체재가 주목받고 있다. 다만 제지업계는 비용과 정책 등의 변수로... 2026.05.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "나프타",
+      "collector": "daum_news_search"
     },
     {
-      "title": "[청년발언대] 중동전쟁 쇼크에 의료 현장 비상…정부, 나프타 긴급 확보 - 청년일보",
-      "press": "청년일보",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE50S2F5LTNJQTVqdkpBNjY5OWFtRlpRV0RYc0EzVTdNOXBacWNmUk5BY3dKV1pVcmtqRWFaUVBCMEc4a3FiUTBrcXBHUzdUOTJyWlBCRHR1MWxld3FiTXl1TS1Gd20zV0E?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "[청년발언대] 중동전쟁 쇼크에 의료 현장 비상…정부, 나프타 긴급 확보 청년일보",
-      "score": 22,
-      "source_query": "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-      "collector": "google_news_rss"
+      "title": "캐나다 LNG, 아시아 공급축으로 부상…한국이 최대 수혜국으로 떠올랐다",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504074331359",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "EBN산업경제 개별문서메뉴 톡으로 바로 공유 공유하기 캐나다 LNG, 아시아 공급축으로 부상…한국이 최대 수혜국으로 떠올랐다 절반 이상이 한국으로 향하는 것으로 나타났다. 4일 로이터에 따르면 LSEG 집계 기준 캐나다 서부 해안 키티맷에서 생산된 액화 천연 가스 (LNG)의 4월 수출량은 100만톤을 넘어 월간 기준 사상 최대치를 기록했다. 물량은 전량 아시아로 향했으며, 이 가운데 절반 이상... 2026.05.04 4",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 0,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "천연가스",
+      "collector": "daum_news_search"
     },
     {
-      "title": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ - v.daum.net",
-      "press": "v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QN0V6VWhwMFA5UzNyRlprRTc2cUkzZlNEZURhRW5tbWhMSG5DUHp1aXozV09jTE9yVG1oakpyTXhxdjFwc1NzNnRMTU5XVTg?oc=5",
-      "published_date": "2026-05-03",
-      "published_at_kst": "2026-05-03 16:00",
-      "snippet": "버티면 재정 부담, 풀면 가격 폭등…석유 최고가격제 ‘출구 딜레마’ v.daum.net",
-      "score": 22,
-      "source_query": "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-      "collector": "google_news_rss"
+      "title": "호르무즈 '해방 프로젝트'에도 국제유가 소폭 하락 그쳐",
+      "press": "Daum News",
+      "url": "http://v.daum.net/v/20260504085609882",
+      "published_date": "2026-05-04",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 '해방 프로젝트'에도 국제유가 소폭 하락 그쳐 호르무즈 해협에 갇힌 선박 [로이터=연합뉴스 자료사진. 재판매 및 DB 금지] (서울=연합뉴스) 황정우 기자 = 도널드 트럼프 미국 대통령이 중동 시간으로 4일 오전부터 호르무즈 해협에 갇힌 제3국 선박들이 안전하게 빠져나오도록 지원하는 '프로젝트 프리덤' 작전... 2026.05.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 0,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
     }
   ],
   "errors": [],
   "success": true,
-  "used_tier": "google_tier1"
+  "used_tier": "daum_html"
 }
