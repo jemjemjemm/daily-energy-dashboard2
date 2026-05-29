@@ -1,7 +1,7 @@
 {
   "schema_version": "2.3",
   "date": "2026-05-29",
-  "collected_at": "2026-05-29 09:05:14 KST",
+  "collected_at": "2026-05-29 12:42:08 KST",
   "source": "Google News RSS + Naver/Daum News Search",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -62,23 +62,23 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "원유 재고 감소에 5월28일 국제유가 상승 - 에너지신문",
+      "press": "에너지신문",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBFNG8wb1dnNllVX3NYR19wMlp2M0otUzlJbE5EcG5hSzhUTFJMSU9TS3hEZ3NrSlNpenRFWmV0cjJkU3VYUlhvS2VRVk5nVlNIcWZXZ0RhRk5HczBOajB6R3hkYmxkcUVQZ3lFRzh5MUU?oc=5",
+      "published_date": "2026-05-29",
+      "published_at_kst": "2026-05-29 10:23",
+      "snippet": "원유 재고 감소에 5월28일 국제유가 상승 에너지신문",
+      "score": 35,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "미·이란 종전 협상 막바지에 국제유가 혼조…브렌트유 0.6%↓ - 서울경제TV",
       "press": "서울경제TV",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xLWFtYWMwZHM1UFRnM1JlaEdNdmJIX3h0V1JZNzQ0U0dWVUpLVEltZ3FRV0Rhc3QwZWhMbGFYampYcDNIMkpBTEtqOXhTb1RxUDlfTDBZWHlzMDVCZ19zMWlYU0M?oc=5",
       "published_date": "2026-05-29",
       "published_at_kst": "2026-05-29 08:55",
       "snippet": "미·이란 종전 협상 막바지에 국제유가 혼조…브렌트유 0.6%↓ 서울경제TV",
-      "score": 35,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "美·이란 충돌 재점화에 국제유가 반등…브렌트유 97달러 - 뉴시스",
-      "press": "뉴시스",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1pMzlOVFZaTFlfNHJRMGdoRjRMb0lQUkFUM08zQk5JQ1Qxc0pLWGl1V3IwSmhReTJKYVpxeTlGR3pIT1BGOC04a0JzZ19nVDRiZnF4c1g0SDdXT1NCbmFzTm4wNmlVT2xCSTQ3Y3JyZzZYOTBrTi02YdIBeEFVX3lxTE1pMzlOVFZaTFlfNHJRMGdoRjRMb0lQUkFUM08zQk5JQ1Qxc0pLWGl1V3IwSmhReTJKYVpxeTlGR3pIT1BGOC04a0JzZ19nVDRiZnF4c1g0SDdXT1NCbmFzTm4wNmlVT2xCSTQ3Y3JyZzZYOTBrTi02YQ?oc=5",
-      "published_date": "2026-05-28",
-      "published_at_kst": "2026-05-28 16:02",
-      "snippet": "美·이란 충돌 재점화에 국제유가 반등…브렌트유 97달러 뉴시스",
       "score": 35,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
@@ -150,6 +150,17 @@
       "collector": "google_news_rss"
     },
     {
+      "title": "[부땅토 부동산컬럼] 호르무즈 해협 재개방 기대감… 국제유가 시장이 먼저 반응한 이유 - 한국AI부동산신문",
+      "press": "한국AI부동산신문",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1zblFGVUV0SXh6cUVaNDExVzZiYjlMRjhkdkRYREtRX3g4Vkl1eVpmelBBTUdxNl9JQlpyV1UyX0xFQ0lfWEpHb0M3TDk?oc=5",
+      "published_date": "2026-05-29",
+      "published_at_kst": "2026-05-29 09:50",
+      "snippet": "[부땅토 부동산컬럼] 호르무즈 해협 재개방 기대감… 국제유가 시장이 먼저 반응한 이유 한국AI부동산신문",
+      "score": 30,
+      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+      "collector": "google_news_rss"
+    },
+    {
       "title": "美-이란 충돌...국제유가 호르무즈 해협 공급 불안 심리에 다시 상승 - 중앙뉴스",
       "press": "중앙뉴스",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBCd21JNDkyNFNDdE51X2NNSEd0amx2NzlmelhrUi1ScUYta0RTblE4eTFlZzJuTUVIU2F0OWFJdDdDZXFjNFFPRnNKdE1WbVBvNVlQM19PdnNnUFFoVHp1MGlVeUdvSVh3QllIZnA5ONIBb0FVX3lxTFBCd21JNDkyNFNDdE51X2NNSEd0amx2NzlmelhrUi1ScUYta0RTblE4eTFlZzJuTUVIU2F0OWFJdDdDZXFjNFFPRnNKdE1WbVBvNVlQM19PdnNnUFFoVHp1MGlVeUdvSVh3QllIZnA5OA?oc=5",
@@ -167,17 +178,6 @@
       "published_date": "2026-05-29",
       "published_at_kst": "2026-05-29 07:29",
       "snippet": "[상보] 국제유가, 미·이란 협상에 주목하며 혼조…WTI 0.3%↑ 이투데이",
-      "score": 28,
-      "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
-      "collector": "google_news_rss"
-    },
-    {
-      "title": "국제유가, 이란 종전협상 마무리 소식에 혼조‥브렌트 0.6%↓ - MBC 뉴스",
-      "press": "MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE51U0JfNTNWTkxtRXhyMk1LRFk2cDRuNlMyUmVDODhhYTI1cldMbEY0NllhemtZQ1IyRzZKQUttSWo3VTFJYldaSUI5Sl9hYWxhckZpMGNDZjMzcFJTN0lUNjl2YjhybmVwQmNrMzBEU3NmQXdv0gF0QVVfeXFMUDRsemh2b3ZCdHNrVldvQnVVQ2FPaHpzMXVyRmVtOUloV2g0d3lnTW1qLUxkdHhRamdSSjEzdmNVZjNXRkVQd0p0MmlHd1JNT3AzZE9qcGRmSjZnNVNTb08yNTV5YmhKVHNhNElILV9aZkdsVlU?oc=5",
-      "published_date": "2026-05-29",
-      "published_at_kst": "2026-05-29 05:07",
-      "snippet": "국제유가, 이란 종전협상 마무리 소식에 혼조‥브렌트 0.6%↓ MBC 뉴스",
       "score": 28,
       "source_query": "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
       "collector": "google_news_rss"
