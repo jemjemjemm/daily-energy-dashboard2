@@ -47,6 +47,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--reports-dir", default="docs/reports", help="HTML 리포트 폴더")
     parser.add_argument("--out", default="docs/report-index.json", help="출력 JSON 파일")
+    parser.add_argument("--since", default="2026-05-01", help="이 날짜 이전 리포트는 캘린더 인덱스에서 제외")
     # 기존 workflow 호환용. 더 이상 인덱스 제외 조건으로 쓰지 않음.
     parser.add_argument("--strict-json", action="store_true", help="호환 옵션: 현재는 HTML 존재 여부 중심으로 인덱싱")
     return parser.parse_args()
@@ -137,12 +138,14 @@ def is_holiday_report(date_text: str) -> bool:
     return date_text in KOREAN_HOLIDAYS_2026
 
 
-def read_report_meta(html_path: Path) -> tuple[dict[str, Any] | None, str | None]:
+def read_report_meta(html_path: Path, since: str) -> tuple[dict[str, Any] | None, str | None]:
     date_match = DATE_RE.search(html_path.name)
     if not date_match:
         return None, "missing_date_in_filename"
 
     date_text = date_match.group(1)
+    if date_text < since:
+        return None, "before_index_start_date"
     if is_weekend_report(date_text):
         return None, "weekend_report_skipped"
     if is_holiday_report(date_text):
@@ -201,7 +204,7 @@ def main() -> int:
     reports: list[dict[str, Any]] = []
     warnings: list[dict[str, str]] = []
     for html_path in sorted(reports_dir.glob("*.html")):
-        item, reason = read_report_meta(html_path)
+        item, reason = read_report_meta(html_path, args.since)
         if item:
             reports.append(item)
         else:
