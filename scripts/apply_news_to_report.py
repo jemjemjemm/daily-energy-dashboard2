@@ -458,7 +458,10 @@ def main() -> int:
     if new_articles:
         articles = new_articles
         news_summary = build_news_summary(news, articles)
-        source = "Google News RSS"
+        source = clean(news.get("source")) or "Naver News Search HTML + Daum News Search HTML + Google News RSS"
+        used_tier = clean(news.get("used_tier"))
+        if used_tier:
+            source = f"{source} ({used_tier})"
         status = "updated"
     elif old_articles:
         articles = old_articles

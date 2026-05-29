@@ -9,7 +9,7 @@ fetch_news_candidates.py v2.3
 - 조간 기사 0건은 정상 상태가 아니라 수집 실패입니다.
 - 조간은 기준일 당일 00:00~오전 기사뿐 아니라 전일 저녁 온라인 선공개 기사를 포함할 수 있으므로
   기본 검색창은 전일 18:00 KST ~ 기준일 11:30 KST로 봅니다.
-- Google News RSS만 의존하지 않고, Naver/Daum 뉴스 검색 HTML도 보조 수집원으로 사용합니다.
+- News Trend 데이터는 Naver 뉴스 검색 HTML > Daum 뉴스 검색 HTML > Google News RSS 순서로 사용합니다.
 - 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
 - 기존에 정상 기사 JSON이 있으면 외부 검색 일시 실패 시 기존 정상 JSON을 보존합니다.
 - 일정 공지·인사·부고·스포츠·연예성 기사는 제외합니다.
@@ -338,35 +338,47 @@ def main() -> int:
     selected: list[dict[str, Any]] = []
     used_tier = ""
 
-    # 1) Google RSS: 가장 안정적인 구조화 소스
-    for tier_idx, (min_score, queries) in enumerate(QUERY_TIERS, 1):
-        for q in queries:
+    # 1) Naver 뉴스 검색 HTML
+    for q in PLAIN_QUERIES:
+        try:
+            collected.extend(fetch_naver_news(q, target, min_score=2, lookback_hours=a.lookback_hours))
+            time.sleep(0.2)
+        except Exception as e:
+            errors.append(f"naver {q}: {e}")
+    candidates = dedupe(collected)
+    windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+    if len(windowed) >= a.min_required:
+        selected = windowed[:a.max_items]
+        used_tier = "naver_html"
+
+    # 2) Daum 뉴스 검색 HTML
+    if len(selected) < a.min_required:
+        for q in PLAIN_QUERIES:
             try:
-                collected.extend(fetch_google_news(q, target, min_score=min_score, lookback_hours=a.lookback_hours))
-                time.sleep(0.15)
+                collected.extend(fetch_daum_news(q, target, min_score=2, lookback_hours=a.lookback_hours))
+                time.sleep(0.2)
             except Exception as e:
-                errors.append(f"google tier{tier_idx} {q}: {e}")
+                errors.append(f"daum {q}: {e}")
         candidates = dedupe(collected)
         windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
         if len(windowed) >= a.min_required:
             selected = windowed[:a.max_items]
-            used_tier = f"google_tier{tier_idx}"
-            break
+            used_tier = "daum_html"
 
-    # 2) 보조 수집원: Google RSS가 0건일 때만 사용
+    # 3) Google News RSS
     if len(selected) < a.min_required:
-        for collector_name, fn in [("naver", fetch_naver_news), ("daum", fetch_daum_news)]:
-            for q in PLAIN_QUERIES:
+        for tier_idx, (min_score, queries) in enumerate(QUERY_TIERS, 1):
+            for q in queries:
                 try:
-                    collected.extend(fn(q, target, min_score=2, lookback_hours=a.lookback_hours))
-                    time.sleep(0.2)
+                    collected.extend(fetch_google_news(q, target, min_score=min_score, lookback_hours=a.lookback_hours))
+                    time.sleep(0.15)
                 except Exception as e:
-                    errors.append(f"{collector_name} {q}: {e}")
+                    errors.append(f"google tier{tier_idx} {q}: {e}")
             candidates = dedupe(collected)
             windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
             if len(windowed) >= a.min_required:
                 selected = windowed[:a.max_items]
-                used_tier = f"{collector_name}_fallback"
+                used_tier = f"google_tier{tier_idx}"
                 break
 
     if len(selected) < a.min_required:
@@ -377,7 +389,7 @@ def main() -> int:
             "schema_version": "2.3",
             "date": a.date,
             "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
-            "source": "Google News RSS + Naver/Daum News Search",
+            "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
             "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
             "time_window": f"전일 {24 - a.lookback_hours:02d}:00~기준일 {a.cutoff_hour:02d}:{a.cutoff_minute:02d} KST",
             "summary": "",
@@ -397,7 +409,7 @@ def main() -> int:
         "schema_version": "2.3",
         "date": a.date,
         "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
-        "source": "Google News RSS + Naver/Daum News Search",
+        "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
         "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
         "time_window": f"전일 {24 - a.lookback_hours:02d}:00~기준일 {a.cutoff_hour:02d}:{a.cutoff_minute:02d} KST",
         "summary": build_summary(topics, selected),
