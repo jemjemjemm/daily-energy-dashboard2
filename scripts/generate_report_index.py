@@ -27,6 +27,17 @@ HEADER_DATE_RE = re.compile(
     r"class=[\"'][^\"']*header-date[^\"']*[\"'][^>]*>\s*(.*?)\s*</",
     re.I | re.S,
 )
+KOREAN_HOLIDAYS_2026 = {
+    "2026-01-01",
+    "2026-02-16", "2026-02-17", "2026-02-18",
+    "2026-03-02",
+    "2026-05-01", "2026-05-05", "2026-05-25",
+    "2026-06-03",
+    "2026-08-17",
+    "2026-09-24", "2026-09-25", "2026-09-28",
+    "2026-10-05", "2026-10-09",
+    "2026-12-25",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -122,6 +133,10 @@ def is_weekend_report(date_text: str) -> bool:
         return False
 
 
+def is_holiday_report(date_text: str) -> bool:
+    return date_text in KOREAN_HOLIDAYS_2026
+
+
 def read_report_meta(html_path: Path) -> tuple[dict[str, Any] | None, str | None]:
     date_match = DATE_RE.search(html_path.name)
     if not date_match:
@@ -130,6 +145,8 @@ def read_report_meta(html_path: Path) -> tuple[dict[str, Any] | None, str | None
     date_text = date_match.group(1)
     if is_weekend_report(date_text):
         return None, "weekend_report_skipped"
+    if is_holiday_report(date_text):
+        return None, "holiday_report_skipped"
 
     try:
         html_text = html_path.read_text(encoding="utf-8", errors="ignore")
