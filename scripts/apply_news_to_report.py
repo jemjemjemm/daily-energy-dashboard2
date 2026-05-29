@@ -64,6 +64,11 @@ THEME_RULES = [
     ("정부·국회 에너지 정책 논의", ["정부", "산업부", "산업통상부", "공정위", "국회", "기재부", "기후부"]),
     ("정유사 실적과 재고평가손익 변동성", ["정유사", "정유", "실적", "재고평가", "정제마진"]),
 ]
+ISSUE_TERMS = [
+    "전략비축유", "호르무즈", "최고가격제", "유류세", "국제유가", "유가", "원유", "정유", "정유사",
+    "석유화학", "나프타", "LNG", "천연가스", "생산자물가", "물가", "공급망", "중동", "수급",
+    "전기요금", "전력", "에너지", "최저", "최고", "급등", "급락", "상승", "하락", "경고",
+]
 
 
 def to_report_style(text: str) -> str:
@@ -365,7 +370,7 @@ def valid_article(
     return True
 
 
-def normalize_article(item: Dict[str, Any]) -> Dict[str, str]:
+def normalize_article(item: Dict[str, Any]) -> Dict[str, Any]:
     title = clean(item.get("title"))
     press = clean(item.get("press") or item.get("source")) or "Google News"
     snippet = clean(item.get("summary") or item.get("snippet"))
@@ -379,13 +384,100 @@ def normalize_article(item: Dict[str, Any]) -> Dict[str, str]:
         summary = fallback_article_summary(title)
     if is_repeated_article_desc(title, summary, press):
         summary = fallback_article_summary(title)
-    return {
+    out: Dict[str, Any] = {
         "title": title,
         "press": press,
         "url": clean(item.get("url")),
         "summary": summary,
         "published_at_kst": clean(item.get("published_at_kst")),
     }
+    if "score" in item:
+        try:
+            out["score"] = int(item.get("score") or 0)
+        except Exception:
+            out["score"] = 0
+    else:
+        out["score"] = 0
+    if isinstance(item.get("score_breakdown"), dict):
+        out["score_breakdown"] = item.get("score_breakdown")
+    return out
+
+
+def article_issue_key(article: Dict[str, Any]) -> str:
+    title = strip_article_source_suffix(clean(article.get("title")), clean(article.get("press")))
+    title = re.sub(r"\[[^\]]+\]", " ", title)
+    title = re.sub(r"\([^)]*\)", " ", title)
+    title = re.sub(r"\b\d+(?:\.\d+)?%?\b", " ", title)
+    return re.sub(r"[\s\W_]+", "", title, flags=re.UNICODE).lower()[:48]
+
+
+def similar_issue(a: str, b: str) -> bool:
+    if not a or not b:
+        return False
+    if a in b or b in a:
+        return True
+    a_tokens = {a[i:i + 2] for i in range(max(0, len(a) - 1))}
+    b_tokens = {b[i:i + 2] for i in range(max(0, len(b) - 1))}
+    if not a_tokens or not b_tokens:
+        return False
+    return len(a_tokens & b_tokens) / max(1, len(a_tokens | b_tokens)) >= 0.68
+
+
+def issue_terms(article: Dict[str, Any]) -> set[str]:
+    text = f"{clean(article.get('title'))} {clean(article.get('summary'))}"
+    return {term for term in ISSUE_TERMS if term in text}
+
+
+def select_representative_articles(
+    candidates: List[Dict[str, Any]],
+    max_articles: int,
+    min_required: int,
+) -> List[Dict[str, Any]]:
+    sorted_candidates = sorted(candidates, key=lambda x: int(x.get("score", 0)), reverse=True)
+    selected: List[Dict[str, Any]] = []
+    issue_keys: List[str] = []
+    term_sets: List[set[str]] = []
+    selected_urls = set()
+    for article in sorted_candidates:
+        url = clean(article.get("url"))
+        if url and url in selected_urls:
+            continue
+        key = article_issue_key(article)
+        terms = issue_terms(article)
+        if any(similar_issue(key, existing) for existing in issue_keys):
+            continue
+        if terms and any(len(terms & existing_terms) >= 2 for existing_terms in term_sets):
+            continue
+        selected.append(article)
+        issue_keys.append(key)
+        term_sets.append(terms)
+        if url:
+            selected_urls.add(url)
+        if len(selected) >= max_articles:
+            return selected
+
+    if len(selected) < min_required:
+        selected_urls = {clean(a.get("url")) for a in selected}
+        for article in sorted_candidates:
+            url = clean(article.get("url"))
+            if url in selected_urls:
+                continue
+            selected.append(article)
+            selected_urls.add(url)
+            if len(selected) >= min_required:
+                break
+
+    if len(selected) < max_articles:
+        selected_urls = {clean(a.get("url")) for a in selected}
+        for article in sorted_candidates:
+            url = clean(article.get("url"))
+            if url in selected_urls:
+                continue
+            selected.append(article)
+            selected_urls.add(url)
+            if len(selected) >= max_articles:
+                break
+    return selected[:max_articles]
 
 
 def existing_valid_articles(report: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -446,14 +538,16 @@ def main() -> int:
 
     news = read_json(news_path)
     raw_articles = news.get("articles", []) if isinstance(news.get("articles"), list) else []
-    new_articles = [
+    new_candidates = [
         normalize_article(i) for i in raw_articles
         if isinstance(i, dict) and valid_article(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)
-    ][:a.max_articles]
-    old_articles = [
+    ]
+    new_articles = select_representative_articles(new_candidates, a.max_articles, a.min_required)
+    old_candidates = [
         normalize_article(i) for i in existing_valid_articles(report)
         if isinstance(i, dict) and valid_article(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)
-    ][:a.max_articles]
+    ]
+    old_articles = select_representative_articles(old_candidates, a.max_articles, a.min_required)
 
     if new_articles:
         articles = new_articles
