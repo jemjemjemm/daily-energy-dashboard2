@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""뉴스 후보 JSON을 리포트 JSON의 조간 신문 트렌드와 Summary에 반영합니다.
+"""뉴스 후보 JSON을 리포트 JSON의 News Trend와 Summary에 반영합니다.
 
 운영 원칙
 - 기사 후보 0건은 정상 상태가 아니라 수집 실패입니다.
@@ -189,14 +189,22 @@ def make_trend_paragraphs(articles: List[Dict[str, str]]) -> List[str]:
 def parse_args():
     p = argparse.ArgumentParser(description="뉴스 후보를 리포트 JSON에 반영")
     p.add_argument("--date", required=True)
+    p.add_argument("--report-slot", choices=["morning", "evening"], default="morning")
     p.add_argument("--report-dir", default="data/reports")
     p.add_argument("--news-dir", default="data/news")
     p.add_argument("--max-articles", type=int, default=3)
     p.add_argument("--min-required", type=int, default=1)
-    p.add_argument("--lookback-hours", type=int, default=18)
-    p.add_argument("--cutoff-hour", type=int, default=11)
-    p.add_argument("--cutoff-minute", type=int, default=30)
-    return p.parse_args()
+    p.add_argument("--lookback-hours", type=int, default=None)
+    p.add_argument("--cutoff-hour", type=int, default=None)
+    p.add_argument("--cutoff-minute", type=int, default=None)
+    args = p.parse_args()
+    if args.lookback_hours is None:
+        args.lookback_hours = 16 if args.report_slot == "morning" else 8
+    if args.cutoff_hour is None:
+        args.cutoff_hour = 9 if args.report_slot == "morning" else 17
+    if args.cutoff_minute is None:
+        args.cutoff_minute = 0
+    return args
 
 
 def read_json(path: Path) -> Dict[str, Any]:
@@ -320,7 +328,7 @@ def fallback_article_summary(title: str) -> str:
     return "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
 
 
-def in_morning_issue_window(
+def in_issue_window(
     item: Dict[str, Any],
     target_date: str,
     lookback_hours: int,
@@ -329,7 +337,7 @@ def in_morning_issue_window(
 ) -> bool:
     """기사 발행일·시간이 기준일 조간 범위인지 최종 검증합니다.
 
-    허용 범위: 전일 18:00 ~ 기준일 11:30 KST.
+    허용 범위는 report-slot별 fetch 단계와 동일하게 전달받은 시간창입니다.
     published_at_kst가 있으면 시간까지 엄격히 검증하고, published_date만 있으면
     전일/기준일 날짜까지만 허용합니다. 발행 정보가 없는 보조 검색 후보는
     fetch 단계의 기간 필터를 신뢰하되, 기존 보존 기사에는 적용하지 않습니다.
@@ -365,7 +373,7 @@ def valid_article(
         return False
     if any(b in url for b in ["safetimes.co.kr/news/articleView"]):
         return False
-    if target_date and not in_morning_issue_window(item, target_date, lookback_hours, cutoff_hour, cutoff_minute):
+    if target_date and not in_issue_window(item, target_date, lookback_hours, cutoff_hour, cutoff_minute):
         return False
     return True
 
@@ -486,6 +494,13 @@ def existing_valid_articles(report: Dict[str, Any]) -> List[Dict[str, Any]]:
     return [a for a in articles if isinstance(a, dict) and valid_article(a)]
 
 
+def existing_valid_slot_articles(report: Dict[str, Any], report_slot: str) -> List[Dict[str, Any]]:
+    key = "news_trend" if report_slot == "morning" else "news_trend_afternoon"
+    news = report.get(key, {}) if isinstance(report.get(key), dict) else {}
+    articles = news.get("articles", []) if isinstance(news.get("articles"), list) else []
+    return [a for a in articles if isinstance(a, dict) and valid_article(a)]
+
+
 def build_news_summary(news: Dict[str, Any], articles: List[Dict[str, Any]]) -> str:
     topics = [clean(t) for t in news.get("topics", []) if clean(t)]
     provided = clean(news.get("summary"))
@@ -530,7 +545,8 @@ def main() -> int:
     except Exception:
         _assembly_cache = {}
     report_path = Path(a.report_dir) / f"{a.date}.report.json"
-    news_path = Path(a.news_dir) / f"{a.date}.json"
+    news_suffix = "" if a.report_slot == "morning" else f".{a.report_slot}"
+    news_path = Path(a.news_dir) / f"{a.date}{news_suffix}.json"
     report = read_json(report_path)
     if not report:
         print(f"[ERROR] 리포트 JSON이 없습니다: {report_path}")
@@ -544,7 +560,7 @@ def main() -> int:
     ]
     new_articles = select_representative_articles(new_candidates, a.max_articles, a.min_required)
     old_candidates = [
-        normalize_article(i) for i in existing_valid_articles(report)
+        normalize_article(i) for i in existing_valid_slot_articles(report, a.report_slot)
         if isinstance(i, dict) and valid_article(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)
     ]
     old_articles = select_representative_articles(old_candidates, a.max_articles, a.min_required)
@@ -559,28 +575,48 @@ def main() -> int:
         status = "updated"
     elif old_articles:
         articles = old_articles
-        old_news = report.get("news_trend", {}) if isinstance(report.get("news_trend"), dict) else {}
+        old_key = "news_trend" if a.report_slot == "morning" else "news_trend_afternoon"
+        old_news = report.get(old_key, {}) if isinstance(report.get(old_key), dict) else {}
         old_summary = clean(old_news.get("summary"))
         news_summary = old_summary if old_summary and not any(p in old_summary for p in BAD_SUMMARY_PHRASES) else build_news_summary({}, articles)
         source = clean(old_news.get("source")) or "existing report"
         status = "preserved_existing"
     else:
-        print(f"[ERROR] 조간 기사 후보 0건: {news_path}. fallback 문구를 넣지 않고 workflow를 실패시킵니다.")
+        print(f"[ERROR] 기사 후보 0건: {news_path}. fallback 문구를 넣지 않고 workflow를 실패시킵니다.")
         return 2
 
     if len(articles) < a.min_required:
-        print(f"[ERROR] 조간 기사 후보 {len(articles)}건: 최소 {a.min_required}건 미달")
+        print(f"[ERROR] 기사 후보 {len(articles)}건: 최소 {a.min_required}건 미달")
         return 2
 
-    report["news_trend"] = {"summary": news_summary, "trend_paragraphs": make_trend_paragraphs(articles), "articles": articles, "source": source, "needs_review": True}
-    update_summary(report, news_summary)
-    report.setdefault("automation", {})["news"] = {
+    news_payload = {
+        "summary": news_summary,
+        "trend_paragraphs": make_trend_paragraphs(articles),
+        "articles": articles,
+        "source": source,
+        "needs_review": True,
+        "report_slot": a.report_slot,
+    }
+    if a.report_slot == "morning":
+        report["news_trend"] = news_payload
+        update_summary(report, news_summary)
+    else:
+        report["news_trend_afternoon"] = news_payload
+
+    news_auto_key = "news" if a.report_slot == "morning" else "news_afternoon"
+    report.setdefault("automation", {})[news_auto_key] = {
         "source_file": str(news_path),
         "article_count": len(articles),
         "source": source,
         "status": status,
         "needs_review": True,
+        "report_slot": a.report_slot,
     }
+    if a.report_slot == "evening":
+        atomic_write_json(report_path, report)
+        print(f"[OK] 오후 뉴스 후보 반영 완료: {report_path} / status={status} / articles={len(articles)}")
+        return 0
+
     # 이슈 항목에 관련 기사 링크 매칭: 제목 유사도 기반으로 articles에서 링크를 찾아 붙임
     def _norm_for_compare(text: str) -> str:
         t = re.sub(r"\([^)]*\)", "", clean(text or ""))

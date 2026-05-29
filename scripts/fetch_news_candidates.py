@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-fetch_news_candidates.py v2.4
+fetch_news_candidates.py v2.5
 
-정유·석유화학·LNG Daily Issue Report용 조간 기사 후보를 수집합니다.
+정유·석유화학·LNG Daily Issue Report용 기사 후보를 수집합니다.
 
 운영 원칙
-- 조간 기사 0건은 정상 상태가 아니라 수집 실패입니다.
+- 기사 0건은 정상 상태가 아니라 수집 실패입니다.
 - 조간 News Trend 기본 검색창은 전일 17:00 KST ~ 기준일 09:00 KST로 봅니다.
+- 오후 News Trend 기본 검색창은 기준일 09:00 KST ~ 기준일 17:00 KST로 봅니다.
 - News Trend 데이터는 Naver 뉴스 검색 HTML > Daum 뉴스 검색 HTML > Google News RSS 순서로 사용합니다.
 - 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
 - 기존에 정상 기사 JSON이 있으면 외부 검색 일시 실패 시 기존 정상 JSON을 보존합니다.
@@ -104,16 +105,22 @@ TOPIC_RULES = [
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="조간 기사 후보 수집")
+    p = argparse.ArgumentParser(description="News Trend 기사 후보 수집")
     p.add_argument("--date", required=True)
+    p.add_argument("--report-slot", choices=["morning", "evening"], default="morning")
     p.add_argument("--out-dir", default="data/news")
     p.add_argument("--max-items", type=int, default=12)
     p.add_argument("--min-required", type=int, default=1, help="최소 필요 기사 수. 미달 시 실패")
-    p.add_argument("--lookback-hours", type=int, default=16, help="전일 17:00부터 당일 09:00까지 조간 기사 포함 범위")
-    p.add_argument("--cutoff-hour", type=int, default=9)
+    p.add_argument("--lookback-hours", type=int, default=None, help="기사 포함 범위. 기본값은 report-slot별로 결정")
+    p.add_argument("--cutoff-hour", type=int, default=None)
     p.add_argument("--cutoff-minute", type=int, default=0)
     p.add_argument("--force-refresh", action="store_true")
-    return p.parse_args()
+    args = p.parse_args()
+    if args.lookback_hours is None:
+        args.lookback_hours = 16 if args.report_slot == "morning" else 8
+    if args.cutoff_hour is None:
+        args.cutoff_hour = 9 if args.report_slot == "morning" else 17
+    return args
 
 
 def atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
@@ -246,7 +253,12 @@ def issue_window_label(start: datetime, end: datetime) -> str:
     return f"{start.strftime('%Y-%m-%d %H:%M')}~{end.strftime('%Y-%m-%d %H:%M')} KST"
 
 
-def in_morning_issue_window(item: dict[str, Any], target_date: str, lookback_hours: int, cutoff_hour: int, cutoff_minute: int) -> bool:
+def news_output_path(out_dir: str, date_text: str, report_slot: str) -> Path:
+    suffix = "" if report_slot == "morning" else f".{report_slot}"
+    return Path(out_dir) / f"{date_text}{suffix}.json"
+
+
+def in_issue_window(item: dict[str, Any], target_date: str, lookback_hours: int, cutoff_hour: int, cutoff_minute: int) -> bool:
     target = datetime.strptime(target_date, "%Y-%m-%d").replace(tzinfo=KST)
     start, end = issue_window(target, lookback_hours, cutoff_hour, cutoff_minute)
     pub = item.get("published_at_kst") or ""
@@ -429,7 +441,7 @@ def read_existing_valid(
         if isinstance(a, dict)
         and a.get("title")
         and a.get("url")
-        and in_morning_issue_window(a, target_date, lookback_hours, cutoff_hour, cutoff_minute)
+        and in_issue_window(a, target_date, lookback_hours, cutoff_hour, cutoff_minute)
     ]
     if valid:
         data["articles"] = valid
@@ -442,7 +454,7 @@ def main() -> int:
     target = datetime.strptime(a.date, "%Y-%m-%d").replace(tzinfo=KST)
     window_start, window_end = issue_window(target, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)
     time_window = issue_window_label(window_start, window_end)
-    out_path = Path(a.out_dir) / f"{a.date}.json"
+    out_path = news_output_path(a.out_dir, a.date, a.report_slot)
 
     existing = read_existing_valid(out_path, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute) if out_path.exists() else None
     if existing and not a.force_refresh:
@@ -462,7 +474,7 @@ def main() -> int:
         except Exception as e:
             errors.append(f"naver {q}: {e}")
     candidates = dedupe(collected, min_keep=a.min_required)
-    windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+    windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
     if len(windowed) >= a.min_required:
         selected = windowed[:a.max_items]
         used_tier = "naver_html"
@@ -476,7 +488,7 @@ def main() -> int:
             except Exception as e:
                 errors.append(f"daum {q}: {e}")
         candidates = dedupe(collected, min_keep=a.min_required)
-        windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+        windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
         if len(windowed) >= a.min_required:
             selected = windowed[:a.max_items]
             used_tier = "daum_html"
@@ -491,7 +503,7 @@ def main() -> int:
                 except Exception as e:
                     errors.append(f"google tier{tier_idx} {q}: {e}")
             candidates = dedupe(collected, min_keep=a.min_required)
-            windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+            windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
             if len(windowed) >= a.min_required:
                 selected = windowed[:a.max_items]
                 used_tier = f"google_tier{tier_idx}"
@@ -509,7 +521,7 @@ def main() -> int:
                 except Exception as e:
                     errors.append(f"{collector_name} relaxed {q}: {e}")
             candidates = dedupe(relaxed, min_keep=a.min_required)
-            windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+            windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
             if len(windowed) >= a.min_required:
                 selected = windowed[:a.max_items]
                 used_tier = f"{collector_name}_html_relaxed"
@@ -523,7 +535,7 @@ def main() -> int:
                     except Exception as e:
                         errors.append(f"google relaxed {_tier_idx} {q}: {e}")
                 candidates = dedupe(relaxed, min_keep=a.min_required)
-                windowed = [i for i in candidates if in_morning_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
+                windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
                 if len(windowed) >= a.min_required:
                     selected = windowed[:a.max_items]
                     used_tier = f"google_tier{_tier_idx}_relaxed"
@@ -534,8 +546,9 @@ def main() -> int:
             print(f"[WARN] 새 뉴스 수집 실패. 기존 시간창 통과 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
             return 0
         payload = {
-            "schema_version": "2.4",
+            "schema_version": "2.5",
             "date": a.date,
+            "report_slot": a.report_slot,
             "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
             "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
             "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
@@ -547,15 +560,16 @@ def main() -> int:
             "success": False,
         }
         atomic_write_json(out_path, payload)
-        print(f"[ERROR] 조간 기사 후보 수집 실패: {out_path} / articles=0")
+        print(f"[ERROR] 기사 후보 수집 실패: {out_path} / articles=0")
         if errors:
             print("[ERROR]", " | ".join(errors[:8]))
         return 2
 
     topics = infer_topics(selected)
     payload = {
-        "schema_version": "2.4",
+        "schema_version": "2.5",
         "date": a.date,
+        "report_slot": a.report_slot,
         "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
         "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
         "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,

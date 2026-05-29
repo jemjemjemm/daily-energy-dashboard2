@@ -2,11 +2,28 @@ name: Daily Energy Dashboard - Daily Data Pipeline
 
 on:
   schedule:
-    # 08:55 KST. Avoid the top-of-hour GitHub Actions schedule queue, then wait until 09:00 KST below.
-    - cron: "55 23 * * *"
+    # Backup runs. GitHub Actions cron is UTC.
+    # 09:07 KST = 00:07 UTC, 17:07 KST = 08:07 UTC.
+    - cron: "7 0 * * 1-5"
+    - cron: "7 8 * * 1-5"
 
   workflow_dispatch:
     inputs:
+      report_slot:
+        description: "보고서 슬롯"
+        required: true
+        type: choice
+        options:
+          - morning
+          - evening
+      run_mode:
+        description: "실행 방식"
+        required: false
+        default: "manual"
+        type: choice
+        options:
+          - external
+          - manual
       target_date:
         description: "단일 생성 날짜(YYYY-MM-DD). 기간 생성 시 비워두세요."
         required: false
@@ -24,7 +41,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: daily-energy-dashboard-${{ github.ref }}
+  group: daily-energy-dashboard-${{ github.ref }}-${{ github.event_name == 'schedule' && (github.event.schedule == '7 0 * * 1-5' && 'morning' || 'evening') || github.event.inputs.report_slot }}
   cancel-in-progress: false
 
 jobs:
@@ -65,37 +82,40 @@ jobs:
           test -f scripts/generate_reports_range.py || (echo "ERROR: scripts/generate_reports_range.py 파일이 없습니다." && exit 1)
           test -f scripts/validate_report_sources.py || (echo "ERROR: scripts/validate_report_sources.py 파일이 없습니다." && exit 1)
           test -f scripts/validate_report_html.py || (echo "ERROR: scripts/validate_report_html.py 파일이 없습니다." && exit 1)
+          test -f scripts/wait_until_kst.py || (echo "ERROR: scripts/wait_until_kst.py 파일이 없습니다." && exit 1)
+          test -f scripts/report_run_status.py || (echo "ERROR: scripts/report_run_status.py 파일이 없습니다." && exit 1)
           test -f report_sample.json || (echo "ERROR: report_sample.json 파일이 없습니다." && exit 1)
           test -f data/prices/history.json || (echo "ERROR: data/prices/history.json 파일이 없습니다." && exit 1)
 
       - name: Decide mode
         run: |
           if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
-            NOW_MIN=$(TZ=Asia/Seoul date +%H%M)
-            NOW_MIN_NUM=$((10#$NOW_MIN))
-            if [ "$NOW_MIN_NUM" -gt 930 ]; then
+            echo "RUN_MODE=single" >> $GITHUB_ENV
+            echo "INVOCATION_MODE=schedule" >> $GITHUB_ENV
+            UTC_HOUR=$(date -u +%H)
+            if [ "$UTC_HOUR" = "00" ]; then
+              echo "REPORT_SLOT=morning" >> $GITHUB_ENV
+            elif [ "$UTC_HOUR" = "08" ]; then
+              echo "REPORT_SLOT=evening" >> $GITHUB_ENV
+            else
               echo "RUN_MODE=skip" >> $GITHUB_ENV
-              echo "SKIP_REASON=scheduled run started after 09:30 KST ($NOW_MIN)" >> $GITHUB_ENV
+              echo "SKIP_REASON=unrecognized schedule UTC hour: $UTC_HOUR" >> $GITHUB_ENV
               exit 0
             fi
-            if [ "$NOW_MIN_NUM" -lt 900 ]; then
-              TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
-              TARGET_EPOCH=$(TZ=Asia/Seoul date -d "$TODAY 09:00:00" +%s)
-              NOW_EPOCH=$(TZ=Asia/Seoul date +%s)
-              SLEEP_SECONDS=$((TARGET_EPOCH - NOW_EPOCH))
-              if [ "$SLEEP_SECONDS" -gt 0 ]; then
-                echo "[INFO] Scheduled run started at $NOW_MIN KST. Waiting ${SLEEP_SECONDS}s until 09:00 KST."
-                sleep "$SLEEP_SECONDS"
-              fi
-            fi
+            echo "TARGET_DATE=$(TZ=Asia/Seoul date +%Y-%m-%d)" >> $GITHUB_ENV
+            exit 0
           fi
 
           if [ -n "${{ github.event.inputs.date_from }}" ] && [ -n "${{ github.event.inputs.date_to }}" ]; then
             echo "RUN_MODE=range" >> $GITHUB_ENV
             echo "DATE_FROM=${{ github.event.inputs.date_from }}" >> $GITHUB_ENV
             echo "DATE_TO=${{ github.event.inputs.date_to }}" >> $GITHUB_ENV
+            echo "REPORT_SLOT=${{ github.event.inputs.report_slot }}" >> $GITHUB_ENV
+            echo "INVOCATION_MODE=${{ github.event.inputs.run_mode }}" >> $GITHUB_ENV
           else
             echo "RUN_MODE=single" >> $GITHUB_ENV
+            echo "REPORT_SLOT=${{ github.event.inputs.report_slot }}" >> $GITHUB_ENV
+            echo "INVOCATION_MODE=${{ github.event.inputs.run_mode }}" >> $GITHUB_ENV
             if [ -n "${{ github.event.inputs.target_date }}" ]; then
               echo "TARGET_DATE=${{ github.event.inputs.target_date }}" >> $GITHUB_ENV
             else
@@ -106,10 +126,17 @@ jobs:
       - name: Show mode
         run: |
           echo "RUN_MODE=$RUN_MODE"
+          echo "REPORT_SLOT=${REPORT_SLOT:-}"
+          echo "INVOCATION_MODE=${INVOCATION_MODE:-}"
           echo "SKIP_REASON=${SKIP_REASON:-}"
           echo "TARGET_DATE=${TARGET_DATE:-}"
           echo "DATE_FROM=${DATE_FROM:-}"
           echo "DATE_TO=${DATE_TO:-}"
+
+      - name: Wait for external scheduler target time
+        if: env.RUN_MODE == 'single' && env.INVOCATION_MODE == 'external'
+        run: |
+          python scripts/wait_until_kst.py "$REPORT_SLOT"
 
       - name: Decide single business day
         if: env.RUN_MODE == 'single'
@@ -132,6 +159,20 @@ jobs:
         if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY != 'true'
         run: |
           echo "[INFO] 비영업일이므로 자동 수집/리포트 생성을 건너뜁니다: $TARGET_DATE"
+
+      - name: Check duplicate report slot run
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          set +e
+          python scripts/report_run_status.py check --date "$TARGET_DATE" --report-slot "$REPORT_SLOT"
+          STATUS=$?
+          set -e
+          if [ "$STATUS" = "10" ]; then
+            echo "RUN_MODE=skip" >> $GITHUB_ENV
+            echo "SKIP_REASON=$TARGET_DATE $REPORT_SLOT already completed" >> $GITHUB_ENV
+            exit 0
+          fi
+          exit "$STATUS"
 
       - name: Decide previous report date
         if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
@@ -181,7 +222,7 @@ jobs:
             --report-dir data/reports
 
       - name: Try Fetch SafeTimes schedule
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         continue-on-error: true
         run: |
           python scripts/fetch_safetimes_schedule.py \
@@ -191,7 +232,7 @@ jobs:
             --retry-delay 10
 
       - name: Try Fetch previous SafeTimes schedule
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         continue-on-error: true
         run: |
           python scripts/fetch_safetimes_schedule.py \
@@ -201,7 +242,7 @@ jobs:
             --retry-delay 10
 
       - name: Try Build report draft from SafeTimes
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         continue-on-error: true
         run: |
           rm -f "data/reports/$TARGET_DATE.report.json"
@@ -218,7 +259,7 @@ jobs:
           fi
 
       - name: Ensure report draft exists
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         run: |
           python scripts/ensure_report_draft.py \
             --date "$TARGET_DATE" \
@@ -230,11 +271,15 @@ jobs:
         run: |
           test -f scripts/fetch_news_candidates.py || (echo "ERROR: scripts/fetch_news_candidates.py 파일이 없습니다." && exit 1)
           test -f scripts/apply_news_to_report.py || (echo "ERROR: scripts/apply_news_to_report.py 파일이 없습니다." && exit 1)
-          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --out-dir data/news --min-required 1 --max-items 12 --force-refresh
-          python scripts/apply_news_to_report.py --date "$TARGET_DATE" --news-dir data/news --report-dir data/reports --min-required 1
+          if [ "$REPORT_SLOT" = "evening" ] && [ ! -f "data/reports/$TARGET_DATE.report.json" ]; then
+            echo "[ERROR] 오후 보고서는 오전 report JSON이 먼저 필요합니다: data/reports/$TARGET_DATE.report.json"
+            exit 1
+          fi
+          python scripts/fetch_news_candidates.py --date "$TARGET_DATE" --report-slot "$REPORT_SLOT" --out-dir data/news --min-required 1 --max-items 12 --force-refresh
+          python scripts/apply_news_to_report.py --date "$TARGET_DATE" --report-slot "$REPORT_SLOT" --news-dir data/news --report-dir data/reports --min-required 1
 
       - name: Fetch Opinet international prices for today only
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         run: |
           TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
           if [ -f "data/prices/$TARGET_DATE.json" ]; then
@@ -248,7 +293,7 @@ jobs:
           fi
 
       - name: Merge prices into report
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         run: |
           python scripts/merge_prices_into_report.py \
             --date "$TARGET_DATE" \
@@ -258,7 +303,7 @@ jobs:
             --chart-months 2
 
       - name: Validate report source separation
-        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true' && env.REPORT_SLOT == 'morning'
         run: |
           python scripts/validate_report_sources.py --date "$TARGET_DATE" --report-dir data/reports
 
@@ -267,6 +312,7 @@ jobs:
         run: |
           python scripts/generate_html_report.py \
             --date "$TARGET_DATE" \
+            --report-slot "$REPORT_SLOT" \
             --report-dir data/reports \
             --out-dir docs/reports
 
@@ -278,22 +324,27 @@ jobs:
             --out docs/report-index.json
 
       - name: Validate generated report HTML
-        if: env.RUN_MODE == 'range' || env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'range' || (env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true')
         run: |
           python scripts/validate_report_html.py \
             --reports-dir docs/reports \
             --index docs/report-index.json \
             --since 2026-05-01
 
+      - name: Mark report slot done
+        if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
+        run: |
+          python scripts/report_run_status.py mark --date "$TARGET_DATE" --report-slot "$REPORT_SLOT"
+
       - name: Show generated files
-        if: env.RUN_MODE == 'range' || env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'range' || (env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true')
         run: |
           echo "생성된 파일:"
           find data -maxdepth 3 -type f || true
           find docs -maxdepth 3 -type f || true
 
       - name: Commit collected data and dashboard files
-        if: env.RUN_MODE == 'range' || env.IS_BUSINESS_DAY == 'true'
+        if: env.RUN_MODE == 'range' || (env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -302,6 +353,7 @@ jobs:
           git add data/reports/ || true
           git add data/prices/ || true
           git add data/news/ || true
+          git add data/run_status/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
           git add docs/report-index.json || true
@@ -325,6 +377,7 @@ jobs:
           git add data/reports/ || true
           git add data/prices/ || true
           git add data/news/ || true
+          git add data/run_status/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
           git add docs/report-index.json || true

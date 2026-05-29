@@ -45,6 +45,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--out-dir", default="docs/reports", help="HTML 출력 폴더")
     parser.add_argument("--input", help="입력 report JSON 파일")
     parser.add_argument("--output", help="출력 HTML 파일")
+    parser.add_argument("--report-slot", choices=["morning", "evening"], default="morning", help="호출한 보고서 슬롯")
     return parser.parse_args()
 
 
@@ -617,8 +618,8 @@ def render_schedules(data: Mapping[str, Any]) -> str:
     return '<div class="schedule-list">' + ''.join(rows) + '</div>'
 
 
-def get_news(data: Mapping[str, Any]) -> tuple[str, list[Mapping[str, Any]]]:
-    news = dict_of(data.get("news_trend"))
+def get_news(data: Mapping[str, Any], key: str = "news_trend") -> tuple[str, list[Mapping[str, Any]]]:
+    news = dict_of(data.get(key))
     summary = clean_text(news.get("summary") or news.get("trend") or news.get("text") or "")
     articles = [a for a in list_of(news.get("articles")) if isinstance(a, Mapping) and a.get("title")]
     return summary, articles[:5]
@@ -685,7 +686,7 @@ def article_desc_for_display(article: Mapping[str, Any]) -> str:
 def render_afternoon_news_placeholder() -> str:
     return (
         '<div class="news-body">'
-        '<div class="news-trend">17:00 업데이트 예정입니다.</div>'
+        '<div class="news-trend">17:30 업데이트 예정입니다.</div>'
         '<div class="news-separator"></div>'
         '<div class="news-links-title">대표 기사</div>'
         '<div class="news-link">'
@@ -698,13 +699,13 @@ def render_afternoon_news_placeholder() -> str:
     )
 
 
-def render_news(data: Mapping[str, Any]) -> str:
-    summary, articles = get_news(data)
+def render_news(data: Mapping[str, Any], key: str = "news_trend", empty_summary: str = "기준일 조간 신문 트렌드 확인 필요.", fact_note: str | None = None, empty_article_desc: str = "조간 기사 후보가 report JSON에 반영되지 않음") -> str:
+    summary, articles = get_news(data, key)
     if not summary:
         if articles:
             summary = "주요 매체가 " + "·".join(clean_text(a.get("title")) for a in articles[:3]) + " 등을 중심으로 보도."
         else:
-            summary = "기준일 조간 신문 트렌드 확인 필요."
+            summary = empty_summary
     rows = []
     for a in articles:
         url = str(a.get("url") or "#").strip() or "#"
@@ -715,8 +716,23 @@ def render_news(data: Mapping[str, Any]) -> str:
         # 중요: 긴 URL 텍스트는 출력하지 않고, 제목에만 href를 건다.
         rows.append(f'<a class="news-link" href="{esc(url)}" target="_blank" rel="noopener noreferrer"><div class="news-link-title">{esc(title)}</div><div class="news-link-press">{esc(press)}</div>{desc_html}</a>')
     if not rows:
-        rows.append('<div class="news-link"><div class="news-link-title">대표 기사 데이터 확인 필요</div><div class="news-link-press">-</div><div class="news-link-desc">조간 기사 후보가 report JSON에 반영되지 않음</div></div>')
-    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성.</div>'
+        rows.append(f'<div class="news-link"><div class="news-link-title">대표 기사 데이터 확인 필요</div><div class="news-link-press">-</div><div class="news-link-desc">{esc(empty_article_desc)}</div></div>')
+    if fact_note is None:
+        fact_note = "※ 조간 트렌드는 웹 확인 가능한 기준일 오전 보도 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성."
+    return f'<div class="news-body"><div class="news-trend">{esc(summary)}</div><div class="news-separator"></div><div class="news-links-title">대표 기사</div>{"".join(rows)}</div><div class="fact-note">{esc(fact_note)}</div>'
+
+
+def render_afternoon_news(data: Mapping[str, Any]) -> str:
+    summary, articles = get_news(data, "news_trend_afternoon")
+    if not summary and not articles:
+        return render_afternoon_news_placeholder()
+    return render_news(
+        data,
+        key="news_trend_afternoon",
+        empty_summary="기준일 오후 신문 트렌드 확인 필요.",
+        fact_note="※ 오후 트렌드는 당일 09:00~17:00 KST 발간 기사 중 정유·석유화학·LNG 업계 관련성이 높은 기사 중심 작성.",
+        empty_article_desc="오후 기사 후보가 report JSON에 반영되지 않음",
+    )
 
 
 
@@ -845,7 +861,7 @@ def render(data: Mapping[str, Any], date_text: str) -> str:
     {render_chart("석유제품 가격 추이", product_series, PRODUCT_KEYS, PRODUCT_LABELS)}
     {section(5, f"금일 주요 일정 ({today_label})", render_schedules(data))}
     {section(6, f"News Trend ({morning_news_label})", render_news(data))}
-    {section(7, f"News Trend ({afternoon_news_label})", render_afternoon_news_placeholder())}
+    {section(7, f"News Trend ({afternoon_news_label})", render_afternoon_news(data))}
     <footer class="footer">SK Innovation Communication Division · {esc(date_text.replace('-', '.'))}</footer>
   </main>
   {TOOLTIP_SCRIPT}
