@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-08",
   "report_slot": "evening",
   "collected_at": "2026-05-30 00:46:11 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "호르무즈 뚫은 유조선 속속 입항…홍해 우회 포함 중동산 수급 이어질 듯",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508144617225",
+      "press": "시사저널",
+      "url": "https://v.daum.net/v/20260508144617225",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "시사저널 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 뚫은 유조선 속속 입항…홍해 우회 포함 중동산 수급 이어질 듯 도착하면서 2월 말 이후 두 달 넘게 이어진 국내 원유 수급난에서 업계가 조금은 숨을 돌리는 분위기다. 중동 사태 이후 국내 정유 업계의 도입선 다변화 노력과 정부의 정책 지원 효과도 나타나고 있다. 한국석유공사 페트로넷 통계에 따르면, 지난 3월 기준 전년... 2026.05.08",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "고물가에 ‘5차 최고가격제’ 동결… 정유사 손실 보상 논란도",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508143901930",
+      "press": "매경이코노미",
+      "url": "https://v.daum.net/v/20260508143901930",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "매경이코노미 개별문서메뉴 톡으로 바로 공유 공유하기 고물가에 ‘5차 최고가격제’ 동결… 정유사 손실 보상 논란도 최고가격 5차 지정’ 관련 브리핑을 열고, 8일 0시부터 2주간 적용하는 5차 석유 최고가격을 동결한다고 발표했다. 이에 따라 정유사 에서 주유소에 공급되는 휘발유 도매가는 리터(ℓ)당 1934원, 경유는 1923원, 등유는 1530원으로 각각 유지된다. 문신학 산업부... 2026.05.08",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "호르무즈 뚫고 기름 실어왔지만… 수급 정상화는 요원",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508115917414",
+      "press": "문화일보",
+      "url": "https://v.daum.net/v/20260508115917414",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "문화일보 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 뚫고 기름 실어왔지만… 수급 정상화는 요원 물량을 비축유로 우선 제공하는 비축유 스와프 제도를 진행 중이다. 지난 6일 기준으로 총 1650만 배럴의 스와프 계약을 체결해 정유사 의 일시적 도입 차질을 완화하고, 차후 돌려받을 물량을 확보했다. 다만, 업계에서는 7월을 전후한 공급 위기 가능성이 여전히... 2026.05.08",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "정유사",
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 4
+    },
+    {
+      "title": "5차 석유제품 최고가격제 동결(5.8.~21.)",
+      "press": "정책브리핑",
+      "url": "https://v.daum.net/v/20260508162017125",
+      "published_date": "2026-05-08",
+      "published_at_kst": "",
+      "snippet": "정책브리핑 개별문서메뉴 톡으로 바로 공유 공유하기 5차 석유제품 최고가격제 동결(5.8.~21.) 민생 지키는 방파제 석유제품 최고가격제 물가 부담 덜기 위해 이번에도 동결(5.8.~21.) 정유사 출고가(공급가) · 휘발유 리터당 1934원/ℓ · 경유 리터당 1923원/ℓ · 등유 리터당 1530원/ℓ ☞ 정책뉴스로 자세히 보기 2026.05.08",
       "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
-        "originality": 1,
-        "duplicate_or_low_quality": 0
-      },
-      "source_query": "정유사",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "5차 석유제품 최고가격제 동결(5.8.~21.)",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508162017125",
-      "published_date": "2026-05-08",
-      "published_at_kst": "",
-      "snippet": "정책브리핑 개별문서메뉴 톡으로 바로 공유 공유하기 5차 석유제품 최고가격제 동결(5.8.~21.) 민생 지키는 방파제 석유제품 최고가격제 물가 부담 덜기 위해 이번에도 동결(5.8.~21.) 정유사 출고가(공급가) · 휘발유 리터당 1934원/ℓ · 경유 리터당 1923원/ℓ · 등유 리터당 1530원/ℓ ☞ 정책뉴스로 자세히 보기 2026.05.08",
-      "score": 9,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "\"휘발유 1934원\", 오늘부터 '5차 최고가격제'...일선은 2100원대, '실효성' 논란",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508134810932",
+      "press": "경인방송",
+      "url": "https://v.daum.net/v/20260508134810932",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "경인방송 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 \"휘발유 1934원\", 오늘부터 '5차 최고가격제'...일선은 2100원대, '실효성' 논란 소비자가 체감하는 주유소 가격은 2000원대를 웃도는 곳도 적지 않아 정책 체감도가 떨어진다는 지적이 나온다. 또 최고가격제와 정유사 공급가 관련 행정 권한은 산업통상부에 있고 인천광역시 등 지자체엔 없다. 8일 산업통상부는 \"전반적인 물가 상승으로 국민... 2026.05.08 2",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "‘호르무즈 봉쇄’ 중동 우회선박 운임 상승분 과세 제외",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508164708166",
+      "press": "서울신문",
+      "url": "https://v.daum.net/v/20260508164708166",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "서울신문 개별문서메뉴 톡으로 바로 공유 공유하기 ‘호르무즈 봉쇄’ 중동 우회선박 운임 상승분 과세 제외 ‘우회로 홍해’ 통과한 첫 유조선 - 8일 오전 전남 여수시 GS칼텍스 원유 부두에 200만배럴을 실은 유조선이 정박해 있다. 지난달 중순 사우디아라비아 얀부항에서 출항한 이 유조선은 중동 전쟁으로 봉쇄된 호르무즈 해협 대신 우회로인 홍해를 통과한 첫 번째... 2026.05.08",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "“호르무즈 우회 운임 뺀다”… 관세청, 수입 기업 부담 낮춘다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508162702340",
+      "press": "쿠키뉴스",
+      "url": "https://v.daum.net/v/20260508162702340",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "쿠키뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 2 “호르무즈 우회 운임 뺀다”… 관세청, 수입 기업 부담 낮춘다 실제 운임 증빙, 통상 운임 산정 내역, 우회 항로 또는 항공 운송 사실을 입증하는 자료를 제출하면 된다. 관세청은 이번 조치로 원유 등 주요 수입 물품의 가격상승 압력을 낮추고, 기업의 관세 부담도 줄일 것으로 기대하고 있다. 이명구 관세청장은 “이번 운임... 2026.05.08",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "日기업들, 고유가에 '파산 공포'…대출한도 2.5조엔 긴급 확보",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508162052138",
+      "press": "파이낸셜뉴스",
+      "url": "https://v.daum.net/v/20260508162052138",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "파이낸셜뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 日기업들, 고유가에 '파산 공포'…대출한도 2.5조엔 긴급 확보 출처=연합뉴스 출처=연합뉴스 【파이낸셜뉴스 도쿄=서혜진 특파원】일본 기업들이 원유 부족과 가격 급등에 따른 '오일쇼크 파산'을 피하기 위해 대출 약정 한도 계약 체결을 통한 현금 확보에 서두르고 있다고 니혼게이자이신문(닛케이)이 8일 보도했다. 일본은행... 2026.05.08",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 1
     },
     {
       "title": "호르무즈 봉쇄 속 귀한 원유…이번에도 HD현대오일뱅크 향했다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508151153386",
+      "press": "지디넷코리아",
+      "url": "https://v.daum.net/v/20260508151153386",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "지디넷코리아 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 봉쇄 속 귀한 원유…이번에도 HD현대오일뱅크 향했다 뱅크에 200만 배럴을 하역한 이글 벨로어호에 이어 두 번째다. 최근 중동 정세 불안으로 호르무즈 해협 봉쇄가 이어지면서 국내 정유 업계의 원유 도입 부담도 커지고 있다. 호르무즈 해협은 중동산 원유의 핵심 수송로로, 봉쇄로 인해 유 수급과 운송 일정, 해상... 2026.05.08",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "호르무즈 봉쇄 후 4번째…한국 유조선, 홍해 통과",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508150021854",
+      "press": "파이낸셜뉴스",
+      "url": "https://v.daum.net/v/20260508150021854",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "파이낸셜뉴스 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 봉쇄 후 4번째…한국 유조선, 홍해 통과 해협은 세계 원유 물동량 상당 부분이 지나가는 핵심 해상 통로지만, 최근 중동 지역 무력 충돌이 격화됐다. 이에 정부와 국내 정유 업계, 선사 등이 대체 항로 확보에 나섰다. 정부는 또 홍해 운항 선박에 대한 안전 관리도 강화하고 있다. 해수부는 \"해당 선박이... 2026.05.08",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "호르무즈·홍해 뚫고 속속 입항…원유 대란 속 '단비'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508143738884",
+      "press": "연합뉴스TV",
+      "url": "https://v.daum.net/v/20260508143738884",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "연합뉴스TV 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈·홍해 뚫고 속속 입항…원유 대란 속 '단비' 이를 통해 전남 여수에서 GS칼텍스가 200만 배럴의 원유를 공급받았습니다. 중동산 원유가 속속 국내에 도착하면서 국내 정유 업계도 원유 수급난 속 안도의 분위기가 나오고 있는 모습입니다. 또, 업계와 정부는 원유 수입선 다변화 노력에도 총력을 기울이고 있어... 2026.05.08",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "서울 휘발유값 평균 2051원…최고가격 동결로 2000원대 정체",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260508143803898",
+      "press": "동아일보",
+      "url": "https://v.daum.net/v/20260508143803898",
       "published_date": "2026-05-08",
       "published_at_kst": "",
       "snippet": "동아일보 개별문서메뉴 톡으로 바로 공유 공유하기 서울 휘발유값 평균 2051원…최고가격 동결로 2000원대 정체 L당 2006.24원으로 0.12원 상승했다. 전날 산업통상부는 5차 석유 최고가격 동결을 발표했다. 3회 연속 동결이다. 이로써 정유사 공급가 기준으로 L당 휘발유는 1934원, 경유는 1923원, 등유는 1530원이 그대로 적용된다. 석유 최고가격은 2주마다 결정하는데 3... 2026.05.08",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     }
   ],
   "errors": [],

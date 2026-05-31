@@ -1563,53 +1563,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "전자신문은 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "이투데이는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "에너지경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "\"최고가격제 두 달, 4조원 손실…종전 후 유가 하락땐 손실 눈덩이\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514060319075",
+        "title": "브렌트유 105달러·WTI 101달러로 하락…국제유가 2%↓",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260514075353352",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "IBK證 \"SK이노, 배터리 적자에도 1분기 영업이익 증가⋯하반기 LNG 수익성 기대\"",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260514080503627",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "㈜GS, 1분기 영업익 1조2586억원…정유 호실적에 전년比 57%↑",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514081247784",
+        "press": "에너지경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260514081247784",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
+          "press": 2,
           "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "HD현대그룹, 1분기 영업익 120% 급등…조선ㆍ정유ㆍ건설기계ㆍ전력기기 동반질주",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514062010438",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 0,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1718,7 +1724,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-14.json",
+      "source_file": "data\\news\\2026-05-14.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1726,7 +1732,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-14.evening.json",
+      "source_file": "data\\news\\2026-05-14.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1756,52 +1762,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "한국경제는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한국일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "정유 4사, 5조 벌고도 표정관리…최고가격제 변수 부상",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514165553974",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "title": "정부 \"국제유가 100달러 아래로 떨어지면 최고가격제 해제 검토\"",
+        "press": "한국경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260514153505537",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "호르무즈 봉쇄 75일째…신영證 \"유가 안정책 유효기간 짧아지는 구간\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514152005547",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
-          "originality": 2,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "\"감자칩 흑백 포장은 다카이치 비판\"? 日 나프타 공급난에 음모론",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514160316263",
+        "press": "한국일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260514160316263",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "외교부, 중동전쟁 비상경제 대응 미주지역 공관 회의…정유·화학업계도 참석",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260514165508939",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }

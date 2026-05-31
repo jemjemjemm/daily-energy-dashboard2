@@ -1380,53 +1380,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "전자신문은 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "머니투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "호르무즈 막혀도, 공급망 뚫은 韓기업 저력",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504040636643",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 11,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "\"고유가에 고환율…4월 물가 2.6% 상승 전망\"[물가폴]",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504050246127",
+        "title": "호르무즈 봉쇄 직격탄…일본 원유 수입 37년 만에 '최저 추락'",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260504060234953",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "[매아리] \"4일부터 호르무즈에 갇힌 선박 빼낸다\"…애플 호실적에 증시 또 사상 최고치",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504090002964",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
+          "press": 2,
           "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈 막혀도, 공급망 뚫은 韓기업 저력",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260504040636643",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 14,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "나프타 쇼크에 종이 대체재 뜨지만…제지업계 \"가격·수요 변수\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260504062110321",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1536,7 +1542,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-04.json",
+      "source_file": "data\\news\\2026-05-04.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1544,7 +1550,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-04.evening.json",
+      "source_file": "data\\news\\2026-05-04.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1574,53 +1580,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 △정부·국회 에너지 정책 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "SBS는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "매일경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "KBS는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "호르무즈 긴장에 알루미늄 16% 급등… 글로벌 車업계 ‘비상’",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504160014633",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 11,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "OPEC+ 증산에도 “국제유가 영향 없을 것”…정부, 최고 가격제 딜레마 빠지나",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504163346778",
+        "title": "호르무즈 봉쇄 후 첫 러시아 원유 일 도착…수입선 다각화 전략",
+        "press": "SBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260504145407192",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "환율 20원 급락, 1460원대…중동전쟁 이후 최저",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260504164622113",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 10,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "팬오션 1분기 영업익 24.4%↑…LNG·탱커선 쌍끌이",
+        "press": "매일경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260504160001616",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈 봉쇄 뒤 러시아 원유 일본 첫 도착…“수입 다각화 위해 정부가 주도”",
+        "press": "KBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260504144614939",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }

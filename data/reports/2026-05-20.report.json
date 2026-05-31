@@ -1545,53 +1545,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "EBN산업경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
         "title": "6차 최고가격제 앞둔 정부…국제유가 '100달러선' 언제까지 버티나",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520060249093",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260520060249093",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 14,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "“원유·LNG까지 손잡았다”…한·일, 중동발 에너지 전쟁에 공동방어선",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520073055551",
+        "press": "EBN산업경제",
+        "press_grade": "C",
+        "url": "https://v.daum.net/v/20260520073055551",
         "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 10,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 1,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "유엔, 중동전쟁에 성장률 2.5%로 하향",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520081316304",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "영국, 러 원유 제3국서 정제한 경유·항공유 수입 허용",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260520054608632",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 8,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 1,
-          "press": 0,
-          "originality": 2,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1700,7 +1706,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-20.json",
+      "source_file": "data\\news\\2026-05-20.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1708,7 +1714,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-20.evening.json",
+      "source_file": "data\\news\\2026-05-20.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1738,54 +1744,60 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "아시아경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "KBS는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "프레시안은 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "한·일 ‘원유· 석유 제품 스와프’ 추진 배경은?…한국은 정제, 일본은 수급에 강점",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520163338601",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "항공유 생산에 쏠린 美 정유사 …여름 휘발유 공급 우려",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260520095100886",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": -3
+        }
+      },
+      {
+        "title": "[맵 브리핑] 러시아산 원유 정제한 경유 등 수입 허용",
+        "press": "KBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260520154108005",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "[속보] 한국 선박 유조선, 호르무즈 해협 진입…美 이란 침공 이후 첫 번째",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520143500396",
+        "press": "프레시안",
+        "press_grade": "C",
+        "url": "https://v.daum.net/v/20260520143500396",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 10,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 1,
           "originality": 2,
           "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "항공유 생산에 쏠린 美 정유사 …여름 휘발유 공급 우려",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260520095100886",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 8,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": -3
         }
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-22",
   "report_slot": "morning",
   "collected_at": "2026-05-30 01:02:21 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "우린 '최고가격제' 중인데…IMF \"'선별적' 현금 지원이 바람직\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522060214765",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260522060214765",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 3 우린 '최고가격제' 중인데…IMF \"'선별적' 현금 지원이 바람직\" 4조2000억원 규모 목적 예비비를 편성한 바 있다. 그러나 시행 3개월 만에 손실 규모가 예산을 넘어설 수 있다는 전망도 제기된다. 정유 4사의 손실은 주간 기준 약 5000억원 안팎, 누적 기준 4조원을 넘어선 것으로 알려졌다. [워싱턴=AP/뉴시스] 미국 워싱턴의... 2026.05.22 3",
-      "score": 11,
+      "score": 14,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "[K- 석유 화학 진단] ‘아람코 우산’ 빛난 에쓰오일, 정유 호황에 반등 굳히나",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522073004502",
+      "press": "한스경제",
+      "url": "https://v.daum.net/v/20260522073004502",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "한스경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 [K- 석유 화학 진단] ‘아람코 우산’ 빛난 에쓰오일, 정유 호황에 반등 굳히나 수 있다고 분석했다. 샤힌 프로젝트는 에쓰오일의 가장 큰 중장기 성장축이다. 해당 사업은 에쓰오일이 정유 중심에서 석유 화학 고부가 제품 으로 수익 구조를 확장하기 위해 추진하는 대형 투자다. 회사는 오는 6월 말 기계적 완공 이후 하반기 시운전을 거쳐 2027... 2026.05.22",
-      "score": 10,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 4
     },
     {
       "title": "정부가 봐도 유가 안정세?…최고가격 조정 주기 2주→4주로",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522060218786",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260522060218786",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 3 정부가 봐도 유가 안정세?…최고가격 조정 주기 2주→4주로 내려온 이후 5월 첫째주 101.62달러, 둘째주 104.74달러, 셋째주 107.10달러로 100달러 초반대를 지속 중이다. 국내 석유 제품 가격 역시 큰 변동 없이 안정적인 상황이다. 지난 21일 오후 2시 기준 휘발유는 ℓ(리터)당 2011.25원, 경유는 2005.83원으로 전일 대비... 2026.05.22",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 2
     },
     {
       "title": "석유 최고가격 조정 주기 4주로 확대…국제 유가 안정 영향",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522084333132",
+      "press": "한스경제",
+      "url": "https://v.daum.net/v/20260522084333132",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "한스경제 개별문서메뉴 톡으로 바로 공유 공유하기 석유 최고가격 조정 주기 4주로 확대…국제 유가 안정 영향 한스경제 김창수 기자 | 정부는 22일 0시부터 시행되는 6차 석유 최고가격을 이전과 동일하게 유지하기로 결정했다. 이에 따라 휘발유 와 경유, 등유의 가격은 각각 리터당 1934원, 1923원, 1530원으로 2차부터 5차까지와 동일한 수준을 이어가게 됐다. 산업통상부는... 2026.05.22",
-      "score": 10,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 2,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "휘발유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 2
     },
     {
       "title": "OCI, 유가 급등할수록 강해진다…석탄 화학 수익성 부각-한투",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522075354005",
+      "press": "이데일리",
+      "url": "https://v.daum.net/v/20260522075354005",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 OCI, 유가 급등할수록 강해진다…석탄 화학 수익성 부각-한투 부산물인 코크스와 콜타르(Coal Tar)를 원료로 사용한다”며 “ 석유 기반 원재료 가격 급등 국면에서도 상대적으로 원가 부담이 제한...석탄 가격 상승률은 16%에 그쳤다”며 “현재 OCI의 석탄 화학 원가 환경은 2011~2012년 ‘아랍의 봄’ 당시와 유사하다”고 분석... 2026.05.22",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 4,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유화학",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": -1
     },
     {
       "title": "OCI, 유가 상승기에 석탄화학 수익성 개선 전망…매수 의견-한국투자증권",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522083108817",
+      "press": "머니투데이",
+      "url": "https://v.daum.net/v/20260522083108817",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 OCI, 유가 상승기에 석탄화학 수익성 개선 전망…매수 의견-한국투자증권 며 \"올해 1분기 카본케미칼 부문 영업이익률은 이미 9%를 기록했다\"라고 말했다. 이어 \"호르무즈 해협 봉쇄 장기화에 따른 나프타 ·석탄 가격 비율 상승으로 올해 카본케미칼 부문 영업이익률은 12%를 기록할 것\"이라고 했다. 그러면서 \"지난해 OCI의 매출 2조원 중... 2026.05.22",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "나프타",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 2
     },
     {
       "title": "6차 석유최고가격도 동결…유류세 인하 2개월 연장",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522062103215",
+      "press": "SBS",
+      "url": "https://v.daum.net/v/20260522062103215",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "SBS 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 6차 석유최고가격도 동결…유류세 인하 2개월 연장 최고 가격이 이번에도 동결했습니다. 정부는 국내 기름 가격을 누르는 정책을 실시한 이후 가격 인상 요인이 누적 돼왔지만 물가 와 민생 안정을 최우선으로 삼고 동결하기로 결정했다고 밝혔습니다. 국내 석유 가격의 안정성과 예측 가능성을 높이기 위해서 2주였던... 2026.05.22",
-      "score": 10,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 2,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "민생물가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 4
     },
     {
       "title": "에너지 공급난 장기화…“SK이노·S-Oil, 다시 대접받을 때”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522074709877",
+      "press": "이데일리",
+      "url": "https://v.daum.net/v/20260522074709877",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 에너지 공급난 장기화…“SK이노·S-Oil, 다시 대접받을 때” [이데일리 박순엽 기자] 이란 전쟁 이후 원유 공급 부족과 중동 정유 설비 차질이 장기화하면서 국내 에너지 기업의 투자 매력이 높아질 것이란 분석이 나왔다. 고유가와 정제마진 강세가 이어지는 가운데, 에너지 자급과 공급 안정성에 기여할 수 있는 SK이노베이션... 2026.05.22",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 3
     },
     {
       "title": "석유 최고가 4주째 동결… 유류세 인하 7월까지",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522050549232",
+      "press": "서울신문",
+      "url": "https://v.daum.net/v/20260522050549232",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "서울신문 개별문서메뉴 톡으로 바로 공유 공유하기 석유 최고가 4주째 동결… 유류세 인하 7월까지 유류세 인하 조치도 7월까지 두 달 연장된다. 산업통상부는 21일 이런 내용이 담긴 6차 석유 최고가격을 발표했다. 이에 따라 정유사 의 주유소 공급가격은 휘발유 ℓ당 1934원, 경유 1923원, 등유 1530원으로 지난 3월 27일 시행된 2차 최고가격과 동일하다. 최고... 2026.05.22",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "한 달 만에 2배 뛴 드라이클리닝 기름값…생산자물가 상승률 28년 만에 최고",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522085103347",
+      "press": "MBN",
+      "url": "https://v.daum.net/v/20260522085103347",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "MBN 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 한 달 만에 2배 뛴 드라이클리닝 기름값…생산자물가 상승률 28년 만에 최고 뛰었습니다. 이에 따라 지난달 생산자물가지수는 128을 넘기며, 외환위기 이후 28년 만에 최고 상승률을 기록했습니다. 정부는 유류세 추가 인하 조치를 오는 7월 말까지 두 달 더 연장하기로 했습니다. ▶ 인터뷰 : 구윤철 / 부총리 겸 재정경제부 장관 - \"정부는... 2026.05.22",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "유류세",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 1
     },
     {
       "title": "가스공사, LNG 수급 걱정없다…BP와 700만t 장기계약",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522000433300",
+      "press": "중앙일보",
+      "url": "https://v.daum.net/v/20260522000433300",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 가스공사, LNG 수급 걱정없다…BP와 700만t 장기계약 국내 최대 규모의 LNG 저장능력을 갖추고 있는 인천 송도 한국가스공사 내 저장탱크. [연합뉴스] 한국가스공사가 글로벌 석유회사 BP로부터 연간 70만t 규모의 액화천연가스( LNG )를 추가로 들여온다. 중동전쟁 여파로 에너지 불안이 커지는 가운데 LNG 수급 안정성을... 2026.05.22",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "LNG",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "[원자재 시황] '급등 후 급락' 유가에 금융시장 '롤러코스터'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522083855040",
+      "press": "EBN산업경제",
+      "url": "https://v.daum.net/v/20260522083855040",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "EBN산업경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 [원자재 시황] '급등 후 급락' 유가에 금융시장 '롤러코스터' 마련됐다는 보도가 나오면서 분위기가 급반전됐다. 이란 ILNA 통신은 사우디 알 아라비야 방송을 인용해 ▲즉각적 휴전 ▲ 호르무즈 해협 항행 자유 보장 ▲제재 단계적 해제 등이 포함된 최종안이 논의되고 있다고 전했다. ING는 보고서를 통해 \"이와 유사한 상황은... 2026.05.22",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "호르무즈",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     }
   ],
   "errors": [],

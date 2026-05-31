@@ -10,6 +10,7 @@ fetch_news_candidates.py v2.5
 - 조간 News Trend 기본 검색창은 전일 17:00 KST ~ 기준일 09:00 KST로 봅니다.
 - 오후 News Trend 기본 검색창은 기준일 09:00 KST ~ 기준일 17:00 KST로 봅니다.
 - News Trend 데이터는 Naver 뉴스 검색 HTML > Daum 뉴스 검색 HTML > Google News RSS 순서로 사용합니다.
+- 직접 관련 A/B 매체 후보 3건이 모일 때까지 다음 검색원도 누적 탐색합니다.
 - 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
 - 기존에 정상 기사 JSON이 있으면 외부 검색 일시 실패 시 기존 정상 JSON을 보존합니다.
 - 일정 공지·인사·부고·스포츠·연예성 기사는 제외합니다.
@@ -27,9 +28,30 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable
-from urllib.parse import parse_qs, quote_plus, unquote, urlparse
+from urllib.parse import quote_plus, urlparse
 
 import requests
+
+try:
+    from scripts.news_article_rules import (
+        industry_relevance_score,
+        is_forbidden_press,
+        is_original_source_url,
+        normalize_article_url,
+        normalize_press as normalize_press_name,
+        press_grade,
+        resolve_press,
+    )
+except ImportError:
+    from news_article_rules import (  # type: ignore
+        industry_relevance_score,
+        is_forbidden_press,
+        is_original_source_url,
+        normalize_article_url,
+        normalize_press as normalize_press_name,
+        press_grade,
+        resolve_press,
+    )
 
 try:
     from bs4 import BeautifulSoup  # type: ignore
@@ -47,30 +69,29 @@ QUERY_TIERS: list[tuple[int, list[str]]] = [
         "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
         "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
         "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
-        "LNG OR 천연가스 OR 가스공사 OR 도시가스 OR 전력 OR 전기요금",
-        "최고가격제 OR 가격상한 OR 민생물가 OR 생산자물가 OR 석탄및석유제품",
-        "중동 OR 호르무즈 OR 원유 수급 OR 에너지 안보 OR OPEC",
-        "산업통상부 에너지 OR 산업부 석유 OR 공정위 석유 OR 국회 에너지",
+        "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+        "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+        "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
     ]),
     (4, [
-        "에너지 OR 유가 OR 석유 OR 물가 OR 전력 OR 가스",
-        "산업부 OR 공정위 OR 기재부 OR 국회 OR 정부 에너지",
-        "정유사 OR 주유소 OR 휘발유 OR 경유 OR 석유제품",
-        "석유화학 OR 화학제품 OR 나프타 OR 배터리 OR 공급망",
-        "생산자물가 OR 소비자물가 OR 수입물가 OR 에너지 가격",
+        "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+        "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+        "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
     ]),
     (3, [
-        "경제 에너지 OR 경제 유가 OR 산업 에너지",
-        "물가 에너지 OR 정부 물가 OR 전력 가스",
-        "산업부 OR 기재부 OR 공정위 OR 에너지",
-        "석유 OR 가스 OR 전력 OR 화학",
+        "경제 유가 OR 산업 에너지",
+        "정부 유류세 OR 전력 LNG",
+        "산업부 에너지 OR 기재부 물가 석유",
     ]),
 ]
 
 # 보조 검색원은 OR 구문보다 단일/복합 키워드가 안정적으로 동작합니다.
 PLAIN_QUERIES = [
     "국제유가", "유가", "원유", "석유제품", "정유", "정유사", "주유소", "유류세", "휘발유", "경유",
-    "석유화학", "나프타", "LNG", "천연가스", "전력", "에너지", "생산자물가", "민생물가", "최고가격제", "호르무즈",
+    "석유화학", "나프타", "LNG", "천연가스", "최고가격제", "호르무즈",
+]
+RELAXED_PLAIN_QUERIES = PLAIN_QUERIES + [
+    "전력 LNG", "에너지 국제유가", "물가 석유제품", "생산자물가 석유제품",
 ]
 
 KEYWORD_GROUPS = [
@@ -85,13 +106,9 @@ ORIGINALITY_KEYWORDS = {
     "해설": 1, "진단": 1, "업계": 1, "정부": 1, "자료": 1, "발표": 1,
 }
 LOW_QUALITY_KEYWORDS = {
-    "오늘의 주요일정": 3, "주요일정": 3, "인사": 3, "부고": 3, "동정": 2, "특징주": 2,
+    "오늘의 주요일정": 3, "주요일정": 3, "투데이 라인업": 3, "인사": 3, "부고": 3, "동정": 2, "특징주": 2,
     "야구": 3, "축구": 3, "농구": 3, "연예": 3, "맛집": 3, "여행": 3, "공연": 3, "전시": 3,
     "복권": 3, "로또": 3, "운세": 3, "날씨": 2,
-}
-TRUSTED_PRESS = {
-    "연합뉴스", "한국경제", "매일경제", "서울경제", "이데일리", "머니투데이", "아시아경제", "파이낸셜뉴스",
-    "중앙일보", "조선일보", "동아일보", "한겨레", "경향신문", "이투데이", "아시아투데이", "뉴스1", "뉴시스",
 }
 ECON_PRESS_HINTS = ["경제", "비즈", "투데이", "파이낸셜", "산업", "에너지", "석유", "화학"]
 LOW_TRUST_PRESS_HINTS = ["블로그", "카페", "커뮤니티", "SNS", "유튜브"]
@@ -139,20 +156,11 @@ def clean_text(v: str) -> str:
 
 
 def normalize_press(value: str) -> str:
-    press = clean_text(value)
-    press = press.replace("언론사 선정", "").replace("네이버뉴스", "").replace("다음뉴스", "")
-    press = re.sub(r"\s+", " ", press).strip(" -·|")
-    return press or "출처 확인"
+    return normalize_press_name(value)
 
 
 def original_url(link: str) -> str:
-    try:
-        qs = parse_qs(urlparse(link).query)
-        if qs.get("url"):
-            return unquote(qs["url"][0])
-    except Exception:
-        pass
-    return link
+    return normalize_article_url(link)
 
 
 def parse_pub_date(v: str) -> tuple[str, str]:
@@ -193,8 +201,11 @@ def title_importance_score(title: str) -> int:
 
 def press_score(source: str) -> int:
     press = normalize_press(source)
-    if press in TRUSTED_PRESS:
+    grade = press_grade(press)
+    if grade == "A":
         return 3
+    if grade == "B":
+        return 2
     if any(hint in press for hint in ECON_PRESS_HINTS):
         return 1
     if any(hint.lower() in press.lower() for hint in LOW_TRUST_PRESS_HINTS):
@@ -202,6 +213,21 @@ def press_score(source: str) -> int:
     if press in {"Google News", "Naver News", "Daum News", "출처 확인"}:
         return 0
     return 1
+
+
+def candidate_sort_key(item: dict[str, Any]) -> tuple[int, int, int, int, int, int]:
+    grade = press_grade(item.get("press"))
+    trusted = 1 if grade in {"A", "B"} else 0
+    grade_rank = {"A": 2, "B": 1, "C": 0, "X": -1}.get(grade, -1)
+    breakdown = item.get("score_breakdown", {}) if isinstance(item.get("score_breakdown"), dict) else {}
+    return (
+        trusted,
+        industry_relevance_score(item.get("title"), item.get("snippet")),
+        1 if is_original_source_url(item.get("url")) else 0,
+        int(breakdown.get("originality", 0)),
+        int(breakdown.get("title_importance", 0)),
+        grade_rank,
+    )
 
 
 def originality_score(title: str, snippet: str) -> int:
@@ -297,7 +323,12 @@ def fetch_google_news(query: str, target: datetime, min_score: int, lookback_hou
         score, score_breakdown = score_article(title, snippet, source)
         if score < min_score:
             continue
-        out.append({"title": title, "press": source or "Google News", "url": link, "published_date": pub_date, "published_at_kst": pub_kst, "snippet": snippet, "score": score, "score_breakdown": score_breakdown, "source_query": query, "collector": "google_news_rss"})
+        out.append({
+            "title": title, "press": source or "Google News", "press_grade": press_grade(source), "url": link,
+            "published_date": pub_date, "published_at_kst": pub_kst, "snippet": snippet, "score": score,
+            "score_breakdown": score_breakdown, "industry_relevance": industry_relevance_score(title, snippet),
+            "source_query": query, "collector": "google_news_rss",
+        })
     return out
 
 
@@ -328,11 +359,35 @@ def fetch_naver_news(query: str, target: datetime, min_score: int, lookback_hour
                 press = normalize_press(press_node.get_text(" ")) or press
         if not title or not link:
             continue
+        link = original_url(link)
+        press = resolve_press({"title": title, "url": link, "snippet": snippet, "press": press})
         score, score_breakdown = score_article(title, snippet, press)
         if score < min_score:
             continue
-        out.append({"title": title, "press": normalize_press(press), "url": link, "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500], "score": score, "score_breakdown": score_breakdown, "source_query": query, "collector": "naver_news_search"})
+        out.append({
+            "title": title, "press": press, "press_grade": press_grade(press), "url": link,
+            "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500],
+            "score": score, "score_breakdown": score_breakdown,
+            "industry_relevance": industry_relevance_score(title, snippet),
+            "source_query": query, "collector": "naver_news_search",
+        })
     return out
+
+
+def daum_card_press(parent: Any, title: str, link: str, snippet: str) -> str:
+    if parent:
+        selectors = [
+            "a.txt_info", "span.txt_info", ".info_news", ".info_cp", ".txt_cp",
+            ".source", ".press", "[class*='press']", "[class*='source']",
+        ]
+        for selector in selectors:
+            for node in parent.select(selector):
+                candidate = normalize_press(node.get_text(" "))
+                if 1 < len(candidate) <= 30 and not re.search(r"공유|메뉴|\d+\s*(?:시간|분)\s*전", candidate):
+                    press = resolve_press({"title": title, "url": link, "snippet": snippet}, candidate)
+                    if not is_forbidden_press(press):
+                        return press
+    return resolve_press({"title": title, "url": link, "snippet": snippet})
 
 
 def fetch_daum_news(query: str, target: datetime, min_score: int, lookback_hours: int, cutoff_hour: int, cutoff_minute: int) -> list[dict[str, Any]]:
@@ -354,11 +409,18 @@ def fetch_daum_news(query: str, target: datetime, min_score: int, lookback_hours
             continue
         parent = a.find_parent("li") or a.find_parent("div")
         snippet = clean_text(parent.get_text(" ") if parent else "")
-        press = "Daum News"
+        link = original_url(link)
+        press = daum_card_press(parent, title, link, snippet)
         score, score_breakdown = score_article(title, snippet, press)
         if score < min_score:
             continue
-        out.append({"title": title, "press": press, "url": link, "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500], "score": score, "score_breakdown": score_breakdown, "source_query": query, "collector": "daum_news_search"})
+        out.append({
+            "title": title, "press": press, "press_grade": press_grade(press), "url": link,
+            "published_date": target.strftime("%Y-%m-%d"), "published_at_kst": "", "snippet": snippet[:500],
+            "score": score, "score_breakdown": score_breakdown,
+            "industry_relevance": industry_relevance_score(title, snippet),
+            "source_query": query, "collector": "daum_news_search",
+        })
     return out
 
 
@@ -378,7 +440,7 @@ def dedupe(items: Iterable[dict[str, Any]], min_keep: int = 0) -> list[dict[str,
     seen = set()
     seen_urls = set()
     exact_out = []
-    for it in sorted(items, key=lambda x: int(x.get("score", 0)), reverse=True):
+    for it in sorted(items, key=candidate_sort_key, reverse=True):
         title_key = normalize_title_key(it.get("title", ""), keep_press_suffix=True)[:90]
         domain = urlparse(it.get("url", "")).netloc.lower()
         url_key = clean_text(it.get("url", "")).split("#", 1)[0]
@@ -400,6 +462,14 @@ def dedupe(items: Iterable[dict[str, Any]], min_keep: int = 0) -> list[dict[str,
         clustered.append(it)
 
     return clustered if len(clustered) >= min_keep else exact_out
+
+
+def trusted_direct_count(items: Iterable[dict[str, Any]]) -> int:
+    return sum(
+        1 for item in items
+        if press_grade(item.get("press")) in {"A", "B"}
+        and industry_relevance_score(item.get("title"), item.get("snippet")) > 0
+    )
 
 
 def infer_topics(items: list[dict[str, Any]]) -> list[str]:
@@ -465,6 +535,8 @@ def main() -> int:
     errors: list[str] = []
     selected: list[dict[str, Any]] = []
     used_tier = ""
+    used_collectors: list[str] = []
+    quality_target = min(3, a.max_items)
 
     # 1) Naver 뉴스 검색 HTML
     for q in PLAIN_QUERIES:
@@ -473,28 +545,30 @@ def main() -> int:
             time.sleep(0.2)
         except Exception as e:
             errors.append(f"naver {q}: {e}")
+    used_collectors.append("naver_html")
     candidates = dedupe(collected, min_keep=a.min_required)
     windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
     if len(windowed) >= a.min_required:
         selected = windowed[:a.max_items]
-        used_tier = "naver_html"
+        used_tier = "+".join(used_collectors)
 
     # 2) Daum 뉴스 검색 HTML
-    if len(selected) < a.min_required:
+    if trusted_direct_count(selected) < quality_target:
         for q in PLAIN_QUERIES:
             try:
                 collected.extend(fetch_daum_news(q, target, min_score=4, lookback_hours=a.lookback_hours, cutoff_hour=a.cutoff_hour, cutoff_minute=a.cutoff_minute))
                 time.sleep(0.2)
             except Exception as e:
                 errors.append(f"daum {q}: {e}")
+        used_collectors.append("daum_html")
         candidates = dedupe(collected, min_keep=a.min_required)
         windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
         if len(windowed) >= a.min_required:
             selected = windowed[:a.max_items]
-            used_tier = "daum_html"
+            used_tier = "+".join(used_collectors)
 
     # 3) Google News RSS
-    if len(selected) < a.min_required:
+    if trusted_direct_count(selected) < quality_target:
         for tier_idx, (min_score, queries) in enumerate(QUERY_TIERS, 1):
             for q in queries:
                 try:
@@ -502,19 +576,21 @@ def main() -> int:
                     time.sleep(0.15)
                 except Exception as e:
                     errors.append(f"google tier{tier_idx} {q}: {e}")
+            used_collectors.append(f"google_tier{tier_idx}")
             candidates = dedupe(collected, min_keep=a.min_required)
             windowed = [i for i in candidates if in_issue_window(i, a.date, a.lookback_hours, a.cutoff_hour, a.cutoff_minute)]
             if len(windowed) >= a.min_required:
                 selected = windowed[:a.max_items]
-                used_tier = f"google_tier{tier_idx}"
-                break
+                used_tier = "+".join(used_collectors)
+                if trusted_direct_count(selected) >= quality_target:
+                    break
 
     # 4) Threshold fallback: keep the same source order, but relax score filters
     # so a transiently sparse search result does not become a zero-article report.
     if len(selected) < a.min_required:
         relaxed: list[dict[str, Any]] = []
         for collector_name, fn in [("naver", fetch_naver_news), ("daum", fetch_daum_news)]:
-            for q in PLAIN_QUERIES:
+            for q in RELAXED_PLAIN_QUERIES:
                 try:
                     relaxed.extend(fn(q, target, min_score=2, lookback_hours=a.lookback_hours, cutoff_hour=a.cutoff_hour, cutoff_minute=a.cutoff_minute))
                     time.sleep(0.15)
@@ -546,12 +622,12 @@ def main() -> int:
             print(f"[WARN] 새 뉴스 수집 실패. 기존 시간창 통과 뉴스 JSON 보존: {out_path} / articles={len(existing.get('articles', []))}")
             return 0
         payload = {
-            "schema_version": "2.5",
+            "schema_version": "2.6",
             "date": a.date,
             "report_slot": a.report_slot,
             "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
             "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
-            "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
+            "queries": [q for _, qs in QUERY_TIERS for q in qs] + RELAXED_PLAIN_QUERIES,
             "time_window": time_window,
             "summary": "",
             "topics": [],
@@ -567,12 +643,12 @@ def main() -> int:
 
     topics = infer_topics(selected)
     payload = {
-        "schema_version": "2.5",
+        "schema_version": "2.6",
         "date": a.date,
         "report_slot": a.report_slot,
         "collected_at": datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST"),
         "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
-        "queries": [q for _, qs in QUERY_TIERS for q in qs] + PLAIN_QUERIES,
+        "queries": [q for _, qs in QUERY_TIERS for q in qs] + RELAXED_PLAIN_QUERIES,
         "time_window": time_window,
         "summary": build_summary(topics, selected),
         "topics": topics,

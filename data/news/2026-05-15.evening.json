@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-15",
   "report_slot": "evening",
   "collected_at": "2026-05-30 00:54:42 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "\"中, 미국산 석유 구매\"…트럼프 발언에 국제 유가 1.5%대 상승",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515164901949",
+      "press": "연합인포맥스",
+      "url": "https://v.daum.net/v/20260515164901949",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "연합인포맥스 개별문서메뉴 톡으로 바로 공유 공유하기 \"中, 미국산 석유 구매\"…트럼프 발언에 국제 유가 1.5%대 상승 트럼프 미국 대통령과 시진핑 중국 국가주석의 정상회담 이후 중국이 미국산 원유를 구매하기로 합의했다는 소식이 전해지며 국제 유가 가 급등했다. 15일 CNBC에 따르면, 트럼프 대통령은 폭스뉴스와의 인터뷰에서 시 주석과의 회담 결과를 전하며 \"중국이 미국... 2026.05.15",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 1,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "source_query": "국제유가",
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
+    },
+    {
+      "title": "IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고",
+      "press": "미디어펜",
+      "url": "https://v.daum.net/v/20260515140713986",
+      "published_date": "2026-05-15",
+      "published_at_kst": "",
+      "snippet": "미디어펜 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고 가장 심각한 공급 쇼크”라고 규정했다. 그동안 시장이 기대했던 ‘원만한 수급 조절’ 시나리오가 사실상 폐기되면서 원유 및 석유 제품 의 가격 하방 경직성이 그 어느 때보다 강해지고 있다. 석유 수출국기구(OPEC) 역시 동일한 시기에 발표한 보고서를 통해 중동... 2026.05.15 1",
       "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
-        "originality": 2,
-        "duplicate_or_low_quality": 0
-      },
-      "source_query": "국제유가",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515140713986",
-      "published_date": "2026-05-15",
-      "published_at_kst": "",
-      "snippet": "미디어펜 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고 가장 심각한 공급 쇼크”라고 규정했다. 그동안 시장이 기대했던 ‘원만한 수급 조절’ 시나리오가 사실상 폐기되면서 원유 및 석유 제품 의 가격 하방 경직성이 그 어느 때보다 강해지고 있다. 석유 수출국기구(OPEC) 역시 동일한 시기에 발표한 보고서를 통해 중동... 2026.05.15 1",
-      "score": 10,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "인도, 유가 급등에 '주 2일 재택근무' 도입… 휘발유· 경유 가격도 4년 만에 인상",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515161419417",
+      "press": "파이낸셜뉴스",
+      "url": "https://v.daum.net/v/20260515161419417",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "파이낸셜뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 인도, 유가 급등에 '주 2일 재택근무' 도입… 휘발유· 경유 가격도 4년 만에 인상 자제와 국산 제품 소비 확대 등도 함께 요청했다. 델리 정부는 공공부문 연료 사용도 줄이기로 했다. 공무원 차량의 월별 휘발유· 경유 사용 한도를 20% 줄였다. 또는 장관과 고위 공무원들은 매주 월요일 지하철을 이용하도록 했다. 레카 굽타 주총리 역시 공식... 2026.05.15",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "경유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "구 부총리 \"2차 고유가 피해지원금 지급에 차질 없게 준비\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515154131942",
+      "press": "정책브리핑",
+      "url": "https://v.daum.net/v/20260515154131942",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "정책브리핑 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 구 부총리 \"2차 고유가 피해지원금 지급에 차질 없게 준비\" 며 \"정부는 대내외 여건 변화를 면밀히 살피며 중동발 충격에 따른 민생 어려움을 최소화하겠다\"고 밝혔다. 구 부총리는 \"현재 정유사 공급가격이 고시된 최고가격을 밑돌고 있고, 주유소 소매가격도 소폭 하락하고 있다\"며 정부 정책에 협조하고 있는 정유소... 2026.05.15",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 3
     },
     {
       "title": "전남도, 나프타 수급 불안 대비 의료제품 공급 점검",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515101117809",
+      "press": "서울신문",
+      "url": "https://v.daum.net/v/20260515101117809",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "서울신문 개별문서메뉴 톡으로 바로 공유 공유하기 전남도, 나프타 수급 불안 대비 의료제품 공급 점검 전남도가 의료제품 공급 차질을 예방하기 위한 점검 활동을 하고 있다. 최근 중동 지역 정세 불안으로 나프타 (Naphtha) 수급 변동성이 커지면서 전남도가 의료제품 공급 차질을 예방하기 위해 지역 의료기관과 의료기기 판매업체를 대상으로 공급 상황 점검에 나섰다... 2026.05.15",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "나프타",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "구윤철 “18일부터 2차 고유가 피해지원금 지급… 민생 어려움 최소화”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515144002268",
+      "press": "동아일보",
+      "url": "https://v.daum.net/v/20260515144002268",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "동아일보 개별문서메뉴 톡으로 바로 공유 공유하기 구윤철 “18일부터 2차 고유가 피해지원금 지급… 민생 어려움 최소화” 수출·경상수지·주가지수가 역대 최고치를 경신하며 위기에 강한 저력을 보여주고 있다”면서도 “전쟁 장기화로 물가 ·고용 등 실물· 민생 경제와 산업 영향도 가시화되고 있다”고 말했다. 이어 “정부는 대내외 여건 변화를 면밀히 살피면서 중동발 충격에 따른... 2026.05.15",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "민생물가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 0
     },
     {
       "title": "“경기 회복” 한 달만에 재등장… 물가 급등은 부담",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515164737864",
+      "press": "서울경제",
+      "url": "https://v.daum.net/v/20260515164737864",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 “경기 회복” 한 달만에 재등장… 물가 급등은 부담 이어 두 달 연속 사용하며 대외 변수에 대한 경계감을 늦추지 않는 모습이다. 정부는 중동 사태 장기화로 소비심리가 둔화하고 국제 유가 상승 등에 따른 물가 상승, 민생 부담이 커질 우려가 있다고 진단했다. 실제 4월 소비자물가는 전년 동월 대비 2.6% 올라 전월... 2026.05.15",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "국제유가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 0
     },
     {
       "title": "“휴~ 우윳값 안 오르겠네”…올해 원유 가격 동결에 장바구니 한숨 돌렸다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515165101040",
+      "press": "매일경제",
+      "url": "https://v.daum.net/v/20260515165101040",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "매일경제 개별문서메뉴 톡으로 바로 공유 공유하기 “휴~ 우윳값 안 오르겠네”…올해 원유 가격 동결에 장바구니 한숨 돌렸다 대형마트에 진열된 우유. [연합뉴스] 올해 원유 (原乳) 가격이 최종 동결되면서 흰 우유를 비롯한 유제품 가격의 인상 가능성도 대폭 낮아질 전망이다. 15일 관련 업계에 따르면 낙농진흥회는 올해 원유 가격 협상을 진행하지 않기로 최종 결정했다. 원유 가격 협상은... 2026.05.15",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 3,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "우윳값 인상 피하나…올해 원유 가격 안 오르는 이유",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515165019023",
+      "press": "한국경제",
+      "url": "https://v.daum.net/v/20260515165019023",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "한국경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 우윳값 인상 피하나…올해 원유 가격 안 오르는 이유 사진=뉴스1 올해 원유 (原乳) 가격이 동결된다. 이에 따라 흰 우유를 비롯한 유제품 가격 인상 가능성도 낮아질 전망이다. 15일 업계에 따르면 낙농진흥회는 올해 원유 가격 협상을 진행하지 않기로 결정했다. 원유 가격 협상은 원유 생산비 증감률이 전년 대비 4%... 2026.05.15",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 3,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "‘고유가 지원금’ 2차 신청 18일부터…1차 미지급 포함 경기 872만명 대상",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515163931416",
+      "press": "경기일보",
+      "url": "https://v.daum.net/v/20260515163931416",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "경기일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 ‘고유가 지원금’ 2차 신청 18일부터…1차 미지급 포함 경기 872만명 대상 지원금은 8월31일까지 사용해야 하며, 연 매출 30억원 이하의 지역 소상공인 업소에서 결제할 수 있다. 특히 정책 취지를 고려해 주유소 는 매출 규모와 상관없이 사용이 가능하다. 도 관계자는 “고물가로 고통받는 도민들에게 이번 지원금이 실질적인 힘이 되길... 2026.05.15 1",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "광양시 “고유가에 치이는 광양 시민, 18일부터 지원금 챙기세요”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515140954068",
+      "press": "스포츠동아",
+      "url": "https://v.daum.net/v/20260515140954068",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "스포츠동아 개별문서메뉴 톡으로 바로 공유 공유하기 광양시 “고유가에 치이는 광양 시민, 18일부터 지원금 챙기세요” 받거나 광양사랑상품권 모바일 앱, 선불카드 등 다양한 수단 중 하나를 입맛에 맞게 고를 수 있다. 특히 이 지원금은 관내 모든 주유소 에서 결제가 가능해 실질적인 유류비 보탬이 될 전망이다. 신청 창구는 카드사 누리집과 지역사랑상품권 앱 등 온라인 방식과... 2026.05.15",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 4,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "세아제강지주, 1분기 영업익 367억원...전년比 59%↓",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260515163931417",
+      "press": "아주경제",
+      "url": "https://v.daum.net/v/20260515163931417",
       "published_date": "2026-05-15",
       "published_at_kst": "",
       "snippet": "아주경제 개별문서메뉴 톡으로 바로 공유 공유하기 세아제강지주, 1분기 영업익 367억원...전년比 59%↓ 예상된다\"며 \"2분기 이후 판가 상승으로 인한 점진적인 수익성 회복이 전망된다\"고 말했다. 이어 \"중동 오일&가스· LNG 프로젝트, 미주 LNG ·데이터센터의 신규 수요와 해상 풍력 프로젝트 대응을 통해 제품 판매 확대를 지속적으로 추진할 계획\"이라고 설명했다... 2026.05.15",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 1,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "LNG",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     }
   ],
   "errors": [],

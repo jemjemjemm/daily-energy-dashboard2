@@ -1480,52 +1480,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "Daum News는 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
+      "머니투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "조선일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
         "title": "호르무즈 긴장 완화에 유가 하락… 정유 ·화학업계 숨통 트이나",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526054706146",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260526054706146",
         "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "[K-석유화학 진단] 1분기 반짝 석유화학업계, 공급과잉 그림자는 그대로",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526073005699",
-        "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
+        "title": "\"에쓰오일, 호르무즈 열려도 시장변화 구조적…목표가 유지\"-하나",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260526085504597",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "코스닥 급등 ‘성장주 순환매’ 기대…추세 전환엔 ‘물음표’ [주간증시]",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526090002720",
+        "title": "“호르무즈 해협 열려도, 배 다 빠져나가는 데만 수개월도 걸려”",
+        "press": "조선일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260526084353269",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
@@ -1635,7 +1641,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-26.json",
+      "source_file": "data\\news\\2026-05-26.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1643,7 +1649,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-26.evening.json",
+      "source_file": "data\\news\\2026-05-26.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1673,53 +1679,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 美 이란 공습 여파로 브렌트유 4% 가까이 반등.",
+      "메트로경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "이투데이는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "휴전 연장 논의에도 원유 수급 불안 지속…정유사 수익성 개선 기대",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526162025307",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "title": "미군 공습에 국제유가 반등…브렌트유 장중 2% 급등",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260526153301407",
+        "summary": "美 이란 공습 여파로 브렌트유 4% 가까이 반등",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "휴전 연장 논의에도 원유 수급 불안 지속…정유사 수익성 개선 기대",
+        "press": "메트로경제",
+        "press_grade": "C",
+        "url": "https://v.daum.net/v/20260526162025307",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 1,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "국내 중동산 원유 비중 50% 붕괴…美·아프리카로 수입축 이동",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526160139007",
+        "title": "호르무즈 뚫은 원유 다변화⋯\"중동산 수입 비중 사상 첫 50% 하회\"",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260526160008915",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "정부 “비축유 방출은 ‘아직’…8월 이후 수급 위기 대비”",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260526163904578",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "press": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }

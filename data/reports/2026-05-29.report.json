@@ -1538,53 +1538,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "한스경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "파이낸셜뉴스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "더구루는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도."
     ],
     "articles": [
       {
-        "title": "이란 전쟁 3개월, 일본 원유수입 47% 급감 '반토막'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529080709234",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "[K-석유화학 진단] ‘에너지 쇼크’가 바꾼 판… 정유 뜨고 석화 재편 빨라져",
+        "press": "한스경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260529073004430",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
+          "title_importance": 2,
+          "press": 2,
           "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "미국산이 사우디 넘었다…韓 정유 업계, '탈중동 원유' 가속",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260529060054788",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "[단독] 삼성중공업 '12조원' 美 델핀 FLNG 수주 초읽기…자금 조달 마무리",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529085408662",
+        "press": "더구루",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260529085408662",
         "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 2,
           "originality": 3,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "[K-석유화학 진단] ‘에너지 쇼크’가 바꾼 판… 정유 뜨고 석화 재편 빨라져",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529073004430",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1693,7 +1699,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-29.json",
+      "source_file": "data\\news\\2026-05-29.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1701,7 +1707,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-29.evening.json",
+      "source_file": "data\\news\\2026-05-29.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1731,53 +1737,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "이투데이는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "에너지경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "아시아경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "유가 75달러 복귀냐, 100달러 돌파냐...트럼프 서명에 달렸다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529163602150",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
         "title": "美 전략비축유 2년래 최저⋯정유사 셰브런 \"6∼7월 유가급등\" 경고",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529135903730",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260529135903730",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "중동 리스크 완화됐지만…K석화, 수익성 부담·중국 공급과잉 '한숨'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260529165753822",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "중동발 LNG 폭등…6월 발전용 가스 요금 3개월 새 20% 뛰었다",
+        "press": "에너지경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260529143343142",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "[이덕환의 경제논단]정부 시장개입, 정유 ·석화에도 분명한 명분이 필요하다",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260529110900476",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }

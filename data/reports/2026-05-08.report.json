@@ -1506,53 +1506,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "MBN는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "KBS는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "헤럴드경제는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
         "title": "\"최고가격제 안 했으면 경유 2800원\" 5차도 동결…정유업계는 '울상'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508071742072",
+        "press": "MBN",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260508071742072",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "[단독] ‘대미투자 1호’ 유력 후보군 좁혀져…미 남부 LNG 터미널 2곳",
+        "press": "KBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260508064717494",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 3,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "나프타 확보율 90% 회복...중동 줄고 美가 1위 공급국",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508084154662",
+        "press": "헤럴드경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260508084154662",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "호르무즈 곧 열린다지만… K- 정유 , '중동 의존도' 깨고 공급망 재편 사활",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508072301170",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1661,7 +1667,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-08.json",
+      "source_file": "data\\news\\2026-05-08.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1669,7 +1675,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-08.evening.json",
+      "source_file": "data\\news\\2026-05-08.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1699,52 +1705,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "문화일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "파이낸셜뉴스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "동아일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "호르무즈 뚫은 유조선 속속 입항…홍해 우회 포함 중동산 수급 이어질 듯",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508144617225",
+        "title": "호르무즈 뚫고 기름 실어왔지만… 수급 정상화는 요원",
+        "press": "문화일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260508115917414",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "고물가에 ‘5차 최고가격제’ 동결… 정유사 손실 보상 논란도",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508143901930",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "“호르무즈 우회 운임 뺀다”… 관세청, 수입 기업 부담 낮춘다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260508162702340",
+        "title": "호르무즈 봉쇄 후 4번째…한국 유조선, 홍해 통과",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260508150021854",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 8,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "서울 휘발유값 평균 2051원…최고가격 동결로 2000원대 정체",
+        "press": "동아일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260508143803898",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }

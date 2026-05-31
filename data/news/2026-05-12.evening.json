@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-12",
   "report_slot": "evening",
   "collected_at": "2026-05-30 00:49:36 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "[국제 유가] 중동 긴장에 국제유가 강세...브렌트·두바이 급등, WTI 보합",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512164600843",
+      "press": "EBN산업경제",
+      "url": "https://v.daum.net/v/20260512164600843",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "EBN산업경제 개별문서메뉴 톡으로 바로 공유 공유하기 [국제 유가] 중동 긴장에 국제유가 강세...브렌트·두바이 급등, WTI 보합 흐름은 산업별로 희비를 가르고 있다. △항공업계는 유류비 부담 확대에 따라 운항 조정과 비용 절감에 나서는 분위기다 △ 석유 화학업종은 제품 가격 반등 측면에서 일부 긍정적 효과를 기대할 수 있지만 원재료 부담과 수요 불확실성이 동시에 남아 있다 △반면... 2026.05.12",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512154705647",
+      "press": "조선비즈",
+      "url": "https://v.daum.net/v/20260512154705647",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "조선비즈 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 [단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매 순간, 알레이 버크급 미사일 구축함 라파엘 페랄타(DDG 115)함이 해상 봉쇄를 시행하는 모습. / AFP 연합뉴스 11일 정부와 정유 업계에 따르면 석유공사의 해외 자회사인 캐나다 하베스트가 보유한 광구와 지분 투자 기업인 아랍에미리트(UAE) 아부다비 국영석유회사... 2026.05.12",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 3,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "[단독] 검찰, 10조원대 전분당 가격 담합 사건 ‘골프장 대표 모임’ 의심 [세상&]",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512163521320",
+      "press": "헤럴드경제",
+      "url": "https://v.daum.net/v/20260512163521320",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "헤럴드경제 개별문서메뉴 톡으로 바로 공유 공유하기 [단독] 검찰, 10조원대 전분당 가격 담합 사건 ‘골프장 대표 모임’ 의심 [세상&] 검찰은 지난 2월 전분당 4사와 사건관계인을 압수수색하며 본격적인 수사를 진행했다. 서울중앙지검 공정거래조사부는 현재 정유사 담합 사건도 수사하고 있다. 이재명 대통령은 지난 3월 국무회의에서 “검찰이 담합 조사를 아주 신속하게 대규모로 했다. 결과도... 2026.05.12",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 1,
-        "press": 0,
+        "press": 2,
         "originality": 3,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 2
     },
     {
       "title": "25톤 화물차 최대 23만원 추가 지원…유가연동보조금 한도 상향",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512162214668",
+      "press": "강원일보",
+      "url": "https://v.daum.net/v/20260512162214668",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "강원일보 개별문서메뉴 톡으로 바로 공유 공유하기 25톤 화물차 최대 23만원 추가 지원…유가연동보조금 한도 상향 보조금 추가 지급 효과 분석(예시) 자료=국토교통부 정부가 고유가로 인한 버스·화물 운송사업자의 유류비 부담을 줄이기 위해 경유 유가연동보조금의 지급한도를 ℓ당 183원에서 280원으로 최대 53% 상향한다. 국토교통부는 12일 여객자동차 운수사업법과 화물... 2026.05.12",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "경유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "25톤 화물차 유가보조금 23만원 더 받는다…지급한도 상향",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512161738383",
+      "press": "데일리안",
+      "url": "https://v.daum.net/v/20260512161738383",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "데일리안 개별문서메뉴 톡으로 바로 공유 공유하기 2 25톤 화물차 유가보조금 23만원 더 받는다…지급한도 상향 수 있는 보조금이 늘어나면서 운수업계의 유류비 부담이 일부 줄어들 전망이다. 국토교통부는 버스·화물 운송사업자에 지급 중인 경유 유가연동보조금의 지급한도를 리터(L)당 최대 183원에서 280원으로 53% 상향한다고 12일 밝혔다. 최대 지원금액이 늘어나면서... 2026.05.12",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 4,
         "title_importance": 3,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "경유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 1
     },
     {
       "title": "국토부, 경유 유가보조금 한도 리터당 53% 상향‥25톤 화물차 23만 원 더 받아",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512153107760",
+      "press": "MBC",
+      "url": "https://v.daum.net/v/20260512153107760",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "MBC 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 국토부, 경유 유가보조금 한도 리터당 53% 상향‥25톤 화물차 23만 원 더 받아 [자료사진] 중동사태로 고유가가 지속되자 국토교통부가 버스·화물 운송사업자에 지급하는 경유 유가연동 보조금 한도를 상향 조정했습니다. 보조금 지급 한도가 리터당 183원에서 280원으로 53% 올라가면서, 25톤 화물차의 경우 월 최대 23만 원을 추가로 받게... 2026.05.12",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 2,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "경유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 4
     },
     {
       "title": "트럼프 “종전안 수용불가”에 국제유가 다시 ‘꿈틀’… 국내 휘발유가는 '보합'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512161615330",
+      "press": "메트로경제",
+      "url": "https://v.daum.net/v/20260512161615330",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "메트로경제 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프 “종전안 수용불가”에 국제유가 다시 ‘꿈틀’… 국내 휘발유가는 '보합' 중국의 수출 통제 영향도 미미할 전망이다. 에틸렌 가스는 조선- 석유 화학사 간 협의를 통해 5월에도 정상 공급을 완료했다. 정부는...지원을 위해 6744억 원 규모의 추경 예산을 투입한다. 한국 화학 산업협회 33개 회원사는 에틸렌·프로필렌 등 기초유분과 PE·PP 등... 2026.05.12",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유화학",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "“중동 변수에 공급과잉 균열”…iM증권, 롯데케미칼 목표주가 상향 조정",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512162508814",
+      "press": "브릿지경제",
+      "url": "https://v.daum.net/v/20260512162508814",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "브릿지경제 개별문서메뉴 톡으로 바로 공유 공유하기 “중동 변수에 공급과잉 균열”…iM증권, 롯데케미칼 목표주가 상향 조정 석유화학 설비 차질로 글로벌 에틸렌 생산설비의 약 12%가 영향을 받은 것으로 추정됐다. 여기에 납사 부족으로 아시아와 유럽 나프타 분해설비(NCC) 가동률까지 낮아지면서 전체 생산 차질 규모는 글로벌 공급의 약 25% 수준에 달하는 것으로 분석됐다. 다만 휴전이... 2026.05.12",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "나프타",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 3
     },
     {
       "title": "KIEP \"세계 경제성장률 3.0% 유지…중동 악재 AI가 완충\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512164854008",
+      "press": "연합뉴스TV",
+      "url": "https://v.daum.net/v/20260512164854008",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "연합뉴스TV 개별문서메뉴 톡으로 바로 공유 공유하기 KIEP \"세계 경제성장률 3.0% 유지…중동 악재 AI가 완충\" 종전 예상보다 양호했던 점이 반영된 결과로, 향후 성장 모멘텀과 펀더멘털은 연초 이후 악화한 상태\"라고 말했습니다. 이번 전망은 유가 를 서부 텍사스산 원유(WTI) 기준 80달러대 중반으로 전제했습니다. 윤상하 국제 거시금융실장은 \"협상에 지지부진한, 마치... 2026.05.12",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 1,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "국제유가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 2
     },
     {
       "title": "전선 원자재값 최대 40% 급등…한전, 공급망 방어 나섰다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512164653886",
+      "press": "디지털타임스",
+      "url": "https://v.daum.net/v/20260512164653886",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "디지털타임스 개별문서메뉴 톡으로 바로 공유 공유하기 전선 원자재값 최대 40% 급등…한전, 공급망 방어 나섰다 전력 기자재 수급 안정 및 원자재 공급 현황 간담회’를 열었다. [한전 제공] 중동발 원자재 쇼크가 전선 업계로 번지고 있다. 원유 ·나프타 가격 급등 여파로 전선 원자재 가격이 평시 대비 최대 40%까지 치솟았다. 한국전력은 계약 금액 인상분을 신속히 반영하고... 2026.05.12",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 2
     },
     {
       "title": "호르무즈 대신 파나마 운하…원유 수송량 70% 급증",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512161302160",
+      "press": "연합인포맥스",
+      "url": "https://v.daum.net/v/20260512161302160",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "연합인포맥스 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 대신 파나마 운하…원유 수송량 70% 급증 이상 급증했다. 12일 닛케이아시아에 따르면, 아시아 국가들이 미국산 원유 확보에 나서면서 파나마 운하를 통과하는 원유 및 석유 제품 의 4월 수송량이 작년 같은 기간 대비 70% 이상 급증했다. 시장조사기관 케이플러에 따르면 지난달 파나마 운하를 통한 원유... 2026.05.12",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "\"수출 막히고, 보조금은 수입산만\"…정유업계, 나프타 통제에 '속앓이'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512154014324",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260512154014324",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 \"수출 막히고, 보조금은 수입산만\"…정유업계, 나프타 통제에 '속앓이' 12일 업계에 따르면 정부는 지난 27일부터 5개월간 나프타 수출 제한 조치를 시행했다. 중동 전쟁 장기화에 따른 석유 제품 수급 불안에 대응해 국내 석유 화학 산업의 원료 확보를 우선하겠다는 취지다. 하지만 시장에서는 정책 부작용이 크다는 지적이 나온다. 정부... 2026.05.12 1",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     }
   ],
   "errors": [],

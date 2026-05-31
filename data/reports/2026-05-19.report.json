@@ -1563,52 +1563,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "한겨레는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한국경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "아시아경제는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "IB들 \"내년에도 유가 100불 가능성\"…정부 '최고가격제' 딜레마",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519060233605",
+        "title": "미, ‘러시아산 원유 제재 예외’ 또 재연장…“호르무즈 봉쇄 공급난 완화”",
+        "press": "한겨레",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519071139979",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "유가, 급등세 이후 트럼프 공격 보류 발언에 일부 반락…호르무즈 리스크는 지속",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519074209387",
-        "summary": "호르무즈 개방 기대 변화가 원유 수급 안정성과 정유 수익성 압박을 함께 부각",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 0,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "“나프타 수급 부족” 일거에 해결…KAIST, ‘친환경 바이오 플랫폼’ 구축 성공",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519083918612",
+        "title": "\"대우건설, 대형원전 수주·美 LNG 시장 진입 기대\"-LS",
+        "press": "한국경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519080115729",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "\"나프타 공급 불안 해소\" KAIST·한화, 나프타 대체 '바이오 기술' 개발",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519082651282",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 0,
           "duplicate_or_low_quality": 0
         }
@@ -1718,7 +1724,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-19.json",
+      "source_file": "data\\news\\2026-05-19.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1726,7 +1732,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-19.evening.json",
+      "source_file": "data\\news\\2026-05-19.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1756,52 +1762,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도."
+      "파이낸셜뉴스는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한국경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도."
     ],
     "articles": [
       {
         "title": "[속보] 李대통령 \"한일, LNG 협력 확대… 원유 수급 정보공유 심화\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519170019731",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519170019731",
         "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 14,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "\"유럽, 수주 내 실제 원유 부족해질 것…재고 급감 경고\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519164104597",
+        "title": "美봉쇄에 막힌 이란 원유…걸프해역 노후 유조선 '저장고'로",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519160908853",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
+          "title_importance": 2,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "[속보] 이 대통령 \"한·일 LNG· 원유 협력 강화… 원유 수급 비축 정보 공유\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260519170018730",
+        "title": "[속보] 李대통령 \"한일, LNG· 원유 협력 강화…비축정보 소통\"",
+        "press": "한국경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260519170017723",
         "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "title_importance": 2,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }

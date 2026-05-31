@@ -1503,53 +1503,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "조선일보는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한스경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "한스경제는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
         "title": "[단독] 석유 최고가격제 두 달… 주유소 60곳 줄어",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511003302120",
+        "press": "조선일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260511003302120",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 12,
+        "industry_relevance": 5,
+        "score": 15,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 3,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "유가보다 센 ‘공급 충격파’…정유 웃고 석화 버틴다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511073004248",
+        "press": "한스경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260511073004248",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "[단독] “트럼프는 이도 저도 못하는 호르무즈 해협의 늪에 빠졌다”…주한 이란 대사가 말하는 미·이란 전쟁의 향방",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511060545017",
+        "title": "나프타 쇼크에 중소 가구·침대업계 가격 줄인상",
+        "press": "한스경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260511082537318",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 3,
+          "title_importance": 3,
+          "press": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1658,7 +1664,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-11.json",
+      "source_file": "data\\news\\2026-05-11.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1666,7 +1672,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-11.evening.json",
+      "source_file": "data\\news\\2026-05-11.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1696,53 +1702,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "연합뉴스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "SBS는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
+      "MBC는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "구윤철 부총리 \"석유 최고가격제, 중동 정세 안정까지 유지\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511165602192",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "유럽 3대 정유사, '중동전쟁 트레이딩' 최대 7조원 수익",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260511164705846",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "구윤철 \"최고가격제, 중동 정세 안정 때까지 당분간 유지…유가 상황 봐야\"",
+        "press": "SBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260511163007038",
+        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "정유업계, 고유가發 어닝 서프라이즈...\"손실보전 없으면 신기루\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511165104998",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "title": "강훈식 \" 물가 와의 전쟁 이제부터 시작‥국제유가 빌미 가격인상 차단\"",
+        "press": "MBC",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260511164317694",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "유럽 3대 정유사, '중동전쟁 트레이딩' 최대 7조원 수익",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260511164705846",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "title_importance": 3,
+          "press": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }

@@ -1448,52 +1448,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "한국경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "신아일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "최고가 규제 정유사 손실 보전 기준 놓고 정부·업계 '이견'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506071132079",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "유가가 밀어올린 물가…석유류 21.9% 급등-소비자물가 2.6%↑(종합)",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506084216845",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
         "title": "사우디 원유 프리미엄 '20달러' 육박… 정유 업계 \"불확실성 최악\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506063115380",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260506063115380",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "\"팬오션, LNG선 장기대선 수익 올해부터 본격 반영 \"-유안타",
+        "press": "한국경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260506080415922",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "[국제유가] 미·이란 휴전 유지 신호에 4%↓",
+        "press": "신아일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260506084537936",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1603,7 +1609,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-06.json",
+      "source_file": "data\\news\\2026-05-06.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1611,7 +1617,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-06.evening.json",
+      "source_file": "data\\news\\2026-05-06.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1641,52 +1647,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "비즈워치는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "경향신문은 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
         "title": "정유사 5조 벌었다지만…속타는 '최고가격제 청구서'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506154733119",
+        "press": "비즈워치",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260506154733119",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "호르무즈 뉴노멀…‘6년 만에 원유 수입 재개’ 리비아가 수급 불안 돌파구 될까",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506160700137",
+        "press": "경향신문",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260506160700137",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "세 번째 홍해 원유 수송 성공…정부, 에너지 공급망 관리 총력",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260506154634065",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "정부 \"최고가격제· 유류세 없었으면 물가 3% 상회\"…8일부터 5차 시행",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260506151227184",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }

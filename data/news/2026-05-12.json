@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-12",
   "report_slot": "morning",
   "collected_at": "2026-05-30 00:48:46 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "“에스오일, 유가 안정화 이후 본격 반등 전망”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512081200538",
+      "press": "매일경제",
+      "url": "https://v.daum.net/v/20260512081200538",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "매일경제 개별문서메뉴 톡으로 바로 공유 공유하기 “에스오일, 유가 안정화 이후 본격 반등 전망” 상승 △샤힌PJ 성공적 런칭 △배당 확대 등을 꼽았다. 하나증권은 “이번 전쟁으로 정제설비 부족은 더욱 심해졌고, 한국의 중요 석유 제품 공급처로서의 위상은 더욱 돋보이게 됐다”면서 “아시아의 원유 조달처 다변화와 맞물린 UAE의 OPEC 탈퇴도 중장기 아시아... 2026.05.12",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 1
     },
     {
       "title": "\"금 사지말고, 재택근무 좀 하세요\" 유가 급등에 애국심 호소한 인도 총리",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512072820678",
+      "press": "파이낸셜뉴스",
+      "url": "https://v.daum.net/v/20260512072820678",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "파이낸셜뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 \"금 사지말고, 재택근무 좀 하세요\" 유가 급등에 애국심 호소한 인도 총리 수입 의존도가 높은 편으로, 인도 정부는 현재 원유와 가스 등을 확보하고자 애쓰는 중이다. 연료 가격을 아직 올리지 않은 인도 정유사 들이 수일 내로 인상에 나설 것으로 예상되고 있다. 이에 모디 총리가 직접 호소에 나선 것이다. 일부 다른 나라들은 연료 가격... 2026.05.12",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 3
     },
     {
       "title": "기름값 33개월 만에 최고…최고가격제에도 \"차 끌고 나가기 무섭다\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512060648598",
+      "press": "뉴스1",
+      "url": "https://v.daum.net/v/20260512060648598",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 2 기름값 33개월 만에 최고…최고가격제에도 \"차 끌고 나가기 무섭다\" 맞이한 10일 서울 시내의 한 주유소에 가격이 표시돼 있다. 2026.5.10 ⓒ 뉴스1 이호윤 기자 최고가격제로 물가 1.2%p 낮췄지만 정유사 부담 누적…22일 6차 가격 고시 주목 국제유가 급등 충격을 억제하기 위해 정부는 지난 3월 13일부터 석유 최고가격제를 시행 중... 2026.05.12 2",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "휴전 교착·유가 급등에도…뉴욕증시 사상 최고 경신[월스트리트in]",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512055617168",
+      "press": "이데일리",
+      "url": "https://v.daum.net/v/20260512055617168",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "이데일리 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 5 휴전 교착·유가 급등에도…뉴욕증시 사상 최고 경신[월스트리트in] 이어 높은 수준의 증가세다. 변동성이 큰 식품·에너지를 제외한 근원 CPI 상승률은 0.2%에서 0.3%로 높아질 것으로 전망됐다. 생산자 물가 지수(PPI)와 소매판매 지표 역시 이번 주 잇따라 발표될 예정이다. 매트 혼바크 모건스탠리 글로벌 매크로 전략 총괄은... 2026.05.12",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 4,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "생산자물가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 0
     },
     {
       "title": "유류세 카드 꺼낸 트럼프…\"휘발유세 없애겠다\" 현실 가능성은",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512082752898",
+      "press": "머니투데이",
+      "url": "https://v.daum.net/v/20260512082752898",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 유류세 카드 꺼낸 트럼프…\"휘발유세 없애겠다\" 현실 가능성은 /로이터=뉴스1 도널드 트럼프 미국 대통령이 11일(현지시간) \"일정 기간 연방 휘발유세를 없앴다가 유가가 하락하면 되돌려 놓을 것\"이라고 미 CBS 방송과 인터뷰에서 밝혔다. 이란전쟁으로 급등한 유가를 잡기 위한 고육책으로 보이지만 연방의회의 승인이 필요한... 2026.05.12",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "유류세",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "“최고 가격제 없으면 물가 3% 넘게 오른다”…가격 통제 언제까지?",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512064309047",
+      "press": "KBS",
+      "url": "https://v.daum.net/v/20260512064309047",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 “최고 가격제 없으면 물가 3% 넘게 오른다”…가격 통제 언제까지? 올해 물가상승률은 2.1%, 분석을 반영하면, 올해 물가상승률이 3% 후반까지 오를 수 있습니다. 다만, 이는 석유 최고가격제와 유류세 인하 효과를 뺀 계산값입니다. [마창석/KDI 경제전망실 연구위원 : \"(물가상승률을) 3%까지는 이제 예측을 하지 않고 있는 이유가... 2026.05.12",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "유류세",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 2
     },
     {
       "title": "이란전쟁에 치솟은 유가…美가구당 연료비 42만원 추가 부담",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512074154917",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260512074154917",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 이란전쟁에 치솟은 유가…美가구당 연료비 42만원 추가 부담 분석이 나왔다. 11일(현지 시간) CNN에 따르면 미 브라운대 연구진은 이란전쟁이 시작된 이후 미국 소비자들이 부담한 휘발유 및 경유 추가 비용이 총 370억 달러(약 55조원)에 달하는 것으로 추산했다. 이는 미국 가구당 평균 284달러의 추가 지출에 해당한다... 2026.05.12",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "경유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 2
     },
     {
       "title": "HD현대중공업, LNG선·엔진 쌍끌이 질주…\"더 사야 할 구간\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512084953435",
+      "press": "키즈맘",
+      "url": "https://v.daum.net/v/20260512084953435",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "키즈맘 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 HD현대중공업, LNG선·엔진 쌍끌이 질주…\"더 사야 할 구간\" 아직 33% 수준에 불과해 향후 추가적인 수익성 개선 가능성이 충분하다\"고 분석했다. 이어 액화석유가스(LPG)선과 액화천연가스( LNG )선 등 가스선 중심의 발주 호황이 이어지고 있어 올해 연간 수주 흐름도 양호할 것으로 전망했다. 이에 따라 조선업 실적 호황... 2026.05.12",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "LNG",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "뉴욕증시, 유가 급등에도 AI 랠리 지속…나스닥·S&P 또 최고치",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512072902683",
+      "press": "뉴스웨이",
+      "url": "https://v.daum.net/v/20260512072902683",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "뉴스웨이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 뉴욕증시, 유가 급등에도 AI 랠리 지속…나스닥·S&P 또 최고치 있다\"라고 상향 배경을 설명했다. 시장의 관심은 점차 거시경제 지표로 이동하는 모습이다. 이번 주 발표 예정인 소비자 물가 지수(CPI)와 생산자 물가 지수(PPI), 소매판매 지표를 통해 유가 급등이 인플레이션과 소비에 미치는 영향이 확인될 전망이다. 이자경 기자... 2026.05.12",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 3,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "생산자물가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 0
     },
     {
       "title": "이란 \"모든 옵션 준비\"…유가 치솟자 트럼프 유류세 카드",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512080100296",
+      "press": "아시아경제",
+      "url": "https://v.daum.net/v/20260512080100296",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "아시아경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 이란 \"모든 옵션 준비\"…유가 치솟자 트럼프 유류세 카드 3.135달러)보다도 44.1% 높다. 에너지부 자료를 보면 미국 휘발유 재고량은 계절별로 10년 만에 최저 수준에 근접해 있다. 특히 주유소 휘발유 가격이 가장 빠르게 상승한 중서부 지역은 계절 기준 휘발유 재고가 역대 두 번째로 낮은 수준까지 떨어졌다고 블룸버그... 2026.05.12 3",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "나도 받을 수 있을까…2차 ‘고유가 지원금’ 기준은?",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512064306045",
+      "press": "KBS",
+      "url": "https://v.daum.net/v/20260512064306045",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 나도 받을 수 있을까…2차 ‘고유가 지원금’ 기준은? 가정했을 때 10억 원의 투자금이 있어야 합니다.\"] 지원금은 주소지 소재 지자체의 매출액 30억 원 이하 가게에서 쓸 수 있고, 주유소 는 매출액과 관계없이 사용 가능합니다. 정부는 3차 지원금 지급 계획은 없다고 밝혔습니다. KBS 뉴스 이세연입니다. 촬영기자... 2026.05.12",
-      "score": 8,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 2,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 1
     },
     {
       "title": "청와대 “호르무즈 나무호 피격 강력 규탄”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260512063234921",
+      "press": "매일노동뉴스",
+      "url": "https://v.daum.net/v/20260512063234921",
       "published_date": "2026-05-12",
       "published_at_kst": "",
       "snippet": "매일노동뉴스 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 청와대 “호르무즈 나무호 피격 강력 규탄” 강훈식 대통령비서실장은 이날 오후 청와대에서 주재한 수석보좌관회의에서 \"정부가 중동전쟁 발발 이후 석유 최고가격제 시행과 유류세 인하, 추가 원유 및 나프타 확보 등 물가 안정을 위한 조치를 신속히 시행해 왔다\"며 \"그 결과 4월 소비자물가 상승률을 2.6%... 2026.05.12 1",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "유류세",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     }
   ],
   "errors": [],

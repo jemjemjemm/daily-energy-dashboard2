@@ -1545,52 +1545,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "매일경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "뉴스1는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
         "title": "정부, 정유사에 원가자료 요청…석유 최고가격제 손실보전 착수",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521080312912",
+        "press": "매일경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260521080312912",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "원유 200만배럴 호르무즈 뚫고 한국행… 정유 업계, '수급 정상화' 가능성 촉각",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521050207678",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260521050207678",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "6차 석유 최고가격도 '동결' 가닥…유류세 인하 7월까지 연장",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521083137605",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260521083137605",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1700,7 +1706,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-21.json",
+      "source_file": "data\\news\\2026-05-21.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1708,7 +1714,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-21.evening.json",
+      "source_file": "data\\news\\2026-05-21.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1738,52 +1744,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "연합뉴스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "문화일보는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "[금통위 설문조사] 성장률 전망 2.8%까지 '쑥'…고유가發 물가 압력은 부담",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521170028295",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
         "title": "日서도 '쓰레기봉투 대란' 조짐…나프타 수급 불안 여파(종합)",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521165602080",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260521165602080",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "나프타 공급망 흔들리는 일본… 포장 대란 속 정부·현장 온도차",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260521152900777",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "미국·이란 전쟁 장기화에 속도 내는 북미 LNG 프로젝트… 안정적 공급망 강점",
+        "press": "문화일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260521164515601",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "중동발 충격에 4월 생산자물가 28년만 최고···유류세 인하 2개월 연장",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260521154032436",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }

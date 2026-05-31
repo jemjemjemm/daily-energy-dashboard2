@@ -1509,52 +1509,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "머니투데이는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "뉴시스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "서울경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "최고가격제 없었으면 경유 2800원…'매점매석' 과징금 도입 검토",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507090044987",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "최고가격제에도 정유사 역대급 실적 전망…세금으로 수조원 손실 보전?",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507054102077",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 14,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "미·이란 합의 기대에 국제유가 급락⋯브렌트유 7.8%↓",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507081631761",
+        "title": "美·이란, 합의 임박 관측에 유가 급락…브렌트유·WTI 7%↓",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507064904248",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 2,
+          "press": 3,
+          "originality": 0,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "중동 기름 대신 폐플라스틱 캔다…자원 안보 사활 건 국내 석화·정유사 [Biz-플러스]",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507074608184",
+        "press": "서울경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507074608184",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
@@ -1664,7 +1670,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-07.json",
+      "source_file": "data\\news\\2026-05-07.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1672,7 +1678,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-07.evening.json",
+      "source_file": "data\\news\\2026-05-07.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1702,53 +1708,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "연합뉴스는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "머니투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "동아일보는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "5월 초 연휴 통행량 ‘명절 수준’… 석유 최고가격제 딜레마",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507144315272",
+        "title": "호주, LNG 수출량 20% 내수용 비축 의무화",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507154109608",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "금융권, 나프타 수급 안정위해 여천NCC 수입신용장 한도 상향",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507164818394",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "유가 급등에 연안 해운업계 신음…해수부 226억 지원한다",
+        "press": "동아일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260507142805352",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 2,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "여천NCC 채권단, 나프타 수입신용장 3억불 신규공급…18일 실행",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507163313672",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 1,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "중동전쟁 발 나프타 수급 불안에‥금융권, 여천NCC 수입 보증 한도 4천억 원으로 상향",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260507164012048",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
-          "originality": 0,
           "duplicate_or_low_quality": 0
         }
       }

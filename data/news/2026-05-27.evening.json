@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-27",
   "report_slot": "evening",
   "collected_at": "2026-05-30 01:06:37 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "호르무즈 해협 열려도 단기간 내 원유 공급 회복 어려워… “정제 마진 강세 이어질 듯”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527150153972",
+      "press": "조선비즈",
+      "url": "https://v.daum.net/v/20260527150153972",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "조선비즈 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 해협 열려도 단기간 내 원유 공급 회복 어려워… “정제 마진 강세 이어질 듯” 미국과 이란의 종전 협상이 막바지에 접어들면서 호르무즈 해협 통행이 곧 재개될 것이라는 기대감이 커지고 있지만, 정유사 의 수익성을 나타내는 핵심 지표인 정제 마진은 당분간 강세를 이어갈 것이라는 전망이 나오고 있다. 중동 지역의 정제 설비가 복구되기까지... 2026.05.27",
-      "score": 11,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "\"호르무즈 봉쇄 장기화… 유가 올 여름 최고치\"…美 파이퍼 샌들러 경고",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527163108917",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260527163108917",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 \"호르무즈 봉쇄 장기화… 유가 올 여름 최고치\"…美 파이퍼 샌들러 경고 뉴시스]김민수 기자 = 미·이란 종전 협상이 진행되는 가운데 호르무즈 해협 봉쇄가 수개월간 이어질 수 있다는 전망이 나왔다. 국제 유가 역시 올여름 다시 최고치를 경신할 수 있다는 관측이다. 26일(현지 시간) 미국 경제매체 CNBC에 따르면 미국 투자은행(IB... 2026.05.27",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "국제유가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "‘반짝 반등 우려 넘나’···석유화학 업황 회복 지속 가능성 주목",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527161814328",
+      "press": "시사저널e",
+      "url": "https://v.daum.net/v/20260527161814328",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "시사저널e 개별문서메뉴 톡으로 바로 공유 공유하기 2 ‘반짝 반등 우려 넘나’···석유화학 업황 회복 지속 가능성 주목 석유화학 업계에 예상보다 긴 업황 회복 흐름이 이어질 수 있다는 분석이 나오고 있어 주목된다. 미국·이란 종전 협상 기대감에 국제 유가 가 하락세를 보이고 있지만 중동 지역 생산 차질과 물류 부담 등이 맞물리며 수급 불균형이 지속될 수 있기 때문이다. 27... 2026.05.27",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "국제유가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "“비축유 방출 끝나는 7월, 유가 150달러로 오를 전망”-브루킹스연구소",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527100450485",
+      "press": "아시아경제",
+      "url": "https://v.daum.net/v/20260527100450485",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "아시아경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 “비축유 방출 끝나는 7월, 유가 150달러로 오를 전망”-브루킹스연구소 IEA)에 따르면 분쟁 전 해협을 통한 원유 거래량은 하루 약 1500만배럴이었다. 원유에 집중하는 이유는 이 부문의 공급 차질이 정유사 들의 생산 감축을 강제해 이후 모든 시장에 영향을 미치고, 그 결과 항공유와 기타 파생제품 가격을 끌어올리기 때문이다. 또한... 2026.05.27 8",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 3
     },
     {
       "title": "\"올여름 국제유가 최고치 경신할 듯…호르무즈 폐쇄 지속 전망\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527151138499",
+      "press": "연합뉴스TV",
+      "url": "https://v.daum.net/v/20260527151138499",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "연합뉴스TV 개별문서메뉴 톡으로 바로 공유 공유하기 \"올여름 국제유가 최고치 경신할 듯…호르무즈 폐쇄 지속 전망\" 샌들러의 예측대로 유가가 새로운 고점을 찍으면 세계 경제에 상당한 충격을 주고, 주식 시장의 회복세를 저해할 것이라고 보도했습니다. #호르무즈 #유가 #기름값 # 휘발유 #원유 #석유 연합뉴스TV 기사문의 및 제보 : 카톡/라인 jebo23 신주원(nanjuhee@yna.co.kr... 2026.05.27",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "휘발유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "[인포맥스 POLL] 5월 소비자 물가 2.96%↑…고유가·고환율 압력",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527100230377",
+      "press": "연합인포맥스",
+      "url": "https://v.daum.net/v/20260527100230377",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "연합인포맥스 개별문서메뉴 톡으로 바로 공유 공유하기 [인포맥스 POLL] 5월 소비자 물가 2.96%↑…고유가·고환율 압력 증권 연구원은 \"국제유가가 전월에 이어 높은 수준을 유지하고 있다\"며 \"달러-원 환율이 높은 수준을 이어가고 있어 수입 물가 , 생산자 물가 측면의 물가 상승 압력도 지속되고 있다\"고 분석했다. 서비스 물가 도 물가 상승률을 끌어올리는 요인으로 지목됐다. 최지욱... 2026.05.27",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "생산자물가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "국내 팜유 수입 급증…아크 “바이오연료 공급망 투명성 검증 필요”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527164137390",
+      "press": "제주의소리",
+      "url": "https://v.daum.net/v/20260527164137390",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "제주의소리 개별문서메뉴 톡으로 바로 공유 공유하기 국내 팜유 수입 급증…아크 “바이오연료 공급망 투명성 검증 필요” 한국의 팜유 관련 수입 구조를 가공 단계와 주요 용도별로 재구성해 분석한 연구다. 아크는 관세청에 신고된 내용을 바탕으로 ▲팜 원유 (HS 1511100000) ▲정제팜유 (HS 1511909000) ▲팜올레인 (HS 1511901000) ▲팜스테아린 (HS 1511902000) ▲팜핵유(HS... 2026.05.27",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "KG에코솔루션, 국내 정유사에 ‘고품질 바이오연료’ 첫 공급",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527162716751",
+      "press": "브릿지경제",
+      "url": "https://v.daum.net/v/20260527162716751",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "브릿지경제 개별문서메뉴 톡으로 바로 공유 공유하기 KG에코솔루션, 국내 정유사에 ‘고품질 바이오연료’ 첫 공급 물량이 안정적으로 인도됐다. 회사 측은 특히 기존 발전용 바이오중유 대비 한층 강화된 품질 기준과 공정 안정성이 요구되는 정유 사향 고사양 제품을 성공적으로 생산·공급했다는 점에서 의미가 크다고 설명했다. 정유 사향 바이오연료는 점도, 안정성, 불순물 관리... 2026.05.27",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "㈜도시유전, 국내기술 최초로 나프타급 재생원료 해외공급 진출",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527160617693",
+      "press": "서울신문",
+      "url": "https://v.daum.net/v/20260527160617693",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "서울신문 개별문서메뉴 톡으로 바로 공유 공유하기 2 ㈜도시유전, 국내기술 최초로 나프타급 재생원료 해외공급 진출 됐다”고 밝혔다. 한편 도시유전은 이번 수출을 교두보 삼아 ISCC PLUS 기반의 글로벌 공급망을 더욱 확대한다는 방침이다.향후 국내외 정유 ·석유화학 기업과의 협력을 통해 고부가가치 재생원료는 물론 지속가능항공유(SAF) 시장 진출에도 나설 계획이다. 정연호 기자 2026.05.27",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "널 뛰는 유가… 정유 업계, 수익성 '먹구름'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527152213161",
+      "press": "미디어펜",
+      "url": "https://v.daum.net/v/20260527152213161",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "미디어펜 개별문서메뉴 톡으로 바로 공유 공유하기 널 뛰는 유가… 정유 업계, 수익성 '먹구름' 기대감에 하락했던 유가가 하루 만에 급반등하는 등 변동성이 극심한 가운데 물류망 정상화까지 수개월이 걸린다는 분석이 겹치며 정유 업계의 셈법이 복잡해졌다. 세계 주요국들이 선제적으로 비(非)중동 원유 확보에 나서며 조달 단가마저 오르고 있어 국내 정유 ... 2026.05.27",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "KG에코솔루션, 정유사향 바이오연료 첫 상업 공급",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527100602555",
+      "press": "데일리안",
+      "url": "https://v.daum.net/v/20260527100602555",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "데일리안 개별문서메뉴 톡으로 바로 공유 공유하기 KG에코솔루션, 정유사향 바이오연료 첫 상업 공급 KG에코솔루션 관계자들이 고품질 바이오연료 출하 기념 사진을 촬영하고 있다. ⓒKG에코솔루션 KG에코솔루션이 국내 대형 정유사 를 대상으로 고품질 바이오연료 초도 물량 공급을 시작하며 비입찰 중심 고부가 시장 확대에 나섰다. KG에코솔루션은 국내 대형 정유사 ... 2026.05.27",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 2,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 5
     },
     {
       "title": "‘고유가 대응’ KG에코솔루션, 대형 정유사 에 ‘고품질 바이오연료’ 첫 공급",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260527095518907",
+      "press": "스포츠경향",
+      "url": "https://v.daum.net/v/20260527095518907",
       "published_date": "2026-05-27",
       "published_at_kst": "",
       "snippet": "스포츠경향 개별문서메뉴 톡으로 바로 공유 공유하기 ‘고유가 대응’ KG에코솔루션, 대형 정유사 에 ‘고품질 바이오연료’ 첫 공급 KG에코솔루션이 국내 대형 정유사 대상으로 고품질 바이오연료의 초도 물량 공급을 개시했다고 27일 밝혔다. 이번 공급은 지난 4월 계약 체결 이후 한 달 만에 이뤄진 첫 상업 공급으로, 수백 톤 규모의 물량이 안정적으로 인도됐다. 기존 발전용 바이오중유 대비... 2026.05.27",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     }
   ],
   "errors": [],

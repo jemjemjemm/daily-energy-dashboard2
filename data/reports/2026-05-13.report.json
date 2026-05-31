@@ -1557,52 +1557,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "MBN는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한겨레는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
-        "title": "UAE, OPEC 탈퇴로 에너지 지형 균열… 수급 변화로 흔들리는 ‘정유 손익계산서’",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512185106398",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "title": "\"즉시 공격 대상\" 위협 무전에도…목숨 건 호르무즈 통과",
+        "press": "MBN",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260513083542430",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
+        "industry_relevance": 4,
         "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "title_importance": 2,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "흑백포장 감자칩·주택공급 연기…日서 커지는 원유부족 경고음",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260513085956114",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260513085956114",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "종이빨대, 나프타 수급난에 다시 뜨지만…이젠 만들 곳이 없다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260513050652485",
+        "press": "한겨레",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260513050652485",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1712,7 +1718,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-13.json",
+      "source_file": "data\\news\\2026-05-13.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1720,7 +1726,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-13.evening.json",
+      "source_file": "data\\news\\2026-05-13.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1750,52 +1756,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "동아일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "경향신문은 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "중앙일보는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "SK이노, 1분기 영업익 2.2조 흑자전환…유가 급등에 재고이익↑",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260513165419025",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "휘발유값 오름세 꺾였다…정부 “주유소 96%는 가격변동 없어”",
+        "press": "동아일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260513165701156",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "title_importance": 2,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "치솟던 휘발유 가격, 49일 만에 꺾였다···정부 “최고가격제 동결로 안정 되찾아”",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260513163217956",
+        "press": "경향신문",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260513163217956",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "휘발유값 오름세 꺾였다…정부 “주유소 96%는 가격변동 없어”",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260513165701156",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "국제유가 3일째 오름세…고물가 압력에 Fed 연내 인하 전망 후퇴",
+        "press": "중앙일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260513160115191",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }

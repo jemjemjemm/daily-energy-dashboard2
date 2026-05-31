@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-26",
   "report_slot": "evening",
   "collected_at": "2026-05-30 01:04:56 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "휴전 연장 논의에도 원유 수급 불안 지속…정유사 수익성 개선 기대",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526162025307",
+      "press": "메트로경제",
+      "url": "https://v.daum.net/v/20260526162025307",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "메트로경제 개별문서메뉴 톡으로 바로 공유 공유하기 휴전 연장 논의에도 원유 수급 불안 지속…정유사 수익성 개선 기대 연산 180만톤 규모의 에틸렌 생산 능력을 갖춘다. 기계적 완공 이후 시운전과 상업 가동 절차가 이어지면 정제 중심 수익 구조에 석유 화학 부문이 추가될 전망이다. SK이노베이션은 글로벌 LNG 수급 불안에 따른 가스 부문 실적 기여 확대가 예상된다. 카타르 LNG... 2026.05.26",
-      "score": 11,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유화학",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "국내 중동산 원유 비중 50% 붕괴…美·아프리카로 수입축 이동",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526160139007",
+      "press": "아시아경제",
+      "url": "https://v.daum.net/v/20260526160139007",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "아시아경제 개별문서메뉴 톡으로 바로 공유 공유하기 국내 중동산 원유 비중 50% 붕괴…美·아프리카로 수입축 이동 비중은 지난해 16.2%에서 올해 4월 24.6%까지 높아졌다. 정부는 중동발 공급 충격에 대비해 원유 스와프 제도도 확대 운영 중이다. 정유 업계의 4~5월 스와프 신청 물량은 약 3100만배럴로 전망되며, 이 가운데 2000만배럴 규모 계약이 체결됐다. 현재 실제 공급된... 2026.05.26",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "미군 공습에 국제유가 반등…브렌트유 장중 2% 급등",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526153301407",
+      "press": "뉴시스",
+      "url": "https://v.daum.net/v/20260526153301407",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 미군 공습에 국제유가 반등…브렌트유 장중 2% 급등 브랜트유 선물 가격은 이날 장중 배럴당 98.12달러까지 오르며 전장 대비 2.1% 상승했다. 사진은 6일 서울 서초구 만남의광장 주유소 를 찾은 운전자들이 주유를 하고 있다. 2026.05.26. [서울=뉴시스]박미선 기자 = 미국이 아브라함 협정 확대 발표에 이어 호르무즈... 2026.05.26 1",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "관세청, 공급망 다변화 지원…원유 직접 운송 특례 신설",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526154621160",
+      "press": "SBS Biz",
+      "url": "https://v.daum.net/v/20260526154621160",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "SBS Biz 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 관세청, 공급망 다변화 지원…원유 직접 운송 특례 신설 [앵커] 정부가 원유 수입선 다변화를 위해 특례를 신설합니다. 또 나프타 대체품을 관세 없이 낮은 가격에 수입할 수 있도록 명확한 행정 기준도 정립했는데요. 정윤형 기자, 원유 수입에 대한 어떤 특례가 신설되는 건가요? [기자] 관세청은 원유 수입선을 다변화... 2026.05.26",
-      "score": 10,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "나프타",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "'종전 기대, 유가 하락'에 국고채 금리↓…3년물 연 3.664%(종합)",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526165901787",
+      "press": "연합뉴스",
+      "url": "https://v.daum.net/v/20260526165901787",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 '종전 기대, 유가 하락'에 국고채 금리↓…3년물 연 3.664%(종합) 6천563계약, 10년물을 3천188계약 순매수했다. 이날 채권시장은 연휴 기간 미국과 이란의 종전 협상이 급진전한 영향으로 국제 유가 와 원/달러 환율이 하락하자 강세를 나타냈다. 사실상 봉쇄됐던 호르무즈 해협이 다시 열릴 수 있다는 낙관론이 시장을 움직이면서... 2026.05.26",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "국제유가",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 1
     },
     {
       "title": "정부 \"비축유 방출 필요성 크지 않아…비중동산 원유 도입 50% 넘어\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526163504305",
+      "press": "머니투데이",
+      "url": "https://v.daum.net/v/20260526163504305",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 2 정부 \"비축유 방출 필요성 크지 않아…비중동산 원유 도입 50% 넘어\" 산업통상부 산업자원안보실장은 26일 정부세종청사에서 중동전쟁 대응본부 일일브리핑을 열고 \"현재 비축유 스와프를 통해 민간 정유사 물량 계약을 2000만 배럴까지 체결한 상황\"이라며 이같이 밝혔다. 앞서 지난 3월 국제에너지기구(IEA)가 역대 최대 규모인 4억... 2026.05.26",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "산업부, IEA 공동 비축유 방출 신중…비중동산 원유 사상 첫 50% 돌파",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526160508244",
+      "press": "연합인포맥스",
+      "url": "https://v.daum.net/v/20260526160508244",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "연합인포맥스 개별문서메뉴 톡으로 바로 공유 공유하기 산업부, IEA 공동 비축유 방출 신중…비중동산 원유 사상 첫 50% 돌파 방출 요구에 대해 정부 비축유를 직접 시장에 푸는 방식에는 신중한 입장을 보였다. 최악의 상황을 대비해 정부 물량은 아끼고, 정유사 스와프나 민간 의무 비축량 조정을 통한 우회 이행에 무게를 두는 모양새다. 양기욱 산업부 산업자원안보실장은 26일 중동전쟁... 2026.05.26",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 4
     },
     {
       "title": "정부 “비축유 방출은 ‘아직’…8월 이후 수급 위기 대비”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526163904578",
+      "press": "KBS",
+      "url": "https://v.daum.net/v/20260526163904578",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 정부 “비축유 방출은 ‘아직’…8월 이후 수급 위기 대비” 해외 자원 물량과 현물 확보를 병행하고 있으며, 현재로서는 연말까지 LNG 수급에 큰 문제는 없을 것으로 전망했습니다. 정부는 최고 가격제 관련 정산 방안 고시와 관련해서는 \"당초 이번 주 발표를 목표로 준비 중이지만 내부 협의 상황에 따라 다소 늦어질 가능성... 2026.05.26",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "최고가격제",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 1
     },
     {
       "title": "호르무즈 뚫은 원유 다변화⋯\"중동산 수입 비중 사상 첫 50% 하회\"",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526160008915",
+      "press": "이투데이",
+      "url": "https://v.daum.net/v/20260526160008915",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "이투데이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 호르무즈 뚫은 원유 다변화⋯\"중동산 수입 비중 사상 첫 50% 하회\" 최악의 상황에 대비한 최후의 보루인 만큼 긴급한 필요성이 발생할 때 방출하는 것이 국익에 부합한다\"고 설명했다. 그동안 최고 가격제 시행으로 억눌렸던 정유사들의 경영 손실을 보전하기 위한 '원가 정산 기준 고시'는 이달 내 발표를 목표로 막바지 작업 중이다... 2026.05.26",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 2,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "최고가격제",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 5
     },
     {
       "title": "중동 전쟁 장기화에 재활용 플라스틱 뜬다..페트값 급상승",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526165153422",
+      "press": "머니투데이",
+      "url": "https://v.daum.net/v/20260526165153422",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 중동 전쟁 장기화에 재활용 플라스틱 뜬다..페트값 급상승 유럽 페트 가격 및 재활용 시장/그래픽=김지영 중동 전쟁이 장기화되면서 재활용 플라스틱 시장이 주목받고 있다. 원유 및 석유화학 원료 수급 불확실성이 커지고 있는 가운데 플라스틱 가격이 급등하자 재활용 원료의 경쟁력이 부각되면서다. 26일 관련업계에... 2026.05.26",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 2
     },
     {
       "title": "정부, '비축유 방출 카드' 아낀다…8월 수급위기 대비",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526164315888",
+      "press": "연합뉴스TV",
+      "url": "https://v.daum.net/v/20260526164315888",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "연합뉴스TV 개별문서메뉴 톡으로 바로 공유 공유하기 정부, '비축유 방출 카드' 아낀다…8월 수급위기 대비 오는 6월 9일까지 이행해야 합니다. 정부가 IEA와의 약속에도 불구하고 비축유 방출에 신중한 이유는 한여름 닥쳐올지 모를 원유 수급 위기 때문입니다. 최근 미국과 이란 간 협상이 진전을 보이며 종전 기대감이 커지고 있지만 자칫 호르무즈 해협 봉쇄 사태가... 2026.05.26",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 2
     },
     {
       "title": "제3국 경유한 美 원유 ‘FTA 무관세’ 적용 쉬워진다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260526164137765",
+      "press": "서울경제",
+      "url": "https://v.daum.net/v/20260526164137765",
       "published_date": "2026-05-26",
       "published_at_kst": "",
       "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 제3국 경유한 美 원유 ‘FTA 무관세’ 적용 쉬워진다 이종욱 관세청장이 26일 서울세관에서 ‘비중동산 원유 수입선 다변화 지원 방안’과 관련한 브리핑을 하고 있다. 제공=관세청 정부가 제3국을 경유하는 미국산 원유 의 한미 자유무역협정(FTA) 무관세 혜택 적용 요건을 완화하고 호주산 나프타 대체품의 비축 의무를... 2026.05.26",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "원유",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     }
   ],
   "errors": [],

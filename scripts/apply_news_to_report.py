@@ -18,6 +18,25 @@ from pathlib import Path
 from typing import Any, Dict, List
 import time
 
+try:
+    from scripts.news_article_rules import (
+        industry_relevance_score,
+        is_forbidden_press,
+        is_original_source_url,
+        normalize_article_url,
+        press_grade,
+        resolve_press,
+    )
+except ImportError:
+    from news_article_rules import (  # type: ignore
+        industry_relevance_score,
+        is_forbidden_press,
+        is_original_source_url,
+        normalize_article_url,
+        press_grade,
+        resolve_press,
+    )
+
 # 간단한 로컬 캐시: 국회 영상 조회 결과를 저장하여 반복 호출을 피합니다.
 CACHE_DIR = Path(".cache")
 CACHE_FILE = CACHE_DIR / "assembly_links.json"
@@ -28,7 +47,7 @@ except Exception:
     def search_assembly_for_title(title: str, date: str | None = None) -> None:
         return None
 
-BAD_TITLES = ["오늘의 주요일정", "주요일정", "대표 기사 데이터 없음", "자동 수집 미적용", "대표 기사 미확인"]
+BAD_TITLES = ["오늘의 주요일정", "주요일정", "투데이 라인업", "대표 기사 데이터 없음", "자동 수집 미적용", "대표 기사 미확인"]
 BAD_SUMMARY_PHRASES = [
     "자동 수집된 대표 기사 없음", "가격 데이터 중심", "원문 데이터", "fallback",
     "찾지 못했습니다", "미확인", "주요 보도 없음", "대표 기사 없음",
@@ -380,9 +399,15 @@ def valid_article(
 
 def normalize_article(item: Dict[str, Any]) -> Dict[str, Any]:
     title = clean(item.get("title"))
-    press = clean(item.get("press") or item.get("source")) or "Google News"
+    press = resolve_press(item)
+    url = normalize_article_url(item.get("url"))
     snippet = clean(item.get("summary") or item.get("snippet"))
     if snippet:
+        snippet = re.sub(
+            rf"^{re.escape(press)}(?:\s+언론사\s*픽)?\s+개별문서메뉴(?:\s+톡으로\s+바로\s+공유)?(?:\s+공유하기)?\s*",
+            "",
+            snippet,
+        )
         snippet = strip_article_source_suffix(snippet, press)
         snippet = re.sub(r" - [^ ]+(?:\s|$)", " ", snippet)
         snippet = re.sub(r"\s+", " ", snippet).strip()
@@ -395,9 +420,11 @@ def normalize_article(item: Dict[str, Any]) -> Dict[str, Any]:
     out: Dict[str, Any] = {
         "title": title,
         "press": press,
-        "url": clean(item.get("url")),
+        "press_grade": press_grade(press),
+        "url": url,
         "summary": summary,
         "published_at_kst": clean(item.get("published_at_kst")),
+        "industry_relevance": industry_relevance_score(title, snippet),
     }
     if "score" in item:
         try:
@@ -441,7 +468,28 @@ def select_representative_articles(
     max_articles: int,
     min_required: int,
 ) -> List[Dict[str, Any]]:
-    sorted_candidates = sorted(candidates, key=lambda x: int(x.get("score", 0)), reverse=True)
+    def article_sort_key(article: Dict[str, Any]) -> tuple[int, int, int, int, int]:
+        breakdown = article.get("score_breakdown", {}) if isinstance(article.get("score_breakdown"), dict) else {}
+        return (
+            industry_relevance_score(article.get("title"), article.get("summary")),
+            1 if is_original_source_url(article.get("url")) else 0,
+            int(breakdown.get("originality", 0)),
+            int(breakdown.get("title_importance", 0)),
+            1 if press_grade(article.get("press")) == "A" else 0,
+        )
+
+    trusted_candidates = [
+        article for article in candidates
+        if press_grade(article.get("press")) in {"A", "B"}
+        and industry_relevance_score(article.get("title"), article.get("summary")) > 0
+    ]
+    c_grade_candidates = [
+        article for article in candidates
+        if press_grade(article.get("press")) == "C"
+        and industry_relevance_score(article.get("title"), article.get("summary")) > 0
+    ]
+    sorted_candidates = sorted(trusted_candidates, key=article_sort_key, reverse=True)
+    sorted_candidates += sorted(c_grade_candidates, key=article_sort_key, reverse=True)[:1]
     selected: List[Dict[str, Any]] = []
     issue_keys: List[str] = []
     term_sets: List[set[str]] = []
@@ -465,10 +513,18 @@ def select_representative_articles(
             return selected
 
     if len(selected) < min_required:
-        selected_urls = {clean(a.get("url")) for a in selected}
-        for article in sorted_candidates:
+        broad_trusted = sorted(
+            [
+                article for article in candidates
+                if press_grade(article.get("press")) in {"A", "B"}
+                and industry_relevance_score(article.get("title"), article.get("summary")) == 0
+            ],
+            key=article_sort_key,
+            reverse=True,
+        )
+        for article in broad_trusted:
             url = clean(article.get("url"))
-            if url in selected_urls:
+            if url in selected_urls or is_forbidden_press(article.get("press")):
                 continue
             selected.append(article)
             selected_urls.add(url)
@@ -477,14 +533,18 @@ def select_representative_articles(
 
     if len(selected) < max_articles:
         selected_urls = {clean(a.get("url")) for a in selected}
+        selected_keys = [article_issue_key(a) for a in selected]
         for article in sorted_candidates:
             url = clean(article.get("url"))
-            if url in selected_urls:
+            key = article_issue_key(article)
+            if url in selected_urls or any(similar_issue(key, existing) for existing in selected_keys):
                 continue
             selected.append(article)
             selected_urls.add(url)
+            selected_keys.append(key)
             if len(selected) >= max_articles:
                 break
+
     return selected[:max_articles]
 
 

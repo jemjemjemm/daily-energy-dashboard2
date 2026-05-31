@@ -1539,52 +1539,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "국제신문은 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "전자신문은 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
     ],
     "articles": [
       {
         "title": "구윤철 \" 정유사 공급가, 최고가격 하회…주유소 소매가도 소폭↓\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260515083405617",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260515083405617",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "석유 최고가격제 유지한다… 정부 \"유가 배럴당 100달러 아래로 내려가야 종료 검토\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260514183502382",
+        "title": "산업부 \"국제유가 100달러 이하면 최고가격제 해제 검토\"",
+        "press": "국제신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260514190115265",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "트럼프 “習, 호르무즈 개방 원해…대규모 미국산 에너지 구매 합의”",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260515085217121",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260515085217121",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 2,
           "originality": 3,
           "duplicate_or_low_quality": 0
         }
@@ -1694,7 +1700,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-15.json",
+      "source_file": "data\\news\\2026-05-15.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1702,7 +1708,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-15.evening.json",
+      "source_file": "data\\news\\2026-05-15.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1732,53 +1738,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "파이낸셜뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "미디어펜은 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "매일경제는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "\"中, 미국산 석유 구매\"…트럼프 발언에 국제 유가 1.5%대 상승",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260515164901949",
+        "title": "인도, 유가 급등에 '주 2일 재택근무' 도입… 휘발유· 경유 가격도 4년 만에 인상",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260515161419417",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260515140713986",
-        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "전남도, 나프타 수급 불안 대비 의료제품 공급 점검",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260515101117809",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "IEA \"사상 최대 원유 공급 위기\"…정유업계, ‘정제마진’ 급등 예고",
+        "press": "미디어펜",
+        "press_grade": "C",
+        "url": "https://v.daum.net/v/20260515140713986",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 0,
+          "press": 1,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "“휴~ 우윳값 안 오르겠네”…올해 원유 가격 동결에 장바구니 한숨 돌렸다",
+        "press": "매일경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260515165101040",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 3,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 2,
           "duplicate_or_low_quality": 0
         }
       }

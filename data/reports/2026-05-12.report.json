@@ -1483,53 +1483,59 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "머니투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "아시아경제는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "“에스오일, 유가 안정화 이후 본격 반등 전망”",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512081200538",
-        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "title": "유류세 카드 꺼낸 트럼프…\"휘발유세 없애겠다\" 현실 가능성은",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260512082752898",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
+          "title_importance": 2,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "기름값 33개월 만에 최고…최고가격제에도 \"차 끌고 나가기 무섭다\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512060648598",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260512060648598",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "유류세 카드 꺼낸 트럼프…\"휘발유세 없애겠다\" 현실 가능성은",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512082752898",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "이란 \"모든 옵션 준비\"…유가 치솟자 트럼프 유류세 카드",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260512080100296",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "press": 3,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1638,7 +1644,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-12.json",
+      "source_file": "data\\news\\2026-05-12.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1646,7 +1652,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-12.evening.json",
+      "source_file": "data\\news\\2026-05-12.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1676,52 +1682,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △정부·국회 에너지 정책 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "MBC는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "조선비즈는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "[국제 유가] 중동 긴장에 국제유가 강세...브렌트·두바이 급등, WTI 보합",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512164600843",
-        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
+        "title": "\"수출 막히고, 보조금은 수입산만\"…정유업계, 나프타 통제에 '속앓이'",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260512154014324",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 4,
-          "press": 0,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "국토부, 경유 유가보조금 한도 리터당 53% 상향‥25톤 화물차 23만 원 더 받아",
+        "press": "MBC",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260512153107760",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "[단독] 석유公 해외 자회사·지분 투자 광구서 생산한 원유 들어온다… 다음 달부터 정유사 판매",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512154705647",
+        "press": "조선비즈",
+        "press_grade": "C",
+        "url": "https://v.daum.net/v/20260512154705647",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
-          "originality": 3,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "[단독] 검찰, 10조원대 전분당 가격 담합 사건 ‘골프장 대표 모임’ 의심 [세상&]",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260512163521320",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 1,
-          "press": 0,
+          "press": 1,
           "originality": 3,
           "duplicate_or_low_quality": 0
         }

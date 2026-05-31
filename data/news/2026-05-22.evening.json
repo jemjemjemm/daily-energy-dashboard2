@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5",
+  "schema_version": "2.6",
   "date": "2026-05-22",
   "report_slot": "evening",
   "collected_at": "2026-05-30 01:03:13 KST",
@@ -53,219 +53,243 @@
   "articles": [
     {
       "title": "“호르무즈 첫 통항에도 최고가격 또 동결”…정유업계 수익성 압박 장기화",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522151507207",
+      "press": "이데일리",
+      "url": "https://v.daum.net/v/20260522151507207",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 “호르무즈 첫 통항에도 최고가격 또 동결”…정유업계 수익성 압박 장기화 서울의 한 주유소를 찾은 시민들이 차량에 주유를 하고 있다. (사진=이데일리 방인권 기자) [이데일리 박민웅 기자] 정부가 국내 석유 제품 에 적용되는 최고가격을 또다시 동결하면서 국내 정유업계의 수익성 부담이 장기화할 것이란 전망이 나온다. 중동 리스크가... 2026.05.22",
-      "score": 11,
+      "score": 14,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "정부, 최고가격제 정유사 손실보전 착수…핵심은 '유종별 원가'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522130700112",
+      "press": "뉴스1",
+      "url": "https://v.daum.net/v/20260522130700112",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 2 정부, 최고가격제 정유사 손실보전 착수…핵심은 '유종별 원가' 손실 산정 기준을 마련하기 위해 정유사들로부터 관련 자료를 제출받고 있다. 다만 업계에서는 원유를 한 번 정제하면 여러 석유 제품 이 동시에 생산되는 정유업 특성상 유종별 원가를 객관적으로 산정하기 어렵고, 원가 기준만 적용할 경우 보전 규모가 축소될 수... 2026.05.22 1",
-      "score": 10,
+      "score": 13,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 4,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "여수산단 석화, 흑자전환에도 '공급과잉 해법'은 제자리",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522130503072",
+      "press": "EBN산업경제",
+      "url": "https://v.daum.net/v/20260522130503072",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "EBN산업경제 개별문서메뉴 톡으로 바로 공유 공유하기 2 여수산단 석화, 흑자전환에도 '공급과잉 해법'은 제자리 과잉이 계속되면서 제품 스프레드 회복이 제한적일 것이라는 전망이 우세했다. 그러나 2월 중동 분쟁 이후 원유와 나프타, 석유 화학 제품 가격이 오르면서 분위기가 달라졌다. 실적 개선의 핵심은 래깅 효과다. 원유와 나프타를 낮은 가격에 사들인 뒤 실제 제품 ... 2026.05.22",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 2
     },
     {
       "title": "“유가, 8월이 고비”…호르무즈 봉쇄 장기화에 ‘오일 쇼크’ 경고음",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522160303862",
+      "press": "매일경제",
+      "url": "https://v.daum.net/v/20260522160303862",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "매일경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 “유가, 8월이 고비”…호르무즈 봉쇄 장기화에 ‘오일 쇼크’ 경고음 전제를 깔고 있다. 시장에서는 이런 전망이 지나치게 낙관적이라는 평가도 나온다. 실제 수요 위축 조짐도 나타나고 있다. IEA는 정유사 가동률 축소와 항공사 운항 감편, 각국의 연료 절약 조치 영향으로 2분기 글로벌 원유 수요가 전쟁 이전보다 하루 240만배럴... 2026.05.22",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     },
     {
       "title": "호르무즈 장기 봉쇄로 원유시장 '3개월 시한부' 경고 나왔다",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522152700609",
+      "press": "노컷뉴스",
+      "url": "https://v.daum.net/v/20260522152700609",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "노컷뉴스 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 장기 봉쇄로 원유시장 '3개월 시한부' 경고 나왔다 돌아설 것으로 전망했다. 하지만 이 시나리오는 현재로선 지나치게 낙관적이라는 평가가 많다. 수요도 위축되고 있다. IEA는 정유사 가동률 축소, 항공사 운항 감편, 각국 연료 절약 조치 등으로 2분기 글로벌 원유 수요가 전쟁 전 대비 하루 240만 배럴 줄어들 것... 2026.05.22",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "“호르무즈 봉쇄로 글로벌 원유시장 3개월 후 임계점”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522152120434",
+      "press": "KBS",
+      "url": "https://v.daum.net/v/20260522152120434",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 “호르무즈 봉쇄로 글로벌 원유시장 3개월 후 임계점” 것으로 전망했습니다. 하지만 이 시나리오는 현재로선 지나치게 낙관적이라는 평가가 많습니다. 수요도 위축되고 있습니다. IEA는 정유사 가동률 축소, 항공사 운항 감편, 각국 연료 절약 조치 등으로 2분기 글로벌 원유 수요가 전쟁 전 대비 하루 240만 배럴 줄어들... 2026.05.22",
-      "score": 9,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 2,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "B",
+      "industry_relevance": 5
     },
     {
       "title": "호르무즈 봉쇄에 세계 원유시장 '3개월 시한폭탄'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522150716954",
+      "press": "연합뉴스TV",
+      "url": "https://v.daum.net/v/20260522150716954",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "연합뉴스TV 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 봉쇄에 세계 원유시장 '3개월 시한폭탄' 해협이 5월 말 재개통되고 6월부터 통행이 정상화된다는 전제 아래 9월부터 재고가 회복세로 돌아설 것으로 전망했습니다. IEA는 정유사 가동률 축소, 항공사 운항 감편, 각국 연료 절약 조치 등으로 2분기 글로벌 원유 수요가 전쟁 전 대비 하루 240만 배럴 줄어들... 2026.05.22 1",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 5
     },
     {
       "title": "호르무즈 봉쇄 장기화로 글로벌 원유시장 '3개월 시한폭탄'",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522150003600",
+      "press": "연합뉴스",
+      "url": "https://v.daum.net/v/20260522150003600",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 봉쇄 장기화로 글로벌 원유시장 '3개월 시한폭탄' 돌아설 것으로 전망했다. 하지만 이 시나리오는 현재로선 지나치게 낙관적이라는 평가가 많다. 수요도 위축되고 있다. IEA는 정유사 가동률 축소, 항공사 운항 감편, 각국 연료 절약 조치 등으로 2분기 글로벌 원유 수요가 전쟁 전 대비 하루 240만 배럴 줄어들 것... 2026.05.22",
-      "score": 9,
+      "score": 12,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 2,
         "duplicate_or_low_quality": 0
       },
       "source_query": "정유사",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "2차 고유가 지원금 신청률 60% 돌파…1·2차 누적 4.4조원 지급",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522144501105",
+      "press": "SBS Biz",
+      "url": "https://v.daum.net/v/20260522144501105",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "SBS Biz 개별문서메뉴 톡으로 바로 공유 공유하기 2차 고유가 지원금 신청률 60% 돌파…1·2차 누적 4.4조원 지급 [고유가 피해지원금 2차 지급 이틀차인 19일 서울 영등포구 한일 주유소 에 지원금 사용가능매장 안내 스티커가 붙어있다. (사진=연합뉴스)] 정부의 2차 고유가 피해지원금 신청률이 60%를 넘어선 것으로 집계됐습니다. 1·2차 지원금을 합한 전체 누적 신청자는 2천... 2026.05.22",
-      "score": 9,
+      "score": 10,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 1
     },
     {
       "title": "‘호르무즈 봉쇄 충격’ 일본 원유값 46년 만에 최고…“전쟁 끝나도 안 끝난다”",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522142703478",
+      "press": "한겨레",
+      "url": "https://v.daum.net/v/20260522142703478",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "한겨레 개별문서메뉴 톡으로 바로 공유 공유하기 ‘호르무즈 봉쇄 충격’ 일본 원유값 46년 만에 최고…“전쟁 끝나도 안 끝난다” 일본 ‘가루비’사가 석유 원료인 잉크 부족으로 흑백 포장 인쇄한 포테이토 칩스 제품 (오른쪽)과 기존 제품 . AFP 연합뉴스 미국...통계 집계 이후 최고치를 기록한 것으로 나타났다. 일본 제품 의 중동 수출 판로도 막히면서 일본 경제 전체가 압박받고 있다. 22일... 2026.05.22",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 3,
-        "press": 0,
+        "press": 3,
         "originality": 0,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 5
     },
     {
       "title": "6차 석유 최고가격도 동결…조정 주기 2주→4주로",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522140118525",
+      "press": "정책브리핑",
+      "url": "https://v.daum.net/v/20260522140118525",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "정책브리핑 개별문서메뉴 톡으로 바로 공유 공유하기 6차 석유 최고가격도 동결…조정 주기 2주→4주로 민생에 큰 부담을 주고 있어 정부는 물가와 민생 안정에 최우선을 두고 이번 6차 최고가격을 동결하기로 결정했다. 한편, 국내 석유 제품 판매량은 전년과 비교했을 때 감소 추세를 이어가고 있다. 이달 판매량은 전년동월 대비 휘발유 2%, 경유는 6% 감소했고, 최고... 2026.05.22",
-      "score": 8,
+      "score": 9,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 1,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "석유제품",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "C",
+      "industry_relevance": 2
     },
     {
       "title": "6차 석유 최고가격 동결…휘발유 2010원대 초반서 등락",
-      "press": "Daum News",
-      "url": "http://v.daum.net/v/20260522142353383",
+      "press": "동아일보",
+      "url": "https://v.daum.net/v/20260522142353383",
       "published_date": "2026-05-22",
       "published_at_kst": "",
       "snippet": "동아일보 개별문서메뉴 톡으로 바로 공유 공유하기 6차 석유 최고가격 동결…휘발유 2010원대 초반서 등락 정부가 국민 유류비 부담 완화를 위해 유류세 한시 인하 조치를 두 달 더 연장한다고 밝힌 21일 서울 시내 한 주유소 에 가격 안내 전광판이 보이고 있다. 휘발유는 15%, 경유는 25%의 현행 인하폭을 유지한다. 2026.05.21 [서울=뉴시스] 정부가 6차 석유 최고가격을... 2026.05.22",
-      "score": 8,
+      "score": 11,
       "score_breakdown": {
         "keyword": 5,
         "title_importance": 2,
-        "press": 0,
+        "press": 3,
         "originality": 1,
         "duplicate_or_low_quality": 0
       },
       "source_query": "주유소",
-      "collector": "daum_news_search"
+      "collector": "daum_news_search",
+      "press_grade": "A",
+      "industry_relevance": 4
     }
   ],
   "errors": [],

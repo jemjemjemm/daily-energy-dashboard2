@@ -1521,52 +1521,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "뉴시스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "한스경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "SBS는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
         "title": "우린 '최고가격제' 중인데…IMF \"'선별적' 현금 지원이 바람직\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522060214765",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260522060214765",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 4,
+        "score": 14,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "[K- 석유 화학 진단] ‘아람코 우산’ 빛난 에쓰오일, 정유 호황에 반등 굳히나",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522073004502",
+        "press": "한스경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260522073004502",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 3,
-          "press": 0,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "정부가 봐도 유가 안정세?…최고가격 조정 주기 2주→4주로",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522060218786",
+        "title": "6차 석유최고가격도 동결…유류세 인하 2개월 연장",
+        "press": "SBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260522062103215",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 4,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1676,7 +1682,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-22.json",
+      "source_file": "data\\news\\2026-05-22.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1684,7 +1690,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-22.evening.json",
+      "source_file": "data\\news\\2026-05-22.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1714,52 +1720,58 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+      "이데일리는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "KBS는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
         "title": "“호르무즈 첫 통항에도 최고가격 또 동결”…정유업계 수익성 압박 장기화",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522151507207",
+        "press": "이데일리",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260522151507207",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 11,
+        "industry_relevance": 5,
+        "score": 14,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "여수산단 석화, 흑자전환에도 '공급과잉 해법'은 제자리",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522130503072",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
-        "published_at_kst": "",
-        "score": 9,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
-        "title": "호르무즈 장기 봉쇄로 원유시장 '3개월 시한부' 경고 나왔다",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260522152700609",
+        "title": "호르무즈 봉쇄 장기화로 글로벌 원유시장 '3개월 시한폭탄'",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260522150003600",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 12,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "“호르무즈 봉쇄로 글로벌 원유시장 3개월 후 임계점”",
+        "press": "KBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260522152120434",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
           "originality": 2,
           "duplicate_or_low_quality": 0
         }

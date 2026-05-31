@@ -1527,52 +1527,58 @@
   "news_trend": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+      "전자신문은 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "세계일보는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
     ],
     "articles": [
       {
-        "title": "이란 전쟁 교착에 국제 유가 1%대 상승…美 주가지수 선물 약세",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518084407025",
+        "title": "브렌트유 110달러·WTI 107달러 돌파… 국제 유가 다시 급등",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260518084904174",
         "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
-          "originality": 1,
+          "press": 2,
+          "originality": 0,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "기름값 동결에도 나프타 쇼크 여전…中企·자영업 원가부담 '한숨'",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518063650546",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260518063650546",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
-        "score": 8,
+        "industry_relevance": 4,
+        "score": 11,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
         "title": "‘반짝 특수’ 였는데… 걱정 커진 정유업계",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518060504000",
+        "press": "세계일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260518060504000",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 8,
+        "industry_relevance": 4,
+        "score": 10,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1682,7 +1688,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-05-18.json",
+      "source_file": "data\\news\\2026-05-18.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1690,7 +1696,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data/news/2026-05-18.evening.json",
+      "source_file": "data\\news\\2026-05-18.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (daum_html)",
       "status": "updated",
@@ -1720,53 +1726,59 @@
   "news_trend_afternoon": {
     "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
     "trend_paragraphs": [
-      "Daum News는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
-      "Daum News는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "Daum News는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "에너지경제는 액침냉각 등 정유사의 비석유 신사업 확대 흐름 조명.",
+      "데일리안은 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
-        "title": "중동 전쟁에 엘니뇨까지 겹쳐…유가 180달러 경고까지",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518151521481",
-        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
-        "published_at_kst": "",
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 3,
-          "press": 0,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
         "title": "주유소 기름값 2000원대 유지…정유업계 \"최고가격제 부담 누적\"",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518133408946",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260518133408946",
         "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
         "published_at_kst": "",
-        "score": 10,
+        "industry_relevance": 5,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 4,
-          "press": 0,
+          "press": 3,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
       },
       {
-        "title": "미·일 국채 금리 급등…코스피 요동치고 환율 1500원 넘기도",
-        "press": "Daum News",
-        "url": "http://v.daum.net/v/20260518165208323",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "title": "[기자의 눈] 기름 파는 정유사에 AI가 필요한 이유",
+        "press": "에너지경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260518170003650",
+        "summary": "액침냉각 등 정유사의 비석유 신사업 확대 흐름 조명",
         "published_at_kst": "",
-        "score": 9,
+        "industry_relevance": 5,
+        "score": 10,
         "score_breakdown": {
           "keyword": 5,
           "title_importance": 2,
-          "press": 0,
-          "originality": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "휘발유·경유 모두 2000원 선 넘어…고유가에 짓눌린 물가",
+        "press": "데일리안",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260518164052772",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
