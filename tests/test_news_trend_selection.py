@@ -7,7 +7,12 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from scripts.apply_news_to_report import normalize_article, select_representative_articles
+from scripts.apply_news_to_report import (
+    build_news_summary,
+    normalize_article,
+    select_representative_articles,
+    update_summary,
+)
 from scripts.fetch_news_candidates import PLAIN_QUERIES, daum_card_press, trusted_direct_count
 from scripts.news_article_rules import is_forbidden_press, normalize_article_url, resolve_press
 
@@ -121,6 +126,43 @@ class NewsTrendSelectionTest(unittest.TestCase):
         selected = select_representative_articles(candidates, max_articles=3, min_required=1)
 
         self.assertEqual(len(selected), 3)
+
+    def test_report_summary_is_rebuilt_from_representative_articles(self) -> None:
+        articles = [{
+            "title": "\uad6d\uc81c\uc720\uac00 \ud558\ub77d\uc73c\ub85c \uc6d0\uc720 \uc218\uae09 \ub9ac\uc2a4\ud06c \uc644\ud654",
+            "summary": "\uc911\ub3d9 \uc815\uc138 \ubcc0\ud654\uac00 \uc6d0\uc720 \uc218\uae09\uc5d0 \ubbf8\uce58\ub294 \uc601\ud5a5 \ubcf4\ub3c4",
+        }]
+
+        summary = build_news_summary(
+            {"summary": "\uc218\uc9d1 \ud6c4\ubcf4 \uc804\uccb4\uc758 \uacf5\ud1b5 \uc694\uc57d"},
+            articles,
+        )
+
+        self.assertNotIn("\uc218\uc9d1 \ud6c4\ubcf4 \uc804\uccb4", summary)
+        self.assertIn("\uc911\ub3d9", summary)
+
+    def test_evening_summary_appends_without_replacing_morning(self) -> None:
+        report = {
+            "summary": [
+                {"type": "stakeholder", "text": "\uc804\uc77c \uc8fc\uc694 \uc774\uc288: \uc694\uc57d."},
+                {"type": "today", "text": "\uae08\uc77c \uc8fc\uc694 \uc77c\uc815: \uc694\uc57d."},
+            ],
+            "news_trend": {"summary": "\uc624\uc804 \ub274\uc2a4 \uc694\uc57d."},
+        }
+
+        update_summary(report, "\uc624\uc804 \ub274\uc2a4 \uc694\uc57d.", "morning")
+        morning_rows = list(report["summary"])
+        morning_news = report["news_trend"]
+        report["news_trend_afternoon"] = {"summary": "\uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d."}
+        update_summary(report, "\uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d.", "evening")
+
+        self.assertEqual(report["summary"][:3], morning_rows)
+        self.assertIs(report["summary"][2], morning_rows[2])
+        self.assertIs(report["news_trend"], morning_news)
+        self.assertEqual(
+            report["summary"][3],
+            {"type": "news_trend_afternoon", "text": "(Evening) \uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d."},
+        )
 
 
 if __name__ == "__main__":

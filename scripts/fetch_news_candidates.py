@@ -641,7 +641,9 @@ def main() -> int:
             print("[ERROR]", " | ".join(errors[:8]))
         return 2
 
-    topics = infer_topics(selected)
+    # Keep collector metadata focused on the leading stories. The report
+    # application step rebuilds its final headline from representative items.
+    topics = infer_topics(selected[:3])
     payload = {
         "schema_version": "2.6",
         "date": a.date,
@@ -650,7 +652,7 @@ def main() -> int:
         "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
         "queries": [q for _, qs in QUERY_TIERS for q in qs] + RELAXED_PLAIN_QUERIES,
         "time_window": time_window,
-        "summary": build_summary(topics, selected),
+        "summary": build_summary(topics, selected[:3]),
         "topics": topics,
         "articles": selected,
         "errors": errors,

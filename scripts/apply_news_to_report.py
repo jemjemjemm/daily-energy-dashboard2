@@ -562,17 +562,32 @@ def existing_valid_slot_articles(report: Dict[str, Any], report_slot: str) -> Li
 
 
 def build_news_summary(news: Dict[str, Any], articles: List[Dict[str, Any]]) -> str:
-    topics = [clean(t) for t in news.get("topics", []) if clean(t)]
-    provided = clean(news.get("summary"))
-    if provided and not any(x in provided for x in BAD_SUMMARY_PHRASES) and not any(x in provided for x in ["다뤘습니다", "보도했습니다", "수집됐습니다"]):
-        return strip_polite_endings(provided)
-    return make_trend_headline(articles, topics)
+    # Collector summaries cover a broad candidate pool. Rebuild from the
+    # representative articles so the report headline reflects this slot.
+    return make_trend_headline(articles)
 
-def update_summary(report: Dict[str, Any], news_summary: str) -> None:
+
+def update_summary(report: Dict[str, Any], news_summary: str, report_slot: str = "morning") -> None:
     existing = report.get("summary", []) if isinstance(report.get("summary"), list) else []
+    if report_slot == "evening":
+        # Evening updates must leave the morning report intact. Only replace a
+        # previous Evening row when rerunning the same slot, then append one row.
+        preserved = [
+            item for item in existing
+            if not isinstance(item, dict) or item.get("type") != "news_trend_afternoon"
+        ]
+        if not any(isinstance(item, dict) and item.get("type") == "news_trend" for item in preserved):
+            morning_news = report.get("news_trend", {}) if isinstance(report.get("news_trend"), dict) else {}
+            morning_summary = clean(morning_news.get("summary"))
+            if morning_summary:
+                preserved.append({"type": "news_trend", "text": "(Morning) " + morning_summary})
+        preserved.append({"type": "news_trend_afternoon", "text": "(Evening) " + news_summary})
+        report["summary"] = preserved
+        return
+
     cleaned = []
     for item in existing:
-        if not isinstance(item, dict) or item.get("type") == "news_trend":
+        if not isinstance(item, dict) or item.get("type") in {"news_trend", "news_trend_afternoon"}:
             continue
         text = PRICE_SUMMARY_RE.sub("", clean(item.get("text"))).strip()
         text = strip_polite_endings(text)
@@ -588,7 +603,14 @@ def update_summary(report: Dict[str, Any], news_summary: str) -> None:
         label = "주요 이해관계자 동향" if typ == "stakeholder" else "금일 주요 일정"
         cleaned.append({"type": typ, "text": f"{label}: 관련 자료 검수 필요."})
     cleaned = cleaned[:2]
-    cleaned.append({"type": "news_trend", "text": "조간 보도: " + news_summary})
+    morning_news = report.get("news_trend", {}) if isinstance(report.get("news_trend"), dict) else {}
+    evening_news = report.get("news_trend_afternoon", {}) if isinstance(report.get("news_trend_afternoon"), dict) else {}
+    morning_summary = news_summary if report_slot == "morning" else clean(morning_news.get("summary"))
+    evening_summary = news_summary if report_slot == "evening" else clean(evening_news.get("summary"))
+    if morning_summary:
+        cleaned.append({"type": "news_trend", "text": "(Morning) " + morning_summary})
+    if evening_summary:
+        cleaned.append({"type": "news_trend_afternoon", "text": "(Evening) " + evening_summary})
     report["summary"] = cleaned
 
 
@@ -637,8 +659,7 @@ def main() -> int:
         articles = old_articles
         old_key = "news_trend" if a.report_slot == "morning" else "news_trend_afternoon"
         old_news = report.get(old_key, {}) if isinstance(report.get(old_key), dict) else {}
-        old_summary = clean(old_news.get("summary"))
-        news_summary = old_summary if old_summary and not any(p in old_summary for p in BAD_SUMMARY_PHRASES) else build_news_summary({}, articles)
+        news_summary = build_news_summary(old_news, articles)
         source = clean(old_news.get("source")) or "existing report"
         status = "preserved_existing"
     else:
@@ -659,9 +680,10 @@ def main() -> int:
     }
     if a.report_slot == "morning":
         report["news_trend"] = news_payload
-        update_summary(report, news_summary)
+        update_summary(report, news_summary, a.report_slot)
     else:
         report["news_trend_afternoon"] = news_payload
+        update_summary(report, news_summary, a.report_slot)
 
     news_auto_key = "news" if a.report_slot == "morning" else "news_afternoon"
     report.setdefault("automation", {})[news_auto_key] = {

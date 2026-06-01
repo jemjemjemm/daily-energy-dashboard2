@@ -152,7 +152,7 @@ def text_of(item: Any) -> str:
 
 def render_summary(data: Mapping[str, Any]) -> str:
     rows = []
-    for item in list_of(data.get("summary"))[:3]:
+    for item in list_of(data.get("summary"))[:4]:
         text = text_of(item)
         if text.startswith("주요 이해관계자 동향:"):
             text = "전일 주요 이슈:" + text.split(":", 1)[1]
@@ -169,7 +169,7 @@ def render_summary(data: Mapping[str, Any]) -> str:
     ]
     while len(rows) < 3:
         rows.append(f'<div class="summary-item"><span class="summary-dot"></span><span>{defaults[len(rows)]}</span></div>')
-    return '<div class="summary-body">' + "\n".join(rows[:3]) + '</div>'
+    return '<div class="summary-body">' + "\n".join(rows[:4]) + '</div>'
 
 
 def find_by_names(obj: Any, names: Iterable[str]) -> float | None:
@@ -860,8 +860,8 @@ def render(data: Mapping[str, Any], date_text: str) -> str:
     {render_chart("원유 가격 추이", crude_series, CRUDE_KEYS)}
     {render_chart("석유제품 가격 추이", product_series, PRODUCT_KEYS, PRODUCT_LABELS)}
     {section(5, f"금일 주요 일정 ({today_label})", render_schedules(data))}
-    {section(6, f"News Trend ({morning_news_label})", render_news(data))}
-    {section(7, f"News Trend ({afternoon_news_label})", render_afternoon_news(data))}
+    {section(6, f"News Trend - Morning ({morning_news_label})", render_news(data))}
+    {section(7, f"News Trend - Evening ({afternoon_news_label})", render_afternoon_news(data))}
     <footer class="footer">SK Innovation Communication Division · {esc(date_text.replace('-', '.'))}</footer>
   </main>
   {TOOLTIP_SCRIPT}
