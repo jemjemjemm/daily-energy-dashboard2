@@ -26,6 +26,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) 주요 매체가 △석유화학 공급과잉 부담 지속 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 등을 중심으로 보도."
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) 주요 매체가 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 △정유사 실적과 재고평가손익 변동성 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1658,6 +1662,78 @@
       "merged_at": "2026-06-01 09:18:56 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-06-01.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "주요 매체가 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 △정유사 실적과 재고평가손익 변동성 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "매일경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "에너지경제는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한국일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+    ],
+    "articles": [
+      {
+        "title": "정유사 원가 산정 고시 발표 임박… 원유 매입 시점･유종･수출 이윤 최대쟁점",
+        "press": "매일경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260601124800412",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "[EE칼럼] 국제원유가격의 하락과 국내 석유제품가격의 비대칭성",
+        "press": "에너지경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260601103003222",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "산업장관 \"호르무즈 밖 오만과 자원·물류 협력 가속화\"",
+        "press": "한국일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260601162137170",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
