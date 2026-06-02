@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-06-02",
+  "report_slot": "morning",
+  "collected_at": "2026-06-02 09:07:29 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-06-01 17:00~2026-06-02 09:00 KST",
+  "summary": "주요 매체가 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "topics": [
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
+  ],
+  "articles": [
+    {
+      "title": "[국제유가] 이란, 美 협상 중단·호르무즈 봉쇄 검토…WTI 5.5%↑",
+      "press": "신아일보",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260602082201672",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "신아일보 개별문서메뉴 톡으로 바로 공유 공유하기 [국제유가] 이란, 美 협상 중단·호르무즈 봉쇄 검토…WTI 5.5%↑ 않았다\"고 경고했다. 이번 긴장 고조는 사태 종식을 기대하는 시장 전망에 또 다른 장애물이 되고 있다. 세계 원유와 액화천연가스( LNG ) 공급의 핵심 통로 역할을 하고 있는 호르무즈 해협은 현재 사실상 폐쇄된 상태다. 악시오스는 지난주 이란이 해협에 추가 기뢰... 45분 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "신한투자 \"정유화학, 공급차질 후폭풍…투자의견 '비중확대'\"",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602084904385",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 신한투자 \"정유화학, 공급차질 후폭풍…투자의견 '비중확대'\" 수준의 원유 재고를 고려하면 종전 이후 리스토킹(재고 보충) 수요가 유가 하단을 지지하겠다\"고 분석했다. 이에 따라 하반기 국제 유가 는 80∼90달러 구간에서 높은 하방경직성을 보일 것으로 예상했다. 또 \"복합정제마진은 배럴당 26달러 수준의 강세를 유지하겠다... 18분 전",
+      "score": 14,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "국제유가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란전쟁 여파에 美 5월 원유수출 사상 최대…아시아행 급증",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602070702337",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 이란전쟁 여파에 美 5월 원유수출 사상 최대…아시아행 급증 미국 텍사스주 빅스프링스에 위치한 정유 시설 [AFP=연합뉴스 자료사진. 재판매 및 DB 금지] (뉴욕=연합뉴스) 김연숙 특파원 = 지난 5월 미국의 원유 수출량이 사상 최고치를 경신했다. 1일(현지시간) 로이터 통신에 따르면 에너지 분석 기업 케이플러 등의 선박 추적... 2시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "미·이란 전쟁에 5월 미국 원유 수출량 역대 최고···6월엔 둔화 전망",
+      "press": "경향신문",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602081315450",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "경향신문 개별문서메뉴 톡으로 바로 공유 공유하기 미·이란 전쟁에 5월 미국 원유 수출량 역대 최고···6월엔 둔화 전망 지난 4월(일 평균 520만배럴)을 넘어섰다. 전쟁 발발 후 중동 지역의 공급 불안으로 미국산 원유 수요에 대한 아시아와 유럽 정유사 들의 수요가 급증한 것이 원인으로 분석된다. 미 서부 텍사스산 원유(WTI)가 글로벌 기준유인 브렌트유보다 큰 폭의 할인 가격에... 54분 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란 전쟁에 5월 미국산 원유 수출 사상 최고…최대 수입지역은?",
+      "press": "MBN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260602082138663",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "MBN 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 이란 전쟁에 5월 미국산 원유 수출 사상 최고…최대 수입지역은? 미국 텍사스주 빅스프링스에 위치한 정유 시설/ 사진=연합뉴스 지난 5월 미국의 원유 수출량이 사상 최고치를 경신했습니다. 1일(현지시간) 로이터 통신에 따르면 에너지 분석 기업 케이플러 등의 선박 추적 데이터를 분석한 결과 5월 미국의 원유 수출량은 하루 평균... 45분 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란 전쟁에 미국 5월 원유 수출 사상 최고치 경신",
+      "press": "YTN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260602073002628",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 이란 전쟁에 미국 5월 원유 수출 사상 최고치 경신 배럴을 넘어선 수치입니다. 수출 증가는 이란 전쟁 발발 후 중동 지역의 공급 불안으로 미국산 원유 수요에 대한 아시아와 유럽 정유사 들의 수요가 급증한 데 따른 것으로 분석됩니다. 미국 서부 텍사스산 원유가 글로벌 기준유인 브렌트유 대비 큰 폭의 할인 가격에... 1시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란 전쟁에 미국 5월 원유 수출 사상 최대... 베네수도 회복세",
+      "press": "한국일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602083251948",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "한국일보 개별문서메뉴 톡으로 바로 공유 공유하기 이란 전쟁에 미국 5월 원유 수출 사상 최대... 베네수도 회복세 하루 평균 520만 배럴을 넘어섰다. 이는 이란 전쟁 발발 이후 중동 지역의 공급 불안으로 미국산 원유 수요에 대한 아시아와 유럽 정유사 들의 수요가 급증한 데서 비롯된 것으로 분석된다. 미 서부텍사스산원유(WTI)가 글로벌 기준유인 브렌트유보다 큰 폭의 할인가... 34분 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"에쓰오일, 중동전쟁 끝나도 정제마진 강세 계속\"-신한",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602085515581",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 \"에쓰오일, 중동전쟁 끝나도 정제마진 강세 계속\"-신한 계절적 성수기, 재고축적 수요까지 감안하면 종전 이후에도 정제마진은 구조적 강세를 보일 것으로 분석했다. 종전 이후에도 등유· 경유 ·항공유 중심으로 공급부족 현상이 지속될 것으로 예상된다. 하반기 정제마진은 배럴당 26달러 수준의 강세 흐름이 예측된다... 12분 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "충북 5월 소비자물가 3.2% 상승… 경유 33.0% 올라",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602084954417",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 충북 5월 소비자물가 3.2% 상승… 경유 33.0% 올라 (청주=연합뉴스) 김형우 기자 = 충북지역 5월 소비자물가가 1년 전보다 3.2% 오른 것으로 나타났다. 경유 가격 [연합뉴스 자료사진] 2일 충청지방데이터청의 '2026년 5월 충청지역 소비자물가동향'에 따르면 지난달 충북 소비자물가지수는 120.76으로, 전년 동월보다... 17분 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 4,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "CNN “트럼프, 호르무즈 개방 확약 원해 MOU 초안 돌려보내”",
+      "press": "KBS",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260602084704316",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 CNN “트럼프, 호르무즈 개방 확약 원해 MOU 초안 돌려보내” 트럼프 미국 대통령이 이란에 종전 양해각서(MOU) 초안을 돌려보낸 이유는 이란 핵 문제와 호르무즈 해협 재개방과 관련한 이란 측의 확약을 원해서라고 미국 CNN 방송이 현지 시각 1일 보도했습니다. 사안에 정통한 제3국 정부 관계자는 트럼프 대통령이 원하는... 20분 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 4,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"트럼프, 종전 MOU 초안 돌려보내… 호르무즈 개방 확약 원해\"",
+      "press": "한국경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260602085618599",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "한국경제 개별문서메뉴 톡으로 바로 공유 공유하기 \"트럼프, 종전 MOU 초안 돌려보내… 호르무즈 개방 확약 원해\" 미국 대통령./사진=REUTERS 도널드 트럼프 미국 대통령이 이란에 종전 양해각서(MOU) 수정안을 돌려보낸 이유는 이란 핵 문제와 호르무즈 해협 재개방과 관련한 이란 측의 확약을 원했기 때문이라고 미국 CNN 방송이 1일(현지시간) 보도했다. 양국 논의 상황에 잘... 11분 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "5월 소비자물가 상승률 3.1%…2년2개월 만에 최고",
+      "press": "세계일보",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260602085316520",
+      "published_date": "2026-06-02",
+      "published_at_kst": "",
+      "snippet": "세계일보 개별문서메뉴 톡으로 바로 공유 공유하기 5월 소비자물가 상승률 3.1%…2년2개월 만에 최고 석유류 가격은 전년 동월 대비 24.2% 급등하며 전체 소비자물가를 0.92%포인트 끌어올렸다. 품목별로는 휘발유가 23.1%, 경유 가 33.3% 상승했다. 중동 전쟁 장기화로 국제유가가 고공행진을 지속하면서 국내 기름값 상방 압력이 이어지고 있는 영향으로 분석된다... 14분 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
