@@ -26,6 +26,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) 주요 매체가 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 등을 중심으로 보도."
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) 주요 매체가 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 △정유사 실적과 재고평가손익 변동성 등을 중심으로 보도."
     }
   ],
   "prices": {
@@ -1635,6 +1639,78 @@
       "merged_at": "2026-06-04 09:10:42 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-06-04.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "주요 매체가 △호르무즈·중동 정세에 따른 원유·LNG 수급 리스크 △정유사 실적과 재고평가손익 변동성 등을 중심으로 보도.",
+    "trend_paragraphs": [
+      "서울경제는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "이투데이는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도."
+    ],
+    "articles": [
+      {
+        "title": "호르무즈 봉쇄 여파...美 원유재고 22년 만에 최저",
+        "press": "서울경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260604161500408",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "구윤철 \"6월 중 정유 업계 손실보전 기준 마련…정산위원회도 발족\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260604144701328",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "‘바다 위 LNG 공장’ 뜬다…조선업 새 먹거리로",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260604160903216",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
