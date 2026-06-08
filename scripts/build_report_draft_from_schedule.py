@@ -591,12 +591,6 @@ def update_summary(
 ) -> None:
     # 중요: 주요 이해관계자 동향/이슈는 기준일 전일(또는 직전 영업일) 일정에서,
     # 금일 주요 일정은 기준일 일정에서 각각 만든다. 같은 데이터를 양쪽에 복사하지 않는다.
-    if previous_items:
-        previous_titles = ", ".join(item["title"] for item in previous_items[:3])
-        stakeholder_text = f"전일 주요 이슈: {previous_label} 기준 {previous_titles}."
-    else:
-        stakeholder_text = "전일 주요 이슈: 주요 동향 없음."
-
     if today_items:
         today_titles = ", ".join(item["title"] for item in today_items[:4])
         today_text = f"금일 주요 일정: {today_titles}."
@@ -608,7 +602,6 @@ def update_summary(
     valid_articles = [a for a in articles if isinstance(a, dict) and a.get("title") and a.get("url")]
 
     summary_rows = [
-        {"type": "stakeholder", "text": stakeholder_text},
         {"type": "today", "text": today_text},
     ]
     # 조간 기사 후보가 실제로 있을 때만 Summary에 조간 보도 항목을 둔다.

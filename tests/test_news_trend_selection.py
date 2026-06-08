@@ -128,10 +128,18 @@ class NewsTrendSelectionTest(unittest.TestCase):
         self.assertEqual(len(selected), 3)
 
     def test_report_summary_is_rebuilt_from_representative_articles(self) -> None:
-        articles = [{
-            "title": "\uad6d\uc81c\uc720\uac00 \ud558\ub77d\uc73c\ub85c \uc6d0\uc720 \uc218\uae09 \ub9ac\uc2a4\ud06c \uc644\ud654",
-            "summary": "\uc911\ub3d9 \uc815\uc138 \ubcc0\ud654\uac00 \uc6d0\uc720 \uc218\uae09\uc5d0 \ubbf8\uce58\ub294 \uc601\ud5a5 \ubcf4\ub3c4",
-        }]
+        articles = [
+            {
+                "title": "\uc77c\ubcf8, \ud638\ub974\ubb34\uc988 \ubd09\uc1c4 \uc18d \ubbf8 \uc54c\ub798\uc2a4\uce74\uc0b0 \uc6d0\uc720 \ud655\ubcf4",
+                "summary": "\uc911\ub3d9 \ud574\ud611 \ub9ac\uc2a4\ud06c\ub85c \ub300\uccb4 \uc6d0\uc720 \uc870\ub2ec\uacfc \uc5d0\ub108\uc9c0 \uc548\ubcf4 \ubcc0\uc218\uac00 \ubd80\uac01",
+                "press": "\ub274\uc2a41",
+            },
+            {
+                "title": "\uace0\ud658\uc728\uc774 \uc815\uc720\u00b7\uc11d\uc720\ud654\ud559 \uc6d0\uac00 \ubd80\ub2f4\uc73c\ub85c \ud655\uc0b0",
+                "summary": "\ub2ec\ub7ec \uac15\uc138\ub85c \uc6d0\uc720\uc640 \ub098\ud504\ud0c0 \ub3c4\uc785 \ube44\uc6a9\uc774 \uc0c1\uc2b9",
+                "press": "\ub9e4\uc77c\uacbd\uc81c",
+            },
+        ]
 
         summary = build_news_summary(
             {"summary": "\uc218\uc9d1 \ud6c4\ubcf4 \uc804\uccb4\uc758 \uacf5\ud1b5 \uc694\uc57d"},
@@ -139,7 +147,19 @@ class NewsTrendSelectionTest(unittest.TestCase):
         )
 
         self.assertNotIn("\uc218\uc9d1 \ud6c4\ubcf4 \uc804\uccb4", summary)
-        self.assertIn("\uc911\ub3d9", summary)
+        self.assertRegex(summary, r"^△.+ 등을 중심으로 보도\.$")
+        self.assertNotIn("주요 매체가", summary)
+        self.assertIn("\u25b3", summary)
+        self.assertIn("\ud638\ub974\ubb34\uc988", summary)
+        self.assertIn("\uace0\ud658\uc728", summary)
+        self.assertNotIn("'", summary)
+        self.assertNotIn("\ub274\uc2a41\uc740", summary)
+        self.assertNotIn("\ub9e4\uc77c\uacbd\uc81c\ub294", summary)
+
+    def test_empty_article_summary_uses_no_report_fallback(self) -> None:
+        summary = build_news_summary({}, [])
+
+        self.assertEqual(summary, "\ud574\ub2f9 \uc2dc\uac04\ub300 \uc8fc\uc694 \ubcf4\ub3c4 \ud655\uc778 \uac74 \uc5c6\uc74c.")
 
     def test_evening_summary_appends_without_replacing_morning(self) -> None:
         report = {
@@ -156,12 +176,30 @@ class NewsTrendSelectionTest(unittest.TestCase):
         report["news_trend_afternoon"] = {"summary": "\uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d."}
         update_summary(report, "\uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d.", "evening")
 
-        self.assertEqual(report["summary"][:3], morning_rows)
-        self.assertIs(report["summary"][2], morning_rows[2])
+        self.assertEqual(report["summary"][:2], morning_rows)
+        self.assertIs(report["summary"][1], morning_rows[1])
         self.assertIs(report["news_trend"], morning_news)
         self.assertEqual(
-            report["summary"][3],
+            report["summary"][2],
             {"type": "news_trend_afternoon", "text": "(Evening) \uc624\ud6c4 \ub274\uc2a4 \uc694\uc57d."},
+        )
+
+    def test_summary_removes_previous_issue_row(self) -> None:
+        report = {
+            "summary": [
+                {"type": "stakeholder", "text": "\uc804\uc77c \uc8fc\uc694 \uc774\uc288: \uc694\uc57d."},
+                {"type": "today", "text": "\uae08\uc77c \uc8fc\uc694 \uc77c\uc815: \uc694\uc57d."},
+            ],
+        }
+
+        update_summary(report, "\uc624\uc804 \ub274\uc2a4 \uc694\uc57d.", "morning")
+
+        self.assertEqual(
+            report["summary"],
+            [
+                {"type": "today", "text": "\uae08\uc77c \uc8fc\uc694 \uc77c\uc815: \uc694\uc57d."},
+                {"type": "news_trend", "text": "(Morning) \uc624\uc804 \ub274\uc2a4 \uc694\uc57d."},
+            ],
         )
 
 

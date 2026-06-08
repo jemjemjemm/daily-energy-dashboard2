@@ -76,12 +76,12 @@ NOUN_ENDING_REPLACEMENTS = [
 
 THEME_RULES = [
     ("석유화학 공급과잉 부담 지속", ["석유화학", "공급과잉", "나프타", "에틸렌", "화학제품"]),
-    ("호르무즈·중동 정세에 따른 원유·LNG 수급 리스크", ["호르무즈", "중동", "이란", "원유", "LNG", "천연가스", "수급", "공급망"]),
-    ("고유가와 SAF 부담에 따른 항공·정유업계 영향", ["SAF", "지속가능항공유", "항공유", "항공", "고유가", "친환경 연료"]),
+    ("중동 해협 리스크와 에너지 안보 변수", ["호르무즈", "중동", "이란", "원유", "LNG", "천연가스", "수급", "공급망"]),
+    ("SAF·항공유 비용 부담과 정유업계 영향", ["SAF", "지속가능항공유", "항공유", "항공", "고유가", "친환경 연료"]),
     ("석유제품 가격 안정 정책과 유류세 이슈", ["최고가격제", "유류세", "가격상한", "휘발유", "경유", "주유소"]),
     ("에너지 가격발 물가 부담", ["생산자물가", "소비자물가", "수입물가", "물가", "석탄및석유제품"]),
     ("정부·국회 에너지 정책 논의", ["정부", "산업부", "산업통상부", "공정위", "국회", "기재부", "기후부"]),
-    ("정유사 실적과 재고평가손익 변동성", ["정유사", "정유", "실적", "재고평가", "정제마진"]),
+    ("정유사 수익성과 정제마진 변동", ["정유사", "정유", "실적", "재고평가", "정제마진"]),
 ]
 ISSUE_TERMS = [
     "전략비축유", "호르무즈", "최고가격제", "유류세", "국제유가", "유가", "원유", "정유", "정유사",
@@ -203,6 +203,174 @@ def article_trend_sentence(article: Dict[str, str]) -> str:
 def make_trend_paragraphs(articles: List[Dict[str, str]]) -> List[str]:
     return [article_trend_sentence(a) for a in articles[:3]]
 
+
+
+def is_previous_issue_summary(item: Any) -> bool:
+    if not isinstance(item, dict):
+        return False
+    typ = clean(item.get("type"))
+    text = clean(item.get("text"))
+    return typ == "stakeholder" or text.startswith("전일 주요 이슈:")
+
+
+def _trim_summary_part(text: str, limit: int = 62) -> str:
+    text = clean(text)
+    text = strip_article_source_suffix(text)
+    text = re.sub(r"^\[[^\]]+\]\s*", "", text).strip()
+    text = re.sub(r"\s+", " ", text).strip(" .")
+    if len(text) > limit:
+        text = text[:limit].rsplit(" ", 1)[0].strip()
+    return text
+
+
+GENERIC_ARTICLE_SUMMARY_PATTERNS = [
+    "원문 기준으로 확인 필요",
+    "업계 관련성",
+    "중심으로 정리",
+    "중심으로 보도",
+    "시장 변동 요인",
+    "시장 여건 변화",
+]
+
+
+def is_generic_article_summary(text: str) -> bool:
+    text = clean(text)
+    return any(pattern in text for pattern in GENERIC_ARTICLE_SUMMARY_PATTERNS)
+
+
+FRAME_RULES = [
+    {
+        "label": "호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임",
+        "groups": [["호르무즈", "해협", "중동", "이란"], ["대체", "조달", "확보", "봉쇄", "원유", "수입선"]],
+    },
+    {
+        "label": "중동 해협 리스크의 에너지 안보 변수화",
+        "groups": [["호르무즈", "해협", "중동", "이란"], ["에너지", "안보", "억지력", "공급", "수급", "봉쇄"]],
+    },
+    {
+        "label": "고환율에 따른 정유·석유화학 원가 부담",
+        "groups": [["환율", "달러", "외화부채", "원화"], ["정유", "석유화학", "원유", "나프타", "원가", "비용"]],
+    },
+    {
+        "label": "나프타·석유화학 원료 가격 부담",
+        "groups": [["나프타", "에틸렌", "프로필렌", "석유화학"], ["가격", "단가", "공급", "원료", "부담"]],
+    },
+    {
+        "label": "국제유가 변동과 원유 수급 전망",
+        "groups": [["국제유가", "유가", "WTI", "브렌트", "두바이"], ["상승", "하락", "급등", "급락", "변동", "수급", "전망"]],
+    },
+    {
+        "label": "석유제품 가격 안정과 유류세 정책 논의",
+        "groups": [["유류세", "가격상한", "최고가격제", "휘발유", "경유", "주유소"], ["정책", "정부", "가격", "안정", "인하", "보전"]],
+    },
+    {
+        "label": "정유업계 수익성·정제마진 영향",
+        "groups": [["정유", "정유사", "정제마진"], ["실적", "수익", "손실", "마진", "원가", "재고"]],
+    },
+    {
+        "label": "LNG·천연가스 수급과 가격 변수",
+        "groups": [["LNG", "천연가스", "가스공사", "도시가스"], ["수급", "가격", "공급", "전력", "발전"]],
+    },
+    {
+        "label": "에너지 가격발 물가 부담",
+        "groups": [["물가", "생산자물가", "소비자물가", "수입물가"], ["석유", "유가", "에너지", "전기요금"]],
+    },
+    {
+        "label": "정부·국회 에너지 정책 대응",
+        "groups": [["정부", "국회", "산업부", "기재부", "공정위", "기후부"], ["정책", "회의", "간담회", "고시", "지원", "보전"]],
+    },
+    {
+        "label": "SAF·항공유 비용 부담",
+        "groups": [["SAF", "지속가능항공유", "항공유"], ["비용", "부담", "유가", "연료", "정유"]],
+    },
+]
+
+FALLBACK_FRAME_RULES = [
+    ("국제유가와 원유 수급 동향", ["국제유가", "유가", "WTI", "브렌트", "두바이", "원유"]),
+    ("정유업계 원가·수익성 영향", ["정유", "정유사", "정제마진", "재고", "원가"]),
+    ("석유화학 원료·제품 가격 부담", ["석유화학", "나프타", "에틸렌", "프로필렌", "화학제품"]),
+    ("LNG·천연가스 수급 동향", ["LNG", "천연가스", "가스공사", "도시가스"]),
+    ("석유제품 가격·물가 부담", ["휘발유", "경유", "유류세", "주유소", "물가"]),
+    ("정부·국회 에너지 정책 논의", ["정부", "국회", "산업부", "기재부", "공정위", "정책"]),
+    ("중동발 에너지 공급망 리스크", ["호르무즈", "중동", "이란", "공급망", "봉쇄"]),
+]
+
+
+def article_summary_corpus(article: Dict[str, Any]) -> str:
+    parts: List[str] = []
+    for key in ("title", "summary", "snippet", "source_query", "keyword", "keywords", "topic", "topics"):
+        value = article.get(key)
+        if isinstance(value, list):
+            parts.extend(clean(v) for v in value)
+        elif isinstance(value, dict):
+            parts.extend(clean(v) for v in value.values())
+        else:
+            parts.append(clean(value))
+    return " ".join(part for part in parts if part)
+
+
+def article_matches_groups(text: str, groups: List[List[str]]) -> bool:
+    lower = text.lower()
+    return all(any(token.lower() in lower for token in group) for group in groups)
+
+
+def score_frame(article_texts: List[str], groups: List[List[str]]) -> int:
+    full_text = " ".join(article_texts)
+    if not article_matches_groups(full_text, groups):
+        return 0
+    score = 1
+    for text in article_texts:
+        if article_matches_groups(text, groups):
+            score += 4
+        else:
+            score += sum(1 for group in groups for token in group if token.lower() in text.lower())
+    return score
+
+
+def too_similar_frame(label: str, existing: List[str]) -> bool:
+    label_terms = set(re.findall(r"[가-힣A-Za-z0-9]+", label))
+    for item in existing:
+        terms = set(re.findall(r"[가-힣A-Za-z0-9]+", item))
+        if label_terms and terms and len(label_terms & terms) / max(1, min(len(label_terms), len(terms))) >= 0.65:
+            return True
+    return False
+
+
+def extract_report_frames(news: Dict[str, Any], articles: List[Dict[str, Any]], max_frames: int = 4) -> List[str]:
+    article_texts = [article_summary_corpus(article) for article in articles if isinstance(article, dict)]
+    article_texts = [text for text in article_texts if text]
+    if not article_texts:
+        return []
+
+    scored: List[tuple[int, int, str]] = []
+    for order, rule in enumerate(FRAME_RULES):
+        score = score_frame(article_texts, rule["groups"])
+        if score > 0:
+            scored.append((score, -order, rule["label"]))
+    scored.sort(reverse=True)
+
+    frames: List[str] = []
+    for _, _, label in scored:
+        if not too_similar_frame(label, frames):
+            frames.append(label)
+        if len(frames) >= max_frames:
+            return frames
+
+    full_text = " ".join(article_texts)
+    for label, keys in FALLBACK_FRAME_RULES:
+        if any(key.lower() in full_text.lower() for key in keys) and not too_similar_frame(label, frames):
+            frames.append(label)
+        if len(frames) >= max_frames:
+            break
+
+    return frames
+
+
+def build_frame_summary(news: Dict[str, Any], articles: List[Dict[str, Any]]) -> str:
+    frames = extract_report_frames(news, articles, max_frames=4)
+    if not frames:
+        return "해당 시간대 주요 보도 확인 건 없음."
+    return " ".join(f"△{frame}" for frame in frames) + " 등을 중심으로 보도."
 
 
 def parse_args():
@@ -563,8 +731,9 @@ def existing_valid_slot_articles(report: Dict[str, Any], report_slot: str) -> Li
 
 def build_news_summary(news: Dict[str, Any], articles: List[Dict[str, Any]]) -> str:
     # Collector summaries cover a broad candidate pool. Rebuild from the
-    # representative articles so the report headline reflects this slot.
-    return make_trend_headline(articles)
+    # representative articles so the report headline reflects this slot's
+    # actual issue frames instead of repeating generic theme labels or titles.
+    return build_frame_summary(news, articles)
 
 
 def update_summary(report: Dict[str, Any], news_summary: str, report_slot: str = "morning") -> None:
@@ -574,7 +743,10 @@ def update_summary(report: Dict[str, Any], news_summary: str, report_slot: str =
         # previous Evening row when rerunning the same slot, then append one row.
         preserved = [
             item for item in existing
-            if not isinstance(item, dict) or item.get("type") != "news_trend_afternoon"
+            if (
+                not isinstance(item, dict)
+                or (item.get("type") != "news_trend_afternoon" and not is_previous_issue_summary(item))
+            )
         ]
         if not any(isinstance(item, dict) and item.get("type") == "news_trend" for item in preserved):
             morning_news = report.get("news_trend", {}) if isinstance(report.get("news_trend"), dict) else {}
@@ -587,6 +759,8 @@ def update_summary(report: Dict[str, Any], news_summary: str, report_slot: str =
 
     cleaned = []
     for item in existing:
+        if is_previous_issue_summary(item):
+            continue
         if not isinstance(item, dict) or item.get("type") in {"news_trend", "news_trend_afternoon"}:
             continue
         text = PRICE_SUMMARY_RE.sub("", clean(item.get("text"))).strip()
@@ -598,10 +772,6 @@ def update_summary(report: Dict[str, Any], news_summary: str, report_slot: str =
         item = dict(item)
         item["text"] = text
         cleaned.append(item)
-    while len(cleaned) < 2:
-        typ = "stakeholder" if len(cleaned) == 0 else "today"
-        label = "주요 이해관계자 동향" if typ == "stakeholder" else "금일 주요 일정"
-        cleaned.append({"type": typ, "text": f"{label}: 관련 자료 검수 필요."})
     cleaned = cleaned[:2]
     morning_news = report.get("news_trend", {}) if isinstance(report.get("news_trend"), dict) else {}
     evening_news = report.get("news_trend_afternoon", {}) if isinstance(report.get("news_trend_afternoon"), dict) else {}
@@ -663,10 +833,12 @@ def main() -> int:
         source = clean(old_news.get("source")) or "existing report"
         status = "preserved_existing"
     else:
-        print(f"[ERROR] 기사 후보 0건: {news_path}. fallback 문구를 넣지 않고 workflow를 실패시킵니다.")
-        return 2
+        articles = []
+        news_summary = build_news_summary(news, articles)
+        source = clean(news.get("source")) or "Naver News Search HTML + Daum News Search HTML + Google News RSS"
+        status = "no_articles"
 
-    if len(articles) < a.min_required:
+    if articles and len(articles) < a.min_required:
         print(f"[ERROR] 기사 후보 {len(articles)}건: 최소 {a.min_required}건 미달")
         return 2
 

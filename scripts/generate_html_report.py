@@ -152,8 +152,12 @@ def text_of(item: Any) -> str:
 
 def render_summary(data: Mapping[str, Any]) -> str:
     rows = []
-    for item in list_of(data.get("summary"))[:4]:
+    for item in list_of(data.get("summary")):
+        if isinstance(item, Mapping) and item.get("type") == "stakeholder":
+            continue
         text = text_of(item)
+        if text.startswith("전일 주요 이슈:") or text.startswith("주요 이해관계자 동향:"):
+            continue
         if text.startswith("주요 이해관계자 동향:"):
             text = "전일 주요 이슈:" + text.split(":", 1)[1]
         if text.startswith("전일 주요 이슈:") and "관련 자료 찾지 못함" in text:
@@ -162,13 +166,6 @@ def render_summary(data: Mapping[str, Any]) -> str:
             text = "금일 주요 일정: 주요 일정 없음."
         if text:
             rows.append(f'<div class="summary-item"><span class="summary-dot"></span><span>{esc(text)}</span></div>')
-    defaults = [
-        "전일 주요 이해관계자·정책 동향은 일정 및 기사 기준 확인 필요",
-        "금일 주요 일정은 정부·국회·산업 현안과의 연계 가능성 중심 모니터링 필요",
-        "조간 보도는 정유·석유화학·LNG 업계 관련 대표 기사 중심 정리",
-    ]
-    while len(rows) < 3:
-        rows.append(f'<div class="summary-item"><span class="summary-dot"></span><span>{defaults[len(rows)]}</span></div>')
     return '<div class="summary-body">' + "\n".join(rows[:4]) + '</div>'
 
 

@@ -636,10 +636,10 @@ def main() -> int:
             "success": False,
         }
         atomic_write_json(out_path, payload)
-        print(f"[ERROR] 기사 후보 수집 실패: {out_path} / articles=0")
+        print(f"[WARN] 기사 후보 0건: {out_path} / articles=0")
         if errors:
-            print("[ERROR]", " | ".join(errors[:8]))
-        return 2
+            print("[WARN]", " | ".join(errors[:8]))
+        return 0
 
     # Keep collector metadata focused on the leading stories. The report
     # application step rebuilds its final headline from representative items.

@@ -1,1620 +1,1620 @@
-﻿{
-    "report":  {
-                   "report_title":  "Daily Issue Report",
-                   "header_title":  "Daily Issue Report",
-                   "report_badge":  "정유 · 석유화학 · LNG",
-                   "report_date":  "2026-04-28",
-                   "display_date":  "4/28(화)",
-                   "previous_day_label":  "4/27(월)",
-                   "today_label":  "4/28(화)",
-                   "generated_at":  "2026-05-21 16:15:48 KST",
-                   "report_version":  "safetimes-direct-v1.0",
-                   "review_status":  "자동생성 초안"
-               },
-    "summary":  [
-                    {
-                        "type":  "schedule",
-                        "text":  "세이프타임즈 \u0027[오늘의 주요일정·28일] 이재명 대통령 6차 비상경제점검회의\u0027 원문을 기준으로 정유·석화·LNG 관련성이 있는 정책·경제·산업 일정을 선별함. 가격 그래프는 기준일 전일 기준 과거 2개월(2/27~4/27)만 표시하며, 값이 0인 가격은 제외."
-                    },
-                    {
-                        "type":  "price",
-                        "text":  "가격 카드와 그래프는 history.json 및 오피넷 가격 데이터를 기준으로 병합합니다."
-                    },
-                    {
-                        "type":  "review",
-                        "text":  "일정 관련성 평가는 키워드 기반 자동 분류이므로 최종 보고 전 확인이 필요합니다."
-                    }
-                ],
-    "issues":  [
-                   {
-                       "category":  "주요일정",
-                       "title":  "18회 국무회의 겸 6차 비상경제점검회의",
-                       "description":  "청와대",
-                       "grade":  "B 주시",
-                       "location":  "청와대",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   },
-                   {
-                       "category":  "주요일정",
-                       "title":  "국무회의",
-                       "description":  "청와대",
-                       "grade":  "B 주시",
-                       "location":  "청와대",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   },
-                   {
-                       "category":  "주요일정",
-                       "title":  "우원식 국회의장",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
-                       "grade":  "B 주시",
-                       "location":  "",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   },
-                   {
-                       "category":  "주요일정",
-                       "title":  "다이가 미에리냐 라트비아 국회의장 회담",
-                       "description":  "국회접견실",
-                       "grade":  "B 주시",
-                       "location":  "국회접견실",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   },
-                   {
-                       "category":  "주요일정",
-                       "title":  "",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
-                       "grade":  "B 주시",
-                       "location":  "",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   },
-                   {
-                       "category":  "주요일정",
-                       "title":  "흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
-                       "description":  "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
-                       "grade":  "B 주시",
-                       "location":  "",
-                       "links":  [
-                                     {
-                                         "label":  "관련 기사 없음",
-                                         "url":  ""
-                                     }
-                                 ]
-                   }
-               ],
-    "schedules":  [
-                      {
-                          "time":  "10:00",
-                          "org":  "정치",
-                          "title":  "18회 국무회의 겸 6차 비상경제점검회의(10:00 청와대)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "정치",
-                          "title":  "국무회의(10:00 청와대)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "-",
-                          "org":  "정치",
-                          "title":  "우원식 국회의장",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "11:00",
-                          "org":  "정치",
-                          "title":  "다이가 미에리냐 라트비아 국회의장 회담(11:00 국회접견실)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "-",
-                          "org":  "국회",
-                          "title":  "",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "정치",
-                          "title":  "이준석 대표, 흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "정치",
-                          "title":  "천하람 원내대표, 흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 국회 의원회관 제3세미나실)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "14:00",
-                          "org":  "재경부",
-                          "title":  "주한미국상공회의소 면담(14:00)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "-",
-                          "org":  "재경부",
-                          "title":  "홍콩·싱가포르 투자자 면담(홍콩·싱가포르)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "기획처",
-                          "title":  "국무회의 겸 비상경제본부회의(10:00 청와대)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "14:00",
-                          "org":  "기획처",
-                          "title":  "\u0027국민과 함께 만드는 나라살림\u0027 타운홀 미팅(14:00 서울 명동)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "기획처",
-                          "title":  "복권위원회 전체회의(10:00)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "14:00",
-                          "org":  "기획처",
-                          "title":  "\u0027국민과 함께 만드는 나라살림\u0027 타운홀 미팅(14:00 서울 명동)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "공정위",
-                          "title":  "국무회의(10:00 청와대)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "14:30",
-                          "org":  "공정위",
-                          "title":  "2030자문단 발대식(14:30 한국공정거래조정원)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "09:30",
-                          "org":  "경제",
-                          "title":  "이찬진 금융감독원장, 금융감독원·금융연수원·은행연합회·지방지주 간 사외이사 양성 및 역량 강화를 위한 업무협약식(09:30 은행회관)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "11:00",
-                          "org":  "경제",
-                          "title":  "이찬진 금융감독원장, 주례 임원회의(11:00)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "16:30",
-                          "org":  "산업부",
-                          "title":  "조선·해운 상생발전 전략협의회(16:30 서울 롯데호텔)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "-",
-                          "org":  "산업",
-                          "title":  "여한구 산업부 통상교섭본부장, 국외출장(26~28 싱가포르)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      },
-                      {
-                          "time":  "10:00",
-                          "org":  "국토부",
-                          "title":  "국토위 국토법안심사소위(10:00 국회)",
-                          "relevance":  "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
-                      }
-                  ],
-    "news_trend":  {
-                       "summary":  "대표 출처는 세이프타임즈 오늘의 주요일정입니다. 기사 제목: [오늘의 주요일정·28일] 이재명 대통령 6차 비상경제점검회의",
-                       "articles":  [
-                                        {
-                                            "title":  "[오늘의 주요일정·28일] 이재명 대통령 6차 비상경제점검회의",
-                                            "press":  "세이프타임즈",
-                                            "url":  "https://www.safetimes.co.kr/news/articleView.html?idxno=242299",
-                                            "summary":  "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
-                                        }
-                                    ],
-                       "trend_paragraphs":  [
-                                                "세이프타임즈는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
-                                            ]
-                   },
-    "quality_control":  {
-                            "quality_notes":  [
-                                                  "세이프타임즈 주요일정 원문 기반 자동 생성",
-                                                  "정유·석화·LNG 관련성은 키워드 기반 자동 분류",
-                                                  "가격 추이 그래프는 기준일 전일 기준 과거 2개월(2/27~4/27)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
-                                                  "값이 0인 가격은 그래프 이력에서 제외했습니다.",
-                                                  "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
-                                              ],
-                            "sources":  [
-                                            {
-                                                "name":  "세이프타임즈 오늘의 주요일정",
-                                                "type":  "schedule",
-                                                "url":  "https://www.safetimes.co.kr/news/articleView.html?idxno=242299"
-                                            },
-                                            {
-                                                "name":  "장기 가격 이력 history.json",
-                                                "type":  "price-history",
-                                                "url":  ""
-                                            },
-                                            {
-                                                "name":  "오피넷 국제유가 \u003e 원유",
-                                                "type":  "price",
-                                                "url":  ""
-                                            },
-                                            {
-                                                "name":  "오피넷 국제유가 \u003e 석유제품",
-                                                "type":  "price",
-                                                "url":  ""
-                                            },
-                                            {
-                                                "name":  "장기 가격 이력 history.json",
-                                                "type":  "price-history",
-                                                "url":  ""
-                                            }
-                                        ]
-                        },
-    "automation":  {
-                       "safetimes_direct":  {
-                                                "created_at":  "2026-05-21 16:15:48 KST",
-                                                "article_idxno":  242299,
-                                                "script":  "backfill_reports.py direct builder"
-                                            },
-                       "opinet_prices":  {
-                                             "price_json_used":  false,
-                                             "source_date":  "",
-                                             "history_schema_version":  "1.3",
-                                             "history_period":  {
-                                                                    "start":  "2026-01-01",
-                                                                    "end":  "2026-05-20"
-                                                                },
-                                             "chart_window":  {
-                                                                  "start":  "2026-02-27",
-                                                                  "end":  "2026-04-27",
-                                                                  "rule":  "report_date - 1 day, then minus 2 calendar months"
-                                                              },
-                                             "crude_chart_source":  "history.json window",
-                                             "products_chart_source":  "history.json window",
-                                             "merged_at":  "2026-05-21 16:15:48 KST",
-                                             "merge_script":  "merge_prices_into_report.py v1.4",
-                                             "needs_review":  true
-                                         }
-                   },
-    "prices":  {
-                   "unit":  "$/Bbl",
-                   "price_data_note":  "※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.",
-                   "crude":  {
-                                 "base_label":  "4/27",
-                                 "cards":  [
-                                               {
-                                                   "label":  "Brent",
-                                                   "value":  108.23,
-                                                   "change":  2.9,
-                                                   "direction":  "up",
-                                                   "unit":  "$/Bbl"
-                                               },
-                                               {
-                                                   "label":  "WTI",
-                                                   "value":  96.37,
-                                                   "change":  1.97,
-                                                   "direction":  "up",
-                                                   "unit":  "$/Bbl"
-                                               },
-                                               {
-                                                   "label":  "Dubai",
-                                                   "value":  104.2,
-                                                   "change":  -3.0,
-                                                   "direction":  "down",
-                                                   "unit":  "$/Bbl"
-                                               }
-                                           ],
-                                 "chart_period_label":  "2/27~4/27",
-                                 "chart_window":  {
-                                                      "start":  "2026-02-27",
-                                                      "end":  "2026-04-27",
-                                                      "rule":  "report_date - 1 day, then minus 2 calendar months"
-                                                  },
-                                 "chart_series":  {
-                                                      "Brent":  [
-                                                                    {
-                                                                        "date":  "2026-02-27",
-                                                                        "label":  "2/27",
-                                                                        "value":  72.48
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-02",
-                                                                        "label":  "3/2",
-                                                                        "value":  77.74
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-03",
-                                                                        "label":  "3/3",
-                                                                        "value":  81.4
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-04",
-                                                                        "label":  "3/4",
-                                                                        "value":  81.4
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-05",
-                                                                        "label":  "3/5",
-                                                                        "value":  85.41
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-06",
-                                                                        "label":  "3/6",
-                                                                        "value":  92.69
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-09",
-                                                                        "label":  "3/9",
-                                                                        "value":  98.96
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-10",
-                                                                        "label":  "3/10",
-                                                                        "value":  87.8
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-11",
-                                                                        "label":  "3/11",
-                                                                        "value":  91.98
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-12",
-                                                                        "label":  "3/12",
-                                                                        "value":  100.46
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-13",
-                                                                        "label":  "3/13",
-                                                                        "value":  103.14
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-16",
-                                                                        "label":  "3/16",
-                                                                        "value":  100.21
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-17",
-                                                                        "label":  "3/17",
-                                                                        "value":  103.42
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-18",
-                                                                        "label":  "3/18",
-                                                                        "value":  107.38
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-19",
-                                                                        "label":  "3/19",
-                                                                        "value":  108.65
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-20",
-                                                                        "label":  "3/20",
-                                                                        "value":  112.19
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-23",
-                                                                        "label":  "3/23",
-                                                                        "value":  99.94
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-24",
-                                                                        "label":  "3/24",
-                                                                        "value":  104.49
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-25",
-                                                                        "label":  "3/25",
-                                                                        "value":  102.22
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-26",
-                                                                        "label":  "3/26",
-                                                                        "value":  108.01
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-27",
-                                                                        "label":  "3/27",
-                                                                        "value":  112.57
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-30",
-                                                                        "label":  "3/30",
-                                                                        "value":  112.78
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-31",
-                                                                        "label":  "3/31",
-                                                                        "value":  118.35
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-01",
-                                                                        "label":  "4/1",
-                                                                        "value":  101.16
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-02",
-                                                                        "label":  "4/2",
-                                                                        "value":  109.03
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-06",
-                                                                        "label":  "4/6",
-                                                                        "value":  109.77
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-07",
-                                                                        "label":  "4/7",
-                                                                        "value":  109.27
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-08",
-                                                                        "label":  "4/8",
-                                                                        "value":  94.75
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-09",
-                                                                        "label":  "4/9",
-                                                                        "value":  95.92
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-10",
-                                                                        "label":  "4/10",
-                                                                        "value":  95.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-13",
-                                                                        "label":  "4/13",
-                                                                        "value":  99.36
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-14",
-                                                                        "label":  "4/14",
-                                                                        "value":  94.79
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-15",
-                                                                        "label":  "4/15",
-                                                                        "value":  94.93
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-16",
-                                                                        "label":  "4/16",
-                                                                        "value":  99.39
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-17",
-                                                                        "label":  "4/17",
-                                                                        "value":  90.38
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-20",
-                                                                        "label":  "4/20",
-                                                                        "value":  95.48
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-21",
-                                                                        "label":  "4/21",
-                                                                        "value":  98.48
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-22",
-                                                                        "label":  "4/22",
-                                                                        "value":  101.91
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-23",
-                                                                        "label":  "4/23",
-                                                                        "value":  105.07
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-24",
-                                                                        "label":  "4/24",
-                                                                        "value":  105.33
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-27",
-                                                                        "label":  "4/27",
-                                                                        "value":  108.23
-                                                                    }
-                                                                ],
-                                                      "WTI":  [
-                                                                  {
-                                                                      "date":  "2026-02-27",
-                                                                      "label":  "2/27",
-                                                                      "value":  67.02
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-02",
-                                                                      "label":  "3/2",
-                                                                      "value":  71.23
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-03",
-                                                                      "label":  "3/3",
-                                                                      "value":  74.56
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-04",
-                                                                      "label":  "3/4",
-                                                                      "value":  74.66
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-05",
-                                                                      "label":  "3/5",
-                                                                      "value":  81.01
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-06",
-                                                                      "label":  "3/6",
-                                                                      "value":  90.9
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-09",
-                                                                      "label":  "3/9",
-                                                                      "value":  94.77
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-10",
-                                                                      "label":  "3/10",
-                                                                      "value":  83.45
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-11",
-                                                                      "label":  "3/11",
-                                                                      "value":  87.25
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-12",
-                                                                      "label":  "3/12",
-                                                                      "value":  95.73
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-13",
-                                                                      "label":  "3/13",
-                                                                      "value":  98.71
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-16",
-                                                                      "label":  "3/16",
-                                                                      "value":  93.5
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-17",
-                                                                      "label":  "3/17",
-                                                                      "value":  96.21
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-18",
-                                                                      "label":  "3/18",
-                                                                      "value":  96.32
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-19",
-                                                                      "label":  "3/19",
-                                                                      "value":  96.14
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-20",
-                                                                      "label":  "3/20",
-                                                                      "value":  98.32
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-23",
-                                                                      "label":  "3/23",
-                                                                      "value":  88.13
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-24",
-                                                                      "label":  "3/24",
-                                                                      "value":  92.35
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-25",
-                                                                      "label":  "3/25",
-                                                                      "value":  90.32
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-26",
-                                                                      "label":  "3/26",
-                                                                      "value":  94.48
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-27",
-                                                                      "label":  "3/27",
-                                                                      "value":  99.64
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-30",
-                                                                      "label":  "3/30",
-                                                                      "value":  102.88
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-03-31",
-                                                                      "label":  "3/31",
-                                                                      "value":  101.38
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-01",
-                                                                      "label":  "4/1",
-                                                                      "value":  100.12
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-02",
-                                                                      "label":  "4/2",
-                                                                      "value":  111.54
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-06",
-                                                                      "label":  "4/6",
-                                                                      "value":  112.41
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-07",
-                                                                      "label":  "4/7",
-                                                                      "value":  112.95
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-08",
-                                                                      "label":  "4/8",
-                                                                      "value":  94.41
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-09",
-                                                                      "label":  "4/9",
-                                                                      "value":  97.87
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-10",
-                                                                      "label":  "4/10",
-                                                                      "value":  96.57
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-13",
-                                                                      "label":  "4/13",
-                                                                      "value":  99.08
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-14",
-                                                                      "label":  "4/14",
-                                                                      "value":  91.28
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-15",
-                                                                      "label":  "4/15",
-                                                                      "value":  91.29
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-16",
-                                                                      "label":  "4/16",
-                                                                      "value":  94.69
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-17",
-                                                                      "label":  "4/17",
-                                                                      "value":  83.85
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-20",
-                                                                      "label":  "4/20",
-                                                                      "value":  89.61
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-21",
-                                                                      "label":  "4/21",
-                                                                      "value":  92.13
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-22",
-                                                                      "label":  "4/22",
-                                                                      "value":  92.96
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-23",
-                                                                      "label":  "4/23",
-                                                                      "value":  95.85
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-24",
-                                                                      "label":  "4/24",
-                                                                      "value":  94.4
-                                                                  },
-                                                                  {
-                                                                      "date":  "2026-04-27",
-                                                                      "label":  "4/27",
-                                                                      "value":  96.37
-                                                                  }
-                                                              ],
-                                                      "Dubai":  [
-                                                                    {
-                                                                        "date":  "2026-02-27",
-                                                                        "label":  "2/27",
-                                                                        "value":  71.24
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-02",
-                                                                        "label":  "3/2",
-                                                                        "value":  80.79
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-03",
-                                                                        "label":  "3/3",
-                                                                        "value":  82.34
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-04",
-                                                                        "label":  "3/4",
-                                                                        "value":  86.34
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-05",
-                                                                        "label":  "3/5",
-                                                                        "value":  94.93
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-06",
-                                                                        "label":  "3/6",
-                                                                        "value":  100.42
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-09",
-                                                                        "label":  "3/9",
-                                                                        "value":  125.0
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-10",
-                                                                        "label":  "3/10",
-                                                                        "value":  115.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-11",
-                                                                        "label":  "3/11",
-                                                                        "value":  119.55
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-12",
-                                                                        "label":  "3/12",
-                                                                        "value":  134.4
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-13",
-                                                                        "label":  "3/13",
-                                                                        "value":  145.51
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-16",
-                                                                        "label":  "3/16",
-                                                                        "value":  153.24
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-17",
-                                                                        "label":  "3/17",
-                                                                        "value":  157.66
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-18",
-                                                                        "label":  "3/18",
-                                                                        "value":  155.55
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-19",
-                                                                        "label":  "3/19",
-                                                                        "value":  166.8
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-20",
-                                                                        "label":  "3/20",
-                                                                        "value":  158.85
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-23",
-                                                                        "label":  "3/23",
-                                                                        "value":  169.75
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-24",
-                                                                        "label":  "3/24",
-                                                                        "value":  157.03
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-25",
-                                                                        "label":  "3/25",
-                                                                        "value":  142.55
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-26",
-                                                                        "label":  "3/26",
-                                                                        "value":  113.04
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-27",
-                                                                        "label":  "3/27",
-                                                                        "value":  122.14
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-30",
-                                                                        "label":  "3/30",
-                                                                        "value":  125.29
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-03-31",
-                                                                        "label":  "3/31",
-                                                                        "value":  121.1
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-01",
-                                                                        "label":  "4/1",
-                                                                        "value":  108.9
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-02",
-                                                                        "label":  "4/2",
-                                                                        "value":  114.6
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-06",
-                                                                        "label":  "4/6",
-                                                                        "value":  120.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-07",
-                                                                        "label":  "4/7",
-                                                                        "value":  121.86
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-08",
-                                                                        "label":  "4/8",
-                                                                        "value":  101.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-09",
-                                                                        "label":  "4/9",
-                                                                        "value":  102.0
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-10",
-                                                                        "label":  "4/10",
-                                                                        "value":  100.87
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-13",
-                                                                        "label":  "4/13",
-                                                                        "value":  106.5
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-14",
-                                                                        "label":  "4/14",
-                                                                        "value":  103.18
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-15",
-                                                                        "label":  "4/15",
-                                                                        "value":  101.09
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-16",
-                                                                        "label":  "4/16",
-                                                                        "value":  101.8
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-17",
-                                                                        "label":  "4/17",
-                                                                        "value":  102.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-20",
-                                                                        "label":  "4/20",
-                                                                        "value":  98.5
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-21",
-                                                                        "label":  "4/21",
-                                                                        "value":  94.27
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-22",
-                                                                        "label":  "4/22",
-                                                                        "value":  100.4
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-23",
-                                                                        "label":  "4/23",
-                                                                        "value":  104.81
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-24",
-                                                                        "label":  "4/24",
-                                                                        "value":  107.2
-                                                                    },
-                                                                    {
-                                                                        "date":  "2026-04-27",
-                                                                        "label":  "4/27",
-                                                                        "value":  104.2
-                                                                    }
-                                                                ]
-                                                  }
-                             },
-                   "products":  {
-                                    "base_label":  "4/27",
-                                    "cards":  [
-                                                  {
-                                                      "label":  "휘발유",
-                                                      "value":  128.04,
-                                                      "change":  3.36,
-                                                      "direction":  "up",
-                                                      "unit":  "$/Bbl"
-                                                  },
-                                                  {
-                                                      "label":  "경유",
-                                                      "value":  174.04,
-                                                      "change":  1.2,
-                                                      "direction":  "up",
-                                                      "unit":  "$/Bbl"
-                                                  },
-                                                  {
-                                                      "label":  "나프타",
-                                                      "value":  119.67,
-                                                      "change":  1.37,
-                                                      "direction":  "up",
-                                                      "unit":  "$/Bbl"
-                                                  }
-                                              ],
-                                    "chart_period_label":  "2/27~4/27",
-                                    "chart_window":  {
-                                                         "start":  "2026-02-27",
-                                                         "end":  "2026-04-27",
-                                                         "rule":  "report_date - 1 day, then minus 2 calendar months"
-                                                     },
-                                    "chart_series":  {
-                                                         "Gasoline":  [
-                                                                          {
-                                                                              "date":  "2026-02-27",
-                                                                              "label":  "2/27",
-                                                                              "value":  79.64
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-02",
-                                                                              "label":  "3/2",
-                                                                              "value":  90.31
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-03",
-                                                                              "label":  "3/3",
-                                                                              "value":  95.58
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-04",
-                                                                              "label":  "3/4",
-                                                                              "value":  99.66
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-05",
-                                                                              "label":  "3/5",
-                                                                              "value":  106.28
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-06",
-                                                                              "label":  "3/6",
-                                                                              "value":  113.13
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-09",
-                                                                              "label":  "3/9",
-                                                                              "value":  139.27
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-10",
-                                                                              "label":  "3/10",
-                                                                              "value":  119.2
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-11",
-                                                                              "label":  "3/11",
-                                                                              "value":  116.76
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-12",
-                                                                              "label":  "3/12",
-                                                                              "value":  130.12
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-13",
-                                                                              "label":  "3/13",
-                                                                              "value":  136.44
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-16",
-                                                                              "label":  "3/16",
-                                                                              "value":  140.16
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-17",
-                                                                              "label":  "3/17",
-                                                                              "value":  138.84
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-18",
-                                                                              "label":  "3/18",
-                                                                              "value":  139.78
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-19",
-                                                                              "label":  "3/19",
-                                                                              "value":  151.92
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-20",
-                                                                              "label":  "3/20",
-                                                                              "value":  150.6
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-23",
-                                                                              "label":  "3/23",
-                                                                              "value":  157.22
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-24",
-                                                                              "label":  "3/24",
-                                                                              "value":  141.76
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-25",
-                                                                              "label":  "3/25",
-                                                                              "value":  131.0
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-26",
-                                                                              "label":  "3/26",
-                                                                              "value":  127.48
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-27",
-                                                                              "label":  "3/27",
-                                                                              "value":  130.51
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-30",
-                                                                              "label":  "3/30",
-                                                                              "value":  139.65
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-03-31",
-                                                                              "label":  "3/31",
-                                                                              "value":  138.45
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-01",
-                                                                              "label":  "4/1",
-                                                                              "value":  136.03
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-02",
-                                                                              "label":  "4/2",
-                                                                              "value":  144.48
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-06",
-                                                                              "label":  "4/6",
-                                                                              "value":  141.88
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-07",
-                                                                              "label":  "4/7",
-                                                                              "value":  138.22
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-08",
-                                                                              "label":  "4/8",
-                                                                              "value":  119.48
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-09",
-                                                                              "label":  "4/9",
-                                                                              "value":  130.98
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-10",
-                                                                              "label":  "4/10",
-                                                                              "value":  128.19
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-13",
-                                                                              "label":  "4/13",
-                                                                              "value":  128.48
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-14",
-                                                                              "label":  "4/14",
-                                                                              "value":  123.87
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-15",
-                                                                              "label":  "4/15",
-                                                                              "value":  119.0
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-16",
-                                                                              "label":  "4/16",
-                                                                              "value":  120.86
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-17",
-                                                                              "label":  "4/17",
-                                                                              "value":  122.19
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-20",
-                                                                              "label":  "4/20",
-                                                                              "value":  118.68
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-21",
-                                                                              "label":  "4/21",
-                                                                              "value":  118.21
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-22",
-                                                                              "label":  "4/22",
-                                                                              "value":  124.25
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-23",
-                                                                              "label":  "4/23",
-                                                                              "value":  125.92
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-24",
-                                                                              "label":  "4/24",
-                                                                              "value":  124.68
-                                                                          },
-                                                                          {
-                                                                              "date":  "2026-04-27",
-                                                                              "label":  "4/27",
-                                                                              "value":  128.04
-                                                                          }
-                                                                      ],
-                                                         "Diesel":  [
-                                                                        {
-                                                                            "date":  "2026-02-27",
-                                                                            "label":  "2/27",
-                                                                            "value":  92.9
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-02",
-                                                                            "label":  "3/2",
-                                                                            "value":  115.13
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-03",
-                                                                            "label":  "3/3",
-                                                                            "value":  125.86
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-04",
-                                                                            "label":  "3/4",
-                                                                            "value":  145.13
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-05",
-                                                                            "label":  "3/5",
-                                                                            "value":  153.18
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-06",
-                                                                            "label":  "3/6",
-                                                                            "value":  155.74
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-09",
-                                                                            "label":  "3/9",
-                                                                            "value":  185.41
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-10",
-                                                                            "label":  "3/10",
-                                                                            "value":  161.37
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-11",
-                                                                            "label":  "3/11",
-                                                                            "value":  164.56
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-12",
-                                                                            "label":  "3/12",
-                                                                            "value":  194.5
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-13",
-                                                                            "label":  "3/13",
-                                                                            "value":  192.48
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-16",
-                                                                            "label":  "3/16",
-                                                                            "value":  190.93
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-17",
-                                                                            "label":  "3/17",
-                                                                            "value":  198.2
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-18",
-                                                                            "label":  "3/18",
-                                                                            "value":  198.87
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-19",
-                                                                            "label":  "3/19",
-                                                                            "value":  224.49
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-20",
-                                                                            "label":  "3/20",
-                                                                            "value":  222.99
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-23",
-                                                                            "label":  "3/23",
-                                                                            "value":  242.89
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-24",
-                                                                            "label":  "3/24",
-                                                                            "value":  219.9
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-25",
-                                                                            "label":  "3/25",
-                                                                            "value":  205.54
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-26",
-                                                                            "label":  "3/26",
-                                                                            "value":  216.56
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-27",
-                                                                            "label":  "3/27",
-                                                                            "value":  237.83
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-30",
-                                                                            "label":  "3/30",
-                                                                            "value":  252.14
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-03-31",
-                                                                            "label":  "3/31",
-                                                                            "value":  238.88
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-01",
-                                                                            "label":  "4/1",
-                                                                            "value":  245.99
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-02",
-                                                                            "label":  "4/2",
-                                                                            "value":  292.8
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-06",
-                                                                            "label":  "4/6",
-                                                                            "value":  272.65
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-07",
-                                                                            "label":  "4/7",
-                                                                            "value":  255.33
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-08",
-                                                                            "label":  "4/8",
-                                                                            "value":  198.37
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-09",
-                                                                            "label":  "4/9",
-                                                                            "value":  210.99
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-10",
-                                                                            "label":  "4/10",
-                                                                            "value":  210.13
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-13",
-                                                                            "label":  "4/13",
-                                                                            "value":  203.21
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-14",
-                                                                            "label":  "4/14",
-                                                                            "value":  191.74
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-15",
-                                                                            "label":  "4/15",
-                                                                            "value":  173.32
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-16",
-                                                                            "label":  "4/16",
-                                                                            "value":  172.23
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-17",
-                                                                            "label":  "4/17",
-                                                                            "value":  170.31
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-20",
-                                                                            "label":  "4/20",
-                                                                            "value":  155.07
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-21",
-                                                                            "label":  "4/21",
-                                                                            "value":  152.84
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-22",
-                                                                            "label":  "4/22",
-                                                                            "value":  167.2
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-23",
-                                                                            "label":  "4/23",
-                                                                            "value":  171.26
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-24",
-                                                                            "label":  "4/24",
-                                                                            "value":  172.84
-                                                                        },
-                                                                        {
-                                                                            "date":  "2026-04-27",
-                                                                            "label":  "4/27",
-                                                                            "value":  174.04
-                                                                        }
-                                                                    ],
-                                                         "Naphtha":  [
-                                                                         {
-                                                                             "date":  "2026-02-27",
-                                                                             "label":  "2/27",
-                                                                             "value":  68.87
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-02",
-                                                                             "label":  "3/2",
-                                                                             "value":  79.35
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-03",
-                                                                             "label":  "3/3",
-                                                                             "value":  82.24
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-04",
-                                                                             "label":  "3/4",
-                                                                             "value":  86.57
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-05",
-                                                                             "label":  "3/5",
-                                                                             "value":  86.9
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-06",
-                                                                             "label":  "3/6",
-                                                                             "value":  88.1
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-09",
-                                                                             "label":  "3/9",
-                                                                             "value":  112.88
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-10",
-                                                                             "label":  "3/10",
-                                                                             "value":  96.21
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-11",
-                                                                             "label":  "3/11",
-                                                                             "value":  101.6
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-12",
-                                                                             "label":  "3/12",
-                                                                             "value":  113.3
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-13",
-                                                                             "label":  "3/13",
-                                                                             "value":  122.46
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-16",
-                                                                             "label":  "3/16",
-                                                                             "value":  127.95
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-17",
-                                                                             "label":  "3/17",
-                                                                             "value":  124.53
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-18",
-                                                                             "label":  "3/18",
-                                                                             "value":  124.44
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-19",
-                                                                             "label":  "3/19",
-                                                                             "value":  137.72
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-20",
-                                                                             "label":  "3/20",
-                                                                             "value":  133.97
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-23",
-                                                                             "label":  "3/23",
-                                                                             "value":  138.75
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-24",
-                                                                             "label":  "3/24",
-                                                                             "value":  127.52
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-25",
-                                                                             "label":  "3/25",
-                                                                             "value":  117.62
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-26",
-                                                                             "label":  "3/26",
-                                                                             "value":  129.12
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-27",
-                                                                             "label":  "3/27",
-                                                                             "value":  133.74
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-30",
-                                                                             "label":  "3/30",
-                                                                             "value":  141.53
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-03-31",
-                                                                             "label":  "3/31",
-                                                                             "value":  141.72
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-01",
-                                                                             "label":  "4/1",
-                                                                             "value":  136.69
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-02",
-                                                                             "label":  "4/2",
-                                                                             "value":  141.26
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-06",
-                                                                             "label":  "4/6",
-                                                                             "value":  137.08
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-07",
-                                                                             "label":  "4/7",
-                                                                             "value":  137.24
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-08",
-                                                                             "label":  "4/8",
-                                                                             "value":  118.46
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-09",
-                                                                             "label":  "4/9",
-                                                                             "value":  124.14
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-10",
-                                                                             "label":  "4/10",
-                                                                             "value":  123.14
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-13",
-                                                                             "label":  "4/13",
-                                                                             "value":  126.04
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-14",
-                                                                             "label":  "4/14",
-                                                                             "value":  121.59
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-15",
-                                                                             "label":  "4/15",
-                                                                             "value":  116.14
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-16",
-                                                                             "label":  "4/16",
-                                                                             "value":  115.88
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-17",
-                                                                             "label":  "4/17",
-                                                                             "value":  115.6
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-20",
-                                                                             "label":  "4/20",
-                                                                             "value":  106.04
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-21",
-                                                                             "label":  "4/21",
-                                                                             "value":  103.99
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-22",
-                                                                             "label":  "4/22",
-                                                                             "value":  110.61
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-23",
-                                                                             "label":  "4/23",
-                                                                             "value":  114.9
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-24",
-                                                                             "label":  "4/24",
-                                                                             "value":  118.3
-                                                                         },
-                                                                         {
-                                                                             "date":  "2026-04-27",
-                                                                             "label":  "4/27",
-                                                                             "value":  119.67
-                                                                         }
-                                                                     ]
-                                                     }
-                                }
-               }
+{
+  "report": {
+    "report_title": "Daily Issue Report",
+    "header_title": "Daily Issue Report",
+    "report_badge": "정유 · 석유화학 · LNG",
+    "report_date": "2026-04-28",
+    "display_date": "4/28(화)",
+    "previous_day_label": "4/27(월)",
+    "today_label": "4/28(화)",
+    "generated_at": "2026-05-21 16:15:48 KST",
+    "report_version": "safetimes-direct-v1.0",
+    "review_status": "자동생성 초안"
+  },
+  "summary": [
+    {
+      "type": "schedule",
+      "text": "세이프타임즈 '[오늘의 주요일정·28일] 이재명 대통령 6차 비상경제점검회의' 원문을 기준으로 정유·석화·LNG 관련성이 있는 정책·경제·산업 일정을 선별함."
+    },
+    {
+      "type": "price",
+      "text": "가격 카드와 그래프는 history.json 및 오피넷 가격 데이터를 기준으로 병합합니다."
+    },
+    {
+      "type": "news_trend",
+      "text": "(Morning) 해당 시간대 주요 보도 확인 건 없음."
+    }
+  ],
+  "issues": [
+    {
+      "category": "주요일정",
+      "title": "18회 국무회의 겸 6차 비상경제점검회의",
+      "description": "청와대",
+      "grade": "B 주시",
+      "location": "청와대",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "category": "주요일정",
+      "title": "국무회의",
+      "description": "청와대",
+      "grade": "B 주시",
+      "location": "청와대",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "category": "주요일정",
+      "title": "우원식 국회의장",
+      "description": "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+      "grade": "B 주시",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "category": "주요일정",
+      "title": "다이가 미에리냐 라트비아 국회의장 회담",
+      "description": "국회접견실",
+      "grade": "B 주시",
+      "location": "국회접견실",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "category": "주요일정",
+      "title": "",
+      "description": "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+      "grade": "B 주시",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "category": "주요일정",
+      "title": "흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
+      "description": "정유 · 석화 · LNG 관련 정책 · 경제 · 산업 일정으로 분류",
+      "grade": "B 주시",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "time": "10:00",
+      "org": "정치",
+      "title": "18회 국무회의 겸 6차 비상경제점검회의(10:00 청와대)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "정치",
+      "title": "국무회의(10:00 청와대)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "-",
+      "org": "정치",
+      "title": "우원식 국회의장",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "11:00",
+      "org": "정치",
+      "title": "다이가 미에리냐 라트비아 국회의장 회담(11:00 국회접견실)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "-",
+      "org": "국회",
+      "title": "",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "정치",
+      "title": "이준석 대표, 흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 의원회관 제3세미나실",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "정치",
+      "title": "천하람 원내대표, 흔들리는 원자력병원, 해법은 무엇인가 토론회(10:00 국회 의원회관 제3세미나실)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "14:00",
+      "org": "재경부",
+      "title": "주한미국상공회의소 면담(14:00)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "-",
+      "org": "재경부",
+      "title": "홍콩·싱가포르 투자자 면담(홍콩·싱가포르)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "기획처",
+      "title": "국무회의 겸 비상경제본부회의(10:00 청와대)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "14:00",
+      "org": "기획처",
+      "title": "'국민과 함께 만드는 나라살림' 타운홀 미팅(14:00 서울 명동)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "기획처",
+      "title": "복권위원회 전체회의(10:00)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "14:00",
+      "org": "기획처",
+      "title": "'국민과 함께 만드는 나라살림' 타운홀 미팅(14:00 서울 명동)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "공정위",
+      "title": "국무회의(10:00 청와대)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "14:30",
+      "org": "공정위",
+      "title": "2030자문단 발대식(14:30 한국공정거래조정원)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "09:30",
+      "org": "경제",
+      "title": "이찬진 금융감독원장, 금융감독원·금융연수원·은행연합회·지방지주 간 사외이사 양성 및 역량 강화를 위한 업무협약식(09:30 은행회관)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "11:00",
+      "org": "경제",
+      "title": "이찬진 금융감독원장, 주례 임원회의(11:00)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "16:30",
+      "org": "산업부",
+      "title": "조선·해운 상생발전 전략협의회(16:30 서울 롯데호텔)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "-",
+      "org": "산업",
+      "title": "여한구 산업부 통상교섭본부장, 국외출장(26~28 싱가포르)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    },
+    {
+      "time": "10:00",
+      "org": "국토부",
+      "title": "국토위 국토법안심사소위(10:00 국회)",
+      "relevance": "정유·석화·LNG 관련 정책·경제·산업 일정으로 분류"
+    }
+  ],
+  "news_trend": {
+    "summary": "해당 시간대 주요 보도 확인 건 없음.",
+    "articles": [
+      {
+        "title": "[오늘의 주요일정·28일] 이재명 대통령 6차 비상경제점검회의",
+        "press": "세이프타임즈",
+        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242299",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요"
+      }
+    ],
+    "trend_paragraphs": [
+      "세이프타임즈는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+    ]
+  },
+  "quality_control": {
+    "quality_notes": [
+      "세이프타임즈 주요일정 원문 기반 자동 생성",
+      "정유·석화·LNG 관련성은 키워드 기반 자동 분류",
+      "가격 추이 그래프는 기준일 전일 기준 과거 2개월(2/27~4/27)만 표시하며, 전체 장기 데이터는 history.json에 보유합니다.",
+      "값이 0인 가격은 그래프 이력에서 제외했습니다.",
+      "과거 날짜에 일별 가격 JSON이 없더라도 history.json에서 가격 카드와 그래프를 생성합니다."
+    ],
+    "sources": [
+      {
+        "name": "세이프타임즈 오늘의 주요일정",
+        "type": "schedule",
+        "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242299"
+      },
+      {
+        "name": "장기 가격 이력 history.json",
+        "type": "price-history",
+        "url": ""
+      },
+      {
+        "name": "오피넷 국제유가 > 원유",
+        "type": "price",
+        "url": ""
+      },
+      {
+        "name": "오피넷 국제유가 > 석유제품",
+        "type": "price",
+        "url": ""
+      },
+      {
+        "name": "장기 가격 이력 history.json",
+        "type": "price-history",
+        "url": ""
+      }
+    ]
+  },
+  "automation": {
+    "safetimes_direct": {
+      "created_at": "2026-05-21 16:15:48 KST",
+      "article_idxno": 242299,
+      "script": "backfill_reports.py direct builder"
+    },
+    "opinet_prices": {
+      "price_json_used": false,
+      "source_date": "",
+      "history_schema_version": "1.3",
+      "history_period": {
+        "start": "2026-01-01",
+        "end": "2026-05-20"
+      },
+      "chart_window": {
+        "start": "2026-02-27",
+        "end": "2026-04-27",
+        "rule": "report_date - 1 day, then minus 2 calendar months"
+      },
+      "crude_chart_source": "history.json window",
+      "products_chart_source": "history.json window",
+      "merged_at": "2026-05-21 16:15:48 KST",
+      "merge_script": "merge_prices_into_report.py v1.4",
+      "needs_review": true
+    }
+  },
+  "prices": {
+    "unit": "$/Bbl",
+    "price_data_note": "※ 오피넷 기준. 과거 2개월만 표시, 값이 0인 가격은 제외.",
+    "crude": {
+      "base_label": "4/27",
+      "cards": [
+        {
+          "label": "Brent",
+          "value": 108.23,
+          "change": 2.9,
+          "direction": "up",
+          "unit": "$/Bbl"
+        },
+        {
+          "label": "WTI",
+          "value": 96.37,
+          "change": 1.97,
+          "direction": "up",
+          "unit": "$/Bbl"
+        },
+        {
+          "label": "Dubai",
+          "value": 104.2,
+          "change": -3.0,
+          "direction": "down",
+          "unit": "$/Bbl"
+        }
+      ],
+      "chart_period_label": "2/27~4/27",
+      "chart_window": {
+        "start": "2026-02-27",
+        "end": "2026-04-27",
+        "rule": "report_date - 1 day, then minus 2 calendar months"
+      },
+      "chart_series": {
+        "Brent": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 72.48
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 77.74
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 81.4
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 81.4
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 85.41
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 92.69
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 98.96
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 87.8
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 91.98
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 100.46
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 103.14
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 100.21
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 103.42
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 107.38
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 108.65
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 112.19
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 99.94
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 104.49
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 102.22
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 108.01
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 112.57
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 112.78
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 118.35
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 101.16
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 109.03
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 109.77
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 109.27
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 94.75
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 95.92
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 95.2
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 99.36
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 94.79
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 94.93
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 99.39
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 90.38
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 95.48
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 98.48
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 101.91
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 105.07
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 105.33
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 108.23
+          }
+        ],
+        "WTI": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 67.02
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 71.23
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 74.56
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 74.66
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 81.01
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 90.9
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 94.77
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 83.45
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 87.25
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 95.73
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 98.71
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 93.5
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 96.21
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 96.32
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 96.14
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 98.32
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 88.13
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 92.35
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 90.32
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 94.48
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 99.64
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 102.88
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 101.38
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 100.12
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 111.54
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 112.41
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 112.95
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 94.41
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 97.87
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 96.57
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 99.08
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 91.28
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 91.29
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 94.69
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 83.85
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 89.61
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 92.13
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 92.96
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 95.85
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 94.4
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 96.37
+          }
+        ],
+        "Dubai": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 71.24
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 80.79
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 82.34
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 86.34
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 94.93
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 100.42
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 125.0
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 115.2
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 119.55
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 134.4
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 145.51
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 153.24
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 157.66
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 155.55
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 166.8
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 158.85
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 169.75
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 157.03
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 142.55
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 113.04
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 122.14
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 125.29
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 121.1
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 108.9
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 114.6
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 120.2
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 121.86
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 101.2
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 102.0
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 100.87
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 106.5
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 103.18
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 101.09
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 101.8
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 102.2
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 98.5
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 94.27
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 100.4
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 104.81
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 107.2
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 104.2
+          }
+        ]
+      }
+    },
+    "products": {
+      "base_label": "4/27",
+      "cards": [
+        {
+          "label": "휘발유",
+          "value": 128.04,
+          "change": 3.36,
+          "direction": "up",
+          "unit": "$/Bbl"
+        },
+        {
+          "label": "경유",
+          "value": 174.04,
+          "change": 1.2,
+          "direction": "up",
+          "unit": "$/Bbl"
+        },
+        {
+          "label": "나프타",
+          "value": 119.67,
+          "change": 1.37,
+          "direction": "up",
+          "unit": "$/Bbl"
+        }
+      ],
+      "chart_period_label": "2/27~4/27",
+      "chart_window": {
+        "start": "2026-02-27",
+        "end": "2026-04-27",
+        "rule": "report_date - 1 day, then minus 2 calendar months"
+      },
+      "chart_series": {
+        "Gasoline": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 79.64
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 90.31
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 95.58
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 99.66
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 106.28
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 113.13
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 139.27
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 119.2
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 116.76
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 130.12
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 136.44
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 140.16
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 138.84
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 139.78
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 151.92
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 150.6
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 157.22
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 141.76
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 131.0
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 127.48
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 130.51
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 139.65
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 138.45
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 136.03
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 144.48
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 141.88
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 138.22
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 119.48
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 130.98
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 128.19
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 128.48
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 123.87
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 119.0
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 120.86
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 122.19
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 118.68
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 118.21
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 124.25
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 125.92
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 124.68
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 128.04
+          }
+        ],
+        "Diesel": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 92.9
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 115.13
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 125.86
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 145.13
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 153.18
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 155.74
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 185.41
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 161.37
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 164.56
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 194.5
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 192.48
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 190.93
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 198.2
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 198.87
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 224.49
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 222.99
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 242.89
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 219.9
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 205.54
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 216.56
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 237.83
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 252.14
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 238.88
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 245.99
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 292.8
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 272.65
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 255.33
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 198.37
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 210.99
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 210.13
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 203.21
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 191.74
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 173.32
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 172.23
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 170.31
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 155.07
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 152.84
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 167.2
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 171.26
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 172.84
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 174.04
+          }
+        ],
+        "Naphtha": [
+          {
+            "date": "2026-02-27",
+            "label": "2/27",
+            "value": 68.87
+          },
+          {
+            "date": "2026-03-02",
+            "label": "3/2",
+            "value": 79.35
+          },
+          {
+            "date": "2026-03-03",
+            "label": "3/3",
+            "value": 82.24
+          },
+          {
+            "date": "2026-03-04",
+            "label": "3/4",
+            "value": 86.57
+          },
+          {
+            "date": "2026-03-05",
+            "label": "3/5",
+            "value": 86.9
+          },
+          {
+            "date": "2026-03-06",
+            "label": "3/6",
+            "value": 88.1
+          },
+          {
+            "date": "2026-03-09",
+            "label": "3/9",
+            "value": 112.88
+          },
+          {
+            "date": "2026-03-10",
+            "label": "3/10",
+            "value": 96.21
+          },
+          {
+            "date": "2026-03-11",
+            "label": "3/11",
+            "value": 101.6
+          },
+          {
+            "date": "2026-03-12",
+            "label": "3/12",
+            "value": 113.3
+          },
+          {
+            "date": "2026-03-13",
+            "label": "3/13",
+            "value": 122.46
+          },
+          {
+            "date": "2026-03-16",
+            "label": "3/16",
+            "value": 127.95
+          },
+          {
+            "date": "2026-03-17",
+            "label": "3/17",
+            "value": 124.53
+          },
+          {
+            "date": "2026-03-18",
+            "label": "3/18",
+            "value": 124.44
+          },
+          {
+            "date": "2026-03-19",
+            "label": "3/19",
+            "value": 137.72
+          },
+          {
+            "date": "2026-03-20",
+            "label": "3/20",
+            "value": 133.97
+          },
+          {
+            "date": "2026-03-23",
+            "label": "3/23",
+            "value": 138.75
+          },
+          {
+            "date": "2026-03-24",
+            "label": "3/24",
+            "value": 127.52
+          },
+          {
+            "date": "2026-03-25",
+            "label": "3/25",
+            "value": 117.62
+          },
+          {
+            "date": "2026-03-26",
+            "label": "3/26",
+            "value": 129.12
+          },
+          {
+            "date": "2026-03-27",
+            "label": "3/27",
+            "value": 133.74
+          },
+          {
+            "date": "2026-03-30",
+            "label": "3/30",
+            "value": 141.53
+          },
+          {
+            "date": "2026-03-31",
+            "label": "3/31",
+            "value": 141.72
+          },
+          {
+            "date": "2026-04-01",
+            "label": "4/1",
+            "value": 136.69
+          },
+          {
+            "date": "2026-04-02",
+            "label": "4/2",
+            "value": 141.26
+          },
+          {
+            "date": "2026-04-06",
+            "label": "4/6",
+            "value": 137.08
+          },
+          {
+            "date": "2026-04-07",
+            "label": "4/7",
+            "value": 137.24
+          },
+          {
+            "date": "2026-04-08",
+            "label": "4/8",
+            "value": 118.46
+          },
+          {
+            "date": "2026-04-09",
+            "label": "4/9",
+            "value": 124.14
+          },
+          {
+            "date": "2026-04-10",
+            "label": "4/10",
+            "value": 123.14
+          },
+          {
+            "date": "2026-04-13",
+            "label": "4/13",
+            "value": 126.04
+          },
+          {
+            "date": "2026-04-14",
+            "label": "4/14",
+            "value": 121.59
+          },
+          {
+            "date": "2026-04-15",
+            "label": "4/15",
+            "value": 116.14
+          },
+          {
+            "date": "2026-04-16",
+            "label": "4/16",
+            "value": 115.88
+          },
+          {
+            "date": "2026-04-17",
+            "label": "4/17",
+            "value": 115.6
+          },
+          {
+            "date": "2026-04-20",
+            "label": "4/20",
+            "value": 106.04
+          },
+          {
+            "date": "2026-04-21",
+            "label": "4/21",
+            "value": 103.99
+          },
+          {
+            "date": "2026-04-22",
+            "label": "4/22",
+            "value": 110.61
+          },
+          {
+            "date": "2026-04-23",
+            "label": "4/23",
+            "value": 114.9
+          },
+          {
+            "date": "2026-04-24",
+            "label": "4/24",
+            "value": 118.3
+          },
+          {
+            "date": "2026-04-27",
+            "label": "4/27",
+            "value": 119.67
+          }
+        ]
+      }
+    }
+  }
 }

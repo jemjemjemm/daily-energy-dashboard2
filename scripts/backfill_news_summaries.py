@@ -12,6 +12,7 @@ try:
     from scripts.apply_news_to_report import (
         atomic_write_json,
         build_news_summary,
+        is_previous_issue_summary,
         make_trend_paragraphs,
         read_json,
         update_summary,
@@ -20,6 +21,7 @@ except ImportError:
     from apply_news_to_report import (  # type: ignore
         atomic_write_json,
         build_news_summary,
+        is_previous_issue_summary,
         make_trend_paragraphs,
         read_json,
         update_summary,
@@ -44,14 +46,38 @@ def report_date(path: Path) -> date | None:
 def rebuild_slot(report: Dict[str, Any], key: str) -> str:
     news = report.get(key, {}) if isinstance(report.get(key), dict) else {}
     articles = news.get("articles", []) if isinstance(news.get("articles"), list) else []
-    articles = [article for article in articles if isinstance(article, dict)]
+    articles = [
+        article for article in articles
+        if (
+            isinstance(article, dict)
+            and article.get("title")
+            and article.get("url")
+            and "데이터 없음" not in str(article.get("title"))
+            and "데이터 대기" not in str(article.get("title"))
+        )
+    ]
     if not articles:
+        if news:
+            summary = "해당 시간대 주요 보도 확인 건 없음."
+            news["summary"] = summary
+            news["trend_paragraphs"] = []
+            news["articles"] = []
+            report[key] = news
+            return summary
         return ""
     summary = build_news_summary(news, articles)
     news["summary"] = summary
     news["trend_paragraphs"] = make_trend_paragraphs(articles)
     report[key] = news
     return summary
+
+
+def remove_previous_issue_summary(report: Dict[str, Any]) -> None:
+    summary = report.get("summary", []) if isinstance(report.get("summary"), list) else []
+    report["summary"] = [
+        item for item in summary
+        if not is_previous_issue_summary(item)
+    ]
 
 
 def main() -> int:
@@ -67,6 +93,7 @@ def main() -> int:
         if current is None or current < start or current > end:
             continue
         report = read_json(path)
+        remove_previous_issue_summary(report)
         morning_summary = rebuild_slot(report, "news_trend")
         evening_summary = rebuild_slot(report, "news_trend_afternoon")
         if morning_summary:
