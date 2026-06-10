@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 중동전쟁 대응 보건의약단체 회의(서울), 기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호), 10:00 공급망기금 상생협약식, 10:00 산중위 전체회의(국회)."
+      "text": "금일 주요 일정: 중동전쟁 대응 보건의약단체 회의, 기후에너지환경노동위원회 기후에너지환경법안심사소위원회, 법안소위, 고유가 피해지원금 2차 지급 현장방문."
     },
     {
       "type": "news_trend",
@@ -1489,74 +1489,114 @@
   "schedules": [
     {
       "time": "08:00",
-      "org": "이형훈 2차관",
-      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "org": "이형훈 복지부 2차관",
+      "attendees": "이형훈 복지부 2차관",
+      "title": "중동전쟁 대응 보건의약단체 회의",
       "relevance": ""
     },
     {
       "time": "09:30",
       "org": "국회",
-      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회(09:30 본관 622호)",
+      "attendees": "국회",
+      "title": "기후에너지환경노동위원회 기후에너지환경법안심사소위원회",
+      "relevance": ""
+    },
+    {
+      "time": "09:30",
+      "org": "금한승 기후에너지환경부 1차관, 이호현 기후에너지환경부 2차관",
+      "attendees": "금한승 기후에너지환경부 1차관, 이호현 기후에너지환경부 2차관",
+      "title": "법안소위",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "허장 2차관",
-      "title": "10:00 공급망기금 상생협약식",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "김정관 장관",
-      "title": "10:00 산중위 전체회의(국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "노용석 1차관",
-      "title": "10:00 이병권 중기2차관, 산중위 전체회의(국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "오영훈 제주지사",
-      "title": "10:00 중동상황에 따른 대응상황 점검회의(재난안전대책본부 상황실)",
+      "org": "행안부",
+      "attendees": "행안부",
+      "title": "고유가 피해지원금 2차 지급 현장방문",
       "relevance": ""
     },
     {
       "time": "10:00",
       "org": "국회",
-      "title": "산업통상자원중소벤처기업위원회 전체회의(10:00 본관 534호)",
+      "attendees": "국회",
+      "title": "산업통상자원중소벤처기업위원회 전체회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "김정관 산업통상부 장관, 문신학 산업통상부 1차관, 노용석 중기부 1차관",
+      "attendees": "김정관 산업통상부 장관, 문신학 산업통상부 1차관, 노용석 중기부 1차관",
+      "title": "산중위 전체회의",
       "relevance": ""
     },
     {
       "time": "11:30",
-      "org": "김성환 장관",
-      "title": "11:30 국회 기후에너지환경노동위원회 전체회의(서울)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "국회 기후에너지환경노동위원회 전체회의",
       "relevance": ""
     },
     {
       "time": "11:30",
-      "org": "국회",
-      "title": "기후에너지환경노동위원회 전체회의(11:30 본관 622호)",
-      "relevance": ""
-    },
-    {
-      "time": "11:30",
-      "org": "조국혁신당",
-      "title": "서왕진 원내대표, 기후에너지환경노동위원회 전체회의(11:30 국회 본관 622호)",
-      "relevance": ""
-    },
-    {
-      "time": "13:00",
-      "org": "조국혁신당",
-      "title": "서왕진 원내대표, 미래를 위한 탄소중립법 개정 기자회견(13:00 국회 본관 계단)",
+      "org": "국회, 서왕진 원내대표",
+      "attendees": "국회, 서왕진 원내대표",
+      "title": "기후에너지환경노동위원회 전체회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "경북지사 권한대행",
-      "title": "14:00 경상북도 2050 탄소중립 녹생성장 위원회(호국실)",
+      "org": "서왕진 원내대표",
+      "attendees": "서왕진 원내대표",
+      "title": "미래를 위한 탄소중립법 개정 토론회",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "국회",
+      "attendees": "국회",
+      "title": "산업통상자원중소벤처기업위원회 산업통상자원지식재산소위원회",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "문신학 산업통상부 1차관",
+      "attendees": "문신학 산업통상부 1차관",
+      "title": "산중위 법안소위",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "제38차 에너지위원회",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "착한주유소 현장방문 및 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "17:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "차세대 ESS 기술개발 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "재정경제부",
+      "attendees": "재정경제부",
+      "title": "재경부, 한국경제 설명회 및 G7 재무장관회의",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "한국경제 설명회 및 G7 재무장관회의",
       "relevance": ""
     }
   ],
@@ -1714,13 +1754,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242840",
       "today_source_published_at": "2026-05-19",
       "today_source_schedule_candidate_count": 91,
-      "today_parsed_schedule_count": 12,
+      "today_parsed_schedule_count": 16,
       "previous_source_file_date": "2026-05-18",
       "previous_source_title": "[오늘의 주요일정·18일] 46주년 5·18 민주화운동 기념식",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809",
       "previous_source_schedule_candidate_count": 78,
       "previous_parsed_schedule_count": 6,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

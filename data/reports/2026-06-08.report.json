@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 10:00 통상정책자문위원회(대한상의), 서삼석 의원실 등, 국가위기 초대형 산불방지를 위한 전력설비 보호를 어떻게 할 것인가?(10:00 의원회관 신관 제3세미나실), 15:50 지방보조금 부정수급점검단 간담회(강원 춘천)."
+      "text": "금일 주요 일정: 통상정책자문위원회, 지방보조금 부정수급점검단 간담회."
     },
     {
       "type": "news_trend",
@@ -1371,20 +1371,16 @@
   "schedules": [
     {
       "time": "10:00",
-      "org": "여한구 통상교섭본부장",
-      "title": "10:00 통상정책자문위원회(대한상의)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "의원실 세미나",
-      "title": "서삼석 의원실 등, 국가위기 초대형 산불방지를 위한 전력설비 보호를 어떻게 할 것인가?(10:00 의원회관 신관 제3세미나실)",
+      "org": "여한구 산업통상부 통상교섭본부장",
+      "attendees": "여한구 산업통상부 통상교섭본부장",
+      "title": "통상정책자문위원회",
       "relevance": ""
     },
     {
       "time": "15:50",
-      "org": "김민재 차관",
-      "title": "15:50 지방보조금 부정수급점검단 간담회(강원 춘천)",
+      "org": "김민재 행안부 차관",
+      "attendees": "김민재 행안부 차관",
+      "title": "지방보조금 부정수급점검단 간담회",
       "relevance": ""
     }
   ],
@@ -1542,13 +1538,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243275",
       "today_source_published_at": "2026-06-08",
       "today_source_schedule_candidate_count": 44,
-      "today_parsed_schedule_count": 3,
+      "today_parsed_schedule_count": 2,
       "previous_source_file_date": "2026-06-05",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243232",
       "previous_source_schedule_candidate_count": 23,
       "previous_parsed_schedule_count": 0,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

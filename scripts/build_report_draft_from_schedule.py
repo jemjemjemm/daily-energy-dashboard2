@@ -63,6 +63,124 @@ ORG_KEYWORDS = [
 DEFAULT_RELEVANCE = ""
 NO_RELATED_LINK = {"label": "관련 기사 없음", "url": ""}
 
+EVENT_ALIAS_GROUPS = {
+    "비상경제본부회의": [
+        "비상경제본부회의",
+        "제19차 비상경제본부 회의",
+        "비상경제본부 회의",
+    ],
+    "민생물가 특별관리 관계장관 TF 회의": [
+        "민생물가 특별관리 관계장관 TF",
+        "민생물가 특별관리 관계장관TF",
+        "민생물가 특별관리 관계장관 TF 회의",
+        "민생물가 특별관리 관계장관 TF회의",
+    ],
+    "제12회 방위산업발전협의회": [
+        "제12회 방위산업발전협의회",
+        "방위산업발전협의회",
+    ],
+    "정부 드론·대드론 통합 TF 최종보고 회의": [
+        "정부 드론·대드론 통합 TF 최종보고 회의",
+        "드론-대드론 TF 회의",
+        "드론·대드론 TF 회의",
+        "드론 대드론 TF 회의",
+    ],
+}
+
+ORG_ALIASES = {
+    "재정경제부": "재경부",
+    "재경부": "재경부",
+    "기획재정부": "기재부",
+    "기재부": "기재부",
+    "기획예산처": "기획처",
+    "기획처": "기획처",
+    "외교부": "외교부",
+    "국방부": "국방부",
+    "산업통상부": "산업부",
+    "산업통상자원부": "산업부",
+    "산업부": "산업부",
+    "농림축산식품부": "농식품부",
+    "농식품부": "농식품부",
+    "공정거래위원회": "공정위",
+    "공정위": "공정위",
+    "식품의약품안전처": "식약처",
+    "식약처": "식약처",
+    "식약": "식약처",
+    "과학기술정보통신부": "과기정통부",
+    "과기정통부": "과기정통부",
+    "보건복지부": "복지부",
+    "복지부": "복지부",
+    "고용노동부": "노동부",
+    "노동부": "노동부",
+    "기후에너지환경부": "기후부",
+    "기후부": "기후부",
+    "성평등가족부": "성평등부",
+    "성평등부": "성평등부",
+    "중소벤처기업부": "중기부",
+    "중기부": "중기부",
+    "국무총리": "국무총리",
+    "총리": "국무총리",
+    "KEI": "KEI",
+}
+
+ORG_DISPLAY_NAMES = {
+    "재경부": "재정경제부",
+    "기재부": "기획재정부",
+    "기획처": "기획예산처",
+    "산업부": "산업통상부",
+    "농식품부": "농식품부",
+    "공정위": "공정위",
+    "식약처": "식약처",
+    "과기정통부": "과기정통부",
+    "복지부": "복지부",
+    "노동부": "노동부",
+    "기후부": "기후에너지환경부",
+    "성평등부": "성평등가족부",
+    "중기부": "중기부",
+    "국무총리": "국무총리",
+}
+
+ORG_ROLE_LABELS = {
+    "재경부": "재정경제부",
+    "기재부": "기획재정부",
+    "기획처": "기획예산처",
+    "외교부": "외교부",
+    "국방부": "국방부",
+    "산업부": "산업통상부",
+    "농식품부": "농식품부",
+    "공정위": "공정거래",
+    "식약처": "식약처",
+    "과기정통부": "과기정통부",
+    "복지부": "복지부",
+    "노동부": "노동부",
+    "기후부": "기후에너지환경부",
+    "성평등부": "성평등가족부",
+    "중기부": "중기부",
+}
+
+ORG_SUFFIXES = (
+    "부", "처", "청", "위", "위원회", "기획처", "방통위", "대한상의", "무역협회", "한국은행", "한은", "KEI"
+)
+
+PARTICIPANT_ORG_ORDER = {
+    "국무총리": 0,
+    "재경부": 10,
+    "기재부": 10,
+    "기획처": 20,
+    "외교부": 30,
+    "국방부": 40,
+    "과기정통부": 45,
+    "산업부": 50,
+    "공정위": 60,
+    "농식품부": 65,
+    "식약처": 70,
+    "복지부": 75,
+    "노동부": 80,
+    "성평등부": 85,
+    "중기부": 90,
+    "기후부": 95,
+}
+
 # 리포트에 올릴 일정은 정유·석유화학·LNG 및 정책/물가/공급망 인접 이슈만 남긴다.
 # 선거 유세, 문화·스포츠, 일반 지자체 행사는 제외한다.
 RELEVANT_KEYWORDS = [
@@ -71,6 +189,8 @@ RELEVANT_KEYWORDS = [
     "산업부", "산업통상", "기후에너지", "기후부", "공정위", "재경부", "기재부",
     "물가", "공급망", "비상경제", "중동", "호르무즈", "수급", "통상", "관세",
     "산중위", "산업통상자원", "정무위", "에너지위원회", "통상추진",
+    "방위산업", "드론", "대드론",
+    "KEI", "한미 관계",
 ]
 
 EXCLUDE_KEYWORDS = [
@@ -106,7 +226,7 @@ def is_section_header_only(value: str) -> bool:
         return True
     if re.fullmatch(r"\[?[가-힣A-Za-z·ㆍ/ ]{2,20}\]?", value):
         # [기후에너지환경부], 국회, 외교부 같은 섹션 헤더는 일정이 아니다.
-        if not any(word in value for word in ["회의", "간담회", "브리핑", "토론회", "방문", "발표", "점검", "법안", "위원회"]):
+        if not any(word in value for word in ["회의", "간담회", "브리핑", "토론회", "방문", "발표", "점검", "법안", "위원회", "세미나", "포럼", "청문회", "협의회", "TF"]):
             return True
     return False
 
@@ -166,6 +286,8 @@ def is_relevant_schedule_item(item: Dict[str, str]) -> bool:
 
 def filter_relevant_items(items: List[Dict[str, str]], max_items: int) -> List[Dict[str, str]]:
     filtered = [item for item in items if is_relevant_schedule_item(item)]
+    if any("attendee" in item or "source_priority" in item for item in filtered):
+        return merge_schedule_items(filtered, max_items=max_items)
     return sort_schedule_items(filtered[:max_items])
 
 
@@ -196,6 +318,360 @@ def split_title_time_location(title: str) -> Tuple[str, str, str]:
         if any(role in left for role in ["장관", "차관", "위원장", "의장", "지사", "시장", "대표", "원내대표"]) and right:
             title = right
     return title or clean_title(title), parsed_time, location
+
+
+def strip_wrapped_locations(value: str) -> str:
+    value = clean_title(value)
+    while re.search(r"\([^()]*\)\s*$", value):
+        value = re.sub(r"\([^()]*\)\s*$", "", value).strip()
+    return normalize_line(value)
+
+
+def compact_text(value: str) -> str:
+    value = value.replace("·", "").replace("-", "").replace("ㆍ", "")
+    return re.sub(r"[\s,()·ㆍ\-/]+", "", value).lower()
+
+
+def normalize_org_name(value: str) -> str:
+    value = clean_title(value)
+    value = re.sub(r"^\[|\]$", "", value).strip()
+    for full, alias in ORG_ALIASES.items():
+        if full in value:
+            return alias
+    return value
+
+
+def org_display_name(org: str) -> str:
+    org = normalize_org_name(org)
+    return ORG_DISPLAY_NAMES.get(org, org)
+
+
+def org_role_label(org: str) -> str:
+    org = normalize_org_name(org)
+    return ORG_ROLE_LABELS.get(org, org_display_name(org))
+
+
+def has_person_name(value: str) -> bool:
+    value = clean_title(value)
+    return bool(re.match(r"^[가-힣]{2,4}\b", value)) and any(
+        role in value for role in ["장관", "차관", "위원장", "처장", "차장", "본부장", "총리", "부총리"]
+    )
+
+
+def is_org_only(value: str) -> bool:
+    value = clean_title(value)
+    if not value:
+        return False
+    if has_person_name(value):
+        return False
+    if normalize_org_name(value) in ORG_DISPLAY_NAMES or value in ORG_ALIASES:
+        return True
+    return value.endswith(ORG_SUFFIXES)
+
+
+def affiliation_key(value: str, fallback_org: str = "") -> str:
+    for full, alias in ORG_ALIASES.items():
+        if full in value:
+            return alias
+    combined = f"{value} {fallback_org}".strip()
+    for full, alias in ORG_ALIASES.items():
+        if full in combined:
+            return alias
+    return normalize_org_name(fallback_org or value)
+
+
+def normalize_attendee(value: str, org: str = "") -> str:
+    value = clean_title(value).rstrip(",")
+    org_key = normalize_org_name(org)
+    if not value:
+        return org_display_name(org_key)
+    if is_org_only(value):
+        return org_display_name(value)
+    if "국무총리" in value:
+        return value
+    if org_key == "식약처" and "식약" in value:
+        return value
+    if org_key and org_role_label(org_key) in value:
+        return value
+    if org_key and org_key != "확인" and not any(full in value for full in ORG_ALIASES):
+        role_label = org_role_label(org_key)
+        if re.search(r"(장관|차관|위원장|처장|차장|본부장)$", value):
+            if org_key == "공정위" and value.endswith("위원장"):
+                return re.sub(r"위원장$", "공정거래위원장", value)
+            if org_key == "식약처" and value.endswith("처장"):
+                return re.sub(r"처장$", "식약처장", value)
+            if org_key == "식약처" and value.endswith("차장"):
+                return re.sub(r"차장$", "식약차장", value)
+            name, role = value.split(" ", 1) if " " in value else (value, "")
+            return f"{name} {role_label} {role}".strip()
+    return value
+
+
+def normalized_event_key(title: str) -> str:
+    title, _parsed_time, _location = split_title_time_location(title)
+    title = strip_wrapped_locations(title)
+    title = re.sub(r"^제\s*\d+\s*(차|회)\s*", "", title)
+    title = re.sub(r"회\s+의", "회의", title)
+    title = title.replace("TF회의", "TF 회의")
+    key = compact_text(title)
+
+    if "비상경제본부" in key:
+        return "alias:비상경제본부회의"
+    if "민생물가" in key and "관계장관" in key and "tf" in key:
+        return "alias:민생물가 특별관리 관계장관 TF 회의"
+    if "방위산업발전협의회" in key:
+        return "alias:제12회 방위산업발전협의회"
+    if "드론" in key and "대드론" in key and "tf" in key:
+        return "alias:정부 드론·대드론 통합 TF 최종보고 회의"
+
+    for canonical, variants in EVENT_ALIAS_GROUPS.items():
+        if key in {compact_text(re.sub(r"^제\s*\d+\s*(차|회)\s*", "", variant)) for variant in variants}:
+            return f"alias:{canonical}"
+    return key
+
+
+def display_event_title(title: str) -> str:
+    key = normalized_event_key(title)
+    if key.startswith("alias:"):
+        return key.split(":", 1)[1]
+    title, _parsed_time, _location = split_title_time_location(title)
+    return strip_wrapped_locations(title)
+
+
+def normalize_time_label(time_text: str, local_time: bool = False) -> str:
+    time_text = clean_title(time_text)
+    local_time = local_time or "현지" in time_text or "동부시간" in time_text
+    match = re.search(r"(\d{1,2}):(\d{2})", time_text)
+    if match:
+        normalized = f"{int(match.group(1)):02d}:{int(match.group(2)):02d}"
+        return f"{normalized} 현지시간" if local_time else normalized
+    if "현지" in time_text:
+        return "시간 미기재"
+    if not time_text or time_text == "시간미정":
+        return "시간 미기재"
+    return time_text
+
+
+def split_schedule_subject(line: str, current_org: str = "") -> Tuple[str, str, str]:
+    line = clean_title(line)
+    if "," in line:
+        left, right = [part.strip() for part in line.split(",", 1)]
+        if right:
+            org = normalize_org_name(left) if is_org_only(left) else affiliation_key(left, current_org)
+            attendee = normalize_attendee(left, org)
+            return attendee, org, right
+
+    if line.startswith("KEI "):
+        return "KEI", "KEI", line[4:].strip()
+
+    if current_org and current_org != "확인":
+        return org_display_name(current_org), normalize_org_name(current_org), line
+
+    org, title = extract_org(line)
+    return normalize_attendee(org, org), normalize_org_name(org), title
+
+
+def schedule_section_name(line: str) -> str:
+    match = re.match(r"^\[([^\]]+)\]", line)
+    return normalize_line(match.group(1)) if match else ""
+
+
+def line_has_schedule_signal(line: str) -> bool:
+    has_time = any(pattern.search(line) for pattern in TIME_PATTERNS)
+    has_word = any(word in line for word in ["회의", "TF", "협의회", "간담회", "브리핑", "토론회", "방문", "행사", "면담", "발표", "점검", "포럼", "청문회", "세미나"])
+    return has_time or has_word
+
+
+def parse_detailed_schedule_entries(body: str, max_items: int) -> List[Dict[str, str]]:
+    lines = split_body_lines(body)
+    entries: List[Dict[str, str]] = []
+    top_section = ""
+    current_category = ""
+    current_org = ""
+    current_person = ""
+    order = 0
+
+    for raw_line in lines:
+        line = normalize_line(raw_line)
+        if not line:
+            continue
+
+        if line.startswith("■"):
+            if "분야별" in line:
+                top_section = "field"
+            elif "총리 및 장차관" in line:
+                top_section = "minister"
+            else:
+                top_section = "other"
+            current_org = ""
+            current_person = ""
+            continue
+
+        section = schedule_section_name(line)
+        if section:
+            current_category = section
+            if top_section == "minister":
+                current_org = normalize_org_name(section)
+                current_person = ""
+            elif top_section == "field":
+                current_org = ""
+            continue
+
+        local_time = "현지시간" in line or "동부시간" in line or current_category == "국제"
+
+        if top_section == "minister":
+            if line.startswith("▲"):
+                person_line = clean_title(line)
+                if line_has_schedule_signal(person_line) and "," in person_line:
+                    attendee, org, title_line = split_schedule_subject(person_line, current_org)
+                else:
+                    current_person = normalize_attendee(person_line, current_org)
+                    continue
+            else:
+                if not current_person or not line_has_schedule_signal(line):
+                    continue
+                attendee = current_person
+                org = affiliation_key(current_person, current_org)
+                title_line = line
+            priority = "1"
+        elif top_section == "field":
+            if line.startswith("▲"):
+                field_line = clean_title(line)
+                if not line_has_schedule_signal(field_line):
+                    current_org = normalize_org_name(field_line)
+                    continue
+                attendee, org, title_line = split_schedule_subject(field_line, current_org)
+                priority = "2" if has_person_name(attendee) else "3"
+            else:
+                if not line_has_schedule_signal(line):
+                    continue
+                attendee, org, title_line = split_schedule_subject(line, current_org)
+                priority = "2" if has_person_name(attendee) else "3"
+        else:
+            continue
+
+        time_text, without_time = extract_time(title_line)
+        if not time_text:
+            time_text, without_time = extract_time(line)
+        title = display_event_title(without_time or title_line)
+        if not title or is_section_header_only(title):
+            continue
+
+        entries.append({
+            "time": normalize_time_label(time_text, local_time),
+            "org": normalize_org_name(org),
+            "attendee": attendee,
+            "title": title,
+            "raw_title": title_line,
+            "source_priority": priority,
+            "source_section": top_section,
+            "order": str(order),
+            "relevance": "",
+        })
+        order += 1
+        if len(entries) >= max_items:
+            break
+
+    return sort_schedule_items(entries)
+
+
+def participant_key(candidate: Dict[str, Any]) -> str:
+    attendee = clean_title(str(candidate.get("attendee", "")))
+    name_match = re.match(r"^([가-힣]{2,4})\b", attendee)
+    if name_match and has_person_name(attendee):
+        return f"name:{name_match.group(1)}"
+    org = str(candidate.get("org") or "")
+    return f"org:{affiliation_key(attendee, org)}"
+
+
+def add_group_participant(group: Dict[str, Any], candidate: Dict[str, Any]) -> None:
+    attendee = clean_title(str(candidate.get("attendee", "")))
+    if not attendee:
+        return
+    candidate = dict(candidate)
+    candidate["attendee"] = attendee
+    candidate["priority"] = int(candidate.get("priority", 3))
+    candidate["order"] = int(candidate.get("order", 0))
+    candidate["affiliation"] = affiliation_key(attendee, str(candidate.get("org") or ""))
+
+    participants: List[Dict[str, Any]] = group.setdefault("participants", [])
+    p_key = participant_key(candidate)
+    for existing in participants:
+        if participant_key(existing) == p_key:
+            if candidate["priority"] < int(existing.get("priority", 3)):
+                candidate["order"] = min(candidate["order"], int(existing.get("order", candidate["order"])))
+                existing.update(candidate)
+            return
+
+    if has_person_name(attendee):
+        for existing in list(participants):
+            if (
+                not has_person_name(str(existing.get("attendee", "")))
+                and existing.get("affiliation") == candidate["affiliation"]
+            ):
+                candidate["order"] = min(candidate["order"], int(existing.get("order", candidate["order"])))
+                participants.remove(existing)
+                break
+    else:
+        if any(
+            has_person_name(str(existing.get("attendee", "")))
+            and existing.get("affiliation") == candidate["affiliation"]
+            for existing in participants
+        ):
+            return
+
+    participants.append(candidate)
+
+
+def participant_sort_key(participant: Dict[str, Any]) -> Tuple[int, int, int, str]:
+    affiliation = str(participant.get("affiliation") or affiliation_key(str(participant.get("attendee", "")), str(participant.get("org", ""))))
+    org_order = PARTICIPANT_ORG_ORDER.get(affiliation, 500)
+    return (
+        org_order,
+        int(participant.get("order", 0)),
+        int(participant.get("priority", 3)),
+        str(participant.get("attendee", "")),
+    )
+
+
+def merge_schedule_items(items: List[Dict[str, str]], max_items: int) -> List[Dict[str, str]]:
+    groups: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for index, item in enumerate(items):
+        time_text = normalize_time_label(item.get("time", ""))
+        title = item.get("title") or item.get("raw_title") or ""
+        event_key = normalized_event_key(title)
+        group_key = (time_text, event_key)
+        group = groups.setdefault(group_key, {
+            "time": time_text,
+            "title": display_event_title(title),
+            "order": index,
+            "participants": [],
+        })
+        if event_key.startswith("alias:"):
+            group["title"] = event_key.split(":", 1)[1]
+        elif len(display_event_title(title)) > len(str(group.get("title", ""))):
+            group["title"] = display_event_title(title)
+
+        add_group_participant(group, {
+            "attendee": item.get("attendee") or item.get("org") or "",
+            "org": item.get("org") or "",
+            "priority": int(item.get("source_priority") or 3),
+            "order": int(item.get("order") or index),
+        })
+
+    merged: List[Dict[str, str]] = []
+    for group in groups.values():
+        participants = sorted(group.get("participants", []), key=participant_sort_key)
+        attendees = ", ".join(dict.fromkeys(clean_title(str(p.get("attendee", ""))) for p in participants if p.get("attendee")))
+        merged.append({
+            "time": str(group.get("time") or "시간 미기재"),
+            "org": attendees,
+            "attendees": attendees,
+            "title": str(group.get("title") or "일정 확인 필요"),
+            "relevance": "",
+        })
+
+    return sort_schedule_items(merged)[:max_items]
 
 
 def issue_description(time: str, org: str, location: str) -> str:
@@ -248,7 +724,7 @@ def build_issue_cards_from_schedules(items: List[Dict[str, str]]) -> List[Dict[s
 def schedule_items_from_json_or_body(schedule_data: Dict[str, Any], max_items: int) -> List[Dict[str, str]]:
     # 세이프타임즈 items는 text만 저장되는 경우가 많아 직전 기관 헤더(▲ 산업부 등)가 사라진다.
     # 따라서 원문 body를 우선 파싱해 기관 문맥을 살리고, body 파싱이 실패할 때만 items를 fallback으로 사용한다.
-    parsed = parse_schedule_items(source_body(schedule_data), max_items=max_items * 30)
+    parsed = parse_detailed_schedule_entries(source_body(schedule_data), max_items=max_items * 60)
     if parsed:
         return filter_relevant_items(parsed, max_items=max_items)
 
@@ -268,7 +744,7 @@ def schedule_candidate_count(schedule_data: Dict[str, Any], max_items: int) -> i
     A zero final schedule count can mean either "no report-relevant schedule" or
     "source/parse failed"; this count keeps those cases separate.
     """
-    parsed = parse_schedule_items(source_body(schedule_data), max_items=max_items * 30)
+    parsed = parse_detailed_schedule_entries(source_body(schedule_data), max_items=max_items * 60)
     if parsed:
         return len(parsed)
 
@@ -393,7 +869,9 @@ def split_body_lines(body: str) -> List[str]:
 
 def normalize_time_from_match(match: re.Match) -> str:
     if "time" in match.groupdict() and match.group("time"):
-        return match.group("time").replace("：", ":")
+        raw_time = match.group("time").replace("：", ":")
+        hour, minute = raw_time.split(":", 1)
+        return f"{int(hour):02d}:{int(minute):02d}"
 
     groupdict = match.groupdict()
     hour = int(groupdict.get("hour") or 0)
@@ -572,10 +1050,10 @@ def parse_schedule_items(body: str, max_items: int) -> List[Dict[str, str]]:
 def sort_schedule_items(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
     def sort_key(item: Dict[str, str]) -> Tuple[int, str]:
         time_text = item.get("time", "")
-        match = re.match(r"^(\d{2}):(\d{2})$", time_text)
+        match = re.match(r"^(\d{1,2}):(\d{2})", time_text)
         if match:
             return (int(match.group(1)) * 60 + int(match.group(2)), item.get("title", ""))
-        if time_text == "현지":
+        if time_text in {"현지", "시간 미기재", "시간미정"}:
             return (24 * 60 + 1, item.get("title", ""))
         return (24 * 60 + 2, item.get("title", ""))
 
@@ -743,7 +1221,7 @@ def build_report_draft(
         "previous_source_url": source_url(previous_schedule_data) if previous_schedule_data else "",
         "previous_source_schedule_candidate_count": previous_candidate_count,
         "previous_parsed_schedule_count": len(previous_items),
-        "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+        "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
         "needs_review": True,
     }
 

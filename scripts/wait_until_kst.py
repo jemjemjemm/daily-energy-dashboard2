@@ -15,7 +15,7 @@ try:
 except ZoneInfoNotFoundError:
     KST = timezone(timedelta(hours=9), name="Asia/Seoul")
 TARGET_TIMES = {
-    "morning": (9, 4),
+    "morning": (8, 4),
     "evening": (17, 4),
 }
 

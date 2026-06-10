@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 16:30 여름철 농축산물 수급 및 소비 동향 점검(서울)."
+      "text": "금일 주요 일정: 지방하천 재해복구사업 등 현장점검, 현안점검 간부회의, 전기차 보급사업 지방정부 상황 점검회의, 여름철 농축산물 수급 및 소비 동향 점검."
     },
     {
       "type": "news_trend",
@@ -1463,9 +1463,31 @@
   ],
   "schedules": [
     {
+      "time": "09:30",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "지방하천 재해복구사업 등 현장점검",
+      "relevance": ""
+    },
+    {
+      "time": "09:30",
+      "org": "남동일 공정위 부위원장, 주병기 공정거래위원장",
+      "attendees": "남동일 공정위 부위원장, 주병기 공정거래위원장",
+      "title": "현안점검 간부회의",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "이호현 기후에너지환경부 2차관",
+      "attendees": "이호현 기후에너지환경부 2차관",
+      "title": "전기차 보급사업 지방정부 상황 점검회의",
+      "relevance": ""
+    },
+    {
       "time": "16:30",
-      "org": "김종구 차관",
-      "title": "16:30 여름철 농축산물 수급 및 소비 동향 점검(서울)",
+      "org": "김종구 농식품부 차관",
+      "attendees": "김종구 농식품부 차관",
+      "title": "여름철 농축산물 수급 및 소비 동향 점검",
       "relevance": ""
     }
   ],
@@ -1623,13 +1645,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243123",
       "today_source_published_at": "2026-06-01",
       "today_source_schedule_candidate_count": 63,
-      "today_parsed_schedule_count": 1,
+      "today_parsed_schedule_count": 4,
       "previous_source_file_date": "2026-05-29",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243081",
       "previous_source_schedule_candidate_count": 115,
       "previous_parsed_schedule_count": 12,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

@@ -1538,7 +1538,7 @@
       "previous_source_url": "",
       "previous_source_schedule_candidate_count": 0,
       "previous_parsed_schedule_count": 0,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

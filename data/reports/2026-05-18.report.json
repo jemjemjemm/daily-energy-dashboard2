@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 10:00 주한 아세안 대사 간담회(대한상의), 13:30 한국에너지공대 방문(나주), 14:00 통상추진위원회(대한상의), 16:00 중동사태 장기화 대응 점검회의(시청 대회의실)."
+      "text": "금일 주요 일정: 주한 아세안 대사 간담회, 5·18 민주화운동 기념식, 광주사무소 오찬 간담회, 한국에너지공대 방문."
     },
     {
       "type": "news_trend",
@@ -1489,37 +1489,64 @@
   "schedules": [
     {
       "time": "10:00",
-      "org": "여한구 통상교섭본부장",
-      "title": "10:00 주한 아세안 대사 간담회(대한상의)",
+      "org": "여한구 산업통상부 통상교섭본부장",
+      "attendees": "여한구 산업통상부 통상교섭본부장",
+      "title": "주한 아세안 대사 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "11:00",
+      "org": "주병기 공정거래위원장, 김성환 기후에너지환경부 장관",
+      "attendees": "주병기 공정거래위원장, 김성환 기후에너지환경부 장관",
+      "title": "5·18 민주화운동 기념식",
+      "relevance": ""
+    },
+    {
+      "time": "12:00",
+      "org": "주병기 공정거래위원장",
+      "attendees": "주병기 공정거래위원장",
+      "title": "광주사무소 오찬 간담회",
       "relevance": ""
     },
     {
       "time": "13:30",
-      "org": "김성환 장관",
-      "title": "13:30 한국에너지공대 방문(나주)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "한국에너지공대 방문",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "여한구 통상교섭본부장",
-      "title": "14:00 통상추진위원회(대한상의)",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "산업성장펀드 출범식 및 기술금융 전략회의",
       "relevance": ""
     },
     {
-      "time": "16:00",
-      "org": "김경덕 부산시장 권한대행",
-      "title": "16:00 중동사태 장기화 대응 점검회의(시청 대회의실)",
+      "time": "14:00",
+      "org": "여한구 산업통상부 통상교섭본부장",
+      "attendees": "여한구 산업통상부 통상교섭본부장",
+      "title": "통상추진위원회",
       "relevance": ""
     },
     {
       "time": "16:30",
-      "org": "김성환 장관",
-      "title": "16:30 나트륨 ESS 생산공정 및 기술현황 점검(완주)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "나트륨 ESS 생산공정 및 기술현황 점검",
       "relevance": ""
     },
     {
-      "time": "시간미정",
-      "org": "재경부",
+      "time": "시간 미기재",
+      "org": "재정경제부",
+      "attendees": "재정경제부",
+      "title": "재경부, 한국경제 설명회 및 G7 재무장관회의",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
       "title": "한국경제 설명회 및 G7 재무장관회의",
       "relevance": ""
     }
@@ -1678,13 +1705,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242809",
       "today_source_published_at": "2026-05-18",
       "today_source_schedule_candidate_count": 78,
-      "today_parsed_schedule_count": 6,
+      "today_parsed_schedule_count": 9,
       "previous_source_file_date": "2026-05-15",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242791",
       "previous_source_schedule_candidate_count": 91,
       "previous_parsed_schedule_count": 8,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

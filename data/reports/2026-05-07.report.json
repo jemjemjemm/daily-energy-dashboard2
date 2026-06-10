@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호), 허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실), 정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)."
+      "text": "금일 주요 일정: 민생물가 특별관리 관계장관 TF 회의, 민생물가 특별관리 관계장관회의, 법안소위, 햇빛소득마을 토론회 개최."
     },
     {
       "type": "news_trend",
@@ -1488,21 +1488,59 @@
   ],
   "schedules": [
     {
-      "time": "10:00",
-      "org": "본회의 및 상임위원회",
-      "title": "기후위기특별위원회 탄소중립기본법심사소위원회 (10:00 본관 621호)",
+      "time": "09:00",
+      "org": "식약처",
+      "attendees": "식약처",
+      "title": "민생물가 특별관리 관계장관 TF 회의",
+      "relevance": ""
+    },
+    {
+      "time": "09:00",
+      "org": "기후에너지환경부",
+      "attendees": "기후에너지환경부",
+      "title": "민생물가 특별관리 관계장관회의",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "의원실 세미나",
-      "title": "허성무 의원실 등, 마누가(MANUGA) 구상과 K-원전의 도약 (10:00 의원회관 제2소회의실)",
+      "org": "기후에너지환경부",
+      "attendees": "기후에너지환경부",
+      "title": "법안소위",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "기후에너지환경부",
+      "attendees": "기후에너지환경부",
+      "title": "햇빛소득마을 토론회 개최",
+      "relevance": ""
+    },
+    {
+      "time": "10:30",
+      "org": "남부지법",
+      "attendees": "남부지법",
+      "title": "가상 무속인 내세워 '가스라이팅' 87억 갈취 1심 속행 공판",
       "relevance": ""
     },
     {
       "time": "13:00",
-      "org": "의원실 세미나",
-      "title": "정혜경 의원실 등, 에너지 전환, 시장을 넘어 공공으로 (13:00 의원회관 제4간담회의실)",
+      "org": "공공운수노조",
+      "attendees": "공공운수노조",
+      "title": "에너지 전환, 시장을 넘어 공공으로",
+      "relevance": ""
+    },
+    {
+      "time": "14:30",
+      "org": "북부지법",
+      "attendees": "북부지법",
+      "title": "OB백주 맥아 편법수입 관세포탈 의혹사건 공판기일",
+      "relevance": ""
+    },
+    {
+      "time": "16:00",
+      "org": "기후에너지환경부",
+      "attendees": "기후에너지환경부",
+      "title": "양양남대천 수생태계 연속성 회복 공동이행 협약식",
       "relevance": ""
     }
   ],
@@ -1660,13 +1698,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242543",
       "today_source_published_at": "2026-05-07",
       "today_source_schedule_candidate_count": 49,
-      "today_parsed_schedule_count": 3,
+      "today_parsed_schedule_count": 8,
       "previous_source_file_date": "2026-05-06",
       "previous_source_title": "[오늘의 주요일정·6일] 이재명 대통령 7차 비상경제점검회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242506",
       "previous_source_schedule_candidate_count": 90,
       "previous_parsed_schedule_count": 10,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

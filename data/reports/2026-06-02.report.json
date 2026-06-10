@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 이준석 총괄선대위원장, 동탄 동탄IC 출근길인사(07:00 경기 화성시 동탄구 중동), 10:00 국무회의 겸 비상경제점검회의(청와대), 10:00 국무회의(청와대)."
+      "text": "금일 주요 일정: 중동전쟁 대응 보건의약단체 회의, 국무회의, 국무회의 겸 비상경제점검회의, 국무회의 및 비상경제 점검회의."
     },
     {
       "type": "news_trend",
@@ -1351,21 +1351,59 @@
   ],
   "schedules": [
     {
-      "time": "07:00",
-      "org": "개혁신당",
-      "title": "이준석 총괄선대위원장, 동탄 동탄IC 출근길인사(07:00 경기 화성시 동탄구 중동)",
+      "time": "08:00",
+      "org": "이형혼 복지부 2차관",
+      "attendees": "이형혼 복지부 2차관",
+      "title": "중동전쟁 대응 보건의약단체 회의",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "기획처",
-      "title": "10:00 국무회의 겸 비상경제점검회의(청와대)",
+      "org": "구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "title": "국무회의",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "재경부",
-      "title": "10:00 국무회의(청와대)",
+      "org": "김민석 국무총리, 박홍근 기획예산처 장관",
+      "attendees": "김민석 국무총리, 박홍근 기획예산처 장관",
+      "title": "국무회의 겸 비상경제점검회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "주병기 공정거래위원장",
+      "attendees": "주병기 공정거래위원장",
+      "title": "국무회의 및 비상경제 점검회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "이재명 대통령",
+      "attendees": "이재명 대통령",
+      "title": "제24회 국무회의 겸 제11차 비상경제점검회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "이찬진 금융감독원장",
+      "attendees": "이찬진 금융감독원장",
+      "title": "주례 임원회의",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "종교환경회의 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "18:00 현지시간",
+      "org": "다카이치 총리",
+      "attendees": "다카이치 총리",
+      "title": "중동 정세 관계 각료회의",
       "relevance": ""
     }
   ],
@@ -1523,13 +1561,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243153",
       "today_source_published_at": "2026-06-02",
       "today_source_schedule_candidate_count": 77,
-      "today_parsed_schedule_count": 3,
+      "today_parsed_schedule_count": 8,
       "previous_source_file_date": "2026-06-01",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243123",
       "previous_source_schedule_candidate_count": 63,
       "previous_parsed_schedule_count": 1,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

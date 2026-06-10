@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 비상경제본부회의 겸 경제·산업경쟁력강화 관계장관회의(정부세종청사), 08:00 비상경제본부회의 겸 경제관계장관회의(정부서울청사), 08:30 차관회의(정부서울청사), 14:00 국가기후위기대응위원회 전체회의(서울)."
+      "text": "금일 주요 일정: 비상경제본부회의, 차관회의, 과학기술관계장관회의, 국가기후위기대응위원회 전체회의."
     },
     {
       "type": "news_trend",
@@ -1464,74 +1464,79 @@
   "schedules": [
     {
       "time": "08:00",
-      "org": "기획처",
-      "title": "08:00 비상경제본부회의 겸 경제·산업경쟁력강화 관계장관회의(정부세종청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:00",
-      "org": "재경부",
-      "title": "08:00 비상경제본부회의 겸 경제관계장관회의(정부서울청사)",
+      "org": "구윤철 부총리 겸 재정경제부 장관, 박홍근 기획예산처 장관, 김정관 산업통상부 장관, 한성숙 중기부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관, 박홍근 기획예산처 장관, 김정관 산업통상부 장관, 한성숙 중기부 장관",
+      "title": "비상경제본부회의",
       "relevance": ""
     },
     {
       "time": "08:30",
-      "org": "재경부",
-      "title": "08:30 차관회의(정부서울청사)",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "차관회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "재정경제부, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "attendees": "재정경제부, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "title": "과학기술관계장관회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김성환 장관",
-      "title": "14:00 국가기후위기대응위원회 전체회의(서울)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "국가기후위기대응위원회 전체회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "오영훈 제주지사",
-      "title": "14:00 분산에너지 확산 3차 도민 토론회(제주문학관)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "여한구 통상교섭본부장",
-      "title": "14:00 수출기업 현장방문(울산 HD현대일렉트릭)",
+      "org": "여한구 산업통상부 통상교섭본부장",
+      "attendees": "여한구 산업통상부 통상교섭본부장",
+      "title": "수출기업 현장방문",
       "relevance": ""
     },
     {
       "time": "14:30",
-      "org": "김민재 차관",
-      "title": "14:30 국가기후위기 대응위원회 전체회의 참석(서울)",
+      "org": "김민재 행안부 차관",
+      "attendees": "김민재 행안부 차관",
+      "title": "국가기후위기 대응위원회 전체회의 참석",
       "relevance": ""
     },
     {
       "time": "16:30",
       "org": "국무총리",
-      "title": "국가기후위기대응위원회 위촉식 및 전체회의(16:30 정부서울청사)",
+      "attendees": "국무총리",
+      "title": "국가기후위기대응위원회 위촉식 및 전체회의",
       "relevance": ""
     },
     {
       "time": "17:00",
-      "org": "기획처",
-      "title": "17:00 국가기후위기대응위원회",
+      "org": "임기근 기획예산처 차관",
+      "attendees": "임기근 기획예산처 차관",
+      "title": "국가기후위기대응위원회",
       "relevance": ""
     },
     {
       "time": "17:00",
-      "org": "최교진 장관",
-      "title": "17:00 국가기후위기대응위원회 출범식(정부서울청사)",
+      "org": "최교진 교육부 장관",
+      "attendees": "최교진 교육부 장관",
+      "title": "국가기후위기대응위원회 출범식",
       "relevance": ""
     },
     {
       "time": "17:00",
-      "org": "노용석 1차관",
-      "title": "17:00 기후위기대응위원회 전체회의(정부서울청사)",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "기후위기대응위원회",
       "relevance": ""
     },
     {
       "time": "17:00",
-      "org": "김정관 장관",
-      "title": "17:00 기후위기대응위원회(정부서울청사)",
+      "org": "노용석 중기부 1차관",
+      "attendees": "노용석 중기부 1차관",
+      "title": "기후위기대응위원회 전체회의",
       "relevance": ""
     }
   ],
@@ -1689,13 +1694,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243081",
       "today_source_published_at": "2026-05-29",
       "today_source_schedule_candidate_count": 115,
-      "today_parsed_schedule_count": 12,
+      "today_parsed_schedule_count": 11,
       "previous_source_file_date": "2026-05-28",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243054",
       "previous_source_schedule_candidate_count": 118,
       "previous_parsed_schedule_count": 6,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

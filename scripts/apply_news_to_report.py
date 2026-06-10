@@ -386,9 +386,9 @@ def parse_args():
     p.add_argument("--cutoff-minute", type=int, default=None)
     args = p.parse_args()
     if args.lookback_hours is None:
-        args.lookback_hours = 16 if args.report_slot == "morning" else 8
+        args.lookback_hours = 15 if args.report_slot == "morning" else 9
     if args.cutoff_hour is None:
-        args.cutoff_hour = 9 if args.report_slot == "morning" else 17
+        args.cutoff_hour = 8 if args.report_slot == "morning" else 17
     if args.cutoff_minute is None:
         args.cutoff_minute = 0
     return args

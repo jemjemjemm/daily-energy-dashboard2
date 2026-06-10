@@ -79,8 +79,8 @@ def expected_news_titles(date_text: str) -> tuple[str, str]:
     d = datetime.strptime(date_text, "%Y-%m-%d")
     prev = d - timedelta(days=1)
     return (
-        f"News Trend - Morning ({short_date(prev)} 17:00 - {short_date(d)} 09:00)",
-        f"News Trend - Evening ({short_date(d)} 09:00 - 17:00)",
+        f"News Trend - Morning ({short_date(prev)} 17:00 - {short_date(d)} 08:00)",
+        f"News Trend - Evening ({short_date(d)} 08:00 - 17:00)",
     )
 
 

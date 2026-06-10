@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 에너지 DX·AX 전략 TF 4차 회의(서울), 10:00 산중위 법안소위(국회), 산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호), 13:30 기후부 2030 청년세대 통합 발대식(서울)."
+      "text": "금일 주요 일정: 에너지 DX·AX 전략 TF 4차 회의, 종합환경연구단지 및 창업벤처 녹색융합클러스터 방문, 산업통상자원중소벤처기업위원회 중소벤처기업소위원회, 산중위 법안소위."
     },
     {
       "type": "news_trend",
@@ -1489,55 +1489,85 @@
   "schedules": [
     {
       "time": "08:00",
-      "org": "이호현 2차관",
-      "title": "08:00 에너지 DX·AX 전략 TF 4차 회의(서울)",
+      "org": "이호현 기후에너지환경부 2차관",
+      "attendees": "이호현 기후에너지환경부 2차관",
+      "title": "에너지 DX·AX 전략 TF 4차 회의",
       "relevance": ""
     },
     {
-      "time": "10:00",
-      "org": "노용석 1차관",
-      "title": "10:00 산중위 법안소위(국회)",
+      "time": "09:30",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "종합환경연구단지 및 창업벤처 녹색융합클러스터 방문",
       "relevance": ""
     },
     {
       "time": "10:00",
       "org": "국회",
-      "title": "산업통상자원중소벤처기업위원회 중소벤처기업소위원회(10:00 본관 534호)",
+      "attendees": "국회",
+      "title": "산업통상자원중소벤처기업위원회 중소벤처기업소위원회",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "노용석 중기부 1차관, 이병권 중기부 2차관",
+      "attendees": "노용석 중기부 1차관, 이병권 중기부 2차관",
+      "title": "산중위 법안소위",
       "relevance": ""
     },
     {
       "time": "13:30",
-      "org": "금한승 1차관",
-      "title": "13:30 기후부 2030 청년세대 통합 발대식(서울)",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "기후부 2030 청년세대 통합 발대식",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "노용석 1차관",
-      "title": "14:00 산중위 전체회의(국회)",
+      "org": "이재명 대통령",
+      "attendees": "이재명 대통령",
+      "title": "22회 국무회의 겸 9차 비상경제점검회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "대통령",
-      "title": "22회 국무회의 겸 9차 비상경제점검회의(14:00 청와대 본관)",
+      "org": "이형일 재정경제부 1차관, 주병기 공정거래위원장, 김성환 기후에너지환경부 장관",
+      "attendees": "이형일 재정경제부 1차관, 주병기 공정거래위원장, 김성환 기후에너지환경부 장관",
+      "title": "국무회의",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "국무총리, 박홍근 기획예산처 장관",
+      "attendees": "국무총리, 박홍근 기획예산처 장관",
+      "title": "국무회의 겸 비상경제점검회의",
       "relevance": ""
     },
     {
       "time": "14:00",
       "org": "국회",
-      "title": "산업통상자원중소벤처기업위원회 전체회의(14:00 본관 534호)",
+      "attendees": "국회",
+      "title": "산업통상자원중소벤처기업위원회 전체회의",
       "relevance": ""
     },
     {
-      "time": "시간미정",
-      "org": "여한구 통상교섭본부장",
-      "title": "국외 출장(19~22일 중국)",
+      "time": "14:00",
+      "org": "노용석 중기부 1차관, 이병권 중기부 2차관",
+      "attendees": "노용석 중기부 1차관, 이병권 중기부 2차관",
+      "title": "산중위 전체회의",
       "relevance": ""
     },
     {
-      "time": "시간미정",
-      "org": "재경부",
+      "time": "시간 미기재",
+      "org": "재정경제부",
+      "attendees": "재정경제부",
+      "title": "재경부, 한국경제 설명회 및 G7 재무장관회의",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
       "title": "한국경제 설명회 및 G7 재무장관회의",
       "relevance": ""
     }
@@ -1696,13 +1726,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242880",
       "today_source_published_at": "2026-05-20",
       "today_source_schedule_candidate_count": 90,
-      "today_parsed_schedule_count": 9,
+      "today_parsed_schedule_count": 12,
       "previous_source_file_date": "2026-05-19",
       "previous_source_title": "[오늘의 주요일정·19일] 일본 핵오염수 해양투기 중단 기자회견",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242840",
       "previous_source_schedule_candidate_count": 91,
       "previous_parsed_schedule_count": 12,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

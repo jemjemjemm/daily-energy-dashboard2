@@ -7,8 +7,8 @@ fetch_news_candidates.py v2.5
 
 운영 원칙
 - 기사 0건은 정상 상태가 아니라 수집 실패입니다.
-- 조간 News Trend 기본 검색창은 전일 17:00 KST ~ 기준일 09:00 KST로 봅니다.
-- 오후 News Trend 기본 검색창은 기준일 09:00 KST ~ 기준일 17:00 KST로 봅니다.
+- 조간 News Trend 기본 검색창은 전일 17:00 KST ~ 기준일 08:00 KST로 봅니다.
+- 오후 News Trend 기본 검색창은 기준일 08:00 KST ~ 기준일 17:00 KST로 봅니다.
 - News Trend 데이터는 Naver 뉴스 검색 HTML > Daum 뉴스 검색 HTML > Google News RSS 순서로 사용합니다.
 - 직접 관련 A/B 매체 후보 3건이 모일 때까지 다음 검색원도 누적 탐색합니다.
 - 0건이면 fallback 문구를 저장하고 통과시키지 않고, non-zero exit으로 workflow를 실패시킵니다.
@@ -134,9 +134,9 @@ def parse_args():
     p.add_argument("--force-refresh", action="store_true")
     args = p.parse_args()
     if args.lookback_hours is None:
-        args.lookback_hours = 16 if args.report_slot == "morning" else 8
+        args.lookback_hours = 15 if args.report_slot == "morning" else 9
     if args.cutoff_hour is None:
-        args.cutoff_hour = 9 if args.report_slot == "morning" else 17
+        args.cutoff_hour = 8 if args.report_slot == "morning" else 17
     return args
 
 

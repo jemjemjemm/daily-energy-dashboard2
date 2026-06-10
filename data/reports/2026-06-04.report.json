@@ -5,7 +5,7 @@
     "display_date": "2026년 6월 4일 (목)",
     "previous_day_label": "6/2",
     "today_label": "6/4",
-    "generated_at": "2026-06-04 09:09 KST",
+    "generated_at": "2026-06-10 16:53 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 07:40 시장상황점검회의, 09:00 비상경제본부회의, 09:00 비상경제본부회의(정부서울청사), 09:00 비상경제본부회의(정부세종청사)."
+      "text": "금일 주요 일정: 시장상황점검회의, 비상경제본부회의, 정부 드론·대드론 통합 TF 최종보고 회의, 제12회 방위산업발전협의회."
     },
     {
       "type": "news_trend",
@@ -1341,11 +1341,28 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "동탄 동탄IC 출근길인사",
-      "description": "07:00 · 개혁신당 · 경기 화성시 동탄구 중동",
-      "time": "07:00",
-      "org": "개혁신당",
-      "location": "경기 화성시 동탄구 중동",
+      "title": "중동전쟁 대응 보건의약단체 회의",
+      "description": "08:00 · 이형혼 복지부 2차관",
+      "time": "08:00",
+      "org": "이형혼 복지부 2차관",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "에너지",
+      "category_class": "",
+      "title": "국무회의",
+      "description": "10:00 · 구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "time": "10:00",
+      "org": "구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 김성환 기후에너지환경부 장관",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1359,10 +1376,10 @@
       "category": "정책",
       "category_class": "",
       "title": "국무회의 겸 비상경제점검회의",
-      "description": "10:00 · 기획처 · 청와대",
+      "description": "10:00 · 김민석 국무총리, 박홍근 기획예산처 장관",
       "time": "10:00",
-      "org": "기획처",
-      "location": "청와대",
+      "org": "김민석 국무총리, 박홍근 기획예산처 장관",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1375,11 +1392,45 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "국무회의",
-      "description": "10:00 · 재경부 · 청와대",
+      "title": "국무회의 및 비상경제 점검회의",
+      "description": "10:00 · 주병기 공정거래위원장",
       "time": "10:00",
-      "org": "재경부",
-      "location": "청와대",
+      "org": "주병기 공정거래위원장",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "제24회 국무회의 겸 제11차 비상경제점검회의",
+      "description": "10:00 · 이재명 대통령",
+      "time": "10:00",
+      "org": "이재명 대통령",
+      "location": "",
+      "links": [
+        {
+          "label": "관련 기사 없음",
+          "url": ""
+        }
+      ],
+      "grade": "",
+      "grade_class": ""
+    },
+    {
+      "category": "정책",
+      "category_class": "",
+      "title": "주례 임원회의",
+      "description": "10:00 · 이찬진 금융감독원장",
+      "time": "10:00",
+      "org": "이찬진 금융감독원장",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1393,56 +1444,65 @@
   "schedules": [
     {
       "time": "07:40",
-      "org": "재경부",
-      "title": "07:40 시장상황점검회의",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "시장상황점검회의",
       "relevance": ""
     },
     {
       "time": "09:00",
-      "org": "박윤주 1차관",
-      "title": "09:00 비상경제본부회의",
+      "org": "김민석 국무총리, 구윤철 부총리 겸 재정경제부 장관, 임기근 기획예산처 차관, 박윤주 외교부 1차관, 주병기 공정거래위원장, 오유경 식약처장, 현수엽 복지부 1차관, 김영훈 노동부 장관",
+      "attendees": "김민석 국무총리, 구윤철 부총리 겸 재정경제부 장관, 임기근 기획예산처 차관, 박윤주 외교부 1차관, 주병기 공정거래위원장, 오유경 식약처장, 현수엽 복지부 1차관, 김영훈 노동부 장관",
+      "title": "비상경제본부회의",
       "relevance": ""
     },
     {
-      "time": "09:00",
-      "org": "재경부",
-      "title": "09:00 비상경제본부회의(정부서울청사)",
+      "time": "10:00",
+      "org": "이두희 국방부 차관, 류제명 과기정통부 2차관",
+      "attendees": "이두희 국방부 차관, 류제명 과기정통부 2차관",
+      "title": "정부 드론·대드론 통합 TF 최종보고 회의",
       "relevance": ""
     },
     {
-      "time": "09:00",
-      "org": "주병기 위원장",
-      "title": "09:00 비상경제본부회의(정부세종청사)",
+      "time": "10:00",
+      "org": "안규백 국방부 장관, 김정관 산업통상부 장관",
+      "attendees": "안규백 국방부 장관, 김정관 산업통상부 장관",
+      "title": "제12회 방위산업발전협의회",
       "relevance": ""
     },
     {
-      "time": "09:00",
-      "org": "김영훈 장관",
-      "title": "09:00 제19차 비상경제본부 회의(서울)",
+      "time": "10:00",
+      "org": "권대영 재정경제부 금융부위원장",
+      "attendees": "권대영 재정경제부 금융부위원장",
+      "title": "차관회의",
       "relevance": ""
     },
     {
-      "time": "09:00",
-      "org": "김성환 장관",
-      "title": "09:00 호주 기후변화에너지부장관 화상 면담(서울)",
+      "time": "10:00 현지시간",
+      "org": "KEI",
+      "attendees": "KEI",
+      "title": "한미 관계 전망 세미나",
+      "relevance": ""
+    },
+    {
+      "time": "10:30",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "1주년 기자간담회",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "재경부",
-      "title": "14:00 민생물가 특별관리 관계장관 TF(정부서울청사)",
+      "org": "구윤철 부총리 겸 재정경제부 장관, 남동일 공정위 부위원장, 송미령 농식품부 장관, 김용재 식약차장, 원민경 성평등가족부 장관, 이병권 중기부 2차관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관, 남동일 공정위 부위원장, 송미령 농식품부 장관, 김용재 식약차장, 원민경 성평등가족부 장관, 이병권 중기부 2차관",
+      "title": "민생물가 특별관리 관계장관 TF 회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김성환 장관",
-      "title": "14:00 햇빛소득마을 ESS 연계 간담회(서울)",
-      "relevance": ""
-    },
-    {
-      "time": "9:00",
-      "org": "오유경 처장",
-      "title": "9:00 비상경제본부회의(정부세종청사)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "햇빛소득마을 ESS 연계 간담회",
       "relevance": ""
     }
   ],
@@ -1599,23 +1659,31 @@
       "today_source_title": "",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243185",
       "today_source_published_at": "2026-06-04",
-      "today_source_schedule_candidate_count": 42,
+      "today_source_schedule_candidate_count": 75,
       "today_parsed_schedule_count": 9,
       "previous_source_file_date": "2026-06-02",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243153",
-      "previous_source_schedule_candidate_count": 77,
-      "previous_parsed_schedule_count": 3,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "previous_source_schedule_candidate_count": 83,
+      "previous_parsed_schedule_count": 8,
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {
-      "source_file": "data/news/2026-06-04.json",
+      "source_file": "data\\news\\2026-06-04.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
       "status": "updated",
       "needs_review": true,
       "report_slot": "morning"
+    },
+    "news_afternoon": {
+      "source_file": "data\\news\\2026-06-04.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1632,17 +1700,9 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-06-04 09:10:42 KST",
+      "merged_at": "2026-06-10 16:53:20 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
-    },
-    "news_afternoon": {
-      "source_file": "data/news/2026-06-04.evening.json",
-      "article_count": 3,
-      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
-      "status": "updated",
-      "needs_review": true,
-      "report_slot": "evening"
     }
   },
   "news_trend_afternoon": {

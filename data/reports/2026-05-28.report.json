@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 09:00 비상경제본부 회의(정부서울청사), 09:00 비상경제본부회의, 비상경제본부회의(09:00 정부서울청사), 안태준 의원실 등, 탄소중립과 AX 시대(13:00 의원회관 제5간담회의실)."
+      "text": "금일 주요 일정: 비상경제본부회의, 제41차 중소기업 기후에너지환경정책협의회, 데이터관계장관회의, K-뷰티 현장방문 및 테크기업 간담회."
     },
     {
       "type": "news_trend",
@@ -1423,38 +1423,37 @@
   "schedules": [
     {
       "time": "09:00",
-      "org": "재경부",
-      "title": "09:00 비상경제본부 회의(정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "09:00",
-      "org": "김진아 2차관",
-      "title": "09:00 비상경제본부회의",
-      "relevance": ""
-    },
-    {
-      "time": "09:00",
-      "org": "국무총리",
-      "title": "비상경제본부회의(09:00 정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "13:00",
-      "org": "의원실 세미나",
-      "title": "안태준 의원실 등, 탄소중립과 AX 시대(13:00 의원회관 제5간담회의실)",
+      "org": "국무총리, 구윤철 부총리 겸 재정경제부 장관, 박홍근 기획예산처 장관, 김진아 외교부 2차관, 여한구 산업통상부 통상교섭본부장, 현수엽 복지부 1차관, 한성숙 중기부 장관",
+      "attendees": "국무총리, 구윤철 부총리 겸 재정경제부 장관, 박홍근 기획예산처 장관, 김진아 외교부 2차관, 여한구 산업통상부 통상교섭본부장, 현수엽 복지부 1차관, 한성숙 중기부 장관",
+      "title": "비상경제본부회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "금한승 1차관",
-      "title": "14:00 제41차 중소기업 기후에너지환경정책협의회(서울)",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "제41차 중소기업 기후에너지환경정책협의회",
+      "relevance": ""
+    },
+    {
+      "time": "15:00",
+      "org": "이형일 재정경제부 1차관",
+      "attendees": "이형일 재정경제부 1차관",
+      "title": "데이터관계장관회의",
       "relevance": ""
     },
     {
       "time": "16:00",
-      "org": "재경부",
-      "title": "16:00 K-뷰티 현장방문 및 테크기업 간담회(서울 서초구)",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "K-뷰티 현장방문 및 테크기업 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "16:30",
+      "org": "이형일 재정경제부 1차관",
+      "attendees": "이형일 재정경제부 1차관",
+      "title": "국민연금 기금운용위원회",
       "relevance": ""
     }
   ],
@@ -1612,13 +1611,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243054",
       "today_source_published_at": "2026-05-28",
       "today_source_schedule_candidate_count": 118,
-      "today_parsed_schedule_count": 6,
+      "today_parsed_schedule_count": 5,
       "previous_source_file_date": "2026-05-27",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243022",
       "previous_source_schedule_candidate_count": 109,
       "previous_parsed_schedule_count": 4,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 시장상황점검회의, 정무위원회 법안심사제1소위원회(09:20 본관 604호), 10:00 정무위 전체회의(10:00 국회), 10:00 정무위 전체회의(국회)."
+      "text": "금일 주요 일정: 시장상황점검회의, 정무위원회 법안심사제1소위원회, 정무위 전체회의, 정무위원회 전체회의."
     },
     {
       "type": "news_trend",
@@ -1489,74 +1489,65 @@
   "schedules": [
     {
       "time": "08:00",
-      "org": "재경부",
-      "title": "08:00 시장상황점검회의",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "시장상황점검회의",
       "relevance": ""
     },
     {
       "time": "09:20",
       "org": "국회",
-      "title": "정무위원회 법안심사제1소위원회(09:20 본관 604호)",
+      "attendees": "국회",
+      "title": "정무위원회 법안심사제1소위원회",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "권오을 장관",
-      "title": "10:00 정무위 전체회의(10:00 국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "공정위 주병기 위원장",
-      "title": "10:00 정무위 전체회의(국회)",
-      "relevance": ""
-    },
-    {
-      "time": "10:00",
-      "org": "이형일 1차관",
-      "title": "10:00 중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
+      "org": "공정위 주병기 위원장, 금융위 중기부 이억원 위원장, 권오을 보훈부 장관, 금융위, 권대영 금융부위원장",
+      "attendees": "공정위 주병기 위원장, 금융위 중기부 이억원 위원장, 권오을 보훈부 장관, 금융위, 권대영 금융부위원장",
+      "title": "정무위 전체회의",
       "relevance": ""
     },
     {
       "time": "10:00",
       "org": "국회",
-      "title": "정무위원회 전체회의(10:00 본관 604호)",
+      "attendees": "국회",
+      "title": "정무위원회 전체회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "이형일 재정경제부 1차관",
+      "attendees": "이형일 재정경제부 1차관",
+      "title": "중동전쟁 물가대응팀 회의 겸 물가관계차관회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김하균 세종시장 권한대행",
-      "title": "14:00 2026년 제2차 기후위기대응위원회 회의(집현실(517호))",
+      "org": "김민재 행안부 차관",
+      "attendees": "김민재 행안부 차관",
+      "title": "고유가 피해지원금 2차 지급준비 현장방문",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김민재 차관",
-      "title": "14:00 고유가 피해지원금 2차 지급준비 현장방문(충남 공주 옥룡동행정복지센터)",
+      "org": "홍지선 국토부 2차관",
+      "attendees": "홍지선 국토부 2차관",
+      "title": "아스콘 수급상황 점검회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "홍지선 2차관",
-      "title": "14:00 아스콘 수급상황 점검회의(세종)",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "원전수출전략협의회",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김정관 장관",
-      "title": "14:00 원전수출전략협의회(무보)",
-      "relevance": ""
-    },
-    {
-      "time": "14:00",
-      "org": "김영록 전남지사",
-      "title": "14:00 재생e 확산을 위한 전력계통 혁신대책 보고회(정약용실)",
-      "relevance": ""
-    },
-    {
-      "time": "15:00",
-      "org": "재경부",
-      "title": "15:00 주한캐나다대사 면담",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "장마철 대비 도시침수 대응사업 현장방문",
       "relevance": ""
     }
   ],
@@ -1714,13 +1705,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242754",
       "today_source_published_at": "2026-05-14",
       "today_source_schedule_candidate_count": 96,
-      "today_parsed_schedule_count": 12,
+      "today_parsed_schedule_count": 9,
       "previous_source_file_date": "2026-05-13",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242723",
       "previous_source_schedule_candidate_count": 101,
       "previous_parsed_schedule_count": 11,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

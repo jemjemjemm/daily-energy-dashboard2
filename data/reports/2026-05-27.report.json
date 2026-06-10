@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 14:00 기후부 및 산하기관 노조위원장 간담회(서울), 14:00 서남권 지역주력산업 토론회(한전 에너지신사업기술연구소), 14:00 전력망 건설 대책위 관련 현장방문(금산·대전), 15:00 제1차 AI 융합 국제개발 자문위원회."
+      "text": "금일 주요 일정: 하드디스크 내 희토 영구자석 회수 시범사업 업무협약, 조선기자재 현장방문 및 간담회, K마루 2차 선도지역 구축 MOU 협약식, 대한민국 2045전략수립위원회 출범 전체회의."
     },
     {
       "type": "news_trend",
@@ -1432,27 +1432,87 @@
   ],
   "schedules": [
     {
-      "time": "14:00",
-      "org": "금한승 1차관",
-      "title": "14:00 기후부 및 산하기관 노조위원장 간담회(서울)",
+      "time": "09:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "하드디스크 내 희토 영구자석 회수 시범사업 업무협약",
+      "relevance": ""
+    },
+    {
+      "time": "09:30",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "조선기자재 현장방문 및 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "허장 재정경제부 2차관",
+      "attendees": "허장 재정경제부 2차관",
+      "title": "K마루 2차 선도지역 구축 MOU 협약식",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "대한민국 2045전략수립위원회 출범 전체회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "수상형 태양광 사업장 현장방문",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "주병기 공정거래위원장",
+      "attendees": "주병기 공정거래위원장",
+      "title": "전원회의",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "노용석 1차관",
-      "title": "14:00 서남권 지역주력산업 토론회(한전 에너지신사업기술연구소)",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "AI 팩토리 현장방문 및 간담회",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "김성환 장관",
-      "title": "14:00 전력망 건설 대책위 관련 현장방문(금산·대전)",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "기후부 및 산하기관 노조위원장 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "전력망 건설 대책위 관련 현장방문",
       "relevance": ""
     },
     {
       "time": "15:00",
-      "org": "재경부",
-      "title": "15:00 제1차 AI 융합 국제개발 자문위원회",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "제1차 AI 융합 국제개발 자문위원회",
+      "relevance": ""
+    },
+    {
+      "time": "16:00",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "도미니카공화국 환경천연자원부 장관 양자면담",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "일본 경제산업성",
+      "attendees": "일본 경제산업성",
+      "title": "일본 경제산업성, 석유 제품 물가 발표",
       "relevance": ""
     }
   ],
@@ -1610,13 +1670,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243022",
       "today_source_published_at": "2026-05-27",
       "today_source_schedule_candidate_count": 109,
-      "today_parsed_schedule_count": 4,
+      "today_parsed_schedule_count": 12,
       "previous_source_file_date": "2026-05-26",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242993",
       "previous_source_schedule_candidate_count": 65,
       "previous_parsed_schedule_count": 3,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

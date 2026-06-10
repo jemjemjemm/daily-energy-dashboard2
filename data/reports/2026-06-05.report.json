@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 주요 일정 없음."
+      "text": "금일 주요 일정: 비상경제본부회의, 차관회의, 사우디 아람코 다운스트림 부문 사장 면담."
     },
     {
       "type": "news_trend",
@@ -1471,7 +1471,29 @@
       "grade_class": ""
     }
   ],
-  "schedules": [],
+  "schedules": [
+    {
+      "time": "08:00",
+      "org": "재정경제부, 농식품부, 김용재 식약차장",
+      "attendees": "재정경제부, 농식품부, 김용재 식약차장",
+      "title": "비상경제본부회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "남동일 공정위 부위원장",
+      "attendees": "남동일 공정위 부위원장",
+      "title": "차관회의",
+      "relevance": ""
+    },
+    {
+      "time": "13:40",
+      "org": "산업통상부",
+      "attendees": "산업통상부",
+      "title": "사우디 아람코 다운스트림 부문 사장 면담",
+      "relevance": ""
+    }
+  ],
   "news_trend": {
     "summary": "△국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수 △정부·국회 에너지 정책 대응",
     "trend_paragraphs": [
@@ -1617,7 +1639,7 @@
   },
   "automation": {
     "validation": {
-      "today_schedule_status": "no_relevant_schedule",
+      "today_schedule_status": "ok",
       "previous_schedule_status": "ok"
     },
     "safetimes": {
@@ -1626,13 +1648,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243232",
       "today_source_published_at": "2026-06-05",
       "today_source_schedule_candidate_count": 23,
-      "today_parsed_schedule_count": 0,
+      "today_parsed_schedule_count": 3,
       "previous_source_file_date": "2026-06-04",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243185",
       "previous_source_schedule_candidate_count": 42,
       "previous_parsed_schedule_count": 9,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

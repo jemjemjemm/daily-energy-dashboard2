@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 07:45 ESS 생산 및 실증 현장방문(계룡·대전), 08:00 비상경제본부회의, 08:30 비상경제본부회의 참석(서울), 08:30 비상경제본부회의(국무총리실)."
+      "text": "금일 주요 일정: ESS 생산 및 실증 현장방문, 비상경제본부회의, 일자리 TF, 비상경제본부회의."
     },
     {
       "type": "news_trend",
@@ -1489,68 +1489,86 @@
   "schedules": [
     {
       "time": "07:45",
-      "org": "김성환 장관",
-      "title": "07:45 ESS 생산 및 실증 현장방문(계룡·대전)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "ESS 생산 및 실증 현장방문",
       "relevance": ""
     },
     {
       "time": "08:00",
-      "org": "기획처",
-      "title": "08:00 비상경제본부회의",
+      "org": "박홍근 기획예산처 장관",
+      "attendees": "박홍근 기획예산처 장관",
+      "title": "비상경제본부회의",
+      "relevance": ""
+    },
+    {
+      "time": "08:00",
+      "org": "이형일 재정경제부 1차관",
+      "attendees": "이형일 재정경제부 1차관",
+      "title": "일자리 TF",
       "relevance": ""
     },
     {
       "time": "08:30",
-      "org": "김민재 차관",
-      "title": "08:30 비상경제본부회의 참석(서울)",
-      "relevance": ""
-    },
-    {
-      "time": "08:30",
-      "org": "조현 장관",
-      "title": "08:30 비상경제본부회의(국무총리실)",
-      "relevance": ""
-    },
-    {
-      "time": "08:30",
-      "org": "공정위 주병기 위원장",
-      "title": "08:30 비상경제본부회의(세종청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:30",
-      "org": "이형일 1차관",
-      "title": "08:30 비상경제본부회의(정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:30",
-      "org": "권창준 차관",
-      "title": "08:30 제14차 비상경제본부 회의(정부서울청사)",
-      "relevance": ""
-    },
-    {
-      "time": "08:30",
-      "org": "국무총리",
-      "title": "비상경제본부회의(08:30 정부서울청사)",
+      "org": "국무총리, 이형일 재정경제부 1차관, 조현 외교부 장관, 문신학 산업통상부 1차관, 공정위 주병기 위원장, 권창준 노동부 차관, 김민재 행안부 차관",
+      "attendees": "국무총리, 이형일 재정경제부 1차관, 조현 외교부 장관, 문신학 산업통상부 1차관, 공정위 주병기 위원장, 권창준 노동부 차관, 김민재 행안부 차관",
+      "title": "비상경제본부회의",
       "relevance": ""
     },
     {
       "time": "09:40",
-      "org": "공정위 주병기 위원장",
-      "title": "09:40 현안점검 간부회의(대회의실)",
+      "org": "남동일 공정위 부위원장, 공정위 주병기 위원장",
+      "attendees": "남동일 공정위 부위원장, 공정위 주병기 위원장",
+      "title": "현안점검 간부회의",
+      "relevance": ""
+    },
+    {
+      "time": "11:30",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "울산·미포 MINI 얼라이언스 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "13:30",
+      "org": "문신학 산업통상부 1차관",
+      "attendees": "문신학 산업통상부 1차관",
+      "title": "K-뉴딜 아카데미 10대 그룹 간담회",
       "relevance": ""
     },
     {
       "time": "14:00",
-      "org": "의원실 세미나",
-      "title": "윤준병 의원실 등, 글로벌 에너지 공급망 위기와 한-러 북극항로 협력(14:00 의원회관 제11간담회의실)",
+      "org": "이호현 기후에너지환경부 2차관",
+      "attendees": "이호현 기후에너지환경부 2차관",
+      "title": "경주 방폐장 2단계 표층처분시설 준공식",
       "relevance": ""
     },
     {
       "time": "15:00",
-      "org": "송미령 장관",
-      "title": "15:00 농업·농촌 에너지 대전환 선도지역 현장간담회(강원 춘천)",
+      "org": "송미령 농식품부 장관",
+      "attendees": "송미령 농식품부 장관",
+      "title": "농업·농촌 에너지 대전환 선도지역 현장간담회",
+      "relevance": ""
+    },
+    {
+      "time": "15:00",
+      "org": "허장 재정경제부 2차관",
+      "attendees": "허장 재정경제부 2차관",
+      "title": "제1차 개발금융 자문위원회",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "미국 4월 생산자물가지수(PPI) (미국 워싱턴DC)",
+      "attendees": "미국 4월 생산자물가지수(PPI) (미국 워싱턴DC)",
+      "title": "코리아소사이어티 신임 회장 오찬 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "국제에너지기구 월간 석유 보고서(프랑스 파리)",
+      "attendees": "국제에너지기구 월간 석유 보고서(프랑스 파리)",
+      "title": "프랑스 대통령 에티오피아 방문",
       "relevance": ""
     }
   ],
@@ -1708,13 +1726,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242723",
       "today_source_published_at": "2026-05-13",
       "today_source_schedule_candidate_count": 101,
-      "today_parsed_schedule_count": 11,
+      "today_parsed_schedule_count": 12,
       "previous_source_file_date": "2026-05-12",
       "previous_source_title": "[오늘의 주요일정·12일] 이재명 대통령 비상경제점검회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242687",
       "previous_source_schedule_candidate_count": 88,
       "previous_parsed_schedule_count": 10,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

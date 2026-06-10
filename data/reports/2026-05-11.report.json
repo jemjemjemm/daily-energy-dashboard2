@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실), 정무위원회 법안심사제2소위원회(14:00 본관 604호)."
+      "text": "금일 주요 일정: 고유가 피해지원금 2차 지급 브리핑, 인도 전문가 간담회, 소속·산하기관 홍수대응 체계 점검회의, 정무위 법안소위."
     },
     {
       "type": "news_trend",
@@ -1489,14 +1489,37 @@
   "schedules": [
     {
       "time": "11:00",
-      "org": "윤호중 장관",
-      "title": "11:00 고유가 피해지원금 2차 지급 브리핑(서울청사 본관 브리핑실)",
+      "org": "윤호중 행안부 장관",
+      "attendees": "윤호중 행안부 장관",
+      "title": "고유가 피해지원금 2차 지급 브리핑",
+      "relevance": ""
+    },
+    {
+      "time": "11:00",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "인도 전문가 간담회",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "소속·산하기관 홍수대응 체계 점검회의",
+      "relevance": ""
+    },
+    {
+      "time": "14:00",
+      "org": "남동일 공정위 부위원장",
+      "attendees": "남동일 공정위 부위원장",
+      "title": "정무위 법안소위",
       "relevance": ""
     },
     {
       "time": "14:00",
       "org": "국회",
-      "title": "정무위원회 법안심사제2소위원회(14:00 본관 604호)",
+      "attendees": "국회",
+      "title": "정무위원회 법안심사제2소위원회",
       "relevance": ""
     }
   ],
@@ -1654,13 +1677,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242654",
       "today_source_published_at": "2026-05-11",
       "today_source_schedule_candidate_count": 67,
-      "today_parsed_schedule_count": 2,
+      "today_parsed_schedule_count": 5,
       "previous_source_file_date": "2026-05-08",
       "previous_source_title": "[오늘의 주요일정·8일] 범정부 허위가짜뉴스 단속협의체 회의",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242586",
       "previous_source_schedule_candidate_count": 107,
       "previous_parsed_schedule_count": 11,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {

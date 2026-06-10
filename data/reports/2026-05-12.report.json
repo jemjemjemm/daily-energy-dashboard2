@@ -17,7 +17,7 @@
   "summary": [
     {
       "type": "today",
-      "text": "금일 주요 일정: 08:00 중동전쟁 대응 보건의약단체 회의(서울), 정무위원회 법안심사제1소위원회(10:00 본관 604호), 제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대), 14:30 중동전쟁 관련 수출기업 현장 방문(페스웰)."
+      "text": "금일 주요 일정: 중동전쟁 대응 보건의약단체 회의, 미 4월 소비자물가지수, 국무회의, 국무회의 겸 비상경제점검회의."
     },
     {
       "type": "news_trend",
@@ -1421,62 +1421,114 @@
   "schedules": [
     {
       "time": "08:00",
-      "org": "이형훈 2차관",
-      "title": "08:00 중동전쟁 대응 보건의약단체 회의(서울)",
+      "org": "이형훈 복지부 2차관",
+      "attendees": "이형훈 복지부 2차관",
+      "title": "중동전쟁 대응 보건의약단체 회의",
+      "relevance": ""
+    },
+    {
+      "time": "08:30 현지시간",
+      "org": "확인",
+      "attendees": "확인",
+      "title": "미 4월 소비자물가지수",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 공정위 주병기 위원장, 김성환 기후에너지환경부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관, 김정관 산업통상부 장관, 공정위 주병기 위원장, 김성환 기후에너지환경부 장관",
+      "title": "국무회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "박홍근 기획예산처 장관",
+      "attendees": "박홍근 기획예산처 장관",
+      "title": "국무회의 겸 비상경제점검회의",
+      "relevance": ""
+    },
+    {
+      "time": "10:00",
+      "org": "권대영 금융부위원장",
+      "attendees": "권대영 금융부위원장",
+      "title": "정무위 법안소위",
       "relevance": ""
     },
     {
       "time": "10:00",
       "org": "국회",
-      "title": "정무위원회 법안심사제1소위원회(10:00 본관 604호)",
+      "attendees": "국회",
+      "title": "정무위원회 법안심사제1소위원회",
       "relevance": ""
     },
     {
       "time": "10:00",
-      "org": "대통령",
-      "title": "제21회 국무회의 겸 제8차 비상경제점검회의(10:00 청와대)",
+      "org": "김영훈 노동부 장관, 이재명 대통령",
+      "attendees": "김영훈 노동부 장관, 이재명 대통령",
+      "title": "제21회 국무회의 겸 제8차 비상경제점검회의",
       "relevance": ""
     },
     {
       "time": "14:30",
-      "org": "노용석 1차관",
-      "title": "14:30 중동전쟁 관련 수출기업 현장 방문(페스웰)",
+      "org": "노용석 중기부 1차관",
+      "attendees": "노용석 중기부 1차관",
+      "title": "중동전쟁 관련 수출기업 현장 방문",
       "relevance": ""
     },
     {
       "time": "15:00",
-      "org": "재경부",
-      "title": "15:00 국채시장 자문위원회 정례회의",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "국채시장 자문위원회 정례회의",
       "relevance": ""
     },
     {
       "time": "15:30",
-      "org": "배경훈 부총리 겸 과기정통",
-      "title": "15:30 과기정통부-기후부 MOU(정부서울청사)",
+      "org": "배경훈 부총리 겸 과기정통부 장관",
+      "attendees": "배경훈 부총리 겸 과기정통부 장관",
+      "title": "과기정통부-기후부 MOU",
       "relevance": ""
     },
     {
       "time": "15:30",
-      "org": "김성환 장관",
-      "title": "15:30 기후부·과기정통부 에너지 정책협력 업무협약 체결식(서울)",
+      "org": "김성환 기후에너지환경부 장관",
+      "attendees": "김성환 기후에너지환경부 장관",
+      "title": "기후부·과기정통부 에너지 정책협력 업무협약 체결식",
       "relevance": ""
     },
     {
       "time": "16:00",
-      "org": "금한승 1차관",
-      "title": "16:00 기후·환경·에너지 분야 정상화 TF 회의(서울)",
+      "org": "김정관 산업통상부 장관",
+      "attendees": "김정관 산업통상부 장관",
+      "title": "'K수출스타 500' 간담회 및 출범식",
+      "relevance": ""
+    },
+    {
+      "time": "16:00",
+      "org": "금한승 기후에너지환경부 1차관",
+      "attendees": "금한승 기후에너지환경부 1차관",
+      "title": "기후·환경·에너지 분야 정상화 TF 회의",
       "relevance": ""
     },
     {
       "time": "17:00",
-      "org": "재경부",
-      "title": "17:00 외환시장 제도개선 관련 은행장 간담회",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
+      "attendees": "구윤철 부총리 겸 재정경제부 장관",
+      "title": "외환시장 제도개선 관련 은행장 간담회",
       "relevance": ""
     },
     {
-      "time": "현지",
-      "org": "복지부, 중동전쟁 대응 보",
-      "title": "[국제](현지시간)",
+      "time": "시간 미기재",
+      "org": "EU 에너지장관 비공식회의(~13일",
+      "attendees": "EU 에너지장관 비공식회의(~13일",
+      "title": "EU 에너지장관 비공식회의",
+      "relevance": ""
+    },
+    {
+      "time": "시간 미기재",
+      "org": "영프",
+      "attendees": "영프",
+      "title": "영프, 호르무즈 관련 국제 국방장관 화상회의",
       "relevance": ""
     }
   ],
@@ -1634,13 +1686,13 @@
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242687",
       "today_source_published_at": "2026-05-12",
       "today_source_schedule_candidate_count": 88,
-      "today_parsed_schedule_count": 10,
+      "today_parsed_schedule_count": 16,
       "previous_source_file_date": "2026-05-11",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=242654",
       "previous_source_schedule_candidate_count": 67,
       "previous_parsed_schedule_count": 2,
-      "parser_version": "build_report_draft_from_schedule.py v2.2-source-vs-relevant-status",
+      "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
     },
     "news": {
