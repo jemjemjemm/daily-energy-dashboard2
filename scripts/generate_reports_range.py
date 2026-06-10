@@ -151,6 +151,7 @@ def main() -> int:
         "scripts/ensure_report_draft.py",
         "scripts/merge_prices_into_report.py",
         "scripts/generate_html_report.py",
+        "scripts/generate_schedule_detail_html.py",
         "scripts/generate_report_index.py",
         args.history,
         args.base_report,
@@ -299,7 +300,20 @@ def main() -> int:
             "--chart-months", str(args.chart_months),
         ])
 
-        # 5. HTML 리포트 생성.
+        # 5. 전체 일정 상세 HTML 생성. 일정 원본이 없거나 상세 생성만 실패해도 리포트 생성은 계속 진행한다.
+        schedule_detail_dir = str(Path(args.html_dir).parent / "schedules")
+        if file_exists(schedule_path):
+            run([
+                sys.executable,
+                "scripts/generate_schedule_detail_html.py",
+                "--date", date_text,
+                "--schedule-dir", args.schedule_dir,
+                "--out-dir", schedule_detail_dir,
+            ], allow_fail=True)
+        else:
+            print(f"[WARN] 일정 JSON이 없어 상세 HTML 생성을 건너뜁니다: {schedule_path}")
+
+        # 6. HTML 리포트 생성.
         run([
             sys.executable,
             "scripts/generate_html_report.py",
@@ -308,7 +322,7 @@ def main() -> int:
             "--out-dir", args.html_dir,
         ])
 
-    # 6. 캘린더용 index 갱신.
+    # 7. 캘린더용 index 갱신.
     run([
         sys.executable,
         "scripts/generate_report_index.py",

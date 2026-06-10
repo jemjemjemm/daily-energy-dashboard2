@@ -83,6 +83,7 @@ jobs:
           test -f scripts/fetch_opinet_international_prices.py || (echo "ERROR: scripts/fetch_opinet_international_prices.py 파일이 없습니다." && exit 1)
           test -f scripts/merge_prices_into_report.py || (echo "ERROR: scripts/merge_prices_into_report.py 파일이 없습니다." && exit 1)
           test -f scripts/generate_html_report.py || (echo "ERROR: scripts/generate_html_report.py 파일이 없습니다." && exit 1)
+          test -f scripts/generate_schedule_detail_html.py || (echo "ERROR: scripts/generate_schedule_detail_html.py 파일이 없습니다." && exit 1)
           test -f scripts/generate_report_index.py || (echo "ERROR: scripts/generate_report_index.py 파일이 없습니다." && exit 1)
           test -f scripts/ensure_report_draft.py || (echo "ERROR: scripts/ensure_report_draft.py 파일이 없습니다." && exit 1)
           test -f scripts/generate_reports_range.py || (echo "ERROR: scripts/generate_reports_range.py 파일이 없습니다." && exit 1)
@@ -321,6 +322,15 @@ jobs:
       - name: Generate HTML report
         if: env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true'
         run: |
+          if [ -f "data/schedules/$TARGET_DATE.json" ]; then
+            python scripts/generate_schedule_detail_html.py \
+              --date "$TARGET_DATE" \
+              --schedule-dir data/schedules \
+              --out-dir docs/schedules \
+              || echo "[WARN] 상세 HTML 생성 실패. 리포트 HTML 생성은 계속 진행합니다."
+          else
+            echo "[WARN] 일정 JSON이 없어 상세 HTML 생성을 건너뜁니다: data/schedules/$TARGET_DATE.json"
+          fi
           python scripts/generate_html_report.py \
             --date "$TARGET_DATE" \
             --report-slot "$REPORT_SLOT" \
@@ -338,9 +348,13 @@ jobs:
         if: env.RUN_MODE == 'range' || (env.RUN_MODE == 'single' && env.IS_BUSINESS_DAY == 'true')
         run: |
           mkdir -p public/reports
+          mkdir -p public/schedules
           cp -f docs/report-index.json public/report-index.json
           if compgen -G "docs/reports/*.html" > /dev/null; then
             cp -f docs/reports/*.html public/reports/
+          fi
+          if compgen -G "docs/schedules/*.html" > /dev/null; then
+            cp -f docs/schedules/*.html public/schedules/
           fi
 
       - name: Validate generated report HTML

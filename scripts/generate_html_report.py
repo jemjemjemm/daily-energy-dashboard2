@@ -34,7 +34,7 @@ COLORS = {
 
 STYLE = r"""
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-*{box-sizing:border-box}body{margin:0;padding:16px;background:#F4F5F7;color:#1A1A1A;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}.container{max-width:480px;margin:0 auto}.header{background:#0A2444;color:#fff;padding:18px 16px 14px;border-radius:12px 12px 0 0}.header-top{display:flex;justify-content:space-between;gap:12px}.header-title{font-size:20px;font-weight:700}.header-date{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}.header-badge{font-size:11px;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 10px;height:fit-content;white-space:nowrap}.section{background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin:10px 0;overflow:hidden}.section-header{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #E5E7EB;background:#F8F9FA}.section-num{font-size:11px;font-weight:700;color:#fff;background:#0A2444;border-radius:4px;padding:2px 7px;min-width:24px;text-align:center}.section-title{font-size:14px;font-weight:700}.summary-body,.news-body{padding:14px 16px}.summary-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0;font-size:13px}.summary-item:last-child{border-bottom:none}.summary-dot{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#1A6FD4;margin-top:8px}.price-section-label{font-size:12px;font-weight:500;color:#666;padding:12px 16px 6px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px 14px}.price-card{background:#F8F9FA;border-radius:8px;padding:10px 8px;text-align:center}.price-label{font-size:11px;color:#666;margin-bottom:4px}.price-value{font-size:18px;font-weight:700;line-height:1}.price-unit{font-size:10px;color:#999;margin-top:2px}.price-change{font-size:11px;margin-top:3px}.up{color:#C0392B}.down{color:#0A7B4E}.flat{color:#888}.divider{height:1px;background:#F0F0F0;margin:0 16px 4px}.chart-wrap{padding:12px 14px}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#666}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:12px;height:3px;border-radius:2px}.chart-box{position:relative;width:100%;min-height:245px;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;overflow:visible}.chart-svg{width:100%;height:auto;display:block;overflow:visible}.chart-hover-line{opacity:0}.chart-tooltip{position:absolute;z-index:20;display:none;min-width:132px;max-width:220px;background:rgba(10,36,68,.96);color:#fff;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.45;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}.chart-tooltip .date{font-weight:700;margin-bottom:4px}.tooltip-row{display:flex;justify-content:space-between;gap:12px}.no-data{padding:24px 8px;text-align:center;color:#888;background:#F8F9FA;border-radius:8px}.issue-list,.schedule-list{padding:10px 12px}.issue-card{background:#F8F9FA;border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid #1A6FD4}.issue-tag{display:inline-block;font-size:10px;font-weight:700;background:#E6F1FB;color:#185FA5;border-radius:3px;padding:2px 6px;margin-bottom:6px}.issue-title{font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.5}.issue-desc{font-size:12px;color:#444;line-height:1.65}.issue-links{margin-top:8px;font-size:11px}.issue-links a{display:block;color:#0A2444;text-decoration:underline;margin-top:3px}.issue-links span{display:block;color:#777;margin-top:3px}.schedule-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #F0F0F0}.schedule-row:last-child{border-bottom:none}.schedule-time{flex:0 0 38px;font-size:11px;font-weight:700;color:#185FA5;margin-top:1px}.schedule-org{flex:0 0 48px;font-size:10px;background:#F0F1F3;border:1px solid #E0E0E0;border-radius:3px;padding:1px 4px;color:#555;text-align:center}.schedule-main{flex:1;font-size:12px;line-height:1.5}.schedule-rel{font-size:11px;color:#777;margin-top:2px}.schedule-table{width:100%;border-collapse:collapse;table-layout:fixed}.schedule-table th{font-size:11px;color:#666;background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:6px 5px;text-align:left}.schedule-table th:first-child{width:46px}.schedule-table th:nth-child(2){width:28%}.schedule-table td{vertical-align:top;border-bottom:1px solid #F0F0F0;padding:8px 5px}.schedule-table .schedule-row{display:table-row;border-bottom:none}.schedule-table .schedule-time{width:46px;display:table-cell;flex:none;font-size:11px;font-weight:700;color:#185FA5;margin:0;white-space:normal;word-break:keep-all}.schedule-table .schedule-main{width:28%;display:table-cell;flex:none;font-size:12px;line-height:1.5;font-weight:600}.schedule-attendees{font-size:12px;line-height:1.55;color:#333}.news-trend{font-size:13px;line-height:1.75;margin-bottom:14px}.news-separator{height:1px;background:#F0F0F0;margin:12px 0}.news-links-title{font-size:11px;font-weight:700;color:#999;letter-spacing:.5px;margin-bottom:8px}.news-link{display:block;padding:9px 0;border-bottom:1px solid #F0F0F0;text-decoration:none;color:inherit}.news-link-title{font-size:13px;font-weight:600;color:#0A2444;line-height:1.45;text-decoration:underline}.news-link-press{font-size:11px;color:#888;margin:2px 0}.news-link-desc{font-size:11px;color:#555;line-height:1.55}.fact-note{font-size:11px;color:#888;background:#F8F9FA;border-top:1px solid #E5E7EB;padding:10px 16px}.footer{text-align:center;padding:12px;font-size:11px;color:#aaa;border-top:1px solid #E5E7EB;margin-top:4px}@media(max-width:430px){body{padding:10px}.header-title{font-size:18px}.header-badge{font-size:10px;padding:4px 8px}.price-grid{gap:6px;padding:0 12px 12px}.price-value{font-size:16px}.chart-wrap{padding:10px 8px}.chart-box{min-height:230px}.chart-tooltip{font-size:10.5px;min-width:124px}.schedule-table th:first-child{width:42px}.schedule-table th:nth-child(2){width:26%}.schedule-table .schedule-time{width:42px}.schedule-table .schedule-main{width:26%}}
+*{box-sizing:border-box}body{margin:0;padding:16px;background:#F4F5F7;color:#1A1A1A;font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6}.container{max-width:480px;margin:0 auto}.header{background:#0A2444;color:#fff;padding:18px 16px 14px;border-radius:12px 12px 0 0}.header-top{display:flex;justify-content:space-between;gap:12px}.header-title{font-size:20px;font-weight:700}.header-date{font-size:12px;color:rgba(255,255,255,.7);margin-top:3px}.header-badge{font-size:11px;background:rgba(255,255,255,.12);border-radius:20px;padding:4px 10px;height:fit-content;white-space:nowrap}.section{background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin:10px 0;overflow:hidden}.section-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 16px;border-bottom:1px solid #E5E7EB;background:#F8F9FA}.section-heading{display:flex;align-items:center;gap:8px;min-width:0}.section-num{font-size:11px;font-weight:700;color:#fff;background:#0A2444;border-radius:4px;padding:2px 7px;min-width:24px;text-align:center}.section-title{font-size:14px;font-weight:700;min-width:0}.section-detail-btn{flex:0 0 auto;min-height:30px;border:1px solid #C9D8EA;border-radius:999px;background:#fff;color:#185FA5;padding:4px 11px;font-size:12px;font-weight:700;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}.section-detail-btn:active{background:#EAF3FF}.summary-body,.news-body{padding:14px 16px}.summary-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #F0F0F0;font-size:13px}.summary-item:last-child{border-bottom:none}.summary-dot{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#1A6FD4;margin-top:8px}.price-section-label{font-size:12px;font-weight:500;color:#666;padding:12px 16px 6px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0 16px 14px}.price-card{background:#F8F9FA;border-radius:8px;padding:10px 8px;text-align:center}.price-label{font-size:11px;color:#666;margin-bottom:4px}.price-value{font-size:18px;font-weight:700;line-height:1}.price-unit{font-size:10px;color:#999;margin-top:2px}.price-change{font-size:11px;margin-top:3px}.up{color:#C0392B}.down{color:#0A7B4E}.flat{color:#888}.divider{height:1px;background:#F0F0F0;margin:0 16px 4px}.chart-wrap{padding:12px 14px}.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:12px;color:#666}.legend-item{display:flex;align-items:center;gap:5px}.legend-dot{width:12px;height:3px;border-radius:2px}.chart-box{position:relative;width:100%;min-height:245px;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;overflow:visible}.chart-svg{width:100%;height:auto;display:block;overflow:visible}.chart-hover-line{opacity:0}.chart-tooltip{position:absolute;z-index:20;display:none;min-width:132px;max-width:220px;background:rgba(10,36,68,.96);color:#fff;border-radius:8px;padding:8px 10px;font-size:11px;line-height:1.45;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}.chart-tooltip .date{font-weight:700;margin-bottom:4px}.tooltip-row{display:flex;justify-content:space-between;gap:12px}.no-data{padding:24px 8px;text-align:center;color:#888;background:#F8F9FA;border-radius:8px}.issue-list,.schedule-list{padding:10px 12px}.issue-card{background:#F8F9FA;border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid #1A6FD4}.issue-tag{display:inline-block;font-size:10px;font-weight:700;background:#E6F1FB;color:#185FA5;border-radius:3px;padding:2px 6px;margin-bottom:6px}.issue-title{font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.5}.issue-desc{font-size:12px;color:#444;line-height:1.65}.issue-links{margin-top:8px;font-size:11px}.issue-links a{display:block;color:#0A2444;text-decoration:underline;margin-top:3px}.issue-links span{display:block;color:#777;margin-top:3px}.schedule-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid #F0F0F0}.schedule-row:last-child{border-bottom:none}.schedule-time{flex:0 0 38px;font-size:11px;font-weight:700;color:#185FA5;margin-top:1px}.schedule-org{flex:0 0 48px;font-size:10px;background:#F0F1F3;border:1px solid #E0E0E0;border-radius:3px;padding:1px 4px;color:#555;text-align:center}.schedule-main{flex:1;font-size:12px;line-height:1.5}.schedule-rel{font-size:11px;color:#777;margin-top:2px}.schedule-table{width:100%;border-collapse:collapse;table-layout:fixed}.schedule-table th{font-size:11px;color:#666;background:#F8F9FA;border-bottom:1px solid #E5E7EB;padding:6px 5px;text-align:left}.schedule-table th:first-child{width:46px}.schedule-table th:nth-child(2){width:28%}.schedule-table td{vertical-align:top;border-bottom:1px solid #F0F0F0;padding:8px 5px}.schedule-table .schedule-row{display:table-row;border-bottom:none}.schedule-table .schedule-time{width:46px;display:table-cell;flex:none;font-size:11px;font-weight:700;color:#185FA5;margin:0;white-space:normal;word-break:keep-all}.schedule-table .schedule-main{width:28%;display:table-cell;flex:none;font-size:12px;line-height:1.5;font-weight:600}.schedule-attendees{font-size:12px;line-height:1.55;color:#333}.news-trend{font-size:13px;line-height:1.75;margin-bottom:14px}.news-separator{height:1px;background:#F0F0F0;margin:12px 0}.news-links-title{font-size:11px;font-weight:700;color:#999;letter-spacing:.5px;margin-bottom:8px}.news-link{display:block;padding:9px 0;border-bottom:1px solid #F0F0F0;text-decoration:none;color:inherit}.news-link-title{font-size:13px;font-weight:600;color:#0A2444;line-height:1.45;text-decoration:underline}.news-link-press{font-size:11px;color:#888;margin:2px 0}.news-link-desc{font-size:11px;color:#555;line-height:1.55}.fact-note{font-size:11px;color:#888;background:#F8F9FA;border-top:1px solid #E5E7EB;padding:10px 16px}.schedule-detail-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;background:rgba(10,36,68,.35);padding:12px}.schedule-detail-modal.is-open{display:flex}.schedule-detail-panel{width:100%;max-width:430px;height:calc(100vh - 24px);height:calc(100dvh - 24px);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.25);display:flex;flex-direction:column}.schedule-detail-topbar{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 10px;background:#0A2444;color:#fff}.schedule-detail-topbar span{font-size:13px;font-weight:700}.schedule-detail-close{min-height:34px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.12);color:#fff;padding:4px 12px;font-size:12px;font-weight:700;cursor:pointer}.schedule-detail-frame{flex:1;width:100%;height:100%;border:0;background:#F4F6F9}.schedule-detail-fallback{display:none;flex:1;align-items:center;justify-content:center;padding:22px;color:#555;text-align:center;background:#fff}.schedule-detail-fallback.is-visible{display:flex}.footer{text-align:center;padding:12px;font-size:11px;color:#aaa;border-top:1px solid #E5E7EB;margin-top:4px}@media(max-width:430px){body{padding:10px}.header-title{font-size:18px}.header-badge{font-size:10px;padding:4px 8px}.price-grid{gap:6px;padding:0 12px 12px}.price-value{font-size:16px}.chart-wrap{padding:10px 8px}.chart-box{min-height:230px}.chart-tooltip{font-size:10.5px;min-width:124px}.schedule-table th:first-child{width:42px}.schedule-table th:nth-child(2){width:26%}.schedule-table .schedule-time{width:42px}.schedule-table .schedule-main{width:26%}.section-header{padding:10px 12px}.schedule-detail-modal{padding:8px}.schedule-detail-panel{height:calc(100vh - 16px);height:calc(100dvh - 16px);border-radius:14px}}
 """.strip()
 
 
@@ -131,14 +131,32 @@ def display_date(date_text: str, data: Mapping[str, Any]) -> str:
         return date_text
 
 
-def section(num: int, title: str, body: str, class_name: str = "") -> str:
+def section(num: int, title: str, body: str, class_name: str = "", action_html: str = "") -> str:
     klass = f"section {class_name}".strip()
+    action = action_html or ""
     return f"""
 <section class="{klass}">
-  <div class="section-header"><span class="section-num">{num}</span><span class="section-title">{esc(title)}</span></div>
+  <div class="section-header"><div class="section-heading"><span class="section-num">{num}</span><span class="section-title">{esc(title)}</span></div>{action}</div>
   {body}
 </section>
 """
+
+
+def schedule_detail_button(date_text: str) -> str:
+    src = f"../schedules/{date_text}.html"
+    return f'<button type="button" class="section-detail-btn" data-schedule-detail-open data-schedule-detail-src="{esc(src)}">상세</button>'
+
+
+def schedule_detail_modal() -> str:
+    return """
+<div id="scheduleDetailModal" class="schedule-detail-modal" hidden aria-hidden="true">
+  <div class="schedule-detail-panel" role="dialog" aria-modal="true" aria-label="전체 일정 상세">
+    <div class="schedule-detail-topbar"><span>전체 일정</span><button type="button" class="schedule-detail-close" data-schedule-detail-close>닫기</button></div>
+    <div class="schedule-detail-fallback" data-schedule-detail-fallback>상세 일정 파일을 찾을 수 없습니다.</div>
+    <iframe id="scheduleDetailFrame" class="schedule-detail-frame" title="전체 일정 상세"></iframe>
+  </div>
+</div>
+""".strip()
 
 
 def text_of(item: Any) -> str:
@@ -808,6 +826,72 @@ TOOLTIP_SCRIPT = r"""
 </script>
 """.strip()
 
+
+SCHEDULE_DETAIL_SCRIPT = r"""
+<script>
+(function(){
+  var modal = document.getElementById('scheduleDetailModal');
+  var frame = document.getElementById('scheduleDetailFrame');
+  if(!modal || !frame) return;
+  var closeBtn = modal.querySelector('[data-schedule-detail-close]');
+  var fallback = modal.querySelector('[data-schedule-detail-fallback]');
+  var previousOverflow = "";
+
+  function showFallback(){
+    if(fallback) fallback.classList.add('is-visible');
+    frame.style.display = 'none';
+  }
+
+  function hideFallback(){
+    if(fallback) fallback.classList.remove('is-visible');
+    frame.style.display = 'block';
+  }
+
+  function openModal(src){
+    if(!src) return;
+    hideFallback();
+    previousOverflow = document.body.style.overflow || "";
+    document.body.style.overflow = "hidden";
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('is-open');
+    frame.removeAttribute('src');
+    frame.src = src;
+    if(window.fetch){
+      fetch(src, {method: 'HEAD', cache: 'no-store'}).then(function(response){
+        if(!response.ok) showFallback();
+      }).catch(function(){});
+    }
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.hidden = true;
+    frame.removeAttribute('src');
+    hideFallback();
+    document.body.style.overflow = previousOverflow;
+  }
+
+  document.querySelectorAll('[data-schedule-detail-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal(btn.getAttribute('data-schedule-detail-src'));
+    });
+  });
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+  window.addEventListener('message', function(e){
+    if(e && e.data && e.data.type === 'closeScheduleDetail') closeModal();
+  });
+})();
+</script>
+""".strip()
+
 def resolve_paths(args: argparse.Namespace) -> tuple[Path, Path, str]:
     if args.input:
         input_path = Path(args.input)
@@ -856,12 +940,14 @@ def render(data: Mapping[str, Any], date_text: str) -> str:
     {section(2, "유가 동향", render_price_section(data))}
     {render_chart("원유 가격 추이", crude_series, CRUDE_KEYS)}
     {render_chart("석유제품 가격 추이", product_series, PRODUCT_KEYS, PRODUCT_LABELS)}
-    {section(5, f"금일 주요 일정 ({today_label})", render_schedules(data))}
+    {section(5, f"금일 주요 일정 ({today_label})", render_schedules(data), action_html=schedule_detail_button(date_text))}
     {section(6, f"News Trend - Morning ({morning_news_label})", render_news(data))}
     {section(7, f"News Trend - Evening ({afternoon_news_label})", render_afternoon_news(data))}
     <footer class="footer">SK Innovation Communication Division · {esc(date_text.replace('-', '.'))}</footer>
   </main>
+  {schedule_detail_modal()}
   {TOOLTIP_SCRIPT}
+  {SCHEDULE_DETAIL_SCRIPT}
 </body>
 </html>
 """
