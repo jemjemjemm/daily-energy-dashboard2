@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.1",
+  "date": "2026-06-11",
+  "source_site": "오피넷",
+  "category": "국제유가",
+  "unit": "$/Bbl",
+  "collected_at": "2026-06-11 08:23:27 KST",
+  "source_urls": {
+    "crude": "https://www.opinet.co.kr/gloptotSelect.do",
+    "products": "https://www.opinet.co.kr/glopopdSelect.do"
+  },
+  "api": {
+    "opinet_api_key_env": "OPINET_API_KEY",
+    "api_key_provided": false,
+    "note": "국제유가 메뉴 데이터는 현재 HTML 표에서 추출합니다. API Key는 향후 공식 국제유가 API 확인 시 사용합니다."
+  },
+  "crude": {
+    "latest_date": "2026-06-09",
+    "latest": {
+      "Dubai": 89.59,
+      "Brent": 91.45,
+      "WTI": 88.2
+    },
+    "cards": [
+      {
+        "label": "Brent",
+        "value": 91.45,
+        "change": -2.8,
+        "direction": "down",
+        "unit": "$/Bbl"
+      },
+      {
+        "label": "WTI",
+        "value": 88.2,
+        "change": -3.1,
+        "direction": "down",
+        "unit": "$/Bbl"
+      },
+      {
+        "label": "Dubai",
+        "value": 89.59,
+        "change": -4.01,
+        "direction": "down",
+        "unit": "$/Bbl"
+      }
+    ],
+    "chart_series": {
+      "Brent": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 94.25
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 91.45
+        }
+      ],
+      "WTI": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 91.3
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 88.2
+        }
+      ],
+      "Dubai": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 93.6
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 89.59
+        }
+      ]
+    },
+    "rows": [
+      {
+        "date": "2026-06-08",
+        "values": [
+          93.6,
+          94.25,
+          91.3
+        ],
+        "raw": "26년06월08일 93.6 94.25 91.3"
+      },
+      {
+        "date": "2026-06-09",
+        "values": [
+          89.59,
+          91.45,
+          88.2
+        ],
+        "raw": "26년06월09일 89.59 91.45 88.2"
+      }
+    ]
+  },
+  "products": {
+    "latest_date": "2026-06-09",
+    "latest": {
+      "Gasoline_92RON": 117.42,
+      "Diesel_0.001": 139.07,
+      "Naphtha": 79.63
+    },
+    "cards": [
+      {
+        "label": "휘발유",
+        "source_column": "Gasoline_92RON",
+        "value": 117.42,
+        "change": -2.34,
+        "direction": "down",
+        "unit": "$/Bbl"
+      },
+      {
+        "label": "경유",
+        "source_column": "Diesel_0.001",
+        "value": 139.07,
+        "change": -6.96,
+        "direction": "down",
+        "unit": "$/Bbl"
+      },
+      {
+        "label": "나프타",
+        "source_column": "Naphtha",
+        "value": 79.63,
+        "change": -3.76,
+        "direction": "down",
+        "unit": "$/Bbl"
+      }
+    ],
+    "chart_series": {
+      "Gasoline": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 119.76
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 117.42
+        }
+      ],
+      "Diesel": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 146.03
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 139.07
+        }
+      ],
+      "Naphtha": [
+        {
+          "date": "2026-06-08",
+          "label": "6/8",
+          "value": 83.39
+        },
+        {
+          "date": "2026-06-09",
+          "label": "6/9",
+          "value": 79.63
+        }
+      ]
+    },
+    "rows": [
+      {
+        "date": "2026-06-08",
+        "values": [
+          122.5,
+          119.76,
+          147.2,
+          146.03,
+          142.77,
+          99.86,
+          83.39
+        ],
+        "raw": "26년06월08일 122.5 119.76 147.2 146.03 142.77 99.86 83.39"
+      },
+      {
+        "date": "2026-06-09",
+        "values": [
+          120.19,
+          117.42,
+          140.09,
+          139.07,
+          135.99,
+          93.76,
+          79.63
+        ],
+        "raw": "26년06월09일 120.19 117.42 140.09 139.07 135.99 93.76 79.63"
+      }
+    ]
+  },
+  "quality": {
+    "needs_review": false,
+    "warnings": [],
+    "notes": [
+      "오피넷 국제유가 메뉴의 $/Bbl 행만 추출했습니다.",
+      "원화 환산 행은 값의 크기 기준으로 제외했습니다.",
+      "최신 일자는 원유와 석유제품 각각의 표에서 확인된 마지막 가격 일자입니다."
+    ]
+  },
+  "success": true
+}

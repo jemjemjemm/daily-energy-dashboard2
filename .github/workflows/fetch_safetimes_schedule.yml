@@ -390,9 +390,11 @@ jobs:
           git add data/run_status/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
+          git add docs/schedules/ || true
           git add docs/report-index.json || true
           git add public/index.html || true
           git add public/reports/ || true
+          git add public/schedules/ || true
           git add public/report-index.json || true
 
           if git diff --cached --quiet; then
@@ -417,9 +419,11 @@ jobs:
           git add data/run_status/ || true
           git add docs/index.html || true
           git add docs/reports/ || true
+          git add docs/schedules/ || true
           git add docs/report-index.json || true
           git add public/index.html || true
           git add public/reports/ || true
+          git add public/schedules/ || true
           git add public/report-index.json || true
 
           if git diff --cached --quiet; then
