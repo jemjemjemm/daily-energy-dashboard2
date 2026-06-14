@@ -2,7 +2,7 @@
   "schema_version": "2.6",
   "date": "2026-06-04",
   "report_slot": "morning",
-  "collected_at": "2026-06-04 09:10:32 KST",
+  "collected_at": "2026-06-14 16:21:02 KST",
   "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
   "queries": [
     "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
@@ -38,8 +38,8 @@
     "물가 석유제품",
     "생산자물가 석유제품"
   ],
-  "time_window": "2026-06-03 17:00~2026-06-04 09:00 KST",
-  "summary": "주요 매체가 △석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담 등을 중심으로 보도.",
+  "time_window": "2026-06-03 17:00~2026-06-04 08:00 KST",
+  "summary": "△석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △물가 지표와 에너지 비용 부담",
   "topics": [
     "석유 최고가격제·유류세 등 가격 안정 정책",
     "중동 정세와 원유·LNG 수급 리스크",
@@ -53,7 +53,7 @@
       "url": "https://v.daum.net/v/20260604064909387",
       "published_date": "2026-06-04",
       "published_at_kst": "",
-      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 미국 원유 재고, 호르무즈 봉쇄에 22년 만에 최저 이란 전쟁에 따른 호르무즈 해협 운항 제한이 4개월째 이어지는 가운데 미국의 원유와 석유 류 제품 재고가 20여 년 만에 가장 낮은 수준으로 떨어진 것을 집계됐습니다. 미국 에너지 정보청이 발표하는 주간 원유 재고 통계에서 미국의 전체 원유와 석유 제품 재고는... 2시간 전",
+      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 미국 원유 재고, 호르무즈 봉쇄에 22년 만에 최저 이란 전쟁에 따른 호르무즈 해협 운항 제한이 4개월째 이어지는 가운데 미국의 원유와 석유 류 제품 재고가 20여 년 만에 가장 낮은 수준으로 떨어진 것을 집계됐습니다. 미국 에너지 정보청이 발표하는 주간 원유 재고 통계에서 미국의 전체 원유와 석유 제품 재고는... 2026.06.04",
       "score": 11,
       "score_breakdown": {
         "keyword": 5,
@@ -73,7 +73,7 @@
       "url": "https://v.daum.net/v/20260604063553109",
       "published_date": "2026-06-04",
       "published_at_kst": "",
-      "snippet": "한국경제 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가 3일째 상승…중동 확전 우려에 WTI 96달러 돌파 미국 뉴욕의 한 주유소 에서 남성이 차량에 기름을 채우고 있다. 사진=게티이미지 미국과 이란의 종전 협상이 진전을 내지 못하는 가운데 양측의 군사 충돌마저 다시 이어지면서 국제유가가 3거래일 연속 올랐다. 미국 원유 재고 감소까지 겹치자 서부텍사스산원유... 2시간 전",
+      "snippet": "한국경제 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가 3일째 상승…중동 확전 우려에 WTI 96달러 돌파 미국 뉴욕의 한 주유소 에서 남성이 차량에 기름을 채우고 있다. 사진=게티이미지 미국과 이란의 종전 협상이 진전을 내지 못하는 가운데 양측의 군사 충돌마저 다시 이어지면서 국제유가가 3거래일 연속 올랐다. 미국 원유 재고 감소까지 겹치자 서부텍사스산원유... 2026.06.04",
       "score": 12,
       "score_breakdown": {
         "keyword": 5,
@@ -93,7 +93,7 @@
       "url": "https://v.daum.net/v/20260604073603315",
       "published_date": "2026-06-04",
       "published_at_kst": "",
-      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가, 중동 긴장 재점화에 상승…WTI 2.4%↑[상보] 상승 압력을 가했다. 미 에너지정보청(EIA)이 이날 공개한 주간 원유 재고통계에 따르면 미국의 전체 원유(전략비축유 포함) 및 석유 제품 재고는 지난달 29일 기준으로 1주 전보다 1060만 배럴 감소한 15억7000만 배럴로 집계됐다. 이는 2004년 5월 이후 22년 내... 1시간 전",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가, 중동 긴장 재점화에 상승…WTI 2.4%↑[상보] 미 원유 재고, 22년 만에 최저 수준 펌프잭. 로이터연합뉴스 국제유가가 3일(현지시간) 중동 긴장 재점화에 2% 안팎의 상승세를 나타냈다. 뉴욕상업거래소(NYMEX)에서 미국 서부 텍사스산 원유 (WTI) 선물은 전 거래일 대비 2.26달러(2.41%) 오른 배럴당 96.02달러에... 2026.06.04",
       "score": 11,
       "score_breakdown": {
         "keyword": 5,
@@ -103,7 +103,7 @@
         "duplicate_or_low_quality": 0
       },
       "industry_relevance": 5,
-      "source_query": "석유제품",
+      "source_query": "원유",
       "collector": "daum_news_search"
     },
     {
@@ -113,7 +113,7 @@
       "url": "https://v.daum.net/v/20260604052155763",
       "published_date": "2026-06-04",
       "published_at_kst": "",
-      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 2 美 원유재고, 호르무즈 봉쇄 장기화에 22년만에 최저수준 4월의 하루 평균 520만배럴을 넘어섰다. 이란 전쟁 발발 후 중동 지역의 공급 불안으로 미국산 원유 수요에 대한 아시아와 유럽 정유사 들의 수요가 급증한 영향을 받았다. 미 서부 텍사스산 원유(WTI)가 글로벌 유가 기준인 브렌트유 대비 할인된 가격에 거래되면서... 3시간 전",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 2 美 원유재고, 호르무즈 봉쇄 장기화에 22년만에 최저수준 4월의 하루 평균 520만배럴을 넘어섰다. 이란 전쟁 발발 후 중동 지역의 공급 불안으로 미국산 원유 수요에 대한 아시아와 유럽 정유사 들의 수요가 급증한 영향을 받았다. 미 서부 텍사스산 원유(WTI)가 글로벌 유가 기준인 브렌트유 대비 할인된 가격에 거래되면서... 2026.06.04",
       "score": 11,
       "score_breakdown": {
         "keyword": 5,
@@ -127,153 +127,13 @@
       "collector": "daum_news_search"
     },
     {
-      "title": "미·이란 무력충돌에 뉴욕증시 일제히 하락…국제유가↑[뉴스새벽배송]",
-      "press": "이데일리",
-      "press_grade": "A",
-      "url": "https://v.daum.net/v/20260604080708946",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 미·이란 무력충돌에 뉴욕증시 일제히 하락…국제유가↑[뉴스새벽배송] 원유재고, 22여년 만에 최저 수준 -미·이란 전쟁에 따른 호르무즈해협 운항 제한이 4개월째 이어지는 가운데 미국의 원유 및 석유 류 제품 재고가 20여년 만에 가장 낮은 수준으로 떨어져 -3일(현지시간) 미 에너지정보청(EIA)이 발표하는 주간 원유 재고통계에... 1시간 전",
-      "score": 12,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 3,
-        "press": 3,
-        "originality": 1,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "석유제품",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "드론 공격으로 파손된 상트페테르부르크 원유 저장소",
-      "press": "뉴시스",
-      "press_grade": "A",
-      "url": "https://v.daum.net/v/20260604085022102",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 드론 공격으로 파손된 상트페테르부르크 원유 저장소 [상트페테르부르크=AP/뉴시스] 3일(현지 시간) 우크라이나의 드론 공격을 받은 것으로 알려진 러시아 상트페테르부르크의 한 석유 터미널 곳곳이 파손돼 있다. 우크라이나는 이날 상트페테르부르크를 비롯해 크론시타트 기지, 탐보프 지역 군수공장 등을 드론으로... 19분 전",
-      "score": 10,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 3,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "원유",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "\"삼성중공업, 하반기까지 FLNG 6기 확보…목표가↑\"-한국",
-      "press": "한국경제",
-      "press_grade": "A",
-      "url": "https://v.daum.net/v/20260604083517669",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "한국경제 개별문서메뉴 톡으로 바로 공유 공유하기 \"삼성중공업, 하반기까지 FLNG 6기 확보…목표가↑\"-한국 됐고 올해 해양플랜트 수주 목표의 40.1%를 달성했다\"고 설명했다. 강 연구원은 \"델핀(Delfin) 프로젝트는 장기 액화천연가스( LNG ) 구매 계약자를 대부분 확보한 상태에서 1호기 금융 조건이 갖춰졌다\"며 \"하반기 예정된 델핀 2호기 발주도 진행될 것으로 예상한다... 35분 전",
-      "score": 10,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 3,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "LNG",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "삼성重, 美 최초 FLNG 프로젝트 수주…4.3조 규모",
-      "press": "이데일리",
-      "press_grade": "A",
-      "url": "https://v.daum.net/v/20260604083356627",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 삼성重, 美 최초 FLNG 프로젝트 수주…4.3조 규모 최초의 대형 부유식 액화천연가스 생산설비(FLNG) 건조 계약을 따냈다. 4일 삼성중공업은 미국 루이지애나주 델핀 액화천연가스( LNG ) 프로젝트의 첫번째 FLNG 건조 계약을 체결했다고 밝혔다. 이번에 수주한 델핀 FLNG는 수주 금액만 29억달러(4조 3301)억원에... 36분 전",
-      "score": 10,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 3,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "LNG",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "삼성중공업, 美 델핀 FLNG 1호기 수주…4조3000억원 초대형 규모",
-      "press": "뉴시스",
-      "press_grade": "A",
-      "url": "https://v.daum.net/v/20260604082608394",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 삼성중공업, 美 델핀 FLNG 1호기 수주…4조3000억원 초대형 규모 [서울=뉴시스] 삼성중공업이 건조한 대형 부유식 액화 천연 가스 생산설비(FLNG). (사진=삼성중공업) 2026.06.02 photo@newsis.com *재판매 및 DB 금지 *재판매 및 DB 금지 [서울=뉴시스]유희석 기자 = 삼성중공업이 미국 최초 부유식 액화 천연 가스 생산설비(FLNG... 44분 전",
-      "score": 10,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 3,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "천연가스",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "삼성중공업, 美 첫 FLNG '델핀 1호기' 4.3조에 수주",
-      "press": "한스경제",
-      "press_grade": "B",
-      "url": "https://v.daum.net/v/20260604090053439",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "한스경제 개별문서메뉴 톡으로 바로 공유 공유하기 삼성중공업, 美 첫 FLNG '델핀 1호기' 4.3조에 수주 상태다. 상선 부문은 △LNG운반선 13척(LNG-FSRU 1척 포함) △에탄운반선(VLEC) 2척 △가스운반선(VLGC) 4척 △컨테이너선 2척 △ 원유 운반선 6척 등 50억달러로 연간 목표 57억달러의 88%를 달성했다. 해양 부문은 이번 델핀 FLNG 1기 수주를 포함해 33억달러로 수주... 9분 전",
-      "score": 9,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 2,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "원유",
-      "collector": "daum_news_search"
-    },
-    {
-      "title": "삼성重, 미국 첫 FLNG 프로젝트 1호 수주…4.3조원 규모",
-      "press": "헤럴드경제",
-      "press_grade": "B",
-      "url": "https://v.daum.net/v/20260604085554251",
-      "published_date": "2026-06-04",
-      "published_at_kst": "",
-      "snippet": "헤럴드경제 개별문서메뉴 톡으로 바로 공유 공유하기 삼성重, 미국 첫 FLNG 프로젝트 1호 수주…4.3조원 규모 삼성중공업은 지난 2일 공시한 부유식 액화천연가스 생산설비(FLNG) 수주 계약 관련, 해당 프로젝트가 미국 루이지애나주 델핀 LNG 프로젝트의 첫번째 FLNG 건조 계약이라고 4일 밝혔다. 삼성중공업이 이번에 수주한 델핀 FLNG는 미국 역사상 최초의 FLNG이다. 수주... 14분 전",
-      "score": 9,
-      "score_breakdown": {
-        "keyword": 5,
-        "title_importance": 2,
-        "press": 2,
-        "originality": 0,
-        "duplicate_or_low_quality": 0
-      },
-      "industry_relevance": 4,
-      "source_query": "LNG",
-      "collector": "daum_news_search"
-    },
-    {
       "title": "긴축 몰린 한·일, 여유 있는 대만…같은 고유가인데, 왜",
       "press": "중앙일보",
       "press_grade": "A",
       "url": "https://v.daum.net/v/20260604000323033",
       "published_date": "2026-06-04",
       "published_at_kst": "",
-      "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 긴축 몰린 한·일, 여유 있는 대만…같은 고유가인데, 왜 원자재에 대한 세금 감면(50%), 가정용 가스 가격과 전기요금 동결 등 강도 높은 물가 억제책을 펼쳤다. 정부 방침에 맞춰 국영 정유사 CPC는 5월 말까지 9주 연속 휘발유·경유 가격을 동결했고, 국영 전력회사인 타이파워도 산업용 전기요금을 올리지 않았다. 중동... 9시간 전 1",
+      "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 긴축 몰린 한·일, 여유 있는 대만…같은 고유가인데, 왜 원자재에 대한 세금 감면(50%), 가정용 가스 가격과 전기요금 동결 등 강도 높은 물가 억제책을 펼쳤다. 정부 방침에 맞춰 국영 정유사 CPC는 5월 말까지 9주 연속 휘발유·경유 가격을 동결했고, 국영 전력회사인 타이파워도 산업용 전기요금을 올리지 않았다. 중동... 2026.06.04 1",
       "score": 11,
       "score_breakdown": {
         "keyword": 5,
@@ -284,6 +144,146 @@
       },
       "industry_relevance": 3,
       "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[오늘의 증시]지선 후 정책 기대감에 젠슨황 효과까지…코스피, 9000선 터치할까",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260604075612714",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 [오늘의 증시]지선 후 정책 기대감에 젠슨황 효과까지…코스피, 9000선 터치할까 목표물을 방공망으로 요격했다고 발표하면서 중동 지역의 군사적 긴장감은 한층 높아졌다. 국제유가도 상승했다. 서부텍사스산 원유 (WTI) 선물은 2.41% 오른 배럴당 96.02달러에 마감했고 브렌트유 선물은 1.89% 상승한 배럴당 97.81달러를 기록했다. 유가 상승은... 2026.06.04",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "뉴욕증시, 중동 긴장 고조에 최고치서 후퇴…다우 1.2%↓[종합]",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260604075903756",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 뉴욕증시, 중동 긴장 고조에 최고치서 후퇴…다우 1.2%↓[종합] 발표 이후 주가가 6.02% 상승했다. 국제유가가 2% 안팎의 상승세를 나타냈다. 뉴욕상업거래소(NYMEX)에서 미국 서부 텍사스산 원유 (WTI) 선물은 전 거래일 대비 2.26달러(2.41%) 오른 배럴당 96.02달러에 마감했다. 런던 ICE선물거래소에서 브렌트유 선물은 1.81달러... 2026.06.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "공기업은 유치 매립지는 반대…선거에 밀렸던 지방 이슈 수면 위로[Pick코노미]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260604053142874",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 4 공기업은 유치 매립지는 반대…선거에 밀렸던 지방 이슈 수면 위로[Pick코노미] 자리다. 내년도 예산의 집행 방향을 가늠할 수 있어 선거 직전 시행하기에 정무적 부담이 상당할 수밖에 없다. 산업통상부는 석유 제품 최고가격제 시행에 따른 정유사 손실 방안이 담긴 고시안을 당초 5월 말 발표하겠다 했으나 아직 공개하지 않았다. 산업부 관계자... 2026.06.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "공기업 이전·변전소·매립지… 선거에 미뤄둔 지방 이슈 쏟아진다",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260603200901219",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 3 공기업 이전·변전소·매립지… 선거에 미뤄둔 지방 이슈 쏟아진다 뉴스 각 부처는 인화성 높은 사안의 발표 시점을 선거일 이후로 배치하고 있다. 산업통상부는 석유제품 최고가격제 시행에 따른 정유사 손실 보전 방안이 담긴 고시안을 당초 5월 말 발표하겠다 했으나 아직 공개하지 않았다. 산업부 관계자는 “내용은 거의 완성... 2026.06.03",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 긴장 재고조에 3대 지수 동반 하락 [뉴욕증시 브리핑]",
+      "press": "한국경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260604073317268",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "한국경제 개별문서메뉴 톡으로 바로 공유 공유하기 중동 긴장 재고조에 3대 지수 동반 하락 [뉴욕증시 브리핑] 미국과 이란 간 무력 공방이 다시 이어지면서 브렌트유 선물은 전장보다 1.9% 오른 배럴당 97.81달러에, 미국 서부텍사스산 원유 (WTI) 선물은 전장보다 2.4% 오른 배럴당 96.02달러에 각각 마감했다. 고유가 장기화 우려가 커지면서 채권 금리는 상승했다. 채권 금리... 2026.06.04",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "OECD도 놀란 K반도체…韓 성장률 1.7→2.6% 최대폭 상향[Pick코노미]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260604053147877",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "서울경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 OECD도 놀란 K반도체…韓 성장률 1.7→2.6% 최대폭 상향[Pick코노미] 전망치를 2.7%에서 2.6%로 0.1%포인트 낮췄다. 내년에는 2.2%로 물가 안정 목표 수준에 가까워질 것으로 봤다. 최고가격제와 유류세 인하가 에너지 공급 충격에 따른 물가 압력을 늦추는 데 일정 부분 효과를 내고 있다는 평가다. 다만 OECD는 가격 안정 대책이... 2026.06.04",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "유류세",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "OECD, 올 한국 성장률 2.6%로 높여…‘반도체 활황’에 G20 중 상향폭 최고",
+      "press": "경향신문",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260603232119812",
+      "published_date": "2026-06-04",
+      "published_at_kst": "",
+      "snippet": "경향신문 개별문서메뉴 톡으로 바로 공유 공유하기 OECD, 올 한국 성장률 2.6%로 높여…‘반도체 활황’에 G20 중 상향폭 최고 일반정부부채도 최근 전망치인 지난해 12월 전망(52.0%)보다 낮아진 48.2%로 제시했다. OECD는 또한 정부의 석유 최고가격제와 유류세 인하 조치가 에너지 공급 충격에 따른 물가 상승 압력을 낮추겠지만, 동시에 물가 상승 지속 기간을 늘리는 효과가 있을 수... 2026.06.03",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "유류세",
       "collector": "daum_news_search"
     }
   ],

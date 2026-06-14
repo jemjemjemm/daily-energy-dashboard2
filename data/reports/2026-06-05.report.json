@@ -5,7 +5,7 @@
     "display_date": "2026년 6월 5일 (금)",
     "previous_day_label": "6/4",
     "today_label": "6/5",
-    "generated_at": "2026-06-05 09:07 KST",
+    "generated_at": "2026-06-14 16:21 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -21,7 +21,7 @@
     },
     {
       "type": "news_trend",
-      "text": "(Morning) △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수 △정부·국회 에너지 정책 대응"
+      "text": "(Morning) △석유제품 가격 안정과 유류세 정책 논의 △정부·국회 에너지 정책 대응 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망"
     },
     {
       "type": "news_trend_afternoon",
@@ -1372,9 +1372,9 @@
       "category": "정책",
       "category_class": "",
       "title": "시장상황점검회의",
-      "description": "07:40 · 재경부",
+      "description": "07:40 · 구윤철 부총리 겸 재정경제부 장관",
       "time": "07:40",
-      "org": "재경부",
+      "org": "구윤철 부총리 겸 재정경제부 장관",
       "location": "",
       "links": [
         {
@@ -1389,9 +1389,9 @@
       "category": "정책",
       "category_class": "",
       "title": "비상경제본부회의",
-      "description": "09:00 · 박윤주 1차관",
+      "description": "09:00 · 김민석 국무총리, 구윤철 부총리 겸 재정경제부 장관, 임기근 기획예산처 차관, 박윤주 외교부 1차관, 주병기 공정거래위원장, 오유경 식약처장, 현수엽 복지부 1차관, 김영훈 노동부 장관",
       "time": "09:00",
-      "org": "박윤주 1차관",
+      "org": "김민석 국무총리, 구윤철 부총리 겸 재정경제부 장관, 임기근 기획예산처 차관, 박윤주 외교부 1차관, 주병기 공정거래위원장, 오유경 식약처장, 현수엽 복지부 1차관, 김영훈 노동부 장관",
       "location": "",
       "links": [
         {
@@ -1405,11 +1405,11 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "비상경제본부회의",
-      "description": "09:00 · 재경부 · 정부서울청사",
-      "time": "09:00",
-      "org": "재경부",
-      "location": "정부서울청사",
+      "title": "정부 드론·대드론 통합 TF 최종보고 회의",
+      "description": "10:00 · 이두희 국방부 차관, 류제명 과기정통부 2차관",
+      "time": "10:00",
+      "org": "이두희 국방부 차관, 류제명 과기정통부 2차관",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1422,11 +1422,11 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "비상경제본부회의",
-      "description": "09:00 · 주병기 위원장 · 정부세종청사",
-      "time": "09:00",
-      "org": "주병기 위원장",
-      "location": "정부세종청사",
+      "title": "제12회 방위산업발전협의회",
+      "description": "10:00 · 안규백 국방부 장관, 김정관 산업통상부 장관",
+      "time": "10:00",
+      "org": "안규백 국방부 장관, 김정관 산업통상부 장관",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1439,11 +1439,11 @@
     {
       "category": "정책",
       "category_class": "",
-      "title": "제19차 비상경제본부 회의",
-      "description": "09:00 · 김영훈 장관 · 서울",
-      "time": "09:00",
-      "org": "김영훈 장관",
-      "location": "서울",
+      "title": "차관회의",
+      "description": "10:00 · 권대영 재정경제부 금융부위원장",
+      "time": "10:00",
+      "org": "권대영 재정경제부 금융부위원장",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1454,13 +1454,13 @@
       "grade_class": ""
     },
     {
-      "category": "에너지",
+      "category": "정책",
       "category_class": "",
-      "title": "호주 기후변화에너지부장관 화상 면담",
-      "description": "09:00 · 김성환 장관 · 서울",
-      "time": "09:00",
-      "org": "김성환 장관",
-      "location": "서울",
+      "title": "한미 관계 전망 세미나",
+      "description": "10:00 현지시간 · KEI",
+      "time": "10:00 현지시간",
+      "org": "KEI",
+      "location": "",
       "links": [
         {
           "label": "관련 기사 없음",
@@ -1495,11 +1495,11 @@
     }
   ],
   "news_trend": {
-    "summary": "△국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수 △정부·국회 에너지 정책 대응",
+    "summary": "△석유제품 가격 안정과 유류세 정책 논의 △정부·국회 에너지 정책 대응 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망",
     "trend_paragraphs": [
       "파이낸셜뉴스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
-      "신아일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
-      "연합뉴스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+      "이투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "매일경제는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
       {
@@ -1520,10 +1520,10 @@
         }
       },
       {
-        "title": "[국제유가] 미국과 이란 간 협상 진전 기대감에 3%대 하락",
-        "press": "신아일보",
+        "title": "‘포스트 호르무즈’의 경고…종전돼도 공급망 재편 가속화 [중동전 100일, 그후]",
+        "press": "이투데이",
         "press_grade": "B",
-        "url": "https://v.daum.net/v/20260605082020245",
+        "url": "https://v.daum.net/v/20260605050020022",
         "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
         "published_at_kst": "",
         "industry_relevance": 4,
@@ -1537,19 +1537,19 @@
         }
       },
       {
-        "title": "대신證 \"슈퍼 엘니뇨로 천연가스 가격상승 지연…내년 오를 것\"",
-        "press": "연합뉴스",
+        "title": "정부 “올해 물가상승률 2.7%…7월 유가 따라 최고가격제 해제 검토”",
+        "press": "매일경제",
         "press_grade": "A",
-        "url": "https://v.daum.net/v/20260605083525687",
-        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "url": "https://v.daum.net/v/20260604170301526",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
         "published_at_kst": "",
         "industry_relevance": 4,
-        "score": 11,
+        "score": 13,
         "score_breakdown": {
           "keyword": 5,
-          "title_importance": 1,
+          "title_importance": 4,
           "press": 3,
-          "originality": 2,
+          "originality": 1,
           "duplicate_or_low_quality": 0
         }
       }
@@ -1647,12 +1647,12 @@
       "today_source_title": "",
       "today_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243232",
       "today_source_published_at": "2026-06-05",
-      "today_source_schedule_candidate_count": 23,
+      "today_source_schedule_candidate_count": 27,
       "today_parsed_schedule_count": 3,
       "previous_source_file_date": "2026-06-04",
       "previous_source_title": "",
       "previous_source_url": "https://www.safetimes.co.kr/news/articleView.html?idxno=243185",
-      "previous_source_schedule_candidate_count": 42,
+      "previous_source_schedule_candidate_count": 75,
       "previous_parsed_schedule_count": 9,
       "parser_version": "build_report_draft_from_schedule.py v2.3-merged-schedule-attendees",
       "needs_review": true
@@ -1664,6 +1664,14 @@
       "status": "updated",
       "needs_review": true,
       "report_slot": "morning"
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-06-05.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1680,17 +1688,9 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-06-05 09:08:27 KST",
+      "merged_at": "2026-06-14 16:22:55 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
-    },
-    "news_afternoon": {
-      "source_file": "data/news/2026-06-05.evening.json",
-      "article_count": 3,
-      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
-      "status": "updated",
-      "needs_review": true,
-      "report_slot": "evening"
     }
   },
   "news_trend_afternoon": {

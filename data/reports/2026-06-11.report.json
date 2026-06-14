@@ -5,7 +5,7 @@
     "display_date": "2026년 6월 11일 (목)",
     "previous_day_label": "6/10",
     "today_label": "6/11",
-    "generated_at": "2026-06-11 08:22 KST",
+    "generated_at": "2026-06-14 16:26 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -56,7 +56,7 @@
           "unit": "$/Bbl"
         }
       ],
-      "chart_period_label": "4/10~6/9",
+      "chart_period_label": "4/10~6/10",
       "chart_window": {
         "start": "2026-04-10",
         "end": "2026-06-10",
@@ -278,6 +278,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 91.45
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 93.1
           }
         ],
         "WTI": [
@@ -490,6 +495,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 88.2
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 90.03
           }
         ],
         "Dubai": [
@@ -692,6 +702,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 89.59
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 87.1
           }
         ]
       }
@@ -721,7 +736,7 @@
           "unit": "$/Bbl"
         }
       ],
-      "chart_period_label": "4/10~6/9",
+      "chart_period_label": "4/10~6/10",
       "chart_window": {
         "start": "2026-04-10",
         "end": "2026-06-10",
@@ -928,6 +943,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 117.42
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 115.82
           }
         ],
         "Diesel": [
@@ -1130,6 +1150,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 139.07
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 137.09
           }
         ],
         "Naphtha": [
@@ -1332,6 +1357,11 @@
             "date": "2026-06-09",
             "label": "6/9",
             "value": 79.63
+          },
+          {
+            "date": "2026-06-10",
+            "label": "6/10",
+            "value": 81.71
           }
         ]
       }
@@ -1495,28 +1525,11 @@
   "news_trend": {
     "summary": "△국제유가 변동과 원유 수급 전망 △중동 해협 리스크의 에너지 안보 변수화 △석유제품 가격 안정과 유류세 정책 논의 △정유업계 수익성·정제마진 영향",
     "trend_paragraphs": [
-      "한겨레는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
       "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "SBS는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
       "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리."
     ],
     "articles": [
-      {
-        "title": "[속보] 한국 LNG 운반선 1척, 호르무즈 해협 통과해 항행 중",
-        "press": "한겨레",
-        "press_grade": "A",
-        "url": "https://v.daum.net/v/20260611075123786",
-        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
-        "published_at_kst": "",
-        "industry_relevance": 5,
-        "score": 12,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 3,
-          "originality": 2,
-          "duplicate_or_low_quality": 0
-        }
-      },
       {
         "title": "' 석유 최고가격제' 정유사 손실보전 기준은…이르면 다음주 발표",
         "press": "뉴시스",
@@ -1530,6 +1543,23 @@
           "keyword": 5,
           "title_importance": 4,
           "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "한국 LNG 운반선 호르무즈 해협 통과…HMM 유조선 이어 두 번째",
+        "press": "SBS",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260611075408844",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
           "originality": 1,
           "duplicate_or_low_quality": 0
         }
@@ -1656,12 +1686,20 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-06-11.json",
+      "source_file": "data/news/2026-06-11.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
       "status": "updated",
       "needs_review": true,
       "report_slot": "morning"
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-06-11.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     },
     "opinet_prices": {
       "price_json_used": true,
@@ -1678,17 +1716,9 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-06-11 08:23:37 KST",
+      "merged_at": "2026-06-14 16:27:52 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
-    },
-    "news_afternoon": {
-      "source_file": "data/news/2026-06-11.evening.json",
-      "article_count": 3,
-      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
-      "status": "updated",
-      "needs_review": true,
-      "report_slot": "evening"
     }
   },
   "news_trend_afternoon": {

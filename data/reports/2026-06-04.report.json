@@ -5,7 +5,7 @@
     "display_date": "2026년 6월 4일 (목)",
     "previous_day_label": "6/2",
     "today_label": "6/4",
-    "generated_at": "2026-06-10 16:53 KST",
+    "generated_at": "2026-06-14 16:20 KST",
     "review_status": "초안",
     "report_version": "draft-from-safetimes-v2.0",
     "header_title": "Daily Issue Report",
@@ -21,7 +21,7 @@
     },
     {
       "type": "news_trend",
-      "text": "(Morning) △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △고환율에 따른 정유·석유화학 원가 부담"
+      "text": "(Morning) △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △고환율에 따른 정유·석유화학 원가 부담"
     },
     {
       "type": "news_trend_afternoon",
@@ -1507,11 +1507,11 @@
     }
   ],
   "news_trend": {
-    "summary": "△중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △고환율에 따른 정유·석유화학 원가 부담",
+    "summary": "△호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △고환율에 따른 정유·석유화학 원가 부담",
     "trend_paragraphs": [
       "YTN는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
-      "한국경제는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
-      "한국경제는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도."
+      "한국경제는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도.",
+      "이투데이는 중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도."
     ],
     "articles": [
       {
@@ -1532,23 +1532,6 @@
         }
       },
       {
-        "title": "\"삼성중공업, 하반기까지 FLNG 6기 확보…목표가↑\"-한국",
-        "press": "한국경제",
-        "press_grade": "A",
-        "url": "https://v.daum.net/v/20260604083517669",
-        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
-        "published_at_kst": "",
-        "industry_relevance": 4,
-        "score": 10,
-        "score_breakdown": {
-          "keyword": 5,
-          "title_importance": 2,
-          "press": 3,
-          "originality": 0,
-          "duplicate_or_low_quality": 0
-        }
-      },
-      {
         "title": "국제유가 3일째 상승…중동 확전 우려에 WTI 96달러 돌파",
         "press": "한국경제",
         "press_grade": "A",
@@ -1561,6 +1544,23 @@
           "keyword": 5,
           "title_importance": 4,
           "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "국제유가, 중동 긴장 재점화에 상승…WTI 2.4%↑[상보]",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260604073603315",
+        "summary": "중동 정세 변화가 국제유가와 원유 수급 리스크에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 2,
           "originality": 0,
           "duplicate_or_low_quality": 0
         }
@@ -1670,7 +1670,7 @@
       "needs_review": true
     },
     "news": {
-      "source_file": "data\\news\\2026-06-04.json",
+      "source_file": "data/news/2026-06-04.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
       "status": "updated",
@@ -1678,7 +1678,7 @@
       "report_slot": "morning"
     },
     "news_afternoon": {
-      "source_file": "data\\news\\2026-06-04.evening.json",
+      "source_file": "data/news/2026-06-04.evening.json",
       "article_count": 3,
       "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
       "status": "updated",
@@ -1700,7 +1700,7 @@
       },
       "crude_chart_source": "history.json window",
       "products_chart_source": "history.json window",
-      "merged_at": "2026-06-10 16:53:20 KST",
+      "merged_at": "2026-06-14 16:21:40 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
     }
