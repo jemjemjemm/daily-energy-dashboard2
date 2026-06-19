@@ -1,0 +1,9 @@
+{
+  "schema_version": "2.0",
+  "source": "세이프타임즈",
+  "category": "오늘의 주요일정",
+  "date": "2026-06-18",
+  "collected_at": "2026-06-19 14:20:47 KST",
+  "success": false,
+  "error": "오늘의 주요일정 대상 기사를 찾지 못했습니다. target=2026-06-18, sample_candidates=['[오늘의 주요일정·19일] 이재명 대통령 유럽·G7 순방 결과 브리핑'], day_matched=[]"
+}
