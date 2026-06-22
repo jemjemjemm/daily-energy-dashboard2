@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △석유제품 가격 안정과 유류세 정책 논의 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △석유제품 가격 안정과 유류세 정책 논의"
     }
   ],
   "prices": {
@@ -1623,6 +1627,78 @@
       "merged_at": "2026-06-22 14:27:07 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-06-22.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △석유제품 가격 안정과 유류세 정책 논의",
+    "trend_paragraphs": [
+      "연합뉴스는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "한겨레는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "데일리안은 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "\"호르무즈 열려도 中 원유수입 즉각 복원 안할 듯…재고 넉넉\"",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260622163508435",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "SK, 기름값 ‘사후정산제’ 폐지…주유소 공급가 사전고지·경유 50원↓",
+        "press": "한겨레",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260622162146843",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "유가 오를 땐 묶이고 내릴 땐 인하 압박… 정유사 , 손실보전 앞두고 부담 가중",
+        "press": "데일리안",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260622152230159",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
