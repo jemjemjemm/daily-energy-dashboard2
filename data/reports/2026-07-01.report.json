@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유화학 원료·제품 가격 부담"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △중동 해협 리스크의 에너지 안보 변수화 △석유제품 가격 안정과 유류세 정책 논의 △석유제품 가격·물가 부담 △중동발 에너지 공급망 리스크"
     }
   ],
   "prices": {
@@ -1566,6 +1570,78 @@
       "merged_at": "2026-07-01 13:51:04 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-01.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△중동 해협 리스크의 에너지 안보 변수화 △석유제품 가격 안정과 유류세 정책 논의 △석유제품 가격·물가 부담 △중동발 에너지 공급망 리스크",
+    "trend_paragraphs": [
+      "경향신문은 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "이투데이는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "뉴시스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+    ],
+    "articles": [
+      {
+        "title": "호르무즈 위기 최대 수혜자는 중국···에너지 비축·재생에너지로 충격 흡수, 반사이익까지",
+        "press": "경향신문",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260701163032486",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "‘호르무즈 통행료’, 세계 경제 새 부담…물류비 쇼크 오나",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260701152808003",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "기름값 150원 일괄 인하에도 체감은 '제각각'…\"주유소 가격 양극화 심화\"",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260701114358015",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 1,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
