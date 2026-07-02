@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-07-02",
+  "report_slot": "morning",
+  "collected_at": "2026-07-02 13:18:37 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-07-01 17:00~2026-07-02 08:00 KST",
+  "summary": "△석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격",
+  "topics": [
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격"
+  ],
+  "articles": [
+    {
+      "title": "중동 생산 차질에 윤활기유 몸값 상승… 정유사 실적 버팀목 될까",
+      "press": "파이낸셜뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260702070018562",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "파이낸셜뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 2 중동 생산 차질에 윤활기유 몸값 상승… 정유사 실적 버팀목 될까 글로벌 공급 부족이 오는 2027년까지 이어질 것으로 예상되는 가운데 고부가 그룹3 윤활기유 생산의 약 40%를 담당하는 국내 정유사 들이 실적 방어에 속도를 낼 것이란 전망이다. ■ 고성능 윤활기유 공급난 우려 2일 업계에 따르면 글로벌 그룹3 윤활기유 시장은... 6시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "호르무즈 통과 원유 급증에… 국제 유가 사흘째 하락",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260702074551384",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 통과 원유 급증에… 국제 유가 사흘째 하락 [이데일리 방성훈 기자] 국제 유가 가 3거래일 연속 하락했다. 이란이 봉쇄 위협을 가했던 호르무즈 해협의 원유 수송량이 급증한 데다, 미국과 이란 간 협상이 진전을 보이면서다. (사진=AFP) 1일(현지시간) 블룸버그통신에 따르면 미국 서부텍사스산원유(WTI)는 이날... 5시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "국제유가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"러, 인도서 휘발유 구매 개시\"…자국 원유 수출국에서 역수입",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260701224746482",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 \"러, 인도서 휘발유 구매 개시\"…자국 원유 수출국에서 역수입 늘린 것으로 알려졌다. 5월 초 이후 러시아 공급용 벨라루스산 휘발유 가격은 1.8배 올랐다. 러시아 내 연료 시장 상황은 최근 정유 시설 피해로 석유 제품 공급이 감소하면서 악화해 왔다. 우크라이나가 장거리 드론을 이용해 러시아 본토의 주요 정유 공장과 연료... 14시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "“2050년 LNG 수요 65% 급증”… ‘2억 톤 공급 격차’에 추가 투자 비상",
+      "press": "에너지경제",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260702061003550",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "에너지경제 개별문서메뉴 톡으로 바로 공유 공유하기 3 “2050년 LNG 수요 65% 급증”… ‘2억 톤 공급 격차’에 추가 투자 비상 ▲2050년까지 세계 LNG 공급과 수요 전망 그래프. 사진=쉘 2050년 세계 액화천연가스( LNG ) 수요가 연간 약 7억 톤(t)으로 지난해 거래량보다 65% 증가할 것으로 전망되지만, 2억 톤 정도의 수요-공급 격차 예상치를 메우기 위한 추가 LNG 설비 투자가 필요하다는... 7시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "정부, 석유 최고가격 인하 맞춰 주유소 1천 곳 특별점검",
+      "press": "YTN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260701224620465",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 정부, 석유 최고가격 인하 맞춰 주유소 1천 곳 특별점검 석유 최고가격 인하 조치를 악용한 불법 석유 유통과 시장교란 행위가 우려되자 정부가 오는 14일까지 2주간 주유소 약 1천 곳 등을 대상으로 특별점검을 벌입니다. 산업부와 재정경제부, 국토교통부 등으로 구성된 '범부처 합동점검단'은 혼란스러운 시장 상황을... 14시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"이란 지정 호르무즈 항로 벗어난 美제재대상 선박 좌초\"(종합)",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260702074403357",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 \"이란 지정 호르무즈 항로 벗어난 美제재대상 선박 좌초\"(종합) 호르무즈 해협에서 외국 화물선 한 척이 이란 당국이 지정한 항로 바깥의 수심이 얕은 해역으로 진입했다가 좌초했다. 미국 CNN 방송은 원유 운송 현황을 추적하는 '탱커트래커스닷컴'(TankerTrackers.com)을 인용해 이 선박이 이란과의 연계로 인해 미국의 제재를... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"816조원 데이터센터 냉각시장 잡아라\" … 삼성·LG 이어 정유·조선사 출사표",
+      "press": "매일경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260701180616197",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "매일경제 개별문서메뉴 톡으로 바로 공유 공유하기 \"816조원 데이터센터 냉각시장 잡아라\" … 삼성·LG 이어 정유·조선사 출사표 인공지능(AI) 데이터센터 투자가 폭증하면서 발열을 잡기 위한 냉난방공조(HVAC) 시장도 빠르게 성장하고 있다. 삼성·LG전자 외에도 정유사 들은 데이터센터를 액체 속에 넣어 냉각하는 액침냉각 시장에 도전하고 있다. 또 조선 업체들은 바다 위에 데이터센터를... 19시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "젤렌스키, \"1000㎞ 떨어진 러시아 정유소 이번주 두번 때려\"",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260701212952254",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 젤렌스키, \"1000㎞ 떨어진 러시아 정유소 이번주 두번 때려\" 3명을 사망시켰다. 남서부 헤르손 지방에서 버스를 때려 두 사람이 죽고 여섯 명이 부상했다. 중부 드니프로페트로우스크 지방의 주유소 5곳이 공격을 받아 여성 한 명이 죽고 세 명이 부상했다. 러시아는 최근 우크라 주유소 를 집중 공격하고 있다. ☞공감언론... 15시간 전 6",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "밴스 美부통령 \"도하 협상 호르무즈에 초점…순조롭다\"",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260702033107914",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 밴스 美부통령 \"도하 협상 호르무즈에 초점…순조롭다\" 선박이 실제로 통행하도록 하고있으며 이미 놀라운 방향으로 진전이 시작됐다\"고 답했다. 그는 \"현재 유가는 배럴당 68달러이고 휘발유 가격도 내려가기 시작했다\"며 \"우리는 이 진전을 계속 이어가도록 보장하고 있으며, 그것이 우리가 초점을 맞추고 있는 부분이다... 9시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美·이란, 도하 회담 종료…호르무즈 통행 놓고 이견 여전",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260702060904547",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "이데일리 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 美·이란, 도하 회담 종료…호르무즈 통행 놓고 이견 여전 미국이 호르무즈 해협 선박 운항 재개를 허용하는 내용을 담고 있다. 호르무즈 해협은 전쟁 발발 전 전세계 원유·액화천연가스( LNG ) 물동량의 약 20%가 지나던 요충지다. 통행이 부분적으로 재개됐지만 양국은 지난 주말에도 이란의 화물선 공격을 계기로 서로 공격... 7시간 전 6",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "미·이란 도하 후속협상‥동결자산·호르무즈 논의",
+      "press": "MBC",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260702061911642",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "MBC 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 미·이란 도하 후속협상‥동결자산·호르무즈 논의 상업 선박 운항이 정상화되는 것이 중요합니다. 이미 긍정적인 흐름이 나타나고 있고, 유가도 68달러 수준으로 내려왔으며, 휘발유 가격도 하락세를 보이고 있습니다.\" 이란 측은 미국과 직접 접촉 없이 중재국들과만 회담했다며, 레바논 정세도 함께 논의했다고... 6시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란 “ 호르무즈 ·동결자산 논의…카타르 회담서 美와는 안 만나”",
+      "press": "데일리안",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260702075940692",
+      "published_date": "2026-07-02",
+      "published_at_kst": "",
+      "snippet": "데일리안 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 이란 “ 호르무즈 ·동결자산 논의…카타르 회담서 美와는 안 만나” 지난달 17일 이란 반다르아바스 앞 호르무즈 해협에서 소형 모터보트 한 척이 정박 중인 선박들 사이를 지나가고 있다. ⓒ AP/뉴시스 미국과 이란은 1일(현지 시간) 카타르 도하에서 중재국들을 통해 진행한 실무협상이 종료됐다. 이란 국영 IRNA통신에 따르면 카젬... 5시간 전",
+      "score": 7,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
