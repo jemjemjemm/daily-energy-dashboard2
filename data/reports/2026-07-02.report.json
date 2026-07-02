@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △중동 해협 리스크의 에너지 안보 변수화 △정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △석유제품 가격·물가 부담"
     }
   ],
   "prices": {
@@ -1573,6 +1577,78 @@
       "merged_at": "2026-07-02 13:18:47 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-02.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △석유제품 가격·물가 부담",
+    "trend_paragraphs": [
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "연합뉴스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "JTBC는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "러, 우크라 주유소 연일 맹폭…\" 정유 시설 피격에 맞보복\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260702165432160",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "우크라 드론 정유시설 공격에 연료난…러, 인도서 휘발유 수입",
+        "press": "연합뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260702102512501",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "우크라 드론에 정유시설 박살난 러시아, 인도서 휘발유 수입",
+        "press": "JTBC",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260702114319950",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
