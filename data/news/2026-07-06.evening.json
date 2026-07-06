@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-07-06",
+  "report_slot": "evening",
+  "collected_at": "2026-07-06 21:12:33 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-07-06 08:00~2026-07-06 17:00 KST",
+  "summary": "△석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격",
+  "topics": [
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격"
+  ],
+  "articles": [
+    {
+      "title": "담합 캐낸 검찰, 4조 혈세 청구…정유사 ‘손실 보상’ 억지도 막는다",
+      "press": "아시아경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706165101200",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "아시아경제 개별문서메뉴 톡으로 바로 공유 공유하기 담합 캐낸 검찰, 4조 혈세 청구…정유사 ‘손실 보상’ 억지도 막는다 원 상당을 편성해 둔 위기 상황이었다. 이 막대한 혈세의 향방을 가를 핵심 쟁점은 '제조원가' 산정 기준이었다. 정유업계는 원유 를 정제해 여러 제품이 동시에 생산되는 '연산품'의 성질상 개별 석유의 제조원가를 따로 구별해 산정하기 어렵다고 주장해 왔다. 이에... 4시간 전 1",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "검찰, ' 유가 담합' 4대 정유사 기소...\"26조 원대 경제 피해\"",
+      "press": "YTN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260706165834638",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 검찰, ' 유가 담합' 4대 정유사 기소...\"26조 원대 경제 피해\" [앵커] 미국과 이란 전쟁 이후 유가 담합 의혹에 연루된 국내 4대 정유회사들이 재판에 넘겨졌습니다. 검찰은 이들의 담합 행위로 26조 원대에 달하는 경제 피해가 발생했다고 평가했습니다. 안동준 기자의 보도입니다. [기자] 미국과 이란 전쟁 발발 직후 석유 가격... 4시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "유가",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "“ 휘발유 50원만 올리면 안되쿠과?”…제주 농협-주유소 가격 담합 적발",
+      "press": "매일경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706153603258",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "매일경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 “ 휘발유 50원만 올리면 안되쿠과?”…제주 농협-주유소 가격 담합 적발 제주시농협과 제주주유소협회 관계자의 경질유 가격 담합 통화 내용 발췌.[공정거래위원회 제공] “ 휘발유 50원만 올리면 안되쿠과?(안될까요?) 우리 마진이 너무 많은데 지금 뭐 서귀포 쪽도 1710원에 팔켄햄신디(팔겠다고 하는데)”, “아아. 예 거믄(그러면) 50원... 5시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 4,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "유가 하락에 종료 앞둔 최고가격제…남은 건 손실보전 정산",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706163017075",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 유가 하락에 종료 앞둔 최고가격제…남은 건 손실보전 정산 되찾으면서 정부가 고유가 대응을 위해 도입했던 석유제품 최고가격제도 종료 수순을 밟고 있다. 다만 가격 통제의 청구서인 정유사 손실보전 정산이 남아 있어 최종 보전 규모를 둘러싼 논의가 본격화될 전망이다. 6일 정유업계에 따르면 국제 유가는 배럴당... 4시간 전",
+      "score": 14,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "전쟁 틈타 26조 폭리, 증거 인멸까지…정유 카르텔의 민낯",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706155502196",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 2 전쟁 틈타 26조 폭리, 증거 인멸까지…정유 카르텔의 민낯 다음 사건부터 이런 정황이 확인되면 해당 로펌도 압수수색하겠다”고 경고했다. (자료= 서울중앙지검, 그래픽= 김일환 기자) 최고 가격제 로 손해 봤다는 정유사... 국민 세금 4조2000억 요구 파장은 확산할 전망이다. 지난 3월 13일부터 시행 중인 석유 최고 가격제 와... 5시간 전 2",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "최고가격제",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "'유가 담합' 기소에 정유업계 반발…\"가격 정보 교환이 곧 담합은 아냐\"",
+      "press": "아시아경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706162632870",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "아시아경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 '유가 담합' 기소에 정유업계 반발…\"가격 정보 교환이 곧 담합은 아냐\" 따라 가격을 결정했다는 부분은 법정에서 충분히 다툴 사안\"이라고 말했다. 검찰은 HD현대오일뱅크가 SK에너지와 2024년 7월부터 석유 제품 입금가 정보를 지속적으로 교환하고 미국·이란 전쟁 발발 직후 가격 인상 시기와 규모를 사전에 조율해 유가를 끌어올렸다고... 4시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "OPEC+ 증산에 유가 하락 압력…정유업계 잇단 악재에 '비명'",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706161551340",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 OPEC+ 증산에 유가 하락 압력…정유업계 잇단 악재에 '비명' 높은 가격에 확보했던 원유의 가치가 하락하고, 이는 고스란히 재고평가손실로 이어질 수 있기 때문이다. 게다가 원유 가격보다 석유 제품 의 가격이 더 빠르게 떨어질 경우 마진 축소를 피하기 어렵다. 석유 최고가격제 시행으로 제품 을 시장 가격대로 팔지 못했던 것... 4시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[기고] 에너지 전환기의 최종 안전판, LNG 저장탱크의 전략적 활용",
+      "press": "전자신문",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260706160242639",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "전자신문 개별문서메뉴 톡으로 바로 공유 공유하기 [기고] 에너지 전환기의 최종 안전판, LNG 저장탱크의 전략적 활용 경제연구원 가스 정책연구실장 탄소중립을 위한 친환경 에너지 보급 확대가 주요국 정부의 핵심 정책 목표로 자리 잡은 가운데, 천연 가스 는 그동안 석탄을 대체하고 재생에너지의 간헐성을 보완하며 단기 수요 변동에 대응하는 에너지 전환의 가교 자원으로 인식돼... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "천연가스",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "석유공사, 해외 생산 원유 154만 배럴 국내 반입",
+      "press": "KBS",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260706164554970",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 석유공사, 해외 생산 원유 154만 배럴 국내 반입 한국석유공사는 중동 지역의 지정학적 위기에 대응해 해외에서 생산한 원유 154만 5천 배럴을 국내로 도입했다고 밝혔습니다. 오늘(6일) 석유공사에 따르면 석유공사는 지난달 초 아랍에미리트(UAE) 푸자이라항에서 선적한 자사 생산 원유 97만 배럴을 호르무즈 해협... 4시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "BNK경영연구원 \"중동 전쟁 여파 2분기 이후 동남권 경제 악화\"",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706164957168",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 BNK경영연구원 \"중동 전쟁 여파 2분기 이후 동남권 경제 악화\" 구조'에 있다고 연구원은 분석했다. R.I.S.K는 ▲정유·석유화학 산업 집적(Refining & Petrochemical Concentration) ▲중동산 원유 수입 의존(Import Dependence on Middle Eastern Oil) ▲해운·항만 산업 발달(Shipping & Port Logistics Exposure) ▲핵심 수출... 4시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "끝나지 않은 중동 리스크…해운업계 하반기도 '안갯속'",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260706162707894",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 끝나지 않은 중동 리스크…해운업계 하반기도 '안갯속' 절대 허용할 수 없다는 입장이라 향후 이란과의 종전 협상에서 상당한 난항이 예상된다. 호르무즈해협은 전 세계 해상 원유 물동량과 LNG 교역량의 약 20%가 통과하는 요충지로 꼽히다. 한국은 수입 원유의 70%, LNG 의 20%를 중동에서 수입한다. 이런 이유로 업계... 4시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란전쟁 직격탄 맞은 동남권…“5년간 연 6.7% 성장해야 회복”",
+      "press": "헤럴드경제",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260706164953162",
+      "published_date": "2026-07-06",
+      "published_at_kst": "",
+      "snippet": "헤럴드경제 개별문서메뉴 톡으로 바로 공유 공유하기 2 이란전쟁 직격탄 맞은 동남권…“5년간 연 6.7% 성장해야 회복” 이유로 ‘R.I.S.K 경제구조’를 꼽았다. 이는 ▷정유·석유화학 산업 집적(Refining & Petrochemical Concentration) ▷중동산 원유 수입 의존(Import Dependence on Middle Eastern Oil) ▷해운·항만 산업 발달(Shipping & Port Logistics Exposure) ▷핵심 수출... 4시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
