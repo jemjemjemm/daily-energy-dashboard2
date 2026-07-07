@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △국제유가 변동과 원유 수급 전망 △중동 해협 리스크의 에너지 안보 변수화 △LNG·천연가스 수급과 가격 변수 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향"
     }
   ],
   "prices": {
@@ -1553,6 +1557,78 @@
       "merged_at": "2026-07-07 13:14:40 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-07.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향",
+    "trend_paragraphs": [
+      "아시아경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "이투데이는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "국민일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+    ],
+    "articles": [
+      {
+        "title": "'전쟁통 14조 담합' 정유사 기소에도…정부, 4조원대 손실보전 절차 예정대로",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260707164031419",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈 봉쇄 후 홍해 우회 원유 수송 12번째…\"국내 공급망 안정\"",
+        "press": "이투데이",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260707155708747",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 2,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "하메네이 장례 나흘째 IRGC 상선 공격…호르무즈 해협 긴장 재점화",
+        "press": "국민일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260707164616955",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
