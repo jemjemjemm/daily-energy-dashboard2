@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.1",
-  "generatedAt": "2026-07-07 20:17:56 KST",
-  "count": 37,
-  "latestDate": "2026-07-07",
+  "generatedAt": "2026-07-08 12:39:28 KST",
+  "count": 38,
+  "latestDate": "2026-07-08",
   "availableDates": [
     "2026-05-04",
     "2026-05-06",
@@ -40,7 +40,8 @@
     "2026-07-02",
     "2026-07-03",
     "2026-07-06",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-08"
   ],
   "warnings": [
     {
@@ -221,6 +222,15 @@
     }
   ],
   "reports": [
+    {
+      "date": "2026-07-08",
+      "displayDate": "2026년 7월 8일 (수)",
+      "title": "Daily Issue Report — 2026.07.08",
+      "url": "reports/2026-07-08.html",
+      "status": "발간",
+      "fileName": "2026-07-08.html",
+      "exists": true
+    },
     {
       "date": "2026-07-07",
       "displayDate": "2026년 7월 7일 (화)",
