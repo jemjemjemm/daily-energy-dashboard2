@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-07-09",
+  "report_slot": "evening",
+  "collected_at": "2026-07-09 20:16:14 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-07-09 08:00~2026-07-09 17:00 KST",
+  "summary": "△중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △정부·국회 에너지 정책",
+  "topics": [
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "정부·국회 에너지 정책"
+  ],
+  "articles": [
+    {
+      "title": "日정부, 호르무즈 불안에 나프타 의무 비축 재추진",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709150553915",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 2 日정부, 호르무즈 불안에 나프타 의무 비축 재추진 중동 정세 불안으로 나프타 공급망 취약성이 드러난 데 따른 조치다. 9일 마이니치신문 등 현지 언론에 따르면 일본 정부는 정유사 와 화학업계가 나프타 유래 석유화학제품을 일정량 보유하도록 하는 방안을 검토 중이다. 아카자와 료세이 일본 경제산업상은 지난... 5시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중재국 파키스탄도 당했다…호르무즈 막히자 LNG 긴급 수배",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709163447851",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 중재국 파키스탄도 당했다…호르무즈 막히자 LNG 긴급 수배 이란 간 무력 충돌이 격화하면서 사실상 멈춰 섰다. 이란은 전날 오만 인근 해협에서 카타르 LNG 운반선 ‘알레카야트’와 사우디 원유 운반선 ‘웨디안’ 등 3척을 공격했다. 미국은 곧바로 이란 내 80여 표적을 타격하고 이란산 원유 수출을 허용하던 제재 유예를... 3시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 긴장 재고조 속 사우디 '호르무즈 우회망' 강화…\"에쓰오일, 원유 조달 안정\"",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709113355425",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 2 중동 긴장 재고조 속 사우디 '호르무즈 우회망' 강화…\"에쓰오일, 원유 조달 안정\" S-Oil은 이 같은 물류망의 최대 수혜 기업으로 꼽힌다. 중동 지역의 군사적 긴장이 고조되더라도 안정적인 원유 조달이 가능해 다른 정유사 보다 공급 차질 위험이 상대적으로 작다는 평가다. 안정적인 원유 확보는 높은 공장 가동률 유지로 이어질 수 있으며, 정제... 8시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "정유4사 담합 기소, 최고가격 정산 '변수' 될까…정부 \"원칙대로\"",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709133953344",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 3 정유4사 담합 기소, 최고가격 정산 '변수' 될까…정부 \"원칙대로\" 정산 결과를 둘러싼 객관성과 신뢰성 확보는 관건이 될 전망이다. 9일 정부에 따르면 산업통상부는 최고가격제 시행에 따른 정유사 손실보전에 4조2000억원 규모의 목적 예비비를 편성하고 정산위원회 출범을 준비 중이다. 이달 중 정산위원회가 출범하면, 정부는... 6시간 전",
+      "score": 14,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 정세에 최고가격제 ‘안갯속’…손실보전 ‘이중고’",
+      "press": "에너지경제",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260709145057098",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "에너지경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 중동 정세에 최고가격제 ‘안갯속’…손실보전 ‘이중고’ 전망이 확대되는 분위기\"라고 귀띔했다. 이처럼 최고가격제 유지를 부추기는 대외 압력이 확대되면서 석유제품 가격 제한에 따른 정유사 손실보전 난이도도 덩달아 상승하는 모양새다. 현재까지 최고가격제 시행으로 업계 안팎에서 제기되는 손실 규모는 4~5조원... 5시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 리스크에 춤추는 유가…정유업계, 규제·눈치보기에 '속앓이'",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709112252755",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 중동 리스크에 춤추는 유가…정유업계, 규제·눈치보기에 '속앓이' 하락세를 멈추고 반등했다. 중동 지역의 지정학적 리스크가 다시 부각되면서 국제유가 추가 상승 가능성도 제기된다. 하지만 국내 정유사 들의 표정이 밝지만은 않다. 정부가 시행 중인 석유제품 최고가격제로 국제유가 상승분을 판매가격에 즉각 반영하기 어려운 데... 8시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "日, 나프타 비축 의무 재추진…특정중요물자에 포함 방안 검토",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709131250396",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 日, 나프타 비축 의무 재추진…특정중요물자에 포함 방안 검토 나프타와 관련해 비축 의무화를 추진한다. 9일 현지 언론에 따르면 일본 정부는 석유에서 추출되는 나프타로 만든 석유화학제품을 정유사 나 화학공업 업계가 일정량 보유하도록 하는 방안을 검토 중이다. 아카자와 료세이 일본 경제산업상은 지난 7일 각의(국무회의... 7시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "원유 수입 줄이려 ‘에탄올 혼합연료’ 밀어붙인 인도…차주들 반발",
+      "press": "문화일보",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260709153729693",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "문화일보 개별문서메뉴 톡으로 바로 공유 공유하기 원유 수입 줄이려 ‘에탄올 혼합연료’ 밀어붙인 인도…차주들 반발 계획이었지만 목표 시점을 5년 앞당겼다. 2023년부터 E20 대응 차량이 출시됐으며 정부 방침에 따라 지난해 말부터 전국 9만여 개 주유소 에서는 E20를 주력으로 판매하고 있다. 정부는 원유 수입 의존도를 낮추고 에탄올 원료인 사탕수수 재배 농가의 소득을 늘리는... 4시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이천시, 중리지구 경유 231번 증차…시내↔백사 286번 버스 신설",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709154928325",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 이천시, 중리지구 경유 231번 증차…시내↔백사 286번 버스 신설 이천 시내권과 백사면 현방리를 연결하는 286번 시내버스.(이천시 제공) (이천=뉴스1) 김평석 기자 = 경기 이천시는 입주가 본격화 되고 있는 이천 최초 택지지구인 중리지구 입주민을 위한 교통 대책의 일환으로 시내권과 부발읍(SK하이닉스 포함)을 연결하는 231번... 4시간 전",
+      "score": 5,
+      "score_breakdown": {
+        "keyword": 2,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 긴장 고조에 산업계 촉각…유가·물류 변수 예의주시",
+      "press": "한겨레",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709160646345",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "한겨레 개별문서메뉴 톡으로 바로 공유 공유하기 중동 긴장 고조에 산업계 촉각…유가·물류 변수 예의주시 아니지만, 불확실성이 커진 만큼 긴장감이 감도는 분위기다. 8일(현지시각) 9월 인도분 브렌트유와 8월 인도분 미국 서부 텍사스산 원유 (WTI) 선물은 각각 5.20%, 4.37% 오른 배럴당 78.02달러, 73.52달러에 거래를 마쳤다. 각각 지난 6월19일, 6월22일 이후 최고치... 4시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 에너지 인프라 투자 본격화에 건설업계 훈풍…DL그룹 밸류체인 주목",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709162337282",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 美 에너지 인프라 투자 본격화에 건설업계 훈풍…DL그룹 밸류체인 주목 선점 나서 ━ 그룹 내 건설사업을 담당하는 DL이앤씨는 에너지 포트폴리오 전환에 속도를 내고 있다. 기존 대형 원전과 석탄화력, 정유 플랜트 분야를 넘어 SMR, 액화천연가스(LNG) 발전, 암모니아 등 미래 에너지 분야로 사업 영역을 확대하고 있다. 특히 차세대... 3시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "코스피, 나흘 만에 반등했는데…중동 불안에 상승폭 반납 7300선 하회[시황종합]",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260709162927579",
+      "published_date": "2026-07-09",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 코스피, 나흘 만에 반등했는데…중동 불안에 상승폭 반납 7300선 하회[시황종합] 4.31%, 에코프로비엠(247540) -0.98% 등은 하락했다. 한편 9월 인도분 브렌트유 선물은 0.01% 오른 78.03달러, 미 서부텍사스산 원유 (WTI)는 0.16% 오른 73.64달러에 거래되고 있다. 나스닥 100 선물은 0.51% 오르는 중이다. 미국 10년물 국채 금리 채권수익률은 0.09... 3시간 전 2",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
