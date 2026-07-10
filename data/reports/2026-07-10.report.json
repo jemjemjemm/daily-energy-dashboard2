@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △고환율에 따른 정유·석유화학 원가 부담"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △중동 해협 리스크의 에너지 안보 변수화 △LNG·천연가스 수급과 가격 변수 △정유업계 수익성·정제마진 영향 △석유제품 가격 안정과 유류세 정책 논의"
     }
   ],
   "prices": {
@@ -1522,6 +1526,78 @@
       "merged_at": "2026-07-10 13:09:53 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-10.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△중동 해협 리스크의 에너지 안보 변수화 △LNG·천연가스 수급과 가격 변수 △정유업계 수익성·정제마진 영향 △석유제품 가격 안정과 유류세 정책 논의",
+    "trend_paragraphs": [
+      "뉴스1는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "뉴스1는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "호르무즈 긴장에도 일부 통항 이어져…\"LNG선 5척 해협 진입\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260710141849981",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "러 '경유 수출금지'에 공급난 가중…\"유럽-非유럽 물량경쟁 전망\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260710112718376",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 4,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "러 '사라토프 정유공장'도 가동 중단…멈춰서는 정유시설 줄이어",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260710163441055",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
