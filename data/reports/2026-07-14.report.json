@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △중동 해협 리스크의 에너지 안보 변수화 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △국제유가 변동과 원유 수급 전망 △중동 해협 리스크의 에너지 안보 변수화"
     }
   ],
   "prices": {
@@ -1495,6 +1499,78 @@
       "merged_at": "2026-07-14 12:28:42 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-14.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △국제유가 변동과 원유 수급 전망 △중동 해협 리스크의 에너지 안보 변수화",
+    "trend_paragraphs": [
+      "전자신문은 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "머니투데이는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "에너지경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "글로벌 석유제품 공급난에…韓 정유 업계 수익성 개선 전망",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260714151750153",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "트럼프 \"호르무즈 통행료 20% 받는다\"… 원유 ETF·관련주 들썩",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260714162907589",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "또 막힌 호르무즈 뱃길…정유·석화업계, 혼돈의 하반기",
+        "press": "에너지경제",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260714150358424",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
