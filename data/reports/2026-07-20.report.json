@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △정유업계 수익성·정제마진 영향 △고환율에 따른 정유·석유화학 원가 부담 △국제유가 변동과 원유 수급 전망 △국제유가와 원유 수급 동향"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가와 원유 수급 동향"
     }
   ],
   "prices": {
@@ -1437,6 +1441,78 @@
       "merged_at": "2026-07-20 12:59:14 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-20.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가와 원유 수급 동향",
+    "trend_paragraphs": [
+      "파이낸셜뉴스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "머니투데이는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "뉴시스는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "정유 업계 2분기 실적 감소..정제마진으로 방어",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260720155240179",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "윤활기유 수출 '사상 최대' 기록…중동 리스크 뚫은 K정유사 저력",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260720155907519",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈·홍해 '동시 봉쇄' 현실화되나…정유업계, 원유 수급 '초비상’",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260720105856243",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
