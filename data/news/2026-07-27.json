@@ -1,0 +1,292 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-07-27",
+  "report_slot": "morning",
+  "collected_at": "2026-07-27 12:58:19 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-07-26 17:00~2026-07-27 08:00 KST",
+  "summary": "△중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격",
+  "topics": [
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격"
+  ],
+  "articles": [
+    {
+      "title": "정유사 2Q 실적 발표 줄이어…나란히 호실적 예상",
+      "press": "전자신문",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260726170211463",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "전자신문 개별문서메뉴 톡으로 바로 공유 공유하기 정유사 2Q 실적 발표 줄이어…나란히 호실적 예상 이달 23일 기준 수입 원유의 기준이 되는 두바이유 가격은 배럴당 90달러선을 상회하며 강세를 유지했다. 유가 상승은 정유사 들에게 큰 호재다. 통상 정유사 들이 해외에서 사온 원유가 국내에 도입돼 제품으로 판매되기까지는 1~2달의 시차가 존재한다. 이 기간 유가... 19시간 전 1",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[인사이드 스토리]'정제마진에 일희일비' 韓정유사들, 걱정 덜어준 '이것'",
+      "press": "비즈워치",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260727065127843",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "비즈워치 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 3 [인사이드 스토리]'정제마진에 일희일비' 韓정유사들, 걱정 덜어준 '이것' 윤활기유 제품군인 Group III(그룹 3)를 보유한 국내 정유사들의 입지가 한층 더 강화될 것으로 보고 있습니다. 그룹 3 윤활기유는 원유 를 초고압으로 가공해 불순물을 극도로 줄인 최고급 원료를 의미합니다. 기온 변화에도 끈적이는 점도가 일정하게 유지돼 고급... 6시간 전",
+      "score": 6,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": -3
+      },
+      "industry_relevance": 5,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "원유수급 차질에…GS칼텍스, 20년만에 베네수엘라 원유 도입",
+      "press": "동아일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260726193850092",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "동아일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 원유수급 차질에…GS칼텍스, 20년만에 베네수엘라 원유 도입 원유부두에서 하역 작업하고 있다. 2026.05.08 여수=뉴시스 미국과 이란의 전쟁이 장기화되며 원유 수급에 차질이 생기자 국내 정유사 들도 원유 확보를 위해 20여년 간 거래가 없었던 베네수엘라 원유까지 조달하고 나섰다. 26일 정유업계에 따르면 GS칼텍스는 지난... 17시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "국제유가 ‘홍해 쇼크’…하반기 ‘물가 3% 사수’ 비상",
+      "press": "중앙일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260727000421817",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 3 국제유가 ‘홍해 쇼크’…하반기 ‘물가 3% 사수’ 비상 한 두 달 내로 국내 기름값이 다시 오를 것으로 보고 있다. 정부는 다시 물가 안정의 고삐를 죄고 있다. 당초 이달 말 종료 예정이던 유류세 인하 조치를 9월 말까지 두 달 연장하고, 8차 석유 최고가격을 직전 수준으로 동결하기로 했다. 구윤철 부총리 겸 재정... 12시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "유류세",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "베네수엘라 원유 수입… 20년만에 다각화 나서",
+      "press": "동아일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260727003254263",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "동아일보 개별문서메뉴 톡으로 바로 공유 공유하기 베네수엘라 원유 수입… 20년만에 다각화 나서 수급에 차질이 생기자 국내 정유사들도 원유 확보를 위해 20여 년간 거래가 없었던 베네수엘라 원유까지 조달하고 나섰다. 26일 정유 업계에 따르면 GS칼텍스는 지난달 베네수엘라 원유 11만 배럴을 국내로 도입했다. SK에너지, HD현대오일뱅크 등도 베네수엘라산... 12시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상",
+      "press": "중앙일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260726174850279",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 3 홍해까지 막히자 국제유가 다시 들썩…하반기 물가 비상 달 내로 국내 기름값이 다시 오를 것으로 보고 있다. 정부는 다시 물가 안정의 고삐를 죄고 있다. 당초 이달 말 종료 예정이었던 유류세 인하 조치를 9월 말까지 두 달 연장하고, 8차 석유 최고가격을 직전 수준으로 동결하기로 했다. 구윤철 부총리 겸 재정경제부... 19시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "유류세",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "물가 잡으려다 5년…유류세 인하, 출구가 안 보인다 [네버엔딩 유류세 인하]",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260727050019287",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 2 물가 잡으려다 5년…유류세 인하, 출구가 안 보인다 [네버엔딩 유류세 인하] 지속하면서 사실상 상시 정책으로 굳어졌다는 평가가 나온다. 정부가 쉽게 유류세를 정상화하지 못하는 이유는 물가다. 유류세는 주유소 판매가격에 직접 반영되는 만큼 세율을 원상 복귀하면 휘발유와 경유 가격이 오르고, 이는 운송비와 물류비 상승을 거쳐 소비자... 7시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "“출구 없는 연장 안돼⋯대안 세워야” [네버엔딩 유류세 인하]",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260727050108313",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "이투데이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 “출구 없는 연장 안돼⋯대안 세워야” [네버엔딩 유류세 인하] 종가 기준 배럴당 100달러를 넘어선 것은 지난 5월 2일 이후 처음이다. 고성준 기자 joonko1@ 2021년 11월 한시 조치로 도입된 유류세 인하가 5년 가까이 이어지고 있다. 정부는 최근에도 중동 리스크와 국제유가 변동성을 이유로 인하 조치를 오는 9월 말까지 연장... 7시간 전 1",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "유류세",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "물가 잡으려다 세수 20조 증발…이젠 출구전략 고민할 때 [네버엔딩 유류세 인하]",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260727050106311",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "이투데이 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 물가 잡으려다 세수 20조 증발…이젠 출구전략 고민할 때 [네버엔딩 유류세 인하] 교통·에너지·환경분야 목적세 재정부담 초래⋯기능회복 과제 정부가 유류세 인하 조치를 또다시 연장한 것은 결국 '물가' 때문이다. 유류세 는 휘발유와 경유 가격에 직접 반영되는 세금인 만큼 세율을 정상화하면 곧바로 주유소 판매가격이 오른다. 소비자들이 가장... 7시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "유류세",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "유가 상승 베팅한 ETN…이달 수익률 상위권 점령 [줍줍리포트]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260727055128790",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "서울경제 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 2 유가 상승 베팅한 ETN…이달 수익률 상위권 점령 [줍줍리포트] 화물선들. 로이터연합뉴스 중동 긴장 재고조로 국제유가가 급등하자 관련 상장지수증권(ETN) 수익률이 치솟았다. 유가 상승에 정유 관련 테마주로 꼽히는 종목들의 주가도 오르고 있다. 글로벌 투자은행(IB) 골드만삭스는 최근 중동 갈등이 고조될 시 브렌트유 가격... 7시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[마켓뷰] 코스피, 한·미 'AI 동맹' 소식에 급락 딛고 반등할까",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260727075550845",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 개별문서메뉴 톡으로 바로 공유 공유하기 [마켓뷰] 코스피, 한·미 'AI 동맹' 소식에 급락 딛고 반등할까 다시 악화하면서 국제 유가가 치솟은 영향이었다. 당시 브렌트유 선물 종가는 배럴당 이미 100달러를 뚫었고 미국 서부 텍사스산 원유 (WTI)도 90달러선을 웃돌았다. 여기에 구글 모회사 알파벳이 AI 인프라 투자의 결과로 현금 흐름이 마이너스로 돌아섰다고 한 점도... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[포토] 중동 불안에 기름값 오르나",
+      "press": "국민일보",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260726225010291",
+      "published_date": "2026-07-27",
+      "published_at_kst": "",
+      "snippet": "국민일보 개별문서메뉴 톡으로 바로 공유 공유하기 [포토] 중동 불안에 기름값 오르나 전국 주유소 의 기름값이 10주째 하락세를 보였다. 그러나 최근 미국과 이란의 갈등 지속과 예멘의 친이란 후티 반군의 홍해 봉쇄 선언 등으로 국제유가가 오르며 한국 기름값도 반등 조짐이 우려된다. 26일 서울 서초구의 한 주유소 에 휘발유 판매가격이 ℓ당 1866원... 14시간 전",
+      "score": 7,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
