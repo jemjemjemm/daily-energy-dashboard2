@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △석유제품 가격 안정과 유류세 정책 논의 △국제유가와 원유 수급 동향"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △석유제품 가격 안정과 유류세 정책 논의"
     }
   ],
   "prices": {
@@ -1490,6 +1494,78 @@
       "merged_at": "2026-07-28 12:30:13 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-28.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △석유제품 가격 안정과 유류세 정책 논의",
+    "trend_paragraphs": [
+      "문화일보는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "이데일리는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "데일리안은 국제유가와 석유시장 변동 요인을 중심으로 정리."
+    ],
+    "articles": [
+      {
+        "title": "정유업계, 최고가격제 장기화 비상… BSI 전망치 17년내 최대",
+        "press": "문화일보",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260728115414914",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "KG에코솔루션, 국내 정유사 3곳 계약…선박용 바이오연료 공급 확대",
+        "press": "이데일리",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260728105138254",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호주·남미로 원유길 넓혔지만…K- 정유 , '탈중동'은 아직?",
+        "press": "데일리안",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260728145440407",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
