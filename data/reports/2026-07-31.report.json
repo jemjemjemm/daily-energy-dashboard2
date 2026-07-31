@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유제품 가격·물가 부담"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △LNG·천연가스 수급과 가격 변수 △국제유가와 원유 수급 동향"
     }
   ],
   "prices": {
@@ -1537,6 +1541,78 @@
       "merged_at": "2026-07-31 12:46:52 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-07-31.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △국제유가 변동과 원유 수급 전망 △LNG·천연가스 수급과 가격 변수 △국제유가와 원유 수급 동향",
+    "trend_paragraphs": [
+      "아시아경제는 국제유가와 석유시장 변동 요인을 중심으로 정리.",
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "파이낸셜뉴스는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도."
+    ],
+    "articles": [
+      {
+        "title": "[컨콜]HD현대 \"유가 상승에 재고효과 5000억…3분기 정제마진 보합 전망\"",
+        "press": "아시아경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260731163453584",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "우크라 드론 공격에 러 정유공장 또 멈춰…\"랴잔 공장 가동 중단\"",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260731164242953",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "HD현대베트남조선, 카인호아성서 11만5000t급 LNG 이중연료 LR2 유조선 건조 착수",
+        "press": "파이낸셜뉴스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260731162508279",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 3,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
