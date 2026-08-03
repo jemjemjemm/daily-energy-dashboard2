@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △나프타·석유화학 원료 가격 부담"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △석유화학 원료·제품 가격 부담"
     }
   ],
   "prices": {
@@ -1543,6 +1547,78 @@
       "merged_at": "2026-08-03 12:49:27 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-08-03.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △석유화학 원료·제품 가격 부담",
+    "trend_paragraphs": [
+      "경향신문은 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "전자신문은 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "데일리안은 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "중동 사태에 정유사 알짜 된 윤활기유…프리미엄 ‘그룹Ⅲ’ 시장 쟁탈전",
+        "press": "경향신문",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260803155708482",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈 재봉쇄에 나프타 값 ↑… 코트라, 비상 체제 재전환",
+        "press": "전자신문",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260803130254183",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "'정유·윤활 쌍끌이'로 흑자전환한 에쓰오일…다음 승부수는 샤힌(종합)",
+        "press": "데일리안",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260803141950876",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
