@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-08-04",
+  "report_slot": "morning",
+  "collected_at": "2026-08-04 12:32:38 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-08-03 17:00~2026-08-04 08:00 KST",
+  "summary": "△중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △물가 지표와 에너지 비용 부담",
+  "topics": [
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "물가 지표와 에너지 비용 부담"
+  ],
+  "articles": [
+    {
+      "title": "SK이노, 정유 의존도 낮추기 성공…ESS· LNG , 新성장축 부상",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260804063128606",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 3 SK이노, 정유 의존도 낮추기 성공…ESS· LNG , 新성장축 부상 096770)이 전체 매출에서 정유 사업이 차지하는 비중을 50% 아래로 낮추는데 성공했다. 에너지저장장치(ESS)와 액화천연가스( LNG )가 새로운 성장 동력으로 성장하면서 포트폴리오가 다변화됐다는 분석이다. 정유 사업에서 창출하는 안정적인 현금을 기반으로 배터리... 6시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프, 이란 공격 보류에 국제유가 급락…브렌트유 7% 하락",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260804075841867",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프, 이란 공격 보류에 국제유가 급락…브렌트유 7% 하락 호르무즈 해협의 즉각적이고 완전한 개방과 이란의 핵 위협 종식이 포함될 것이라고 주장했다. 호르무즈 해협은 세계 주요 원유 수송로로, 이란이 사실상 통제력을 행사하면서 봉쇄 우려가 커질 때마다 국제유가 상승 요인으로 작용해왔다. 다만 이란 측은 신중한... 4시간 전 1",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "세계 ‘윤활기유’ 공급 대란에…국내 정유사 들, 2분기 웃었다",
+      "press": "경향신문",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260803203708487",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "경향신문 개별문서메뉴 톡으로 바로 공유 공유하기 세계 ‘윤활기유’ 공급 대란에…국내 정유사 들, 2분기 웃었다 국내 정유사 가 미국·이란 충돌로 인한 세계 윤활기유 공급 대란의 수혜를 보고 있다. 중동사태 장기화로 앞서 싸게 사왔던 원유의 ‘재고 효과’는 감소했지만 윤활기유 수요가 폭증하며 올해 2분기 일제히 호실적을 거두는 모습이다. 프리미엄 윤활기유 ‘그룹Ⅲ... 15시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "호르무즈 끝나도 안심 못한다…남중국해도 한국 공급망 ‘뇌관’",
+      "press": "헤럴드경제",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260804071338195",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "헤럴드경제 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 끝나도 안심 못한다…남중국해도 한국 공급망 ‘뇌관’ 우리나라의 또 다른 해상 공급망 취약지대로 지목됐다. 대만해협에서 무력 충돌이나 통항 제한이 발생하면 원유와 액화천연가스( LNG )는 물론 반도체와 전자·기계류 공급망까지 동시에 흔들릴 수 있다는 분석이다. 4일 한국해양수산개발원(KMI)이 발간한 ‘7월 국제... 5시간 전",
+      "score": 13,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란 \" 호르무즈 제2 항로 강요하는 미 군함 공격할 것\"",
+      "press": "YTN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260804075702831",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "YTN 개별문서메뉴 톡으로 바로 공유 공유하기 이란 \" 호르무즈 제2 항로 강요하는 미 군함 공격할 것\" 이란 최고지도자의 고문인 모흐센 레자이는 호르무즈 해협을 통과하는 선박에 이란이 정한 항로가 아닌 다른 항로를 강요하려는 미국 군함은 어떤 함정이든 표적이 될 것이라고 밝혔습니다. 레자이는 현지시간 3일 이란 국영언론과의 인터뷰에서 \"이란은 제2 항로가... 4시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"너무 많이 벌었다\"…트럼프, 정유업계 정조준",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260804043137168",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 3 \"너무 많이 벌었다\"…트럼프, 정유업계 정조준 행정부의 니콜라스 마두로 전 대통령 체포와 베네수엘라 석유 산업 재개 움직임의 최대 수혜 기업으로 꼽힌다. 로이터에 따르면 셰브론...워스 CEO는 지난주 실적 콘퍼런스콜에서 “3분기에도 제품 가격에 상승 압력이 이어질 것으로 보이며, 그 이후에도 계속될 수... 8시간 전 11",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "중동 전쟁 장기화에 어부지리… 석유화학업계 ‘반짝 흑자’",
+      "press": "세계일보",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260803201509091",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "세계일보 개별문서메뉴 톡으로 바로 공유 공유하기 2 중동 전쟁 장기화에 어부지리… 석유화학업계 ‘반짝 흑자’ 화학 기업으로 꼽히는 LG화학 석유화학부문은 매출 5조3289억원, 영업이익 4265억원을 거뒀다. 회사의 핵심 생산 시설인 여수 나프타 분해설비(NCC) 2공장 가동 중단에 따라 판매량이 줄었음에도, 주요 석유화학제품 가격이 비싼 덕을 봤다. 한화솔루션 케미칼부문도... 16시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "나프타",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프, 석유업계에 “ 휘발유 가격 당장 내려라” 또 압박",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260804070603066",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프, 석유업계에 “ 휘발유 가격 당장 내려라” 또 압박 너무 많은 이익을 내고 있다”면서 “미국 셰브런도, 엑슨모빌도 돈을 너무 많이 벌고 있다. 이익 일부를 사회에 환원해야 하며, ( 휘발유 ) 소매 가격을 인하해야 한다”고 주장했다. 그는 자신이 기업 경영의 자유를 옹호하는 사람이라고 강조하면서도 “그들은 돈을... 5시간 전",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 4,
+        "title_importance": 1,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "유럽 LNG 저장률 17년래 최저⋯가격 급등 탓 비축 급감",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260804074903712",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 유럽 LNG 저장률 17년래 최저⋯가격 급등 탓 비축 급감 천연가스 가격 급등 5년 평균 74%⋯8월 초 비축비율 57.1% 그래픽=AI 기반 편집 이미지(Chat GPT) 중동 전쟁 이후 액화천연가스( LNG ) 가격이 급등하면서 유럽 주요 국가가 사실상 비축을 중단한 것으로 전해졌다. 방출 규모가 비축 규모를 크게 웃돌면서 저장 비율도... 4시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프 “이란, 참수 전 마지막 기회…호르무즈 개방 고강도 압박”",
+      "press": "동아일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260804065537890",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "동아일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프 “이란, 참수 전 마지막 기회…호르무즈 개방 고강도 압박” 너무 많다”며 “그 돈의 일부를 국민에게 돌려줘야 한다”고 말했다. 이어 이란 문제가 해결되면 유가가 크게 떨어질 것이라며 정유사 들에 소매 휘발유 가격을 내리라고 압박했다. 11월 중간선거를 앞두고 전쟁으로 치솟은 휘발유 가격 등은 트럼프 대통령이 군사적... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[이 시각 세계] \"올겨울 어쩌나\"‥유럽, LNG 저장률 '비상'",
+      "press": "MBC",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260804072515353",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "MBC 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 [이 시각 세계] \"올겨울 어쩌나\"‥유럽, LNG 저장률 '비상' 최근 5년 평균인 74%를 크게 밑도는 수준으로, 관련 통계가 작성된 2009년 이후 가장 낮은 수치입니다. 중동 전쟁 여파로 LNG 가격이 크게 뛰면서 비축 작업은 사실상 멈춘 상태입니다. 한편, 중동에서 유럽으로 들어오던 액화천연가스, LNG 공급에 차질이 생기면서... 5시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프, 석유 기업에 “너무 많은 돈 벌어…휘발유값 내려라”",
+      "press": "중앙일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260804055448990",
+      "published_date": "2026-08-04",
+      "published_at_kst": "",
+      "snippet": "중앙일보 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프, 석유 기업에 “너무 많은 돈 벌어…휘발유값 내려라” 지난 4월 말 미국 캘리포니아주 엔시니타스의 고속도로 인근 주유소 에 휘발유 가격이 표시되어 있다. 로이터=연합뉴스 도널드 트럼프 미국 대통령이 이란 전쟁 여파에 따른 고유가 상황에서 막대한 이익을 거두고 있는 석유 대기업들을 향해 “너무 많은 돈을 벌고... 6시간 전 1",
+      "score": 8,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
