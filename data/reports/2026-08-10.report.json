@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △중동 해협 리스크의 에너지 안보 변수화 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수 △석유제품 가격 안정과 유류세 정책 논의"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △중동 해협 리스크의 에너지 안보 변수화 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수"
     }
   ],
   "prices": {
@@ -1516,6 +1520,78 @@
       "merged_at": "2026-08-10 11:30:32 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-08-10.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△중동 해협 리스크의 에너지 안보 변수화 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급과 가격 변수",
+    "trend_paragraphs": [
+      "YTN는 LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도.",
+      "한국경제는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "한국일보는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요."
+    ],
+    "articles": [
+      {
+        "title": "UAE 국영석유사 \"호르무즈 밖 LNG 플랜트 검토 중\"",
+        "press": "YTN",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260810170008738",
+        "summary": "LNG 수급·가격 변동이 에너지 시장에 미치는 영향 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "2분기 역대급 흑자에도…정유4사 '신사업'에 사활",
+        "press": "한국경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260810161409959",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "호르무즈 경색, '뉴노멀' 되나… 트럼프, 대이란 봉쇄 장기화 시사",
+        "press": "한국일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260810160130305",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 2,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
