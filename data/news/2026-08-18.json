@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-08-18",
+  "report_slot": "morning",
+  "collected_at": "2026-08-18 10:47:50 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-08-17 17:00~2026-08-18 08:00 KST",
+  "summary": "△중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격 △정부·국회 에너지 정책",
+  "topics": [
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격",
+    "정부·국회 에너지 정책"
+  ],
+  "articles": [
+    {
+      "title": "호르무즈에 홍해마저 막혀‥수에즈 운하 넘고 아프리카 돌아 원유 수송키로",
+      "press": "MBC",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260817203706590",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "MBC 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 호르무즈에 홍해마저 막혀‥수에즈 운하 넘고 아프리카 돌아 원유 수송키로 아프리카 대륙으로 돌아오면 그만큼 운송비와 인건비는 늘어납니다. 일단 수에즈 운하로 숨통은 트이게 됐지만, 선사와 정유사 가 비용과 시간을 더 감수하고 이 우회로를 계속 이용할지도 미지수입니다. 다행히 아직까지 원유 수급에 문제는 없습니다. 중동전쟁 이후... 14시간 전 16",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "이란·미국 휴전 연장 불발에 국제유가 3% 급등…브렌트 90달러 돌파",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260818051328808",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 이란·미국 휴전 연장 불발에 국제유가 3% 급등…브렌트 90달러 돌파 하루 원유 수입량을 400만~500만 배럴가량 줄인 것이 그동안 국제유가 급등을 억제한 주요 요인이었다고 분석했다. 그러나 높은 석유 제품 가격을 활용하기 위해 중국 정유업체들이 원유 수입을 다시 늘릴 가능성이 있다며 브렌트유가 배럴당 100달러 수준으로 상승할... 5시간 전",
+      "score": 14,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "원유 수입처 다변화에…상반기 미국산 도입 비중 20% 넘겼다",
+      "press": "경향신문",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260817203840602",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "경향신문 개별문서메뉴 톡으로 바로 공유 공유하기 원유 수입처 다변화에…상반기 미국산 도입 비중 20% 넘겼다 원유 도입 비중이 전체 수입 물량의 20%를 넘겼다. 반기 기준 최초다. 중동 사태로 빚어진 호르무즈 해협 봉쇄에 대응해 정부와 정유사 가 원유 수입처 다변화에 나선 결과다. 17일 한국석유공사의 통계를 보면, 올해 1월부터 6월까지 원유 도입량은 4억6712만배럴로... 14시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "호르무즈 개방·비핵화 못 풀고…미-이란 ‘60일 협상’ 종료 [글로벌 모닝 브리핑]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260818061637489",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 3 호르무즈 개방·비핵화 못 풀고…미-이란 ‘60일 협상’ 종료 [글로벌 모닝 브리핑] 추가 제재를 동원해 이란 경제를 더욱 옥죄겠다는 방침을 세웠습니다. 로이터통신에 따르면 미국은 이란산 원유를 사들이는 중국 정유 업계와 이란 금융기관을 겨냥한 2차 제재를 검토 중이며, 스콧 베선트 재무장관은 협상 시한 종료를 앞두고 ‘전례 없는’ 압박... 4시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "뉴욕증시, 국제유가 상승에 일제히 하락",
+      "press": "MBC",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260818074616570",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "MBC 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 뉴욕증시, 국제유가 상승에 일제히 하락 점이 악재로 작용했습니다. 최근 뉴욕증시는 국제 유가 움직임에 동조화되는 경향이 있는데요. 중동발 우려로 '서부 텍사스산 원유 '가 2.6% 오른 배럴당 84달러 선에서 거래되면서 증시에 부담으로 작용했습니다. 미국 국채 10년물 금리도 인플레이션에 대한 우려로... 3시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[뉴욕증시] 미·이란 긴장…국제유가 상승에 일제히 하락",
+      "press": "SBS",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260818074205498",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "SBS 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 [뉴욕증시] 미·이란 긴장…국제유가 상승에 일제히 하락 뉴욕증시 전반을 끌어내렸습니다. 트럼프 미국 대통령이 협상 연장 의사가 없다고 선을 그었고, 이란 역시 강경 대응을 시사하면서 원유 공급에 차질이 생길 것이라는 우려가 커졌습니다. 서부텍사스산 원유 와 브렌트유가 일제히 2%대 올랐습니다. 유가 상승은 곧바로... 3시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[그래픽] 국제유가 추이",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260818074442529",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 [그래픽] 국제유가 추이 국제유가 급등했다. 현지시간 17일 ICE선물거래소에서 10월 인도분 브렌트유 선물 종가는 90.87달러로 전장 대비 2.65% 올랐고, 뉴욕상업거래소에서 9월 인도분 미국 서부텍사스산 원유 (WTI) 선물 종가는 배럴당 84.50달러로 전장 대비 2.54% 상승했다. hrhohs@news1.kr 3시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "다시 전운 감도는 호르무즈…트럼프, 이란 넘어 오만에도 경고",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260818014737600",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 3 다시 전운 감도는 호르무즈…트럼프, 이란 넘어 오만에도 경고 들고 항복하라”고 압박했고, 이란은 방어 중심의 군사전략을 ‘완전한 공세’로 전환하겠다며 맞섰다. 세계 원유와 액화천연가스( LNG )의 약 20%가 지나던 호르무즈 해협의 선박 통항마저 사실상 멈춰서면서 지난 2월 말 시작된 미국·이란 전쟁이 다시 확전의... 9시간 전 16",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프 “오만, 방해하면 폭격…호르무즈 美 영토 선언 마음에 들어”",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260818065103841",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프 “오만, 방해하면 폭격…호르무즈 美 영토 선언 마음에 들어” 되풀이되고 있다. 이로 인해 호르무즈해협을 통과하는 원유 등 주요 원자재 운송이 차질을 빚고 있다. 분쟁 여파로 원유와 천연 가스 가격이 급등하면서 오는 11월 중간선거를 앞둔 트럼프 대통령과 공화당의 부담도 커지고 있다. 트럼프 대통령은 이란 혁명수비대... 3시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "천연가스",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "‘ 호르무즈 탈출’ 선원 “기약 없는 감금, 끝 안 보이는 공포였다”",
+      "press": "KBS",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260818075217646",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "KBS 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 ‘ 호르무즈 탈출’ 선원 “기약 없는 감금, 끝 안 보이는 공포였다” ■ 제보하기 ▷ 전화 : 02-781-1234, 4444 ▷ 이메일 : kbs1234@kbs.co.kr ▷ 카카오톡 : 'KBS제보' 검색, 채널 추가 ▷ 유튜브, 네이버에서도 KBS뉴스를 구독해주세요! 김채린 기자 (dig@kbs.co.kr) 2시간 전",
+      "score": 7,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "트럼프 \"종전 MOU 연장 없다… 호르무즈 미 영토 선언 마음에 들어\"",
+      "press": "MBN",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260818074849607",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "MBN 개별문서메뉴 톡으로 바로 공유 공유하기 트럼프 \"종전 MOU 연장 없다… 호르무즈 미 영토 선언 마음에 들어\" 끝낼 수는 없을 것 같은 전쟁을 해결하지 못하는 자신의 무능함에 대한 좌절감을 보인 것\"이라고 전했습니다. 오만은 이란과 호르무즈 해협을 사이에 둔 연안국으로, 미국의 동맹이면서 이란과도 가깝습니다. 동맹도 가리지 않고 폭격을 불사하겠다고 거칠게 위협한... 2시간 전",
+      "score": 7,
+      "score_breakdown": {
+        "keyword": 3,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 나랏빚에 AI 투자까지 ‘자금 블랙홀’… 30년물 금리 19년 만 최고",
+      "press": "조선일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260818074707584",
+      "published_date": "2026-08-18",
+      "published_at_kst": "",
+      "snippet": "조선일보 개별문서메뉴 톡으로 바로 공유 공유하기 美 나랏빚에 AI 투자까지 ‘자금 블랙홀’… 30년물 금리 19년 만 최고 밀어 올리고 있다고 분석했다. 중동 정세도 여기에 기름을 부었다. 미국과 이란의 협상이 교착 상태에 빠지면서 17일 서부텍사스산 원유 (WTI)는 2.6% 오른 배럴당 84.50달러, 브렌트유는 2.7% 상승한 90.87달러에 거래를 마쳤다. 유가가 다시 뛰면 물가가 쉽게 잡히지... 3시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 1,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
