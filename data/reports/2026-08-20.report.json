@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △국제유가 변동과 원유 수급 전망 △LNG·천연가스 수급과 가격 변수 △중동 해협 리스크의 에너지 안보 변수화 △석유제품 가격 안정과 유류세 정책 논의"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유화학 원료·제품 가격 부담 △정부·국회 에너지 정책 논의"
     }
   ],
   "prices": {
@@ -1591,6 +1595,78 @@
       "merged_at": "2026-08-20 10:48:27 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-08-20.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유화학 원료·제품 가격 부담 △정부·국회 에너지 정책 논의",
+    "trend_paragraphs": [
+      "이데일리는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "경향신문은 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리.",
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도."
+    ],
+    "articles": [
+      {
+        "title": "'26조 유가담합' 1심 본격화… 정유사 들 혐의 부인",
+        "press": "이데일리",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260820140951196",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "석유화학 구조개편 첫발···공정위, ‘대산 1호’ 조건부 승인",
+        "press": "경향신문",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260820155809016",
+        "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "\"적자였는데 부당이득 14조?\"…정유 담합 첫 재판서 공방 예고",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260820104650116",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
