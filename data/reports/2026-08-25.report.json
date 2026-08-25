@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △중동 해협 리스크의 에너지 안보 변수화 △LNG·천연가스 수급과 가격 변수 △정유업계 수익성·정제마진 영향 △LNG·천연가스 수급 동향"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △SAF·항공유 비용 부담 △고환율에 따른 정유·석유화학 원가 부담"
     }
   ],
   "prices": {
@@ -1670,6 +1674,78 @@
       "merged_at": "2026-08-25 10:49:08 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-08-25.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △SAF·항공유 비용 부담 △고환율에 따른 정유·석유화학 원가 부담",
+    "trend_paragraphs": [
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "뉴시스는 해당 이슈의 업계 관련성을 원문 기준으로 확인 필요.",
+      "서울경제는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+    ],
+    "articles": [
+      {
+        "title": "亞정유업체, 중동 또 막히자 美원유 '싹쓸이'…美내수 공급 압박",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260825154351782",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 13,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "주유소에 긴 줄…美 해상 봉쇄에 이란 내 휘발유 부족 심화",
+        "press": "뉴시스",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260825160556029",
+        "summary": "해당 이슈의 업계 관련성을 원문 기준으로 확인 필요",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 9,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 0,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "‘단가의 힘’ 울산 석유제품 173억 달러 수출…항공유, 휘발유 제치고 2위",
+        "press": "서울경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260825164551952",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 8,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 0,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
