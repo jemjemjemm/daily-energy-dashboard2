@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △중동 해협 리스크의 에너지 안보 변수화 △국제유가 변동과 원유 수급 전망"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △석유제품 가격 안정과 유류세 정책 논의 △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △국제유가 변동과 원유 수급 전망"
     }
   ],
   "prices": {
@@ -1782,6 +1786,78 @@
       "merged_at": "2026-09-01 14:00:01 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-09-01.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△석유제품 가격 안정과 유류세 정책 논의 △정유업계 수익성·정제마진 영향 △호르무즈 봉쇄 가능성에 따른 대체 원유 조달 움직임 △국제유가 변동과 원유 수급 전망",
+    "trend_paragraphs": [
+      "MBN는 동영상 첨부된 문서 트럼프 \"하르그섬 산산조각\" AI 영상 공개…치솟는 휘발윳값에 美 정유업계 경영진 호출까지 [프레스룸 경제라이브] 윤지원 박시동 경제평론가 #MBN #프레스룸LIVE #프레스룸라이브 #트럼프 #호르무즈 #이란 #미국 #원유 #수??? #전쟁 #...",
+      "뉴스1는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "매일경제는 국제유가와 석유시장 변동 요인을 중심으로 정리."
+    ],
+    "articles": [
+      {
+        "title": "윤지원 박시동 경제평론가 #MBN #프레스룸LIVE #프레스룸라이브 #트럼프 #호르무즈 #이란 #미국 #원유 #수??? #전쟁 #이란전쟁 # 휘발유 #디젤 #워시 #금리 #래빗대변인 #사퇴 #중간선거 #나토 #북한",
+        "press": "MBN",
+        "press_grade": "B",
+        "url": "https://v.daum.net/v/20260901145846318",
+        "summary": "동영상 첨부된 문서 트럼프 \"하르그섬 산산조각\" AI 영상 공개…치솟는 휘발윳값에 美 정유업계 경영진 호출까지 [프레스룸 경제라이브] 윤지원 박시동 경제평론가 #MBN #프레스룸LIVE #프레스룸라이브 #트럼프 #호르무즈 #이란 #미국 #원유 #수??? #전쟁 #...",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 10,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 2,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "석유 최고가제 4분기에도 이어지나… 정유사 손실 보전 예산 1.4조 추가",
+        "press": "뉴스1",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260901130927243",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 3,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "[단독] “싸게 살수록 손해봅니다”…복잡해진 ‘석유최고가격제 손실보전’ 셈법",
+        "press": "매일경제",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260901143301903",
+        "summary": "국제유가와 석유시장 변동 요인을 중심으로 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 15,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 3,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
