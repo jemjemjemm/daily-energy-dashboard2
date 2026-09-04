@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-09-04",
+  "report_slot": "evening",
+  "collected_at": "2026-09-04 21:41:13 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-09-04 08:00~2026-09-04 17:00 KST",
+  "summary": "△석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격",
+  "topics": [
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격"
+  ],
+  "articles": [
+    {
+      "title": "유럽까지 간 한국산 경유…수출 늘리고 싶어도 발 묶인 정유업계",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904161751463",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 유럽까지 간 한국산 경유…수출 늘리고 싶어도 발 묶인 정유업계 한국 정유사의 공급 경쟁력이 부각될 수 있다. 국내 정유 4사(SK이노베이션·GS칼텍스·에쓰오일·HD현대오일뱅크)의 하루 원유 정제능력은 총 330만 배럴에 달한다. 하반기에는 계절적 요인까지 겹치면서 경유의 정제마진도 상승하게 된다. 통상 9~10월에는 글로벌... 5시간 전 1",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "국제유가 고공행진에 정유주 강세…에쓰오일 10% 점프",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904093007347",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가 고공행진에 정유주 강세…에쓰오일 10% 점프 정기보수 시즌에 들어간다\"며 \"러시아산 저가 원유를 확보하기 위한 경쟁이 심해졌고, 이란산 원유 조달여건도 악화하면서 독립계 정유사 들의 원료 경쟁력은 과거보다 낮아졌다\"고 했다. 이 연구원은 \"지금 정유업종에서 봐야 할 것은 정제마진의 추가 상승폭보다... 12시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "다시 치솟는 국제유가에 정유주 '고공행진'…에쓰오일 10%↑",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904095951721",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 다시 치솟는 국제유가에 정유주 '고공행진'…에쓰오일 10%↑ 있다. 3일(현지시간) 서부텍사스산원유(WTI) 선물 가격은 0.32% 오른 배럴당 91.30달러에 거래를 마쳤다. 국제유가가 오르면 정유사 들이 보유한 원유 재고 가치가 상승하고 정제마진 개선 기대가 커지면서 정유주의 실적 개선 기대감이 높아진다. 중동발 분쟁으로... 11시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[특징주] '고공행진 유가'…정유 3사, 장 초반 일제히 '강세'",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260904093103405",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 [특징주] '고공행진 유가'…정유 3사, 장 초반 일제히 '강세' 풀이된다. 올해 2월 미국과 이란의 충돌 이후 세계 원유 정제 물량이 감소하면서 석유제품 가격이 오르고 있다. 이에 따라 국내 정유사 들의 정제마진이 개선돼 실적에 긍정적인 영향을 미칠 것이라는 분석이 나온다. 글로벌 공급망 차질 우려도 주가 상승 요인으로... 12시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": -2
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "석유화학 사업 재편 1호 'H&L 어드밴스드' 공식 출범",
+      "press": "한국일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904165812067",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "한국일보 개별문서메뉴 톡으로 바로 공유 공유하기 석유화학 사업 재편 1호 'H&L 어드밴스드' 공식 출범 NCC) 110만 톤의 가동을 중단한다. 이는 정부가 제시한 전체 감축 목표(270만~370만 톤)의 30~40% 수준이다. NCC를 줄이는 대신 정유 와 석유화학 분야 경쟁력을 유기적으로 연결해 원료 수급부터 제품 생산에 이르는 전 과정을 최적화할 계획이다. 이를 통해 생산... 4시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "\"유럽 경유값 한국의 2배\"… 글로벌 공급망 불안 속 '한국산' 경쟁력 부각",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904145258991",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 2 \"유럽 경유값 한국의 2배\"… 글로벌 공급망 불안 속 '한국산' 경쟁력 부각 공급망 불안 속에서 경쟁력으로 작용하고 있다. 중동발 원유 공급 차질로 국제 에너지 시장의 변동성이 커지고 있지만 국내 정유사 들은 대규모 정제설비를 기반으로 경유 등 석유제품 생산과 수출을 이어가고 있다. 업계 관계자는 \"한국산 정유 제품은 가격 경쟁력과... 6시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "호르무즈 벌집 만들고는…美재무 \"우크라의 러 공격에 고유가\"",
+      "press": "뉴스1",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904155531584",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴스1 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 벌집 만들고는…美재무 \"우크라의 러 공격에 고유가\" 이로 인해 러시아의 석유제품 생산과 수출에 차질이 빚어졌다. 러시아 내에서는 심각한 연료 수급난이 벌어졌고, 러시아 정부가 휘발유 ·경유 수출을 제한하면서 글로벌 연료 시장에도 영향을 미친 것으로 전해졌다. 미국의 경유 가격은 3일 사상 최고 수준에 근접... 5시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "휘발유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "호르무즈 파병 ‘비전투 임무’에 무게…정찰·기뢰제거 등 거론",
+      "press": "동아일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904164150382",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "동아일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 호르무즈 파병 ‘비전투 임무’에 무게…정찰·기뢰제거 등 거론 서울 종로구 청와대 전경. 2025.11.24 뉴시스 정부가 중동 호르무즈 해협 통행 자유를 위해 군사적 자산을 지원하는 것과 관련해 ‘비전투 임무’에 초점을 둔 해외 파병 가능성을 검토 중인 것으로 전해졌다. 청와대는 “전투 참여를 포함해 비전투·수색 등 여러... 4시간 전 3",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "호르무즈",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "정유 살아나자…GS칼텍스·HD현대오일뱅크 '동반 채용'",
+      "press": "전자신문",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260904150116322",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "전자신문 개별문서메뉴 톡으로 바로 공유 공유하기 정유 살아나자…GS칼텍스·HD현대오일뱅크 '동반 채용' 여수공장. GS칼텍스 제공 국내 정유업계가 최근 국제유가 상승과 정제마진 개선에 힘입어 실적 개선 흐름을 보이는 가운데, 국내 주요 정유사 인 HD현대오일뱅크와 GS칼텍스가 하반기 대졸 신입사원 채용에 나섰다. 4일 업계에 따르면 HD현대오일뱅크는 지난 1... 6시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "유가 상승에 남몰래 웃는다…S-Oil 10%, GS 5% 정유주 강세 [줍줍 리포트]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904103349619",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 2 유가 상승에 남몰래 웃는다…S-Oil 10%, GS 5% 정유주 강세 [줍줍 리포트] 중이다. 3일(현지시간) 서부텍사스산원유(WTI) 선물 가격은 0.32% 오른 배럴당 91.30달러에 거래를 마쳤다. 국제유가가 오르면 정유사 들이 보유한 원유 재고 가치가 상승하고 정제마진 개선 기대가 커지면서 정유주의 실적 개선 가능성도 커진다. 중동발 분쟁으로... 11시간 전",
+      "score": 12,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "정유사",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "靑, 호르무즈 파병 \"정해진 것 없다\"면서도… \"다양한 방식 검토 중\"",
+      "press": "한국일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904165808063",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "한국일보 개별문서메뉴 톡으로 바로 공유 공유하기 2 靑, 호르무즈 파병 \"정해진 것 없다\"면서도… \"다양한 방식 검토 중\" 아직 그 단계까지 가 있지는 않다\"고 선을 그었다. 이재명 대통령은 이날 시민단체 간담회에서 파병 문제가 거론되자 \"우리나라 원유 수입의 70%가 호르무즈해협 등 중동 항로에 의존한 만큼 전쟁 관여하는 문제와 우리 상선의 안전 항행을 확보하는 문제는 구분해야... 4시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 \"이란 제재작전 EU 동참 환영\"…韓은 호르무즈 파병 검토",
+      "press": "아시아경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904163327005",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "아시아경제 개별문서메뉴 톡으로 바로 공유 공유하기 美 \"이란 제재작전 EU 동참 환영\"…韓은 호르무즈 파병 검토 기관에는 2차 제재를 가해 달러 금융망에서 퇴출할 수 있다고 경고했다. 전쟁 전 이란의 최대 교역국인 중국은 제재 대상 이란산 원유 의 약 90%를 사들였다. EU는 지난달 31일 이란의 불안정을 초래하는 활동을 중단시키고 평화협상을 재개하기 위해 추가적인 경제... 5시간 전 36",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}

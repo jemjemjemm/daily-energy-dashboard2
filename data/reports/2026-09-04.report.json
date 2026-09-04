@@ -22,6 +22,10 @@
     {
       "type": "news_trend",
       "text": "(Morning) △국제유가 변동과 원유 수급 전망 △정유업계 수익성·정제마진 영향 △중동 해협 리스크의 에너지 안보 변수화 △국제유가와 원유 수급 동향"
+    },
+    {
+      "type": "news_trend_afternoon",
+      "text": "(Evening) △정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유화학 원료·제품 가격 부담 △석유제품 가격·물가 부담"
     }
   ],
   "prices": {
@@ -1730,6 +1734,78 @@
       "merged_at": "2026-09-04 13:23:53 KST",
       "merge_script": "merge_prices_into_report.py v1.4",
       "needs_review": true
+    },
+    "news_afternoon": {
+      "source_file": "data/news/2026-09-04.evening.json",
+      "article_count": 3,
+      "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+      "status": "updated",
+      "needs_review": true,
+      "report_slot": "evening"
     }
+  },
+  "news_trend_afternoon": {
+    "summary": "△정유업계 수익성·정제마진 영향 △국제유가와 원유 수급 동향 △석유화학 원료·제품 가격 부담 △석유제품 가격·물가 부담",
+    "trend_paragraphs": [
+      "이데일리는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "머니투데이는 정유업계 수익성·원가·시장 여건 변화를 중심으로 보도.",
+      "한국일보는 석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리."
+    ],
+    "articles": [
+      {
+        "title": "유럽까지 간 한국산 경유…수출 늘리고 싶어도 발 묶인 정유업계",
+        "press": "이데일리",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260904161751463",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "국제유가 고공행진에 정유주 강세…에쓰오일 10% 점프",
+        "press": "머니투데이",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260904093007347",
+        "summary": "정유업계 수익성·원가·시장 여건 변화를 중심으로 보도",
+        "published_at_kst": "",
+        "industry_relevance": 5,
+        "score": 12,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 4,
+          "press": 3,
+          "originality": 0,
+          "duplicate_or_low_quality": 0
+        }
+      },
+      {
+        "title": "석유화학 사업 재편 1호 'H&L 어드밴스드' 공식 출범",
+        "press": "한국일보",
+        "press_grade": "A",
+        "url": "https://v.daum.net/v/20260904165812067",
+        "summary": "석유화학 업황과 주요 기업·시장 변수 관련 쟁점 정리",
+        "published_at_kst": "",
+        "industry_relevance": 4,
+        "score": 11,
+        "score_breakdown": {
+          "keyword": 5,
+          "title_importance": 2,
+          "press": 3,
+          "originality": 1,
+          "duplicate_or_low_quality": 0
+        }
+      }
+    ],
+    "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS (naver_html+daum_html)",
+    "needs_review": true,
+    "report_slot": "evening"
   }
 }
