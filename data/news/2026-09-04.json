@@ -1,0 +1,293 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-09-04",
+  "report_slot": "morning",
+  "collected_at": "2026-09-04 13:23:46 KST",
+  "source": "Naver News Search HTML + Daum News Search HTML + Google News RSS",
+  "queries": [
+    "국제유가 OR 유가 OR 원유 OR 브렌트유 OR WTI OR 두바이유",
+    "정유 OR 정유사 OR 석유제품 OR 주유소 OR 유류세 OR 휘발유 OR 경유",
+    "석유화학 OR 나프타 OR 에틸렌 OR 프로필렌 OR 화학제품",
+    "LNG OR 천연가스 OR 가스공사 OR 도시가스",
+    "최고가격제 OR 가격상한 OR 유류세 OR 석탄및석유제품",
+    "호르무즈 OR 원유 수급 OR 석유 공급망 OR OPEC",
+    "산업부 석유 OR 공정위 석유 OR 국회 유류세",
+    "생산자물가 석유제품 OR 소비자물가 유류세 OR 수입물가 원유",
+    "전력 LNG OR 에너지 국제유가 OR 물가 석유제품",
+    "경제 유가 OR 산업 에너지",
+    "정부 유류세 OR 전력 LNG",
+    "산업부 에너지 OR 기재부 물가 석유",
+    "국제유가",
+    "유가",
+    "원유",
+    "석유제품",
+    "정유",
+    "정유사",
+    "주유소",
+    "유류세",
+    "휘발유",
+    "경유",
+    "석유화학",
+    "나프타",
+    "LNG",
+    "천연가스",
+    "최고가격제",
+    "호르무즈",
+    "전력 LNG",
+    "에너지 국제유가",
+    "물가 석유제품",
+    "생산자물가 석유제품"
+  ],
+  "time_window": "2026-09-03 17:00~2026-09-04 08:00 KST",
+  "summary": "△석유 최고가격제·유류세 등 가격 안정 정책 △중동 정세와 원유·LNG 수급 리스크 △정유·석유화학 업계 실적·원가·제품 가격",
+  "topics": [
+    "석유 최고가격제·유류세 등 가격 안정 정책",
+    "중동 정세와 원유·LNG 수급 리스크",
+    "정유·석유화학 업계 실적·원가·제품 가격"
+  ],
+  "articles": [
+    {
+      "title": "국제유가 다시 들썩…이란 공격 지속에 브렌트유 97달러 돌파",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260903233754510",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가 다시 들썩…이란 공격 지속에 브렌트유 97달러 돌파 벤치마크인 브렌트유 선물은 전장보다 0.9% 오른 96.51달러에 거래되고 있다. 사진은 2026년 6월8일 미국 일리노이주 링컨셔의 한 주유소 에서 한 고객이 차량에 기름을 넣기 전 휘발유 가격을 확인하고 있다. 2026.09.03. [서울=뉴시스]박미선 기자 = 이란이... 13시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "국제유가, 중동 긴장·우크라 평화협상 기대 속 혼조⋯WTI 0.32%↑[상보]",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260904070404617",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 국제유가, 중동 긴장·우크라 평화협상 기대 속 혼조⋯WTI 0.32%↑[상보] 중국 등 여러 국가가 평화적 해결을 지원할 준비가 돼 있다고도 말했다. 필 플린 프라이스퓨처스그룹 애널리스트는 “푸틴 대통령의 발언으로 러시아 정유 시설에 대한 공격이 줄고 생산이 정상화될 경우 러시아산 연료의 공급 차질 우려가 완화될 수 있다”고 설명... 6시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 5,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "美 경유가격 사상 최고치…중동·러시아발 공급 차질",
+      "press": "연합뉴스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904074754256",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "연합뉴스 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 美 경유가격 사상 최고치…중동·러시아발 공급 차질 미국 주유소 [EPA=연합뉴스. 재판매 및 DB 금지] (뉴욕=연합뉴스) 김연숙 특파원 = 미국 내 경유(디젤) 평균 가격이 이란 전쟁 등으로 인한 글로벌 공급난 심화로 사상 최고치를 경신했다. 3일(현지시간) 연료 가격 분석업체 가스버디(GasBuddy)에 따르면 이날 기준... 5시간 전",
+      "score": 14,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 4,
+        "press": 3,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "주유소",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "IBK證 “공급 부족에 정제마진 고공행진⋯S-Oil·SK이노 수혜”",
+      "press": "이투데이",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260904073403000",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "이투데이 개별문서메뉴 톡으로 바로 공유 공유하기 IBK證 “공급 부족에 정제마진 고공행진⋯S-Oil·SK이노 수혜” 수요가 특별히 강하다는 데 있기보다 높은 가격에도 공급이 충분히 따라오지 못하고 있다는 데 있다”고 분석했다. 중국의 석유 제품 수출 확대도 변수지만 과거처럼 수급을 빠르게 안정시키기는 어렵다고 봤다. 러시아산 저가 원유 확보 경쟁이 심해졌고 이란산 원유... 5시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 2,
+        "originality": 2,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "석유제품",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[이 시각 세계] 한국산 경유 9만 톤, 유럽으로 '수출'",
+      "press": "MBC",
+      "press_grade": "B",
+      "url": "https://v.daum.net/v/20260904073115949",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "MBC 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 동영상 첨부된 문서 [이 시각 세계] 한국산 경유 9만 톤, 유럽으로 '수출' [뉴스투데이] 한국산 경유 약 9만 톤이 1만 9천 킬로미터 넘게 떨어진 유럽으로 수출됩니다. 블룸버그통신은 유조선 '프리아모스' 호가 한국에서 출발해 수에즈 운하를 거쳐 한국산 경유 를 유럽으로 운송할 예정이라고 보도했는데요. 도착지는 영국이나 네덜란드... 5시간 전",
+      "score": 4,
+      "score_breakdown": {
+        "keyword": 2,
+        "title_importance": 0,
+        "press": 2,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 4,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "월러 '9월 동결' 시사에 뉴욕증시 동반강세…나스닥 1.4%↑[뉴스새벽배송]",
+      "press": "이데일리",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904075801417",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "이데일리 개별문서메뉴 톡으로 바로 공유 공유하기 월러 '9월 동결' 시사에 뉴욕증시 동반강세…나스닥 1.4%↑[뉴스새벽배송] 최고치를 기록했지만 장 후반 상승폭을 대부분 반납. 브렌트유는 전장 대비 0.11달러(0.12%) 내린 배럴당 95.52달러, 서부텍사스산 원유 (WTI)는 0.29달러(0.32%) 오른 91.30달러에 마감. -장중에는 브렌트유가 97달러, WTI가 93달러를 넘어서기도 해. 미국의 이란... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "[오늘의 증시]금리동결 기대에 나스닥 1.4%↑…코스피 상승 기대감",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904075654402",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 [오늘의 증시]금리동결 기대에 나스닥 1.4%↑…코스피 상승 기대감 웨스턴디지털(-1.63%)은 내렸고, 마이크론(+0.22%), 샌디스크(+0.10%)는 소폭 상승했다. 유가 상승세도 이어졌다. 서부텍사스산 원유 (WTI) 선물 가격은 0.32% 오른 배럴당 91.30달러에 거래를 마쳤고 브렌트유는 0.12% 내린 배럴당 95.52달러를 기록했다. 지난 3일 전... 5시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "원유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "베선트 미 재무, 고유가 책임 우크라에 떠넘겼다-NYT",
+      "press": "뉴시스",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904070838669",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "뉴시스 개별문서메뉴 톡으로 바로 공유 공유하기 베선트 미 재무, 고유가 책임 우크라에 떠넘겼다-NYT 낮추려는 과정에서 어려움에 직면해 있다. 세계 원유 가격의 기준인 브렌트유 가격이 배럴당 약 97달러로 오르면서 3일 미국 경유 가격은 사상 최고치에 근접했다. 베선트와 도널드 트럼프 미 대통령은 러시아에 유독 유화적 태도를 보여왔다. 베선트는 지난 4... 6시간 전 1",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 3,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "지지율 끌어올리려, 동맹국 끌어내리는 美",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904040550017",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 지지율 끌어올리려, 동맹국 끌어내리는 美 시사한 케빈 워시 연방준비제도 의장을 향해 \"경제가 잘나갈 때 굳이 금리를 올릴 필요가 없다\"며 금리인하를 압박했다. 또 정유 업계를 향해선 휘발유 가격인하 압박을 강화했다. ━ 청와대 \"우리 기업 불리하지 않게 협의\" ━ 미국의 반도체 표적관세 예고와 투자... 9시간 전",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "정유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "‘반도체 표적관세’ 또 압박한 러트닉 “美공장서 생산 안하면 부과”",
+      "press": "동아일보",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904043459216",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "동아일보 언론사 픽 개별문서메뉴 톡으로 바로 공유 공유하기 3 ‘반도체 표적관세’ 또 압박한 러트닉 “美공장서 생산 안하면 부과” 가고 있다”고 언급했다. 에너지 사업이 한국 정부의 대미투자 1호로 유력하게 거론되고 있지만, 알래스카 액화천연가스( LNG ) 사업은 수익성이 낮다는 지적이 있어 왔다. 최지원 기자 jwchoi@donga.com 뉴욕=곽도영 특파원 now@donga.com 신규진 기자 newjin@donga.com 8시간 전 2",
+      "score": 9,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 0,
+        "press": 3,
+        "originality": 1,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "LNG",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "공사비 상승폭 한풀 꺾였는데… 여전한 고유가, 등 휘는 건설사",
+      "press": "머니투데이",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904030214869",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "머니투데이 개별문서메뉴 톡으로 바로 공유 공유하기 공사비 상승폭 한풀 꺾였는데… 여전한 고유가, 등 휘는 건설사 폭 축소의 원인이 됐다. 한국건설기술연구원에 따르면 지수 구성항목 중 7월에 많이 내린 항목은 휘발유(-11.33%) 등유(-9.91%) 경유 (-9.76%) 중유(-9.44%) 등이다. 석유 관련 품목들의 가격이 하락하면서 지수 상승폭을 제한한 것으로 보인다. 문제는 한동안 진정... 10시간 전",
+      "score": 11,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 3,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "경유",
+      "collector": "daum_news_search"
+    },
+    {
+      "title": "LG화학·롯데케미칼 6%대 급등…석화 ‘구조조정 랠리’ [코주부]",
+      "press": "서울경제",
+      "press_grade": "A",
+      "url": "https://v.daum.net/v/20260904061727003",
+      "published_date": "2026-09-04",
+      "published_at_kst": "",
+      "snippet": "서울경제 개별문서메뉴 톡으로 바로 공유 공유하기 2 LG화학·롯데케미칼 6%대 급등…석화 ‘구조조정 랠리’ [코주부] 중동사태로 석유화학 산업 핵심 원료인 나프타 는 수급 차질 우려가 커지고 있다. 연합뉴스 석유화학 종목이 일제히 급등했다. 수년간 업종을 짓눌러온 공급과잉이 설비 감축과 사업재편을 계기로 해소 국면에 접어들 수 있다는 기대가 매수세를 불렀다. 그간 실적... 7시간 전",
+      "score": 10,
+      "score_breakdown": {
+        "keyword": 5,
+        "title_importance": 2,
+        "press": 3,
+        "originality": 0,
+        "duplicate_or_low_quality": 0
+      },
+      "industry_relevance": 2,
+      "source_query": "나프타",
+      "collector": "daum_news_search"
+    }
+  ],
+  "errors": [],
+  "success": true,
+  "used_tier": "naver_html+daum_html"
+}
