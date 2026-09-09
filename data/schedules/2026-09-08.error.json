@@ -1,0 +1,9 @@
+{
+  "schema_version": "2.0",
+  "source": "세이프타임즈",
+  "category": "오늘의 주요일정",
+  "date": "2026-09-08",
+  "collected_at": "2026-09-09 13:33:29 KST",
+  "success": false,
+  "error": "오늘의 주요일정 대상 기사를 찾지 못했습니다. target=2026-09-08, sample_candidates=['[오늘의 주요일정·9일] 행안부, 추석 대비 해양 안전관리 현장점검'], day_matched=[]"
+}
